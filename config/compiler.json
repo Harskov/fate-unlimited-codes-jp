@@ -1400,5 +1400,7 @@
     }
   ],
   "assumption_A1": "not confirmed: mwcps2-3.0.1b151-050317 -O4,p byte-matches 3/8 calibration functions",
-  "link_regime": "undecided"
+  "link_regime": "full",
+  "link_regime_evidence": "S3 probe: func_00177B00 (calibration match) compiled with mwcps2-3.0.1b151-050317 -O4,p as a c subsegment at 0x77B80, linked with GNU ld 2.35.2 into build/SLPM_551.08.elf; check_build.py ok=true, 0 differing bytes (runs/2026-09-05-004-split-baseline/a6-link-probe-check.json)",
+  "link_regime_at": "2026-09-05T20:27:19Z"
 }

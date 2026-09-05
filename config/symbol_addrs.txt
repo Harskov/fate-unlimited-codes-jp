@@ -1,0 +1,3 @@
+# symbol_addrs.txt — splat symbol declarations (name = 0xADDR; // type:func size:0x..).
+# Empty at the S3 baseline; segment-map and consolidate steps add entries. Addresses are
+# copied from splat output or the ledger, never typed from memory.

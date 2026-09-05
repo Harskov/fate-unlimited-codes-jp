@@ -1,0 +1,42 @@
+# splat configuration for Fate/Unlimited Codes (Japan) SLPM_551.08 — written by gen_splat_yaml.py 2026-09-05T20:23:12Z
+name: fate-unlimited-codes-jp
+sha1: 825b867ecf30b761b8261a528e86101aa4bc03ca
+options:
+  basename: SLPM_551.08
+  target_path: disc/SLPM_551.08
+  base_path: ..
+  platform: ps2
+  compiler: MWCCPS2
+  asm_path: asm
+  src_path: src
+  build_path: build
+  ld_script_path: build/SLPM_551.08.ld
+  symbol_addrs_path: config/symbol_addrs.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.txt
+  find_file_boundaries: false
+  migrate_rodata_to_functions: false
+  asm_function_macro: glabel
+  asm_data_macro: dlabel
+  asm_jtbl_label_macro: jlabel
+  asm_inc_header: ".set noat      /* allow manual use of $at */\n.set noreorder /* don't insert nops after branches */\n\n"
+  section_order: [".text", ".data", ".rodata", ".bss"]
+  generated_c_preamble: "#include \"common.h\""
+  generated_s_preamble: ""
+  string_encoding: SHIFT-JIS
+  data_string_encoding: SHIFT-JIS
+  asm_emit_size_directive: false
+  gp_value: 0x00510470
+segments:
+  - name: main
+    type: code
+    start: 0x00000080
+    vram: 0x00100000
+    bss_size: 0x0002D180
+    subalign: 16
+    subsegments:
+      - [0x00000080, asm, main]
+      - [0x00077B80, c, cal/func_00177B00]
+      - [0x00077BA0, asm, main_b]
+      - [0x00409180, bss, main_bss]
+  - [0x00409180]

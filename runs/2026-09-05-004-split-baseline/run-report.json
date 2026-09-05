@@ -1,0 +1,25 @@
+{
+  "at": "2026-09-05T20:29:12Z",
+  "run_id": "2026-09-05-004-split-baseline",
+  "lines": 39,
+  "max_lines": 80,
+  "friction_severities": {
+    "minor": 1,
+    "papercut": 1
+  },
+  "fields": {
+    "run_id": "2026-09-05-004-split-baseline",
+    "step_type": "split-baseline",
+    "step_id": "S3",
+    "target": "fate-unlimited-codes-jp",
+    "override_note": " — proposed by next_step.py",
+    "started": "2026-09-05T20:23:11Z",
+    "finished": "2026-09-05T20:29:11Z",
+    "commit": "the commit whose message starts `run 2026-09-05-004-split-baseline:` (git log --grep)",
+    "what_changed": "- Ledger: no status changes.\n- Baseline: link regime `full`; splat YAML and symbol_addrs.txt written.\n- A6 probe (full link regime): one calibrated C object linked at 0x77B80, image still byte-identic",
+    "build_check": "`check.json`: ok = **True**, checked 2026-09-05T20:28:24Z, regime `full`; image 0x00100000–0x00509100, rebuilt 4231424 of 4231424 bytes; first diff None, 0 differing byte(s). Segments: main ok.",
+    "step_table": "# Baseline table — split-baseline (S3)\n\n| subsegment | file offset | type |\n|---|---|---|\n| main | 0x00000080 | asm |\n| main_bss | 0x00409180 | bss |\n\nsplat 45.2 s; build 19.2 s (ninja, 2 asm objects)",
+    "next_step": "S4 segment-map — ledger/segments.json missing or provisional",
+    "friction_summary": "2 entries (minor 1, papercut 1); stages attested: E, R, S, V, X; export: FRICTION-REPORT.md\n- F-1 [minor/tool-bug] First link of the split image failed on 11 address-named symbols spimdisasm reference"
+  }
+}

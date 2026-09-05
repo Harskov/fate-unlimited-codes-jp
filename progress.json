@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-05T20:22:19Z",
+  "generated": "2026-09-05T20:29:11Z",
   "totals": {
     "functions": 3,
     "bytes_total": 140,
@@ -29,10 +29,10 @@
       "unassigned": 0
     }
   ],
-  "steps_run": 3,
-  "last_run": "2026-09-05-003-calibrate",
+  "steps_run": 4,
+  "last_run": "2026-09-05-004-split-baseline",
   "build_check_ok": true,
-  "link_regime": "undecided",
+  "link_regime": "full",
   "compiler_id": "mwcps2-3.0.1b151-050317",
   "calibrated": true
 }

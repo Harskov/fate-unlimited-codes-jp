@@ -1,0 +1,27 @@
+{
+  "run_id": "2026-09-05-004-split-baseline",
+  "step_id": "S3",
+  "step_type": "split-baseline",
+  "override": false,
+  "proposed": "split-baseline",
+  "proposed_reason": "build/check.json missing",
+  "reason": "build/check.json missing",
+  "target": "fate-unlimited-codes-jp",
+  "started": "2026-09-05T20:23:11Z",
+  "finished": "2026-09-05T20:29:11Z",
+  "stage": "done",
+  "position": {},
+  "outcome": "complete",
+  "commit": null,
+  "notes": [],
+  "ledger_at_start": {
+    "functions": 3,
+    "matched": 3,
+    "wip": 0,
+    "asm": 0,
+    "library": 0,
+    "skipped-data": 0
+  },
+  "updated": "2026-09-05T20:23:12Z",
+  "summary": "asm round-trip baseline green (4231424 bytes identical); link_regime full (A6 confirmed with one MW C object linked into the image)"
+}

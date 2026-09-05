@@ -16,10 +16,15 @@ wip/*/target.s
 wip/*/*.o
 # calibration (S2): the C attempts, the table and results.jsonl are kept; disassembly
 # of the original and compiled objects are not
+calibration/candidates.md
 calibration/*/target.s
 calibration/*/*.o
 calibration/*/*.bin
 calibration/*/*.err
+# generated per machine by configure.py (absolute tool paths)
+build.ninja
+.ninja_*
+Makefile
 # python / editor scratch
 __pycache__/
 *.pyc

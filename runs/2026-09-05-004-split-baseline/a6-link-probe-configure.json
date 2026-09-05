@@ -1,0 +1,16 @@
+{
+  "at": "2026-09-05T20:26:17Z",
+  "basename": "SLPM_551.08",
+  "splat": null,
+  "build": {
+    "rc": 0,
+    "seconds": 6.3,
+    "cmd": "/sessions/rcw-01vacgnkbmcyrmd8eanrdkwr/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/tools/venv/bin/ninja -j2",
+    "output_tail": "[1/1] ld build/SLPM_551.08.elf\nFAILED: [code=1] build/SLPM_551.08.elf \nLD_LIBRARY_PATH='/sessions/rcw-01vacgnkbmcyrmd8eanrdkwr/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/tools/binutils-deb/usr/lib/x86_64-linux-gnu' '/sessions/rcw-01vacgnkbmcyrmd8eanrdkwr/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/tools/binutils-deb/usr/bin/mipsel-linux-gnu-ld' -EL -T build/SLPM_551.08.ld -T config/undefined_syms.txt -T config/undefined_funcs_auto.txt -T config/undefined_syms_auto.txt -Map build/SLPM_551.08.map -o build/SLPM_551.08.elf\n/sessions/rcw-01vacgnkbmcyrmd8eanrdkwr/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/tools/binutils-deb/usr/bin/mipsel-linux-gnu-ld: build/asm/main_b.s.o: in function `func_002211B0':\n(.text+0xa9738): undefined reference to `.L0010AF40'\n/sessions/rcw-01vacgnkbmcyrmd8eanrdkwr/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/tools/binutils-deb/usr/bin/mipsel-linux-gnu-ld: (.text+0xa979c): undefined reference to `.L0010AF40'\nninja: build stopped: subcommand failed.\nninja: error: remove(.ninja_lock): Operation not permitted\n\n---- relink ----\n[1/1] ld build/SLPM_551.08.elf\nninja: error: remove(.ninja_lock): Operation not permitted\n"
+  },
+  "objects": 4,
+  "asm_objects": 3,
+  "c_objects": 1,
+  "build_tool": "ninja",
+  "undefined_syms_added": 1
+}

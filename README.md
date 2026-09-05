@@ -14,7 +14,7 @@ them from the user's disc.
 | image | unclassified | 3 | 3 | 0 | 0 | 0 | 140 (100.0%) |
 | **total** | | 3 | 3 | 0 | 0 | 0 | 140 / 140 |
 
-Steps run: 3; last run: 2026-09-05-003-calibrate; build check: ok; compiler: mwcps2-3.0.1b151-050317; regenerated 2026-09-05T20:22:19Z.
+Steps run: 4; last run: 2026-09-05-004-split-baseline; build check: ok; compiler: mwcps2-3.0.1b151-050317; regenerated 2026-09-05T20:29:11Z.
 <!-- progress-table:end -->
 
 ## Layout
