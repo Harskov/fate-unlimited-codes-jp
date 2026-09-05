@@ -8,6 +8,8 @@ SLPM_*
 SLUS_*
 SLES_*
 SCPS_*
+# the splat YAML in config/ is configuration, not disc content (K2 §1)
+!config/*.yaml
 asm/
 build/
 tools/*

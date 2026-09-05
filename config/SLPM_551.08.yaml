@@ -1,0 +1,62 @@
+# splat configuration for Fate/Unlimited Codes (Japan) SLPM_551.08 — written by gen_splat_yaml.py 2026-09-05T22:51:59Z
+name: fate-unlimited-codes-jp
+sha1: 825b867ecf30b761b8261a528e86101aa4bc03ca
+options:
+  basename: SLPM_551.08
+  target_path: disc/SLPM_551.08
+  base_path: ..
+  platform: ps2
+  compiler: MWCCPS2
+  asm_path: asm
+  src_path: src
+  build_path: build
+  ld_script_path: build/SLPM_551.08.ld
+  symbol_addrs_path: config/symbol_addrs.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.txt
+  find_file_boundaries: false
+  migrate_rodata_to_functions: false
+  asm_function_macro: glabel
+  asm_data_macro: dlabel
+  asm_jtbl_label_macro: jlabel
+  asm_inc_header: ".set noat      /* allow manual use of $at */\n.set noreorder /* don't insert nops after branches */\n\n"
+  section_order: [".text", ".data", ".rodata", ".bss"]
+  generated_c_preamble: "#include \"common.h\""
+  generated_s_preamble: ""
+  string_encoding: SHIFT-JIS
+  data_string_encoding: SHIFT-JIS
+  rodata_string_guesser_level: 0
+  data_string_guesser_level: 0
+  asm_emit_size_directive: false
+  gp_value: 0x00510470
+segments:
+  - name: main
+    type: code
+    start: 0x00000080
+    vram: 0x00100000
+    bss_size: 0x0002D180
+    subalign: 16
+    subsegments:
+      - [0x00000080, asm, crt0]
+      - [0x000002B0, asm, sdk_dma_graph]
+      - [0x00003FE0, asm, sdk_kernel]
+      - [0x00007880, asm, sdk_stdio]
+      - [0x0000C240, asm, sdk_loadfile]
+      - [0x0000E100, asm, sdk_mc]
+      - [0x000117C0, asm, sdk_ipu]
+      - [0x0001B4F0, asm, sdk_pad_scf]
+      - [0x0001E2E0, asm, libc]
+      - [0x0002E0C0, asm, libm]
+      - [0x000330D0, asm, cri_adx]
+      - [0x000580B0, asm, game_00]
+      - [0x001A6040, asm, game_render]
+      - [0x001E60C0, asm, game_01]
+      - [0x00253730, asm, sdk_cdvd]
+      - [0x00254070, asm, game_02]
+      - [0x0026EBB0, asm, game_model]
+      - [0x00284600, data, data_00]
+      - [0x002B0080, data, data_sdk]
+      - [0x002D3080, data, data_01]
+      - [0x003E2080, rodata, rodata_str]
+      - [0x00409180, bss, main_bss]
+  - [0x00409180]
