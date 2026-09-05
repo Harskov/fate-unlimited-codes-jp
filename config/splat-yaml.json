@@ -1,6 +1,6 @@
 {
-  "at": "2026-09-05T20:27:20Z",
-  "mode": "initial",
+  "at": "2026-09-05T22:35:33Z",
+  "mode": "from-segments",
   "basename": "SLPM_551.08",
   "load": {
     "offset": "0x00000080",
@@ -13,7 +13,107 @@
     {
       "offset": "0x00000080",
       "type": "asm",
-      "name": "main"
+      "name": "crt0"
+    },
+    {
+      "offset": "0x000002B0",
+      "type": "asm",
+      "name": "sdk_dma_graph"
+    },
+    {
+      "offset": "0x00003FE0",
+      "type": "asm",
+      "name": "sdk_kernel"
+    },
+    {
+      "offset": "0x00007880",
+      "type": "asm",
+      "name": "sdk_stdio"
+    },
+    {
+      "offset": "0x0000C240",
+      "type": "asm",
+      "name": "sdk_loadfile"
+    },
+    {
+      "offset": "0x0000E100",
+      "type": "asm",
+      "name": "sdk_mc"
+    },
+    {
+      "offset": "0x000117C0",
+      "type": "asm",
+      "name": "sdk_ipu"
+    },
+    {
+      "offset": "0x0001B4F0",
+      "type": "asm",
+      "name": "sdk_pad_scf"
+    },
+    {
+      "offset": "0x0001E2E0",
+      "type": "asm",
+      "name": "libc"
+    },
+    {
+      "offset": "0x0002E0C0",
+      "type": "asm",
+      "name": "libm"
+    },
+    {
+      "offset": "0x000330D0",
+      "type": "asm",
+      "name": "cri_adx"
+    },
+    {
+      "offset": "0x000580B0",
+      "type": "asm",
+      "name": "game_00"
+    },
+    {
+      "offset": "0x001A6040",
+      "type": "asm",
+      "name": "game_render"
+    },
+    {
+      "offset": "0x001E60C0",
+      "type": "asm",
+      "name": "game_01"
+    },
+    {
+      "offset": "0x00253730",
+      "type": "asm",
+      "name": "sdk_cdvd"
+    },
+    {
+      "offset": "0x00254070",
+      "type": "asm",
+      "name": "game_02"
+    },
+    {
+      "offset": "0x0026EBB0",
+      "type": "asm",
+      "name": "game_model"
+    },
+    {
+      "offset": "0x00284600",
+      "type": "data",
+      "name": "data_00"
+    },
+    {
+      "offset": "0x002B0080",
+      "type": "data",
+      "name": "data_sdk"
+    },
+    {
+      "offset": "0x002D3080",
+      "type": "data",
+      "name": "data_01"
+    },
+    {
+      "offset": "0x003E2080",
+      "type": "rodata",
+      "name": "rodata_str"
     },
     {
       "offset": "0x00409180",

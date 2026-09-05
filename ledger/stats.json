@@ -1,14 +1,69 @@
 {
-  "at": "2026-09-05T20:35:29Z",
-  "functions": 8,
+  "at": "2026-09-05T22:37:40Z",
+  "functions": 8234,
   "by_status": {
+    "asm": 5887,
+    "library": 2339,
     "wip": 5,
     "matched": 3
   },
   "by_segment": {
-    "(none)": {
-      "wip": 5,
+    "crt0": {
+      "asm": 4
+    },
+    "sdk_dma_graph": {
+      "library": 215,
+      "wip": 1
+    },
+    "sdk_kernel": {
+      "library": 82
+    },
+    "sdk_stdio": {
+      "library": 63
+    },
+    "sdk_loadfile": {
+      "library": 77
+    },
+    "sdk_mc": {
+      "library": 74
+    },
+    "sdk_ipu": {
+      "library": 115,
+      "wip": 1
+    },
+    "sdk_pad_scf": {
+      "library": 78
+    },
+    "libc": {
+      "library": 138,
+      "wip": 1
+    },
+    "libm": {
+      "library": 56
+    },
+    "cri_adx": {
+      "library": 1429,
+      "wip": 1
+    },
+    "game_00": {
+      "asm": 3242,
+      "wip": 1,
       "matched": 3
+    },
+    "game_render": {
+      "asm": 1056
+    },
+    "game_01": {
+      "asm": 834
+    },
+    "sdk_cdvd": {
+      "library": 12
+    },
+    "game_02": {
+      "asm": 205
+    },
+    "game_model": {
+      "asm": 546
     }
   }
 }

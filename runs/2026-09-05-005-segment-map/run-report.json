@@ -1,0 +1,26 @@
+{
+  "at": "2026-09-05T22:38:32Z",
+  "run_id": "2026-09-05-005-segment-map",
+  "lines": 60,
+  "max_lines": 80,
+  "friction_severities": {
+    "blocker": 3,
+    "major": 2,
+    "minor": 1
+  },
+  "fields": {
+    "run_id": "2026-09-05-005-segment-map",
+    "step_type": "segment-map",
+    "step_id": "S4",
+    "target": "fate-unlimited-codes-jp",
+    "override_note": " — proposed by next_step.py",
+    "started": "2026-09-05T22:17:21Z",
+    "finished": "2026-09-05T22:38:11Z",
+    "commit": "the commit whose message starts `run 2026-09-05-005-segment-map:` (git log --grep)",
+    "what_changed": "- Ledger: functions 8 → 8234 (+8226), asm 0 → 5887 (+5887), library 0 → 2339 (+2339).\n- Judgment. The image is laid out SDK-first: crt0 at 0x00100000, then eight Sony library blocks in link order (lib",
+    "build_check": "`check.json`: ok = **True**, checked 2026-09-05T22:38:00Z, regime `full`; image 0x00100000–0x00509100, rebuilt 4231424 of 4231424 bytes; first diff None, 0 differing byte(s). Segments: crt0 ok; sdk_dm",
+    "step_table": "# Segment table — run 2026-09-05-005-segment-map (S4 segment-map)\n\n`ledger/segments.json` provisional: False · 22 segments · 8234 functions imported · `build/check.json` ok\n\n| # | segment | kind | sta",
+    "next_step": "S6 match-batch — 5892 game function(s) still asm/wip; batch size 12",
+    "friction_summary": "6 entries (blocker 3, major 2, minor 1); stages attested: E, R, S, V, X; export: FRICTION-REPORT.md\n- F-1 [blocker/doc-gap] config/symbol_addrs.txt header used # comments; splat rejects them\n- F-2 [bl"
+  }
+}

@@ -11,10 +11,31 @@ them from the user's disc.
 <!-- progress-table:start -->
 | Segment | Kind | Functions | Matched | Wip | Asm | Library | Bytes matched |
 |---|---|---|---|---|---|---|---|
-| image | unclassified | 3 | 3 | 0 | 0 | 0 | 140 (100.0%) |
-| **total** | | 3 | 3 | 0 | 0 | 0 | 140 / 140 |
+| crt0 | game | 4 | 0 | 0 | 4 | 0 | 0 (0.0%) |
+| sdk_dma_graph | sdk | 216 | 0 | 1 | 0 | 215 | 0 (0.0%) |
+| sdk_kernel | sdk | 82 | 0 | 0 | 0 | 82 | 0 (0.0%) |
+| sdk_stdio | sdk | 63 | 0 | 0 | 0 | 63 | 0 (0.0%) |
+| sdk_loadfile | sdk | 77 | 0 | 0 | 0 | 77 | 0 (0.0%) |
+| sdk_mc | sdk | 74 | 0 | 0 | 0 | 74 | 0 (0.0%) |
+| sdk_ipu | sdk | 116 | 0 | 1 | 0 | 115 | 0 (0.0%) |
+| sdk_pad_scf | sdk | 78 | 0 | 0 | 0 | 78 | 0 (0.0%) |
+| libc | libc | 139 | 0 | 1 | 0 | 138 | 0 (0.0%) |
+| libm | libc | 56 | 0 | 0 | 0 | 56 | 0 (0.0%) |
+| cri_adx | sdk | 1430 | 0 | 1 | 0 | 1429 | 0 (0.0%) |
+| game_00 | game | 3246 | 3 | 1 | 3242 | 0 | 140 (0.0%) |
+| game_render | game | 1056 | 0 | 0 | 1056 | 0 | 0 (0.0%) |
+| game_01 | game | 834 | 0 | 0 | 834 | 0 | 0 (0.0%) |
+| sdk_cdvd | sdk | 12 | 0 | 0 | 0 | 12 | 0 (0.0%) |
+| game_02 | game | 205 | 0 | 0 | 205 | 0 | 0 (0.0%) |
+| game_model | game | 546 | 0 | 0 | 546 | 0 | 0 (0.0%) |
+| data_00 | data | 0 | 0 | 0 | 0 | 0 | 0 |
+| data_sdk | data | 0 | 0 | 0 | 0 | 0 | 0 |
+| data_01 | data | 0 | 0 | 0 | 0 | 0 | 0 |
+| rodata_str | rodata | 0 | 0 | 0 | 0 | 0 | 0 |
+| main_bss | bss | 0 | 0 | 0 | 0 | 0 | 0 |
+| **total** | | 8234 | 3 | 5 | 5887 | 2339 | 140 / 2608780 |
 
-Steps run: 4; last run: 2026-09-05-004-split-baseline; build check: ok; compiler: mwcps2-3.0.1b151-050317; regenerated 2026-09-05T20:29:11Z.
+Steps run: 4; last run: 2026-09-05-004-split-baseline; build check: ok; compiler: mwcps2-3.0.1b151-050317; regenerated 2026-09-05T22:38:01Z.
 <!-- progress-table:end -->
 
 ## Layout
