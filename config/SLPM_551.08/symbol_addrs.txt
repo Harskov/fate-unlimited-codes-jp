@@ -1,0 +1,5 @@
+// symbol_addrs.txt for Fate/Unlimited Codes (Japan) SLPM_551.08: name = 0xADDR; // type:func size:0xN
+// a name other than func_/D_<address> is backed by evidence cited above its function or in its pull request
+# symbol_addrs.txt — splat symbol declarations (name = 0xADDR; // type:func size:0x..).
+# Empty at the S3 baseline; segment-map and consolidate steps add entries. Addresses are
+# copied from splat output or the ledger, never typed from memory.
