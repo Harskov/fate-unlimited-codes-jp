@@ -1,0 +1,128 @@
+{
+  "at": "2026-09-05T19:59:09Z",
+  "base": "0x00100000",
+  "function_starts": 7770,
+  "leaf_candidates": 406,
+  "chosen": [
+    {
+      "name": "func_00121558",
+      "addr": "0x00121558",
+      "insns": 15,
+      "size": 60,
+      "has_frame": true,
+      "uses_fpu": false,
+      "branches": 4,
+      "loads_stores": 3,
+      "target_bytes_sha256": "5c7b5f5ffe9e74a5ce5bac955b50bcdd2ea6e293c2ba1446472137adb81e82fb",
+      "target_s": "calibration/func_00121558/target.s"
+    },
+    {
+      "name": "func_00100350",
+      "addr": "0x00100350",
+      "insns": 13,
+      "size": 52,
+      "has_frame": false,
+      "uses_fpu": false,
+      "branches": 2,
+      "loads_stores": 1,
+      "target_bytes_sha256": "5720cf71ec4865fc0034f663e94d687d914fb91fd2d5f52512d95d7f14a0074a",
+      "target_s": "calibration/func_00100350/target.s"
+    },
+    {
+      "name": "func_001175A8",
+      "addr": "0x001175A8",
+      "insns": 21,
+      "size": 84,
+      "has_frame": false,
+      "uses_fpu": false,
+      "branches": 6,
+      "loads_stores": 13,
+      "target_bytes_sha256": "39b01d58e7779a8c5a6ccd36aa27a905c4e7495d9b0168315d525fefb5a4d02e",
+      "target_s": "calibration/func_001175A8/target.s"
+    },
+    {
+      "name": "func_001319A0",
+      "addr": "0x001319A0",
+      "insns": 10,
+      "size": 40,
+      "has_frame": false,
+      "uses_fpu": false,
+      "branches": 2,
+      "loads_stores": 3,
+      "target_bytes_sha256": "49d820b57e0b932e3dc38c5333cbc8c7d7af112755b7f560197c7ca0972906e9",
+      "target_s": "calibration/func_001319A0/target.s"
+    },
+    {
+      "name": "func_00141828",
+      "addr": "0x00141828",
+      "insns": 14,
+      "size": 56,
+      "has_frame": false,
+      "uses_fpu": false,
+      "branches": 2,
+      "loads_stores": 8,
+      "target_bytes_sha256": "d65982533dce0737e063451e76e1c0e84eb9c577968159adcd52f7ef4010a819",
+      "target_s": "calibration/func_00141828/target.s"
+    },
+    {
+      "name": "func_00153BE8",
+      "addr": "0x00153BE8",
+      "insns": 23,
+      "size": 92,
+      "has_frame": false,
+      "uses_fpu": false,
+      "branches": 4,
+      "loads_stores": 1,
+      "target_bytes_sha256": "b25d59b251ee6ce11edc4e867dc0226a12050956891eba343bd2213f3196cf0a",
+      "target_s": "calibration/func_00153BE8/target.s"
+    },
+    {
+      "name": "func_001619C0",
+      "addr": "0x001619C0",
+      "insns": 15,
+      "size": 60,
+      "has_frame": false,
+      "uses_fpu": false,
+      "branches": 4,
+      "loads_stores": 3,
+      "target_bytes_sha256": "ba95345670d24e52618d2754fa5d790d4f33809189afda6d4dd33367b93fccb7",
+      "target_s": "calibration/func_001619C0/target.s"
+    },
+    {
+      "name": "func_00177B00",
+      "addr": "0x00177B00",
+      "insns": 8,
+      "size": 32,
+      "has_frame": false,
+      "uses_fpu": false,
+      "branches": 1,
+      "loads_stores": 3,
+      "target_bytes_sha256": "e5fd313dc7b12605ae0055bcdf79dba179ef3c41c2ba457f9a1c9f670dbecea6",
+      "target_s": "calibration/func_00177B00/target.s"
+    },
+    {
+      "name": "func_001990C0",
+      "addr": "0x001990C0",
+      "insns": 14,
+      "size": 56,
+      "has_frame": false,
+      "uses_fpu": false,
+      "branches": 3,
+      "loads_stores": 5,
+      "target_bytes_sha256": "1888321cb48e8fef4a49d49d36f2790ff3552b8879cd85f886156b62f494df7b",
+      "target_s": "calibration/func_001990C0/target.s"
+    },
+    {
+      "name": "func_001A4960",
+      "addr": "0x001A4960",
+      "insns": 13,
+      "size": 52,
+      "has_frame": false,
+      "uses_fpu": false,
+      "branches": 2,
+      "loads_stores": 2,
+      "target_bytes_sha256": "578e2540f23a27843f01c894ab6cccf38e8b470313dc255a4b937292aa61dbd5",
+      "target_s": "calibration/func_001A4960/target.s"
+    }
+  ]
+}

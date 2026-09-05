@@ -13,6 +13,13 @@ build/
 tools/*
 !tools/manifest.json
 wip/*/target.s
+wip/*/*.o
+# calibration (S2): the C attempts, the table and results.jsonl are kept; disassembly
+# of the original and compiled objects are not
+calibration/*/target.s
+calibration/*/*.o
+calibration/*/*.bin
+calibration/*/*.err
 # python / editor scratch
 __pycache__/
 *.pyc

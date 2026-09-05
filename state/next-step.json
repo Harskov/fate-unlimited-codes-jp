@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-05T19:46:17Z",
-  "proposed": "calibrate",
-  "step_id": "S2",
-  "reason": "config/compiler.json missing",
+  "at": "2026-09-05T20:22:18Z",
+  "proposed": "segment-map",
+  "step_id": "S4",
+  "reason": "ledger/segments.json missing or provisional",
   "notes": [],
   "never_auto_selected": [
     "ghidra-hints"

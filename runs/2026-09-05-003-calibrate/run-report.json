@@ -1,0 +1,25 @@
+{
+  "at": "2026-09-05T20:22:19Z",
+  "run_id": "2026-09-05-003-calibrate",
+  "lines": 57,
+  "max_lines": 80,
+  "friction_severities": {
+    "major": 1,
+    "minor": 1
+  },
+  "fields": {
+    "run_id": "2026-09-05-003-calibrate",
+    "step_type": "calibrate",
+    "step_id": "S2",
+    "target": "fate-unlimited-codes-jp",
+    "override_note": " — proposed by next_step.py",
+    "started": "2026-09-05T19:59:08Z",
+    "finished": "2026-09-05T20:22:18Z",
+    "commit": "the commit whose message starts `run 2026-09-05-003-calibrate:` (git log --grep)",
+    "what_changed": "- Ledger: functions 0 → 3 (+3), matched 0 → 3 (+3).\n- config/compiler.json: `mwcps2-3.0.1b151-050317` flags `-O4,p`, calibrated: True, 3 of 8 candidate functions byte-matched.\n- Judgment: b145 and b15",
+    "build_check": "`check.json`: ok = **True**, checked 2026-09-05T19:55:54Z, regime `undecided`; image 0x00100000–0x00509100, rebuilt 4231424 of 4231424 bytes; first diff None, 0 differing byte(s). Segments: main ok.",
+    "step_table": "# Calibration table — every (compiler, flags) x function cell, every score (2026-09-05T20:21:41Z)\n\nCell = objdiff match % (B = .text bytes identical to the target; err = compile error). Judgment is a ",
+    "next_step": "S4 segment-map — ledger/segments.json missing or provisional",
+    "friction_summary": "2 entries (major 1, minor 1); stages attested: E, R, S, V, X; export: FRICTION-REPORT.md\n- F-1 [major/toolchain-drift] ASSUMPTION A1: the three default compiler candidates (2.3.3, 2.4-001213, 3.0-0111"
+  }
+}

@@ -11,10 +11,10 @@ them from the user's disc.
 <!-- progress-table:start -->
 | Segment | Kind | Functions | Matched | Wip | Asm | Library | Bytes matched |
 |---|---|---|---|---|---|---|---|
-| (no ledger yet — functions appear after segment-map) | | | | | | | |
-| image | unclassified | 0 | 0 | 0 | 0 | 0 | 0 |
+| image | unclassified | 3 | 3 | 0 | 0 | 0 | 140 (100.0%) |
+| **total** | | 3 | 3 | 0 | 0 | 0 | 140 / 140 |
 
-Steps run: 2; last run: 2026-09-05-002-extract; build check: not yet run; compiler: not calibrated; regenerated 2026-09-05T19:46:17Z.
+Steps run: 3; last run: 2026-09-05-003-calibrate; build check: ok; compiler: mwcps2-3.0.1b151-050317; regenerated 2026-09-05T20:22:19Z.
 <!-- progress-table:end -->
 
 ## Layout

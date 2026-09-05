@@ -1,0 +1,27 @@
+{
+  "run_id": "2026-09-05-003-calibrate",
+  "step_id": "S2",
+  "step_type": "calibrate",
+  "override": false,
+  "proposed": "calibrate",
+  "proposed_reason": "config/compiler.json missing",
+  "reason": "config/compiler.json missing",
+  "target": "fate-unlimited-codes-jp",
+  "started": "2026-09-05T19:59:08Z",
+  "finished": "2026-09-05T20:22:18Z",
+  "stage": "done",
+  "position": {},
+  "outcome": "complete",
+  "commit": null,
+  "notes": [],
+  "ledger_at_start": {
+    "functions": 0,
+    "matched": 0,
+    "wip": 0,
+    "asm": 0,
+    "library": 0,
+    "skipped-data": 0
+  },
+  "updated": "2026-09-05T19:59:08Z",
+  "summary": "pinned mwcps2-3.0.1b151-050317 -O4,p (3/8 byte-identical; tie with b145; A1 refuted: 2.4-001213 matches 0/8); 3 ledger matches"
+}
