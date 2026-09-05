@@ -43,7 +43,7 @@ here, any function can be checked on its own:
 1. Copy `SLPM_551.08` from your disc to `orig/SLPM_551.08/SLPM_551.08` and check it:
    `sha1sum -c config/SLPM_551.08/checksum.sha1`.
 2. Compile the function's file under `src/` with the pinned compiler and flags
-   (not pinned yet (the compiler calibration has not run)), for example on [decomp.me](https://decomp.me), and diff the
+   (compiler `mwcps2-3.0.1b151-050317` with flags `-O4,p`), for example on [decomp.me](https://decomp.me), and diff the
    object against the function in your executable with
    [objdiff](https://github.com/encounter/objdiff). The splat configuration in
    `config/SLPM_551.08/` gives every function's address and segment.

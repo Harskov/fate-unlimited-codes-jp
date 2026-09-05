@@ -1,0 +1,12 @@
+/* address-named symbols spimdisasm referenced but placed nowhere; written by configure.py, kept in git */
+D_003B1EC0 = 0x3B1EC0;
+D_003B1EC4 = 0x3B1EC4;
+D_003B2BBC = 0x3B2BBC;
+D_003C0DC0 = 0x3C0DC0;
+D_003C996C = 0x3C996C;
+D_003D7A98 = 0x3D7A98;
+D_003D7AA0 = 0x3D7AA0;
+D_003D7B10 = 0x3D7B10;
+D_003DF650 = 0x3DF650;
+D_00508F4C = 0x508F4C;
+D_00508F64 = 0x508F64;
