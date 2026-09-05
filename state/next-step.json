@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-05T19:44:49Z",
-  "proposed": "extract",
-  "step_id": "S1",
-  "reason": "config/target.json missing",
+  "at": "2026-09-05T19:46:17Z",
+  "proposed": "calibrate",
+  "step_id": "S2",
+  "reason": "config/compiler.json missing",
   "notes": [],
   "never_auto_selected": [
     "ghidra-hints"

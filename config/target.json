@@ -1,0 +1,322 @@
+{
+  "script": "extract_elf",
+  "at": "2026-09-05T19:46:17Z",
+  "schema": 1,
+  "ok": true,
+  "slug": "fate-unlimited-codes-jp",
+  "title": "Fate/Unlimited Codes (Japan) SLPM_551.08",
+  "extracted_at": "2026-09-05T19:46:17Z",
+  "iso": {
+    "path": "Fate-Unlimited Codes (Japan).iso",
+    "size": 1383202816,
+    "volume_id": "",
+    "root_lba": 261
+  },
+  "system_cnf": {
+    "BOOT2": "cdrom0:\\SLPM_551.08;1",
+    "VER": "1.00",
+    "VMODE": "NTSC"
+  },
+  "boot_file": "SLPM_551.08",
+  "elf": {
+    "path": "disc/SLPM_551.08",
+    "size": 4231984,
+    "lba": 662539,
+    "sha1": "825b867ecf30b761b8261a528e86101aa4bc03ca",
+    "sha256": "e428a1663b439c20b7a5764971c5e9c29a721cce8843212ccb4d58b1290fec5e"
+  },
+  "elf_header": {
+    "class": "ELF32",
+    "endian": "LE",
+    "type": "EXEC",
+    "machine": "MIPS",
+    "entry": "0x00100008",
+    "flags": "0x20924000",
+    "phnum": 2,
+    "shnum": 8,
+    "stripped": true,
+    "symtab_entries": 0
+  },
+  "program_headers": [
+    {
+      "type": "LOAD",
+      "offset": "0x00000080",
+      "vaddr": "0x00100000",
+      "paddr": "0x00100000",
+      "filesz": "0x00409100",
+      "memsz": "0x00436280",
+      "flags": "RWX",
+      "align": "0x00000080"
+    },
+    {
+      "type": "LOAD",
+      "offset": "0x00409180",
+      "vaddr": "0x00536280",
+      "paddr": "0x00536280",
+      "filesz": "0x00000000",
+      "memsz": "0x00000000",
+      "flags": "RW",
+      "align": "0x00000010"
+    }
+  ],
+  "sections": [
+    {
+      "name": "",
+      "type": "NULL",
+      "flags": "",
+      "addr": "0x00000000",
+      "offset": "0x00000000",
+      "size": "0x00000000"
+    },
+    {
+      "name": ".shstrtab",
+      "type": "STRTAB",
+      "flags": "",
+      "addr": "0x00000000",
+      "offset": "0x00409180",
+      "size": "0x0000002D"
+    },
+    {
+      "name": ".strtab",
+      "type": "STRTAB",
+      "flags": "",
+      "addr": "0x00000000",
+      "offset": "0x00000000",
+      "size": "0x00000000"
+    },
+    {
+      "name": ".symtab",
+      "type": "SYMTAB",
+      "flags": "",
+      "addr": "0x00000000",
+      "offset": "0x00000000",
+      "size": "0x00000000"
+    },
+    {
+      "name": "",
+      "type": "PROGBITS",
+      "flags": "WAX",
+      "addr": "0x00100000",
+      "offset": "0x00000080",
+      "size": "0x00409100"
+    },
+    {
+      "name": "",
+      "type": "PROGBITS",
+      "flags": "WA",
+      "addr": "0x00536280",
+      "offset": "0x00409180",
+      "size": "0x00000000"
+    },
+    {
+      "name": ".comment",
+      "type": "PROGBITS",
+      "flags": "",
+      "addr": "0x00000000",
+      "offset": "0x004091AD",
+      "size": "0x0000002B"
+    },
+    {
+      "name": ".reginfo",
+      "type": "MIPS_REGINFO",
+      "flags": "",
+      "addr": "0x00000000",
+      "offset": "0x004091D8",
+      "size": "0x00000018"
+    }
+  ],
+  "load_segments": [
+    {
+      "type": "LOAD",
+      "offset": "0x00000080",
+      "vaddr": "0x00100000",
+      "paddr": "0x00100000",
+      "filesz": "0x00409100",
+      "memsz": "0x00436280",
+      "flags": "RWX",
+      "align": "0x00000080"
+    },
+    {
+      "type": "LOAD",
+      "offset": "0x00409180",
+      "vaddr": "0x00536280",
+      "paddr": "0x00536280",
+      "filesz": "0x00000000",
+      "memsz": "0x00000000",
+      "flags": "RW",
+      "align": "0x00000010"
+    }
+  ],
+  "comment": "MW MIPS C Compiler (2.4.1.01)",
+  "comment_strings": [
+    "MW MIPS C Compiler (2.4.1.01)",
+    "PlayStation2"
+  ],
+  "compiler": {
+    "family": "mwcc",
+    "version_string": "2.4.1.01",
+    "source": ".comment"
+  },
+  "sdk": {
+    "append_lines": [
+      "Append: GCC2096 SCE3100"
+    ],
+    "sce_identifier_count": 28,
+    "sce_identifiers_sample": [
+      "sceCdBreak",
+      "sceCdCbfunc",
+      "sceCdCbfunc_num",
+      "sceCdChgSys",
+      "sceCdGetError",
+      "sceCdSearchFile",
+      "sceCdStPause",
+      "sceCdStRead",
+      "sceCdStResume",
+      "sceCdStStat",
+      "sceClose",
+      "sceGsDefDispEnv",
+      "sceGsExecStoreImage",
+      "sceGsPutDrawEnv",
+      "sceGsSyncPath",
+      "sceIoctl",
+      "sceLseek",
+      "sceLseek64",
+      "sceMcUdCheckNewCard",
+      "sceMc_read_fast_thread",
+      "sceMc_sema_regs",
+      "sceMc_sema_timer",
+      "sceMpegGetPicture",
+      "sceOpen",
+      "sceRead",
+      "sceSdRemoteInit",
+      "sceSifAllocIopHeap",
+      "sceSifSetDma"
+    ],
+    "library_markers": [
+      "SceStdioAddDrvSema",
+      "SceStdioCCodeSema",
+      "SceStdioChstatSema",
+      "SceStdioCloseSema",
+      "SceStdioDcloseSema",
+      "SceStdioDevctlSema",
+      "SceStdioDreadSema",
+      "SceStdioFioSema",
+      "SceStdioFormatSema",
+      "SceStdioGetstatSema",
+      "SceStdioIobSema",
+      "SceStdioIoctl2Sema",
+      "SceStdioIoctlSema",
+      "SceStdioLseek64Sema",
+      "SceStdioLseekSema",
+      "SceStdioMkdirSema",
+      "SceStdioMountSema",
+      "SceStdioOpenSema",
+      "SceStdioQueSema",
+      "SceStdioReadSema",
+      "SceStdioReadlinkSema",
+      "SceStdioRenameSema",
+      "SceStdioSymlinkSema",
+      "SceStdioSyncSema",
+      "SceStdioWriteSema",
+      "libdma: sync timeout",
+      "libmc: too old release of mcman.irx",
+      "libmc: too old release of mcserv.irx",
+      "libpad: Module version mismatch ",
+      "libpad: buffer addr is not 64 byte align. %08x",
+      "libpad: pad port is already open [%d][%d]",
+      "libpad: sceSifSetDma faild"
+    ]
+  },
+  "irx_modules": [
+    "ACATAD.IRX",
+    "ACDEV9.IRX",
+    "CDVDSTM.IRX",
+    "CRI_ADXI.IRX",
+    "HDD.IRX",
+    "LIBSD.IRX",
+    "MCMAN.IRX",
+    "MCSERV.IRX",
+    "MODHSYN.IRX",
+    "MODMIDI.IRX",
+    "MODMSIN.IRX",
+    "MTAPMAN.IRX",
+    "PADMAN.IRX",
+    "PFS.IRX",
+    "RTFSSIOP.IRX",
+    "SDRDRV.IRX",
+    "SIO2MAN.IRX",
+    "SNPROFIL.IRX",
+    "TSNDDRV.IRX",
+    "TSNDDRVC.IRX"
+  ],
+  "irx_strings": [
+    "CDVDSTM.IRX",
+    "LIBSD.IRX",
+    "MCMAN.IRX",
+    "MCSERV.IRX",
+    "MODHSYN.IRX",
+    "MODMIDI.IRX",
+    "MODMSIN.IRX",
+    "PADMAN.IRX",
+    "SDRDRV.IRX",
+    "SIO2MAN.IRX",
+    "TSNDDRVC.IRX"
+  ],
+  "language_hint": "C",
+  "cpp_mangled_count": 0,
+  "string_count": 11347,
+  "disc_root_listing": [
+    {
+      "path": "\\MODULES",
+      "lba": 262,
+      "size": 1354,
+      "dir": true
+    },
+    {
+      "path": "\\STR",
+      "lba": 263,
+      "size": 440,
+      "dir": true
+    },
+    {
+      "path": "\\0FLIST.DIR;1",
+      "lba": 665147,
+      "size": 113,
+      "dir": false
+    },
+    {
+      "path": "\\BGM.AFS;1",
+      "lba": 208481,
+      "size": 195878912,
+      "dir": false
+    },
+    {
+      "path": "\\DATA.AFS;1",
+      "lba": 305,
+      "size": 157169664,
+      "dir": false
+    },
+    {
+      "path": "\\VOICE.AFS;1",
+      "lba": 77048,
+      "size": 269174784,
+      "dir": false
+    },
+    {
+      "path": "\\SYSTEM.CNF;1",
+      "lba": 664606,
+      "size": 57,
+      "dir": false
+    },
+    {
+      "path": "\\SLPM_551.08;1",
+      "lba": 662539,
+      "size": 4231984,
+      "dir": false
+    }
+  ],
+  "disc_dirs": [
+    "\\MODULES",
+    "\\STR"
+  ]
+}

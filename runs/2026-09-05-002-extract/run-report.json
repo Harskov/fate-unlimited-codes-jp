@@ -1,0 +1,24 @@
+{
+  "at": "2026-09-05T19:46:18Z",
+  "run_id": "2026-09-05-002-extract",
+  "lines": 29,
+  "max_lines": 80,
+  "friction_severities": {
+    "papercut": 1
+  },
+  "fields": {
+    "run_id": "2026-09-05-002-extract",
+    "step_type": "extract",
+    "step_id": "S1",
+    "target": "fate-unlimited-codes-jp",
+    "override_note": " — proposed by next_step.py",
+    "started": "2026-09-05T19:45:17Z",
+    "finished": "2026-09-05T19:46:17Z",
+    "commit": "the commit whose message starts `run 2026-09-05-002-extract:` (git log --grep)",
+    "what_changed": "- Ledger: no status changes.\n- config/target.json: `SLPM_551.08` 4231984 bytes sha1 `825b867ecf30b761b8261a528e86101aa4bc03ca`, .comment `MW MIPS C Compiler (2.4.1.01)`, 20 IRX modules; DOSSIER.md wri",
+    "build_check": "n/a — this step precedes the first build (split-baseline)",
+    "step_table": "n/a",
+    "next_step": "S2 calibrate — config/compiler.json missing",
+    "friction_summary": "1 entry (papercut 1); stages attested: E, R, S, V, X; export: FRICTION-REPORT.md\n- F-1 [papercut/tool-bug] extract_elf.py first pass listed IRX names from error strings and found 3 sce* identifiers in"
+  }
+}
