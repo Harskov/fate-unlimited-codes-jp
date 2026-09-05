@@ -1,0 +1,11 @@
+{
+  "batch_size": 12,
+  "attempt_cap": 3,
+  "permuter_timeout_s": 120,
+  "consolidate_every_n_matches": 25,
+  "data_migrate_threshold": 0.8,
+  "calibration_candidates_min": 5,
+  "calibration_candidates_max": 10,
+  "calibration_pin_min_matches": 3,
+  "run_report_max_lines": 80
+}
