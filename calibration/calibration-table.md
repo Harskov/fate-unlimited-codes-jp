@@ -1,4 +1,4 @@
-# Calibration table — every (compiler, flags) x function cell, every score (2026-09-05T20:21:41Z)
+# Calibration table — every (compiler, flags) x function cell, every score (2026-09-05T20:35:27Z)
 
 Cell = objdiff match % (B = .text bytes identical to the target; err = compile error). Judgment is a separate paragraph in the run report, never a filter on this table.
 

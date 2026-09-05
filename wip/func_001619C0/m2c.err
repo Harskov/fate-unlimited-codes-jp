@@ -1,0 +1,8 @@
+/*
+Decompilation failure:
+
+Syntax error when parsing C context.
+Directives not supported yet at line 2, column 1
+
+#ifndef TYPES_H
+*/

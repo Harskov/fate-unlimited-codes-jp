@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-05T20:29:11Z",
+  "at": "2026-09-05T20:56:21Z",
   "proposed": "segment-map",
   "step_id": "S4",
   "reason": "ledger/segments.json missing or provisional",
