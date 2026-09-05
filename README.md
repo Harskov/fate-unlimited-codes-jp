@@ -29,3 +29,4 @@ them from the user's disc.
 | `wip/` | per-function work folders (`target.s` gitignored) |
 | `reference/` | hints (Ghidra exports), never source |
 | `build/` | build outputs and `check.json` (gitignored) |
+c
