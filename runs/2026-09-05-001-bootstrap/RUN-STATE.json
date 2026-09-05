@@ -1,0 +1,27 @@
+{
+  "run_id": "2026-09-05-001-bootstrap",
+  "step_id": "S0",
+  "step_type": "bootstrap",
+  "override": false,
+  "proposed": "bootstrap",
+  "proposed_reason": "tools/manifest.json missing (state at run start, before bootstrap.sh ran)",
+  "reason": "tools/manifest.json missing at run start",
+  "target": "fate-unlimited-codes-jp",
+  "started": "2026-09-05T19:27:00Z",
+  "finished": "2026-09-05T19:45:15Z",
+  "stage": "done",
+  "position": {},
+  "outcome": "complete",
+  "commit": null,
+  "notes": [],
+  "ledger_at_start": {
+    "functions": 0,
+    "matched": 0,
+    "wip": 0,
+    "asm": 0,
+    "library": 0,
+    "skipped-data": 0
+  },
+  "updated": "2026-09-05T19:43:57Z",
+  "summary": "toolchain installed; 11/11 smoke tests ok; assembler decision debian-deb (A2)"
+}

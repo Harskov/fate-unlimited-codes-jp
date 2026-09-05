@@ -1,0 +1,25 @@
+{
+  "at": "2026-09-05T19:44:50Z",
+  "run_id": "2026-09-05-001-bootstrap",
+  "lines": 32,
+  "max_lines": 80,
+  "friction_severities": {
+    "minor": 1,
+    "major": 2
+  },
+  "fields": {
+    "run_id": "2026-09-05-001-bootstrap",
+    "step_type": "bootstrap",
+    "step_id": "S0",
+    "target": "fate-unlimited-codes-jp",
+    "override_note": " — proposed by next_step.py",
+    "started": "2026-09-05T19:27:00Z",
+    "finished": "2026-09-05T19:43:57Z",
+    "commit": "the commit whose message starts `run 2026-09-05-001-bootstrap:` (git log --grep)",
+    "what_changed": "- Ledger: no status changes.\n- tools/manifest.json: 7 tools, 4 compilers, assembler decision `debian-deb`, smoke tests 11/11 ok.\n- venv without pip (ensurepip fails on the mount); git needs the lock s",
+    "build_check": "n/a — this step precedes the first build (split-baseline)",
+    "step_table": "n/a",
+    "next_step": "S1 extract — config/target.json missing",
+    "friction_summary": "3 entries (major 2, minor 1); stages attested: E, R, S, V, X; export: FRICTION-REPORT.md\n- F-1 [minor/environment] python3 -m venv (with ensurepip) fails on the mounted folder\n- F-2 [major/environment"
+  }
+}

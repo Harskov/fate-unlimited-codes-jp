@@ -16,3 +16,5 @@ wip/*/target.s
 # python / editor scratch
 __pycache__/
 *.pyc
+# written by verify_run.py after the run commit; stays on disk, not in git
+runs/*/verify.json

@@ -1,0 +1,1 @@
+{"run_id": "2026-09-05-001-bootstrap", "step_id": "S0", "step_type": "bootstrap", "override": false, "reason": "tools/manifest.json missing at run start", "started": "2026-09-05T19:27:00Z", "finished": "2026-09-05T19:45:15Z", "outcome": "complete", "summary": "toolchain installed; 11/11 smoke tests ok; assembler decision debian-deb (A2)", "commit": null}

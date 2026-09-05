@@ -11,7 +11,10 @@ them from the user's disc.
 <!-- progress-table:start -->
 | Segment | Kind | Functions | Matched | Wip | Asm | Library | Bytes matched |
 |---|---|---|---|---|---|---|---|
-| (no data yet — progress.py regenerates this table at every SHIP) | | | | | | | |
+| (no ledger yet — functions appear after segment-map) | | | | | | | |
+| image | unclassified | 0 | 0 | 0 | 0 | 0 | 0 |
+
+Steps run: 0; last run: none; build check: not yet run; compiler: not calibrated; regenerated 2026-09-05T19:43:57Z.
 <!-- progress-table:end -->
 
 ## Layout
