@@ -1,7 +1,7 @@
 # Friction Report — 2026-09-05-005-segment-map
 
 **Job folder:** `2026-09-05-005-segment-map`  
-**Log:** `friction-log.jsonl` (6 entries; opened 2026-09-05T22:17:23Z, exported 2026-09-05T22:38:31Z)  
+**Log:** `friction-log.jsonl` (6 entries; opened 2026-09-05T22:17:23Z, exported 2026-09-05T22:39:48Z)  
 **Skills build:** v1 2026-09-05  
 **Severity counts:** blocker 3, major 2, minor 1  
 
@@ -61,6 +61,8 @@ Silence is not evidence of frictionlessness: a stage is either attested (`clear-
 - **Operator hypothesis — UNVERIFIED, verify against the artifacts before building on it:** S3 wrote the header after its last successful splat run, so the baseline never exercised it; neither K2 nor dps2-step/SKILL.md states the comment syntax splat accepts for symbol_addrs.txt
 - **Artifact:** `../../config/symbol_addrs.txt` (exists)
 - **Repro:** `python3 skills/dps2-toolkit/scripts/configure.py --repo targets/fate-unlimited-codes-jp --build`
+- **Note (appended later):** FIXED IN THIS RUN: config/symbol_addrs.txt rewritten with // comments plus a line stating that splat rejects #.
+- **Amended through the tool:** `note` at 2026-09-05T22:39:41Z (record the fix so a remediating run does not redo it)
 
 ### F-2 — [blocker / false-signal] configure.py reported build rc=0 and check_build.py OK while ninja had failed and the ELF was stale
 
@@ -69,6 +71,8 @@ Silence is not evidence of frictionlessness: a stage is either attested (`clear-
 - **Expected:** a ninja failure gives build rc!=0, and check_build.py does not certify an ELF older than the objects it was supposed to be built from
 - **Operator hypothesis — UNVERIFIED, verify against the artifacts before building on it:** configure.py lines 205-207 clear rc whenever the output contains 'remove(.ninja_lock)' and lacks 'subcommand failed' and a non-empty ELF exists; a genuine 'missing and no known rule' error also lacks 'subcommand failed', so any pre-existing ELF turns a failed build green. check_build.py has no freshness test against the .s/.o inputs.
 - **Repro:** `python3 skills/dps2-toolkit/scripts/configure.py --repo targets/fate-unlimited-codes-jp --build && python3 skills/dps2-toolkit/scripts/check_build.py --repo targets/fate-unlimited-codes-jp`
+- **Note (appended later):** NOT FIXED: configure.py still clears a non-zero ninja rc whenever the output mentions remove(.ninja_lock) and an ELF exists. Every green in this run was confirmed by comparing build/SLPM_551.08.elf's mtime against the time of the split.
+- **Amended through the tool:** `note` at 2026-09-05T22:39:41Z (record that the blocker is open)
 
 ### F-5 — [blocker / tool-gap] gen_splat_yaml.py sets no string-guesser level, so data/rodata subsegments do not round-trip
 
@@ -77,6 +81,8 @@ Silence is not evidence of frictionlessness: a stage is either attested (`clear-
 - **Expected:** an asm-only re-split reproduces the image byte for byte, as it did at S3 when the same bytes were one asm subsegment
 - **Operator hypothesis — UNVERIFIED, verify against the artifacts before building on it:** splat's data and rodata string guessers run by default; with string_encoding/data_string_encoding SHIFT-JIS they read pointer words and padding as strings and re-emit them as .asciz plus .align 2, whose assembled padding does not always equal the original bytes. gen_splat_yaml.py's header() sets the encodings but never sets rodata_string_guesser_level / data_string_guesser_level, which splat documents as 0 = disabled.
 - **Repro:** `python3 skills/dps2-toolkit/scripts/gen_splat_yaml.py --repo targets/fate-unlimited-codes-jp --from-segments --force && python3 skills/dps2-toolkit/scripts/configure.py --repo targets/fate-unlimited-codes-jp --build && python3 skills/dps2-toolkit/scripts/check_build.py --repo targets/fate-unlimited-codes-jp`
+- **Note (appended later):** FIXED IN THIS RUN: skills/dps2-toolkit/scripts/gen_splat_yaml.py header() now emits rodata_string_guesser_level: 0 and data_string_guesser_level: 0, with a comment citing this entry. After the fix the same split checked green (4231424 of 4231424 bytes, first diff None).
+- **Amended through the tool:** `note` at 2026-09-05T22:39:41Z (record the fix so a remediating run does not redo it)
 
 ### F-3 — [major / tool-bug] splat emits build/asm/data/bss.bss.s.o in the ld but writes no asm/data/bss.bss.s when the bss segment is named 'bss'
 
@@ -85,6 +91,8 @@ Silence is not evidence of frictionlessness: a stage is either attested (`clear-
 - **Expected:** splat writes asm/data/<name>.bss.s for every bss subsegment it puts in the ld script
 - **Operator hypothesis — UNVERIFIED, verify against the artifacts before building on it:** the subsegment name 'bss' collides with splat's section naming for bss subsegments, so the file is skipped while the ld entry is still emitted; renaming the segment to main_bss (the S3 baseline name) avoids it
 - **Repro:** `name the last segment 'bss' in ledger/segments.json, then gen_splat_yaml.py --from-segments --force && configure.py --build`
+- **Note (appended later):** WORKED AROUND IN THIS RUN: the segment is named main_bss in ledger/segments.json. The splat behaviour itself is unfixed and will bite any repo that names a bss segment 'bss'.
+- **Amended through the tool:** `note` at 2026-09-05T22:39:41Z (record the workaround)
 
 ### F-4 — [major / doctrine-gap] segment boundaries must be 16-byte aligned (subalign: 16); three function-aligned boundaries were not, and the check went red
 
@@ -94,6 +102,8 @@ Silence is not evidence of frictionlessness: a stage is either attested (`clear-
 - **Operator hypothesis — UNVERIFIED, verify against the artifacts before building on it:** dps2-step/SKILL.md S4 and K5 describe boundaries only as contiguous and address-ordered; nothing links them to the subalign the generated YAML fixes at 16, so a boundary picked from the evidence lands on an 8-aligned function about half the time
 - **Artifact:** `../../build/check.json` (exists)
 - **Repro:** `set a segment start to an 8-mod-16 function address, gen_splat_yaml.py --from-segments --force, configure.py --build, check_build.py`
+- **Note (appended later):** WORKED AROUND IN THIS RUN: the three boundaries were moved to 0x00103F60, 0x002A5FC0 and 0x00353FF0. The doctrine gap is unfixed — dps2-step/SKILL.md S4 and K5 still do not state the 16-byte alignment rule.
+- **Amended through the tool:** `note` at 2026-09-05T22:39:41Z (record the workaround and what remains)
 
 ### F-6 — [minor / tool-gap] ledger.py import-functions leaves segment null on entries that already exist
 
@@ -102,6 +112,8 @@ Silence is not evidence of frictionlessness: a stage is either attested (`clear-
 - **Expected:** after segment-map every ledger entry names the segment its address falls in
 - **Operator hypothesis — UNVERIFIED, verify against the artifacts before building on it:** cmd_import was written as an add-only importer; the S2 calibrate step is the only thing that creates ledger entries before segments.json exists, so exactly those entries are the ones it can never fill in
 - **Repro:** `python3 skills/dps2-toolkit/scripts/ledger.py --repo targets/fate-unlimited-codes-jp import-functions && python3 skills/dps2-toolkit/scripts/ledger.py --repo targets/fate-unlimited-codes-jp stats`
+- **Note (appended later):** FIXED IN THIS RUN: skills/dps2-toolkit/scripts/ledger.py cmd_import now backfills segment/file/kind on entries that already exist (status untouched); the re-run printed '0 added, 8234 already present (8 segment backfilled)'.
+- **Amended through the tool:** `note` at 2026-09-05T22:39:41Z (record the fix so a remediating run does not redo it)
 
 ## Suggested remediation order
 
@@ -116,7 +128,7 @@ Cited artifacts: 2 — 2 present, 0 inside a checkpoint archive, 0 on another fi
 ```json
 {
   "job": "2026-09-05-005-segment-map",
-  "exported": "2026-09-05T22:38:31Z",
+  "exported": "2026-09-05T22:39:48Z",
   "build": "v1 2026-09-05",
   "entry_count": 6,
   "severity_counts": {
