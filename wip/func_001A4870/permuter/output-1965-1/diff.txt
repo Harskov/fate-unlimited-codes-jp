@@ -1,0 +1,13 @@
+--- before
++++ after
+@@ -23,9 +23,9 @@
+     {
+       case 0:
+         v = p->f8;
+-        break;
+ 
+       case 1:
++        break;
+         v = p->f8;
+         break;
+ 

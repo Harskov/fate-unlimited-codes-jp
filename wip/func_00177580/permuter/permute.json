@@ -1,0 +1,8 @@
+{
+  "at": "2026-09-08T04:20:04Z",
+  "seconds": 1.0,
+  "rc": 1,
+  "timeout": 5,
+  "candidates": [],
+  "cmd": "/sessions/rcw-01ktwevwvpsxj84wa8umas9y/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/tools/venv/bin/python /sessions/rcw-01ktwevwvpsxj84wa8umas9y/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/tools/decomp-permuter/permuter.py --stop-on-zero -j 1 /sessions/rcw-01ktwevwvpsxj84wa8umas9y/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/wip/func_00177580/permuter"
+}

@@ -1,0 +1,13 @@
+--- before
++++ after
+@@ -22,9 +22,9 @@
+     switch (mode)
+     {
+       case 0:
+-        v = p->f8;
+         break;
+ 
++      v = p->f8;
+       case 1:
+         v = p->f8;
+         break;

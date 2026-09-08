@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-05T22:38:11Z",
-  "proposed": "match-batch",
-  "step_id": "S6",
-  "reason": "5892 game function(s) still asm/wip; batch size 12",
+  "at": "2026-09-08T04:33:01Z",
+  "proposed": "repair",
+  "step_id": "S9",
+  "reason": "check.json red (first diff 0x0010026C) with C present",
   "notes": [],
   "never_auto_selected": [
     "ghidra-hints"

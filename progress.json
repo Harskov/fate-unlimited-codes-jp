@@ -1,18 +1,18 @@
 {
-  "generated": "2026-09-05T22:38:01Z",
+  "generated": "2026-09-08T04:33:00Z",
   "totals": {
     "functions": 8234,
     "bytes_total": 2608780,
-    "bytes_matched": 140,
-    "matched": 3,
-    "wip": 5,
-    "asm": 5887,
+    "bytes_matched": 740,
+    "matched": 13,
+    "wip": 7,
+    "asm": 5875,
     "library": 2339,
     "skipped-data": 0,
     "unassigned": 0,
     "game_functions": 5895,
-    "game_matched": 3,
-    "game_matched_pct": 0.05
+    "game_matched": 13,
+    "game_matched_pct": 0.22
   },
   "segments": [
     {
@@ -163,10 +163,10 @@
       "kind": "game",
       "functions": 3246,
       "bytes_total": 1350988,
-      "bytes_matched": 140,
-      "matched": 3,
-      "wip": 1,
-      "asm": 3242,
+      "bytes_matched": 740,
+      "matched": 13,
+      "wip": 3,
+      "asm": 3230,
       "library": 0,
       "skipped-data": 0,
       "unassigned": 0
@@ -302,9 +302,9 @@
       "unassigned": 0
     }
   ],
-  "steps_run": 4,
-  "last_run": "2026-09-05-004-split-baseline",
-  "build_check_ok": true,
+  "steps_run": 5,
+  "last_run": "2026-09-05-005-segment-map",
+  "build_check_ok": false,
   "link_regime": "full",
   "compiler_id": "mwcps2-3.0.1b151-050317",
   "calibrated": true

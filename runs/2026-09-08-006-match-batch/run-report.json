@@ -1,0 +1,26 @@
+{
+  "at": "2026-09-08T04:33:17Z",
+  "run_id": "2026-09-08-006-match-batch",
+  "lines": 53,
+  "max_lines": 80,
+  "friction_severities": {
+    "minor": 2,
+    "major": 2,
+    "blocker": 3
+  },
+  "fields": {
+    "run_id": "2026-09-08-006-match-batch",
+    "step_type": "match-batch",
+    "step_id": "S6",
+    "target": "fate-unlimited-codes-jp",
+    "override_note": " — proposed by next_step.py",
+    "started": "2026-09-08T04:05:41Z",
+    "finished": "2026-09-08T04:33:00Z",
+    "commit": "the commit whose message starts `run 2026-09-08-006-match-batch:` (git log --grep)",
+    "what_changed": "- Ledger: matched 3 → 13 (+10), wip 5 → 7 (+2), asm 5887 → 5875 (-12).\n- Ten of the twelve batch functions matched byte-identical on the first or second attempt; the batch table lists every attempt at",
+    "build_check": "`check.json`: ok = **False**, checked 2026-09-08T04:32:47Z, regime `full`; image 0x00100000–0x00509100, rebuilt 4231568 of 4231424 bytes; first diff 0x0010026C, 2981167 differing byte(s). Segments: cr",
+    "step_table": "# Batch table — run 2026-09-08-006-match-batch (S6 match-batch)\n\nSegment focus `game_00`; batch size 12 from `select_batch.py`; attempt cap 3.\nEvery attempt of every function, at every score.\n\n| funct",
+    "next_step": "S9 repair — check.json red (first diff 0x0010026C) with C present",
+    "friction_summary": "7 entries (blocker 3, major 2, minor 2); stages attested: E, R, S, V, X; export: FRICTION-REPORT.md\n- F-1 [minor/doc-gap] extern scalar compiles to %gp_rel where the target uses %hi/%lo; K1 gives only"
+  }
+}

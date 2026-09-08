@@ -1,0 +1,20 @@
+Loading...
+/sessions/rcw-01ktwevwvpsxj84wa8umas9y/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/wip/func_00177580/permuter/base.c (func_00177580)
+Traceback (most recent call last):
+  File "/sessions/rcw-01ktwevwvpsxj84wa8umas9y/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/tools/decomp-permuter/permuter.py", line 5, in <module>
+    main()
+  File "/sessions/rcw-01ktwevwvpsxj84wa8umas9y/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/tools/decomp-permuter/src/main.py", line 813, in main
+    run(options)
+  File "/sessions/rcw-01ktwevwvpsxj84wa8umas9y/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/tools/decomp-permuter/src/main.py", line 295, in run
+    return run_inner(options, heartbeat)
+  File "/sessions/rcw-01ktwevwvpsxj84wa8umas9y/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/tools/decomp-permuter/src/main.py", line 363, in run_inner
+    scorer = Scorer(
+  File "/sessions/rcw-01ktwevwvpsxj84wa8umas9y/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/tools/decomp-permuter/src/scorer.py", line 38, in __init__
+    _, self.target_seq = self._objdump(target_o)
+  File "/sessions/rcw-01ktwevwvpsxj84wa8umas9y/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/tools/decomp-permuter/src/scorer.py", line 48, in _objdump
+    lines = objdump(
+  File "/sessions/rcw-01ktwevwvpsxj84wa8umas9y/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/tools/decomp-permuter/src/objdump.py", line 721, in objdump
+    executable = find_executable(tuple(arch.executable), arch.name)
+  File "/sessions/rcw-01ktwevwvpsxj84wa8umas9y/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/tools/decomp-permuter/src/objdump.py", line 701, in find_executable
+    raise Exception(
+Exception: Could not find any objdump executables: [mips-linux-gnu-objdump, mips64-linux-gnu-objdump, mips64-elf-objdump] for mips. Make sure you have installed the toolchain for the target architecture.

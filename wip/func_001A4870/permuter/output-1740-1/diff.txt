@@ -1,0 +1,32 @@
+--- before
++++ after
+@@ -17,7 +17,9 @@
+ {
+   Params *p = a->params;
+   float v = 1.0f;
+-  if (D_0051D894[0] != 1)
++  int new_var;
++  new_var = 1;
++  if (D_0051D894[0] != (new_var & 0xFFFFFFFFFFFFFFFFu))
+   {
+     switch (mode)
+     {
+@@ -30,8 +32,7 @@
+         break;
+ 
+       case 2:
+-        v = p->fC;
+-        break;
++ do { v = p->fC; break; } while (0);
+ 
+       case 3:
+         if (p->f10 > v)
+@@ -45,7 +46,7 @@
+         break;
+ 
+       case 4:
+-        if (p->f14 > v)
++        if (a->params->f14 > v)
+       {
+         v = p->f14;
+       }

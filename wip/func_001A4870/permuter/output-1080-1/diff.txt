@@ -1,0 +1,27 @@
+--- before
++++ after
+@@ -34,6 +34,9 @@
+         break;
+ 
+       case 3:
++        if (1)
++      {
++      }
+         if (p->f10 > v)
+       {
+         v = p->f10;
+@@ -42,7 +45,14 @@
+       {
+         v = 1.2f;
+       }
++        if (a->params)
++      {
+         break;
++      }
++      else
++      {
++        break;
++      }
+ 
+       case 4:
+         if (p->f14 > v)

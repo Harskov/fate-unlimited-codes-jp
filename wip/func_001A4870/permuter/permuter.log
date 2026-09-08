@@ -1,0 +1,7 @@
+/sessions/rcw-01ktwevwvpsxj84wa8umas9y/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/wip/func_001A4870/permuter/compile.sh: line 5: syntax error near unexpected token `('
+/sessions/rcw-01ktwevwvpsxj84wa8umas9y/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/wip/func_001A4870/permuter/compile.sh: line 5: `exec /sessions/rcw-01ktwevwvpsxj84wa8umas9y/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/tools/wibo /sessions/rcw-01ktwevwvpsxj84wa8umas9y/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/tools/compilers/mwcps2-3.0.1b151-050317/mwccps2.exe -c -O4,p -nostdinc -stderr -i include -i /sessions/rcw-01ktwevwvpsxj84wa8umas9y/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/wip/func_001A4870 "$INPUT" -o "$OUTPUT"'
+Unable to compile /sessions/rcw-01ktwevwvpsxj84wa8umas9y/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/wip/func_001A4870/permuter/base.c
+Loading...
+/sessions/rcw-01ktwevwvpsxj84wa8umas9y/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/wip/func_001A4870/permuter/base.c (func_001A4870)
+No perm macros found. Defaulting to randomization.
+Will try 1 different base sources.

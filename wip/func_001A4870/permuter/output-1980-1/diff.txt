@@ -1,0 +1,45 @@
+--- before
++++ after
+@@ -13,16 +13,24 @@
+   unsigned char pad[0x22C];
+   Params *params;
+ } Arr;
++inline int inline_fn(int arg0)
++{
++  return arg0;
++}
++
+ float func_001A4870(Arr *a, int mode)
+ {
++  float new_var2;
++  float new_var;
+   Params *p = a->params;
+   float v = 1.0f;
+   if (D_0051D894[0] != 1)
+   {
+     switch (mode)
+     {
++      new_var2 = p->f8;
+       case 0:
+-        v = p->f8;
++        v = new_var2;
+         break;
+ 
+       case 1:
+@@ -33,12 +41,13 @@
+         v = p->fC;
+         break;
+ 
++      new_var = p->f10;
+       case 3:
+-        if (p->f10 > v)
++        if (new_var > v)
+       {
+-        v = p->f10;
++        v = new_var;
+       }
+-        if (v > 1.2f)
++        if (inline_fn(v > 1.2f))
+       {
+         v = 1.2f;
+       }

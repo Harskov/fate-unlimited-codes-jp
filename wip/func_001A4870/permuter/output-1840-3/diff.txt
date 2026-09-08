@@ -1,0 +1,31 @@
+--- before
++++ after
+@@ -13,8 +13,9 @@
+   unsigned char pad[0x22C];
+   Params *params;
+ } Arr;
+-float func_001A4870(Arr *a, int mode)
++float func_001A4870(Arr *a, unsigned int mode)
+ {
++  float new_var;
+   Params *p = a->params;
+   float v = 1.0f;
+   if (D_0051D894[0] != 1)
+@@ -29,14 +30,15 @@
+         v = p->f8;
+         break;
+ 
++      new_var = p->f10;
+       case 2:
+         v = p->fC;
+         break;
+ 
+       case 3:
+-        if (p->f10 > v)
++        if (new_var > v)
+       {
+-        v = p->f10;
++        v = new_var;
+       }
+         if (v > 1.2f)
+       {

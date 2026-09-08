@@ -1,0 +1,29 @@
+{
+  "run_id": "2026-09-08-006-match-batch",
+  "step_id": "S6",
+  "step_type": "match-batch",
+  "override": false,
+  "proposed": "match-batch",
+  "proposed_reason": "5892 game function(s) still asm/wip; batch size 12",
+  "reason": "5892 game function(s) still asm/wip; batch size 12",
+  "target": "fate-unlimited-codes-jp",
+  "started": "2026-09-08T04:05:41Z",
+  "finished": "2026-09-08T04:33:00Z",
+  "stage": "done",
+  "position": {
+    "function": "func_001A49A0"
+  },
+  "outcome": "partial",
+  "commit": null,
+  "notes": [],
+  "ledger_at_start": {
+    "functions": 8234,
+    "matched": 3,
+    "wip": 5,
+    "asm": 5887,
+    "library": 2339,
+    "skipped-data": 0
+  },
+  "updated": "2026-09-08T04:23:18Z",
+  "summary": "10 of 12 batch functions matched byte-identical and 2 parked (func_001A4870 at 91.05, func_00177580 at 96.0); check.json is RED because linking a matched function whose end is not 16-byte aligned pads the image (F-7, cause verified). The next run must apply that fix — SUBALIGN(4) on the .main output section of build/SLPM_551.08.ld after splat, or objcopy --set-section-alignment .text=4 on every object — then configure.py --build and check_build.py; no function needs unmarking."
+}

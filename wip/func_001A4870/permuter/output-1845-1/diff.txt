@@ -1,0 +1,34 @@
+--- before
++++ after
+@@ -15,6 +15,7 @@
+ } Arr;
+ float func_001A4870(Arr *a, int mode)
+ {
++  float new_var;
+   Params *p = a->params;
+   float v = 1.0f;
+   if (D_0051D894[0] != 1)
+@@ -23,12 +24,13 @@
+     {
+       case 0:
+         v = p->f8;
+-        break;
+ 
+       case 1:
++        break;
+         v = p->f8;
+         break;
+ 
++      new_var = p->f14;
+       case 2:
+         v = p->fC;
+         break;
+@@ -45,7 +47,7 @@
+         break;
+ 
+       case 4:
+-        if (p->f14 > v)
++        if (new_var > v)
+       {
+         v = p->f14;
+       }
