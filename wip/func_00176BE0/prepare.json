@@ -1,0 +1,18 @@
+{
+  "at": "2026-09-08T05:06:12Z",
+  "function": "func_00176BE0",
+  "target_s": "wip/func_00176BE0/target.s",
+  "insns": 8,
+  "m2c": "failed rc=1 (see m2c.err — file friction: tool-bug or evidence-gap)",
+  "externs": {
+    "data": [],
+    "functions": [
+      "func_00176BE0"
+    ]
+  },
+  "exemplars": [
+    "func_00176C00",
+    "func_00176C10",
+    "func_00176C30"
+  ]
+}

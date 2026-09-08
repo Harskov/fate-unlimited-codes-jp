@@ -1,0 +1,26 @@
+{
+  "at": "2026-09-08T05:22:24Z",
+  "run_id": "2026-09-08-007-match-batch",
+  "lines": 58,
+  "max_lines": 80,
+  "friction_severities": {
+    "minor": 2,
+    "major": 1,
+    "papercut": 1
+  },
+  "fields": {
+    "run_id": "2026-09-08-007-match-batch",
+    "step_type": "match-batch",
+    "step_id": "S6",
+    "target": "fate-unlimited-codes-jp",
+    "override_note": " — proposed by next_step.py",
+    "started": "2026-09-08T05:05:10Z",
+    "finished": "2026-09-08T05:22:11Z",
+    "commit": "the commit whose message starts `run 2026-09-08-007-match-batch:` (git log --grep)",
+    "what_changed": "- Ledger: matched 13 → 24 (+11), wip 7 → 8 (+1), asm 5875 → 5863 (-12).\n- 11 of 12 matched byte-identical; 24 matched functions in the ledger, up from 13. The decisive results: functions 10-12 (D_0051",
+    "build_check": "`check.json`: ok = **True**, checked 2026-09-08T05:21:40Z, regime `full`; image 0x00100000–0x00509100, rebuilt 4231424 of 4231424 bytes; first diff None, 0 differing byte(s). Segments: crt0 ok; sdk_dm",
+    "step_table": "# Batch table — run 2026-09-08-007-match-batch (S6 match-batch)\n\nPool 5878 asm/wip game functions, segment focus `game_00`, batch size 12 (`policy.batch_size`).\nEvery attempt at every score; the judgm",
+    "next_step": "S6 match-batch — 5871 game function(s) still asm/wip; batch size 12",
+    "friction_summary": "4 entries (major 1, minor 2, papercut 1); stages attested: E, R, S, V, X; export: FRICTION-REPORT.md\n- F-1 [minor/doc-gap] K1 is silent on MWCC tail calls (jr $rN) and function-pointer tables splat na"
+  }
+}

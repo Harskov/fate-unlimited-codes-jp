@@ -1,0 +1,29 @@
+{
+  "run_id": "2026-09-08-007-match-batch",
+  "step_id": "S6",
+  "step_type": "match-batch",
+  "override": false,
+  "proposed": "match-batch",
+  "proposed_reason": "5882 game function(s) still asm/wip; batch size 12",
+  "reason": "5882 game function(s) still asm/wip; batch size 12",
+  "target": "fate-unlimited-codes-jp",
+  "started": "2026-09-08T05:05:10Z",
+  "finished": "2026-09-08T05:22:11Z",
+  "stage": "done",
+  "position": {
+    "function": "func_001767B0"
+  },
+  "outcome": "complete",
+  "commit": null,
+  "notes": [],
+  "ledger_at_start": {
+    "functions": 8234,
+    "matched": 13,
+    "wip": 7,
+    "asm": 5875,
+    "library": 2339,
+    "skipped-data": 0
+  },
+  "updated": "2026-09-08T05:20:13Z",
+  "summary": "11 of 12 batch functions matched byte-identical, func_001767B0 parked at 85.8; check.json green"
+}

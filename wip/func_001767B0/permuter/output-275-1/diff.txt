@@ -1,0 +1,13 @@
+--- before
++++ after
+@@ -34,9 +34,9 @@
+       D_00528A08[i].v[side] = val;
+       ret = 1;
+       break;
++      return ret;
+     }
+   }
+ 
+-  return ret;
+ }
+ 

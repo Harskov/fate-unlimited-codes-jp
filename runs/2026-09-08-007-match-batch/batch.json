@@ -1,0 +1,141 @@
+{
+  "at": "2026-09-08T05:05:16Z",
+  "batch_size": 12,
+  "attempt_cap": 3,
+  "current_segment": "game_00",
+  "pool": 5878,
+  "functions": [
+    {
+      "name": "func_00176C30",
+      "addr": "0x00176C30",
+      "size": 28,
+      "segment": "game_00",
+      "status": "asm",
+      "calls": 0,
+      "nearest_matched_distance": 32,
+      "attempts": 0,
+      "forced": false
+    },
+    {
+      "name": "func_00176C10",
+      "addr": "0x00176C10",
+      "size": 20,
+      "segment": "game_00",
+      "status": "asm",
+      "calls": 0,
+      "nearest_matched_distance": 64,
+      "attempts": 0,
+      "forced": false
+    },
+    {
+      "name": "func_00176C00",
+      "addr": "0x00176C00",
+      "size": 16,
+      "segment": "game_00",
+      "status": "asm",
+      "calls": 0,
+      "nearest_matched_distance": 80,
+      "attempts": 0,
+      "forced": false
+    },
+    {
+      "name": "func_00176BE0",
+      "addr": "0x00176BE0",
+      "size": 32,
+      "segment": "game_00",
+      "status": "asm",
+      "calls": 0,
+      "nearest_matched_distance": 112,
+      "attempts": 0,
+      "forced": false
+    },
+    {
+      "name": "func_00176BC0",
+      "addr": "0x00176BC0",
+      "size": 20,
+      "segment": "game_00",
+      "status": "asm",
+      "calls": 0,
+      "nearest_matched_distance": 144,
+      "attempts": 0,
+      "forced": false
+    },
+    {
+      "name": "func_001A3A80",
+      "addr": "0x001A3A80",
+      "size": 16,
+      "segment": "game_00",
+      "status": "asm",
+      "calls": 0,
+      "nearest_matched_distance": 944,
+      "attempts": 0,
+      "forced": false
+    },
+    {
+      "name": "func_001767B0",
+      "addr": "0x001767B0",
+      "size": 200,
+      "segment": "game_00",
+      "status": "asm",
+      "calls": 0,
+      "nearest_matched_distance": 1184,
+      "attempts": 0,
+      "forced": false
+    },
+    {
+      "name": "func_00176740",
+      "addr": "0x00176740",
+      "size": 112,
+      "segment": "game_00",
+      "status": "asm",
+      "calls": 0,
+      "nearest_matched_distance": 1296,
+      "attempts": 0,
+      "forced": false
+    },
+    {
+      "name": "func_001766A0",
+      "addr": "0x001766A0",
+      "size": 160,
+      "segment": "game_00",
+      "status": "asm",
+      "calls": 0,
+      "nearest_matched_distance": 1456,
+      "attempts": 0,
+      "forced": false
+    },
+    {
+      "name": "func_001A3820",
+      "addr": "0x001A3820",
+      "size": 32,
+      "segment": "game_00",
+      "status": "asm",
+      "calls": 0,
+      "nearest_matched_distance": 1552,
+      "attempts": 0,
+      "forced": false
+    },
+    {
+      "name": "func_001A3800",
+      "addr": "0x001A3800",
+      "size": 32,
+      "segment": "game_00",
+      "status": "asm",
+      "calls": 0,
+      "nearest_matched_distance": 1584,
+      "attempts": 0,
+      "forced": false
+    },
+    {
+      "name": "func_001A37D0",
+      "addr": "0x001A37D0",
+      "size": 40,
+      "segment": "game_00",
+      "status": "asm",
+      "calls": 0,
+      "nearest_matched_distance": 1632,
+      "attempts": 0,
+      "forced": false
+    }
+  ]
+}
