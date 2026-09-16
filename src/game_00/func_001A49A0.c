@@ -1,19 +1,8 @@
-typedef struct Sub {
-    int f0;
-    unsigned char *base;
-    short count;
-    short index;
-    unsigned char *cur;
-} Sub;
+#include "game_00/arr220.h"
 
-typedef struct Arr {
-    unsigned char pad[0x220];
-    Sub sub;
-} Arr;
-
-void func_001A49A0(Arr *a, int i)
+void func_001A49A0(Arr220 *a, int i)
 {
-    Sub *s = &a->sub;
+    Sub220 *s = &a->sub;
 
     if (i >= s->count)
         return;

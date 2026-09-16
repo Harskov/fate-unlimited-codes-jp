@@ -1,3 +1,5 @@
+#include "game_00/tbl_0051C858.h"
+
 typedef struct Obj {
     unsigned char unk_0[0x1F0];
     int unk_1F0;
@@ -5,30 +7,12 @@ typedef struct Obj {
     int unk_24C0;
 } Obj;
 
-typedef struct Node {
-    Obj *obj;
-    unsigned char unk_4[8];
-    struct Node *next;
-} Node;
-
-typedef struct Entry {
-    unsigned char unk_0[0xC];
-    Node *list;
-} Entry;
-
-typedef struct Ctx {
-    unsigned char unk_0[8];
-    int index;
-} Ctx;
-
-extern Entry *D_0051C858[];
-
-int func_001A3E30(Ctx *c)
+int func_001A3E30(Ctx0051C858 *c)
 {
-    Node *n;
+    Node0051C858 *n;
 
     for (n = D_0051C858[c->index]->list; n != 0; n = n->next) {
-        Obj *o = n->obj;
+        Obj *o = (Obj *)n->obj;
         if (o->unk_1F0 & 0x10)
             return 0;
         if (o->unk_24C0 > 0)

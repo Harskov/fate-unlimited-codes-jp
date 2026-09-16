@@ -1,22 +1,8 @@
-typedef struct Elem {
-    unsigned char unk_0[0x18];
-    int unk_18;
-} Elem;
+#include "game_00/arr220.h"
 
-typedef struct Sub {
-    int unk_0;
-    Elem *base;
-    short count;
-} Sub;
-
-typedef struct Arr {
-    unsigned char unk_0[0x220];
-    Sub sub;
-} Arr;
-
-void func_001A5450(Arr *a, int i, int val)
+void func_001A5450(Arr220 *a, int i, int val)
 {
-    Sub *s = &a->sub;
+    Sub220 *s = &a->sub;
     int end;
 
     if (i < 0) {
@@ -29,5 +15,5 @@ void func_001A5450(Arr *a, int i, int val)
     }
 
     for (; i < end; i++)
-        s->base[i].unk_18 = val;
+        ((Elem220 *)s->base)[i].unk_18 = val;
 }

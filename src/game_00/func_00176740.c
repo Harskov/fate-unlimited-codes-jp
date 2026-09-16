@@ -1,16 +1,4 @@
-typedef struct Slot {
-    int used[2];
-    int unk_8[2];
-    int id[2];
-} Slot;
-
-typedef struct Row {
-    int v[2];
-    int pad[4];
-} Row;
-
-extern Slot D_00528A00[];
-extern Row D_00528A08[];
+#include "game_00/tbl_00528A00.h"
 
 int func_00176740(int id, int side)
 {
