@@ -1,0 +1,100 @@
+{
+  "function": "func_001766A0",
+  "provider": "zai",
+  "model": "glm-5.3",
+  "prompt_version": "v1",
+  "prompt_sha": "a460da0f17caee34694d81d3710d9fc9a62d973080884eb6899d7619c91c9035",
+  "started": "2026-09-11T04:27:04Z",
+  "state": "matched",
+  "attempts": [
+    {
+      "n": 1,
+      "at": "2026-09-11T04:27:42Z",
+      "kind": "scored",
+      "score": 76.1,
+      "bytes_equal": false,
+      "tokens": 18616,
+      "prompt_tokens": 15888,
+      "cached_tokens": 13504,
+      "completion_tokens": 2728,
+      "usd": 0.018852,
+      "latency": 33.1,
+      "prompt_sha": "a460da0f17caee34694d81d3710d9fc9a62d973080884eb6899d7619c91c9035",
+      "finish_reason": "stop",
+      "path": "wip/func_001766A0/attempt-1.c",
+      "try_elapsed": 1.84
+    },
+    {
+      "n": 2,
+      "at": "2026-09-11T04:28:34Z",
+      "kind": "scored",
+      "score": 94.2,
+      "bytes_equal": false,
+      "tokens": 20607,
+      "prompt_tokens": 16384,
+      "cached_tokens": 13568,
+      "completion_tokens": 4223,
+      "usd": 0.026051,
+      "latency": 49.91,
+      "prompt_sha": "a460da0f17caee34694d81d3710d9fc9a62d973080884eb6899d7619c91c9035",
+      "finish_reason": "stop",
+      "path": "wip/func_001766A0/attempt-2.c",
+      "try_elapsed": 0.77
+    },
+    {
+      "n": 3,
+      "at": "2026-09-11T04:29:05Z",
+      "kind": "scored",
+      "score": 95.0,
+      "bytes_equal": false,
+      "tokens": 18898,
+      "prompt_tokens": 16400,
+      "cached_tokens": 13568,
+      "completion_tokens": 2498,
+      "usd": 0.018484,
+      "latency": 30.52,
+      "prompt_sha": "a460da0f17caee34694d81d3710d9fc9a62d973080884eb6899d7619c91c9035",
+      "finish_reason": "stop",
+      "path": "wip/func_001766A0/attempt-3.c",
+      "try_elapsed": 0.77
+    },
+    {
+      "n": 4,
+      "at": "2026-09-11T04:29:27Z",
+      "kind": "matched",
+      "score": 100.0,
+      "bytes_equal": true,
+      "tokens": 17650,
+      "prompt_tokens": 16216,
+      "cached_tokens": 13568,
+      "completion_tokens": 1434,
+      "usd": 0.013544,
+      "latency": 18.61,
+      "prompt_sha": "a460da0f17caee34694d81d3710d9fc9a62d973080884eb6899d7619c91c9035",
+      "finish_reason": "stop",
+      "path": "wip/func_001766A0/attempt-4.c",
+      "try_elapsed": 0.77
+    }
+  ],
+  "best_score": 100.0,
+  "best_attempt": "wip/func_001766A0/attempt-4.c",
+  "mark_enabled": false,
+  "permuted_at": [
+    3
+  ],
+  "permute": [
+    {
+      "at": "2026-09-11T04:29:09Z",
+      "rc": 1,
+      "candidates": [],
+      "elapsed": 2.8
+    }
+  ],
+  "note": "byte-identical (bench mode: not marked) from wip/func_001766A0/attempt-4.c",
+  "finished": "2026-09-11T04:29:28Z",
+  "usd": 0.076931,
+  "tokens": 75771,
+  "elapsed": 143.9,
+  "marked_from": "wip/func_001766A0/attempt-4.c",
+  "updated": "2026-09-11T04:29:28Z"
+}

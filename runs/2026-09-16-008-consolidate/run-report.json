@@ -1,0 +1,25 @@
+{
+  "at": "2026-09-16T23:36:25Z",
+  "run_id": "2026-09-16-008-consolidate",
+  "lines": 58,
+  "max_lines": 80,
+  "friction_severities": {
+    "minor": 1,
+    "major": 3
+  },
+  "fields": {
+    "run_id": "2026-09-16-008-consolidate",
+    "step_type": "consolidate",
+    "step_id": "S8",
+    "target": "fate-unlimited-codes-jp",
+    "override_note": " — proposed by next_step.py",
+    "started": "2026-09-16T23:22:55Z",
+    "finished": "2026-09-16T23:36:06Z",
+    "commit": "the commit whose message starts `run 2026-09-16-008-consolidate:` (git log --grep)",
+    "what_changed": "- Ledger: no status changes.\n- Decisive: nothing in the matched set clears the S8 evidence bar. Of the 30 functions, none references a string, none has a named caller (config/symbol_addrs.txt holds no",
+    "build_check": "`check.json`: ok = **True**, checked 2026-09-16T23:35:57Z, regime `full`; image 0x00100000–0x00509100, rebuilt 4231424 of 4231424 bytes; first diff None, 0 differing byte(s). Segments: crt0 ok; sdk_dm",
+    "step_table": "# Rename table — run 2026-09-16-008-consolidate\n\nEvery matched function and every global the matched set touches, with the evidence found\nfor it and the decision. Evidence classes are the ones S8 acce",
+    "next_step": "S6 match-batch — 5865 game function(s) still asm/wip; batch size 12",
+    "friction_summary": "4 entries (major 3, minor 1); stages attested: E, R, S, V, X; export: FRICTION-REPORT.md\n- F-1 [minor/doctrine-gap] external MatchRunner lane left the tree uncommitted\n- F-2 [major/tool-gap] no xref/s"
+  }
+}

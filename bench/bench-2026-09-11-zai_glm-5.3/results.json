@@ -1,0 +1,273 @@
+{
+  "run_id": "bench-2026-09-11-zai_glm-5.3",
+  "fixtures": {
+    "created": "2026-09-11T04:25:05Z",
+    "seed": 7,
+    "band": [
+      132,
+      896
+    ],
+    "ledger_sha256": "115d5bddd223e89ef671e344fd5b9342703b87b4737dfbd86ae98e8b53f47271"
+  },
+  "criterion": {
+    "tier1_min_pct": 95.0,
+    "tier3_min_pct": 40.0,
+    "usd_per_function_max": 0.25
+  },
+  "models": {
+    "zai:glm-5.3": {
+      "run_id": "bench-2026-09-11-zai_glm-5.3",
+      "model": "zai:glm-5.3",
+      "prompt_version": "v1",
+      "prompt_sha": "a460da0f17caee34694d81d3710d9fc9a62d973080884eb6899d7619c91c9035",
+      "at": "2026-09-11T04:37:21Z",
+      "tiers": [
+        1
+      ],
+      "ledger_sha256_before": "115d5bddd223e89ef671e344fd5b9342703b87b4737dfbd86ae98e8b53f47271",
+      "ledger_sha256_after": "115d5bddd223e89ef671e344fd5b9342703b87b4737dfbd86ae98e8b53f47271",
+      "ledger_unchanged": true,
+      "app_version": "0.2.0",
+      "tier1": {
+        "n": 24,
+        "matched": 23,
+        "match_pct": 95.8,
+        "mean_attempts": 2.71,
+        "usd": 0.9673
+      },
+      "tier2": {
+        "n": 0,
+        "matched": 0,
+        "improved": 0,
+        "improvements": {},
+        "usd": 0
+      },
+      "tier3": {
+        "n": 0,
+        "matched": 0,
+        "match_pct": null,
+        "mean_attempts_to_match": null,
+        "mean_best_non_match": null,
+        "usd": 0
+      },
+      "attempted": 24,
+      "usd": 0.9673,
+      "tokens": 1129928,
+      "usd_per_function": 0.0403,
+      "usd_per_match": 0.0421,
+      "errors": 0,
+      "verdict": {
+        "status": "partial-pass",
+        "checks": {
+          "tier1_pct": {
+            "value": 95.8,
+            "ok": true
+          },
+          "usd_per_function": {
+            "value": 0.0403,
+            "ok": true
+          }
+        },
+        "criterion": {
+          "tier1_min_pct": 95.0,
+          "tier3_min_pct": 40.0,
+          "usd_per_function_max": 0.25
+        }
+      },
+      "functions": {
+        "func_00176BC0": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 1,
+          "usd": 0.00628,
+          "tokens": 14775,
+          "note": "byte-identical (bench mode: not marked) from wip/func_00176BC0/attempt-1.c"
+        },
+        "func_00176BE0": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 1,
+          "usd": 0.005989,
+          "tokens": 14766,
+          "note": "byte-identical (bench mode: not marked) from wip/func_00176BE0/attempt-1.c"
+        },
+        "func_00176C00": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 2,
+          "usd": 0.011236,
+          "tokens": 29303,
+          "note": "byte-identical (bench mode: not marked) from wip/func_00176C00/attempt-2.c"
+        },
+        "func_00176C10": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 1,
+          "usd": 0.007562,
+          "tokens": 15067,
+          "note": "byte-identical (bench mode: not marked) from wip/func_00176C10/attempt-1.c"
+        },
+        "func_00176C50": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 2,
+          "usd": 0.010445,
+          "tokens": 29111,
+          "note": "byte-identical (bench mode: not marked) from wip/func_00176C50/attempt-2.c"
+        },
+        "func_00176C30": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 5,
+          "usd": 0.031571,
+          "tokens": 74665,
+          "note": "byte-identical (bench mode: not marked) from wip/func_00176C30/attempt-5.c"
+        },
+        "func_00177B00": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 1,
+          "usd": 0.004284,
+          "tokens": 14665,
+          "note": "byte-identical (bench mode: not marked) from wip/func_00177B00/attempt-1.c"
+        },
+        "func_00178060": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 1,
+          "usd": 0.005121,
+          "tokens": 14517,
+          "note": "byte-identical (bench mode: not marked) from wip/func_00178060/attempt-1.c"
+        },
+        "func_001990B0": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 1,
+          "usd": 0.00472,
+          "tokens": 14329,
+          "note": "byte-identical (bench mode: not marked) from wip/func_001990B0/attempt-1.c"
+        },
+        "func_001990C0": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 1,
+          "usd": 0.005546,
+          "tokens": 15173,
+          "note": "byte-identical (bench mode: not marked) from wip/func_001990C0/attempt-1.c"
+        },
+        "func_00199CF0": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 1,
+          "usd": 0.005977,
+          "tokens": 14657,
+          "note": "byte-identical (bench mode: not marked) from wip/func_00199CF0/attempt-1.c"
+        },
+        "func_001A37D0": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 1,
+          "usd": 0.005885,
+          "tokens": 14842,
+          "note": "byte-identical (bench mode: not marked) from wip/func_001A37D0/attempt-1.c"
+        },
+        "func_001A3800": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 1,
+          "usd": 0.006247,
+          "tokens": 14856,
+          "note": "byte-identical (bench mode: not marked) from wip/func_001A3800/attempt-1.c"
+        },
+        "func_001A3820": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 1,
+          "usd": 0.006082,
+          "tokens": 14820,
+          "note": "byte-identical (bench mode: not marked) from wip/func_001A3820/attempt-1.c"
+        },
+        "func_001A3A80": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 2,
+          "usd": 0.012241,
+          "tokens": 29783,
+          "note": "byte-identical (bench mode: not marked) from wip/func_001A3A80/attempt-2.c"
+        },
+        "func_00176740": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 5,
+          "usd": 0.078302,
+          "tokens": 89174,
+          "note": "byte-identical (bench mode: not marked) from wip/func_00176740/attempt-5.c"
+        },
+        "func_001766A0": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 4,
+          "usd": 0.076931,
+          "tokens": 75771,
+          "note": "byte-identical (bench mode: not marked) from wip/func_001766A0/attempt-4.c"
+        },
+        "func_001A47A0": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 1,
+          "usd": 0.007401,
+          "tokens": 15115,
+          "note": "byte-identical (bench mode: not marked) from wip/func_001A47A0/attempt-1.c"
+        },
+        "func_001A4960": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 1,
+          "usd": 0.004443,
+          "tokens": 14862,
+          "note": "byte-identical (bench mode: not marked) from wip/func_001A4960/attempt-1.c"
+        },
+        "func_001775A0": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 7,
+          "usd": 0.093967,
+          "tokens": 121843,
+          "note": "byte-identical (bench mode: not marked) from wip/func_001775A0/attempt-7.c"
+        },
+        "func_001A49A0": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 2,
+          "usd": 0.028142,
+          "tokens": 33767,
+          "note": "byte-identical (bench mode: not marked) from wip/func_001A49A0/attempt-2.c"
+        },
+        "func_001A5450": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 4,
+          "usd": 0.105773,
+          "tokens": 80885,
+          "note": "byte-identical (bench mode: not marked) from wip/func_001A5450/attempt-4.c"
+        },
+        "func_001A3E30": {
+          "state": "matched",
+          "best": 100.0,
+          "attempts": 10,
+          "usd": 0.217426,
+          "tokens": 192629,
+          "note": "byte-identical (bench mode: not marked) from wip/func_001A3E30/attempt-10.c"
+        },
+        "func_001A3EA0": {
+          "state": "parked",
+          "best": 79.1,
+          "attempts": 9,
+          "usd": 0.225685,
+          "tokens": 180553,
+          "note": "parked at 79.1 (usd cap)"
+        }
+      }
+    }
+  }
+}

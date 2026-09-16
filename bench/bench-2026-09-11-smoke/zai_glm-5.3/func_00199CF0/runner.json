@@ -1,0 +1,38 @@
+{
+  "function": "func_00199CF0",
+  "provider": "zai",
+  "model": "glm-5.3",
+  "prompt_version": "v1",
+  "prompt_sha": "a460da0f17caee34694d81d3710d9fc9a62d973080884eb6899d7619c91c9035",
+  "started": "2026-09-11T05:36:23Z",
+  "state": "matched",
+  "attempts": [
+    {
+      "n": 1,
+      "at": "2026-09-11T05:36:30Z",
+      "kind": "matched",
+      "score": 100.0,
+      "bytes_equal": true,
+      "tokens": 14369,
+      "prompt_tokens": 14190,
+      "cached_tokens": 13504,
+      "completion_tokens": 179,
+      "usd": 0.005259,
+      "latency": 4.57,
+      "prompt_sha": "a460da0f17caee34694d81d3710d9fc9a62d973080884eb6899d7619c91c9035",
+      "finish_reason": "stop",
+      "path": "wip/func_00199CF0/attempt-1.c",
+      "try_elapsed": 0.77
+    }
+  ],
+  "best_score": 100.0,
+  "best_attempt": "wip/func_00199CF0/attempt-1.c",
+  "mark_enabled": false,
+  "note": "byte-identical (bench mode: not marked) from wip/func_00199CF0/attempt-1.c",
+  "finished": "2026-09-11T05:36:30Z",
+  "usd": 0.005259,
+  "tokens": 14369,
+  "elapsed": 7.0,
+  "marked_from": "wip/func_00199CF0/attempt-1.c",
+  "updated": "2026-09-11T05:36:30Z"
+}

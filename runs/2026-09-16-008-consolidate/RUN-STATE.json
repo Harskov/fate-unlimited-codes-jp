@@ -1,0 +1,27 @@
+{
+  "run_id": "2026-09-16-008-consolidate",
+  "step_id": "S8",
+  "step_type": "consolidate",
+  "override": false,
+  "proposed": "consolidate",
+  "proposed_reason": "30 matches since the last consolidate (threshold 25)",
+  "reason": "30 matches since the last consolidate (threshold 25)",
+  "target": "fate-unlimited-codes-jp",
+  "started": "2026-09-16T23:22:55Z",
+  "finished": "2026-09-16T23:36:06Z",
+  "stage": "done",
+  "position": {},
+  "outcome": "complete",
+  "commit": null,
+  "notes": [],
+  "ledger_at_start": {
+    "functions": 8234,
+    "matched": 30,
+    "wip": 8,
+    "asm": 5857,
+    "library": 2339,
+    "skipped-data": 0
+  },
+  "updated": "2026-09-16T23:34:44Z",
+  "summary": "consolidate: 0 of 30 renamed (no function in the matched set has a string, a named caller, a TCRF fact or a Ghidra hint, and ledger.py has no rename command — F-4); 4 shared headers introduced under include/game_00/ and 12 sources rewritten onto them, each re-verified at objdiff 100 byte-identical; func_00177B00, func_001990C0 and func_001A4960 re-marked out of src/main and calibration/ into src/game_00/ and linked for the first time (27 -> 30 c subsegments, F-3); 26 evidence notes deposited in the ledger; check.json green"
+}

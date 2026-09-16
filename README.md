@@ -22,7 +22,7 @@ them from the user's disc.
 | libc | libc | 139 | 0 | 1 | 0 | 138 | 0 (0.0%) |
 | libm | libc | 56 | 0 | 0 | 0 | 56 | 0 (0.0%) |
 | cri_adx | sdk | 1430 | 0 | 1 | 0 | 1429 | 0 (0.0%) |
-| game_00 | game | 3246 | 24 | 4 | 3218 | 0 | 1248 (0.1%) |
+| game_00 | game | 3246 | 30 | 4 | 3212 | 0 | 1480 (0.1%) |
 | game_render | game | 1056 | 0 | 0 | 1056 | 0 | 0 (0.0%) |
 | game_01 | game | 834 | 0 | 0 | 834 | 0 | 0 (0.0%) |
 | sdk_cdvd | sdk | 12 | 0 | 0 | 0 | 12 | 0 (0.0%) |
@@ -33,9 +33,9 @@ them from the user's disc.
 | data_01 | data | 0 | 0 | 0 | 0 | 0 | 0 |
 | rodata_str | rodata | 0 | 0 | 0 | 0 | 0 | 0 |
 | main_bss | bss | 0 | 0 | 0 | 0 | 0 | 0 |
-| **total** | | 8234 | 24 | 8 | 5863 | 2339 | 1248 / 2608780 |
+| **total** | | 8234 | 30 | 8 | 5857 | 2339 | 1480 / 2608780 |
 
-Steps run: 6; last run: 2026-09-08-006-match-batch; build check: ok; compiler: mwcps2-3.0.1b151-050317; regenerated 2026-09-08T05:21:42Z.
+Steps run: 7; last run: 2026-09-08-007-match-batch; build check: ok; compiler: mwcps2-3.0.1b151-050317; regenerated 2026-09-16T23:35:58Z.
 <!-- progress-table:end -->
 
 ## Layout
