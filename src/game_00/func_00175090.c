@@ -1,0 +1,6 @@
+unsigned int *func_00175090(int a, int b, unsigned int *p)
+{
+    if (((*p >> 8) & 0xFF) != 0)
+        return p;
+    return p + 1;
+}
