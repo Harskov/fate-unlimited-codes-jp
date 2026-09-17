@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-16T23:34:44Z",
+  "at": "2026-09-17T04:15:27Z",
   "mode": "from-segments",
   "basename": "SLPM_551.08",
   "load": {
@@ -71,6 +71,26 @@
       "name": "game_00"
     },
     {
+      "offset": "0x00075B90",
+      "type": "c",
+      "name": "game_00/func_00175B10"
+    },
+    {
+      "offset": "0x00075BF4",
+      "type": "asm",
+      "name": "game_00_1"
+    },
+    {
+      "offset": "0x00075C00",
+      "type": "c",
+      "name": "game_00/func_00175B80"
+    },
+    {
+      "offset": "0x00075C14",
+      "type": "asm",
+      "name": "game_00_2"
+    },
+    {
       "offset": "0x00076720",
       "type": "c",
       "name": "game_00/func_001766A0"
@@ -83,7 +103,7 @@
     {
       "offset": "0x00076830",
       "type": "asm",
-      "name": "game_00_1"
+      "name": "game_00_3"
     },
     {
       "offset": "0x00076C40",
@@ -93,7 +113,7 @@
     {
       "offset": "0x00076C54",
       "type": "asm",
-      "name": "game_00_2"
+      "name": "game_00_4"
     },
     {
       "offset": "0x00076C60",
@@ -113,7 +133,7 @@
     {
       "offset": "0x00076CA4",
       "type": "asm",
-      "name": "game_00_3"
+      "name": "game_00_5"
     },
     {
       "offset": "0x00076CB0",
@@ -123,7 +143,7 @@
     {
       "offset": "0x00076CCC",
       "type": "asm",
-      "name": "game_00_4"
+      "name": "game_00_6"
     },
     {
       "offset": "0x00076CD0",
@@ -133,7 +153,7 @@
     {
       "offset": "0x00076CE0",
       "type": "asm",
-      "name": "game_00_5"
+      "name": "game_00_7"
     },
     {
       "offset": "0x00077620",
@@ -143,7 +163,7 @@
     {
       "offset": "0x00077698",
       "type": "asm",
-      "name": "game_00_6"
+      "name": "game_00_8"
     },
     {
       "offset": "0x00077B80",
@@ -153,7 +173,7 @@
     {
       "offset": "0x00077BA0",
       "type": "asm",
-      "name": "game_00_7"
+      "name": "game_00_9"
     },
     {
       "offset": "0x000780E0",
@@ -163,7 +183,7 @@
     {
       "offset": "0x000780F4",
       "type": "asm",
-      "name": "game_00_8"
+      "name": "game_00_10"
     },
     {
       "offset": "0x00099130",
@@ -173,7 +193,7 @@
     {
       "offset": "0x00099138",
       "type": "asm",
-      "name": "game_00_9"
+      "name": "game_00_11"
     },
     {
       "offset": "0x00099140",
@@ -183,7 +203,7 @@
     {
       "offset": "0x00099178",
       "type": "asm",
-      "name": "game_00_10"
+      "name": "game_00_12"
     },
     {
       "offset": "0x00099D70",
@@ -193,7 +213,92 @@
     {
       "offset": "0x00099D7C",
       "type": "asm",
-      "name": "game_00_11"
+      "name": "game_00_13"
+    },
+    {
+      "offset": "0x0009AA20",
+      "type": "c",
+      "name": "game_00/func_0019A9A0"
+    },
+    {
+      "offset": "0x0009AAA4",
+      "type": "asm",
+      "name": "game_00_14"
+    },
+    {
+      "offset": "0x0009AAB0",
+      "type": "c",
+      "name": "game_00/func_0019AA30"
+    },
+    {
+      "offset": "0x0009AAE0",
+      "type": "asm",
+      "name": "game_00_15"
+    },
+    {
+      "offset": "0x000A2840",
+      "type": "c",
+      "name": "game_00/func_001A27C0"
+    },
+    {
+      "offset": "0x000A2850",
+      "type": "asm",
+      "name": "game_00_16"
+    },
+    {
+      "offset": "0x000A29B0",
+      "type": "c",
+      "name": "game_00/func_001A2930"
+    },
+    {
+      "offset": "0x000A29B8",
+      "type": "asm",
+      "name": "game_00_17"
+    },
+    {
+      "offset": "0x000A2EA0",
+      "type": "c",
+      "name": "game_00/func_001A2E20"
+    },
+    {
+      "offset": "0x000A2EDC",
+      "type": "asm",
+      "name": "game_00_18"
+    },
+    {
+      "offset": "0x000A35E0",
+      "type": "c",
+      "name": "game_00/func_001A3560"
+    },
+    {
+      "offset": "0x000A3600",
+      "type": "asm",
+      "name": "game_00_19"
+    },
+    {
+      "offset": "0x000A3650",
+      "type": "c",
+      "name": "game_00/func_001A35D0"
+    },
+    {
+      "offset": "0x000A3674",
+      "type": "asm",
+      "name": "game_00_20"
+    },
+    {
+      "offset": "0x000A3680",
+      "type": "c",
+      "name": "game_00/func_001A3600"
+    },
+    {
+      "offset": "0x000A3720",
+      "type": "c",
+      "name": "game_00/func_001A36A0"
+    },
+    {
+      "offset": "0x000A3744",
+      "type": "asm",
+      "name": "game_00_21"
     },
     {
       "offset": "0x000A3750",
@@ -203,7 +308,7 @@
     {
       "offset": "0x000A377C",
       "type": "asm",
-      "name": "game_00_12"
+      "name": "game_00_22"
     },
     {
       "offset": "0x000A3780",
@@ -213,7 +318,7 @@
     {
       "offset": "0x000A37A4",
       "type": "asm",
-      "name": "game_00_13"
+      "name": "game_00_23"
     },
     {
       "offset": "0x000A37B0",
@@ -223,7 +328,7 @@
     {
       "offset": "0x000A37C8",
       "type": "asm",
-      "name": "game_00_14"
+      "name": "game_00_24"
     },
     {
       "offset": "0x000A37D0",
@@ -248,7 +353,7 @@
     {
       "offset": "0x000A3878",
       "type": "asm",
-      "name": "game_00_15"
+      "name": "game_00_25"
     },
     {
       "offset": "0x000A3880",
@@ -263,7 +368,7 @@
     {
       "offset": "0x000A38C0",
       "type": "asm",
-      "name": "game_00_16"
+      "name": "game_00_26"
     },
     {
       "offset": "0x000A3B00",
@@ -273,7 +378,7 @@
     {
       "offset": "0x000A3B10",
       "type": "asm",
-      "name": "game_00_17"
+      "name": "game_00_27"
     },
     {
       "offset": "0x000A3EB0",
@@ -283,7 +388,7 @@
     {
       "offset": "0x000A3F1C",
       "type": "asm",
-      "name": "game_00_18"
+      "name": "game_00_28"
     },
     {
       "offset": "0x000A3F20",
@@ -293,7 +398,7 @@
     {
       "offset": "0x000A3F94",
       "type": "asm",
-      "name": "game_00_19"
+      "name": "game_00_29"
     },
     {
       "offset": "0x000A4820",
@@ -303,7 +408,7 @@
     {
       "offset": "0x000A4848",
       "type": "asm",
-      "name": "game_00_20"
+      "name": "game_00_30"
     },
     {
       "offset": "0x000A49E0",
@@ -313,7 +418,7 @@
     {
       "offset": "0x000A4A14",
       "type": "asm",
-      "name": "game_00_21"
+      "name": "game_00_31"
     },
     {
       "offset": "0x000A4A20",
@@ -323,7 +428,7 @@
     {
       "offset": "0x000A4A54",
       "type": "asm",
-      "name": "game_00_22"
+      "name": "game_00_32"
     },
     {
       "offset": "0x000A54D0",
@@ -333,7 +438,7 @@
     {
       "offset": "0x000A553C",
       "type": "asm",
-      "name": "game_00_23"
+      "name": "game_00_33"
     },
     {
       "offset": "0x001A6040",
