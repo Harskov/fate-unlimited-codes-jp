@@ -1,4 +1,7 @@
-# fate-unlimited-codes-jp — matching decompilation
+# Fate/Unlimited Codes (Japan) SLPM_551.08 — matching decompilation
+
+[![Progress report](https://github.com/Harskov/fate-unlimited-codes-jp/actions/workflows/report.yml/badge.svg)](https://github.com/Harskov/fate-unlimited-codes-jp/actions/workflows/report.yml)
+[![Code progress](https://decomp.dev/Harskov/fate-unlimited-codes-jp.svg?mode=shield&measure=code&label=Code)](https://decomp.dev/Harskov/fate-unlimited-codes-jp)
 
 Target repository of the Decompilation Assistant (PS2) project. One step of the
 decompilation is performed per run; the state lives in this tree
@@ -35,9 +38,9 @@ them from the user's disc.
 | main_bss | bss | 0 | 0 | 0 | 0 | 0 | 0 |
 | **total** | | 8234 | 30 | 8 | 5857 | 2339 | 1480 / 2608780 |
 
-Matched by the operator: 26; by the external lane (MatchRunner): 4 in 2 batch(es), $0.24 (last 2026-09-11-002).
+Matched by the operator: 26; by the external lane (MatchRunner): 4 in 2 batch(es) (last 2026-09-11-002).
 
-Steps run: 8; last run: 2026-09-16-008-consolidate; build check: ok; compiler: mwcps2-3.0.1b151-050317; regenerated 2026-09-17T00:13:27Z.
+Steps run: 8; last run: 2026-09-16-008-consolidate; build check: ok; compiler: mwcps2-3.0.1b151-050317; regenerated 2026-09-17T03:52:17Z.
 <!-- progress-table:end -->
 
 ## Building and verifying
@@ -59,6 +62,25 @@ loaded memory image compared with the original (`build/check.json`).
 Disclosure: this decompilation is AI-assisted. C is proposed by language models
 and accepted only when it compiles byte-identical; every run's report and
 friction log are committed under `runs/`. See `CONTRIBUTING.md` to contribute.
+
+## Progress reporting
+
+Progress is published the way the decompilation community tracks it, through
+[decomp.dev](https://decomp.dev): `tools/objdiff_report.py` writes an objdiff (v2)
+report from `ledger/functions.jsonl`, and the `Progress report` workflow generates it
+on every push to `main`, validates it with `objdiff-cli` and uploads it as the
+`<BOOT2 file>_report` artifact decomp.dev consumes. The ledger is the evidence behind
+every number: a function is recorded as matched only after the pinned compiler
+rebuilt its C byte-identical on the maintainer's machine, where the disc is, so the
+workflow needs nothing from the game. To regenerate the report locally:
+
+```sh
+python3 tools/objdiff_report.py --repo . --out build/report.json
+```
+
+`matched_code` counts byte-identical functions; `complete_code` counts those linked
+into the rebuilt ELF whose loaded image equals the original's (`build/check.json`).
+Categories: game code, SDK and libc.
 
 ## License
 
