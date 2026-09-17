@@ -38,9 +38,11 @@ them from the user's disc.
 | main_bss | bss | 0 | 0 | 0 | 0 | 0 | 0 |
 | **total** | | 8234 | 41 | 9 | 5845 | 2339 | 2128 / 2608780 |
 
+Matched functions whose C still carries a layout cast flagged by `lint_c.py` (byte-identical, not final source; rewritten at consolidate): 8 — func_0019A9A0, func_001A3560, func_001A35D0, func_001A3790, func_001A37B0, func_001A37D0, func_001A3800, func_001A3820.
+
 Matched by the operator: 37; by the external lane (MatchRunner): 4 in 2 batch(es) (last 2026-09-11-002).
 
-Steps run: 8; last run: 2026-09-16-008-consolidate; build check: ok; compiler: mwcps2-3.0.1b151-050317; regenerated 2026-09-17T04:16:44Z.
+Steps run: 9; last run: 2026-09-17-009-match-batch; build check: ok; compiler: mwcps2-3.0.1b151-050317; regenerated 2026-09-17T05:16:38Z.
 <!-- progress-table:end -->
 
 ## Building and verifying
@@ -61,7 +63,12 @@ loaded memory image compared with the original (`build/check.json`).
 
 Disclosure: this decompilation is AI-assisted. C is proposed by language models
 and accepted only when it compiles byte-identical; every run's report and
-friction log are committed under `runs/`. See `CONTRIBUTING.md` to contribute.
+friction log are committed under `runs/`. Provenance is per function: the ledger
+record says who wrote the C (`match.origin`: the operator session, or the
+MatchRunner lane with its model and prompt hash). Byte-identical is the gate, not
+the goal: C that reaches 100 through a layout cast or a permuter's text is flagged
+by `tools/lint_c.py` (listed in the progress table when any exist) and rewritten
+as plain C at the next consolidate step. See `CONTRIBUTING.md` to contribute.
 
 ## Progress reporting
 

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17T04:16:44Z",
+  "generated": "2026-09-17T05:16:38Z",
   "totals": {
     "functions": 8234,
     "bytes_total": 2608780,
@@ -14,7 +14,18 @@
     "game_matched": 41,
     "game_matched_pct": 0.7,
     "external_matched": 4,
-    "operator_matched": 37
+    "operator_matched": 37,
+    "matched_with_lint": 8,
+    "lint_flagged": [
+      "func_0019A9A0",
+      "func_001A3560",
+      "func_001A35D0",
+      "func_001A3790",
+      "func_001A37B0",
+      "func_001A37D0",
+      "func_001A3800",
+      "func_001A3820"
+    ]
   },
   "segments": [
     {
@@ -304,8 +315,8 @@
       "unassigned": 0
     }
   ],
-  "steps_run": 8,
-  "last_run": "2026-09-16-008-consolidate",
+  "steps_run": 9,
+  "last_run": "2026-09-17-009-match-batch",
   "build_check_ok": true,
   "link_regime": "full",
   "compiler_id": "mwcps2-3.0.1b151-050317",
