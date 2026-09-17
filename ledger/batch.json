@@ -1,42 +1,50 @@
 {
-  "at": "2026-09-11T05:31:51Z",
+  "at": "2026-09-17T00:13:27Z",
   "batch_size": 3,
   "attempt_cap": 3,
   "current_segment": "game_00",
-  "pool": 5864,
+  "pool": 5861,
+  "runner_escalate_min_score": 95.0,
+  "runner_matched_skipped": [],
   "functions": [
     {
-      "name": "func_001A3730",
-      "addr": "0x001A3730",
-      "size": 24,
-      "segment": "game_00",
-      "status": "asm",
-      "calls": 0,
-      "nearest_matched_distance": 32,
-      "attempts": 0,
-      "forced": false
-    },
-    {
-      "name": "func_001A3700",
-      "addr": "0x001A3700",
+      "name": "func_001A35D0",
+      "addr": "0x001A35D0",
       "size": 36,
       "segment": "game_00",
       "status": "asm",
       "calls": 0,
-      "nearest_matched_distance": 80,
+      "nearest_matched_distance": 256,
       "attempts": 0,
-      "forced": false
+      "forced": false,
+      "runner_best": 97.5,
+      "start_from": "wip/func_001A35D0/attempt-3.c"
     },
     {
-      "name": "func_001A36D0",
-      "addr": "0x001A36D0",
-      "size": 44,
+      "name": "func_001A36A0",
+      "addr": "0x001A36A0",
+      "size": 36,
       "segment": "game_00",
       "status": "asm",
       "calls": 0,
-      "nearest_matched_distance": 128,
+      "nearest_matched_distance": 48,
       "attempts": 0,
-      "forced": false
+      "forced": false,
+      "runner_best": null,
+      "start_from": null
+    },
+    {
+      "name": "func_001A3600",
+      "addr": "0x001A3600",
+      "size": 160,
+      "segment": "game_00",
+      "status": "asm",
+      "calls": 0,
+      "nearest_matched_distance": 208,
+      "attempts": 0,
+      "forced": false,
+      "runner_best": null,
+      "start_from": null
     }
   ]
 }

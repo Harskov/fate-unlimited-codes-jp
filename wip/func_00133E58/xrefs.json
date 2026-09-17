@@ -1,0 +1,41 @@
+{
+  "function": "func_00133E58",
+  "addr": "0x00133E58",
+  "status": "library",
+  "segment": "cri_adx",
+  "asm_file": "asm/cri_adx.s",
+  "callers": [
+    {
+      "name": "func_001357E8",
+      "status": "library/cri_adx",
+      "call_sites": 1,
+      "file": "asm/cri_adx.s"
+    }
+  ],
+  "referenced_from_data": [],
+  "callees": [
+    {
+      "name": "func_00121678",
+      "status": "library/libc",
+      "call_sites": 2
+    }
+  ],
+  "references": [
+    {
+      "symbol": "D_004E4D98",
+      "kind": "data",
+      "string": "FORM",
+      "words": 2,
+      "file": "asm/data/rodata_str.rodata.s"
+    },
+    {
+      "symbol": "D_004E4DA0",
+      "kind": "data",
+      "string": "AIFF",
+      "words": 2,
+      "file": "asm/data/rodata_str.rodata.s"
+    }
+  ],
+  "at": "2026-09-17T00:10:52Z",
+  "index": "reference/xrefs-index.json"
+}

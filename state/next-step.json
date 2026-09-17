@@ -1,9 +1,12 @@
 {
-  "at": "2026-09-16T23:36:07Z",
+  "at": "2026-09-17T00:13:06Z",
   "proposed": "match-batch",
   "step_id": "S6",
   "reason": "5865 game function(s) still asm/wip; batch size 12",
-  "notes": [],
+  "notes": [
+    "MatchRunner queue is running: state/runner.lock (pid 1, started test, 0 s old)",
+    "external lane: 2 runner batch(es), 4 matched, $0.24 in state/runner-steps.jsonl (never a step of a run)"
+  ],
   "never_auto_selected": [
     "ghidra-hints"
   ]

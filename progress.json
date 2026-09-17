@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-16T23:35:58Z",
+  "generated": "2026-09-17T00:13:27Z",
   "totals": {
     "functions": 8234,
     "bytes_total": 2608780,
@@ -12,7 +12,9 @@
     "unassigned": 0,
     "game_functions": 5895,
     "game_matched": 30,
-    "game_matched_pct": 0.51
+    "game_matched_pct": 0.51,
+    "external_matched": 4,
+    "operator_matched": 26
   },
   "segments": [
     {
@@ -302,10 +304,16 @@
       "unassigned": 0
     }
   ],
-  "steps_run": 7,
-  "last_run": "2026-09-08-007-match-batch",
+  "steps_run": 8,
+  "last_run": "2026-09-16-008-consolidate",
   "build_check_ok": true,
   "link_regime": "full",
   "compiler_id": "mwcps2-3.0.1b151-050317",
-  "calibrated": true
+  "calibrated": true,
+  "runner": {
+    "batches": 2,
+    "matched": 4,
+    "cost_usd": 0.2361,
+    "last_batch": "2026-09-11-002"
+  }
 }

@@ -1,0 +1,355 @@
+{
+  "function": "func_00241C10",
+  "addr": "0x00241C10",
+  "status": "asm",
+  "segment": "game_00",
+  "asm_file": "asm/game_00_23.s",
+  "callers": [],
+  "referenced_from_data": [
+    "D_003DF660"
+  ],
+  "callees": [
+    {
+      "name": "func_0019CB40",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_0019CBB0",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_0019CDB0",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_0019CFA0",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_0019CFF0",
+      "status": "asm/game_00",
+      "call_sites": 2
+    },
+    {
+      "name": "func_0019D000",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_0019D040",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_0019D0B0",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_0019D0F0",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_0019D540",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_0019D760",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_0019D960",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001A3560",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001A3580",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001A35D0",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001A3600",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001A36A0",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001A36D0",
+      "status": "matched/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001A3700",
+      "status": "matched/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001A3730",
+      "status": "matched/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001A3750",
+      "status": "matched/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001A37B0",
+      "status": "matched/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001A3800",
+      "status": "matched/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001A3820",
+      "status": "matched/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001A3840",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001A3890",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001AB340",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001AB360",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001AB7A0",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001AB810",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001ABC50",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001AC240",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001AC2C0",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001AC300",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001AC640",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_001AD2A0",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_00223240",
+      "status": "asm/game_00",
+      "call_sites": 1
+    },
+    {
+      "name": "func_00223250",
+      "status": "asm/game_00",
+      "call_sites": 18
+    },
+    {
+      "name": "func_002235A0",
+      "status": "asm/game_00",
+      "call_sites": 28
+    },
+    {
+      "name": "func_00333630",
+      "status": "asm/game_01",
+      "call_sites": 1
+    },
+    {
+      "name": "func_00333670",
+      "status": "asm/game_01",
+      "call_sites": 1
+    }
+  ],
+  "references": [
+    {
+      "symbol": "D_0051D894",
+      "kind": "unknown",
+      "string": null,
+      "words": null,
+      "file": null
+    },
+    {
+      "symbol": "D_0051D8A0",
+      "kind": "unknown",
+      "string": null,
+      "words": null,
+      "file": null
+    },
+    {
+      "symbol": "D_0051D8BC",
+      "kind": "unknown",
+      "string": null,
+      "words": null,
+      "file": null
+    },
+    {
+      "symbol": "D_0051D8E8",
+      "kind": "unknown",
+      "string": null,
+      "words": null,
+      "file": null
+    },
+    {
+      "symbol": "D_00523EB4",
+      "kind": "unknown",
+      "string": null,
+      "words": null,
+      "file": null
+    },
+    {
+      "symbol": "jtbl_00503050",
+      "kind": "data",
+      "string": null,
+      "words": 1,
+      "file": "asm/data/rodata_str.rodata.s"
+    },
+    {
+      "symbol": "jtbl_00503070",
+      "kind": "data",
+      "string": null,
+      "words": 1,
+      "file": "asm/data/rodata_str.rodata.s"
+    },
+    {
+      "symbol": "jtbl_00503090",
+      "kind": "data",
+      "string": null,
+      "words": 1,
+      "file": "asm/data/rodata_str.rodata.s"
+    },
+    {
+      "symbol": "jtbl_005030B0",
+      "kind": "data",
+      "string": null,
+      "words": 1,
+      "file": "asm/data/rodata_str.rodata.s"
+    },
+    {
+      "symbol": "jtbl_005030D0",
+      "kind": "data",
+      "string": null,
+      "words": 1,
+      "file": "asm/data/rodata_str.rodata.s"
+    },
+    {
+      "symbol": "jtbl_005030F0",
+      "kind": "data",
+      "string": null,
+      "words": 1,
+      "file": "asm/data/rodata_str.rodata.s"
+    },
+    {
+      "symbol": "jtbl_00503110",
+      "kind": "data",
+      "string": null,
+      "words": 1,
+      "file": "asm/data/rodata_str.rodata.s"
+    },
+    {
+      "symbol": "jtbl_00503130",
+      "kind": "data",
+      "string": null,
+      "words": 1,
+      "file": "asm/data/rodata_str.rodata.s"
+    },
+    {
+      "symbol": "jtbl_00503150",
+      "kind": "data",
+      "string": null,
+      "words": 1,
+      "file": "asm/data/rodata_str.rodata.s"
+    },
+    {
+      "symbol": "jtbl_00503170",
+      "kind": "data",
+      "string": null,
+      "words": 1,
+      "file": "asm/data/rodata_str.rodata.s"
+    },
+    {
+      "symbol": "jtbl_00503190",
+      "kind": "data",
+      "string": null,
+      "words": 1,
+      "file": "asm/data/rodata_str.rodata.s"
+    },
+    {
+      "symbol": "jtbl_005031B0",
+      "kind": "data",
+      "string": null,
+      "words": 1,
+      "file": "asm/data/rodata_str.rodata.s"
+    },
+    {
+      "symbol": "jtbl_005031D0",
+      "kind": "data",
+      "string": null,
+      "words": 3,
+      "file": "asm/data/rodata_str.rodata.s"
+    },
+    {
+      "symbol": "jtbl_00503210",
+      "kind": "data",
+      "string": null,
+      "words": 0,
+      "file": "asm/data/rodata_str.rodata.s"
+    }
+  ],
+  "at": "2026-09-17T00:09:59Z",
+  "index": "reference/xrefs-index.json"
+}

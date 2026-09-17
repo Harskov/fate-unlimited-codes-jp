@@ -35,7 +35,9 @@ them from the user's disc.
 | main_bss | bss | 0 | 0 | 0 | 0 | 0 | 0 |
 | **total** | | 8234 | 30 | 8 | 5857 | 2339 | 1480 / 2608780 |
 
-Steps run: 7; last run: 2026-09-08-007-match-batch; build check: ok; compiler: mwcps2-3.0.1b151-050317; regenerated 2026-09-16T23:35:58Z.
+Matched by the operator: 26; by the external lane (MatchRunner): 4 in 2 batch(es), $0.24 (last 2026-09-11-002).
+
+Steps run: 8; last run: 2026-09-16-008-consolidate; build check: ok; compiler: mwcps2-3.0.1b151-050317; regenerated 2026-09-17T00:13:27Z.
 <!-- progress-table:end -->
 
 ## Layout

@@ -32,3 +32,12 @@ __pycache__/
 *.pyc
 # written by verify_run.py after the run commit; stays on disk, not in git
 runs/*/verify.json
+# external match lane (MatchRunner): bench objects and binaries stay out; attempt-*.c, runner.json,
+# runs/runner/ and state/runner-*.jsonl are committed (companion change §7.8)
+bench/*/attempts/*.o
+bench/*/*.bin
+bench/*/*/*.o
+state/runner.lock
+# xrefs.py index: derived from the asm in 3 s, holds decoded game strings; regenerated, never committed
+reference/xrefs-index.json
+targets-state.json
