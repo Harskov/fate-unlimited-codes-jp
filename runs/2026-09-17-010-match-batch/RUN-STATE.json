@@ -1,0 +1,33 @@
+{
+  "run_id": "2026-09-17-010-match-batch",
+  "step_id": "S6",
+  "step_type": "match-batch",
+  "override": false,
+  "proposed": "match-batch",
+  "proposed_reason": "5854 game function(s) still asm/wip; batch size 12",
+  "reason": "5854 game function(s) still asm/wip; batch size 12",
+  "target": "fate-unlimited-codes-jp",
+  "started": "2026-09-17T06:41:35Z",
+  "finished": "2026-09-17T06:45:43Z",
+  "stage": "done",
+  "position": {
+    "function": "func_00179380"
+  },
+  "outcome": "complete",
+  "commit": null,
+  "notes": [
+    "external lane: 2 runner batch(es), 4 matched, $0.24 in state/runner-steps.jsonl (never a step of a run)"
+  ],
+  "ledger_at_start": {
+    "functions": 8234,
+    "matched": 41,
+    "wip": 9,
+    "asm": 5845,
+    "library": 2339,
+    "skipped-data": 0,
+    "external_matched": 0,
+    "runner_batches": 2
+  },
+  "updated": "2026-09-17T06:44:23Z",
+  "summary": "12 of 12 batch functions matched byte-identical (53 total); func_00176140's switch jump table placed at 0x004FEA50 after prepare re-cut it"
+}

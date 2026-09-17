@@ -1,6 +1,6 @@
 # func_00176140 @ 0x00176140 — 176 bytes, segment game_00
 
-Compiler: mwcps2-3.0.1b151-050317 `-O4,p`; m2c seed: failed rc=1 (see m2c.err — file friction: tool-bug or evidence-gap); externs: 8 data, 1 functions.
+Compiler: mwcps2-3.0.1b151-050317 `-O4,p`; m2c seed: ok; externs: 8 data, 1 functions.
 
 Write attempt-1.c (function named exactly as above; include "ctx.c" declarations you need by copying them, not the file), then:
 

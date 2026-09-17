@@ -1,0 +1,9 @@
+{
+  ".rodata": {
+    "addr": "0x004FEA50",
+    "symbols": [
+      "jtbl_004FEA50"
+    ],
+    "asm_size": 40
+  }
+}

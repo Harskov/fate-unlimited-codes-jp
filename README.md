@@ -25,7 +25,7 @@ them from the user's disc.
 | libc | libc | 139 | 0 | 1 | 0 | 138 | 0 (0.0%) |
 | libm | libc | 56 | 0 | 0 | 0 | 56 | 0 (0.0%) |
 | cri_adx | sdk | 1430 | 0 | 1 | 0 | 1429 | 0 (0.0%) |
-| game_00 | game | 3246 | 41 | 5 | 3200 | 0 | 2128 (0.2%) |
+| game_00 | game | 3246 | 53 | 4 | 3189 | 0 | 2512 (0.2%) |
 | game_render | game | 1056 | 0 | 0 | 1056 | 0 | 0 (0.0%) |
 | game_01 | game | 834 | 0 | 0 | 834 | 0 | 0 (0.0%) |
 | sdk_cdvd | sdk | 12 | 0 | 0 | 0 | 12 | 0 (0.0%) |
@@ -36,13 +36,13 @@ them from the user's disc.
 | data_01 | data | 0 | 0 | 0 | 0 | 0 | 0 |
 | rodata_str | rodata | 0 | 0 | 0 | 0 | 0 | 0 |
 | main_bss | bss | 0 | 0 | 0 | 0 | 0 | 0 |
-| **total** | | 8234 | 41 | 9 | 5845 | 2339 | 2128 / 2608780 |
+| **total** | | 8234 | 53 | 8 | 5834 | 2339 | 2512 / 2608780 |
 
 Matched functions whose C still carries a layout cast flagged by `lint_c.py` (byte-identical, not final source; rewritten at consolidate): 8 — func_0019A9A0, func_001A3560, func_001A35D0, func_001A3790, func_001A37B0, func_001A37D0, func_001A3800, func_001A3820.
 
-Matched by the operator: 37; by the external lane (MatchRunner): 4 in 2 batch(es) (last 2026-09-11-002).
+Matched by the operator: 49; by the external lane (MatchRunner): 4 in 2 batch(es) (last 2026-09-11-002).
 
-Steps run: 9; last run: 2026-09-17-009-match-batch; build check: ok; compiler: mwcps2-3.0.1b151-050317; regenerated 2026-09-17T05:16:38Z.
+Steps run: 9; last run: 2026-09-17-009-match-batch; build check: ok; compiler: mwcps2-3.0.1b151-050317; regenerated 2026-09-17T06:45:43Z.
 <!-- progress-table:end -->
 
 ## Building and verifying

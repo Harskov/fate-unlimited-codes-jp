@@ -24,6 +24,16 @@ int func_001766A0(int id, int side)
 
 ```
 
+## func_00175B80 @ 0x00175B80 (score 100.0, mwcps2-3.0.1b151-050317 -O4,p)
+
+```c
+int *func_00175B80(int *base, int i)
+{
+    return &base[i * 2 + 1];
+}
+
+```
+
 ## func_00176740 @ 0x00176740 (score 100.0, mwcps2-3.0.1b151-050317 -O4,p)
 
 ```c
@@ -39,17 +49,6 @@ int func_00176740(int id, int side)
         }
     }
     return 0;
-}
-
-```
-
-## func_00176BC0 @ 0x00176BC0 (score 100.0, mwcps2-3.0.1b151-050317 -O4,p)
-
-```c
-int func_00176BC0(int *table, int i, int v)
-{
-    table[i] = v;
-    return table[i];
 }
 
 ```

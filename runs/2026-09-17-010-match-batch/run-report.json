@@ -1,0 +1,24 @@
+{
+  "at": "2026-09-17T06:46:04Z",
+  "run_id": "2026-09-17-010-match-batch",
+  "lines": 45,
+  "max_lines": 80,
+  "friction_severities": {
+    "minor": 1
+  },
+  "fields": {
+    "run_id": "2026-09-17-010-match-batch",
+    "step_type": "match-batch",
+    "step_id": "S6",
+    "target": "fate-unlimited-codes-jp",
+    "override_note": " — proposed by next_step.py",
+    "started": "2026-09-17T06:41:35Z",
+    "finished": "2026-09-17T06:45:43Z",
+    "commit": "the commit whose message starts `run 2026-09-17-010-match-batch:` (git log --grep)",
+    "what_changed": "- Ledger: matched 41 → 53 (+12), wip 9 → 8 (-1), asm 5845 → 5834 (-11).\n- All 12 batch functions matched byte-identical on the first or second substantive attempt; 11 were leaf accessors and list/flag",
+    "build_check": "`check.json`: ok = **True**, checked 2026-09-17T06:45:41Z, regime `full`; image 0x00100000–0x00509100, rebuilt 4231424 of 4231424 bytes; first diff None, 0 differing byte(s). Segments: crt0 ok; sdk_dm",
+    "step_table": "# Batch table — 2026-09-17-010-match-batch\n\n| function | addr | size | attempts (score) | final | status |\n|---|---|---|---|---|---|\n| func_0019AE60 | 0x0019AE60 | 40 | #1 100.00, #2 100.00 | 100.00 |",
+    "next_step": "S6 match-batch — 5842 game function(s) still asm/wip; batch size 12\n- note: external lane: 2 runner batch(es), 4 matched, $0.24 in state/runner-steps.jsonl (never a step of a run)",
+    "friction_summary": "1 entry (minor 1); stages attested: E, R, S, V, X; export: FRICTION-REPORT.md\n- F-1 [minor/tool-gap] try refuses a byte-identical C after prepare re-cut the target"
+  }
+}

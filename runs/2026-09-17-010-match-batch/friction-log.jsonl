@@ -1,0 +1,8 @@
+{"kind": "meta", "schema": 1, "job": "2026-09-17-010-match-batch", "created": "2026-09-17T06:41:35Z"}
+{"kind": "entry", "id": "F-1", "at": "2026-09-17T06:42:59Z", "stage": "E", "severity": "minor", "category": "tool-gap", "title": "try refuses a byte-identical C after prepare re-cut the target", "observed": "run 009 parked func_00176140 at 99.77 with a jtbl diff; this run's prepare wrote target-sections.json (.rodata 0x004FEA50, 40 bytes) so the target changed; 'try wip/func_00176140/attempt-2.c' (same C as attempt-1) printed REFUSED byte-identical resubmission", "expected": "the refusal keys on (C sha, target.o sha), so a re-cut target re-scores the same C", "hypothesis": "match.py compares only the C sha against attempts[]", "repro": "python3 skills/dps2-toolkit/scripts/match.py --repo targets/fate-unlimited-codes-jp try func_00176140 wip/func_00176140/attempt-2.c", "tool": "match.py", "function": "func_00176140"}
+{"kind": "attest", "at": "2026-09-17T06:46:03Z", "stage": "R", "note": "reviewed"}
+{"kind": "attest", "at": "2026-09-17T06:46:04Z", "stage": "S", "note": "reviewed"}
+{"kind": "attest", "at": "2026-09-17T06:46:04Z", "stage": "E", "note": "reviewed"}
+{"kind": "attest", "at": "2026-09-17T06:46:04Z", "stage": "X", "note": "reviewed"}
+{"kind": "attest", "at": "2026-09-17T06:46:04Z", "stage": "V", "note": "SHIP scripts ran"}
+{"kind": "export", "at": "2026-09-17T06:46:04Z", "to": "targets/fate-unlimited-codes-jp/runs/2026-09-17-010-match-batch/FRICTION-REPORT.md", "entries": 1, "unattested": [], "refused": false, "copy": "friction-reports/fate-unlimited-codes-jp-2026-09-17-010-match-batch-FRICTION-REPORT.md"}

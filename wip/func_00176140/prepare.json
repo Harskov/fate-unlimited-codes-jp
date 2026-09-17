@@ -1,9 +1,9 @@
 {
-  "at": "2026-09-17T04:10:28Z",
+  "at": "2026-09-17T06:42:50Z",
   "function": "func_00176140",
   "target_s": "wip/func_00176140/target.s",
-  "insns": 44,
-  "m2c": "failed rc=1 (see m2c.err — file friction: tool-bug or evidence-gap)",
+  "insns": 54,
+  "m2c": "ok",
   "externs": {
     "data": [
       "D_0051D890",
@@ -21,7 +21,7 @@
   },
   "exemplars": [
     "func_001766A0",
-    "func_00176740",
-    "func_00176BC0"
+    "func_00175B80",
+    "func_00176740"
   ]
 }
