@@ -1,9 +1,0 @@
-{
-  "at": "2026-09-08T05:19:43Z",
-  "seconds": 120.1,
-  "rc": 124,
-  "timeout": 120,
-  "objdump_shim": "wip/func_001767B0/permuter/bin/mips-linux-gnu-objdump",
-  "candidates": [],
-  "cmd": "/sessions/rcw-01lgyt5hhslqkgzqg3bvcxum/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/tools/venv/bin/python /sessions/rcw-01lgyt5hhslqkgzqg3bvcxum/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/tools/decomp-permuter/permuter.py --stop-on-zero -j 1 /sessions/rcw-01lgyt5hhslqkgzqg3bvcxum/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/wip/func_001767B0/permuter"
-}

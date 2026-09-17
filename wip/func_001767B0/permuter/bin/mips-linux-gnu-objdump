@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-exec '/sessions/rcw-01lgyt5hhslqkgzqg3bvcxum/mnt/Decompilation Assistant (PS2)/targets/fate-unlimited-codes-jp/tools/binutils-deb/usr/bin/mipsel-linux-gnu-objdump' "$@"
