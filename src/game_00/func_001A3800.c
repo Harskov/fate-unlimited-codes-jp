@@ -2,5 +2,7 @@
 
 void func_001A3800(int i, int v)
 {
-    ((Ent0051D890 *)&D_0051D890[i])->unk_E8 = v;
+    Rec0051D890 *r = &D_0051D890[i];
+
+    r[9].unk_10 = v;
 }
