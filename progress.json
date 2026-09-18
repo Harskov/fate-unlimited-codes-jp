@@ -1,19 +1,19 @@
 {
-  "generated": "2026-09-17T07:23:17Z",
+  "generated": "2026-09-18T19:31:11Z",
   "totals": {
     "functions": 8234,
     "bytes_total": 2608780,
-    "bytes_matched": 2512,
-    "matched": 53,
-    "wip": 8,
-    "asm": 5834,
+    "bytes_matched": 2880,
+    "matched": 63,
+    "wip": 23,
+    "asm": 5809,
     "library": 2339,
     "skipped-data": 0,
     "unassigned": 0,
     "game_functions": 5895,
-    "game_matched": 53,
-    "game_matched_pct": 0.9,
-    "external_matched": 4,
+    "game_matched": 63,
+    "game_matched_pct": 1.07,
+    "external_matched": 14,
     "operator_matched": 49,
     "matched_with_lint": 8,
     "lint_flagged": [
@@ -176,10 +176,10 @@
       "kind": "game",
       "functions": 3246,
       "bytes_total": 1350988,
-      "bytes_matched": 2512,
-      "matched": 53,
-      "wip": 4,
-      "asm": 3189,
+      "bytes_matched": 2880,
+      "matched": 63,
+      "wip": 19,
+      "asm": 3164,
       "library": 0,
       "skipped-data": 0,
       "unassigned": 0
@@ -322,9 +322,9 @@
   "compiler_id": "mwcps2-3.0.1b151-050317",
   "calibrated": true,
   "runner": {
-    "batches": 2,
-    "matched": 4,
-    "cost_usd": 0.2361,
-    "last_batch": "2026-09-11-002"
+    "batches": 5,
+    "matched": 14,
+    "cost_usd": 0.2642,
+    "last_batch": "2026-09-18-003"
   }
 }
