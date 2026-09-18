@@ -1,0 +1,140 @@
+{
+  "function": "func_001795F0",
+  "addr": "0x001795F0",
+  "status": "matched",
+  "segment": "game_00",
+  "asm_file": "wip/func_001795F0/target.s",
+  "callers": [
+    {
+      "name": "func_00179570",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_15.s"
+    },
+    {
+      "name": "func_00183660",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_18.s"
+    },
+    {
+      "name": "func_001836D0",
+      "status": "asm/game_00",
+      "call_sites": 2,
+      "file": "asm/game_00_18.s"
+    },
+    {
+      "name": "func_00183870",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_18.s"
+    },
+    {
+      "name": "func_00184A90",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_18.s"
+    },
+    {
+      "name": "func_0018CB50",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_18.s"
+    },
+    {
+      "name": "func_00190F40",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_18.s"
+    },
+    {
+      "name": "func_00194B10",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_18.s"
+    },
+    {
+      "name": "func_001B4B30",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_001F1FA0",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_001F4B50",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_001F4C80",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_001F4E20",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_00200580",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_00203C20",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_00208280",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_00208840",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_0021AF20",
+      "status": "asm/game_00",
+      "call_sites": 2,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_00223F70",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_0031BBA0",
+      "status": "asm/game_01",
+      "call_sites": 1,
+      "file": "asm/game_01.s"
+    },
+    {
+      "name": "func_00328EA0",
+      "status": "asm/game_01",
+      "call_sites": 1,
+      "file": "asm/game_01.s"
+    }
+  ],
+  "referenced_from_data": [],
+  "callees": [],
+  "references": [],
+  "at": "2026-09-18T20:42:07Z",
+  "index": "reference/xrefs-index.json"
+}

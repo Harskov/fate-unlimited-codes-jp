@@ -1,0 +1,26 @@
+{
+  "function": "func_0019D850",
+  "addr": "0x0019D850",
+  "status": "matched",
+  "segment": "game_00",
+  "asm_file": "wip/func_0019D850/target.s",
+  "callers": [
+    {
+      "name": "func_0019D0F0",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_31.s"
+    },
+    {
+      "name": "func_0019D7F0",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_33.s"
+    }
+  ],
+  "referenced_from_data": [],
+  "callees": [],
+  "references": [],
+  "at": "2026-09-18T20:42:13Z",
+  "index": "reference/xrefs-index.json"
+}

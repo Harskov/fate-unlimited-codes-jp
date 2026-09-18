@@ -1,0 +1,74 @@
+{
+  "function": "func_0017A820",
+  "addr": "0x0017A820",
+  "status": "matched",
+  "segment": "game_00",
+  "asm_file": "wip/func_0017A820/target.s",
+  "callers": [
+    {
+      "name": "func_0017A740",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_17.s"
+    },
+    {
+      "name": "func_0017F500",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_18.s"
+    },
+    {
+      "name": "func_00183870",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_18.s"
+    },
+    {
+      "name": "func_0018CB50",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_18.s"
+    },
+    {
+      "name": "func_00190540",
+      "status": "asm/game_00",
+      "call_sites": 7,
+      "file": "asm/game_00_18.s"
+    },
+    {
+      "name": "func_00191CE0",
+      "status": "asm/game_00",
+      "call_sites": 2,
+      "file": "asm/game_00_18.s"
+    },
+    {
+      "name": "func_00197FF0",
+      "status": "asm/game_00",
+      "call_sites": 2,
+      "file": "asm/game_00_18.s"
+    },
+    {
+      "name": "func_001B5210",
+      "status": "asm/game_00",
+      "call_sites": 9,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_0025C070",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_00320780",
+      "status": "asm/game_01",
+      "call_sites": 14,
+      "file": "asm/game_01.s"
+    }
+  ],
+  "referenced_from_data": [],
+  "callees": [],
+  "references": [],
+  "at": "2026-09-18T20:42:07Z",
+  "index": "reference/xrefs-index.json"
+}

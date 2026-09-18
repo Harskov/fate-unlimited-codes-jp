@@ -1,0 +1,24 @@
+{
+  "at": "2026-09-18T20:44:45Z",
+  "run_id": "2026-09-18-011-consolidate",
+  "lines": 56,
+  "max_lines": 80,
+  "friction_severities": {
+    "papercut": 1
+  },
+  "fields": {
+    "run_id": "2026-09-18-011-consolidate",
+    "step_type": "consolidate",
+    "step_id": "S8",
+    "target": "fate-unlimited-codes-jp",
+    "override_note": " — proposed by next_step.py",
+    "started": "2026-09-18T20:32:26Z",
+    "finished": "2026-09-18T20:44:09Z",
+    "commit": "the commit whose message starts `run 2026-09-18-011-consolidate:` (git log --grep)",
+    "what_changed": "- Ledger: no status changes.\n- The eight lint error findings were the whole of this consolidate's rewriting work, and all eight came from one unsettled layout. K1 6.9 left D_0051D890 'layout unresolve",
+    "build_check": "`check.json`: ok = **True**, checked 2026-09-18T20:43:57Z, regime `full`; image 0x00100000–0x00509100, rebuilt 4231424 of 4231424 bytes; first diff None, 0 differing byte(s). Segments: crt0 ok; sdk_dm",
+    "step_table": "# Rename table — run 2026-09-18-011-consolidate\n\n| old | new | evidence |\n|---|---|---|\n| — | — | n/a — no function clears the evidence bar |\n\nNo name was written this run. `ledger/renames.jsonl` is u",
+    "next_step": "S6 match-batch — 5832 game function(s) still asm/wip; batch size 12\n- note: external lane: 6 runner batch(es), 14 matched, $0.29 in state/runner-steps.jsonl (never a step of a run)",
+    "friction_summary": "1 entry (papercut 1); stages attested: E, R, S, V, X; export: FRICTION-REPORT.md\n- F-1 [papercut/operator-drift] re-ran a spelling K1 6.9 already scored"
+  }
+}

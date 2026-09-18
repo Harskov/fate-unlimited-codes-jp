@@ -1,0 +1,90 @@
+{
+  "function": "func_00176140",
+  "addr": "0x00176140",
+  "status": "matched",
+  "segment": "game_00",
+  "asm_file": "wip/func_00176140/target.s",
+  "callers": [
+    {
+      "name": "func_00175BA0",
+      "status": "asm/game_00",
+      "call_sites": 4,
+      "file": "asm/game_00_5.s"
+    },
+    {
+      "name": "func_00175F60",
+      "status": "asm/game_00",
+      "call_sites": 2,
+      "file": "asm/game_00_5.s"
+    }
+  ],
+  "referenced_from_data": [],
+  "callees": [],
+  "references": [
+    {
+      "symbol": "D_0051D890",
+      "kind": "unknown",
+      "string": null,
+      "words": null,
+      "file": null
+    },
+    {
+      "symbol": "D_00522E20",
+      "kind": "unknown",
+      "string": null,
+      "words": null,
+      "file": null
+    },
+    {
+      "symbol": "D_00522E90",
+      "kind": "unknown",
+      "string": null,
+      "words": null,
+      "file": null
+    },
+    {
+      "symbol": "D_005231C0",
+      "kind": "unknown",
+      "string": null,
+      "words": null,
+      "file": null
+    },
+    {
+      "symbol": "D_00523900",
+      "kind": "unknown",
+      "string": null,
+      "words": null,
+      "file": null
+    },
+    {
+      "symbol": "D_00523AF0",
+      "kind": "unknown",
+      "string": null,
+      "words": null,
+      "file": null
+    },
+    {
+      "symbol": "D_00523D50",
+      "kind": "unknown",
+      "string": null,
+      "words": null,
+      "file": null
+    },
+    {
+      "symbol": "D_00531B60",
+      "kind": "unknown",
+      "string": null,
+      "words": null,
+      "file": null
+    },
+    {
+      "symbol": "jtbl_004FEA50",
+      "kind": "unknown",
+      "string": null,
+      "words": null,
+      "file": null
+    }
+  ],
+  "at": "2026-09-18T20:42:02Z",
+  "index": "reference/xrefs-index.json"
+}

@@ -1,0 +1,26 @@
+{
+  "function": "func_00176C00",
+  "addr": "0x00176C00",
+  "status": "matched",
+  "segment": "game_00",
+  "asm_file": "wip/func_00176C00/target.s",
+  "callers": [
+    {
+      "name": "func_001768D0",
+      "status": "asm/game_00",
+      "call_sites": 2,
+      "file": "asm/game_00_7.s"
+    },
+    {
+      "name": "func_00176C60",
+      "status": "asm/game_00",
+      "call_sites": 3,
+      "file": "asm/game_00_11.s"
+    }
+  ],
+  "referenced_from_data": [],
+  "callees": [],
+  "references": [],
+  "at": "2026-09-18T20:42:04Z",
+  "index": "reference/xrefs-index.json"
+}

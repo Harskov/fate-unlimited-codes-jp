@@ -1,0 +1,20 @@
+{
+  "function": "func_001A2E20",
+  "addr": "0x001A2E20",
+  "status": "matched",
+  "segment": "game_00",
+  "asm_file": "wip/func_001A2E20/target.s",
+  "callers": [
+    {
+      "name": "func_001A2C70",
+      "status": "asm/game_00",
+      "call_sites": 3,
+      "file": "asm/game_00_36.s"
+    }
+  ],
+  "referenced_from_data": [],
+  "callees": [],
+  "references": [],
+  "at": "2026-09-18T20:42:15Z",
+  "index": "reference/xrefs-index.json"
+}

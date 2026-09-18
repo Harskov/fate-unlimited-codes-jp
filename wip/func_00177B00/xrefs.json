@@ -1,0 +1,98 @@
+{
+  "function": "func_00177B00",
+  "addr": "0x00177B00",
+  "status": "matched",
+  "segment": "game_00",
+  "asm_file": "wip/func_00177B00/target.s",
+  "callers": [
+    {
+      "name": "func_001777F0",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_12.s"
+    },
+    {
+      "name": "func_00177B20",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_13.s"
+    },
+    {
+      "name": "func_00178380",
+      "status": "asm/game_00",
+      "call_sites": 2,
+      "file": "asm/game_00_14.s"
+    },
+    {
+      "name": "func_001785D0",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_14.s"
+    },
+    {
+      "name": "func_00178730",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_14.s"
+    },
+    {
+      "name": "func_001788E0",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_14.s"
+    },
+    {
+      "name": "func_00178A00",
+      "status": "asm/game_00",
+      "call_sites": 3,
+      "file": "asm/game_00_14.s"
+    },
+    {
+      "name": "func_00190F40",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_18.s"
+    },
+    {
+      "name": "func_001B4B30",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_001B6030",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_00200580",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_00208280",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_00208840",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_00328EA0",
+      "status": "asm/game_01",
+      "call_sites": 1,
+      "file": "asm/game_01.s"
+    }
+  ],
+  "referenced_from_data": [],
+  "callees": [],
+  "references": [],
+  "at": "2026-09-18T20:42:06Z",
+  "index": "reference/xrefs-index.json"
+}

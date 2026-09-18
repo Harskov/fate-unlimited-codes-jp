@@ -1,0 +1,20 @@
+{
+  "function": "func_00175B80",
+  "addr": "0x00175B80",
+  "status": "matched",
+  "segment": "game_00",
+  "asm_file": "wip/func_00175B80/target.s",
+  "callers": [
+    {
+      "name": "func_00175390",
+      "status": "asm/game_00",
+      "call_sites": 2,
+      "file": "asm/game_00_3.s"
+    }
+  ],
+  "referenced_from_data": [],
+  "callees": [],
+  "references": [],
+  "at": "2026-09-18T20:42:01Z",
+  "index": "reference/xrefs-index.json"
+}

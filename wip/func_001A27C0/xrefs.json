@@ -1,0 +1,182 @@
+{
+  "function": "func_001A27C0",
+  "addr": "0x001A27C0",
+  "status": "matched",
+  "segment": "game_00",
+  "asm_file": "wip/func_001A27C0/target.s",
+  "callers": [
+    {
+      "name": "func_001A2680",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_34.s"
+    },
+    {
+      "name": "func_001B2500",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_001D6550",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_001D65D0",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_001D6810",
+      "status": "asm/game_00",
+      "call_sites": 3,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_001D68E0",
+      "status": "asm/game_00",
+      "call_sites": 2,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_001DC5B0",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_001E1290",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_001E1450",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_001E1630",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_00224E90",
+      "status": "asm/game_00",
+      "call_sites": 21,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_00225E80",
+      "status": "asm/game_00",
+      "call_sites": 2,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_002267A0",
+      "status": "asm/game_00",
+      "call_sites": 2,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_00227080",
+      "status": "asm/game_00",
+      "call_sites": 2,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_00228510",
+      "status": "asm/game_00",
+      "call_sites": 27,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_00229800",
+      "status": "asm/game_00",
+      "call_sites": 30,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_0022D3C0",
+      "status": "asm/game_00",
+      "call_sites": 7,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_0022E400",
+      "status": "asm/game_00",
+      "call_sites": 2,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_0022EE30",
+      "status": "asm/game_00",
+      "call_sites": 3,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_002367E0",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_0023E8D0",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_002434D0",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_0024C250",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_0024DE60",
+      "status": "asm/game_00",
+      "call_sites": 3,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_00250220",
+      "status": "asm/game_00",
+      "call_sites": 3,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_00251550",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_55.s"
+    },
+    {
+      "name": "func_0031CFB0",
+      "status": "asm/game_01",
+      "call_sites": 1,
+      "file": "asm/game_01.s"
+    },
+    {
+      "name": "func_00321A20",
+      "status": "asm/game_01",
+      "call_sites": 12,
+      "file": "asm/game_01.s"
+    }
+  ],
+  "referenced_from_data": [],
+  "callees": [],
+  "references": [],
+  "at": "2026-09-18T20:42:14Z",
+  "index": "reference/xrefs-index.json"
+}

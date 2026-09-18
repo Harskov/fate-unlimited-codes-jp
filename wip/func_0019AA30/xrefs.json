@@ -1,0 +1,38 @@
+{
+  "function": "func_0019AA30",
+  "addr": "0x0019AA30",
+  "status": "matched",
+  "segment": "game_00",
+  "asm_file": "wip/func_0019AA30/target.s",
+  "callers": [
+    {
+      "name": "func_0019AEB0",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_26.s"
+    },
+    {
+      "name": "func_0019BDD0",
+      "status": "asm/game_00",
+      "call_sites": 1,
+      "file": "asm/game_00_27.s"
+    },
+    {
+      "name": "func_003575C0",
+      "status": "asm/game_02",
+      "call_sites": 1,
+      "file": "asm/game_02.s"
+    },
+    {
+      "name": "func_00359E40",
+      "status": "asm/game_02",
+      "call_sites": 1,
+      "file": "asm/game_02.s"
+    }
+  ],
+  "referenced_from_data": [],
+  "callees": [],
+  "references": [],
+  "at": "2026-09-18T20:42:09Z",
+  "index": "reference/xrefs-index.json"
+}
