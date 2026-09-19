@@ -1,8 +1,4 @@
-typedef struct Vec3 {
-    float x;
-    float y;
-    float z;
-} Vec3;
+#include "game_00/vec.h"
 
 typedef struct Src {
     unsigned char unk_0[0x460];

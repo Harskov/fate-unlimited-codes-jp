@@ -1,18 +1,18 @@
-typedef int s32;
+#include "game_00/obj2524.h"
 
-s32 func_001BB3C0(char *arg0)
+int func_001BB3C0(Obj2524 *arg0)
 {
-    s32 *p;
-    s32 v;
+    Obj53C *p;
+    int v;
 
     if (arg0 == 0)
         return 0;
-    if (*(s32 *)(arg0 + 0xC) != 7)
+    if (arg0->unk_C != 7)
         return 0;
-    p = *(s32 **)(arg0 + 0x2508);
+    p = arg0->unk_2508;
     if (p == 0)
         return 0;
-    v = *(s32 *)((char *)p + 0x53C);
+    v = p->unk_53C;
     if (v == 0xB4 && v == 0x38)
         return 1;
     return 0;

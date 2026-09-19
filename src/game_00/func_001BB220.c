@@ -1,17 +1,17 @@
-typedef int s32;
+#include "game_00/obj2524.h"
 
-s32 func_001BB220(char *arg0)
+int func_001BB220(Obj2524 *arg0)
 {
-    s32 *p;
+    Obj53C *p;
 
     if (arg0 == 0)
         return 0;
-    if (*(s32 *)(arg0 + 0xC) != 0xD)
+    if (arg0->unk_C != 0xD)
         return 0;
-    p = *(s32 **)(arg0 + 0x2508);
+    p = arg0->unk_2508;
     if (p == 0)
         return 0;
-    if (*(s32 *)(arg0 + 0xC) == 0xD && *(s32 *)((char *)p + 0x53C) == 0x10FA)
+    if (arg0->unk_C == 0xD && p->unk_53C == 0x10FA)
         return 1;
     return 0;
 }
