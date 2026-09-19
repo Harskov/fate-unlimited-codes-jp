@@ -29,7 +29,7 @@ systematic name (`func_00123456`, `D_0052ABCD`) stays, and struct fields stay `u
 
 ## Progress
 
-**94 of 5891** game functions are matched (0.21 % of the game code by size), and 1 game functions carry a name backed by evidence. 2343 SDK and runtime-library functions are identified as library code and are not counted.
+**138 of 5891** game functions are matched (0.33 % of the game code by size), and 1 game functions carry a name backed by evidence. 2343 SDK and runtime-library functions are identified as library code and are not counted.
 
 The per-function report is on [decomp.dev](https://decomp.dev/Harskov/fate-unlimited-codes-jp).
 
