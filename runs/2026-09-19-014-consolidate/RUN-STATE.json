@@ -1,0 +1,31 @@
+{
+  "run_id": "2026-09-19-014-consolidate",
+  "step_id": "S8",
+  "step_type": "consolidate",
+  "override": false,
+  "proposed": "consolidate",
+  "proposed_reason": "31 matches since the last consolidate (threshold 25)",
+  "reason": "31 matches since the last consolidate (threshold 25)",
+  "target": "fate-unlimited-codes-jp",
+  "started": "2026-09-19T05:59:44Z",
+  "finished": "2026-09-19T06:21:01Z",
+  "stage": "done",
+  "position": {},
+  "outcome": "complete",
+  "commit": null,
+  "notes": [
+    "external lane: 17 runner batch(es), 33 matched, $1.09 in state/runner-steps.jsonl (never a step of a run)"
+  ],
+  "ledger_at_start": {
+    "functions": 8234,
+    "matched": 94,
+    "wip": 32,
+    "asm": 5769,
+    "library": 2339,
+    "skipped-data": 0,
+    "external_matched": 26,
+    "runner_batches": 17
+  },
+  "updated": "2026-09-19T06:19:24Z",
+  "summary": "59 SDK entry points renamed from the S5 Ghidra export with cited evidence; naming census corrected to read functions.json by address; the one byte-offset match rewritten to plain C and re-marked byte-identical; lint_c 0 errors; check green"
+}

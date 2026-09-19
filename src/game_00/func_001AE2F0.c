@@ -1,3 +1,11 @@
+/* The elements of Obj.field_44[] are objects in their own right; func_001AE2F0
+ * reads one int out of one at +0x38. Typing the element is the plain-C form of
+ * what was a byte offset through a void* (K1 6.9). */
+typedef struct Node {
+    unsigned char pad[0x38];
+    int field_38;
+} Node;
+
 typedef struct Sub {
     int field_0;
     int field_4;
@@ -11,7 +19,7 @@ typedef struct Sub {
 
 typedef struct Obj {
     unsigned char pad[0x44];
-    void *field_44[0x40];
+    Node *field_44[0x40];
     unsigned char pad2[0x184 - 0x44 - 0x100];
     Sub sub;
     unsigned char pad3[0x53C - 0x184 - sizeof(Sub)];
@@ -31,9 +39,9 @@ void func_001AE2F0(Obj *p, int arg1)
     s->field_C = p->field_5C0;
     s->field_18 = p->field_53C;
     if (arg1 < 0x40) {
-        void *v = p->field_44[arg1];
+        Node *v = p->field_44[arg1];
         if (v != 0) {
-            s->field_3C = *(int *)((char *)v + 0x38);
+            s->field_3C = v->field_38;
         }
     }
 }

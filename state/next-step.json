@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-19T04:36:12Z",
-  "proposed": "consolidate",
-  "step_id": "S8",
-  "reason": "31 matches since the last consolidate (threshold 25)",
+  "at": "2026-09-19T06:21:19Z",
+  "proposed": "match-batch",
+  "step_id": "S6",
+  "reason": "5801 game function(s) still asm/wip; batch size 12",
   "notes": [
     "external lane: 17 runner batch(es), 33 matched, $1.09 in state/runner-steps.jsonl (never a step of a run)"
   ],
