@@ -1,0 +1,22 @@
+/* types.h */
+typedef unsigned char u8;
+typedef unsigned short u16;
+typedef unsigned int u32;
+typedef unsigned long long u64;
+typedef signed char s8;
+typedef short s16;
+typedef int s32;
+typedef long long s64;
+typedef float f32;
+typedef unsigned __int128 u128;
+/* common.h */
+/* shared declarations grow here in consolidate steps */
+/* externs referenced by the target asm (systematic names; rename in consolidate with evidence) */
+extern s32 D_0051D754;
+extern s32 D_0051D758;
+extern s32 D_0051D75C;
+extern s32 D_0051D760;
+extern s32 D_0051D764;
+extern s32 D_0051D768;
+extern s32 D_0051D77C;
+void func_001B7560();
