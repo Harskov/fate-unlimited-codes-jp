@@ -40,7 +40,7 @@ them from the user's disc.
 
 Matched by the operator: 61; by the external lane (MatchRunner): 77 in 24 batch(es) (last 2026-09-19-013).
 
-Steps run: 14; last run: 2026-09-19-014-consolidate; build check: ok; compiler: mwcps2-3.0.1b151-050317; regenerated 2026-09-19T08:39:33Z.
+Steps run: 15; last run: 2026-09-19-015-consolidate; build check: ok; compiler: mwcps2-3.0.1b151-050317; regenerated 2026-09-19T13:51:37Z.
 <!-- progress-table:end -->
 
 ## Building and verifying
