@@ -1,0 +1,25 @@
+{
+  "at": "2026-09-19T04:36:27Z",
+  "run_id": "2026-09-19-013-ghidra-hints",
+  "lines": 33,
+  "max_lines": 80,
+  "friction_severities": {
+    "major": 3,
+    "minor": 1
+  },
+  "fields": {
+    "run_id": "2026-09-19-013-ghidra-hints",
+    "step_type": "ghidra-hints",
+    "step_id": "S5",
+    "target": "fate-unlimited-codes-jp",
+    "override_note": " — **override**: named in chat",
+    "started": "2026-09-19T04:19:44Z",
+    "finished": "2026-09-19T04:35:54Z",
+    "commit": "the commit whose message starts `run 2026-09-19-013-ghidra-hints:` (git log --grep)",
+    "what_changed": "- Ledger: no status changes.\n- S5 is the first step that leaves the operator's VM, and the two machines do not have the same network: the cloud sandbox has the JDK 21 that ASSUMPTION A4 only hoped for",
+    "build_check": "`check.json`: ok = **True**, checked 2026-09-19T04:35:46Z, regime `full`; image 0x00100000–0x00509100, rebuilt 4231424 of 4231424 bytes; first diff None, 0 differing byte(s). Segments: crt0 ok; sdk_dm",
+    "step_table": "n/a",
+    "next_step": "S8 consolidate — 31 matches since the last consolidate (threshold 25)\n- note: external lane: 17 runner batch(es), 33 matched, $1.09 in state/runner-steps.jsonl (never a step of a run)",
+    "friction_summary": "4 entries (major 3, minor 1); stages attested: E, R, S, V, X; export: FRICTION-REPORT.md\n- F-1 [major/environment] github.com blocked by egress policy in the cloud sandbox (S5's designated lane)\n- F-2"
+  }
+}

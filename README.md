@@ -42,7 +42,7 @@ Matched functions whose C still carries a layout cast flagged by `lint_c.py` (by
 
 Matched by the operator: 61; by the external lane (MatchRunner): 33 in 17 batch(es) (last 2026-09-19-006).
 
-Steps run: 11; last run: 2026-09-18-011-consolidate; build check: ok; compiler: mwcps2-3.0.1b151-050317; regenerated 2026-09-19T03:48:23Z.
+Steps run: 12; last run: 2026-09-19-012-match-batch; build check: ok; compiler: mwcps2-3.0.1b151-050317; regenerated 2026-09-19T04:35:48Z.
 <!-- progress-table:end -->
 
 ## Building and verifying
