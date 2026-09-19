@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-18T19:29:03Z",
+  "at": "2026-09-19T03:35:39Z",
   "function": "func_0019D4E0",
   "target_s": "wip/func_0019D4E0/target.s",
   "insns": 24,
@@ -14,8 +14,8 @@
     ]
   },
   "exemplars": [
-    "func_0019D0B0",
-    "func_0019CFF0",
-    "func_0019C1E0"
+    "func_0019D6A0",
+    "func_0019D6E0",
+    "func_0019D850"
   ]
 }

@@ -1,68 +1,59 @@
-typedef unsigned char u8;
-typedef unsigned short u16;
-typedef signed char s8;
-typedef short s16;
-typedef int s32;
-typedef unsigned int u32;
-typedef float f32;
+typedef struct Vec3 {
+    float x;
+    float y;
+    float z;
+} Vec3;
 
-extern s32 D_0051AC78;
-extern s32 D_0051AE40;
-extern s32 D_0051AE58;
+typedef struct Ent0051AC78 {
+    struct Ent0051AC78 *next;
+    int unk_4;
+    unsigned char unk_8[0x8];
+    Vec3 unk_10;
+    Vec3 unk_1C;
+    Vec3 scale;
+    unsigned char unk_34[0xC0 - 0x34];
+    int unk_C0;
+    short unk_C4;
+    short unk_C6;
+    char unk_C8;
+    char unk_C9;
+    char unk_CA;
+} Ent0051AC78;
 
-typedef struct Obj {
-    unsigned char pad0[0x4];
-    s32 unk_4;
-    unsigned char pad8[0x8];
-    s32 unk_10;
-    s32 unk_14;
-    s32 unk_18;
-    s32 unk_1C;
-    s32 unk_20;
-    s32 unk_24;
-    f32 unk_28;
-    f32 unk_2C;
-    f32 unk_30;
-    unsigned char pad34[0x8C];
-    s32 unk_C0;
-    u16 unk_C4;
-    u16 unk_C6;
-    u8 unk_C8;
-    u8 unk_C9;
-    u8 unk_CA;
-    unsigned char padCB[0x1];
-    struct Obj *link;
-} Obj;
+extern Ent0051AC78 *D_0051AC78[];
+extern unsigned int D_0051AE58[];
+extern unsigned int D_0051AE40[];
 
-void func_0017A670(s8 arg0, s16 arg1)
+void func_0017A670(char kind, short id)
 {
-    Obj *o;
-    u32 n;
+    Ent0051AC78 *e;
+    unsigned int n;
 
-    o = (Obj *)D_0051AC78;
-    if (o != 0) {
-        D_0051AC78 = (s32)o->link;
-        o->link = 0;
-        o->unk_C4 = 1;
-        o->unk_C9 = 0;
-        o->unk_C8 = arg0;
-        o->unk_18 = 0;
-        o->unk_14 = 0;
-        o->unk_10 = 0;
-        o->unk_24 = 0;
-        o->unk_20 = 0;
-        o->unk_1C = 0;
-        o->unk_30 = 1.0f;
-        o->unk_2C = 1.0f;
-        o->unk_28 = 1.0f;
-        o->unk_C0 = 0;
-        o->unk_CA = 0;
-        o->unk_4 = 0;
-        o->unk_C6 = arg1;
-        n = D_0051AE58 + 1;
-        D_0051AE58 = n;
-        if ((u32)D_0051AE40 < n) {
-            D_0051AE40 = n;
-        }
-    }
+    e = D_0051AC78[0];
+    if (e == 0)
+        return;
+
+    D_0051AC78[0] = e->next;
+    e->next = 0;
+    e->unk_C4 = 1;
+    e->unk_C9 = 0;
+    e->unk_C8 = kind;
+    e->unk_10.x = 0.0f;
+    e->unk_10.y = 0.0f;
+    e->unk_10.z = 0.0f;
+    e->unk_1C.x = 0.0f;
+    e->unk_1C.y = 0.0f;
+    e->unk_1C.z = 0.0f;
+    e->scale.x = 1.0f;
+    e->scale.y = 1.0f;
+    e->scale.z = 1.0f;
+    e->unk_C0 = 0;
+    e->unk_CA = 0;
+    e->unk_4 = 0;
+    e->unk_C6 = id;
+
+    n = D_0051AE58[0] + 1;
+    D_0051AE58[0] = n;
+    if (D_0051AE40[0] < n)
+        D_0051AE40[0] = n;
 }

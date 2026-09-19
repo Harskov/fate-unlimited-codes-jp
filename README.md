@@ -25,7 +25,7 @@ them from the user's disc.
 | libc | libc | 139 | 0 | 1 | 0 | 138 | 0 (0.0%) |
 | libm | libc | 56 | 0 | 0 | 0 | 56 | 0 (0.0%) |
 | cri_adx | sdk | 1430 | 0 | 1 | 0 | 1429 | 0 (0.0%) |
-| game_00 | game | 3246 | 82 | 40 | 3124 | 0 | 3644 (0.3%) |
+| game_00 | game | 3246 | 94 | 28 | 3124 | 0 | 4764 (0.4%) |
 | game_render | game | 1056 | 0 | 0 | 1056 | 0 | 0 (0.0%) |
 | game_01 | game | 834 | 0 | 0 | 834 | 0 | 0 (0.0%) |
 | sdk_cdvd | sdk | 12 | 0 | 0 | 0 | 12 | 0 (0.0%) |
@@ -36,13 +36,13 @@ them from the user's disc.
 | data_01 | data | 0 | 0 | 0 | 0 | 0 | 0 |
 | rodata_str | rodata | 0 | 0 | 0 | 0 | 0 | 0 |
 | main_bss | bss | 0 | 0 | 0 | 0 | 0 | 0 |
-| **total** | | 8234 | 82 | 44 | 5769 | 2339 | 3644 / 2608780 |
+| **total** | | 8234 | 94 | 32 | 5769 | 2339 | 4764 / 2608780 |
 
 Matched functions whose C still carries a layout cast flagged by `lint_c.py` (byte-identical, not final source; rewritten at consolidate): 1 — func_001AE2F0.
 
-Matched by the operator: 49; by the external lane (MatchRunner): 33 in 16 batch(es) (last 2026-09-19-005).
+Matched by the operator: 61; by the external lane (MatchRunner): 33 in 17 batch(es) (last 2026-09-19-006).
 
-Steps run: 11; last run: 2026-09-18-011-consolidate; build check: ok; compiler: mwcps2-3.0.1b151-050317; regenerated 2026-09-19T03:20:01Z.
+Steps run: 11; last run: 2026-09-18-011-consolidate; build check: ok; compiler: mwcps2-3.0.1b151-050317; regenerated 2026-09-19T03:48:23Z.
 <!-- progress-table:end -->
 
 ## Building and verifying

@@ -1,0 +1,24 @@
+{
+  "at": "2026-09-19T03:49:15Z",
+  "run_id": "2026-09-19-012-match-batch",
+  "lines": 51,
+  "max_lines": 80,
+  "friction_severities": {
+    "minor": 4
+  },
+  "fields": {
+    "run_id": "2026-09-19-012-match-batch",
+    "step_type": "match-batch",
+    "step_id": "S6",
+    "target": "fate-unlimited-codes-jp",
+    "override_note": " — proposed by next_step.py",
+    "started": "2026-09-19T03:33:40Z",
+    "finished": "2026-09-19T03:48:33Z",
+    "commit": "the commit whose message starts `run 2026-09-19-012-match-batch:` (git log --grep)",
+    "what_changed": "- Ledger: matched 82 → 94 (+12), wip 44 → 32 (-12).\n- All 12 batch functions reached objdiff 100 with byte-identical .text and are linked; the batch is closed with nothing parked. Five of the twelve w",
+    "build_check": "`check.json`: ok = **True**, checked 2026-09-19T03:48:21Z, regime `full`; image 0x00100000–0x00509100, rebuilt 4231424 of 4231424 bytes; first diff None, 0 differing byte(s). Segments: crt0 ok; sdk_dm",
+    "step_table": "# Batch table — 2026-09-19-012-match-batch\n\nEvery function of the batch, every attempt recorded in the ledger, and the final status.\n\n| # | function | addr | size | attempts (all lanes) | this run | b",
+    "next_step": "S8 consolidate — 31 matches since the last consolidate (threshold 25)\n- note: external lane: 17 runner batch(es), 33 matched, $1.09 in state/runner-steps.jsonl (never a step of a run)",
+    "friction_summary": "4 entries (minor 4); stages attested: E, R, S, V, X; export: FRICTION-REPORT.md\n- F-1 [minor/evidence-gap] runner C carries a byte-offset lint error\n- F-2 [minor/doc-gap] K1 6 has no row for out-of-ad"
+  }
+}

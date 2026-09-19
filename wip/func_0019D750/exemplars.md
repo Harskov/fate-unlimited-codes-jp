@@ -3,23 +3,20 @@
 ## func_0019D6E0 @ 0x0019D6E0 (score 100.0, mwcps2-3.0.1b151-050317 -O4,p)
 
 ```c
-extern int D_0051C870[];
-extern int D_0051C874[];
+#include "game_00/tbl_0051C870.h"
 
 void func_0019D6E0(int *p)
 {
     int i;
 
     for (i = 0; i < 10; i++) {
-        if (D_0051C870[i * 2] == 0) {
-            D_0051C870[i * 2] = 1;
-            D_0051C874[i * 2] = (int)p;
+        if (D_0051C870[i].used == 0) {
+            D_0051C870[i].used = 1;
+            D_0051C874[i].owner = p;
             *p = i;
-            goto done;
+            break;
         }
     }
-done:
-    return;
 }
 
 ```
@@ -27,32 +24,34 @@ done:
 ## func_0019D6A0 @ 0x0019D6A0 (score 100.0, mwcps2-3.0.1b151-050317 -O4,p)
 
 ```c
-extern int D_0051C870[];
-extern int D_0051C874[];
+#include "game_00/tbl_0051C870.h"
 
 void func_0019D6A0(int *p)
 {
     int i = *p;
-    D_0051C870[i * 2] = 0;
-    D_0051C874[*p * 2] = 0;
+
+    D_0051C870[i].used = 0;
+    D_0051C874[*p].owner = 0;
 }
 
 ```
 
-## func_0019D0B0 @ 0x0019D0B0 (score 100.0, mwcps2-3.0.1b151-050317 -O4,p)
+## func_0019D850 @ 0x0019D850 (score 100.0, mwcps2-3.0.1b151-050317 -O4,p)
 
 ```c
-extern int D_0051C874[];
+typedef struct Node {
+    unsigned char pad[0xC];
+    struct Node *next;
+    struct Node *prev;
+} Node;
 
-int func_0019D0B0(int i)
+Node *func_0019D850(Node *n)
 {
-    if (i < 0)
-        goto fail;
-    if (i >= 10)
-        goto fail;
-    return D_0051C874[i * 2];
-fail:
-    return 0;
+    Node *prev = n->prev;
+    prev->next = n->next;
+    if (n->next != 0)
+        n->next->prev = prev;
+    return prev->next;
 }
 
 ```

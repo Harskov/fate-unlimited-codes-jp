@@ -22,7 +22,7 @@ int func_001A9A00(Obj *p)
 
 ```
 
-## func_001A6390 @ 0x001A6390 (score 100.0, mwcps2-3.0.1b151-050317 -O4,p)
+## func_001AA1F0 @ 0x001AA1F0 (score 100.0, mwcps2-3.0.1b151-050317 -O4,p)
 
 ```c
 typedef struct Obj {
@@ -30,14 +30,14 @@ typedef struct Obj {
     unsigned int flags;
 } Obj;
 
-int func_001A6390(Obj *p)
+void func_001AA1F0(Obj *p)
 {
-    return p->flags & 1;
+    p->flags &= ~1;
 }
 
 ```
 
-## func_001A6380 @ 0x001A6380 (score 100.0, mwcps2-3.0.1b151-050317 -O4,p)
+## func_001AA210 @ 0x001AA210 (score 100.0, mwcps2-3.0.1b151-050317 -O4,p)
 
 ```c
 typedef struct Obj {
@@ -45,9 +45,9 @@ typedef struct Obj {
     unsigned int flags;
 } Obj;
 
-int func_001A6380(Obj *p)
+void func_001AA210(Obj *p)
 {
-    return p->flags & 1;
+    p->flags = p->flags & 0xFFFFFFFE;
 }
 
 ```

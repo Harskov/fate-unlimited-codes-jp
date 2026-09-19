@@ -1,52 +1,53 @@
-typedef struct Sub {
-    unsigned char pad[0x2];
-    u8 field_2;
-} Sub;
+typedef struct Sub001AE860 {
+    unsigned char unk_0[2];
+    unsigned char flags;
+    unsigned char unk_3;
+} Sub001AE860;
 
-typedef struct Entry {
-    u32 field_0;
-    unsigned char pad[0x4];
-    s16 field_4;
-    unsigned char pad2[0x6];
-    Sub *field_C;
-} Entry;
+typedef struct Item001AE860 {
+    int mask;
+    short id;
+    unsigned char unk_6[6];
+    Sub001AE860 *sub;
+    unsigned char unk_10[4];
+} Item001AE860;
 
-typedef struct Mid {
-    unsigned char pad[0x19C];
-    s32 field_19C;
-    Entry *field_1A0;
-} Mid;
+typedef struct Group001AE860 {
+    unsigned char unk_0[0x19C];
+    int count;
+    Item001AE860 *items;
+} Group001AE860;
 
-typedef struct Obj {
-    unsigned char pad[0x3C];
-    Mid *field_3C;
-} Obj;
+typedef struct Ctx001AE860 {
+    unsigned char unk_0[0x3C];
+    Group001AE860 *group;
+} Ctx001AE860;
 
-void func_001AE860(Obj *p, s32 arg1, s32 arg2, u32 arg3)
+void func_001AE860(Ctx001AE860 *c, int id, int on, int mask, int keep)
 {
-    Mid *m = p->field_3C;
-    Entry *e = m->field_1A0;
-    s32 i;
-    if (e == 0)
+    Item001AE860 *it;
+    Sub001AE860 *s;
+    unsigned char f;
+    int i;
+
+    it = c->group->items;
+    if (it == 0)
         return;
-    if (m->field_19C <= 0)
-        return;
-    i = 0;
-    do {
-        if (arg3 & e->field_0) {
-            Sub *s = e->field_C;
-            u8 v = s->field_2;
-            if (arg1 == e->field_4) {
-                if (arg2 != 0)
-                    v |= 4;
-                else
-                    v &= ~4;
-            } else if (arg2 == 0) {
-                v &= ~4;
+
+    for (i = 0; i < c->group->count; i++, it++) {
+        if ((mask & it->mask) != 0) {
+            s = it->sub;
+            f = s->flags;
+            if (id == it->id) {
+                if (on != 0) {
+                    f |= 4;
+                } else {
+                    f &= ~4;
+                }
+            } else if (keep == 0) {
+                f &= ~4;
             }
-            s->field_2 = v;
+            s->flags = f;
         }
-        i++;
-        e++;
-    } while (i < p->field_3C->field_19C);
+    }
 }
