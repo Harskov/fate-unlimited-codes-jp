@@ -1,11 +1,10 @@
 {
-  "at": "2026-09-19T08:28:41Z",
-  "proposed": "consolidate",
-  "step_id": "S8",
-  "reason": "44 matches since the last consolidate (threshold 25)",
+  "at": "2026-09-19T08:40:01Z",
+  "proposed": "match-batch",
+  "step_id": "S6",
+  "reason": "5757 game function(s) still asm/wip; batch size 12",
   "notes": [
-    "external lane: 24 runner batch(es), 77 matched, $2.48 in state/runner-steps.jsonl (never a step of a run)",
-    "7 runner batch(es) newer than the last commit (2026-09-19T06:21:55Z): 2026-09-19-007, 2026-09-19-008, 2026-09-19-009, 2026-09-19-010, 2026-09-19-011, 2026-09-19-012, 2026-09-19-013 — commit them at RESUME before --start-run: `git_mount.sh <repo> add -A && commit -m \"runner 2026-09-19-007, 2026-09-19-008, 2026-09-19-009, 2026-09-19-010, 2026-09-19-011, 2026-09-19-012, 2026-09-19-013: match-batch-external — 44 matched\"`"
+    "external lane: 24 runner batch(es), 77 matched, $2.48 in state/runner-steps.jsonl (never a step of a run)"
   ],
   "never_auto_selected": [
     "ghidra-hints"

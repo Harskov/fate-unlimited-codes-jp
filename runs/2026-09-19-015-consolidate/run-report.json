@@ -1,0 +1,24 @@
+{
+  "at": "2026-09-19T08:40:18Z",
+  "run_id": "2026-09-19-015-consolidate",
+  "lines": 48,
+  "max_lines": 80,
+  "friction_severities": {
+    "minor": 1
+  },
+  "fields": {
+    "run_id": "2026-09-19-015-consolidate",
+    "step_type": "consolidate",
+    "step_id": "S8",
+    "target": "fate-unlimited-codes-jp",
+    "override_note": " — proposed by next_step.py",
+    "started": "2026-09-19T08:31:02Z",
+    "finished": "2026-09-19T08:39:43Z",
+    "commit": "the commit whose message starts `run 2026-09-19-015-consolidate:` (git log --grep)",
+    "what_changed": "- Ledger: no status changes.\n- The consolidate merged duplicated per-file structure onto two shared headers and cleared the three byte-offset lint errors, all in runner-origin C. include/game_00/obj25",
+    "build_check": "`check.json`: ok = **True**, checked 2026-09-19T08:39:30Z, regime `full`; image 0x00100000–0x00509100, rebuilt 4231424 of 4231424 bytes; first diff None, 0 differing byte(s). Segments: crt0 ok; sdk_dm",
+    "step_table": "# Rename table — run 2026-09-19-015-consolidate\n\nn/a — no function clears the evidence bar this run. Every candidate examined is\nlisted below with the source that was checked and why it did not name a",
+    "next_step": "S6 match-batch — 5757 game function(s) still asm/wip; batch size 12\n- note: external lane: 24 runner batch(es), 77 matched, $2.48 in state/runner-steps.jsonl (never a step of a run)",
+    "friction_summary": "1 entry (minor 1); stages attested: E, R, S, V, X; export: FRICTION-REPORT.md\n- F-1 [minor/doctrine-gap] external lane emits a fresh local typedef per function, so duplicates accumulate until S8"
+  }
+}

@@ -1,8 +1,4 @@
-typedef struct Vec3 {
-    float x;
-    float y;
-    float z;
-} Vec3;
+#include "game_00/vec.h"
 
 typedef struct Ent0051AC78 {
     struct Ent0051AC78 *next;

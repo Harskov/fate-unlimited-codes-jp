@@ -1,0 +1,31 @@
+{
+  "run_id": "2026-09-19-015-consolidate",
+  "step_id": "S8",
+  "step_type": "consolidate",
+  "override": false,
+  "proposed": "consolidate",
+  "proposed_reason": "44 matches since the last consolidate (threshold 25)",
+  "reason": "44 matches since the last consolidate (threshold 25)",
+  "target": "fate-unlimited-codes-jp",
+  "started": "2026-09-19T08:31:02Z",
+  "finished": "2026-09-19T08:39:43Z",
+  "stage": "done",
+  "position": {},
+  "outcome": "complete",
+  "commit": null,
+  "notes": [
+    "external lane: 24 runner batch(es), 77 matched, $2.48 in state/runner-steps.jsonl (never a step of a run)"
+  ],
+  "ledger_at_start": {
+    "functions": 8234,
+    "matched": 138,
+    "wip": 55,
+    "asm": 5702,
+    "library": 2339,
+    "skipped-data": 0,
+    "external_matched": 69,
+    "runner_batches": 24
+  },
+  "updated": "2026-09-19T08:37:44Z",
+  "summary": "22 matched functions folded onto two shared headers (Obj2524 for the func_001BB* predicate family and its +0x2508 object, Vec4/Vec3 for the game_00 vector helpers); the 3 byte-offset lint errors rewritten to plain C; all 22 still byte-identical; lint_c clean"
+}

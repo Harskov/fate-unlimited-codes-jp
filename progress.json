@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19T08:20:45Z",
+  "generated": "2026-09-19T08:39:33Z",
   "totals": {
     "functions": 8234,
     "bytes_total": 2608780,
@@ -15,12 +15,8 @@
     "game_matched_pct": 2.34,
     "external_matched": 77,
     "operator_matched": 61,
-    "matched_with_lint": 3,
-    "lint_flagged": [
-      "func_001BB220",
-      "func_001BB3C0",
-      "func_001BB6D0"
-    ]
+    "matched_with_lint": 0,
+    "lint_flagged": []
   },
   "segments": [
     {
@@ -317,9 +313,9 @@
   "compiler_id": "mwcps2-3.0.1b151-050317",
   "calibrated": true,
   "runner": {
-    "batches": 23,
+    "batches": 24,
     "matched": 77,
-    "cost_usd": 2.2128,
-    "last_batch": "2026-09-19-012"
+    "cost_usd": 2.482,
+    "last_batch": "2026-09-19-013"
   }
 }

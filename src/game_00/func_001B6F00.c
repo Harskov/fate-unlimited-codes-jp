@@ -1,8 +1,8 @@
+#include "game_00/vec.h"
+
 typedef float f32;
 
-typedef struct Vec { f32 x; f32 y; f32 z; } Vec;
-
-void func_001B6F00(f32 *out, Vec *a, Vec *b, Vec *c)
+void func_001B6F00(f32 *out, Vec3 *a, Vec3 *b, Vec3 *c)
 {
     if (out == 0)
         return;

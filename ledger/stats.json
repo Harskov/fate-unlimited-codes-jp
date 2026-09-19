@@ -1,11 +1,11 @@
 {
-  "at": "2026-09-19T03:46:20Z",
+  "at": "2026-09-19T08:31:06Z",
   "functions": 8234,
   "by_status": {
-    "asm": 5769,
+    "asm": 5702,
     "library": 2339,
-    "wip": 32,
-    "matched": 94
+    "wip": 55,
+    "matched": 138
   },
   "by_segment": {
     "crt0": {
@@ -46,9 +46,9 @@
       "wip": 1
     },
     "game_00": {
-      "asm": 3124,
-      "wip": 28,
-      "matched": 94
+      "asm": 3057,
+      "wip": 51,
+      "matched": 138
     },
     "game_render": {
       "asm": 1056

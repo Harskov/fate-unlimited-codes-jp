@@ -1,11 +1,6 @@
-typedef struct Vec {
-    float unk_0;
-    float unk_4;
-    float unk_8;
-    float unk_C;
-} Vec;
+#include "game_00/vec.h"
 
-float func_00175070(Vec *v)
+float func_00175070(Vec4 *v)
 {
     return v->unk_C;
 }
