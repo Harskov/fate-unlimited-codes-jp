@@ -19,7 +19,13 @@
    Run 2026-09-23-016 extended the layout from func_001BB710 (sub220 at +0x220,
    the Sub220 of arr220.h, read at +0xA), func_001BB7A0 (flags at +0x1F4),
    func_001BB890 (+0x3C, and the list at +0x23E8 of the Obj53C), and
-   func_001BB7F0 / func_001BB840 (the member struct at +0x14C of unk_2448). */
+   func_001BB7F0 / func_001BB840 (the member struct at +0x14C of unk_2448).
+   func_001BF7D0, func_001BF810, func_001BF830 and func_001BF870 read the same
+   member struct at +0x1C, +0x20, +0x24 (floats) and +0x80 (an int).
+   func_001BF8B0 follows unk_2448->unk_C to an object with a pointer at +0x2508
+   and a float at +0x464, and reads +0x464 of that pointer's target too; the
+   +0x2508 pointer is why unk_C is typed Obj2524 (no other offset confirms it).
+   func_001C07F0 stores a halfword argument at +0xB0 of unk_2448. */
 typedef struct Item150 {
     unsigned char unk_0[0x150];
     int unk_150;
@@ -32,7 +38,9 @@ typedef struct Node23E8 {
 } Node23E8;
 
 typedef struct Obj53C {
-    unsigned char unk_0[0x53C];
+    unsigned char unk_0[0x464];
+    float unk_464;
+    unsigned char unk_468[0x53C - 0x468];
     int unk_53C;
     unsigned char unk_540[0x23E8 - 0x540];
     Node23E8 *unk_23E8;
@@ -46,16 +54,22 @@ typedef struct Sub2524 {
 typedef struct Sub14C {
     unsigned char unk_0[0x1C];
     float unk_1C;
-    unsigned char unk_20[0x6C - 0x20];
+    float unk_20;
+    float unk_24;
+    unsigned char unk_28[0x6C - 0x28];
     float unk_6C;
     unsigned char unk_70[0x7C - 0x70];
     float unk_7C;
+    int unk_80;
 } Sub14C;
 
 typedef struct Cache2448 {
-    unsigned char unk_0[0x10];
+    unsigned char unk_0[0xC];
+    struct Obj2524 *unk_C;
     struct Obj53C *unk_10;
-    unsigned char unk_14[0x14C - 0x14];
+    unsigned char unk_14[0xB0 - 0x14];
+    short unk_B0;
+    unsigned char unk_B2[0x14C - 0xB2];
     Sub14C sub14C;
 } Cache2448;
 
@@ -68,7 +82,9 @@ typedef struct Obj2524 {
     int unk_1F4;
     unsigned char unk_1F8[0x220 - 0x1F8];
     Sub220 sub220;
-    unsigned char unk_230[0x2448 - 0x230];
+    unsigned char unk_230[0x464 - 0x230];
+    float unk_464;
+    unsigned char unk_468[0x2448 - 0x468];
     Cache2448 *unk_2448;
     unsigned char unk_244C[0x2508 - 0x2448 - 4];
     Obj53C *unk_2508;
