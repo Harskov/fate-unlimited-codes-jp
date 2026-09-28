@@ -1,9 +1,5 @@
 #include "common.h"
 
-typedef int s32;
-
-typedef unsigned char u8;
-
 typedef struct Obj {
     u8 pad_0[0x1E0];
     s32 unk_1E0;

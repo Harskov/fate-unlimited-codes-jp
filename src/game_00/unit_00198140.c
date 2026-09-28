@@ -1,6 +1,6 @@
 #include "common.h"
 
-/* calibration candidate func_001990C0: flag bits */
+/* the flag words func_001990C0 tests */
 typedef struct Flags { int f0; unsigned char pad[0xC]; int f10; } Flags;
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00198140", func_00198140);

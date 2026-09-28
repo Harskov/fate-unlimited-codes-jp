@@ -1,7 +1,5 @@
 #include "common.h"
 
-typedef int s32;
-
 void memset();
 
 extern s32 D_00523B38[];

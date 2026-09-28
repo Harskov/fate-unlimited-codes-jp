@@ -1,7 +1,5 @@
 #include "common.h"
 
-typedef int s32;
-
 extern s32 D_0051C908[];
 
 extern s32 D_0051C90C[];

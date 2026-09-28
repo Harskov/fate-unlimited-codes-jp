@@ -1,9 +1,5 @@
 #include "common.h"
 
-typedef int s32;
-
-typedef float f32;
-
 extern s32 D_0051D728[];
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3DA0", func_001B3DA0);

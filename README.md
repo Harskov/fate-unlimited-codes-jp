@@ -30,11 +30,11 @@ systematic name (`func_00123456`, `D_0052ABCD`) stays, and struct fields stay `u
 
 ## Progress
 
-**9,492 of 2,244,832 bytes of game code are matched (0.42 %)**: 160 of 5862 game functions. 2 game functions and 666 of 2372 SDK and runtime functions carry a name backed by evidence; 21 structs are typed in shared headers. SDK and runtime-library code is identified as such and not counted as game code.
+**9,492 of 2,244,832 bytes of game code are matched (0.42 %)**: 160 of 5862 game functions. 2 game functions and 666 of 2372 SDK and runtime functions carry a name backed by evidence; 22 structs are typed in shared headers. SDK and runtime-library code is identified as such and not counted as game code.
 
 | Milestone | Status | Exit judged on |
 |---|---|---|
-| M1 Contributable | done | public build ok (translation-unit, 2026-09-28T22:19:43Z); 0 matched function(s) still in per-function files; units map present |
+| M1 Contributable | done | public build ok (translation-unit, 2026-09-28T23:10:55Z); 0 matched function(s) still in per-function files; units map present |
 | M2 Identified | done | 1 complete name-pass run(s); 5862 of 5862 game functions labelled |
 | M3 Platform boundary | current | 1 of 336 function(s) labelled platform matched (72 of 407388 bytes); PLATFORM.md present |
 | M4 Core | pending | 11 of 142 function(s) labelled core matched (312 of 26576 bytes); FORMATS.md missing |

@@ -1,7 +1,5 @@
 #include "common.h"
 
-typedef int s32;
-
 s32 func_001B5800();
 
 extern s32 D_0051D740[];

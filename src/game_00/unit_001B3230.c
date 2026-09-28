@@ -1,9 +1,5 @@
 #include "common.h"
 
-typedef int s32;
-
-typedef unsigned char u8;
-
 typedef struct Slot {
     s32 unk_0;
     u8 pad_4[0xC4];

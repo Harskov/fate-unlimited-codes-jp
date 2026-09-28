@@ -18,7 +18,7 @@ typedef struct Mgr {
     int count;
 } Mgr;
 
-/* calibration candidate func_00177B00: pop from a singly linked free list */
+/* free-list node: func_00177B00 pops the head of a singly linked list */
 typedef struct Node_00177B00 { struct Node_00177B00 *next; } Node_00177B00;
 
 typedef struct Node_00178060 {

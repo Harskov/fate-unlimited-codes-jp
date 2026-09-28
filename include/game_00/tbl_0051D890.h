@@ -4,9 +4,7 @@
    Stride: every accessor scales its index by 0x18 (`sll 1; addu; sll 3`).
    Base: the target forms the bare symbol and leaves the field offset in the load/store
    operand (`addiu $v1, $v1, %lo(D_0051D890); addu $v1, $v1, i*0x18; sw $a1, 0xE8($v1)`),
-   so the source formed the element pointer first and applied a constant step through it;
-   writing the step into the index or into a struct member at +0xE8 folds the constant
-   into the relocation and scores 98.6 (K1 6.9, remediation 7, func_001A3800).
+   so the source formed the element pointer first and applied a constant step through it.
    The seven accessors therefore reach records i+9 and i+10: +0xE8 = 9*0x18 + 0x10,
    +0xEC = 9*0x18 + 0x14, +0xF0 = 10*0x18 + 0x0, +0xF4 = 10*0x18 + 0x4.
    unk_0 of record 0 is a flag mask: func_0015AA40 sets bit 0x20 into it and clears it

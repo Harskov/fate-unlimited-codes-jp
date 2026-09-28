@@ -1,10 +1,6 @@
 #include "common.h"
 #include "game_00/vec.h"
 
-typedef int s32;
-
-typedef float f32;
-
 extern s32 D_0051D754[];
 
 extern s32 D_0051D760[];

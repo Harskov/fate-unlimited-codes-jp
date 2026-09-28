@@ -1,6 +1,5 @@
 #include "common.h"
 #include "game_00/vec.h"
-/* run 010: re-tried after prepare cut jtbl_004FEA50 into target.s */
 #include "game_00/tbl_0051D890.h"
 #include "game_00/tbl_00528A00.h"
 

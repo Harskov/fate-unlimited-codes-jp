@@ -1,11 +1,5 @@
 #include "common.h"
 
-typedef int s32;
-
-typedef short s16;
-
-typedef float f32;
-
 extern s16 D_0051D750[];
 
 extern s32 D_0051D7A8[];

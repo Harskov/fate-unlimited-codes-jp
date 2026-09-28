@@ -1,8 +1,6 @@
 #include "common.h"
 #include "game_00/vec.h"
 
-typedef unsigned int u32;
-
 extern u32 D_0051D8A0[];
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_00166E80);

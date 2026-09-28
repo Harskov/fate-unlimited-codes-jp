@@ -13,8 +13,6 @@ typedef struct Node {
     struct Node *next;
 } Node;
 
-typedef unsigned short u16;
-
 typedef struct Obj {
     unsigned char pad[0xC4];
     u16 count;

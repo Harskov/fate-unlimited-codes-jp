@@ -1,9 +1,6 @@
 #include "common.h"
 
-typedef struct Obj {
-    int unk_0;
-    unsigned int flags;
-} Obj;
+#include "game_00/kindflags.h"
 
 typedef struct Obj_001A9A00 {
     unsigned char pad[0x1E0];
@@ -29,17 +26,17 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A5D70", func_001A6290);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A5D70", func_001A6300);
 
-int func_001A6370(Obj *p)
+int func_001A6370(KindFlags *p)
 {
     return p->flags & 1;
 }
 
-int func_001A6380(Obj *p)
+int func_001A6380(KindFlags *p)
 {
     return p->flags & 1;
 }
 
-int func_001A6390(Obj *p)
+int func_001A6390(KindFlags *p)
 {
     return p->flags & 1;
 }

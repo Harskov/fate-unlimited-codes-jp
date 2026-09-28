@@ -8,8 +8,7 @@ typedef struct Obj {
 } Obj;
 
 /* The elements of Obj_001AE2F0.field_44[] are objects in their own right; func_001AE2F0
- * reads one int out of one at +0x38. Typing the element is the plain-C form of
- * what was a byte offset through a void* (K1 6.9). */
+ * reads one int out of one at +0x38. */
 typedef struct Node {
     unsigned char pad[0x38];
     int field_38;
