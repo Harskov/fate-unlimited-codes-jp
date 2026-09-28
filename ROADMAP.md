@@ -4,9 +4,9 @@ The end goal is recompilation, which needs a complete matching decompilation. Un
 
 | # | Milestone | Status | Why here | Exit |
 |---|---|---|---|---|
-| M1 | Contributable | current | Nobody can help until they can build. | A fresh clone plus the disc builds and ninja passes checksum.sha1 (state/public-build.json, written by public_build.py check); every matched function lives in its translation unit's file. |
-| M2 | Identified | pending | Needs no compiling. Ghidra and PCSX2 users, modders, translators and every later contributor benefit at once, and it makes the later milestones selectable. | A name-pass step closed complete and every game function carries a subsystem label; the symbol map and symbols-evidence.tsv are published. |
-| M3 | Platform boundary | pending | The layer a recompilation replaces has to be understood first; it is also what emulator and patch authors ask about. | Every function labelled platform is matched; PLATFORM.md (generated) lists the SDK functions used, IRX modules, VU microprograms, DMA channels and the inline-asm and u128 sites. |
+| M1 | Contributable | done | Nobody can help until they can build. | A fresh clone plus the disc builds and ninja passes checksum.sha1 (state/public-build.json, written by public_build.py check); every matched function lives in its translation unit's file. |
+| M2 | Identified | done | Needs no compiling. Ghidra and PCSX2 users, modders, translators and every later contributor benefit at once, and it makes the later milestones selectable. | A name-pass step closed complete and every game function carries a subsystem label; the symbol map and symbols-evidence.tsv are published. |
+| M3 | Platform boundary | current | The layer a recompilation replaces has to be understood first; it is also what emulator and patch authors ask about. | Every function labelled platform is matched; PLATFORM.md (generated) lists the SDK functions used, IRX modules, VU microprograms, DMA channels and the inline-asm and u128 sites. |
 | M4 | Core | pending | Modders and translators need file formats and text, and a recompilation needs asset loading early. | Every function labelled core is matched; its structs sit in shared headers and FORMATS.md (generated from header comments) covers each format with evidence. |
 | M5 | Gameplay | pending | The bulk of the work, in an order that keeps each subsystem whole. | Every function labelled gameplay/<subsystem> is matched, subsystem by subsystem. |
 | M6 | Complete | pending | The precondition for the recompilation phase, which is a separate decision. | Bytes matched is 100 % and build/check.json is green. |
@@ -15,35 +15,35 @@ The end goal is recompilation, which needs a complete matching decompilation. Un
 
 The public repository builds from a clean clone, uses the translation-unit layout, and ships objdiff.json.
 
-Now: public build ok (per-function, 2026-09-28T21:36:45Z); 0 matched function(s) still in per-function files; units map present.
+Now: public build ok (translation-unit, 2026-09-28T22:19:43Z); 0 matched function(s) still in per-function files; units map present.
 
 ## M2 Identified
 
 SDK library functions named by signature, a whole-program naming pass run, every game function labelled with its subsystem, a public symbol map exported.
 
-Now: 0 complete name-pass run(s); 0 of 5891 game functions labelled.
+Now: 1 complete name-pass run(s); 5862 of 5862 game functions labelled.
 
 ## M3 Platform boundary
 
 The game's wrappers over the SDK and hardware matched and typed: GS/DMA/VIF packet building, VU0 macro mode and COP2, VU1 microprogram uploads, CD and file streaming, pad, memory card, sound, IOP RPC.
 
-Now: 0 of 0 function(s) labelled platform matched (0 of 0 bytes); PLATFORM.md present — no function carries the label yet (a name-pass labels them).
+Now: 1 of 336 function(s) labelled platform matched (72 of 407388 bytes); PLATFORM.md present.
 
 ## M4 Core
 
 Boot and main loop, the scene or state machine, memory allocators, the file and archive loader, decompression, text and font.
 
-Now: 0 of 0 function(s) labelled core matched (0 of 0 bytes); FORMATS.md missing — no function carries the label yet (a name-pass labels them).
+Now: 11 of 142 function(s) labelled core matched (312 of 26576 bytes); FORMATS.md missing.
 
 ## M5 Gameplay
 
 Gameplay subsystem by subsystem, most-called first, with data migrated alongside.
 
-Now: 0 of 0 function(s) labelled gameplay matched (0 of 0 bytes) — no function carries the label yet (a name-pass labels them).
+Now: 148 of 5384 function(s) labelled gameplay matched (9108 of 1810868 bytes).
 
 ## M6 Complete
 
 Every game function matched and the data migrated.
 
-Now: 9492 of 2251036 game bytes matched; check ok.
+Now: 9492 of 2244832 game bytes matched; check ok.
 

@@ -74,7 +74,9 @@
    "metadata": {
     "complete": false,
     "progress_categories": [
-     "game"
+     "game",
+     "game.core",
+     "game.platform"
     ],
     "auto_generated": false
    }
@@ -100,7 +102,7 @@
    "sections": [],
    "functions": [
     {
-     "name": "func_00100230",
+     "name": "WaitDma",
      "size": 112,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -108,7 +110,7 @@
      }
     },
     {
-     "name": "func_001002A0",
+     "name": "WatchDma",
      "size": 132,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -116,7 +118,7 @@
      }
     },
     {
-     "name": "func_00100328",
+     "name": "CheckAddress",
      "size": 40,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -124,7 +126,7 @@
      }
     },
     {
-     "name": "func_00100350",
+     "name": "memclr",
      "size": 52,
      "fuzzy_match_percent": 55.23077,
      "metadata": {
@@ -132,7 +134,7 @@
      }
     },
     {
-     "name": "func_00100388",
+     "name": "sceDmaGetChan",
      "size": 40,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -140,7 +142,7 @@
      }
     },
     {
-     "name": "func_001003B0",
+     "name": "sceDmaReset",
      "size": 220,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -148,7 +150,7 @@
      }
     },
     {
-     "name": "func_00100490",
+     "name": "sceDmaPutEnv",
      "size": 472,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -156,7 +158,7 @@
      }
     },
     {
-     "name": "func_00100668",
+     "name": "sceDmaGetEnv",
      "size": 56,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -172,7 +174,7 @@
      }
     },
     {
-     "name": "func_001006B8",
+     "name": "sceDmaSend",
      "size": 104,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -180,7 +182,7 @@
      }
     },
     {
-     "name": "func_00100720",
+     "name": "sceDmaSendN",
      "size": 116,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -188,7 +190,7 @@
      }
     },
     {
-     "name": "func_00100798",
+     "name": "sceDmaSendI",
      "size": 116,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -196,7 +198,7 @@
      }
     },
     {
-     "name": "func_00100810",
+     "name": "sceDmaRecv",
      "size": 72,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -204,7 +206,7 @@
      }
     },
     {
-     "name": "func_00100858",
+     "name": "sceDmaRecvN",
      "size": 124,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -212,7 +214,7 @@
      }
     },
     {
-     "name": "func_001008D8",
+     "name": "sceDmaRecvI",
      "size": 128,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -220,7 +222,7 @@
      }
     },
     {
-     "name": "func_00100958",
+     "name": "sceDmaSync",
      "size": 56,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -228,7 +230,7 @@
      }
     },
     {
-     "name": "func_00100990",
+     "name": "sceDmaWatch",
      "size": 52,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -236,7 +238,7 @@
      }
     },
     {
-     "name": "func_001009C8",
+     "name": "sceDmaPause",
      "size": 152,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -252,7 +254,7 @@
      }
     },
     {
-     "name": "func_00100A78",
+     "name": "sceGsResetGraph",
      "size": 400,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -268,7 +270,7 @@
      }
     },
     {
-     "name": "func_00100C18",
+     "name": "sceGsResetPath",
      "size": 104,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -276,7 +278,7 @@
      }
     },
     {
-     "name": "func_00100C80",
+     "name": "checkModelVersion",
      "size": 160,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -292,7 +294,7 @@
      }
     },
     {
-     "name": "func_00100D30",
+     "name": "sceGsSetDefDispEnv",
      "size": 884,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -300,7 +302,7 @@
      }
     },
     {
-     "name": "func_001010A8",
+     "name": "sceGsPutDispEnv",
      "size": 188,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -308,7 +310,7 @@
      }
     },
     {
-     "name": "func_00101168",
+     "name": "sceGszbufaddr",
      "size": 200,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -316,7 +318,7 @@
      }
     },
     {
-     "name": "func_00101230",
+     "name": "sceGsSetDefDrawEnv",
      "size": 484,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -324,7 +326,7 @@
      }
     },
     {
-     "name": "func_00101418",
+     "name": "sceGsSetDefClear",
      "size": 260,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -332,7 +334,7 @@
      }
     },
     {
-     "name": "func_00101520",
+     "name": "sceGsPutDrawEnv",
      "size": 232,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -340,7 +342,7 @@
      }
     },
     {
-     "name": "func_00101608",
+     "name": "sceGsSetDefDBuff",
      "size": 664,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -348,7 +350,7 @@
      }
     },
     {
-     "name": "func_001018A0",
+     "name": "sceGsSwapDBuff",
      "size": 92,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -356,7 +358,7 @@
      }
     },
     {
-     "name": "func_00101900",
+     "name": "sceGsSyncV",
      "size": 148,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -364,7 +366,7 @@
      }
     },
     {
-     "name": "func_00101998",
+     "name": "sceGsSyncPath",
      "size": 788,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -372,7 +374,7 @@
      }
     },
     {
-     "name": "func_00101CB0",
+     "name": "sceGsSetDefStoreImage",
      "size": 320,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -380,7 +382,7 @@
      }
     },
     {
-     "name": "func_00101DF0",
+     "name": "sceGsExecStoreImage",
      "size": 1676,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -388,7 +390,7 @@
      }
     },
     {
-     "name": "func_00102480",
+     "name": "sceGsSyncVCallback",
      "size": 160,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -404,7 +406,7 @@
      }
     },
     {
-     "name": "func_001025A8",
+     "name": "sceGsSetDefDrawEnv2",
      "size": 480,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -412,7 +414,7 @@
      }
     },
     {
-     "name": "func_00102788",
+     "name": "sceGsSwapDBuffDc",
      "size": 92,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -420,7 +422,7 @@
      }
     },
     {
-     "name": "func_001027E8",
+     "name": "setD3_CHCR",
      "size": 116,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -436,7 +438,7 @@
      }
     },
     {
-     "name": "func_001028D8",
+     "name": "sceIpuStopDMA",
      "size": 228,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -444,7 +446,7 @@
      }
     },
     {
-     "name": "func_001029C0",
+     "name": "sceIpuRestartDMA",
      "size": 336,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -452,7 +454,7 @@
      }
     },
     {
-     "name": "func_00102B10",
+     "name": "sceIpuSync",
      "size": 104,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -468,7 +470,7 @@
      }
     },
     {
-     "name": "func_00102BF0",
+     "name": "sceIpuInit",
      "size": 568,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1588,7 +1590,7 @@
      }
     },
     {
-     "name": "func_001036F0",
+     "name": "VSync",
      "size": 144,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1596,7 +1598,7 @@
      }
     },
     {
-     "name": "func_00103780",
+     "name": "VSync2",
      "size": 164,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1604,7 +1606,7 @@
      }
     },
     {
-     "name": "func_00103828",
+     "name": "write",
      "size": 124,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1612,7 +1614,7 @@
      }
     },
     {
-     "name": "func_001038A8",
+     "name": "read",
      "size": 116,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1652,7 +1654,7 @@
      }
     },
     {
-     "name": "func_00103960",
+     "name": "sbrk",
      "size": 172,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1684,7 +1686,7 @@
      }
     },
     {
-     "name": "func_00103A38",
+     "name": "kill",
      "size": 40,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1708,7 +1710,7 @@
      }
     },
     {
-     "name": "func_00103AB0",
+     "name": "_sceSDC",
      "size": 164,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1732,7 +1734,7 @@
      }
     },
     {
-     "name": "func_00103BF0",
+     "name": "_sceIDC",
      "size": 164,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1865,7 +1867,7 @@
      }
     },
     {
-     "name": "func_00104128",
+     "name": "iWakeupThread",
      "size": 148,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1873,7 +1875,7 @@
      }
     },
     {
-     "name": "func_001041C0",
+     "name": "iRotateThreadReadyQueue",
      "size": 124,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1881,7 +1883,7 @@
      }
     },
     {
-     "name": "func_00104240",
+     "name": "iSuspendThread",
      "size": 152,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1889,7 +1891,7 @@
      }
     },
     {
-     "name": "func_001042D8",
+     "name": "DelayThread",
      "size": 200,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1897,7 +1899,7 @@
      }
     },
     {
-     "name": "func_001043A0",
+     "name": "StartThread",
      "size": 376,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1905,7 +1907,7 @@
      }
     },
     {
-     "name": "func_00104518",
+     "name": "_DelayThreadHandler",
      "size": 40,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1913,7 +1915,7 @@
      }
     },
     {
-     "name": "func_00104540",
+     "name": "sceDeci2Open",
      "size": 68,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1921,7 +1923,7 @@
      }
     },
     {
-     "name": "func_00104588",
+     "name": "sceDeci2Close",
      "size": 36,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1929,7 +1931,7 @@
      }
     },
     {
-     "name": "func_001045B0",
+     "name": "sceDeci2ReqSend",
      "size": 48,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1937,7 +1939,7 @@
      }
     },
     {
-     "name": "func_001045E0",
+     "name": "sceDeci2Poll",
      "size": 36,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1945,7 +1947,7 @@
      }
     },
     {
-     "name": "func_00104608",
+     "name": "sceDeci2GrpOpen",
      "size": 48,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1953,7 +1955,7 @@
      }
     },
     {
-     "name": "func_00104638",
+     "name": "sceDeci2GrpClose",
      "size": 36,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1961,7 +1963,7 @@
      }
     },
     {
-     "name": "func_00104660",
+     "name": "sceDeci2ExRecv",
      "size": 52,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1969,7 +1971,7 @@
      }
     },
     {
-     "name": "func_00104698",
+     "name": "sceDeci2ExSend",
      "size": 52,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1977,7 +1979,7 @@
      }
     },
     {
-     "name": "func_001046D0",
+     "name": "sceDeci2ExReqSend",
      "size": 48,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1985,7 +1987,7 @@
      }
     },
     {
-     "name": "func_00104700",
+     "name": "sceDeci2ExLock",
      "size": 36,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -1993,7 +1995,7 @@
      }
     },
     {
-     "name": "func_00104728",
+     "name": "sceDeci2ExUnLock",
      "size": 36,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2001,7 +2003,7 @@
      }
     },
     {
-     "name": "func_00104750",
+     "name": "kputs",
      "size": 36,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2017,7 +2019,7 @@
      }
     },
     {
-     "name": "func_001047A0",
+     "name": "QueuePeekWriteDone",
      "size": 60,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2025,7 +2027,7 @@
      }
     },
     {
-     "name": "func_001047E0",
+     "name": "QueuePeekReadDone",
      "size": 60,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2033,7 +2035,7 @@
      }
     },
     {
-     "name": "func_00104820",
+     "name": "sceTtyHandler",
      "size": 404,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2041,7 +2043,7 @@
      }
     },
     {
-     "name": "func_001049B8",
+     "name": "sceTtyWrite",
      "size": 372,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2049,7 +2051,7 @@
      }
     },
     {
-     "name": "func_00104B30",
+     "name": "sceTtyRead",
      "size": 208,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2057,7 +2059,7 @@
      }
     },
     {
-     "name": "func_00104C00",
+     "name": "sceTtyInit",
      "size": 188,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2065,7 +2067,7 @@
      }
     },
     {
-     "name": "func_00104CC0",
+     "name": "kputchar",
      "size": 56,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2073,7 +2075,7 @@
      }
     },
     {
-     "name": "func_00104CF8",
+     "name": "deci2Putchar",
      "size": 176,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2081,7 +2083,7 @@
      }
     },
     {
-     "name": "func_00104DA8",
+     "name": "serialPutchar",
      "size": 52,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2089,7 +2091,7 @@
      }
     },
     {
-     "name": "func_00104DE0",
+     "name": "ftoi",
      "size": 144,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2097,7 +2099,7 @@
      }
     },
     {
-     "name": "func_00104E70",
+     "name": "printfloat",
      "size": 472,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2105,7 +2107,7 @@
      }
     },
     {
-     "name": "func_00105048",
+     "name": "_sceSnprintf",
      "size": 3348,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2113,7 +2115,7 @@
      }
     },
     {
-     "name": "func_00105D60",
+     "name": "snprintf_char",
      "size": 88,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2137,7 +2139,7 @@
      }
     },
     {
-     "name": "func_00105E08",
+     "name": "_sceSnprintf_pf",
      "size": 76,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2145,7 +2147,7 @@
      }
     },
     {
-     "name": "func_00105E58",
+     "name": "sceVsnprintf",
      "size": 56,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2153,7 +2155,7 @@
      }
     },
     {
-     "name": "func_00105E90",
+     "name": "sceSnprintf",
      "size": 72,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2161,7 +2163,7 @@
      }
     },
     {
-     "name": "func_00105ED8",
+     "name": "sceVprintf",
      "size": 112,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2169,7 +2171,7 @@
      }
     },
     {
-     "name": "func_00105F48",
+     "name": "sceCdChgSys",
      "size": 128,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2225,7 +2227,7 @@
      }
     },
     {
-     "name": "func_001060C0",
+     "name": "sceSifSetDmaInternal",
      "size": 200,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2249,7 +2251,7 @@
      }
     },
     {
-     "name": "func_00106248",
+     "name": "sceSifInitCmd",
      "size": 640,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2257,7 +2259,7 @@
      }
     },
     {
-     "name": "func_001064C8",
+     "name": "sceSifExitCmd",
      "size": 52,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2281,7 +2283,7 @@
      }
     },
     {
-     "name": "func_00106530",
+     "name": "sceSifAddCmdHandler",
      "size": 120,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2289,7 +2291,7 @@
      }
     },
     {
-     "name": "func_001065A8",
+     "name": "sceSifRemoveCmdHandler",
      "size": 76,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2297,7 +2299,7 @@
      }
     },
     {
-     "name": "func_001065F8",
+     "name": "_sceSifSendCmd",
      "size": 308,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2305,7 +2307,7 @@
      }
     },
     {
-     "name": "func_00106730",
+     "name": "sceSifSendCmd",
      "size": 60,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2313,7 +2315,7 @@
      }
     },
     {
-     "name": "func_00106770",
+     "name": "isceSifSendCmd",
      "size": 60,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2321,7 +2323,7 @@
      }
     },
     {
-     "name": "func_001067B0",
+     "name": "_sceSifCmdIntrHdlr",
      "size": 328,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2377,7 +2379,7 @@
      }
     },
     {
-     "name": "func_00106C38",
+     "name": "_sceRpcGetFPacket",
      "size": 48,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2385,7 +2387,7 @@
      }
     },
     {
-     "name": "func_00106C68",
+     "name": "_sceRpcGetFPacket2",
      "size": 64,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2393,7 +2395,7 @@
      }
     },
     {
-     "name": "func_00106CA8",
+     "name": "_request_end",
      "size": 204,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2401,7 +2403,7 @@
      }
     },
     {
-     "name": "func_00106D78",
+     "name": "_alarm_rdata",
      "size": 64,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2409,7 +2411,7 @@
      }
     },
     {
-     "name": "func_00106DB8",
+     "name": "_request_rdata",
      "size": 208,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2417,7 +2419,7 @@
      }
     },
     {
-     "name": "func_00106E88",
+     "name": "sceSifGetOtherData",
      "size": 356,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2425,7 +2427,7 @@
      }
     },
     {
-     "name": "func_00106FF0",
+     "name": "_search_svdata",
      "size": 76,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2433,7 +2435,7 @@
      }
     },
     {
-     "name": "func_00107040",
+     "name": "_alarm_bind",
      "size": 64,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2441,7 +2443,7 @@
      }
     },
     {
-     "name": "func_00107080",
+     "name": "_request_bind",
      "size": 204,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2449,7 +2451,7 @@
      }
     },
     {
-     "name": "func_00107150",
+     "name": "sceSifBindRpc",
      "size": 332,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2457,7 +2459,7 @@
      }
     },
     {
-     "name": "func_001072A0",
+     "name": "_request_call",
      "size": 140,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2465,7 +2467,7 @@
      }
     },
     {
-     "name": "func_00107330",
+     "name": "sceSifCallRpc",
      "size": 512,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2473,7 +2475,7 @@
      }
     },
     {
-     "name": "func_00107530",
+     "name": "sceSifCheckStatRpc",
      "size": 60,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2481,7 +2483,7 @@
      }
     },
     {
-     "name": "func_00107570",
+     "name": "sceSifSetRpcQueue",
      "size": 148,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2489,7 +2491,7 @@
      }
     },
     {
-     "name": "func_00107608",
+     "name": "sceSifRegisterRpc",
      "size": 208,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2497,7 +2499,7 @@
      }
     },
     {
-     "name": "func_001076D8",
+     "name": "sceSifRemoveRpc",
      "size": 148,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2505,7 +2507,7 @@
      }
     },
     {
-     "name": "func_00107770",
+     "name": "sceSifRemoveRpcQueue",
      "size": 144,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2542,7 +2544,7 @@
    "sections": [],
    "functions": [
     {
-     "name": "func_00107800",
+     "name": "sceSifGetNextRequest",
      "size": 88,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2550,7 +2552,7 @@
      }
     },
     {
-     "name": "func_00107858",
+     "name": "sceSifExecRequest",
      "size": 452,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2558,7 +2560,7 @@
      }
     },
     {
-     "name": "func_00107A20",
+     "name": "sceSifRpcLoop",
      "size": 64,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2566,7 +2568,7 @@
      }
     },
     {
-     "name": "func_00107A60",
+     "name": "_sceFsIobSemaMK",
      "size": 112,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2574,7 +2576,7 @@
      }
     },
     {
-     "name": "func_00107AD0",
+     "name": "use_iob_cnt",
      "size": 124,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2582,7 +2584,7 @@
      }
     },
     {
-     "name": "func_00107B50",
+     "name": "new_iob",
      "size": 136,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2590,7 +2592,7 @@
      }
     },
     {
-     "name": "func_00107BD8",
+     "name": "sceFsSifCallRpc",
      "size": 236,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2598,7 +2600,7 @@
      }
     },
     {
-     "name": "func_00107CC8",
+     "name": "get_iob",
      "size": 108,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2606,7 +2608,7 @@
      }
     },
     {
-     "name": "func_00107D38",
+     "name": "_sceFs_Rcv_Intr",
      "size": 948,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2614,7 +2616,7 @@
      }
     },
     {
-     "name": "func_001080F0",
+     "name": "_sceFsSemInit",
      "size": 84,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2622,7 +2624,7 @@
      }
     },
     {
-     "name": "func_00108148",
+     "name": "_sceFsWaitS",
      "size": 44,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2638,7 +2640,7 @@
      }
     },
     {
-     "name": "func_00108188",
+     "name": "scePowerOffHandler",
      "size": 160,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2646,7 +2648,7 @@
      }
     },
     {
-     "name": "func_00108228",
+     "name": "_sceFs_Poff_Intr",
      "size": 68,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2654,7 +2656,7 @@
      }
     },
     {
-     "name": "func_00108270",
+     "name": "sceFsInit",
      "size": 520,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2670,7 +2672,7 @@
      }
     },
     {
-     "name": "func_00108508",
+     "name": "sceFsReset",
      "size": 52,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2678,7 +2680,7 @@
      }
     },
     {
-     "name": "func_00108540",
+     "name": "sceFsSetIopBuf",
      "size": 320,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2686,7 +2688,7 @@
      }
     },
     {
-     "name": "func_00108680",
+     "name": "sceFsSetIopPrio",
      "size": 240,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2694,7 +2696,7 @@
      }
     },
     {
-     "name": "func_00108770",
+     "name": "sceOpen",
      "size": 656,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2702,7 +2704,7 @@
      }
     },
     {
-     "name": "func_00108A00",
+     "name": "sceClose",
      "size": 376,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2710,7 +2712,7 @@
      }
     },
     {
-     "name": "func_00108B78",
+     "name": "sceLseek",
      "size": 572,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2718,7 +2720,7 @@
      }
     },
     {
-     "name": "func_00108DB8",
+     "name": "sceRead",
      "size": 620,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2726,7 +2728,7 @@
      }
     },
     {
-     "name": "func_00109028",
+     "name": "sceWrite",
      "size": 704,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2734,7 +2736,7 @@
      }
     },
     {
-     "name": "func_001092E8",
+     "name": "sceIoctl",
      "size": 904,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2742,7 +2744,7 @@
      }
     },
     {
-     "name": "func_00109670",
+     "name": "sceIoctl2",
      "size": 488,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2750,7 +2752,7 @@
      }
     },
     {
-     "name": "func_00109858",
+     "name": "_sceCallCode",
      "size": 432,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2766,7 +2768,7 @@
      }
     },
     {
-     "name": "func_00109A28",
+     "name": "sceMkdir",
      "size": 440,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2782,7 +2784,7 @@
      }
     },
     {
-     "name": "func_00109C00",
+     "name": "sceFormat",
      "size": 640,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2790,7 +2792,7 @@
      }
     },
     {
-     "name": "func_00109E80",
+     "name": "sceAddDrv",
      "size": 300,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2806,7 +2808,7 @@
      }
     },
     {
-     "name": "func_00109FD0",
+     "name": "sceDopen",
      "size": 200,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2814,7 +2816,7 @@
      }
     },
     {
-     "name": "func_0010A098",
+     "name": "sceDclose",
      "size": 356,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2822,7 +2824,7 @@
      }
     },
     {
-     "name": "func_0010A200",
+     "name": "sceDread",
      "size": 340,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2830,7 +2832,7 @@
      }
     },
     {
-     "name": "func_0010A358",
+     "name": "sceGetstat",
      "size": 436,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2838,7 +2840,7 @@
      }
     },
     {
-     "name": "func_0010A510",
+     "name": "sceChstat",
      "size": 588,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2846,7 +2848,7 @@
      }
     },
     {
-     "name": "func_0010A760",
+     "name": "sceRename",
      "size": 520,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2862,7 +2864,7 @@
      }
     },
     {
-     "name": "func_0010A988",
+     "name": "sceSync",
      "size": 428,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2870,7 +2872,7 @@
      }
     },
     {
-     "name": "func_0010AB38",
+     "name": "sceMount",
      "size": 640,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2886,7 +2888,7 @@
      }
     },
     {
-     "name": "func_0010ADD8",
+     "name": "sceLseek64",
      "size": 572,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2894,7 +2896,7 @@
      }
     },
     {
-     "name": "func_0010B018",
+     "name": "sceDevctl",
      "size": 680,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2902,7 +2904,7 @@
      }
     },
     {
-     "name": "func_0010B2C0",
+     "name": "sceSymlink",
      "size": 504,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2910,7 +2912,7 @@
      }
     },
     {
-     "name": "func_0010B4B8",
+     "name": "sceReadlink",
      "size": 480,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2918,7 +2920,7 @@
      }
     },
     {
-     "name": "func_0010B698",
+     "name": "sceSifInitIopHeap",
      "size": 136,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2926,7 +2928,7 @@
      }
     },
     {
-     "name": "func_0010B720",
+     "name": "sceSifAllocIopHeap",
      "size": 112,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2934,7 +2936,7 @@
      }
     },
     {
-     "name": "func_0010B790",
+     "name": "sceSifAllocSysMemory",
      "size": 128,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2958,7 +2960,7 @@
      }
     },
     {
-     "name": "func_0010B8A8",
+     "name": "sceSifLoadIopHeap",
      "size": 240,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2966,7 +2968,7 @@
      }
     },
     {
-     "name": "func_0010B998",
+     "name": "sceSifQueryMemSize",
      "size": 112,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2974,7 +2976,7 @@
      }
     },
     {
-     "name": "func_0010BA08",
+     "name": "sceSifQueryMaxFreeMemSize",
      "size": 112,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2982,7 +2984,7 @@
      }
     },
     {
-     "name": "func_0010BA78",
+     "name": "sceSifQueryTotalFreeMemSize",
      "size": 112,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2990,7 +2992,7 @@
      }
     },
     {
-     "name": "func_0010BAE8",
+     "name": "sceSifQueryBlockTopAddress",
      "size": 124,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -2998,7 +3000,7 @@
      }
     },
     {
-     "name": "func_0010BB68",
+     "name": "sceSifQueryBlockSize",
      "size": 124,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3006,7 +3008,7 @@
      }
     },
     {
-     "name": "func_0010BBE8",
+     "name": "_lf_bind",
      "size": 256,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3022,7 +3024,7 @@
      }
     },
     {
-     "name": "func_0010BD78",
+     "name": "sceSifLoadFileReset",
      "size": 56,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3030,7 +3032,7 @@
      }
     },
     {
-     "name": "func_0010BDB0",
+     "name": "_sceSifLoadModuleBuffer",
      "size": 520,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3038,7 +3040,7 @@
      }
     },
     {
-     "name": "func_0010BFB8",
+     "name": "sceSifStopModule",
      "size": 520,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3075,7 +3077,7 @@
    "sections": [],
    "functions": [
     {
-     "name": "func_0010C1C0",
+     "name": "sceSifUnloadModule",
      "size": 144,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3083,7 +3085,7 @@
      }
     },
     {
-     "name": "func_0010C250",
+     "name": "sceSifSearchModuleByName",
      "size": 160,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3091,7 +3093,7 @@
      }
     },
     {
-     "name": "func_0010C2F0",
+     "name": "sceSifSearchModuleByAddress",
      "size": 144,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3115,7 +3117,7 @@
      }
     },
     {
-     "name": "func_0010C3C0",
+     "name": "_sceSifLoadModule",
      "size": 548,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3139,7 +3141,7 @@
      }
     },
     {
-     "name": "func_0010C628",
+     "name": "_sceSifLoadElfPart",
      "size": 260,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3155,7 +3157,7 @@
      }
     },
     {
-     "name": "func_0010C750",
+     "name": "sceSifLoadElf",
      "size": 40,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3163,7 +3165,7 @@
      }
     },
     {
-     "name": "func_0010C778",
+     "name": "sceSifGetIopAddr",
      "size": 236,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3171,7 +3173,7 @@
      }
     },
     {
-     "name": "func_0010C868",
+     "name": "sceSifSetIopAddr",
      "size": 220,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3179,7 +3181,7 @@
      }
     },
     {
-     "name": "func_0010C948",
+     "name": "sceSifResetIop",
      "size": 340,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3187,7 +3189,7 @@
      }
     },
     {
-     "name": "func_0010CAA0",
+     "name": "sceSifIsAliveIop",
      "size": 40,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3195,7 +3197,7 @@
      }
     },
     {
-     "name": "func_0010CAC8",
+     "name": "sceSifSyncIop",
      "size": 80,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3203,7 +3205,7 @@
      }
     },
     {
-     "name": "func_0010CB18",
+     "name": "sceSifRebootIop",
      "size": 272,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3211,7 +3213,7 @@
      }
     },
     {
-     "name": "func_0010CC28",
+     "name": "SetTLBHandler",
      "size": 96,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3219,7 +3221,7 @@
      }
     },
     {
-     "name": "func_0010CC88",
+     "name": "SetDebugHandler",
      "size": 132,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3259,7 +3261,7 @@
      }
     },
     {
-     "name": "func_0010CD78",
+     "name": "InitTLBFunctions",
      "size": 196,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3291,7 +3293,7 @@
      }
     },
     {
-     "name": "func_0010CE70",
+     "name": "SetTLBEntry",
      "size": 48,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3347,7 +3349,7 @@
      }
     },
     {
-     "name": "func_0010CF00",
+     "name": "InitTLB",
      "size": 64,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3355,7 +3357,7 @@
      }
     },
     {
-     "name": "func_0010CF40",
+     "name": "InitTLB32MB",
      "size": 500,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3371,7 +3373,7 @@
      }
     },
     {
-     "name": "func_0010D4A0",
+     "name": "DIntr",
      "size": 80,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3387,7 +3389,7 @@
      }
     },
     {
-     "name": "func_0010D508",
+     "name": "supplement_crt0",
      "size": 96,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3419,7 +3421,7 @@
      }
     },
     {
-     "name": "func_0010D5C0",
+     "name": "kFindAddress",
      "size": 64,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3435,7 +3437,7 @@
      }
     },
     {
-     "name": "func_0010D610",
+     "name": "GetSystemCallEntry",
      "size": 52,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3443,7 +3445,7 @@
      }
     },
     {
-     "name": "func_0010D648",
+     "name": "InitSystemCallTableAddress",
      "size": 252,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3499,7 +3501,7 @@
      }
     },
     {
-     "name": "func_0010D818",
+     "name": "PatchIsNeeded",
      "size": 104,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3507,7 +3509,7 @@
      }
     },
     {
-     "name": "func_0010D880",
+     "name": "InitExecPS2",
      "size": 172,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3539,7 +3541,7 @@
      }
     },
     {
-     "name": "func_0010D980",
+     "name": "SetArg",
      "size": 280,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3555,7 +3557,7 @@
      }
     },
     {
-     "name": "func_0010DAA0",
+     "name": "ExecPS2",
      "size": 112,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3563,7 +3565,7 @@
      }
     },
     {
-     "name": "func_0010DB10",
+     "name": "LoadExecPS2",
      "size": 72,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3579,7 +3581,7 @@
      }
     },
     {
-     "name": "func_0010DB80",
+     "name": "ExecOSD",
      "size": 76,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3619,7 +3621,7 @@
      }
     },
     {
-     "name": "func_0010DC38",
+     "name": "InitAlarm",
      "size": 212,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3627,7 +3629,7 @@
      }
     },
     {
-     "name": "func_0010DD10",
+     "name": "SetT2",
      "size": 112,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3659,7 +3661,7 @@
      }
     },
     {
-     "name": "func_0010DDB0",
+     "name": "InitTimer",
      "size": 340,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3667,7 +3669,7 @@
      }
     },
     {
-     "name": "func_0010DF08",
+     "name": "EndTimer",
      "size": 184,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3675,7 +3677,7 @@
      }
     },
     {
-     "name": "func_0010DFC0",
+     "name": "GetTimerPreScaleFactor",
      "size": 44,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3683,7 +3685,7 @@
      }
     },
     {
-     "name": "func_0010DFF0",
+     "name": "StartTimerSystemTime",
      "size": 144,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3720,7 +3722,7 @@
    "sections": [],
    "functions": [
     {
-     "name": "func_0010E080",
+     "name": "StopTimerSystemTime",
      "size": 124,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3728,7 +3730,7 @@
      }
     },
     {
-     "name": "func_0010E100",
+     "name": "SetNextComp",
      "size": 400,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3736,7 +3738,7 @@
      }
     },
     {
-     "name": "func_0010E290",
+     "name": "InsertAlarm",
      "size": 132,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3744,7 +3746,7 @@
      }
     },
     {
-     "name": "func_0010E318",
+     "name": "UnlinkAlarm",
      "size": 56,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3752,7 +3754,7 @@
      }
     },
     {
-     "name": "func_0010E350",
+     "name": "cbTimerHandler",
      "size": 692,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3760,7 +3762,7 @@
      }
     },
     {
-     "name": "func_0010E608",
+     "name": "iGetTimerSystemTime",
      "size": 76,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3768,7 +3770,7 @@
      }
     },
     {
-     "name": "func_0010E658",
+     "name": "GetTimerSystemTime",
      "size": 124,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3776,7 +3778,7 @@
      }
     },
     {
-     "name": "func_0010E6D8",
+     "name": "iAllocTimerCounter",
      "size": 112,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3784,7 +3786,7 @@
      }
     },
     {
-     "name": "func_0010E748",
+     "name": "AllocTimerCounter",
      "size": 72,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3792,7 +3794,7 @@
      }
     },
     {
-     "name": "func_0010E790",
+     "name": "iFreeTimerCounter",
      "size": 188,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3808,7 +3810,7 @@
      }
     },
     {
-     "name": "func_0010E8A0",
+     "name": "iGetTimerUsedUnusedCounters",
      "size": 80,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3816,7 +3818,7 @@
      }
     },
     {
-     "name": "func_0010E8F0",
+     "name": "GetTimerUsedUnusedCounters",
      "size": 92,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3824,7 +3826,7 @@
      }
     },
     {
-     "name": "func_0010E950",
+     "name": "iStartTimerCounter",
      "size": 172,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3840,7 +3842,7 @@
      }
     },
     {
-     "name": "func_0010EA50",
+     "name": "iStopTimerCounter",
      "size": 220,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3856,7 +3858,7 @@
      }
     },
     {
-     "name": "func_0010EB80",
+     "name": "SetTimerCount",
      "size": 204,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3880,7 +3882,7 @@
      }
     },
     {
-     "name": "func_0010ECE8",
+     "name": "iGetTimerCount",
      "size": 108,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3896,7 +3898,7 @@
      }
     },
     {
-     "name": "func_0010EDA8",
+     "name": "iSetTimerHandler",
      "size": 268,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3904,7 +3906,7 @@
      }
     },
     {
-     "name": "func_0010EEB8",
+     "name": "SetTimerHandler",
      "size": 124,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3960,7 +3962,7 @@
      }
     },
     {
-     "name": "func_0010F190",
+     "name": "SetTimerAlarm",
      "size": 300,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3968,7 +3970,7 @@
      }
     },
     {
-     "name": "func_0010F2C0",
+     "name": "iSetTimerAlarm",
      "size": 240,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3976,7 +3978,7 @@
      }
     },
     {
-     "name": "func_0010F3B0",
+     "name": "ReleaseTimerAlarm",
      "size": 168,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -3984,7 +3986,7 @@
      }
     },
     {
-     "name": "func_0010F458",
+     "name": "iReleaseTimerAlarm",
      "size": 120,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4000,7 +4002,7 @@
      }
     },
     {
-     "name": "func_0010F4F8",
+     "name": "sceSifSetRebootNotifyBuffer",
      "size": 124,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4008,7 +4010,7 @@
      }
     },
     {
-     "name": "func_0010F578",
+     "name": "sceSifAddRebootNotifyHandler",
      "size": 184,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4016,7 +4018,7 @@
      }
     },
     {
-     "name": "func_0010F630",
+     "name": "sceSifRemoveRebootNotifyHandler",
      "size": 84,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4024,7 +4026,7 @@
      }
     },
     {
-     "name": "func_0010F688",
+     "name": "sceSifExecNotifyHandler",
      "size": 168,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4032,7 +4034,7 @@
      }
     },
     {
-     "name": "func_0010F730",
+     "name": "sceMcInit",
      "size": 664,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4040,7 +4042,7 @@
      }
     },
     {
-     "name": "func_0010F9C8",
+     "name": "sceMcEnd",
      "size": 172,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4056,7 +4058,7 @@
      }
     },
     {
-     "name": "func_0010FA88",
+     "name": "sceMcChangeThreadPriority",
      "size": 188,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4064,7 +4066,7 @@
      }
     },
     {
-     "name": "func_0010FB48",
+     "name": "sceMcGetSlotMax",
      "size": 192,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4072,7 +4074,7 @@
      }
     },
     {
-     "name": "func_0010FC08",
+     "name": "sceMcOpen",
      "size": 296,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4080,7 +4082,7 @@
      }
     },
     {
-     "name": "func_0010FD30",
+     "name": "sceMcMkdir",
      "size": 52,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4088,7 +4090,7 @@
      }
     },
     {
-     "name": "func_0010FD68",
+     "name": "sceMcClose",
      "size": 188,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4096,7 +4098,7 @@
      }
     },
     {
-     "name": "func_0010FE28",
+     "name": "sceMcSeek",
      "size": 224,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4104,7 +4106,7 @@
      }
     },
     {
-     "name": "func_0010FF08",
+     "name": "mceIntrReadFixAlign",
      "size": 176,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4112,7 +4114,7 @@
      }
     },
     {
-     "name": "func_0010FFB8",
+     "name": "sceMcRead",
      "size": 276,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4120,7 +4122,7 @@
      }
     },
     {
-     "name": "func_001100D0",
+     "name": "sceMcWrite",
      "size": 376,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4128,7 +4130,7 @@
      }
     },
     {
-     "name": "func_00110248",
+     "name": "sceMcSync",
      "size": 196,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4136,7 +4138,7 @@
      }
     },
     {
-     "name": "func_00110310",
+     "name": "mceGetInfoApdx",
      "size": 88,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4144,7 +4146,7 @@
      }
     },
     {
-     "name": "func_00110368",
+     "name": "sceMcGetInfo",
      "size": 380,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4152,7 +4154,7 @@
      }
     },
     {
-     "name": "func_001104E8",
+     "name": "sceMcUdCheckNewCard",
      "size": 112,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4160,7 +4162,7 @@
      }
     },
     {
-     "name": "func_00110558",
+     "name": "sceMcGetDir",
      "size": 332,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4168,7 +4170,7 @@
      }
     },
     {
-     "name": "func_001106A8",
+     "name": "mceStorePwd",
      "size": 140,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4176,7 +4178,7 @@
      }
     },
     {
-     "name": "func_00110738",
+     "name": "sceMcChdir",
      "size": 320,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4184,7 +4186,7 @@
      }
     },
     {
-     "name": "func_00110878",
+     "name": "sceMcFormat",
      "size": 204,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4192,7 +4194,7 @@
      }
     },
     {
-     "name": "func_00110948",
+     "name": "sceMcDelete",
      "size": 284,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4200,7 +4202,7 @@
      }
     },
     {
-     "name": "func_00110A68",
+     "name": "sceMcFlush",
      "size": 188,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4208,7 +4210,7 @@
      }
     },
     {
-     "name": "func_00110B28",
+     "name": "sceMcSetFileInfo",
      "size": 460,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4216,7 +4218,7 @@
      }
     },
     {
-     "name": "func_00110CF8",
+     "name": "sceMcRename",
      "size": 344,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4224,7 +4226,7 @@
      }
     },
     {
-     "name": "func_00110E50",
+     "name": "sceMcUnformat",
      "size": 204,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4232,7 +4234,7 @@
      }
     },
     {
-     "name": "func_00110F20",
+     "name": "sceMcGetEntSpace",
      "size": 268,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4240,7 +4242,7 @@
      }
     },
     {
-     "name": "func_00111030",
+     "name": "regMain",
      "size": 104,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4248,7 +4250,7 @@
      }
     },
     {
-     "name": "func_00111098",
+     "name": "mceRegistSifFunc",
      "size": 128,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4256,7 +4258,7 @@
      }
     },
     {
-     "name": "func_00111118",
+     "name": "mceEncEcc",
      "size": 124,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4264,7 +4266,7 @@
      }
     },
     {
-     "name": "func_00111198",
+     "name": "mceDecEcc",
      "size": 280,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4272,7 +4274,7 @@
      }
     },
     {
-     "name": "func_001112B0",
+     "name": "mceDecEccAll",
      "size": 132,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4280,7 +4282,7 @@
      }
     },
     {
-     "name": "func_00111338",
+     "name": "mceExtractSliceData",
      "size": 300,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4288,7 +4290,7 @@
      }
     },
     {
-     "name": "func_00111468",
+     "name": "mceSifEntry",
      "size": 192,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4296,7 +4298,7 @@
      }
     },
     {
-     "name": "func_00111528",
+     "name": "sceMcReadFast",
      "size": 272,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4304,7 +4306,7 @@
      }
     },
     {
-     "name": "func_00111638",
+     "name": "sceMcWriteFast",
      "size": 256,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4341,7 +4343,7 @@
    "sections": [],
    "functions": [
     {
-     "name": "func_00111740",
+     "name": "_dualPrimeVector",
      "size": 388,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4349,7 +4351,7 @@
      }
     },
     {
-     "name": "func_001118C8",
+     "name": "_getAllRefs",
      "size": 1796,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4357,7 +4359,7 @@
      }
     },
     {
-     "name": "func_00111FD0",
+     "name": "_motionComp0",
      "size": 592,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4365,7 +4367,7 @@
      }
     },
     {
-     "name": "func_00112220",
+     "name": "_getRef0",
      "size": 1160,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4373,7 +4375,7 @@
      }
     },
     {
-     "name": "func_001126A8",
+     "name": "_doMC",
      "size": 540,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4381,7 +4383,7 @@
      }
     },
     {
-     "name": "func_001128C8",
+     "name": "_sceMpegPictureData0",
      "size": 576,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4389,7 +4391,7 @@
      }
     },
     {
-     "name": "func_00112B08",
+     "name": "_slice0",
      "size": 812,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4397,7 +4399,7 @@
      }
     },
     {
-     "name": "func_00112E38",
+     "name": "_motionVector",
      "size": 1064,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4405,7 +4407,7 @@
      }
     },
     {
-     "name": "func_00113260",
+     "name": "_motionVectors",
      "size": 412,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4413,7 +4415,7 @@
      }
     },
     {
-     "name": "func_00113400",
+     "name": "_decMB0",
      "size": 1368,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4421,7 +4423,7 @@
      }
     },
     {
-     "name": "func_00113958",
+     "name": "_sceMpegMbAddressIncrement",
      "size": 376,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4429,7 +4431,7 @@
      }
     },
     {
-     "name": "func_00113AD0",
+     "name": "_sceMpegWaitIpuIdle",
      "size": 360,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4437,7 +4439,7 @@
      }
     },
     {
-     "name": "func_00113C38",
+     "name": "_sceMpegWaitIpuIdle64",
      "size": 384,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4445,7 +4447,7 @@
      }
     },
     {
-     "name": "func_00113DB8",
+     "name": "_sceMpegNextBit",
      "size": 232,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4453,7 +4455,7 @@
      }
     },
     {
-     "name": "func_00113EA0",
+     "name": "_sceMpegPeepBit",
      "size": 140,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4461,7 +4463,7 @@
      }
     },
     {
-     "name": "func_00113F30",
+     "name": "_sceMpegFlushBuf",
      "size": 148,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4485,7 +4487,7 @@
      }
     },
     {
-     "name": "func_00114008",
+     "name": "_skipMB0",
      "size": 188,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4493,7 +4495,7 @@
      }
     },
     {
-     "name": "func_001140C8",
+     "name": "_copyAddRefImage",
      "size": 236,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4501,7 +4503,7 @@
      }
     },
     {
-     "name": "func_00114278",
+     "name": "dmaRefImage",
      "size": 380,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4509,7 +4511,7 @@
      }
     },
     {
-     "name": "func_001143F8",
+     "name": "_rix_000",
      "size": 116,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4517,7 +4519,7 @@
      }
     },
     {
-     "name": "func_00114470",
+     "name": "_ri0_000",
      "size": 148,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4525,7 +4527,7 @@
      }
     },
     {
-     "name": "func_00114508",
+     "name": "_rix_001",
      "size": 180,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4533,7 +4535,7 @@
      }
     },
     {
-     "name": "func_001145C0",
+     "name": "_ri0_001",
      "size": 204,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4541,7 +4543,7 @@
      }
     },
     {
-     "name": "func_00114690",
+     "name": "_rix_010",
      "size": 172,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4549,7 +4551,7 @@
      }
     },
     {
-     "name": "func_00114740",
+     "name": "_ri0_010",
      "size": 184,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4557,7 +4559,7 @@
      }
     },
     {
-     "name": "func_001147F8",
+     "name": "_rix_011",
      "size": 248,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4565,7 +4567,7 @@
      }
     },
     {
-     "name": "func_001148F0",
+     "name": "_ri0_011",
      "size": 252,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4573,7 +4575,7 @@
      }
     },
     {
-     "name": "func_001149F0",
+     "name": "_rix_100",
      "size": 156,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4581,7 +4583,7 @@
      }
     },
     {
-     "name": "func_00114A90",
+     "name": "_ri0_100",
      "size": 172,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4589,7 +4591,7 @@
      }
     },
     {
-     "name": "func_00114B40",
+     "name": "_rix_101",
      "size": 220,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4597,7 +4599,7 @@
      }
     },
     {
-     "name": "func_00114C20",
+     "name": "_ri0_101",
      "size": 228,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4605,7 +4607,7 @@
      }
     },
     {
-     "name": "func_00114D08",
+     "name": "_rix_110",
      "size": 212,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4613,7 +4615,7 @@
      }
     },
     {
-     "name": "func_00114DE0",
+     "name": "_ri0_110",
      "size": 208,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4621,7 +4623,7 @@
      }
     },
     {
-     "name": "func_00114EB0",
+     "name": "_rix_111",
      "size": 288,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4629,7 +4631,7 @@
      }
     },
     {
-     "name": "func_00114FD0",
+     "name": "_ri0_111",
      "size": 276,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4637,7 +4639,7 @@
      }
     },
     {
-     "name": "func_001150E8",
+     "name": "receiveDataFromIPU",
      "size": 160,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4645,7 +4647,7 @@
      }
     },
     {
-     "name": "func_00115188",
+     "name": "_sceMpegSliceA0",
      "size": 416,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4653,7 +4655,7 @@
      }
     },
     {
-     "name": "func_00115328",
+     "name": "_initSeq",
      "size": 788,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4661,7 +4663,7 @@
      }
     },
     {
-     "name": "func_00115640",
+     "name": "_sequenceHeader",
      "size": 684,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4669,7 +4671,7 @@
      }
     },
     {
-     "name": "func_001158F0",
+     "name": "_groupOfPicturesHeader",
      "size": 160,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4677,7 +4679,7 @@
      }
     },
     {
-     "name": "func_00115990",
+     "name": "_pictureHeader",
      "size": 324,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4685,7 +4687,7 @@
      }
     },
     {
-     "name": "func_00115AD8",
+     "name": "_sequenceExtension",
      "size": 320,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4693,7 +4695,7 @@
      }
     },
     {
-     "name": "func_00115C18",
+     "name": "_quantMatrixExtension",
      "size": 232,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4701,7 +4703,7 @@
      }
     },
     {
-     "name": "func_00115D00",
+     "name": "_sequenceScalableExtension",
      "size": 12,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4717,7 +4719,7 @@
      }
     },
     {
-     "name": "func_00115D20",
+     "name": "_pictureCodingExtension",
      "size": 484,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4741,7 +4743,7 @@
      }
     },
     {
-     "name": "func_00115F28",
+     "name": "_extensionAndUserData",
      "size": 460,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4765,7 +4767,7 @@
      }
     },
     {
-     "name": "func_00116138",
+     "name": "_sceMpegNextHeader",
      "size": 340,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4781,7 +4783,7 @@
      }
     },
     {
-     "name": "func_00116298",
+     "name": "flushByteBoundary",
      "size": 80,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4789,7 +4791,7 @@
      }
     },
     {
-     "name": "func_001162E8",
+     "name": "_sequenceDisplayExtension",
      "size": 140,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4797,7 +4799,7 @@
      }
     },
     {
-     "name": "func_00116378",
+     "name": "_copyrightExtension",
      "size": 148,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4805,7 +4807,7 @@
      }
     },
     {
-     "name": "func_00116410",
+     "name": "_pictureDisplayExtension",
      "size": 244,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4813,7 +4815,7 @@
      }
     },
     {
-     "name": "func_00116508",
+     "name": "_clearOnce",
      "size": 204,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4821,7 +4823,7 @@
      }
     },
     {
-     "name": "func_001165D8",
+     "name": "sceMpegCreate",
      "size": 568,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4829,7 +4831,7 @@
      }
     },
     {
-     "name": "func_00116810",
+     "name": "_sendDataToIPU",
      "size": 256,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4837,7 +4839,7 @@
      }
     },
     {
-     "name": "func_00116910",
+     "name": "_clearEach",
      "size": 200,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4845,7 +4847,7 @@
      }
     },
     {
-     "name": "func_001169D8",
+     "name": "_getpic",
      "size": 436,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4853,7 +4855,7 @@
      }
     },
     {
-     "name": "func_00116B90",
+     "name": "_updateRefImage",
      "size": 692,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4861,7 +4863,7 @@
      }
     },
     {
-     "name": "func_00116E48",
+     "name": "_decodeOrSkipFrame",
      "size": 368,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4869,7 +4871,7 @@
      }
     },
     {
-     "name": "func_00116FB8",
+     "name": "_decodeOrSkipField",
      "size": 452,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4877,7 +4879,7 @@
      }
     },
     {
-     "name": "func_00117180",
+     "name": "sceMpegInit",
      "size": 176,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4893,7 +4895,7 @@
      }
     },
     {
-     "name": "func_00117238",
+     "name": "sceMpegAddBs",
      "size": 60,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4901,7 +4903,7 @@
      }
     },
     {
-     "name": "func_00117278",
+     "name": "sceMpegGetPicture",
      "size": 72,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4909,7 +4911,7 @@
      }
     },
     {
-     "name": "func_001172C0",
+     "name": "sceMpegGetPictureRAW8",
      "size": 68,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4925,7 +4927,7 @@
      }
     },
     {
-     "name": "func_00117318",
+     "name": "sceMpegReset",
      "size": 124,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4957,7 +4959,7 @@
      }
     },
     {
-     "name": "func_001173D0",
+     "name": "sceMpegGetDecodeMode",
      "size": 32,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4965,7 +4967,7 @@
      }
     },
     {
-     "name": "func_001173F0",
+     "name": "sceMpegAddCallback",
      "size": 52,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4973,7 +4975,7 @@
      }
     },
     {
-     "name": "func_00117428",
+     "name": "sceMpegSetBuffType",
      "size": 52,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4989,7 +4991,7 @@
      }
     },
     {
-     "name": "func_00117470",
+     "name": "_sceMpegDispatchMpegCallback",
      "size": 120,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -4997,7 +4999,7 @@
      }
     },
     {
-     "name": "func_001174E8",
+     "name": "_sceMpegDispatchMpegCbNodata",
      "size": 116,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5005,7 +5007,7 @@
      }
     },
     {
-     "name": "func_00117560",
+     "name": "_decodeOrSkip",
      "size": 68,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5013,7 +5015,7 @@
      }
     },
     {
-     "name": "func_001175A8",
+     "name": "sceMpegClearRefBuff",
      "size": 84,
      "fuzzy_match_percent": 54.285713,
      "metadata": {
@@ -5021,7 +5023,7 @@
      }
     },
     {
-     "name": "func_00117600",
+     "name": "sceMpegGetPictureRAW8xy",
      "size": 80,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5101,7 +5103,7 @@
      }
     },
     {
-     "name": "func_001176F8",
+     "name": "_decPicture",
      "size": 204,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5165,7 +5167,7 @@
      }
     },
     {
-     "name": "func_001178D8",
+     "name": "_cpr8",
      "size": 656,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5173,7 +5175,7 @@
      }
     },
     {
-     "name": "func_00117B68",
+     "name": "_dispRefImage",
      "size": 704,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5181,7 +5183,7 @@
      }
     },
     {
-     "name": "func_00117E28",
+     "name": "_dispRefImageField",
      "size": 1056,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5189,7 +5191,7 @@
      }
     },
     {
-     "name": "func_00118248",
+     "name": "_sceMpegFlush",
      "size": 192,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5197,7 +5199,7 @@
      }
     },
     {
-     "name": "func_00118308",
+     "name": "_sceMpegOutputFrame",
      "size": 144,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5205,7 +5207,7 @@
      }
     },
     {
-     "name": "func_00118398",
+     "name": "_doCSC2",
      "size": 448,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5213,7 +5215,7 @@
      }
     },
     {
-     "name": "func_00118558",
+     "name": "_sceMpegCscStoreRefImage",
      "size": 1240,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5221,7 +5223,7 @@
      }
     },
     {
-     "name": "func_00118A30",
+     "name": "_ch3dmaCSC",
      "size": 328,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5229,7 +5231,7 @@
      }
     },
     {
-     "name": "func_00118B78",
+     "name": "_ch4dma",
      "size": 212,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5245,7 +5247,7 @@
      }
     },
     {
-     "name": "func_00118E50",
+     "name": "_system_header",
      "size": 464,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5253,7 +5255,7 @@
      }
     },
     {
-     "name": "func_00119020",
+     "name": "_pack_header",
      "size": 1704,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5261,7 +5263,7 @@
      }
     },
     {
-     "name": "func_001196C8",
+     "name": "_PES_packet",
      "size": 7592,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5298,7 +5300,7 @@
    "sections": [],
    "functions": [
     {
-     "name": "func_0011B470",
+     "name": "sceMpegDemuxPssRing",
      "size": 992,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5314,7 +5316,7 @@
      }
     },
     {
-     "name": "func_0011B870",
+     "name": "sceMpegAddStrCallback",
      "size": 304,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5322,7 +5324,7 @@
      }
     },
     {
-     "name": "func_0011B9A0",
+     "name": "_sceMpegType2id",
      "size": 168,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5338,7 +5340,7 @@
      }
     },
     {
-     "name": "func_0011BA58",
+     "name": "_sceMpegStopIpuDma",
      "size": 160,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5346,7 +5348,7 @@
      }
     },
     {
-     "name": "func_0011BAF8",
+     "name": "_sceMpegErrorBdec",
      "size": 200,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5354,7 +5356,7 @@
      }
     },
     {
-     "name": "func_0011BBC0",
+     "name": "_sceMpegError",
      "size": 84,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5362,7 +5364,7 @@
      }
     },
     {
-     "name": "func_0011BC18",
+     "name": "_sceMpegError1",
      "size": 64,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5370,7 +5372,7 @@
      }
     },
     {
-     "name": "func_0011BC58",
+     "name": "scePadInit",
      "size": 332,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5378,7 +5380,7 @@
      }
     },
     {
-     "name": "func_0011BDA8",
+     "name": "_pad_intr_hdr",
      "size": 72,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5386,7 +5388,7 @@
      }
     },
     {
-     "name": "func_0011BDF0",
+     "name": "scePadInit2",
      "size": 244,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5394,7 +5396,7 @@
      }
     },
     {
-     "name": "func_0011BEE8",
+     "name": "scePadEnd",
      "size": 172,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5402,7 +5404,7 @@
      }
     },
     {
-     "name": "func_0011BF98",
+     "name": "_send_to_iop",
      "size": 276,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5410,7 +5412,7 @@
      }
     },
     {
-     "name": "func_0011C0B0",
+     "name": "scePadPortOpen",
      "size": 484,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5418,7 +5420,7 @@
      }
     },
     {
-     "name": "func_0011C298",
+     "name": "scePadPortClose",
      "size": 184,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5426,7 +5428,7 @@
      }
     },
     {
-     "name": "func_0011C350",
+     "name": "scePadGetDmaStr",
      "size": 344,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5434,7 +5436,7 @@
      }
     },
     {
-     "name": "func_0011C4A8",
+     "name": "scePadGetFrameCount",
      "size": 88,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5442,7 +5444,7 @@
      }
     },
     {
-     "name": "func_0011C500",
+     "name": "scePadRead",
      "size": 116,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5450,7 +5452,7 @@
      }
     },
     {
-     "name": "func_0011C578",
+     "name": "scePadGetState",
      "size": 120,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5458,7 +5460,7 @@
      }
     },
     {
-     "name": "func_0011C5F0",
+     "name": "scePadStateIntToStr",
      "size": 52,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5466,7 +5468,7 @@
      }
     },
     {
-     "name": "func_0011C628",
+     "name": "scePadSetReqState",
      "size": 180,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5474,7 +5476,7 @@
      }
     },
     {
-     "name": "func_0011C6E0",
+     "name": "scePadGetReqState",
      "size": 88,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5490,7 +5492,7 @@
      }
     },
     {
-     "name": "func_0011C770",
+     "name": "scePadInfoAct",
      "size": 280,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5498,7 +5500,7 @@
      }
     },
     {
-     "name": "func_0011C888",
+     "name": "scePadInfoComb",
      "size": 276,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5506,7 +5508,7 @@
      }
     },
     {
-     "name": "func_0011C9A0",
+     "name": "scePadInfoMode",
      "size": 308,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5514,7 +5516,7 @@
      }
     },
     {
-     "name": "func_0011CAD8",
+     "name": "scePadSetMainMode",
      "size": 180,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5522,7 +5524,7 @@
      }
     },
     {
-     "name": "func_0011CB90",
+     "name": "scePadSetActDirect",
      "size": 200,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5530,7 +5532,7 @@
      }
     },
     {
-     "name": "func_0011CC58",
+     "name": "scePadSetActAlign",
      "size": 216,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5538,7 +5540,7 @@
      }
     },
     {
-     "name": "func_0011CD30",
+     "name": "scePadGetButtonMask",
      "size": 176,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5546,7 +5548,7 @@
      }
     },
     {
-     "name": "func_0011CDE0",
+     "name": "scePadSetButtonInfo",
      "size": 176,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5554,7 +5556,7 @@
      }
     },
     {
-     "name": "func_0011CE90",
+     "name": "scePadInfoPressMode",
      "size": 128,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5562,7 +5564,7 @@
      }
     },
     {
-     "name": "func_0011CF10",
+     "name": "scePadEnterPressMode",
      "size": 84,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5570,7 +5572,7 @@
      }
     },
     {
-     "name": "func_0011CF68",
+     "name": "scePadExitPressMode",
      "size": 84,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5578,7 +5580,7 @@
      }
     },
     {
-     "name": "func_0011CFC0",
+     "name": "scePadSetVrefParam",
      "size": 204,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5586,7 +5588,7 @@
      }
     },
     {
-     "name": "func_0011D090",
+     "name": "scePadGetPortMax",
      "size": 100,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5594,7 +5596,7 @@
      }
     },
     {
-     "name": "func_0011D0F8",
+     "name": "scePadGetSlotMax",
      "size": 104,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5602,7 +5604,7 @@
      }
     },
     {
-     "name": "func_0011D160",
+     "name": "scePadGetModVersion",
      "size": 100,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5610,7 +5612,7 @@
      }
     },
     {
-     "name": "func_0011D1C8",
+     "name": "scePadSetWarningLevel",
      "size": 104,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5618,7 +5620,7 @@
      }
     },
     {
-     "name": "func_0011D230",
+     "name": "scePadSetDmaCallback",
      "size": 292,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5626,7 +5628,7 @@
      }
     },
     {
-     "name": "func_0011D358",
+     "name": "scePadSetFlushRate",
      "size": 48,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5698,7 +5700,7 @@
      }
     },
     {
-     "name": "func_0011D5B8",
+     "name": "sceGifPkCloseGifTag",
      "size": 164,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5706,7 +5708,7 @@
      }
     },
     {
-     "name": "func_0011D660",
+     "name": "sceGifPkAddGsAD",
      "size": 36,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5722,7 +5724,7 @@
      }
     },
     {
-     "name": "func_0011D690",
+     "name": "GetRomName",
      "size": 112,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5730,7 +5732,7 @@
      }
     },
     {
-     "name": "func_0011D700",
+     "name": "IsT10K",
      "size": 64,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5738,7 +5740,7 @@
      }
     },
     {
-     "name": "func_0011D740",
+     "name": "sceScfGetLanguage",
      "size": 96,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5754,7 +5756,7 @@
      }
     },
     {
-     "name": "func_0011D7C0",
+     "name": "sceScfGetAspect",
      "size": 64,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5762,7 +5764,7 @@
      }
     },
     {
-     "name": "func_0011D800",
+     "name": "sceScfGetSpdif",
      "size": 60,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5770,7 +5772,7 @@
      }
     },
     {
-     "name": "func_0011D840",
+     "name": "sceScfGetTimeZone",
      "size": 76,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5778,7 +5780,7 @@
      }
     },
     {
-     "name": "func_0011D890",
+     "name": "sceScfGetDateNotation",
      "size": 100,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5786,7 +5788,7 @@
      }
     },
     {
-     "name": "func_0011D8F8",
+     "name": "sceScfGetSummerTime",
      "size": 104,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5794,7 +5796,7 @@
      }
     },
     {
-     "name": "func_0011D960",
+     "name": "sceScfGetTimeNotation",
      "size": 104,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5802,7 +5804,7 @@
      }
     },
     {
-     "name": "func_0011D9C8",
+     "name": "tobcd",
      "size": 44,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5810,7 +5812,7 @@
      }
     },
     {
-     "name": "func_0011D9F8",
+     "name": "frombcd",
      "size": 32,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5834,7 +5836,7 @@
      }
     },
     {
-     "name": "func_0011DAE8",
+     "name": "adddate",
      "size": 180,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5842,7 +5844,7 @@
      }
     },
     {
-     "name": "func_0011DBA0",
+     "name": "subdate",
      "size": 164,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5850,7 +5852,7 @@
      }
     },
     {
-     "name": "func_0011DC48",
+     "name": "addhour",
      "size": 48,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5858,7 +5860,7 @@
      }
     },
     {
-     "name": "func_0011DC78",
+     "name": "subhour",
      "size": 36,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5866,7 +5868,7 @@
      }
     },
     {
-     "name": "func_0011DCA0",
+     "name": "AdjustTime",
      "size": 140,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5882,7 +5884,7 @@
      }
     },
     {
-     "name": "func_0011DD38",
+     "name": "sceScfGetLocalTimefromRTC",
      "size": 72,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5890,7 +5892,7 @@
      }
     },
     {
-     "name": "func_0011DD80",
+     "name": "sceSdRemoteInit",
      "size": 176,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5898,7 +5900,7 @@
      }
     },
     {
-     "name": "func_0011DE30",
+     "name": "sceSdTransToIOP",
      "size": 132,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5914,7 +5916,7 @@
      }
     },
     {
-     "name": "func_0011DED8",
+     "name": "sceSdRemote",
      "size": 904,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5967,7 +5969,7 @@
      }
     },
     {
-     "name": "func_0011E298",
+     "name": "atoi",
      "size": 40,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5983,7 +5985,7 @@
      }
     },
     {
-     "name": "func_0011E2F0",
+     "name": "_calloc_r",
      "size": 188,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5991,7 +5993,7 @@
      }
     },
     {
-     "name": "func_0011E3B0",
+     "name": "_close_r",
      "size": 88,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -5999,7 +6001,7 @@
      }
     },
     {
-     "name": "func_0011E408",
+     "name": "quorem",
      "size": 532,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6007,7 +6009,7 @@
      }
     },
     {
-     "name": "func_0011E620",
+     "name": "_dtoa_r",
      "size": 4556,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6023,7 +6025,7 @@
      }
     },
     {
-     "name": "func_0011F800",
+     "name": "exit",
      "size": 176,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6031,7 +6033,7 @@
      }
     },
     {
-     "name": "func_0011F8B0",
+     "name": "fflush",
      "size": 260,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6039,7 +6041,7 @@
      }
     },
     {
-     "name": "func_0011F9B8",
+     "name": "std",
      "size": 88,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6047,7 +6049,7 @@
      }
     },
     {
-     "name": "func_0011FA10",
+     "name": "__sfmoreglue",
      "size": 112,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6055,7 +6057,7 @@
      }
     },
     {
-     "name": "func_0011FA80",
+     "name": "__sfp",
      "size": 224,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6079,7 +6081,7 @@
      }
     },
     {
-     "name": "func_0011FB80",
+     "name": "__sinit",
      "size": 140,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6087,7 +6089,7 @@
      }
     },
     {
-     "name": "func_0011FC10",
+     "name": "fread",
      "size": 284,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6095,7 +6097,7 @@
      }
     },
     {
-     "name": "func_0011FD30",
+     "name": "_free_r",
      "size": 796,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6103,7 +6105,7 @@
      }
     },
     {
-     "name": "func_00120050",
+     "name": "_malloc_trim_r",
      "size": 364,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6119,7 +6121,7 @@
      }
     },
     {
-     "name": "func_00120220",
+     "name": "__sfvwrite",
      "size": 984,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6127,7 +6129,7 @@
      }
     },
     {
-     "name": "func_001205F8",
+     "name": "_fwalk",
      "size": 148,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6143,7 +6145,7 @@
      }
     },
     {
-     "name": "func_001206B0",
+     "name": "_setlocale_r",
      "size": 132,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6183,7 +6185,7 @@
      }
     },
     {
-     "name": "func_00120800",
+     "name": "__smakebuf",
      "size": 336,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6199,7 +6201,7 @@
      }
     },
     {
-     "name": "func_00120980",
+     "name": "_memalign_r",
      "size": 464,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6223,7 +6225,7 @@
      }
     },
     {
-     "name": "func_00120B88",
+     "name": "malloc_extend_top",
      "size": 596,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6231,7 +6233,7 @@
      }
     },
     {
-     "name": "func_00120DE0",
+     "name": "_malloc_r",
      "size": 1912,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6239,7 +6241,7 @@
      }
     },
     {
-     "name": "func_00121558",
+     "name": "_mbtowc_r",
      "size": 60,
      "fuzzy_match_percent": 69.0,
      "metadata": {
@@ -6247,7 +6249,7 @@
      }
     },
     {
-     "name": "func_00121598",
+     "name": "memchr",
      "size": 224,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6255,7 +6257,7 @@
      }
     },
     {
-     "name": "func_00121678",
+     "name": "memcmp",
      "size": 148,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6263,7 +6265,7 @@
      }
     },
     {
-     "name": "func_00121710",
+     "name": "memcpy",
      "size": 176,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6271,7 +6273,7 @@
      }
     },
     {
-     "name": "func_001217C0",
+     "name": "memmove",
      "size": 260,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6279,7 +6281,7 @@
      }
     },
     {
-     "name": "func_001218C8",
+     "name": "memset",
      "size": 192,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6303,7 +6305,7 @@
      }
     },
     {
-     "name": "func_00121998",
+     "name": "_Balloc",
      "size": 168,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6311,7 +6313,7 @@
      }
     },
     {
-     "name": "func_00121A40",
+     "name": "_Bfree",
      "size": 44,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6319,7 +6321,7 @@
      }
     },
     {
-     "name": "func_00121A70",
+     "name": "_multadd",
      "size": 276,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6327,7 +6329,7 @@
      }
     },
     {
-     "name": "func_00121B88",
+     "name": "_s2b",
      "size": 328,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6335,7 +6337,7 @@
      }
     },
     {
-     "name": "func_00121CD0",
+     "name": "_hi0bits",
      "size": 132,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6343,7 +6345,7 @@
      }
     },
     {
-     "name": "func_00121D58",
+     "name": "_lo0bits",
      "size": 192,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6351,7 +6353,7 @@
      }
     },
     {
-     "name": "func_00121E18",
+     "name": "_i2b",
      "size": 56,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6359,7 +6361,7 @@
      }
     },
     {
-     "name": "func_00121E50",
+     "name": "_multiply",
      "size": 556,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6367,7 +6369,7 @@
      }
     },
     {
-     "name": "func_00122080",
+     "name": "_pow5mult",
      "size": 256,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6375,7 +6377,7 @@
      }
     },
     {
-     "name": "func_00122180",
+     "name": "_lshift",
      "size": 376,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6383,7 +6385,7 @@
      }
     },
     {
-     "name": "func_001222F8",
+     "name": "__mcmp",
      "size": 104,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6391,7 +6393,7 @@
      }
     },
     {
-     "name": "func_00122360",
+     "name": "__mdiff",
      "size": 400,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6399,7 +6401,7 @@
      }
     },
     {
-     "name": "func_001224F0",
+     "name": "_ulp",
      "size": 152,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6407,7 +6409,7 @@
      }
     },
     {
-     "name": "func_00122588",
+     "name": "_b2d",
      "size": 380,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6415,7 +6417,7 @@
      }
     },
     {
-     "name": "func_00122708",
+     "name": "_d2b",
      "size": 380,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6423,7 +6425,7 @@
      }
     },
     {
-     "name": "func_00122888",
+     "name": "_ratio",
      "size": 192,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6431,7 +6433,7 @@
      }
     },
     {
-     "name": "func_00122948",
+     "name": "_mprec_log10",
      "size": 108,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6439,7 +6441,7 @@
      }
     },
     {
-     "name": "func_001229B8",
+     "name": "_printf_r",
      "size": 60,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6447,7 +6449,7 @@
      }
     },
     {
-     "name": "func_001229F8",
+     "name": "printf",
      "size": 80,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6455,7 +6457,7 @@
      }
     },
     {
-     "name": "func_00122A48",
+     "name": "qsort",
      "size": 2596,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6471,7 +6473,7 @@
      }
     },
     {
-     "name": "func_00123480",
+     "name": "rand",
      "size": 48,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6495,7 +6497,7 @@
      }
     },
     {
-     "name": "func_00123540",
+     "name": "_realloc_r",
      "size": 1392,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6511,7 +6513,7 @@
      }
     },
     {
-     "name": "func_00123AD0",
+     "name": "__srefill",
      "size": 376,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6559,7 +6561,7 @@
      }
     },
     {
-     "name": "func_00123EE8",
+     "name": "_sbrk_r",
      "size": 92,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6599,7 +6601,7 @@
      }
     },
     {
-     "name": "func_00124128",
+     "name": "_sprintf_r",
      "size": 104,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6607,7 +6609,7 @@
      }
     },
     {
-     "name": "func_00124190",
+     "name": "sprintf",
      "size": 112,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6623,7 +6625,7 @@
      }
     },
     {
-     "name": "func_00124208",
+     "name": "sscanf",
      "size": 136,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6631,7 +6633,7 @@
      }
     },
     {
-     "name": "func_00124290",
+     "name": "__sread",
      "size": 100,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6639,7 +6641,7 @@
      }
     },
     {
-     "name": "func_001242F8",
+     "name": "__swrite",
      "size": 128,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6647,7 +6649,7 @@
      }
     },
     {
-     "name": "func_00124378",
+     "name": "__sseek",
      "size": 104,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6663,7 +6665,7 @@
      }
     },
     {
-     "name": "func_00124400",
+     "name": "strcasecmp",
      "size": 180,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6671,7 +6673,7 @@
      }
     },
     {
-     "name": "func_001244B8",
+     "name": "strcat",
      "size": 300,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6679,7 +6681,7 @@
      }
     },
     {
-     "name": "func_001245E8",
+     "name": "strchr",
      "size": 400,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6687,7 +6689,7 @@
      }
     },
     {
-     "name": "func_00124778",
+     "name": "strcmp",
      "size": 324,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6695,7 +6697,7 @@
      }
     },
     {
-     "name": "func_001248C0",
+     "name": "strcpy",
      "size": 276,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6703,7 +6705,7 @@
      }
     },
     {
-     "name": "func_001249D8",
+     "name": "strlen",
      "size": 312,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6711,7 +6713,7 @@
      }
     },
     {
-     "name": "func_00124B10",
+     "name": "strncat",
      "size": 428,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6719,7 +6721,7 @@
      }
     },
     {
-     "name": "func_00124CC0",
+     "name": "strncmp",
      "size": 440,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6727,7 +6729,7 @@
      }
     },
     {
-     "name": "func_00124E78",
+     "name": "strncpy",
      "size": 444,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6735,7 +6737,7 @@
      }
     },
     {
-     "name": "func_00125038",
+     "name": "strstr",
      "size": 108,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6743,7 +6745,7 @@
      }
     },
     {
-     "name": "func_001250A8",
+     "name": "_strtod_r",
      "size": 3840,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6775,7 +6777,7 @@
      }
     },
     {
-     "name": "func_00126028",
+     "name": "strtok_r",
      "size": 156,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6783,7 +6785,7 @@
      }
     },
     {
-     "name": "func_001260C8",
+     "name": "_strtol_r",
      "size": 568,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6799,7 +6801,7 @@
      }
     },
     {
-     "name": "func_00126338",
+     "name": "_strtoul_r",
      "size": 540,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6831,7 +6833,7 @@
      }
     },
     {
-     "name": "func_001265D0",
+     "name": "__submore",
      "size": 240,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6839,7 +6841,7 @@
      }
     },
     {
-     "name": "func_001266C0",
+     "name": "ungetc",
      "size": 392,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6847,7 +6849,7 @@
      }
     },
     {
-     "name": "func_00126848",
+     "name": "__sprint",
      "size": 68,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6855,7 +6857,7 @@
      }
     },
     {
-     "name": "func_00126890",
+     "name": "__sbprintf",
      "size": 180,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6871,7 +6873,7 @@
      }
     },
     {
-     "name": "func_001269C0",
+     "name": "_vfprintf_r",
      "size": 5400,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6879,7 +6881,7 @@
      }
     },
     {
-     "name": "func_00127ED8",
+     "name": "cvt",
      "size": 432,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6887,7 +6889,7 @@
      }
     },
     {
-     "name": "func_00128088",
+     "name": "exponent",
      "size": 224,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6895,7 +6897,7 @@
      }
     },
     {
-     "name": "func_00128168",
+     "name": "__svfscanf",
      "size": 2824,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6903,7 +6905,7 @@
      }
     },
     {
-     "name": "func_00128C70",
+     "name": "__sccl",
      "size": 260,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6911,7 +6913,7 @@
      }
     },
     {
-     "name": "func_00128D78",
+     "name": "vsprintf",
      "size": 84,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6927,7 +6929,7 @@
      }
     },
     {
-     "name": "func_00128E30",
+     "name": "__swsetup",
      "size": 268,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6935,7 +6937,7 @@
      }
     },
     {
-     "name": "func_00128F40",
+     "name": "__ieee754_log",
      "size": 1260,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6943,7 +6945,7 @@
      }
     },
     {
-     "name": "func_00129430",
+     "name": "__ieee754_log10",
      "size": 392,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6951,7 +6953,7 @@
      }
     },
     {
-     "name": "func_001295B8",
+     "name": "__ieee754_pow",
      "size": 3368,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6959,7 +6961,7 @@
      }
     },
     {
-     "name": "func_0012A2E0",
+     "name": "__ieee754_rem_pio2",
      "size": 1308,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6967,7 +6969,7 @@
      }
     },
     {
-     "name": "func_0012A800",
+     "name": "__ieee754_sqrt",
      "size": 772,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6975,7 +6977,7 @@
      }
     },
     {
-     "name": "func_0012AB08",
+     "name": "__ieee754_acosf",
      "size": 1072,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6983,7 +6985,7 @@
      }
     },
     {
-     "name": "func_0012AF38",
+     "name": "__ieee754_asinf",
      "size": 924,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6991,7 +6993,7 @@
      }
     },
     {
-     "name": "func_0012B2D8",
+     "name": "__ieee754_atan2f",
      "size": 744,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -6999,7 +7001,7 @@
      }
     },
     {
-     "name": "func_0012B5C0",
+     "name": "__ieee754_fmodf",
      "size": 592,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7007,7 +7009,7 @@
      }
     },
     {
-     "name": "func_0012B810",
+     "name": "__ieee754_powf",
      "size": 2188,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7015,7 +7017,7 @@
      }
     },
     {
-     "name": "func_0012C0A0",
+     "name": "__ieee754_rem_pio2f",
      "size": 992,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7023,7 +7025,7 @@
      }
     },
     {
-     "name": "func_0012C480",
+     "name": "__ieee754_sqrtf",
      "size": 312,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7031,7 +7033,7 @@
      }
     },
     {
-     "name": "func_0012C5B8",
+     "name": "__kernel_rem_pio2",
      "size": 2920,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7039,7 +7041,7 @@
      }
     },
     {
-     "name": "func_0012D120",
+     "name": "__kernel_tan",
      "size": 1144,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7047,7 +7049,7 @@
      }
     },
     {
-     "name": "func_0012D598",
+     "name": "__kernel_cosf",
      "size": 344,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7055,7 +7057,7 @@
      }
     },
     {
-     "name": "func_0012D6F0",
+     "name": "__kernel_rem_pio2f",
      "size": 2380,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7092,7 +7094,7 @@
    "sections": [],
    "functions": [
     {
-     "name": "func_0012E040",
+     "name": "__kernel_sinf",
      "size": 260,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7100,7 +7102,7 @@
      }
     },
     {
-     "name": "func_0012E148",
+     "name": "fabs",
      "size": 52,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7108,7 +7110,7 @@
      }
     },
     {
-     "name": "func_0012E180",
+     "name": "floor",
      "size": 472,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7116,7 +7118,7 @@
      }
     },
     {
-     "name": "func_0012E358",
+     "name": "matherr",
      "size": 36,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7124,7 +7126,7 @@
      }
     },
     {
-     "name": "func_0012E380",
+     "name": "rint",
      "size": 508,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7132,7 +7134,7 @@
      }
     },
     {
-     "name": "func_0012E580",
+     "name": "tan",
      "size": 144,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7140,7 +7142,7 @@
      }
     },
     {
-     "name": "func_0012E610",
+     "name": "atanf",
      "size": 680,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7148,7 +7150,7 @@
      }
     },
     {
-     "name": "func_0012E8B8",
+     "name": "cosf",
      "size": 232,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7164,7 +7166,7 @@
      }
     },
     {
-     "name": "func_0012E9C0",
+     "name": "floorf",
      "size": 228,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7172,7 +7174,7 @@
      }
     },
     {
-     "name": "func_0012EAA8",
+     "name": "sinf",
      "size": 240,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7180,7 +7182,7 @@
      }
     },
     {
-     "name": "func_0012EB98",
+     "name": "log10",
      "size": 328,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7188,7 +7190,7 @@
      }
     },
     {
-     "name": "func_0012ECE0",
+     "name": "pow",
      "size": 1072,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7212,7 +7214,7 @@
      }
     },
     {
-     "name": "func_0012F310",
+     "name": "atan2f",
      "size": 296,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7220,7 +7222,7 @@
      }
     },
     {
-     "name": "func_0012F438",
+     "name": "fmodf",
      "size": 316,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7228,7 +7230,7 @@
      }
     },
     {
-     "name": "func_0012F578",
+     "name": "powf",
      "size": 1288,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7236,7 +7238,7 @@
      }
     },
     {
-     "name": "func_0012FA80",
+     "name": "sqrtf",
      "size": 276,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7244,7 +7246,7 @@
      }
     },
     {
-     "name": "func_0012FB98",
+     "name": "__divdi3",
      "size": 1772,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7252,7 +7254,7 @@
      }
     },
     {
-     "name": "func_00130288",
+     "name": "__fixdfdi",
      "size": 92,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7260,7 +7262,7 @@
      }
     },
     {
-     "name": "func_001302E8",
+     "name": "__fixunsdfdi",
      "size": 236,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7268,7 +7270,7 @@
      }
     },
     {
-     "name": "func_001303D8",
+     "name": "__fixunssfdi",
      "size": 244,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7276,7 +7278,7 @@
      }
     },
     {
-     "name": "func_001304D0",
+     "name": "__floatdidf",
      "size": 152,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7284,7 +7286,7 @@
      }
     },
     {
-     "name": "func_00130568",
+     "name": "__floatdisf",
      "size": 224,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7292,7 +7294,7 @@
      }
     },
     {
-     "name": "func_00130648",
+     "name": "__moddi3",
      "size": 1640,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7300,7 +7302,7 @@
      }
     },
     {
-     "name": "func_00130CB0",
+     "name": "__muldi3",
      "size": 96,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7308,7 +7310,7 @@
      }
     },
     {
-     "name": "func_00130D10",
+     "name": "__udivdi3",
      "size": 1488,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7316,7 +7318,7 @@
      }
     },
     {
-     "name": "func_001312E0",
+     "name": "__umoddi3",
      "size": 1344,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7324,7 +7326,7 @@
      }
     },
     {
-     "name": "func_00131820",
+     "name": "__pack_d",
      "size": 300,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7332,7 +7334,7 @@
      }
     },
     {
-     "name": "func_00131950",
+     "name": "__unpack_d",
      "size": 156,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7348,7 +7350,7 @@
      }
     },
     {
-     "name": "func_00131C30",
+     "name": "dpadd",
      "size": 88,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7356,7 +7358,7 @@
      }
     },
     {
-     "name": "func_00131C88",
+     "name": "dpsub",
      "size": 100,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7364,7 +7366,7 @@
      }
     },
     {
-     "name": "func_00131CF0",
+     "name": "dpmul",
      "size": 680,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7372,7 +7374,7 @@
      }
     },
     {
-     "name": "func_00131F98",
+     "name": "dpdiv",
      "size": 360,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7380,7 +7382,7 @@
      }
     },
     {
-     "name": "func_00132100",
+     "name": "__fpcmp_parts_d",
      "size": 276,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7388,7 +7390,7 @@
      }
     },
     {
-     "name": "func_00132218",
+     "name": "dpcmp",
      "size": 76,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7396,7 +7398,7 @@
      }
     },
     {
-     "name": "func_00132268",
+     "name": "litodp",
      "size": 184,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7404,7 +7406,7 @@
      }
     },
     {
-     "name": "func_00132320",
+     "name": "dptoli",
      "size": 148,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7412,7 +7414,7 @@
      }
     },
     {
-     "name": "func_001323B8",
+     "name": "dptoul",
      "size": 160,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7420,7 +7422,7 @@
      }
     },
     {
-     "name": "func_00132458",
+     "name": "__negdf2",
      "size": 56,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7428,7 +7430,7 @@
      }
     },
     {
-     "name": "func_00132490",
+     "name": "__make_dp",
      "size": 44,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7436,7 +7438,7 @@
      }
     },
     {
-     "name": "func_001324C0",
+     "name": "dptofp",
      "size": 84,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7444,7 +7446,7 @@
      }
     },
     {
-     "name": "func_00132518",
+     "name": "__pack_f",
      "size": 268,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7452,7 +7454,7 @@
      }
     },
     {
-     "name": "func_00132628",
+     "name": "__unpack_f",
      "size": 144,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7468,7 +7470,7 @@
      }
     },
     {
-     "name": "func_001328F0",
+     "name": "fpadd",
      "size": 88,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7476,7 +7478,7 @@
      }
     },
     {
-     "name": "func_00132948",
+     "name": "fpsub",
      "size": 100,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7484,7 +7486,7 @@
      }
     },
     {
-     "name": "func_001329B0",
+     "name": "fpmul",
      "size": 500,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7492,7 +7494,7 @@
      }
     },
     {
-     "name": "func_00132BA8",
+     "name": "fpdiv",
      "size": 352,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7500,7 +7502,7 @@
      }
     },
     {
-     "name": "func_00132D08",
+     "name": "__fpcmp_parts_f",
      "size": 276,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7508,7 +7510,7 @@
      }
     },
     {
-     "name": "func_00132E20",
+     "name": "fpcmp",
      "size": 76,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7516,7 +7518,7 @@
      }
     },
     {
-     "name": "func_00132E70",
+     "name": "sitofp",
      "size": 184,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7524,7 +7526,7 @@
      }
     },
     {
-     "name": "func_00132F28",
+     "name": "fptosi",
      "size": 140,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7532,7 +7534,7 @@
      }
     },
     {
-     "name": "func_00132FB8",
+     "name": "fptoui",
      "size": 152,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7569,7 +7571,7 @@
    "sections": [],
    "functions": [
     {
-     "name": "func_00133050",
+     "name": "__negsf2",
      "size": 56,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7577,7 +7579,7 @@
      }
     },
     {
-     "name": "func_00133088",
+     "name": "__make_fp",
      "size": 44,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -7585,7 +7587,7 @@
      }
     },
     {
-     "name": "func_001330B8",
+     "name": "fptodp",
      "size": 64,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -11041,7 +11043,7 @@
      }
     },
     {
-     "name": "func_0013F490",
+     "name": "ADXRNA_GetStat",
      "size": 52,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -15729,7 +15731,7 @@
      }
     },
     {
-     "name": "func_0014C7C0",
+     "name": "DTR_ExecHndl",
      "size": 868,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -15753,7 +15755,7 @@
      }
     },
     {
-     "name": "func_0014CBF0",
+     "name": "DTR_Init",
      "size": 104,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -15865,7 +15867,7 @@
      }
     },
     {
-     "name": "func_0014D108",
+     "name": "DTX_Create",
      "size": 408,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -17729,7 +17731,7 @@
      }
     },
     {
-     "name": "func_001536D0",
+     "name": "PS2RNA_SetupVoice",
      "size": 188,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -17921,7 +17923,7 @@
      }
     },
     {
-     "name": "func_00154C78",
+     "name": "PS2RNA_Start",
      "size": 72,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -17977,7 +17979,7 @@
      }
     },
     {
-     "name": "func_00154ED0",
+     "name": "PS2RNA_ClearBuf",
      "size": 72,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -17985,7 +17987,7 @@
      }
     },
     {
-     "name": "func_00154F18",
+     "name": "PS2RNA_SetPcmType",
      "size": 72,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -18033,7 +18035,7 @@
      }
     },
     {
-     "name": "func_001552C8",
+     "name": "PS2RNA_SetStartSmpl",
      "size": 72,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -18081,7 +18083,7 @@
      }
     },
     {
-     "name": "func_00155478",
+     "name": "PS2RNA_SetBitPerSmpl",
      "size": 80,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -18089,7 +18091,7 @@
      }
     },
     {
-     "name": "func_001554C8",
+     "name": "PS2RNA_GetStartSmpl",
      "size": 68,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -18137,7 +18139,7 @@
      }
     },
     {
-     "name": "func_00155600",
+     "name": "PS2RNA_IsOverflow",
      "size": 68,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -18145,7 +18147,7 @@
      }
     },
     {
-     "name": "func_00155648",
+     "name": "PS2RNA_ClearOverflow",
      "size": 72,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -18161,7 +18163,7 @@
      }
     },
     {
-     "name": "func_00155698",
+     "name": "PS2RNA_DiscardData",
      "size": 68,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -18169,7 +18171,7 @@
      }
     },
     {
-     "name": "func_001556E0",
+     "name": "PS2RNA_SetTotalNumSmpl",
      "size": 72,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -18177,7 +18179,7 @@
      }
     },
     {
-     "name": "func_00155728",
+     "name": "PS2RNA_SetStmHdInfo",
      "size": 68,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -19662,7 +19664,7 @@
      }
     },
     {
-     "name": "func_001598E0",
+     "name": "_dpfge",
      "size": 36,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -19694,7 +19696,7 @@
      }
     },
     {
-     "name": "func_00159970",
+     "name": "_f_ulltof",
      "size": 60,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -39110,7 +39112,7 @@
      }
     },
     {
-     "name": "func_00229520",
+     "name": "sys_bp",
      "size": 724,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -45009,7 +45011,10 @@
    "metadata": {
     "complete": false,
     "progress_categories": [
-     "game"
+     "game",
+     "game.core",
+     "game.gameplay",
+     "game.platform"
     ],
     "auto_generated": false,
     "source_path": "src/game_00/"
@@ -53487,7 +53492,10 @@
    "metadata": {
     "complete": false,
     "progress_categories": [
-     "game"
+     "game",
+     "game.core",
+     "game.gameplay",
+     "game.platform"
     ],
     "auto_generated": false
    }
@@ -60188,7 +60196,10 @@
    "metadata": {
     "complete": false,
     "progress_categories": [
-     "game"
+     "game",
+     "game.core",
+     "game.gameplay",
+     "game.platform"
     ],
     "auto_generated": false
    }
@@ -60222,7 +60233,7 @@
      }
     },
     {
-     "name": "func_003536C8",
+     "name": "sceCdCallback",
      "size": 104,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60246,7 +60257,7 @@
      }
     },
     {
-     "name": "func_00353940",
+     "name": "_sceCd_cd_read_intr",
      "size": 184,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60254,7 +60265,7 @@
      }
     },
     {
-     "name": "func_003539F8",
+     "name": "cmd_sem_init",
      "size": 228,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60262,7 +60273,7 @@
      }
     },
     {
-     "name": "func_00353AE0",
+     "name": "cdvd_exit",
      "size": 160,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60270,7 +60281,7 @@
      }
     },
     {
-     "name": "func_00353B80",
+     "name": "sceCdPOffCallback",
      "size": 128,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60286,7 +60297,7 @@
      }
     },
     {
-     "name": "func_00353C58",
+     "name": "PowerOffCB",
      "size": 120,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60294,7 +60305,7 @@
      }
     },
     {
-     "name": "func_00353CD0",
+     "name": "sceCdLayerSearchFile",
      "size": 764,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60339,7 +60350,7 @@
    "sections": [],
    "functions": [
     {
-     "name": "func_00353FF0",
+     "name": "_sceCd_ncmd_prechk",
      "size": 344,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60347,7 +60358,7 @@
      }
     },
     {
-     "name": "func_00354148",
+     "name": "sceCdNcmdDiskReady",
      "size": 152,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60355,7 +60366,7 @@
      }
     },
     {
-     "name": "func_003541E0",
+     "name": "sceCdSync",
      "size": 160,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60363,7 +60374,7 @@
      }
     },
     {
-     "name": "func_00354280",
+     "name": "sceCdSyncS",
      "size": 108,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60371,7 +60382,7 @@
      }
     },
     {
-     "name": "func_003542F0",
+     "name": "_sceCd_scmd_prechk",
      "size": 344,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60379,7 +60390,7 @@
      }
     },
     {
-     "name": "func_00354448",
+     "name": "_sceCdSC",
      "size": 176,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60387,7 +60398,7 @@
      }
     },
     {
-     "name": "func_003544F8",
+     "name": "sceCdInit",
      "size": 744,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60395,7 +60406,7 @@
      }
     },
     {
-     "name": "func_003547E0",
+     "name": "sceCdDiskReady_old",
      "size": 536,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60403,7 +60414,7 @@
      }
     },
     {
-     "name": "func_003549F8",
+     "name": "sceCdDiskReady",
      "size": 544,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60411,7 +60422,7 @@
      }
     },
     {
-     "name": "func_00354C18",
+     "name": "sceCdRead",
      "size": 480,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60419,7 +60430,7 @@
      }
     },
     {
-     "name": "func_00354DF8",
+     "name": "sceCdSeek",
      "size": 204,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60427,7 +60438,7 @@
      }
     },
     {
-     "name": "func_00354EC8",
+     "name": "sceCdStandby",
      "size": 172,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60435,7 +60446,7 @@
      }
     },
     {
-     "name": "func_00354F78",
+     "name": "sceCdGetError",
      "size": 152,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60443,7 +60454,7 @@
      }
     },
     {
-     "name": "func_00355010",
+     "name": "sceCdStatus",
      "size": 184,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60451,7 +60462,7 @@
      }
     },
     {
-     "name": "func_003550C8",
+     "name": "sceCdBreak",
      "size": 184,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60459,7 +60470,7 @@
      }
     },
     {
-     "name": "func_00355180",
+     "name": "sceCdMmode",
      "size": 208,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60475,7 +60486,7 @@
      }
     },
     {
-     "name": "func_00355278",
+     "name": "sceCdReadClock",
      "size": 188,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60483,7 +60494,7 @@
      }
     },
     {
-     "name": "func_00355338",
+     "name": "sceCdStInit",
      "size": 44,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60491,7 +60502,7 @@
      }
     },
     {
-     "name": "func_00355368",
+     "name": "sceCdStStart",
      "size": 52,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60499,7 +60510,7 @@
      }
     },
     {
-     "name": "func_003553A0",
+     "name": "sceCdStSeekF",
      "size": 44,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60507,7 +60518,7 @@
      }
     },
     {
-     "name": "func_003553D0",
+     "name": "sceCdStSeek",
      "size": 44,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60515,7 +60526,7 @@
      }
     },
     {
-     "name": "func_00355400",
+     "name": "sceCdStStop",
      "size": 56,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60523,7 +60534,7 @@
      }
     },
     {
-     "name": "func_00355438",
+     "name": "sceCdStRead",
      "size": 392,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60531,7 +60542,7 @@
      }
     },
     {
-     "name": "func_003555C0",
+     "name": "sceCdStPause",
      "size": 80,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60539,7 +60550,7 @@
      }
     },
     {
-     "name": "func_00355610",
+     "name": "sceCdStResume",
      "size": 84,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60547,7 +60558,7 @@
      }
     },
     {
-     "name": "func_00355668",
+     "name": "sceCdStStat",
      "size": 72,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -60555,7 +60566,7 @@
      }
     },
     {
-     "name": "func_003556B0",
+     "name": "sceCdStream",
      "size": 360,
      "fuzzy_match_percent": 0.0,
      "metadata": {
@@ -61982,7 +61993,10 @@
    "metadata": {
     "complete": false,
     "progress_categories": [
-     "game"
+     "game",
+     "game.core",
+     "game.gameplay",
+     "game.platform"
     ],
     "auto_generated": false
    }
@@ -66379,7 +66393,9 @@
    "metadata": {
     "complete": false,
     "progress_categories": [
-     "game"
+     "game",
+     "game.core",
+     "game.gameplay"
     ],
     "auto_generated": false
    }
@@ -66423,6 +66439,66 @@
     "matched_functions_percent": 0.0,
     "complete_code": 0,
     "complete_code_percent": 0.0,
+    "complete_data": 0,
+    "complete_data_percent": 0.0
+   }
+  },
+  {
+   "id": "game.platform",
+   "name": "Platform boundary (M3)",
+   "measures": {
+    "fuzzy_match_percent": 0.0177,
+    "total_code": 407388,
+    "matched_code": 72,
+    "matched_code_percent": 0.0177,
+    "total_data": 0,
+    "matched_data": 0,
+    "matched_data_percent": 0.0,
+    "total_functions": 336,
+    "matched_functions": 1,
+    "matched_functions_percent": 0.2976,
+    "complete_code": 72,
+    "complete_code_percent": 0.0177,
+    "complete_data": 0,
+    "complete_data_percent": 0.0
+   }
+  },
+  {
+   "id": "game.core",
+   "name": "Core (M4)",
+   "measures": {
+    "fuzzy_match_percent": 1.3983,
+    "total_code": 26576,
+    "matched_code": 312,
+    "matched_code_percent": 1.174,
+    "total_data": 0,
+    "matched_data": 0,
+    "matched_data_percent": 0.0,
+    "total_functions": 142,
+    "matched_functions": 11,
+    "matched_functions_percent": 7.7465,
+    "complete_code": 312,
+    "complete_code_percent": 1.174,
+    "complete_data": 0,
+    "complete_data_percent": 0.0
+   }
+  },
+  {
+   "id": "game.gameplay",
+   "name": "Gameplay (M5)",
+   "measures": {
+    "fuzzy_match_percent": 0.7784,
+    "total_code": 1810868,
+    "matched_code": 9108,
+    "matched_code_percent": 0.503,
+    "total_data": 0,
+    "matched_data": 0,
+    "matched_data_percent": 0.0,
+    "total_functions": 5384,
+    "matched_functions": 148,
+    "matched_functions_percent": 2.7489,
+    "complete_code": 9108,
+    "complete_code_percent": 0.503,
     "complete_data": 0,
     "complete_data_percent": 0.0
    }

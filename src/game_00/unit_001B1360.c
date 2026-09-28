@@ -2,7 +2,7 @@
 
 typedef int s32;
 
-void func_001218C8();
+void memset();
 
 extern s32 D_00523B38[];
 
@@ -12,7 +12,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B1360", func_001B1360);
 
 void func_001B13B0(s32 arg0)
 {
-    func_001218C8(arg0 + 0x14C4, 0, 0xA8);
+    memset(arg0 + 0x14C4, 0, 0xA8);
 }
 
 s32 func_001B13C0(char *arg0)

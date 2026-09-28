@@ -30,16 +30,16 @@ systematic name (`func_00123456`, `D_0052ABCD`) stays, and struct fields stay `u
 
 ## Progress
 
-**9,492 of 2,251,036 bytes of game code are matched (0.42 %)**: 160 of 5891 game functions. 1 game functions and 58 of 2343 SDK and runtime functions carry a name backed by evidence; 21 structs are typed in shared headers. SDK and runtime-library code is identified as such and not counted as game code.
+**9,492 of 2,244,832 bytes of game code are matched (0.42 %)**: 160 of 5862 game functions. 2 game functions and 666 of 2372 SDK and runtime functions carry a name backed by evidence; 21 structs are typed in shared headers. SDK and runtime-library code is identified as such and not counted as game code.
 
 | Milestone | Status | Exit judged on |
 |---|---|---|
-| M1 Contributable | current | public build ok (per-function, 2026-09-28T21:36:45Z); 0 matched function(s) still in per-function files; units map present |
-| M2 Identified | pending | 0 complete name-pass run(s); 0 of 5891 game functions labelled |
-| M3 Platform boundary | pending | 0 of 0 function(s) labelled platform matched (0 of 0 bytes); PLATFORM.md present — no function carries the label yet (a name-pass labels them) |
-| M4 Core | pending | 0 of 0 function(s) labelled core matched (0 of 0 bytes); FORMATS.md missing — no function carries the label yet (a name-pass labels them) |
-| M5 Gameplay | pending | 0 of 0 function(s) labelled gameplay matched (0 of 0 bytes) — no function carries the label yet (a name-pass labels them) |
-| M6 Complete | pending | 9492 of 2251036 game bytes matched; check ok |
+| M1 Contributable | done | public build ok (translation-unit, 2026-09-28T22:19:43Z); 0 matched function(s) still in per-function files; units map present |
+| M2 Identified | done | 1 complete name-pass run(s); 5862 of 5862 game functions labelled |
+| M3 Platform boundary | current | 1 of 336 function(s) labelled platform matched (72 of 407388 bytes); PLATFORM.md present |
+| M4 Core | pending | 11 of 142 function(s) labelled core matched (312 of 26576 bytes); FORMATS.md missing |
+| M5 Gameplay | pending | 148 of 5384 function(s) labelled gameplay matched (9108 of 1810868 bytes) |
+| M6 Complete | pending | 9492 of 2244832 game bytes matched; check ok |
 
 The milestones and why they come in this order: [ROADMAP.md](ROADMAP.md).
 
