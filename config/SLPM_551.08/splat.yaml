@@ -2,6 +2,8 @@
 name: fate-unlimited-codes-jp
 sha1: 825b867ecf30b761b8261a528e86101aa4bc03ca
 options:
+  make_full_disasm_for_code: true
+  create_c_files: false
   basename: SLPM_551.08
   target_path: orig/SLPM_551.08/SLPM_551.08
   base_path: ../..
