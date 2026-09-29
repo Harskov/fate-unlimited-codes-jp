@@ -72,7 +72,16 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001768D0", func_001771D0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001768D0", func_00177370);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001768D0", func_00177580);
+void func_00177580(void **head, void **p)
+{
+    void *old;
+    void **slot;
+
+    old = *head;
+    slot = p - 1;
+    *slot = old;
+    *head = slot;
+}
 
 void func_001775A0(Mgr *m)
 {

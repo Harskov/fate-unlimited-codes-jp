@@ -15,7 +15,7 @@ The end goal is recompilation, which needs a complete matching decompilation. Un
 
 The public repository builds from a clean clone, uses the translation-unit layout, and ships objdiff.json.
 
-Now: public build ok (translation-unit, 2026-09-28T23:10:55Z); 0 matched function(s) still in per-function files; units map present.
+Now: public build ok (translation-unit, 2026-09-28T23:27:59Z); 0 matched function(s) still in per-function files; units map present.
 
 ## M2 Identified
 
@@ -33,17 +33,32 @@ Now: 1 of 336 function(s) labelled platform matched (72 of 407388 bytes); PLATFO
 
 Boot and main loop, the scene or state machine, memory allocators, the file and archive loader, decompression, text and font.
 
-Now: 11 of 142 function(s) labelled core matched (312 of 26576 bytes); FORMATS.md missing.
+Now: 12 of 142 function(s) labelled core matched (372 of 26576 bytes); FORMATS.md missing.
 
 ## M5 Gameplay
 
 Gameplay subsystem by subsystem, most-called first, with data migrated alongside.
 
-Now: 148 of 5384 function(s) labelled gameplay matched (9108 of 1810868 bytes).
+Now: 158 of 5384 function(s) labelled gameplay matched (9764 of 1810868 bytes).
 
 ## M6 Complete
 
 Every game function matched and the data migrated.
 
-Now: 9492 of 2244832 game bytes matched; check ok.
+Now: 10208 of 2244832 game bytes matched; check ok.
+
+## Bank rate by function size
+
+2,552 of 561,208 game-code instruction words are matched. Matching gets harder with size; the table says where the project stands on that curve.
+
+| Size (instructions) | Functions | Matched | Bank rate |
+|---|---|---|---|
+| 0-50 | 3621 | 168 | 4.6 % |
+| 51-120 | 1132 | 1 | 0.1 % |
+| 121-200 | 435 | 2 | 0.5 % |
+| >200 | 674 | 0 | 0.0 % |
+
+Pool realization — of the instructions a match batch drew, the share it banked: 78.6 %, 100.0 %, 100.0 %, 92.7 %, 91.9 % over the last 5 batches (latest 2026-09-23).
+
+Readability debt: 0 matched function(s) keep a `register` pin and 0 carry a `// !FAKE:` body (see CONTRIBUTING.md); a pull request that replaces one with plain C that still matches is welcome.
 

@@ -1,6 +1,7 @@
 # Fate/Unlimited Codes (Japan)
 
 [![Progress report](https://github.com/Harskov/fate-unlimited-codes-jp/actions/workflows/report.yml/badge.svg)](https://github.com/Harskov/fate-unlimited-codes-jp/actions/workflows/report.yml)
+[![Audit](https://github.com/Harskov/fate-unlimited-codes-jp/actions/workflows/audit.yml/badge.svg)](https://github.com/Harskov/fate-unlimited-codes-jp/actions/workflows/audit.yml)
 [![Code](https://decomp.dev/Harskov/fate-unlimited-codes-jp.svg?mode=shield&measure=code&label=Code)](https://decomp.dev/Harskov/fate-unlimited-codes-jp)
 
 A work-in-progress matching decompilation of *Fate/Unlimited Codes* for the PlayStation 2
@@ -8,7 +9,10 @@ A work-in-progress matching decompilation of *Fate/Unlimited Codes* for the Play
 CodeWarrior for PS2, turns back into the same machine code.
 
 This repository does **not** contain any game assets or assembly whatsoever. An existing
-copy of the game is required.
+copy of the game is required. The `Audit` workflow runs `tools/audit_public.py` on every
+push and pull request and fails when a tracked file is game-derived — by its path or
+extension, by its first bytes, by a SHA-1 recorded in `config/SLPM_551.08/checksum.sha1`,
+or by a size no source file reaches.
 
 ## AI disclosure
 
@@ -30,16 +34,16 @@ systematic name (`func_00123456`, `D_0052ABCD`) stays, and struct fields stay `u
 
 ## Progress
 
-**9,492 of 2,244,832 bytes of game code are matched (0.42 %)**: 160 of 5862 game functions. 2 game functions and 666 of 2372 SDK and runtime functions carry a name backed by evidence; 22 structs are typed in shared headers. SDK and runtime-library code is identified as such and not counted as game code.
+**10,208 of 2,244,832 bytes of game code are matched (0.45 %)**: 171 of 5862 game functions. 2 game functions and 666 of 2372 SDK and runtime functions carry a name backed by evidence; 22 structs are typed in shared headers. SDK and runtime-library code is identified as such and not counted as game code.
 
 | Milestone | Status | Exit judged on |
 |---|---|---|
-| M1 Contributable | done | public build ok (translation-unit, 2026-09-28T23:10:55Z); 0 matched function(s) still in per-function files; units map present |
+| M1 Contributable | done | public build ok (translation-unit, 2026-09-28T23:27:59Z); 0 matched function(s) still in per-function files; units map present |
 | M2 Identified | done | 1 complete name-pass run(s); 5862 of 5862 game functions labelled |
 | M3 Platform boundary | current | 1 of 336 function(s) labelled platform matched (72 of 407388 bytes); PLATFORM.md present |
-| M4 Core | pending | 11 of 142 function(s) labelled core matched (312 of 26576 bytes); FORMATS.md missing |
-| M5 Gameplay | pending | 148 of 5384 function(s) labelled gameplay matched (9108 of 1810868 bytes) |
-| M6 Complete | pending | 9492 of 2244832 game bytes matched; check ok |
+| M4 Core | pending | 12 of 142 function(s) labelled core matched (372 of 26576 bytes); FORMATS.md missing |
+| M5 Gameplay | pending | 158 of 5384 function(s) labelled gameplay matched (9764 of 1810868 bytes) |
+| M6 Complete | pending | 10208 of 2244832 game bytes matched; check ok |
 
 The milestones and why they come in this order: [ROADMAP.md](ROADMAP.md).
 
@@ -91,7 +95,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Pull requests with plain, readable C are
 | `config/SLPM_551.08/` | splat configuration, `symbol_addrs.txt`, `checksum.sha1`, the tool pins (`build.json`), `symbols-evidence.tsv` |
 | `orig/SLPM_551.08/` | where your copy of the executable goes (gitignored) |
 | `configure.py`, `requirements.txt` | the build set-up |
-| `tools/` | `dps2build.py` (the build graph), `download_tool.py`, `check.py`, and `lint_c.py`, the readability check every matched file passes; the downloaded tools land here too (gitignored) |
+| `tools/` | `dps2build.py` (the build graph), `download_tool.py`, `check.py`, `audit_public.py` (the game-derived-file audit the `Audit` workflow runs), and `lint_c.py`, the readability check every matched file passes; the downloaded tools land here too (gitignored) |
 | `symbols/` | the symbol map for Ghidra and PCSX2, and the subsystem labels |
 | `progress/report.json` | the objdiff progress report uploaded to decomp.dev |
 

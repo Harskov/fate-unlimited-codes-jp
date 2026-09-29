@@ -12,9 +12,32 @@ extern int D_00523EC4[];
 
 extern void func_00211130(int size);
 
+typedef struct Node {
+    unsigned char unk_0[0xC];
+    struct Node *next;
+} Node;
+
+extern Node *D_0051C858[];
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019C590", func_0019C590);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019C590", func_0019C690);
+int func_0019C690(void)
+{
+    int i;
+    Node *p;
+    for (i = 0; i < 2; i++) {
+        p = D_0051C858[i];
+        if (p != 0) {
+            p = p->next;
+            if (p != 0) {
+                do {
+                    p = p->next;
+                } while (p != 0);
+            }
+        }
+    }
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019C590", func_0019C6F0);
 

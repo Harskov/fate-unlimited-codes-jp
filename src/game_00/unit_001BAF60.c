@@ -73,7 +73,22 @@ int func_001BB2B0(Obj2524 *arg0)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001BAF60", func_001BB2F0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001BAF60", func_001BB380);
+int func_001BB380(Obj2524 *arg0)
+{
+    Sub220 *p;
+    int v;
+
+    if (arg0 == 0)
+        return 0;
+    if (arg0->unk_C != 8)
+        return 0;
+    p = &arg0->sub220;
+    if (p != 0) {
+        v = p->index;
+        return v == 1;
+    }
+    return 0;
+}
 
 int func_001BB3C0(Obj2524 *arg0)
 {

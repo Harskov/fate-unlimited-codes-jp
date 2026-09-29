@@ -15,13 +15,26 @@ typedef struct Obj001AD0E0 {
     int unk_23D4;
 } Obj001AD0E0;
 
+typedef struct Sub {
+    unsigned char pad[0x10];
+    int field_10;
+} Sub;
+
 typedef struct Obj {
-    unsigned char pad[0x238C];
+    unsigned char pad[0x1DC];
+    int field_1DC;
+    unsigned char pad1[0x238C - 0x1DC - 4];
     int field_238C;
     unsigned char pad2[0x2398 - 0x238C - 4];
     int field_2398;
     unsigned char pad3[0x23A8 - 0x2398 - 4];
     int field_23A8;
+    unsigned char pad4[0x2440 - 0x23A8 - 4];
+    int field_2440;
+    unsigned char pad5[0x2448 - 0x2440 - 4];
+    Sub *field_2448;
+    unsigned char pad6[0x2508 - 0x2448 - 4];
+    int field_2508;
 } Obj;
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AB610", func_001AB610);
@@ -38,7 +51,13 @@ void func_001AB770(Obj2524 *p, Obj53C *v)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AB610", func_001AB7A0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AB610", func_001AB7D0);
+int func_001AB7D0(Obj *p)
+{
+    int v;
+    if (p->field_2440 == 0 || p->field_2448 == 0 || (v = p->field_2448->field_10) == 0)
+        v = p->field_2508;
+    return v;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AB610", func_001AB810);
 
@@ -115,4 +134,13 @@ ret0:
     return 0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AB610", func_001AD2A0);
+int func_001AD2A0(Obj *p, int arg1)
+{
+    if (p->field_1DC & 0x80)
+        return 0;
+    if (p->field_23A8 != 0 || p->field_238C != 0)
+        return 0;
+    if (arg1 == 0 || p->field_2398 == 0)
+        return 1;
+    return 0;
+}
