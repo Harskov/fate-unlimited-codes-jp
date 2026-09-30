@@ -10,7 +10,7 @@ only when the calibration is redone, and this line is updated with them.
 
 ## Where to start
 
-The current milestone selects from 312 functions labelled platform (labels platform (ledger)). The smallest 40, which are the easiest place to start:
+The current milestone selects from 305 functions labelled platform (labels platform (ledger)). The smallest 40, which are the easiest place to start:
 
 | Function | Address | Size | Segment |
 |---|---|---|---|
@@ -20,12 +20,8 @@ The current milestone selects from 312 functions labelled platform (labels platf
 | `func_0034DD10` | 0x0034DD10 | 24 | game_01 |
 | `func_0034EA20` | 0x0034EA20 | 24 | game_01 |
 | `func_00351EF0` | 0x00351EF0 | 24 | game_01 |
-| `func_0021F320` | 0x0021F320 | 32 | game_00 |
 | `func_0021F370` | 0x0021F370 | 32 | game_00 |
-| `func_00220EC0` | 0x00220EC0 | 32 | game_00 |
-| `func_002535E0` | 0x002535E0 | 36 | game_00 |
 | `func_00355250` | 0x00355250 | 36 | game_02 |
-| `func_0021DF20` | 0x0021DF20 | 44 | game_00 |
 | `func_0021F340` | 0x0021F340 | 48 | game_00 |
 | `func_00220E50` | 0x00220E50 | 52 | game_00 |
 | `func_0020A650` | 0x0020A650 | 60 | game_00 |
@@ -35,14 +31,11 @@ The current milestone selects from 312 functions labelled platform (labels platf
 | `func_0021FC50` | 0x0021FC50 | 68 | game_00 |
 | `func_0021FCA0` | 0x0021FCA0 | 68 | game_00 |
 | `func_0021CD70` | 0x0021CD70 | 72 | game_00 |
-| `func_00255450` | 0x00255450 | 72 | game_00 |
-| `func_0021D5F0` | 0x0021D5F0 | 80 | game_00 |
 | `func_0021FC00` | 0x0021FC00 | 80 | game_00 |
 | `func_00253590` | 0x00253590 | 80 | game_00 |
 | `func_00220670` | 0x00220670 | 84 | game_00 |
 | `func_002206D0` | 0x002206D0 | 84 | game_00 |
 | `func_00302978` | 0x00302978 | 84 | game_01 |
-| `func_00244EB0` | 0x00244EB0 | 88 | game_00 |
 | `func_002D5EB0` | 0x002D5EB0 | 88 | game_render |
 | `func_002202F0` | 0x002202F0 | 92 | game_00 |
 | `func_00302888` | 0x00302888 | 92 | game_01 |
@@ -54,6 +47,13 @@ The current milestone selects from 312 functions labelled platform (labels platf
 | `func_00252A60` | 0x00252A60 | 108 | game_00 |
 | `func_0020A3D0` | 0x0020A3D0 | 112 | game_00 |
 | `func_0019ADE0` | 0x0019ADE0 | 116 | game_00 |
+| `func_00302810` | 0x00302810 | 116 | game_01 |
+| `func_0021CDC0` | 0x0021CDC0 | 124 | game_00 |
+| `func_00254CB0` | 0x00254CB0 | 124 | game_00 |
+| `func_00207010` | 0x00207010 | 128 | game_00 |
+| `func_0021D450` | 0x0021D450 | 128 | game_00 |
+| `func_002554A0` | 0x002554A0 | 128 | game_00 |
+| `func_002DC540` | 0x002DC540 | 128 | game_render |
 
 Build the repository first (README, "Building"); objdiff then shows each file's diff
 against the original.

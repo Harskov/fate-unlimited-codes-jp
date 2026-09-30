@@ -1,4 +1,5 @@
 #include "common.h"
+#include "types.h"
 
 extern u32 D_0051AE68[];
 
@@ -43,7 +44,9 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00183660", func_00184030);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00183660", func_001840B0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00183660", func_00184180);
+void func_00184180(void)
+{
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00183660", func_00184190);
 

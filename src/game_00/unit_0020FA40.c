@@ -25,7 +25,10 @@ void func_0020FA50(void)
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020FA40", func_0020FAC0);
+void func_0020FAC0(u32 v)
+{
+    D_00522E18[0] = v;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020FA40", func_0020FAD0);
 

@@ -1,6 +1,12 @@
 #include "common.h"
+#include "types.h"
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002240B0", func_002240B0);
+extern s32 D_00527A08[];
+
+s32 func_002240B0(void)
+{
+    return D_00527A08[0];
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002240B0", func_002240C0);
 

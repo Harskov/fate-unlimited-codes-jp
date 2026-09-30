@@ -27,38 +27,38 @@ Now: 2 complete name-pass run(s); 5831 of 5831 game functions labelled.
 
 The game's wrappers over the SDK and hardware matched and typed: GS/DMA/VIF packet building, VU0 macro mode and COP2, VU1 microprogram uploads, CD and file streaming, pad, memory card, sound, IOP RPC.
 
-Now: 6 of 318 function(s) labelled platform matched (504 of 404876 bytes); PLATFORM.md present.
+Now: 13 of 318 function(s) labelled platform matched (888 of 404876 bytes); PLATFORM.md present.
 
 ## M4 Core
 
 Boot and main loop, the scene or state machine, memory allocators, the file and archive loader, decompression, text and font.
 
-Now: 13 of 142 function(s) labelled core matched (384 of 26576 bytes); FORMATS.md missing.
+Now: 14 of 142 function(s) labelled core matched (396 of 26576 bytes); FORMATS.md missing.
 
 ## M5 Gameplay
 
 Gameplay subsystem by subsystem, most-called first, with data migrated alongside.
 
-Now: 188 of 5371 function(s) labelled gameplay matched (10232 of 1809332 bytes).
+Now: 211 of 5371 function(s) labelled gameplay matched (10484 of 1809332 bytes).
 
 ## M6 Complete
 
 Every game function matched and the data migrated.
 
-Now: 11120 of 2240784 game bytes matched; check ok.
+Now: 11768 of 2240784 game bytes matched; check ok.
 
 ## Bank rate by function size
 
-2,780 of 560,196 game-code instruction words are matched. Matching gets harder with size; the table says where the project stands on that curve.
+2,942 of 560,196 game-code instruction words are matched. Matching gets harder with size; the table says where the project stands on that curve.
 
 | Size (instructions) | Functions | Matched | Bank rate |
 |---|---|---|---|
-| 0-50 | 3595 | 204 | 5.7 % |
+| 0-50 | 3595 | 235 | 6.5 % |
 | 51-120 | 1127 | 1 | 0.1 % |
 | 121-200 | 435 | 2 | 0.5 % |
 | >200 | 674 | 0 | 0.0 % |
 
-Pool realization — of the instructions a match batch drew, the share it banked: 100.0 %, 92.7 %, 91.9 %, 31.1 %, 38.9 % over the last 5 batches (latest 2026-09-30).
+Pool realization — of the instructions a match batch drew, the share it banked: 92.7 %, 91.9 %, 31.1 %, 38.9 %, 46.8 % over the last 5 batches (latest 2026-09-30).
 
 Readability debt: 0 matched function(s) keep a `register` pin and 0 carry a `// !FAKE:` body (see CONTRIBUTING.md); a pull request that replaces one with plain C that still matches is welcome.
 
