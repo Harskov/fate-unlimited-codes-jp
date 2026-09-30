@@ -1,10 +1,7 @@
 #include "common.h"
 #include "types.h"
 
-typedef struct Obj0021DF20 {
-    u8 pad0[0x34];
-    void *unk34;
-} Obj0021DF20;
+#include "game_00/adxowner.h"
 
 int func_0013B9C8(void *p);
 
@@ -18,7 +15,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021DC70);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021DC80);
 
-int func_0021DF20(Obj0021DF20 *obj)
+int func_0021DF20(AdxOwner *obj)
 {
     switch (func_0013B9C8(obj->unk34)) {
     case 4:

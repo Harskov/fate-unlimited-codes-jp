@@ -468,4 +468,4 @@ Every function whose code carries COP2 instructions, matched or not. The matched
 |---|---|---|
 | `src/game_00/unit_0015B6A0.c` | 11 | inline asm |
 | `src/game_00/unit_00209F20.c` | 32 | inline asm |
-| `src/game_00/unit_002530F0.c` | 25 | inline asm |
+| `src/game_00/unit_002530F0.c` | 26 | inline asm |

@@ -41,7 +41,8 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220790", func_00220EA0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220790", func_00220EB0);
 
-int func_00220EC0(void *mp, int strType, int ch, void *cb, void *data)
+/* evidence: forwards its five arguments unchanged to sceMpegAddStrCallback and returns 1; its only caller is func_0021E0F0 (two cal… */
+int mpegAddStrCallback(void *mp, int strType, int ch, void *cb, void *data)
 {
     sceMpegAddStrCallback(mp, strType, ch, cb, data);
     return 1;

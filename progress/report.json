@@ -37952,7 +37952,7 @@
      }
     },
     {
-     "name": "func_0021D5F0",
+     "name": "waitNextField",
      "size": 80,
      "fuzzy_match_percent": 100.0,
      "metadata": {
@@ -38576,7 +38576,7 @@
      }
     },
     {
-     "name": "func_00220EC0",
+     "name": "mpegAddStrCallback",
      "size": 32,
      "fuzzy_match_percent": 100.0,
      "metadata": {
@@ -39744,7 +39744,7 @@
      }
     },
     {
-     "name": "func_00244EB0",
+     "name": "memcardInit",
      "size": 88,
      "fuzzy_match_percent": 100.0,
      "metadata": {
@@ -40392,7 +40392,7 @@
      }
     },
     {
-     "name": "func_002535E0",
+     "name": "alarmWakeupHandler",
      "size": 36,
      "fuzzy_match_percent": 100.0,
      "metadata": {

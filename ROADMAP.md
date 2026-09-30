@@ -15,7 +15,7 @@ The end goal is recompilation, which needs a complete matching decompilation. Un
 
 The public repository builds from a clean clone, uses the translation-unit layout, and ships objdiff.json.
 
-Now: public build ok (translation-unit, 2026-09-30T20:58:45Z); 0 matched function(s) still in per-function files; units map present.
+Now: public build ok (translation-unit, 2026-09-30T21:36:33Z); 0 matched function(s) still in per-function files; units map present.
 
 ## M2 Identified
 
@@ -58,7 +58,7 @@ Now: 11768 of 2240784 game bytes matched; check ok.
 | 121-200 | 435 | 2 | 0.5 % |
 | >200 | 674 | 0 | 0.0 % |
 
-Pool realization — of the instructions a match batch drew, the share it banked: 92.7 %, 91.9 %, 31.1 %, 38.9 %, 46.8 % over the last 5 batches (latest 2026-09-30).
+Pool realization — of the instructions a match batch drew, the share it banked: 92.7 %, 91.9 %, 31.1 %, 38.9 %, 35.9 % over the last 5 batches (latest 2026-09-30).
 
 Readability debt: 0 matched function(s) keep a `register` pin and 0 carry a `// !FAKE:` body (see CONTRIBUTING.md); a pull request that replaces one with plain C that still matches is welcome.
 

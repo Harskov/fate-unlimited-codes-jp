@@ -1,10 +1,7 @@
 #include "common.h"
 #include "types.h"
 
-typedef struct Obj0021F320 {
-    u8 pad0[0x34];
-    void *unk34;
-} Obj0021F320;
+#include "game_00/adxowner.h"
 
 void func_0013AA00(void *p);
 
@@ -16,7 +13,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F280);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F310);
 
-int func_0021F320(Obj0021F320 *obj)
+int func_0021F320(AdxOwner *obj)
 {
     func_0013AA00(obj->unk34);
     return 1;

@@ -47,7 +47,8 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00242C60", func_00244D90);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00242C60", func_00244E70);
 
-void func_00244EB0(void)
+/* evidence: stores the result of sceMcInit() in D_0052450C and zeroes the seven memory-card state words beside it */
+void memcardInit(void)
 {
     D_00524514[0] = 0;
     D_00524518[0] = 0;

@@ -668,3 +668,7 @@ PS2RNA_SetTotalNumSmpl = 0x001556E0; // type:func size:0x48
 PS2RNA_SetStmHdInfo = 0x00155728; // type:func size:0x44
 sys_bp = 0x00229520; // type:func size:0x2D4
 sceCdChgSys = 0x00105F48; // type:func size:0x80
+alarmWakeupHandler = 0x002535E0; // type:func size:0x24
+mpegAddStrCallback = 0x00220EC0; // type:func size:0x20
+memcardInit = 0x00244EB0; // type:func size:0x58
+waitNextField = 0x0021D5F0; // type:func size:0x50

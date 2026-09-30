@@ -2334,7 +2334,7 @@ address	name	label
 0x0021D4D0	func_0021D4D0	gameplay/game_00.031
 0x0021D510	func_0021D510	platform
 0x0021D5E0	func_0021D5E0	gameplay/game_00.031
-0x0021D5F0	func_0021D5F0	platform
+0x0021D5F0	waitNextField	platform
 0x0021D640	func_0021D640	gameplay/game_00.031
 0x0021D690	func_0021D690	platform
 0x0021D870	func_0021D870	gameplay/game_00.031
@@ -2412,7 +2412,7 @@ address	name	label
 0x00220E90	func_00220E90	gameplay/game_00.031
 0x00220EA0	func_00220EA0	gameplay/game_00.031
 0x00220EB0	func_00220EB0	gameplay/game_00.031
-0x00220EC0	func_00220EC0	platform
+0x00220EC0	mpegAddStrCallback	platform
 0x00220EE0	func_00220EE0	platform
 0x00220FE0	func_00220FE0	gameplay/game_00.031
 0x00221000	func_00221000	gameplay/game_00.031
@@ -2558,7 +2558,7 @@ address	name	label
 0x00244CA0	func_00244CA0	platform
 0x00244D90	func_00244D90	platform
 0x00244E70	func_00244E70	gameplay/game_00.002
-0x00244EB0	func_00244EB0	platform
+0x00244EB0	memcardInit	platform
 0x00244F10	func_00244F10	gameplay/game_00.002
 0x00246520	func_00246520	gameplay/game_00.007
 0x002468D0	func_002468D0	gameplay/game_00.014
@@ -2639,7 +2639,7 @@ address	name	label
 0x002534A0	func_002534A0	gameplay/game_00.003
 0x00253500	func_00253500	platform
 0x00253590	func_00253590	platform
-0x002535E0	func_002535E0	platform
+0x002535E0	alarmWakeupHandler	platform
 0x00253610	func_00253610	gameplay/game_00.003
 0x00253690	func_00253690	gameplay/game_00.003
 0x00253740	func_00253740	gameplay/game_00.003

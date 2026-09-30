@@ -44,7 +44,8 @@ void func_0021D5E0(void)
     D_00527580[0] = 0;
 }
 
-void func_0021D5F0(int field)
+/* evidence: loops while sceGsSyncV(0) returns the field passed in, then sets D_00527580 = 1 and D_00527588 = 0 */
+void waitNextField(int field)
 {
     while (sceGsSyncV(0) == field) {
     }
