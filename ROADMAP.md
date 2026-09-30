@@ -15,19 +15,19 @@ The end goal is recompilation, which needs a complete matching decompilation. Un
 
 The public repository builds from a clean clone, uses the translation-unit layout, and ships objdiff.json.
 
-Now: public build ok (translation-unit, 2026-09-30T17:36:12Z); 0 matched function(s) still in per-function files; units map present.
+Now: public build ok (translation-unit, 2026-09-30T19:11:35Z); 0 matched function(s) still in per-function files; units map present.
 
 ## M2 Identified
 
 SDK library functions named by signature, a whole-program naming pass run, every game function labelled with its subsystem, a public symbol map exported.
 
-Now: 1 complete name-pass run(s); 5862 of 5862 game functions labelled.
+Now: 2 complete name-pass run(s); 5831 of 5831 game functions labelled.
 
 ## M3 Platform boundary
 
 The game's wrappers over the SDK and hardware matched and typed: GS/DMA/VIF packet building, VU0 macro mode and COP2, VU1 microprogram uploads, CD and file streaming, pad, memory card, sound, IOP RPC.
 
-Now: 6 of 336 function(s) labelled platform matched (504 of 407388 bytes); PLATFORM.md present.
+Now: 6 of 318 function(s) labelled platform matched (504 of 404876 bytes); PLATFORM.md present.
 
 ## M4 Core
 
@@ -39,22 +39,22 @@ Now: 13 of 142 function(s) labelled core matched (384 of 26576 bytes); FORMATS.m
 
 Gameplay subsystem by subsystem, most-called first, with data migrated alongside.
 
-Now: 188 of 5384 function(s) labelled gameplay matched (10232 of 1810868 bytes).
+Now: 188 of 5371 function(s) labelled gameplay matched (10232 of 1809332 bytes).
 
 ## M6 Complete
 
 Every game function matched and the data migrated.
 
-Now: 11120 of 2244832 game bytes matched; check ok.
+Now: 11120 of 2240784 game bytes matched; check ok.
 
 ## Bank rate by function size
 
-2,780 of 561,208 game-code instruction words are matched. Matching gets harder with size; the table says where the project stands on that curve.
+2,780 of 560,196 game-code instruction words are matched. Matching gets harder with size; the table says where the project stands on that curve.
 
 | Size (instructions) | Functions | Matched | Bank rate |
 |---|---|---|---|
-| 0-50 | 3621 | 204 | 5.6 % |
-| 51-120 | 1132 | 1 | 0.1 % |
+| 0-50 | 3595 | 204 | 5.7 % |
+| 51-120 | 1127 | 1 | 0.1 % |
 | 121-200 | 435 | 2 | 0.5 % |
 | >200 | 674 | 0 | 0.0 % |
 

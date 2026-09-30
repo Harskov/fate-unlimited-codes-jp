@@ -10,7 +10,7 @@ only when the calibration is redone, and this line is updated with them.
 
 ## Where to start
 
-The current milestone selects from 330 functions labelled platform (labels platform (ledger)). The smallest 40, which are the easiest place to start:
+The current milestone selects from 312 functions labelled platform (labels platform (ledger)). The smallest 40, which are the easiest place to start:
 
 | Function | Address | Size | Segment |
 |---|---|---|---|
@@ -31,20 +31,14 @@ The current milestone selects from 330 functions labelled platform (labels platf
 | `func_0020A650` | 0x0020A650 | 60 | game_00 |
 | `func_00220C90` | 0x00220C90 | 64 | game_00 |
 | `func_00255550` | 0x00255550 | 64 | game_00 |
-| `func_00158B40` | 0x00158B40 | 68 | game_00 |
 | `func_0015A7C0` | 0x0015A7C0 | 68 | game_00 |
 | `func_0021FC50` | 0x0021FC50 | 68 | game_00 |
 | `func_0021FCA0` | 0x0021FCA0 | 68 | game_00 |
 | `func_0021CD70` | 0x0021CD70 | 72 | game_00 |
 | `func_00255450` | 0x00255450 | 72 | game_00 |
-| `func_001582A0` | 0x001582A0 | 80 | game_00 |
-| `func_00158528` | 0x00158528 | 80 | game_00 |
-| `func_001585E0` | 0x001585E0 | 80 | game_00 |
 | `func_0021D5F0` | 0x0021D5F0 | 80 | game_00 |
 | `func_0021FC00` | 0x0021FC00 | 80 | game_00 |
 | `func_00253590` | 0x00253590 | 80 | game_00 |
-| `func_00158248` | 0x00158248 | 84 | game_00 |
-| `func_001582F0` | 0x001582F0 | 84 | game_00 |
 | `func_00220670` | 0x00220670 | 84 | game_00 |
 | `func_002206D0` | 0x002206D0 | 84 | game_00 |
 | `func_00302978` | 0x00302978 | 84 | game_01 |
@@ -52,8 +46,14 @@ The current milestone selects from 330 functions labelled platform (labels platf
 | `func_002D5EB0` | 0x002D5EB0 | 88 | game_render |
 | `func_002202F0` | 0x002202F0 | 92 | game_00 |
 | `func_00302888` | 0x00302888 | 92 | game_01 |
-| `func_001580E0` | 0x001580E0 | 96 | game_00 |
 | `func_0020BDF0` | 0x0020BDF0 | 96 | game_00 |
+| `func_0015AF20` | 0x0015AF20 | 100 | game_00 |
+| `func_002F6F10` | 0x002F6F10 | 100 | game_01 |
+| `func_002D61B8` | 0x002D61B8 | 104 | game_render |
+| `func_0030B350` | 0x0030B350 | 104 | game_01 |
+| `func_00252A60` | 0x00252A60 | 108 | game_00 |
+| `func_0020A3D0` | 0x0020A3D0 | 112 | game_00 |
+| `func_0019ADE0` | 0x0019ADE0 | 116 | game_00 |
 
 Build the repository first (README, "Building"); objdiff then shows each file's diff
 against the original.

@@ -1,6 +1,6 @@
 {
  "measures": {
-  "fuzzy_match_percent": 0.6147,
+  "fuzzy_match_percent": 0.6135,
   "total_code": 2608780,
   "matched_code": 11120,
   "matched_code_percent": 0.4263,
@@ -19022,7 +19022,7 @@
   {
    "name": "game_00",
    "measures": {
-    "fuzzy_match_percent": 1.1702,
+    "fuzzy_match_percent": 1.1678,
     "total_code": 1350988,
     "matched_code": 11028,
     "matched_code_percent": 0.8163,
@@ -19226,7 +19226,7 @@
     {
      "name": "func_00158B40",
      "size": 68,
-     "fuzzy_match_percent": 46.52941,
+     "fuzzy_match_percent": 0.0,
      "metadata": {
       "virtual_address": 1411904
      }
@@ -66409,7 +66409,7 @@
    "id": "game",
    "name": "Game code",
    "measures": {
-    "fuzzy_match_percent": 0.7064,
+    "fuzzy_match_percent": 0.705,
     "total_code": 2251036,
     "matched_code": 11120,
     "matched_code_percent": 0.494,
@@ -66449,7 +66449,7 @@
    "id": "game.platform",
    "name": "Platform boundary (M3)",
    "measures": {
-    "fuzzy_match_percent": 0.1936,
+    "fuzzy_match_percent": 0.1859,
     "total_code": 407388,
     "matched_code": 504,
     "matched_code_percent": 0.1237,
