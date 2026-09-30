@@ -1,16 +1,8 @@
 #include "common.h"
+#include "game_00/tbl_0051E444.h"
 #include "game_00/vec.h"
 
 extern u32 D_0051D8A0[];
-
-typedef struct Obj_00166F60 {
-    unsigned char unk_0[0x334];
-    int unk_334;
-} Obj_00166F60;
-
-extern Obj_00166F60 *D_0051E444[];
-
-extern int D_00524798[];
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_00166E80);
 
@@ -20,7 +12,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_00166F30);
 
 int func_00166F60(void)
 {
-    Obj_00166F60 *p = D_0051E444[0];
+    Obj0051E444 *p = D_0051E444[0];
     if (p != 0)
         return p->unk_334;
     return D_00524798[0];

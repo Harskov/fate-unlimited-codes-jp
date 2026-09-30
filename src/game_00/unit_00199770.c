@@ -1,4 +1,5 @@
 #include "common.h"
+#include "game_00/tbl_0051E444.h"
 #include "game_00/tbl_0051D890.h"
 
 typedef struct Obj {
@@ -29,11 +30,6 @@ typedef struct Obj0019AA30 {
     float unk_B0;
 } Obj0019AA30;
 
-typedef struct Obj_0019AE60 {
-    unsigned char unk_0[0x334];
-    int unk_334;
-} Obj_0019AE60;
-
 typedef struct Obj_0019B470 {
     unsigned int flags;
     unsigned char unk_4[0x284];
@@ -43,10 +39,6 @@ typedef struct Obj_0019B470 {
     int unk_294;
     int unk_298;
 } Obj_0019B470;
-
-extern Obj_0019AE60 *D_0051E444[];
-
-extern int D_00524798[];
 
 extern int D_0051C804[];
 
@@ -117,7 +109,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00199770", func_0019ADE0);
 
 int func_0019AE60(void)
 {
-    Obj_0019AE60 *p = D_0051E444[0];
+    Obj0051E444 *p = D_0051E444[0];
     if (p != 0)
         return p->unk_334;
     return D_00524798[0];

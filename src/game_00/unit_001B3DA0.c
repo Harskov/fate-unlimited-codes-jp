@@ -14,6 +14,11 @@ typedef struct Holder {
     Entry *entries; /* 0x2C */
 } Holder;
 
+typedef struct Obj_001B4240 {
+    u8 pad_0[0x14];
+    s32 unk_14;
+} Obj_001B4240;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3DA0", func_001B3DA0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3DA0", func_001B3E30);
@@ -42,10 +47,10 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3DA0", func_001B4090);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3DA0", func_001B4150);
 
-void func_001B4240(char *arg0)
+void func_001B4240(Obj_001B4240 *o)
 {
     D_0051D728[0] -= 1;
-    *(s32 *)(arg0 + 0x14) = -1;
+    o->unk_14 = -1;
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3DA0", func_001B4260);
