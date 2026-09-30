@@ -27,7 +27,7 @@ Now: 1 complete name-pass run(s); 5862 of 5862 game functions labelled.
 
 The game's wrappers over the SDK and hardware matched and typed: GS/DMA/VIF packet building, VU0 macro mode and COP2, VU1 microprogram uploads, CD and file streaming, pad, memory card, sound, IOP RPC.
 
-Now: 1 of 336 function(s) labelled platform matched (72 of 407388 bytes); PLATFORM.md present.
+Now: 6 of 336 function(s) labelled platform matched (504 of 407388 bytes); PLATFORM.md present.
 
 ## M4 Core
 
@@ -39,26 +39,26 @@ Now: 13 of 142 function(s) labelled core matched (384 of 26576 bytes); FORMATS.m
 
 Gameplay subsystem by subsystem, most-called first, with data migrated alongside.
 
-Now: 181 of 5384 function(s) labelled gameplay matched (10152 of 1810868 bytes).
+Now: 188 of 5384 function(s) labelled gameplay matched (10232 of 1810868 bytes).
 
 ## M6 Complete
 
 Every game function matched and the data migrated.
 
-Now: 10608 of 2244832 game bytes matched; check ok.
+Now: 11120 of 2244832 game bytes matched; check ok.
 
 ## Bank rate by function size
 
-2,652 of 561,208 game-code instruction words are matched. Matching gets harder with size; the table says where the project stands on that curve.
+2,780 of 561,208 game-code instruction words are matched. Matching gets harder with size; the table says where the project stands on that curve.
 
 | Size (instructions) | Functions | Matched | Bank rate |
 |---|---|---|---|
-| 0-50 | 3621 | 192 | 5.3 % |
+| 0-50 | 3621 | 204 | 5.6 % |
 | 51-120 | 1132 | 1 | 0.1 % |
 | 121-200 | 435 | 2 | 0.5 % |
 | >200 | 674 | 0 | 0.0 % |
 
-Pool realization — of the instructions a match batch drew, the share it banked: 100.0 %, 100.0 %, 92.7 %, 91.9 %, 25.7 % over the last 5 batches (latest 2026-09-30).
+Pool realization — of the instructions a match batch drew, the share it banked: 100.0 %, 92.7 %, 91.9 %, 31.1 %, 38.9 % over the last 5 batches (latest 2026-09-30).
 
 Readability debt: 0 matched function(s) keep a `register` pin and 0 carry a `// !FAKE:` body (see CONTRIBUTING.md); a pull request that replaces one with plain C that still matches is welcome.
 
