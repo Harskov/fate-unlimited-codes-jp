@@ -6,7 +6,10 @@ extern u32 D_0051AE50[];
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00183660", func_00183660);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00183660", func_001836B0);
+void func_001836B0(void)
+{
+    D_0051AE68[0]--;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00183660", func_001836D0);
 

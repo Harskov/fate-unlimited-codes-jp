@@ -34,16 +34,16 @@ systematic name (`func_00123456`, `D_0052ABCD`) stays, and struct fields stay `u
 
 ## Progress
 
-**10,208 of 2,244,832 bytes of game code are matched (0.45 %)**: 171 of 5862 game functions. 2 game functions and 666 of 2372 SDK and runtime functions carry a name backed by evidence; 22 structs are typed in shared headers. SDK and runtime-library code is identified as such and not counted as game code.
+**10,608 of 2,244,832 bytes of game code are matched (0.47 %)**: 195 of 5862 game functions. 2 game functions and 666 of 2372 SDK and runtime functions carry a name backed by evidence; 22 structs are typed in shared headers. SDK and runtime-library code is identified as such and not counted as game code.
 
 | Milestone | Status | Exit judged on |
 |---|---|---|
-| M1 Contributable | done | public build ok (translation-unit, 2026-09-29T23:53:35Z); 0 matched function(s) still in per-function files; units map present |
+| M1 Contributable | done | public build ok (translation-unit, 2026-09-30T00:42:20Z); 0 matched function(s) still in per-function files; units map present |
 | M2 Identified | done | 1 complete name-pass run(s); 5862 of 5862 game functions labelled |
 | M3 Platform boundary | current | 1 of 336 function(s) labelled platform matched (72 of 407388 bytes); PLATFORM.md present |
-| M4 Core | pending | 12 of 142 function(s) labelled core matched (372 of 26576 bytes); FORMATS.md missing |
-| M5 Gameplay | pending | 158 of 5384 function(s) labelled gameplay matched (9764 of 1810868 bytes) |
-| M6 Complete | pending | 10208 of 2244832 game bytes matched; check ok |
+| M4 Core | pending | 13 of 142 function(s) labelled core matched (384 of 26576 bytes); FORMATS.md missing |
+| M5 Gameplay | pending | 181 of 5384 function(s) labelled gameplay matched (10152 of 1810868 bytes) |
+| M6 Complete | pending | 10608 of 2244832 game bytes matched; check ok |
 
 The milestones and why they come in this order: [ROADMAP.md](ROADMAP.md).
 
