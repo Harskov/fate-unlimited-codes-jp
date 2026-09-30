@@ -38,7 +38,7 @@ systematic name (`func_00123456`, `D_0052ABCD`) stays, and struct fields stay `u
 
 | Milestone | Status | Exit judged on |
 |---|---|---|
-| M1 Contributable | done | public build ok (translation-unit, 2026-09-30T20:14:16Z); 0 matched function(s) still in per-function files; units map present |
+| M1 Contributable | done | public build ok (translation-unit, 2026-09-30T20:58:45Z); 0 matched function(s) still in per-function files; units map present |
 | M2 Identified | done | 2 complete name-pass run(s); 5831 of 5831 game functions labelled |
 | M3 Platform boundary | current | 6 of 318 function(s) labelled platform matched (504 of 404876 bytes); PLATFORM.md present |
 | M4 Core | pending | 13 of 142 function(s) labelled core matched (384 of 26576 bytes); FORMATS.md missing |
