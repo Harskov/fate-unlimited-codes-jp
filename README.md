@@ -1,105 +1,94 @@
-# Fate/Unlimited Codes (Japan)
+# Fate/Unlimited Codes
 
-[![Progress report](https://github.com/Harskov/fate-unlimited-codes-jp/actions/workflows/report.yml/badge.svg)](https://github.com/Harskov/fate-unlimited-codes-jp/actions/workflows/report.yml)
 [![Audit](https://github.com/Harskov/fate-unlimited-codes-jp/actions/workflows/audit.yml/badge.svg)](https://github.com/Harskov/fate-unlimited-codes-jp/actions/workflows/audit.yml)
-[![Code](https://decomp.dev/Harskov/fate-unlimited-codes-jp.svg?mode=shield&measure=code&label=Code)](https://decomp.dev/Harskov/fate-unlimited-codes-jp)
 
-A work-in-progress matching decompilation of *Fate/Unlimited Codes* for the PlayStation 2
-(NTSC-J, `SLPM_551.08`): C source that the game's original compiler, Metrowerks
-CodeWarrior for PS2, turns back into the same machine code.
+A decompilation of Fate/Unlimited Codes (PlayStation 2). It builds the following release:
 
-This repository does **not** contain any game assets or assembly whatsoever. An existing
-copy of the game is required. The `Audit` workflow runs `tools/audit_public.py` on every
-push and pull request and fails when a tracked file is game-derived — by its path or
-extension, by its first bytes, by a SHA-1 recorded in `config/SLPM_551.08/checksum.sha1`,
-or by a size no source file reaches.
+| Release | Region | Executable | SHA-1 | Size |
+|---|---|---|---|---|
+| Fate/Unlimited Codes | Japan | `SLPM_551.08` | `825b867ecf30b761b8261a528e86101aa4bc03ca` | 4231984 bytes |
 
-## AI disclosure
-
-This decompilation is produced with language models. Claude (Anthropic) writes the C.
-For part of September 2026 a second, cheaper model also proposed matches for simpler
-functions through a local tool; that lane is retired. Every commit that adds or changes C
-names the model that wrote it in a credit line (`Co-Authored-By: Claude` or
-`Assisted-by: <model>`). A function counts as matched only
-when the pinned compiler rebuilds it byte-identical to the original, and the whole
-executable is rebuilt and compared after every change. Names are given only with cited
-evidence (a referenced string, an SDK call pattern, a named caller); without it the
-systematic name (`func_00123456`, `D_0052ABCD`) stays, and struct fields stay `unk_XX`.
-
-## Supported versions
-
-| Version | Executable | SHA-1 |
-|---|---|---|
-| NTSC-J | `SLPM_551.08` | `825b867ecf30b761b8261a528e86101aa4bc03ca` |
-
-## Progress
-
-**11,768 of 2,240,784 bytes of game code are matched (0.53 %)**: 238 of 5831 game functions. 6 game functions and 666 of 2403 SDK and runtime functions carry a name backed by evidence; 24 structs are typed in shared headers. SDK and runtime-library code is identified as such and not counted as game code.
-
-| Milestone | Status | Exit judged on |
-|---|---|---|
-| M1 Contributable | done | public build ok (translation-unit, 2026-09-30T21:48:50Z); 0 matched function(s) still in per-function files; units map present |
-| M2 Identified | done | 2 complete name-pass run(s); 5831 of 5831 game functions labelled |
-| M3 Platform boundary | current | 13 of 318 function(s) labelled platform matched (888 of 404876 bytes); PLATFORM.md present |
-| M4 Core | pending | 14 of 142 function(s) labelled core matched (396 of 26576 bytes); FORMATS.md missing |
-| M5 Gameplay | pending | 211 of 5371 function(s) labelled gameplay matched (10484 of 1809332 bytes) |
-| M6 Complete | pending | 11768 of 2240784 game bytes matched; check ok |
-
-The milestones and why they come in this order: [ROADMAP.md](ROADMAP.md).
-
-The per-function report is on [decomp.dev](https://decomp.dev/Harskov/fate-unlimited-codes-jp).
+**This repository contains no game assets**: no original file, no extracted asset, no decompiler output and no reference
+P-code or assembly. Building it needs your own copy of the game. The source was written function by function, much of it
+with AI assistance, and accepted only when the pinned toolchain rebuilt it to match the original; see
+[How the source was made](#how-the-source-was-made-and-the-ai-disclosure).
 
 ## Building
 
-You need Linux x86-64 (WSL2 on Windows works), Python 3.9 or newer, git, and your own
-copy of the game.
+You need Linux x86-64 (WSL2 on Windows works), Python 3.9 or newer, git, and your own copy of the game.
 
-1. Copy `SLPM_551.08` from your disc to `orig/SLPM_551.08/SLPM_551.08`.
-2. `python3 -m pip install -r requirements.txt` installs splat and ninja.
-3. `python3 configure.py` checks your copy against `config/SLPM_551.08/checksum.sha1`,
-   downloads the pinned tools into `tools/` (each checked against the sha256 in
-   `config/SLPM_551.08/build.json`), splits the executable into `asm/` with splat, and
-   writes `build.ninja` and `objdiff.json`.
-4. `ninja` compiles every matched C file with the pinned compiler (compiler `mwcps2-3.0.1b151-050317` with flags `-O4,p`),
-   assembles the rest, links, and checks that the rebuilt executable's loaded image
-   equals the original's byte for byte.
+1. Clone this repository.
+2. Copy the executable the table names from your disc (it sits beside `SYSTEM.CNF`) to `orig/<SERIAL>/<SERIAL>`, for example `orig/SLPM_551.08/SLPM_551.08`; its SHA-1 must be the one in the table.
+3. `python3 -m pip install -r requirements.txt` installs splat and ninja.
+4. `python3 configure.py` checks each copy it finds against `config/<SERIAL>/checksum.sha1`, downloads the pinned tools into `tools/` (each checked against the sha256 in `config/<SERIAL>/build.json`), splits each executable with splat, and writes `build.ninja` and `objdiff.json`.
+5. `ninja` compiles every matched C file with the pinned compiler (`mwcps2-3.0.1b151-050317` with `-O4,p`), assembles the rest, links, and checks that each rebuilt executable's loaded image equals the original's byte for byte (`check: OK`).
 
-To work on a function, open the repository folder in
-[objdiff](https://github.com/encounter/objdiff): `objdiff.json` pairs every C file with
-splat's disassembly of the same range. [decomp.me](https://decomp.me) has the same
-compiler for trying a single function.
+## Progress
 
-## Symbols and documentation
+**238 of 5831 game functions are matched** (2,942 of 560,196 instructions, 0.53 %). 6 functions carry a name backed by evidence; 5831 carry a subsystem label.
 
-Generated from the match records at every change, never edited by hand:
+| Milestone | Status | Exit judged on |
+|---|---|---|
+| M1 Contributable | done | public-build.json ok=True; matched outside their unit: 0 |
+| M2 Identified | current | name pass closed: True; unlabelled game functions: 0; review pending: 35 |
+| M3 Platform boundary | later | 13/318 platform functions matched; PLATFORM.md present |
+| M4 Core | later | 14/142 core functions matched; FORMATS.md missing |
+| M5 Gameplay | later | 211/5371 gameplay functions matched |
+| M6 Complete | later | 238/5831 game functions matched; check ok=True |
+| M7 Documented | later | docs.py check ok=None (never run) |
+| M8 Behaviour-verified | later | last behaviour compare ok=None at never |
 
-- `symbols/SLPM_551.08.txt`: every function's name and address, for Ghidra's
-  `ImportSymbolsScript.py`; `symbols/SLPM_551.08.sym`: the same for the PCSX2 debugger;
-  `symbols/SLPM_551.08.subsystems.tsv`: each function's subsystem label.
-- `config/SLPM_551.08/symbols-evidence.tsv`: the evidence behind every name.
-- [PLATFORM.md](PLATFORM.md): the SDK functions, IOP modules, VU microprograms and
-  hardware registers the game uses, and the functions that use them.
-- [ROADMAP.md](ROADMAP.md): the milestones, why they come in this order, and where the
-  project stands.
+The milestones and why they come in this order: [ROADMAP.md](ROADMAP.md).
+
+## How the source was made, and the AI disclosure
+
+The source here was written function by function and accepted only when the pinned toolchain rebuilt it to match the
+original under the project's criterion (the compiled code must be byte for byte the original's). Much of it was drafted with AI assistance (Claude, and the
+batch lane's models); every accepted function was rebuilt and compared by the tooling on the maintainer's machine, and
+the commit that adds a function carries a credit line naming who wrote it (`Co-Authored-By: Claude <noreply@anthropic.com>`
+for the operator's model, `Assisted-by: <model> (batch)` for the batch lane). Names are given only with cited evidence (a
+string, a caller, a frame label, a field); otherwise the systematic placeholder stays. A function marked `// !FAKE:` matches
+through an implausible form and is listed as readability debt in [ROADMAP.md](ROADMAP.md).
+
+## Platform: PlayStation 2 (Metrowerks CodeWarrior)
+
+The game is a PS2 executable for the Emotion Engine (a MIPS R5900). The source under `src/` is C (C++ where the original
+was) that the game's own compiler, Metrowerks CodeWarrior for PS2 (`mwcps2-3.0.1b151-050317` with `-O4,p`), compiles back to the same machine
+code; a function not yet written stays an `INCLUDE_ASM` line that pulls in splat's disassembly of it, split from your own
+copy at build time. A function is accepted when its compiled `.text` is byte for byte the original's, and the whole
+executable is rebuilt and its loaded image compared after every change.
+
+
+
+To work on a function, open the repository folder in [objdiff](https://github.com/encounter/objdiff): `objdiff.json`
+pairs every C file with splat's disassembly of the same range. [decomp.me](https://decomp.me) has the same compiler for
+trying a single function.
+
+Generated from the match records at every change, never edited by hand: `symbols/<SERIAL>.txt` (every function's name
+and address, for Ghidra's `ImportSymbolsScript.py`), `symbols/<SERIAL>.sym` (the same for the PCSX2 debugger) and
+`symbols/<SERIAL>.subsystems.tsv` (each function's subsystem label), one set per release at that release's addresses;
+`config/<SERIAL>/symbols-evidence.tsv` (the evidence behind every name); [PLATFORM.md](PLATFORM.md) (the SDK functions,
+IOP modules, VU microprograms and hardware registers the game uses, and the functions that use them).
+
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Pull requests with plain, readable C are welcome.
+See [CONTRIBUTING.md](CONTRIBUTING.md): the layout, the toolchain, the naming rule, the readability lint and what the
+maintainer's tooling does with a merged pull request.
 
 ## Layout
 
-| Path | Holds |
-|---|---|
-| `src/` | matched C, one folder per segment of the executable |
-| `include/` | shared headers and types |
-| `config/SLPM_551.08/` | splat configuration, `symbol_addrs.txt`, `checksum.sha1`, the tool pins (`build.json`), `symbols-evidence.tsv` |
-| `orig/SLPM_551.08/` | where your copy of the executable goes (gitignored) |
-| `configure.py`, `requirements.txt` | the build set-up |
-| `tools/` | `dps2build.py` (the build graph), `download_tool.py`, `check.py`, `audit_public.py` (the game-derived-file audit the `Audit` workflow runs), and `lint_c.py`, the readability check every matched file passes; the downloaded tools land here too (gitignored) |
-| `symbols/` | the symbol map for Ghidra and PCSX2, and the subsystem labels |
-| `progress/report.json` | the objdiff progress report uploaded to decomp.dev |
+`src/` the source in the layout the toolchain consumes (one file per unit; a function not yet accepted is a reference
+line) · `docs/` the architecture, the subsystem pages and the code map · `config/<SERIAL>/` each release's splat configuration, symbol map, checksums and tool pins · `include/` the shared headers and types · `orig/<SERIAL>/` where your copy of the executable goes (gitignored) · `symbols/` the symbol map with its evidence · `tools/` the contributor copies of the lint and the check ·
+`progress/report.json` the progress report.
 
 ## License
 
-The C source, headers and configuration are under the MIT License (`LICENSE`). The game
-remains the property of its rightsholders and is not distributed here.
+The source in this repository is dedicated to the public domain under CC0 1.0 Universal (see LICENSE). The game itself is not
+covered: nothing of it is here.
+
+## Acknowledgements
+
+Thanks to decomp.dev and to the broader decompilation community for the work they put into their own decompilations and
+into the resources for newcomers, which let a fresh face come into the scene with a strong grounding. The website was an
+invaluable resource, and the maintainer is grateful to the people behind it.

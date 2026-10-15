@@ -1,6 +1,12 @@
 {
   "serial": "SLPM_551.08",
   "basename": "SLPM_551.08",
+  "version": "jp",
+  "primary": true,
+  "region": "Japan",
+  "release_title": "Fate/Unlimited Codes",
+  "asm_root": "asm",
+  "build_root": "build",
   "compiler": {
     "id": "mwcps2-3.0.1b151-050317",
     "flags": "-O4,p",
