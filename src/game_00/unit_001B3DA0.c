@@ -27,16 +27,16 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3DA0", func_001B3EC0);
 
 s32 func_001B3F70(s32 arg0)
 {
-    f32 step = 0.0f;
+    f32 total = 0.0f;
     s32 i;
-    f32 limit = 25.5f;
+    f32 step = 25.5f;
     f32 half = 0.5f;
 
     for (i = 0; i < 10; i++) {
-        if ((s32)(half + step) >= arg0) {
+        if ((s32)(half + total) >= arg0) {
             break;
         }
-        step += limit;
+        total += step;
     }
     return i;
 }

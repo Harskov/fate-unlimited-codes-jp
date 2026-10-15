@@ -24,9 +24,9 @@ typedef struct Ctx {
 } Ctx;
 
 typedef struct Node {
-    unsigned char pad[0xC];
-    struct Node *next;
-    struct Node *prev;
+    unsigned char unk_0[0xC];
+    struct Node *unk_C;
+    struct Node *unk_10;
 } Node;
 
 extern Ent00531B60 D_00531B60[];
@@ -130,13 +130,13 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019CB40", func_0019D760);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019CB40", func_0019D7F0);
 
-Node *func_0019D850(Node *n)
+Node *func_0019D850(Node *arg0)
 {
-    Node *prev = n->prev;
-    prev->next = n->next;
-    if (n->next != 0)
-        n->next->prev = prev;
-    return prev->next;
+    Node *p = arg0->unk_10;
+    p->unk_C = arg0->unk_C;
+    if (arg0->unk_C != 0)
+        arg0->unk_C->unk_10 = p;
+    return p->unk_C;
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019CB40", func_0019D880);

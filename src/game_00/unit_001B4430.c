@@ -6,6 +6,8 @@ extern s32 D_0051D740[];
 
 void func_001B5DC0();
 
+s32 func_001B5800(s32 arg0, s32 arg1);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B4430", func_001B4430);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B4430", func_001B49E0);
@@ -18,7 +20,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B4430", func_001B4C10);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B4430", func_001B5210);
 
-void func_001B57E0(s32 *arg0, s32 *arg1, s32 arg2)
+void func_001B57E0(s32 arg0, s32 *arg1, s32 arg2)
 {
     *arg1 += arg2;
     func_001B5800(arg0, arg2);

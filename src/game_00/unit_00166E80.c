@@ -121,8 +121,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_0016F720);
 
 int func_001711F0(void)
 {
-    u32 v = D_0051D8A0[0] & 0x20000000;
-    return (v != 0) ^ 1;
+    return !(D_0051D8A0[0] & 0x20000000);
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_00171210);

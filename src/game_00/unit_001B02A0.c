@@ -8,8 +8,6 @@ extern s32 D_0051C904[];
 
 extern s32 D_0051C900[];
 
-extern s32 D_003D6DA0[];
-
 extern s32 D_00523900[];
 
 extern s32 D_00523918[];
@@ -31,6 +29,8 @@ extern s32 D_00523934[];
 extern s32 D_00523938[];
 
 extern s32 D_0052393C[];
+
+extern s32 D_003D6DA0[][10];
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B02A0", func_001B02A0);
 
@@ -70,22 +70,9 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B02A0", func_001B0490);
 void func_001B04D0(s32 arg0, s32 arg1)
 {
     s32 i;
-    s32 *src;
-    s32 *dst;
 
-    i = 0;
-    src = D_003D6DA0 + arg1 * 10;
-    dst = D_00523900 + arg0 * 10;
-    do {
-        i += 5;
-        dst[6] = src[0];
-        dst[7] = src[1];
-        dst[8] = src[2];
-        dst[9] = src[3];
-        dst[10] = src[4];
-        src += 5;
-        dst += 5;
-    } while (i < 10);
+    for (i = 0; i < 10; i++)
+        D_00523900[6 + arg0 * 10 + i] = D_003D6DA0[arg1][i];
 }
 
 s32 func_001B0550(s32 arg0, s32 arg1)
@@ -100,6 +87,9 @@ s32 func_001B0550(s32 arg0, s32 arg1)
         v |= 4;
     if (arg1 & 0x82000)
         v |= 8;
+    // !FAKE: the author read one table, D_00523900[6 + arg0 * 10 + k]; the symbol map names each
+    // of the ten folded addresses separately, so the reads stay per symbol until the data map
+    // merges them
     if (arg1 & 0x80)
         v |= D_00523918[arg0 * 10];
     if (arg1 & 0x10)

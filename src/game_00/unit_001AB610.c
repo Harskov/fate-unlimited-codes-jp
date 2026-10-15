@@ -119,19 +119,11 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AB610", func_001AD1D0);
 
 int func_001AD250(Obj *p, int arg1)
 {
-    if (p->field_23A8 != 0)
-        goto ret1;
-    if (p->field_238C != 0)
-        goto ret1;
-    if (arg1 == 0)
-        goto ret0;
-    if (p->field_2398 == 0)
-        goto ret0;
+    if (p->field_23A8 != 0 || p->field_238C != 0)
+        return 1;
+    if (arg1 == 0 || p->field_2398 == 0)
+        return 0;
     return 1;
-ret1:
-    return 1;
-ret0:
-    return 0;
 }
 
 int func_001AD2A0(Obj *p, int arg1)

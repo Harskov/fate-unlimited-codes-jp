@@ -2,8 +2,8 @@
 #include "game_00/tbl_0051C858.h"
 
 typedef struct Obj {
-    unsigned char pad[0x1E4];
-    unsigned int flags;
+    unsigned char unk_0[0x1E4];
+    u32 unk_1E4;
 } Obj;
 
 typedef struct Obj_001AB030 {
@@ -38,9 +38,9 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AA740", func_001AA740);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AA740", func_001AA790);
 
-void func_001AA880(Obj *p)
+void func_001AA880(Obj *arg0)
 {
-    p->flags &= ~0x20;
+    arg0->unk_1E4 &= ~0x20;
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AA740", func_001AA8A0);

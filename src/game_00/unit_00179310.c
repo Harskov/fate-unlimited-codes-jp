@@ -10,14 +10,14 @@ typedef struct Link {
 
 typedef struct Node {
     int unk_0;
-    struct Node *next;
+    void *unk_4;
 } Node;
 
 typedef struct Obj {
-    unsigned char pad[0xC4];
-    u16 count;
-    unsigned char pad2[0xA];
-    struct Obj *link;
+    unsigned char unk_0[0xC4];
+    u16 unk_C4;
+    unsigned char unk_C6[0xA];
+    struct Obj *unk_D0;
 } Obj;
 
 typedef struct Ent0051AC78 {
@@ -62,9 +62,9 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_00179450);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_00179570);
 
-void func_001795F0(Node *n, Node *m, Node *p)
+void func_001795F0(void *arg0, void *arg1, Node *arg2)
 {
-    func_00167130(n, m, p->next);
+    func_00167130(arg0, arg1, arg2->unk_4);
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_00179600);
@@ -87,21 +87,12 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_0017A4E0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_0017A550);
 
-int func_0017A590(Obj *a, Obj *b)
+int func_0017A590(Obj *arg0, Obj *arg1)
 {
-    u16 c;
-    if (b == 0)
-        goto fail;
-    if (a == 0)
-        goto fail;
-    if (a->link != 0)
-        goto fail;
-    a->link = b;
-    c = b->count + 1;
-    b->count = c;
-    return c;
-fail:
-    return -1;
+    if (arg1 == 0 || arg0 == 0 || arg0->unk_D0 != 0)
+        return -1;
+    arg0->unk_D0 = arg1;
+    return ++arg1->unk_C4;
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_0017A5D0);

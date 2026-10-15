@@ -3,10 +3,10 @@
 #include "game_00/kindflags.h"
 
 typedef struct Obj_001A9A00 {
-    unsigned char pad[0x1E0];
-    unsigned int flags;
-    unsigned char pad2[8];
-    unsigned int flags2;
+    unsigned char unk_0[0x1E0];
+    u32 unk_1E0;
+    unsigned char unk_1E4[8];
+    u32 unk_1EC;
 } Obj_001A9A00;
 
 typedef struct Obj_001A9D80 {
@@ -61,14 +61,14 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A5D70", func_001A9320);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A5D70", func_001A9950);
 
-int func_001A9A00(Obj_001A9A00 *p)
+int func_001A9A00(Obj_001A9A00 *arg0)
 {
-    unsigned int v = p->flags;
+    u32 v = arg0->unk_1E0;
     if (v & 0x20000)
         return 1;
     if (v & ~0x1107)
         return 0;
-    return !(p->flags2 & 0x10000100);
+    return !(arg0->unk_1EC & 0x10000100);
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A5D70", func_001A9A50);
