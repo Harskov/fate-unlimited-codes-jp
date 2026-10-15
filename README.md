@@ -1,6 +1,8 @@
 # Fate/Unlimited Codes
 
 [![Audit](https://github.com/Harskov/fate-unlimited-codes-jp/actions/workflows/audit.yml/badge.svg)](https://github.com/Harskov/fate-unlimited-codes-jp/actions/workflows/audit.yml)
+[![Code](https://bytematch.dev/Harskov/fate-unlimited-codes-jp.svg?label=Code&measure=matched_code_percent&category=game)](https://bytematch.dev/Harskov/fate-unlimited-codes-jp)
+[![Functions](https://bytematch.dev/Harskov/fate-unlimited-codes-jp.svg?label=Functions&measure=matched_functions&category=game)](https://bytematch.dev/Harskov/fate-unlimited-codes-jp)
 
 A decompilation of Fate/Unlimited Codes (PlayStation 2). It builds the following release:
 
@@ -39,6 +41,8 @@ You need Linux x86-64 (WSL2 on Windows works), Python 3.9 or newer, git, and you
 | M8 Behaviour-verified | later | last behaviour compare ok=None at never |
 
 The milestones and why they come in this order: [ROADMAP.md](ROADMAP.md).
+
+The same reports are tracked on [ByteMatch](https://bytematch.dev/Harskov/fate-unlimited-codes-jp): the report workflow uploads it on every push (`SLPM_551.08_report`).
 
 ## How the source was made, and the AI disclosure
 
