@@ -30,7 +30,7 @@ You need Linux x86-64 (WSL2 on Windows works), Python 3.9 or newer, git, and you
 | Milestone | Status | Exit judged on |
 |---|---|---|
 | M1 Contributable | done | public-build.json ok=True; matched outside their unit: 0 |
-| M2 Identified | current | name pass closed: True; unlabelled game functions: 0; review pending: 35 |
+| M2 Identified | current | name pass closed: True; unlabelled game functions: 0; review pending: 14 |
 | M3 Platform boundary | later | 13/318 platform functions matched; PLATFORM.md present |
 | M4 Core | later | 14/142 core functions matched; FORMATS.md missing |
 | M5 Gameplay | later | 211/5371 gameplay functions matched |
