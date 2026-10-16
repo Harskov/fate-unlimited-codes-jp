@@ -3,11 +3,31 @@
 
 extern u64 D_00522D60[];
 
+extern char D_005019A0[];
+
+extern char D_005019C0[];
+
+extern char D_005019E0[];
+
+extern char D_00501A00[];
+
+extern char D_00501A20[];
+
+extern char D_00501A40[];
+
+extern int sceSifRebootIop();
+
+extern int sceSifSyncIop();
+
+extern int func_0010C5E8();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00209F20", func_00209F20);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00209F20", func_00209FD0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00209F20", func_0020A100);
+void func_0020A100(void)
+{
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00209F20", func_0020A110);
 

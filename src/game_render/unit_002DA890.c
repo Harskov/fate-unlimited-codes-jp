@@ -5,7 +5,15 @@ typedef struct Obj002DA930 {
     s32 unk_4;
 } Obj002DA930;
 
-INCLUDE_ASM("asm/nonmatchings/game_render/unit_002DA890", func_002DA890);
+typedef struct Obj002DA890 {
+    u8 unk_0[4];
+    s32 unk_4;
+} Obj002DA890;
+
+s32 func_002DA890(Obj002DA890 *o, s32 arg1)
+{
+    return o->unk_4 -= arg1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_render/unit_002DA890", func_002DA8A0);
 

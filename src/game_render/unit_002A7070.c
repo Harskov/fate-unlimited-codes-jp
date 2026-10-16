@@ -5,7 +5,10 @@ typedef struct Obj002A7160 {
     float unk_24;
 } Obj002A7160;
 
-INCLUDE_ASM("asm/nonmatchings/game_render/unit_002A7070", func_002A7070);
+s32 func_002A7070(s32 *arg0)
+{
+    return ++*arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_render/unit_002A7070", func_002A7080);
 

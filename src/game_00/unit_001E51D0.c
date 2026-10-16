@@ -15,7 +15,11 @@ int func_001E52A0(Obj_001E52A0 *p)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E52B0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E52D0);
+int func_001E52D0(int *arg0)
+{
+    *arg0 |= 0x80;
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E52F0);
 

@@ -2,6 +2,16 @@
 
 void func_00326F30();
 
+typedef struct Entry_00326FD0 {
+    s32 unk_0;
+    u8 unk_4[0x1C];
+} Entry_00326FD0;
+
+typedef struct Obj_00326FD0 {
+    u8 unk_0[0x18C];
+    /* 0x18C */ Entry_00326FD0 unk_18C[1];
+} Obj_00326FD0;
+
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00326DB0", func_00326DB0);
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00326DB0", func_00326DD0);
@@ -30,7 +40,10 @@ INCLUDE_ASM("asm/nonmatchings/game_01/unit_00326DB0", func_00326F30);
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00326DB0", func_00326F80);
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00326DB0", func_00326FD0);
+void func_00326FD0(Obj_00326FD0 *arg0, s32 arg1)
+{
+    arg0->unk_18C[arg1].unk_0 = 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00326DB0", func_00326FE0);
 

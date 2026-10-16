@@ -5,6 +5,11 @@ extern s32 D_00529530[];
 
 void *memset(void *s, int c, u32 n);
 
+typedef struct Obj_00251710 {
+    /* 0x00 */ int *unk_0;
+    /* 0x04 */ int unk_4;
+} Obj_00251710;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00251710);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00251CE0);
@@ -50,7 +55,10 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00252340);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00252370);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_002523B0);
+void func_002523B0(Obj_00251710 *arr)
+{
+    memset(arr->unk_0, 0, arr->unk_4 * 4);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_002523D0);
 

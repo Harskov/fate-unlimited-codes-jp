@@ -3,6 +3,12 @@
 
 extern s32 D_00523A28[];
 
+extern s32 D_00523A40[];
+
+extern void func_0020E040(void *, s32, s32);
+
+extern void func_0020DF80(void *, s32, s32);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", _dpfge);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", func_00159910);
@@ -23,9 +29,15 @@ void func_00159A90(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", func_00159AA0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", func_00159B20);
+void func_00159B20(s32 arg0)
+{
+    func_0020E040(D_00523A40, 0xB0, arg0);
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", func_00159B40);
+void func_00159B40(s32 arg0)
+{
+    func_0020DF80(D_00523A40, 0xB0, arg0);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", func_00159B60);
 

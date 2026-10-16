@@ -11,4 +11,7 @@ s32 func_002A9648(Obj *arg0)
     return 1;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_render/unit_002A9648", func_002A9658);
+int func_002A9658(int *arg0)
+{
+    return arg0[0xC];
+}

@@ -11,6 +11,16 @@ extern u32 D_00523AFC[];
 
 void memset();
 
+extern s32 D_00523850[];
+
+extern void func_0020DF80(void *, s32, s32);
+
+extern void func_0020E040(void *, s32, s32);
+
+extern void func_0020DFE0(void *, s32, s32);
+
+extern s32 D_005237A0[];
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C7170", func_001C7170);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C7170", func_001C7390);
@@ -38,16 +48,28 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C7170", func_001C8620);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C7170", func_001C8640);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C7170", func_001C8660);
+void func_001C8660(s32 arg0)
+{
+    func_0020E040(D_005237A0, 0xB0, arg0);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C7170", func_001C8680);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C7170", func_001C86A0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C7170", func_001C86F0);
+void func_001C86F0(s32 arg0)
+{
+    func_0020DF80(D_00523850, 0xB0, arg0);
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C7170", func_001C8710);
+void func_001C8710(s32 arg0)
+{
+    func_0020DFE0(D_00523850, 0xB0, arg0);
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C7170", func_001C8730);
+void func_001C8730(s32 arg0)
+{
+    func_0020E040(D_00523850, 0xB0, arg0);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C7170", func_001C8750);

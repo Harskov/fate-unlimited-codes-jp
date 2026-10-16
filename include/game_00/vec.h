@@ -9,7 +9,7 @@
    is one type.
 
    Vec3 is the three-float record of func_0017A670, func_001A2E20 and
-   func_001B6F00, a layout distinct from Vec4; its members keep their offset names. */
+   func_001B6F00, a layout distinct from Vec4. */
 typedef struct Vec4 {
     /* 0x00 */ float x;
     /* 0x04 */ float y;
@@ -18,8 +18,8 @@ typedef struct Vec4 {
 } Vec4;
 
 typedef struct Vec3 {
-    /* 0x00 */ float unk_0;
-    /* 0x04 */ float unk_4;
-    /* 0x08 */ float unk_8;
+    /* 0x00 */ float x;
+    /* 0x04 */ float y;
+    /* 0x08 */ float z;
 } Vec3;
 #endif

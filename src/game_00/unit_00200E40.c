@@ -11,6 +11,8 @@ typedef struct Obj_00200E40 {
     s32 unk_30;
 } Obj_00200E40;
 
+extern s32 D_0051FE10[];
+
 void func_00200E40(Obj_00200E40 *p, s32 arg1)
 {
     p->unk_30 = arg1;
@@ -29,7 +31,10 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00200E40", func_00200F30);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00200E40", func_002012B0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00200E40", func_002013F0);
+int func_002013F0(void)
+{
+    return (D_0051FE10[0] & 0x4) != 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00200E40", func_00201410);
 

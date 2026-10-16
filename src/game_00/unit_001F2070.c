@@ -2,6 +2,15 @@
 
 void func_001F2D70();
 
+typedef struct Obj_001F27D0 {
+    u8 unk_0[0x38];
+    s32 unk_38;
+} Obj_001F27D0;
+
+void func_001F27F0();
+
+void func_002B1E28(s32 arg0, void (*arg1)(), s32 arg2);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F2070", func_001F2070);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F2070", func_001F2120);
@@ -10,7 +19,10 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F2070", func_001F24B0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F2070", func_001F2630);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F2070", func_001F27D0);
+void func_001F27D0(Obj_001F27D0 *arg0, s32 arg1)
+{
+    func_002B1E28(arg0->unk_38, func_001F27F0, arg1);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F2070", func_001F27F0);
 

@@ -11,6 +11,10 @@ extern s32 DelayThread(s32 usec);
 
 extern s32 D_00522E10[];
 
+extern s32 D_005231F0[];
+
+void func_00210C10(s32 a, s32 b);
+
 s32 func_0020FA40(void)
 {
     return D_00522E10[0];
@@ -30,7 +34,9 @@ void func_0020FAC0(u32 v)
     D_00522E18[0] = v;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020FA40", func_0020FAD0);
+void func_0020FAD0(void)
+{
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020FA40", func_0020FAE0);
 
@@ -48,4 +54,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020FA40", func_00210B30);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020FA40", func_00210BB0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020FA40", func_00210C00);
+void func_00210C00(s32 arg0)
+{
+    func_00210C10(D_005231F0[0], arg0);
+}

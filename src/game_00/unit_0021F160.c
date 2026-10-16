@@ -19,6 +19,15 @@ typedef struct Obj0021F310 {
 
 int sceRead(int fd, void *buf, int nbyte);
 
+typedef struct Obj0021F340 {
+    u8 unk_0[0x2C];
+    int unk_2C;
+} Obj0021F340;
+
+int sceCdStStop();
+
+void func_0010B888();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F160);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F190);
@@ -36,7 +45,12 @@ int func_0021F320(Obj38 *obj)
     return 1;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F340);
+int func_0021F340(Obj0021F340 *obj)
+{
+    sceCdStStop();
+    func_0010B888(obj->unk_2C);
+    return 1;
+}
 
 int func_0021F370(Obj0021F370 *obj)
 {

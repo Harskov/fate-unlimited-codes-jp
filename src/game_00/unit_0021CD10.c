@@ -11,6 +11,13 @@ void sceSdRemote();
 
 void func_0021D380(void);
 
+typedef struct Obj_0021D1C0 {
+    u8 unk_0[0x48];
+    s32 unk_48;
+    u8 unk_4C[0x8];
+    s32 unk_54;
+} Obj_0021D1C0;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021CD10", func_0021CD10);
 
 void func_0021CD70(int arg0)
@@ -27,7 +34,10 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021CD10", func_0021CF90);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021CD10", func_0021D030);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021CD10", func_0021D1C0);
+int func_0021D1C0(Obj_0021D1C0 *arg0)
+{
+    return arg0->unk_54 >= arg0->unk_48;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021CD10", func_0021D1E0);
 

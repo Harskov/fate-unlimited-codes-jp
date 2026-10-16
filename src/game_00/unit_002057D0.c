@@ -25,18 +25,30 @@ void func_00206220(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002057D0", func_00206230);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002057D0", func_00206240);
+void func_00206240(void)
+{
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002057D0", func_00206250);
+void func_00206250(void)
+{
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002057D0", func_00206260);
+void func_00206260(void)
+{
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002057D0", func_00206270);
+void func_00206270(void)
+{
+}
 
 void func_00206280(void)
 {
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002057D0", func_00206290);
+void func_00206290(void)
+{
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002057D0", func_002062A0);
+void func_002062A0(void)
+{
+}

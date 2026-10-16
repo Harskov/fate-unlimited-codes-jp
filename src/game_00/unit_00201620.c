@@ -11,6 +11,8 @@ typedef struct Obj_002024C0 {
 
 void func_002024D0(s32, s32, void *);
 
+extern void func_002E03D0();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00201620", func_00201620);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00201620", func_002016C0);
@@ -53,4 +55,7 @@ void func_002024C0(s32 arg0, s32 arg1, s32 arg2, Obj_002024C0 *arg3)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00201620", func_002024D0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00201620", func_00202860);
+void func_00202860(s32 arg0, s32 arg1, s32 arg2, s32 arg3)
+{
+    func_002E03D0(arg0, arg2, arg3, arg1);
+}

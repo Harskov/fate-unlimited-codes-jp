@@ -7,9 +7,41 @@ void func_00207CE0(void);
 
 extern s32 D_00522C80[];
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_002076B0);
+extern char *D_003D7BB0[];
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00207700);
+char *strcpy(char *dst, const char *src);
+
+char *strstr(const char *, const char *);
+
+typedef struct Obj_00207E60 {
+    s32 unk_0;
+    s32 unk_4;
+    u8 unk_8;
+} Obj_00207E60;
+
+typedef struct Obj_002084D0 {
+    u8 unk_0[0x10];
+    s32 unk_10;
+} Obj_002084D0;
+
+extern s32 D_00522C70[];
+
+s32 func_002076B0(char *arg0)
+{
+    char *found = strstr(arg0, D_003D7BB0[0]);
+    if (found != 0 && found == arg0) {
+        return 1;
+    }
+    return 0;
+}
+
+char *func_00207700(char *dst)
+{
+    if (dst != 0) {
+        strcpy(dst, D_003D7BB0[0]);
+    }
+    return D_003D7BB0[0];
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00207730);
 
@@ -34,7 +66,12 @@ void func_00207CD0(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00207CE0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00207E60);
+void func_00207E60(Obj_00207E60 *arg0)
+{
+    arg0->unk_0 = 0;
+    arg0->unk_4 = 0;
+    arg0->unk_8 = 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00207E70);
 
@@ -70,7 +107,10 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00208410);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00208470);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_002084D0);
+s32 func_002084D0(Obj_002084D0 *arg0)
+{
+    return arg0->unk_10 + D_00522C70[0];
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_002084F0);
 

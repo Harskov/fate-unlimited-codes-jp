@@ -7,17 +7,34 @@ typedef struct Obj00221190 {
     int unk_C;
 } Obj00221190;
 
+typedef struct Obj00221080 {
+    u8 unk_0[0xC];
+    s32 unk_C;
+} Obj00221080;
+
+typedef struct Obj00221170 {
+    u8 unk_0[0xC];
+    s32 unk_C;
+    s32 unk_10;
+} Obj00221170;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220FE0", func_00220FE0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220FE0", func_00221000);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220FE0", func_00221080);
+int func_00221080(Obj00221080 *o)
+{
+    return o->unk_C == 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220FE0", func_00221090);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220FE0", func_002210E0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220FE0", func_00221170);
+int func_00221170(Obj00221170 *o)
+{
+    return o->unk_C == o->unk_10;
+}
 
 void func_00221190(Obj00221190 *o)
 {
@@ -25,7 +42,9 @@ void func_00221190(Obj00221190 *o)
     o->unk_8 = 0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220FE0", func_002211A0);
+void func_002211A0(void)
+{
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220FE0", func_002211B0);
 
@@ -39,7 +58,9 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220FE0", func_00221D60);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220FE0", func_00221DB0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220FE0", func_002222E0);
+void func_002222E0(void)
+{
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220FE0", func_002222F0);
 

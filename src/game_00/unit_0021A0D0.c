@@ -6,6 +6,13 @@ typedef struct Unk_0021A860 {
     s32 unk_4;
 } Unk_0021A860;
 
+typedef struct Unk_0021A870 {
+    /* 0x00 */ short unk_0;
+    /* 0x02 */ short unk_2;
+    /* 0x04 */ int unk_4;
+    /* 0x08 */ int unk_8;
+} Unk_0021A870;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A0D0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A140);
@@ -30,7 +37,11 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A720);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A7B0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A840);
+s32 func_0021A840(s32 arg0, s32 *arg1)
+{
+    *arg1 += 1;
+    return arg0;
+}
 
 void func_0021A860(Unk_0021A860 *arg0)
 {
@@ -38,7 +49,13 @@ void func_0021A860(Unk_0021A860 *arg0)
     arg0->unk_4 = 0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A870);
+void func_0021A870(Unk_0021A870 *arg0)
+{
+    arg0->unk_0 = 0;
+    arg0->unk_2 = 0;
+    arg0->unk_4 = 0;
+    arg0->unk_8 = 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A890);
 

@@ -3,9 +3,22 @@
 
 void func_001A46A0(void);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C4430", func_001C4430);
+typedef struct Obj {
+    u8 unk_0[0x14C];
+    s32 unk_14C;
+} Obj;
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C4430", func_001C4450);
+s32 func_001C4430(Obj *arg0, s32 arg1)
+{
+    arg0->unk_14C &= arg1;
+    return arg0->unk_14C;
+}
+
+s32 func_001C4450(Obj *arg0, s32 arg1)
+{
+    arg0->unk_14C |= arg1;
+    return arg0->unk_14C;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C4430", func_001C4470);
 

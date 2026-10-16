@@ -7,9 +7,16 @@ typedef struct Obj {
     int unk_14;
 } Obj;
 
+extern s32 D_00522DB0[];
+
+void func_0020F230();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020EB60", func_0020EB60);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020EB60", func_0020EBC0);
+void func_0020EBC0(s32 arg0)
+{
+    func_0020F230(D_00522DB0, arg0 - 0xC);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020EB60", func_0020EBD0);
 

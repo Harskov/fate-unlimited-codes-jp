@@ -111,9 +111,9 @@ Ent0051AC78 *func_0017A670(char kind, short id)
         e->unk_C4 = 1;
         e->unk_C9 = 0;
         e->unk_C8 = kind;
-        e->unk_10.unk_0 = e->unk_10.unk_4 = e->unk_10.unk_8 = 0.0f;
-        e->unk_1C.unk_0 = e->unk_1C.unk_4 = e->unk_1C.unk_8 = 0.0f;
-        e->unk_28.unk_0 = e->unk_28.unk_4 = e->unk_28.unk_8 = 1.0f;
+        e->unk_10.x = e->unk_10.y = e->unk_10.z = 0.0f;
+        e->unk_1C.x = e->unk_1C.y = e->unk_1C.z = 0.0f;
+        e->unk_28.x = e->unk_28.y = e->unk_28.z = 1.0f;
         e->unk_C0 = 0;
         e->unk_CA = 0;
         e->unk_4 = 0;
