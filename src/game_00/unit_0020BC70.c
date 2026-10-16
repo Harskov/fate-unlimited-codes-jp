@@ -4,20 +4,6 @@ void func_002DC248(void);
 
 void func_0020DBB0(f32 a, f32 b);
 
-extern s32 D_00501A80[];
-
-void func_002052F0();
-
-extern s32 D_00501A60[];
-
-extern f32 *func_0020CE80();
-
-extern f32 *func_0020CE90();
-
-extern f32 *func_0020CEA0();
-
-extern f32 *func_0020CEB0();
-
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020BC70", func_0020BC70);
 
 void func_0020BDE0(void)

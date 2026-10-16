@@ -55,9 +55,9 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00252340);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00252370);
 
-void func_002523B0(Obj_00251710 *arr)
+void func_002523B0(Obj_00251710 *arg0)
 {
-    memset(arr->unk_0, 0, arr->unk_4 * 4);
+    memset(arg0->unk_0, 0, arg0->unk_4 * 4);
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_002523D0);

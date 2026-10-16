@@ -5,8 +5,6 @@ void func_0013E810();
 
 int func_0015B6B0(void);
 
-extern void sceGsSyncVCallback(int (*cb)(void));
-
 extern s32 D_00523DAC[];
 
 void func_00211130(s32);

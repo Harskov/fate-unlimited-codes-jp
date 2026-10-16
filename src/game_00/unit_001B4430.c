@@ -8,8 +8,6 @@ void func_001B5DC0();
 
 s32 func_001B5800(s32 arg0, s32 arg1);
 
-void func_001795F0();
-
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B4430", func_001B4430);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B4430", func_001B49E0);

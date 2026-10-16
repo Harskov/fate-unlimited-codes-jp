@@ -1,10 +1,5 @@
 #include "common.h"
 
-typedef struct Obj_00249A20 {
-    u8 unk_0[2];
-    u8 unk_2;
-} Obj_00249A20;
-
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002468D0", func_002468D0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002468D0", func_002469B0);
@@ -22,10 +17,10 @@ int func_00249140(int a0, int a1, int a2)
     return a2;
 }
 
-int func_00249150(int a0, int a1, int a2)
+int func_00249150(int arg0, int arg1, int arg2)
 {
     *(long long *)1 = 0;
-    return a2;
+    return arg2;
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002468D0", func_00249160);

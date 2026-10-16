@@ -27,13 +27,13 @@ You need Linux x86-64 (WSL2 on Windows works), Python 3.9 or newer, git, and you
 
 ## Progress
 
-**693 of 5831 game functions are matched** (4,673 of 560,196 instructions, 0.83 %). 4 of the matched and 8 of all game functions carry a name whose evidence a script checked; so do 4 of 222 types, 54 of 374 members the matched code reaches, 0 of 282 globals the matched code reaches; 5831 functions carry a subsystem label. Every name and its evidence: [docs/NAMES.md](docs/NAMES.md).
+**693 of 5831 game functions are matched** (4,673 of 560,196 instructions, 0.83 %). 4 of the matched and 8 of all game functions carry a name whose evidence a script checked; so do 4 of 205 types, 54 of 366 members the matched code reaches, 0 of 260 globals the matched code reaches; 5831 functions carry a subsystem label. Every name and its evidence: [docs/NAMES.md](docs/NAMES.md).
 
 | Milestone | Status | Exit judged on |
 |---|---|---|
 | M1 Contributable | done | public-build.json ok=True; matched outside their unit: 0 |
-| M2 Identified | current | name pass closed: True; unlabelled game functions: 0; review pending: 156 |
-| M3 Platform boundary | later | 20/318 platform functions matched; PLATFORM.md present |
+| M2 Identified | done | name pass closed: True; unlabelled game functions: 0; review pending: 0 |
+| M3 Platform boundary | current | 20/318 platform functions matched; PLATFORM.md present |
 | M4 Core | later | 27/142 core functions matched; FORMATS.md missing |
 | M5 Gameplay | later | 646/5371 gameplay functions matched |
 | M6 Complete | later | 693/5831 game functions matched; check ok=True |

@@ -5,26 +5,6 @@ int func_0010C5E8(int a, int b, int c);
 
 extern s32 D_00529900[];
 
-extern s32 D_003DF908[];
-
-extern s32 D_003DF910[];
-
-extern s32 D_003DF918[];
-
-extern s32 D_003DF920[];
-
-extern s32 D_003DF928[];
-
-extern s32 D_00503E70[];
-
-extern s32 D_00503E90[];
-
-extern s32 D_00503EB0[];
-
-extern s32 D_00503ED0[];
-
-extern s32 D_00503EF0[];
-
 void func_00255450();
 
 void sceSdRemoteInit(void);

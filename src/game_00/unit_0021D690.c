@@ -67,7 +67,7 @@ void DelayThread(s32);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021D690);
 
-/* probably turns a physical address into its uncached-accelerated alias: keeps the low 28 bits and ORs in 0x20000000 */
+/* probably the uncached mirror of a main-memory address: the EE maps RAM uncached at 0x20000000 */
 u64 func_0021D870(u64 arg0)
 {
     return ((arg0 << 36) >> 36) | 0x20000000;

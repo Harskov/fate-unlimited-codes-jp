@@ -466,8 +466,8 @@ Every function whose code carries COP2 instructions, matched or not. The matched
 
 | File | Line | Kind |
 |---|---|---|
-| `src/game_00/unit_0015B6A0.c` | 115 | inline asm |
-| `src/game_00/unit_00209F20.c` | 52 | inline asm |
+| `src/game_00/unit_0015B6A0.c` | 113 | inline asm |
+| `src/game_00/unit_00209F20.c` | 34 | inline asm |
 | `src/game_00/unit_002530F0.c` | 26 | inline asm |
 | `src/game_01/unit_00302810.c` | 6 | inline asm |
 | `src/game_01/unit_00302810.c` | 8 | COP2 |

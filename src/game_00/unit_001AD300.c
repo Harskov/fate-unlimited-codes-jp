@@ -15,55 +15,42 @@ typedef struct Node {
 } Node;
 
 typedef struct Sub {
-    int field_0;
-    int field_4;
-    int field_8;
-    float field_C;
-    unsigned char pad[0x8];
-    int field_18;
-    unsigned char pad2[0x20];
-    int field_3C;
+    /* 0x00 */ int field_0;
+    /* 0x04 */ int field_4;
+    /* 0x08 */ int field_8;
+    /* 0x0C */ float field_C;
+    /* 0x10 */ int field_10;
+    /* 0x14 */ int field_14;
+    /* 0x18 */ int field_18;
+    /* 0x1C */ int field_1C;
+    /* 0x20 */ int field_20;
+    /* 0x24 */ char field_24[8];
+    /* 0x2C */ char field_2C[8];
+    /* 0x34 */ unsigned char pad[0x8];
+    /* 0x3C */ int field_3C;
 } Sub;
-
-typedef struct Obj_001AE2F0 {
-    unsigned char pad[0x44];
-    Node *field_44[0x40];
-    unsigned char pad2[0x184 - 0x44 - 0x100];
-    /* 0x184 */ Sub unk_184;
-    unsigned char pad3[0x53C - 0x184 - sizeof(Sub)];
-    int field_53C;
-    unsigned char pad4[0x5C0 - 0x53C - 4];
-    float field_5C0;
-} Obj_001AE2F0;
-
-typedef struct Sub_001AE4D0 {
-    int field_0;
-    u8 pad_4[0xC];
-    int field_10;
-    int field_14;
-    u8 pad_18[4];
-    int field_1C;
-    int field_20;
-    char field_24[8];
-    char field_2C[8];
-} Sub_001AE4D0;
 
 typedef struct Obj_001AD300 {
     u8 pad_0[0x38];
     int field_38;
 } Obj_001AD300;
 
-typedef struct Obj_001AE4D0 {
-    u8 pad_0[0xC];
+/* func_0023E280 passes the same object to func_001AE4D0, which fills field_44[], and to func_001AE2F0, which reads it */
+typedef struct Obj_001AE2F0 {
+    unsigned char pad[0xC];
     int field_C;
-    u8 pad_10[0x2C];
+    unsigned char pad_10[0x2C];
     Obj_001AD300 *field_3C;
-    u8 pad_40[4];
-    int field_44[0x40];
-    int field_144[8];
-    int field_164[8];
-    /* 0x184 */ Sub_001AE4D0 unk_184;
-} Obj_001AE4D0;
+    unsigned char pad_40[4];
+    Node *field_44[0x40];
+    void *field_144[8];
+    void *field_164[8];
+    /* 0x184 */ Sub unk_184;
+    unsigned char pad3[0x53C - 0x184 - sizeof(Sub)];
+    int field_53C;
+    unsigned char pad4[0x5C0 - 0x53C - 4];
+    float field_5C0;
+} Obj_001AE2F0;
 
 extern char D_004FEEA0[];
 
@@ -77,7 +64,7 @@ void func_001AE6A0();
 
 void func_001CCFD0();
 
-int func_001FF000();
+void *func_001FF000();
 
 void func_002B1E28();
 
@@ -143,10 +130,10 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AD300", func_001AE340);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AD300", func_001AE3A0);
 
-void func_001AE4D0(Obj_001AE4D0 *p)
+void func_001AE4D0(Obj_001AE2F0 *p)
 {
-    Sub_001AE4D0 *s = &p->unk_184;
-    char name[0x48];
+    Sub *s = &p->unk_184;
+    char buf[0x48];
     void *args[2];
     int i;
 
@@ -155,30 +142,30 @@ void func_001AE4D0(Obj_001AE4D0 *p)
     s->field_20 = 0;
     s->field_10 = 0;
     s->field_14 = func_0020E850(0x3C, 0xB4);
-    sprintf(name, D_004FEEA0);
-    args[0] = name;
+    sprintf(buf, D_004FEEA0);
+    args[0] = buf;
     args[1] = s->field_24;
     func_002B1E28(p->field_3C->field_38, func_001AE6A0, args);
-    sprintf(name, D_004FEEA8);
-    args[0] = name;
+    sprintf(buf, D_004FEEA8);
+    args[0] = buf;
     args[1] = s->field_2C;
     func_002B1E28(p->field_3C->field_38, func_001AE6A0, args);
 
     for (i = 0; i < 0x40; i++) {
-        func_001CCFD0(name, 1, p->field_C, 0x14, i, 0, 0);
-        p->field_44[i] = func_001FF000(name, 0x1000);
+        func_001CCFD0(buf, 1, p->field_C, 0x14, i, 0, 0);
+        p->field_44[i] = func_001FF000(buf, 0x1000);
         if (p->field_44[i] == 0)
             break;
     }
     for (i = 0; i < 8; i++) {
-        func_001CCFD0(name, 1, p->field_C, 0x14, i, 0, 0);
-        p->field_144[i] = func_001FF000(name, 0x2000);
+        func_001CCFD0(buf, 1, p->field_C, 0x14, i, 0, 0);
+        p->field_144[i] = func_001FF000(buf, 0x2000);
         if (p->field_144[i] == 0)
             break;
     }
     for (i = 0; i < 8; i++) {
-        func_001CCFD0(name, 1, p->field_C, 0x14, i, 0, 0);
-        p->field_164[i] = func_001FF000(name, 0x4000);
+        func_001CCFD0(buf, 1, p->field_C, 0x14, i, 0, 0);
+        p->field_164[i] = func_001FF000(buf, 0x4000);
         if (p->field_164[i] == 0)
             break;
     }

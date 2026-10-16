@@ -14,21 +14,7 @@ typedef struct Link_0015D710 {
     struct Link_0015D710 *next;
 } Link_0015D710;
 
-typedef struct Obj_0015E7E0 {
-    u8 pad0[0x8];
-    s32 unk_08;
-    u8 pad_0C[0x84];
-    u32 unk_90;
-} Obj_0015E7E0;
-
 void func_0015E5C0();
-
-typedef struct Obj2_0015E7E0 {
-    u8 unk_0[8];
-    s32 unk_8;
-    u8 unk_C[0x84];
-    f32 unk_90;
-} Obj2_0015E7E0;
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015D010", func_0015D010);
 

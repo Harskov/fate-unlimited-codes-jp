@@ -5,8 +5,8 @@ The project serves four purposes — preservation, recompilation, porting and le
 | # | Milestone | Status | Exit judged on |
 |---|---|---|---|
 | M1 | Contributable | done | public-build.json ok=True; matched outside their unit: 0 |
-| M2 | Identified | current | name pass closed: True; unlabelled game functions: 0; review pending: 156 |
-| M3 | Platform boundary | later | 20/318 platform functions matched; PLATFORM.md present |
+| M2 | Identified | done | name pass closed: True; unlabelled game functions: 0; review pending: 0 |
+| M3 | Platform boundary | current | 20/318 platform functions matched; PLATFORM.md present |
 | M4 | Core | later | 27/142 core functions matched; FORMATS.md missing |
 | M5 | Gameplay | later | 646/5371 gameplay functions matched |
 | M6 | Complete | later | 693/5831 game functions matched; check ok=True |

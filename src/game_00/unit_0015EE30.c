@@ -2,8 +2,6 @@
 
 void *memset(void *s, int c, u32 n);
 
-void func_002E03D0(s32, s32, s32, s32);
-
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015EE30", func_0015EE30);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015EE30", func_0015EFF0);
