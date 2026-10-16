@@ -7,8 +7,8 @@ extern s32 D_00523B38[];
 void func_001E7D20();
 
 /* The object func_001B13B0, func_001B13C0 and func_001B2E60 take as their first argument:
-   func_001B13C0 tests flag words at +0x1E0, +0x1E4 and +0x1EC, a count at +0x24B8 and the
-   id at +0x53C; func_001B2E60 tests +0x1EC too, indexes D_00523B38 with +0x0 and reads
+   func_001B13C0 tests flag words at +0x1E0, +0x1E4 and +0x1EC, the sign of +0x24B8 and
+   whether +0x53C is 0x38; func_001B2E60 tests +0x1EC too, indexes D_00523B38 with +0x0 and reads
    through the pointer at +0x3C; func_001B13B0 clears the 0xA8 bytes at +0x14C4. */
 typedef struct Obj {
     s32 unk_0;

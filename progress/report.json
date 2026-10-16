@@ -84,14 +84,14 @@
   {
    "name": "sdk_dma_graph",
    "measures": {
-    "fuzzy_match_percent": 0.1853,
-    "total_code": 15500,
+    "fuzzy_match_percent": 0.2146,
+    "total_code": 13384,
     "matched_code": 0,
     "matched_code_percent": 0.0,
     "total_data": 0,
     "matched_data": 0,
     "matched_data_percent": 0.0,
-    "total_functions": 216,
+    "total_functions": 186,
     "matched_functions": 0,
     "matched_functions_percent": 0.0,
     "complete_code": 0,
@@ -1588,7 +1588,36 @@
      "metadata": {
       "virtual_address": 1062624
      }
-    },
+    }
+   ],
+   "metadata": {
+    "complete": false,
+    "progress_categories": [
+     "sdk"
+    ],
+    "auto_generated": false
+   }
+  },
+  {
+   "name": "sdk_kernel",
+   "measures": {
+    "fuzzy_match_percent": 0.0,
+    "total_code": 16444,
+    "matched_code": 0,
+    "matched_code_percent": 0.0,
+    "total_data": 0,
+    "matched_data": 0,
+    "matched_data_percent": 0.0,
+    "total_functions": 112,
+    "matched_functions": 0,
+    "matched_functions_percent": 0.0,
+    "complete_code": 0,
+    "complete_code_percent": 0.0,
+    "complete_data": 0,
+    "complete_data_percent": 0.0
+   },
+   "sections": [],
+   "functions": [
     {
      "name": "VSync",
      "size": 144,
@@ -1828,36 +1857,7 @@
      "metadata": {
       "virtual_address": 1064768
      }
-    }
-   ],
-   "metadata": {
-    "complete": false,
-    "progress_categories": [
-     "sdk"
-    ],
-    "auto_generated": false
-   }
-  },
-  {
-   "name": "sdk_kernel",
-   "measures": {
-    "fuzzy_match_percent": 0.0,
-    "total_code": 14328,
-    "matched_code": 0,
-    "matched_code_percent": 0.0,
-    "total_data": 0,
-    "matched_data": 0,
-    "matched_data_percent": 0.0,
-    "total_functions": 82,
-    "matched_functions": 0,
-    "matched_functions_percent": 0.0,
-    "complete_code": 0,
-    "complete_code_percent": 0.0,
-    "complete_data": 0,
-    "complete_data_percent": 0.0
-   },
-   "sections": [],
-   "functions": [
+    },
     {
      "name": "func_00103F60",
      "size": 452,
@@ -3060,13 +3060,13 @@
    "name": "sdk_loadfile",
    "measures": {
     "fuzzy_match_percent": 0.0,
-    "total_code": 7776,
+    "total_code": 13480,
     "matched_code": 0,
     "matched_code_percent": 0.0,
     "total_data": 0,
     "matched_data": 0,
     "matched_data_percent": 0.0,
-    "total_functions": 77,
+    "total_functions": 116,
     "matched_functions": 0,
     "matched_functions_percent": 0.0,
     "complete_code": 0,
@@ -3691,36 +3691,7 @@
      "metadata": {
       "virtual_address": 1105904
      }
-    }
-   ],
-   "metadata": {
-    "complete": false,
-    "progress_categories": [
-     "sdk"
-    ],
-    "auto_generated": false
-   }
-  },
-  {
-   "name": "sdk_mc",
-   "measures": {
-    "fuzzy_match_percent": 0.0,
-    "total_code": 13828,
-    "matched_code": 0,
-    "matched_code_percent": 0.0,
-    "total_data": 0,
-    "matched_data": 0,
-    "matched_data_percent": 0.0,
-    "total_functions": 74,
-    "matched_functions": 0,
-    "matched_functions_percent": 0.0,
-    "complete_code": 0,
-    "complete_code_percent": 0.0,
-    "complete_data": 0,
-    "complete_data_percent": 0.0
-   },
-   "sections": [],
-   "functions": [
+    },
     {
      "name": "StopTimerSystemTime",
      "size": 124,
@@ -4032,7 +4003,36 @@
      "metadata": {
       "virtual_address": 1111688
      }
-    },
+    }
+   ],
+   "metadata": {
+    "complete": false,
+    "progress_categories": [
+     "sdk"
+    ],
+    "auto_generated": false
+   }
+  },
+  {
+   "name": "sdk_mc",
+   "measures": {
+    "fuzzy_match_percent": 0.0,
+    "total_code": 8124,
+    "matched_code": 0,
+    "matched_code_percent": 0.0,
+    "total_data": 0,
+    "matched_data": 0,
+    "matched_data_percent": 0.0,
+    "total_functions": 35,
+    "matched_functions": 0,
+    "matched_functions_percent": 0.0,
+    "complete_code": 0,
+    "complete_code_percent": 0.0,
+    "complete_data": 0,
+    "complete_data_percent": 0.0
+   },
+   "sections": [],
+   "functions": [
     {
      "name": "sceMcInit",
      "size": 664,
@@ -4325,14 +4325,14 @@
   {
    "name": "sdk_ipu",
    "measures": {
-    "fuzzy_match_percent": 0.1146,
-    "total_code": 39784,
+    "fuzzy_match_percent": 0.1091,
+    "total_code": 41804,
     "matched_code": 0,
     "matched_code_percent": 0.0,
     "total_data": 0,
     "matched_data": 0,
     "matched_data_percent": 0.0,
-    "total_functions": 116,
+    "total_functions": 125,
     "matched_functions": 0,
     "matched_functions_percent": 0.0,
     "complete_code": 0,
@@ -5269,36 +5269,7 @@
      "metadata": {
       "virtual_address": 1152712
      }
-    }
-   ],
-   "metadata": {
-    "complete": false,
-    "progress_categories": [
-     "sdk"
-    ],
-    "auto_generated": false
-   }
-  },
-  {
-   "name": "sdk_pad_scf",
-   "measures": {
-    "fuzzy_match_percent": 0.0,
-    "total_code": 11620,
-    "matched_code": 0,
-    "matched_code_percent": 0.0,
-    "total_data": 0,
-    "matched_data": 0,
-    "matched_data_percent": 0.0,
-    "total_functions": 78,
-    "matched_functions": 0,
-    "matched_functions_percent": 0.0,
-    "complete_code": 0,
-    "complete_code_percent": 0.0,
-    "complete_data": 0,
-    "complete_data_percent": 0.0
-   },
-   "sections": [],
-   "functions": [
+    },
     {
      "name": "sceMpegDemuxPssRing",
      "size": 992,
@@ -5370,7 +5341,36 @@
      "metadata": {
       "virtual_address": 1162264
      }
-    },
+    }
+   ],
+   "metadata": {
+    "complete": false,
+    "progress_categories": [
+     "sdk"
+    ],
+    "auto_generated": false
+   }
+  },
+  {
+   "name": "sdk_pad_scf",
+   "measures": {
+    "fuzzy_match_percent": 0.0,
+    "total_code": 9600,
+    "matched_code": 0,
+    "matched_code_percent": 0.0,
+    "total_data": 0,
+    "matched_data": 0,
+    "matched_data_percent": 0.0,
+    "total_functions": 69,
+    "matched_functions": 0,
+    "matched_functions_percent": 0.0,
+    "complete_code": 0,
+    "complete_code_percent": 0.0,
+    "complete_data": 0,
+    "complete_data_percent": 0.0
+   },
+   "sections": [],
+   "functions": [
     {
      "name": "scePadInit",
      "size": 332,
