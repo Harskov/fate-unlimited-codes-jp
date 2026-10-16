@@ -9,6 +9,12 @@ typedef struct Obj {
 } Obj;
 
 void func_00211370();
+void func_0020EC40();
+
+typedef struct Obj_00211400 {
+    u8 pad[0x30];
+    s32 unk_30;
+} Obj_00211400;
 
 extern s32 D_005231F0[];
 
@@ -47,9 +53,9 @@ void *func_002113E0(Node_002113E0 **head)
     return (void *)(n + 1);
 }
 
-void func_00211400(int a0, int a1)
+void func_00211400(int a0, Obj_00211400 *a1)
 {
-    func_0020EC40(a0, a1 + 0x30);
+    func_0020EC40(a0, &a1->unk_30);
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00211170", func_00211410);

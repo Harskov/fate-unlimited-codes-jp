@@ -3,8 +3,6 @@
 
 extern s32 D_00529530[];
 
-extern int D_00529530[];
-
 void *memset(void *s, int c, u32 n);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00251710);

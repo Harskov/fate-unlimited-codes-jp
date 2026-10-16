@@ -1,6 +1,11 @@
 #include "common.h"
 
-char *func_002A55B8(char *base)
+typedef struct Obj_002A55B8 {
+    u8 pad[0xE0];
+    s32 unk_E0;
+} Obj_002A55B8;
+
+void *func_002A55B8(Obj_002A55B8 *o)
 {
-    return base + 0xE0;
+    return &o->unk_E0;
 }

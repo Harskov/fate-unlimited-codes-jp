@@ -10,14 +10,14 @@ typedef struct Obj0021F370 {
     s32 unk30;
 } Obj0021F370;
 
-void sceClose(s32 fd);
+int sceClose(int fd);
 
 typedef struct Obj0021F310 {
     unsigned char pad[0x30];
-    void *unk_30;
+    s32 unk_30;
 } Obj0021F310;
 
-void sceRead();
+int sceRead(int fd, void *buf, int nbyte);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F160);
 
@@ -25,9 +25,9 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F190);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F280);
 
-void func_0021F310(Obj0021F310 *p)
+int func_0021F310(Obj0021F310 *p, void *buf, int nbyte)
 {
-    sceRead(p->unk_30);
+    return sceRead(p->unk_30, buf, nbyte);
 }
 
 int func_0021F320(Obj38 *obj)

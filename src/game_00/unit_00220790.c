@@ -17,11 +17,6 @@ typedef struct Obj00220E90 {
 
 extern void func_00220350();
 
-typedef struct Obj00220EB0 {
-    u8 pad[0x48];
-    u8 unk_48;
-} Obj00220EB0;
-
 typedef struct Obj {
     unsigned char unk_0[0xA8];
     int unk_A8;
@@ -38,11 +33,6 @@ typedef struct Obj00220E20 {
     u8 pad_00[0xA8];
     s32 unk_A8;
 } Obj00220E20;
-
-typedef struct Obj00220E40 {
-    u8 pad[0xA8];
-    s32 unk_A8;
-} Obj00220E40;
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220790", func_00220790);
 
@@ -83,7 +73,7 @@ int func_00220E30(Obj *p)
     return p->unk_A8;
 }
 
-void func_00220E40(Obj00220E40 *o)
+void func_00220E40(Obj *o)
 {
     o->unk_A8 = 1;
 }
@@ -100,7 +90,7 @@ void func_00220EA0(Obj00220EA0 *o)
     func_002202F0(&o->unk_48);
 }
 
-void func_00220EB0(Obj00220EB0 *o)
+void func_00220EB0(Obj00220EA0 *o)
 {
     func_00220350(&o->unk_48);
 }

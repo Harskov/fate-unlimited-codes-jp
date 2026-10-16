@@ -31,9 +31,9 @@ void func_00189BE0(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001873A0", func_00189BF0);
 
-char *func_0018A100(char *base)
+s32 *func_0018A100(s32 *p)
 {
-    return base - 4;
+    return p - 1;
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001873A0", func_0018A110);

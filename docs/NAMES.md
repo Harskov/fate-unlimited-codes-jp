@@ -13,8 +13,8 @@ Classes of evidence:
 |---|---|
 | Game functions | 8 of 5831 (5823 placeholders, 0 awaiting evidence) |
 | Functions, library included | 742 of 8234 (7492 placeholders, 0 awaiting evidence) |
-| Types | 5 of 157 (152 placeholders, 0 awaiting evidence) |
-| Members the matched code reaches | 49 of 277 (228 placeholders, 0 awaiting evidence) |
+| Types | 4 of 161 (157 placeholders, 0 awaiting evidence) |
+| Members the matched code reaches | 49 of 283 (234 placeholders, 0 awaiting evidence) |
 | Globals the matched code reaches | 0 of 158 (158 placeholders, 0 awaiting evidence) |
 
 ## Functions
@@ -771,7 +771,6 @@ Classes of evidence:
 | `Flags` | 20 | propagated | named for its member flags (apply the member's name first) — checked: its member flags carries checked evidence |
 | `Flags4` | 8 | propagated | named for its member flags (apply the member's name first) — checked: its member flags carries checked evidence |
 | `Vec3` | 12 | behavioural | Vec3 is 3 member(s): x, y, z — checked: Vec3 is 3 member(s): unk_0, unk_4, unk_8 |
-| `Vec3@unit_0015EA80` | 12 | behavioural | Vec3@unit_0015EA80 is 3 member(s): x, y, z — checked: Vec3@unit_0015EA80 is 3 member(s): x, y, z |
 | `Vec4` | 16 | behavioural | Vec4 is 4 member(s): unk_0, unk_4, unk_8, unk_C — checked: Vec4 is 4 member(s): x, y, z, w |
 
 ## Members

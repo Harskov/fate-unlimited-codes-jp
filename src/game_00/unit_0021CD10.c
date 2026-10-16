@@ -7,8 +7,6 @@ extern int D_00527580[];
 
 extern int D_00527588[];
 
-extern s32 D_00527580[];
-
 void sceSdRemote();
 
 void func_0021D380(void);

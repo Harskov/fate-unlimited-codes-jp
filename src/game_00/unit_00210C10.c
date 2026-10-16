@@ -3,18 +3,20 @@
 
 extern s32 D_005231D8[];
 
-extern int D_005231D8[];
+typedef struct Obj_00210CA0 {
+    u8 unk_0[0x30];
+} Obj_00210CA0;
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00210C10", func_00210C10);
 
-char *func_00210CA0(char *base)
+void *func_00210CA0(Obj_00210CA0 *p)
 {
-    return base + 0x30;
+    return p + 1;
 }
 
-char *func_00210CB0(char *base)
+Obj_00210CA0 *func_00210CB0(void *p)
 {
-    return base - 0x30;
+    return (Obj_00210CA0 *)p - 1;
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00210C10", func_00210CC0);

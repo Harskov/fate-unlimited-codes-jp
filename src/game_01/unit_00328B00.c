@@ -8,11 +8,16 @@ typedef struct Rec005319A8 {
 
 extern Rec005319A8 D_005319A8[];
 
+typedef struct Obj_00328BD0 {
+    u8 pad[0x34];
+    s32 unk_34;
+} Obj_00328BD0;
+
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00328B00);
 
-char *func_00328BD0(char *base)
+void *func_00328BD0(Obj_00328BD0 *o)
 {
-    return base + 0x34;
+    return &o->unk_34;
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00328BE0);

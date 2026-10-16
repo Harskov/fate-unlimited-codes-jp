@@ -14,11 +14,6 @@ typedef struct Link_0015D710 {
     struct Link_0015D710 *next;
 } Link_0015D710;
 
-typedef struct Obj_0015E5E0 {
-    s32 unk_0;
-    /* 0x04 */ u32 unk_4;
-} Obj_0015E5E0;
-
 typedef struct Obj_0015E7E0 {
     u8 pad0[0x8];
     s32 unk_08;
@@ -98,7 +93,7 @@ void func_0015E5C0(Obj_0015E5C0 *p)
     p->unk_4 &= ~0x800;
 }
 
-void func_0015E5E0(Obj_0015E5E0 *p)
+void func_0015E5E0(Obj_0015E5C0 *p)
 {
     p->unk_4 |= 0x800;
 }
