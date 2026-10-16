@@ -2,20 +2,17 @@
 #include "game_00/vec.h"
 #include "game_00/tbl_0051D890.h"
 #include "game_00/tbl_00528A00.h"
+#include "game_00/tbl_00522E90.h"
+#include "game_00/tbl_00523900.h"
+#include "game_00/tbl_00531B60.h"
 
 extern int D_00522E20[];
 
-extern int D_00522E90[];
-
 extern int D_005231C0[];
-
-extern int D_00523900[];
 
 extern int D_00523AF0[];
 
 extern int D_00523D50[];
-
-extern int D_00531B60[];
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001735C0", func_001735C0);
 

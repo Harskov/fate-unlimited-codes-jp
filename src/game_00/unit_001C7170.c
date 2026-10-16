@@ -1,7 +1,6 @@
 #include "common.h"
 #include "types.h"
-
-extern u8 D_0051D890[];
+#include "game_00/tbl_0051D890.h"
 
 extern u32 D_0051D8A0[];
 

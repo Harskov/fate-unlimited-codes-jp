@@ -2,6 +2,7 @@
 #include "types.h"
 
 #include "game_00/adxowner.h"
+#include "game_00/tbl_0051E444.h"
 
 int func_0013B9C8(void *p);
 
@@ -16,8 +17,6 @@ void RotateThreadReadyQueue(s32);
 extern s32 D_003DF610[];
 
 extern s32 D_003DF630[];
-
-extern s32 D_00524798[];
 
 extern s32 D_005275A8[];
 

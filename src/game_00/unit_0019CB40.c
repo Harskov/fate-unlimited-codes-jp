@@ -1,22 +1,12 @@
 #include "common.h"
 #include "game_00/tbl_0051C870.h"
-
-typedef struct Ent00531B60 {
-    unsigned char unk_0[0x3C];
-    int unk_3C;
-    int unk_40[4];
-    unsigned char unk_50[0x24];
-} Ent00531B60;
+#include "game_00/tbl_00522E90.h"
+#include "game_00/tbl_00531B60.h"
 
 typedef struct Obj {
     unsigned char unk_0[0x24FC];
     int unk_24FC;
 } Obj;
-
-typedef struct Rec00522E90 {
-    /* 0x00 */ short unk_0;
-    unsigned char unk_2[0x62];
-} Rec00522E90;
 
 typedef struct Ctx {
     int unk_0;
@@ -28,10 +18,6 @@ typedef struct Node {
     /* 0x0C */ struct Node *link_C;
     /* 0x10 */ struct Node *link_10;
 } Node;
-
-extern Ent00531B60 D_00531B60[];
-
-extern Rec00522E90 D_00522E90[];
 
 extern int D_0051C860[];
 

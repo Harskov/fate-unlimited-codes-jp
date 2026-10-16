@@ -1,5 +1,4 @@
 address	name	label
-0x00100000	func_00100000	core
 0x00100008	entry	platform
 0x00100218	_exit	core
 0x00100220	func_00100220	core

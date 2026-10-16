@@ -11,7 +11,9 @@
    again at 0x0015AB20 (`ori 0x20` / `and -0x21` around `%lo(D_0051D890)`), func_001A3890
    tests bit 0x400000 and func_0019A9A0 bit 0x02000000.
    What the record array counts from and why the accessors' step is 9 records is not
-   settled; that needs a function that walks the array rather than indexing it. */
+   settled; that needs a function that walks the array rather than indexing it.
+   func_001C85B0 clears 0xC40 bytes from the base, which is not a whole number of
+   records: the array may sit at the head of a larger block. */
 typedef struct Rec0051D890 {
     /* 0x00 */ int flags;
     /* 0x04 */ int counter;

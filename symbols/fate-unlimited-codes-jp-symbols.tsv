@@ -1,5 +1,5 @@
 name	unit	kind	status	label	evidence
-func_00100000	unit_00100000	function	wip	core	boot chain: crt0
+func_00100000	unit_00100000	function	skipped-data	core	boot chain: crt0
 entry	unit_00100008	function	asm	platform	calls FlushCache, _InitSys; renamed from func_00100008
 _exit	unit_00100008	function	asm	core	boot chain: crt0; renamed from func_00100218
 func_00100220	unit_00100220	function	wip	core	boot chain: crt0
