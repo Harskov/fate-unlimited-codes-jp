@@ -1,56 +1,12 @@
 #include "common.h"
 #include "game_00/tbl_0051C858.h"
+#include "game_00/obj_001ae2f0.h"
 
 typedef struct Obj {
     unsigned char unk_0[0x238C];
     int unk_238C;
     int unk_2390;
 } Obj;
-
-/* The elements of Obj_001AE2F0.field_44[] are objects in their own right; func_001AE2F0
- * reads one int out of one at +0x38. */
-typedef struct Node {
-    unsigned char pad[0x38];
-    int field_38;
-} Node;
-
-typedef struct Sub {
-    /* 0x00 */ int field_0;
-    /* 0x04 */ int field_4;
-    /* 0x08 */ int field_8;
-    /* 0x0C */ float field_C;
-    /* 0x10 */ int field_10;
-    /* 0x14 */ int field_14;
-    /* 0x18 */ int field_18;
-    /* 0x1C */ int field_1C;
-    /* 0x20 */ int field_20;
-    /* 0x24 */ char field_24[8];
-    /* 0x2C */ char field_2C[8];
-    /* 0x34 */ unsigned char pad[0x8];
-    /* 0x3C */ int field_3C;
-} Sub;
-
-typedef struct Obj_001AD300 {
-    u8 pad_0[0x38];
-    int field_38;
-} Obj_001AD300;
-
-/* func_0023E280 passes the same object to func_001AE4D0, which fills field_44[], and to func_001AE2F0, which reads it */
-typedef struct Obj_001AE2F0 {
-    unsigned char pad[0xC];
-    int field_C;
-    unsigned char pad_10[0x2C];
-    Obj_001AD300 *field_3C;
-    unsigned char pad_40[4];
-    Node *field_44[0x40];
-    void *field_144[8];
-    void *field_164[8];
-    /* 0x184 */ Sub unk_184;
-    unsigned char pad3[0x53C - 0x184 - sizeof(Sub)];
-    int field_53C;
-    unsigned char pad4[0x5C0 - 0x53C - 4];
-    float field_5C0;
-} Obj_001AE2F0;
 
 extern char D_004FEEA0[];
 
@@ -110,7 +66,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AD300", func_001AE150);
 
 void func_001AE2F0(Obj_001AE2F0 *p, int arg1)
 {
-    Sub *s = &p->unk_184;
+    Obj_001AE2F0_2 *s = &p->unk_184;
     if (arg1 < 0)
         return;
     s->field_0 = arg1;
@@ -132,7 +88,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AD300", func_001AE3A0);
 
 void func_001AE4D0(Obj_001AE2F0 *p)
 {
-    Sub *s = &p->unk_184;
+    Obj_001AE2F0_2 *s = &p->unk_184;
     char buf[0x48];
     void *args[2];
     int i;

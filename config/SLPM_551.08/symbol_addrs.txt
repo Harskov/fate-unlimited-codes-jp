@@ -747,3 +747,4 @@ Vec4_GetW = 0x00175070; // type:func size:0x8
 Vec4_GetZ = 0x00175080; // type:func size:0x8
 sceSifSetDma = 0x00106188; // type:func size:0x88
 sceSifGetSreg = 0x00106078; // type:func size:0x18
+D_00523900 = 0x00523900; // size:0x40

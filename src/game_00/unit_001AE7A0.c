@@ -1,4 +1,5 @@
 #include "common.h"
+#include "game_00/obj_001ae2f0.h"
 
 typedef struct Sub {
     unsigned char pad[0xC];
@@ -14,11 +15,6 @@ typedef struct Obj {
     unsigned char pad[0x3C];
     Obj_001AE7A0_2 *field_3C;
 } Obj;
-
-typedef struct Obj_001AE7D0 {
-    unsigned char pad[0x3C];
-    void *field_3C;
-} Obj_001AE7D0;
 
 typedef struct Sub001AE860 {
     unsigned char unk_0[2];
@@ -57,7 +53,7 @@ void func_001AE7A0(Obj *p)
     }
 }
 
-void func_001AE7D0(Obj_001AE7D0 *p)
+void func_001AE7D0(Obj_001AE2F0 *p)
 {
     func_002032B0(p->field_3C);
 }

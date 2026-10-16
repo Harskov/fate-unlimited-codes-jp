@@ -27,7 +27,7 @@ You need Linux x86-64 (WSL2 on Windows works), Python 3.9 or newer, git, and you
 
 ## Progress
 
-**693 of 5831 game functions are matched** (4,673 of 560,196 instructions, 0.83 %). 4 of the matched and 8 of all game functions carry a name whose evidence a script checked; so do 4 of 205 types, 54 of 366 members the matched code reaches, 0 of 260 globals the matched code reaches; 5831 functions carry a subsystem label. Every name and its evidence: [docs/NAMES.md](docs/NAMES.md).
+**693 of 5831 game functions are matched** (4,673 of 560,196 instructions, 0.83 %). 4 of the matched and 8 of all game functions carry a name whose evidence a script checked; so do 4 of 203 types, 54 of 364 members the matched code reaches, 0 of 260 globals the matched code reaches; 5831 functions carry a subsystem label. Every name and its evidence: [docs/NAMES.md](docs/NAMES.md).
 
 | Milestone | Status | Exit judged on |
 |---|---|---|

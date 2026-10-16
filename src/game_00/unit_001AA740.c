@@ -1,5 +1,6 @@
 #include "common.h"
 #include "game_00/tbl_0051C858.h"
+#include "game_00/obj_001ae2f0.h"
 
 typedef struct Obj {
     unsigned char unk_0[0x1E4];
@@ -20,11 +21,6 @@ typedef struct Obj_001AA740 {
     unsigned char unk_0[0xB4];
     int unk_B4;
 } Obj_001AA740;
-
-typedef struct Obj_001AB330 {
-    unsigned char pad[0x3C];
-    void *field_3C;
-} Obj_001AB330;
 
 extern float func_00175B10(float v);
 
@@ -81,7 +77,7 @@ void func_001AB2B0(Obj_001AB2B0 *obj)
     }
 }
 
-void func_001AB330(Obj_001AB330 *p)
+void func_001AB330(Obj_001AE2F0 *p)
 {
     func_001F27D0(p->field_3C);
 }
