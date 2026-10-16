@@ -35,7 +35,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015A2E0", func_0015A7C0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015A2E0", func_0015A810);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015A2E0", func_0015A9F0);
+INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015A2E0", main);
 
 void func_0015AA30(void)
 {

@@ -17,7 +17,7 @@ float func_001BF7D0(Obj2524 *arg0)
 
 int func_001BF810(Obj2524 *arg0)
 {
-    Cache2448 *c;
+    Obj1D0 *c;
 
     if (arg0 == 0)
         return 0;
@@ -43,7 +43,7 @@ float func_001BF870(Obj2524 *arg0)
 
 float func_001BF8B0(Obj2524 *arg0)
 {
-    Cache2448 *c;
+    Obj1D0 *c;
     Obj2524 *o;
 
     if (arg0 == 0)
@@ -89,7 +89,7 @@ int func_001C0780(Obj2524 *arg0, float a, float b)
 
 void func_001C07F0(Obj2524 *arg0, short v)
 {
-    Cache2448 *c;
+    Obj1D0 *c;
 
     if (arg0 != 0) {
         c = arg0->unk_2448;

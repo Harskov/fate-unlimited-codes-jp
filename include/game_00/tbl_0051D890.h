@@ -13,8 +13,8 @@
    What the record array counts from and why the accessors' step is 9 records is not
    settled; that needs a function that walks the array rather than indexing it. */
 typedef struct Rec0051D890 {
-    int unk_0;
-    int unk_4;
+    /* 0x00 */ int flags;
+    /* 0x04 */ int counter;
     unsigned char unk_8[0x8];
     int unk_10;
     int unk_14;

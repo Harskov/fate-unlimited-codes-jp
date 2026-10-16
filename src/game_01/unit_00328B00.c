@@ -10,7 +10,10 @@ extern Rec005319A8 D_005319A8[];
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00328B00);
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00328BD0);
+char *func_00328BD0(char *base)
+{
+    return base + 0x34;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00328BE0);
 
@@ -61,4 +64,7 @@ INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00329960);
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00329970);
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00329980);
+int func_00329980(void)
+{
+    return 0x110;
+}

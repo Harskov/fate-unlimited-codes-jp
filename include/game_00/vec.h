@@ -4,7 +4,7 @@
 
    Vec4 is the four-float record agreed by func_0016CFD0, func_0016D000,
    func_0016D070, func_0016D0B0, func_0016E8F0, func_0016E9E0, func_0016F680,
-   func_0016F6D0, func_00175070 and func_00175080, which had carried ten identical
+   func_0016F6D0, Vec4_GetW and Vec4_GetZ, which had carried ten identical
    copies of it. The helpers divide into two groups over the same layout: some touch
    unk_0..unk_8 and leave unk_C alone (func_0016CFD0, func_0016E8F0, func_0016E9E0),
    the rest touch all four. Both groups read the same offsets, so this is one type.
@@ -19,15 +19,15 @@
    rule. Vec3's x/y/z come from the copies being consolidated, which already used
    them. */
 typedef struct Vec4 {
-    float unk_0;
-    float unk_4;
-    float unk_8;
-    float unk_C;
+    /* 0x00 */ float x;
+    /* 0x04 */ float y;
+    /* 0x08 */ float z;
+    /* 0x0C */ float w;
 } Vec4;
 
 typedef struct Vec3 {
-    float x;
-    float y;
-    float z;
+    /* 0x00 */ float unk_0;
+    /* 0x04 */ float unk_4;
+    /* 0x08 */ float unk_8;
 } Vec3;
 #endif

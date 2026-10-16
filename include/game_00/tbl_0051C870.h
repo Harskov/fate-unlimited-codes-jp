@@ -11,13 +11,13 @@
    %hi/%lo(D_0051C870) and %hi/%lo(D_0051C874) separately and adds the same i*8 to each,
    which is what makes the relocations match (as for D_00528A08/D_00528A10). */
 typedef struct Slot0051C870 {
-    int used;
+    /* 0x00 */ int unk_0;
     int *owner;
 } Slot0051C870;
 
 /* the owner column, addressed through its own symbol */
 typedef struct Own0051C874 {
-    int *owner;
+    /* 0x00 */ int *unk_0;
     int pad_4;
 } Own0051C874;
 

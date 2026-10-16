@@ -3,7 +3,14 @@
 
 void func_0013E810();
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015B6A0", func_0015B6A0);
+extern int func_0015B6B0(void);
+
+extern void sceGsSyncVCallback(int (*cb)(void));
+
+void func_0015B6A0(void)
+{
+    sceGsSyncVCallback(func_0015B6B0);
+}
 
 int func_0015B6B0(void)
 {

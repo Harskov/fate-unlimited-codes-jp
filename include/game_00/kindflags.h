@@ -6,8 +6,8 @@
    sets bits 0x1 and 0x2 of the word at +0x4. func_001CBA10 passes one pointer to both
    func_001A6300 and func_001AA2A0 and updates +0x4 of it itself, so the variants in
    unit_001A5D70 and unit_001AA110 work on the same object. */
-typedef struct KindFlags {
+typedef struct Obj8 {
     int kind;
     unsigned int flags;
-} KindFlags;
+} Obj8;
 #endif

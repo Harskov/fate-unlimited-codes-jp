@@ -2,6 +2,8 @@
 
 extern s32 D_0051F220[];
 
+void func_001E7420(void);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E6380", func_001E6380);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E6380", func_001E63C0);
@@ -41,6 +43,9 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E6380", func_001E7340);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E6380", func_001E7420);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E6380", func_001E7560);
+void func_001E7560(void)
+{
+    func_001E7420();
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E6380", func_001E7570);

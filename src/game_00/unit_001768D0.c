@@ -3,20 +3,20 @@
 typedef int (*Handler)(int, int, unsigned char *);
 
 typedef struct Ent {
-    int flags;
+    /* 0x00 */ int unk_0;
 } Ent;
 
 typedef struct Node {
     int unk_0;
-    Ent *cur;
-    Ent *end;
+    /* 0x04 */ Ent *unk_4;
+    /* 0x08 */ Ent *unk_8;
 } Node;
 
-typedef struct Mgr {
+typedef struct Obj_001768D0 {
     unsigned char unk_0[0x3C];
-    Node *nodes[10];
+    /* 0x3C */ Node *unk_3C[10];
     int count;
-} Mgr;
+} Obj_001768D0;
 
 /* free-list node: func_00177B00 pops the head of a singly linked list */
 typedef struct Node_00177B00 { struct Node_00177B00 *next; } Node_00177B00;
@@ -83,17 +83,17 @@ void func_00177580(void **head, void **p)
     *head = slot;
 }
 
-void func_001775A0(Mgr *m)
+void func_001775A0(Obj_001768D0 *m)
 {
     int i;
 
     for (i = 0; i < m->count; i++) {
-        Node *n = m->nodes[i];
+        Node *n = m->unk_3C[i];
         if (n != 0) {
-            Ent *e = n->cur;
-            if (e != n->end) {
-                e->flags &= ~0x20000;
-                m->nodes[i]->cur->flags |= 1;
+            Ent *e = n->unk_4;
+            if (e != n->unk_8) {
+                e->unk_0 &= ~0x20000;
+                m->unk_3C[i]->unk_4->unk_0 |= 1;
             }
         }
     }

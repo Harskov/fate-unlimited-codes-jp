@@ -33,14 +33,16 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001735C0", func_00174A80);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001735C0", func_00174CE0);
 
-float func_00175070(Vec4 *v)
+/* evidence: the body is `v -> w` */
+float Vec4_GetW(Vec4 *v)
 {
-    return v->unk_C;
+    return v->w;
 }
 
-float func_00175080(Vec4 *v)
+/* evidence: the body is `v -> z` */
+float Vec4_GetZ(Vec4 *v)
 {
-    return v->unk_8;
+    return v->z;
 }
 
 unsigned int *func_00175090(int a, int b, unsigned int *p)
@@ -121,10 +123,10 @@ int func_001766A0(int id, int side)
     int ret = 0;
 
     for (i = 0; i < 12; i++) {
-        if (D_00528A00[i].used[side] == 1 && D_00528A00[i].id[side] == id) {
-            D_00528A00[i].used[side] = 0;
-            D_00528A10[i].v[side] = 0;
-            D_00528A08[i].v[side] = 0;
+        if (D_00528A00[i].unk_0[side] == 1 && D_00528A00[i].unk_10[side] == id) {
+            D_00528A00[i].unk_0[side] = 0;
+            D_00528A10[i].unk_0[side] = 0;
+            D_00528A08[i].unk_0[side] = 0;
             ret = 1;
             break;
         }
@@ -137,8 +139,8 @@ int func_00176740(int id, int side)
     int i;
 
     for (i = 0; i < 12; i++) {
-        if (D_00528A00[i].used[side] == 1 && D_00528A00[i].id[side] == id) {
-            return D_00528A08[i].v[side];
+        if (D_00528A00[i].unk_0[side] == 1 && D_00528A00[i].unk_10[side] == id) {
+            return D_00528A08[i].unk_0[side];
         }
     }
     return 0;

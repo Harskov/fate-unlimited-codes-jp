@@ -2,6 +2,11 @@
 
 extern s32 D_0051F138[];
 
+typedef struct Obj_001E3140 {
+    unsigned char pad[0xB8];
+    s32 unk_B8;
+} Obj_001E3140;
+
 s32 func_001E2F20(void)
 {
     return D_0051F138[0];
@@ -9,11 +14,16 @@ s32 func_001E2F20(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E2F20", func_001E2F30);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E2F20", func_001E3110);
+void func_001E3110(void)
+{
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E2F20", func_001E3120);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E2F20", func_001E3140);
+void func_001E3140(Obj_001E3140 *p, s32 arg1)
+{
+    p->unk_B8 = arg1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E2F20", func_001E3150);
 
@@ -29,7 +39,9 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E2F20", func_001E3600);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E2F20", func_001E36C0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E2F20", func_001E37F0);
+void func_001E37F0(void)
+{
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E2F20", func_001E3800);
 

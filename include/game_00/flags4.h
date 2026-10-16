@@ -4,6 +4,6 @@
    each loads it once and returns 1 when bits 0x1 and 0x2 are both set. */
 typedef struct Flags4 {
     int unk_0;
-    int unk_4;
+    /* 0x04 */ int flags;
 } Flags4;
 #endif

@@ -9,10 +9,10 @@ typedef struct Src {
     float unk_468;
 } Src;
 
-typedef struct Other {
+typedef struct Obj_001A27D0 {
     float unk_0;
     float unk_4;
-} Other;
+} Obj_001A27D0;
 
 extern int D_005239C8[];
 
@@ -33,11 +33,11 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A27D0", func_001A2C70);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A27D0", func_001A2DD0);
 
-int func_001A2E20(Src *s, Vec3 *dst, float *out, Other *o, int i, float w)
+int func_001A2E20(Src *s, Vec3 *dst, float *out, Obj_001A27D0 *o, int i, float w)
 {
-    dst[i].x = s->unk_460;
-    dst[i].y = o->unk_4;
-    dst[i].z = s->unk_468;
+    dst[i].unk_0 = s->unk_460;
+    dst[i].unk_4 = o->unk_4;
+    dst[i].unk_8 = s->unk_468;
     out[i] = w;
     return i + 1;
 }
@@ -63,7 +63,7 @@ int func_001A35D0(int i, int v)
 {
     Rec0051D890 *r = &D_0051D890[i];
 
-    r[10].unk_0 = v;
+    r[10].flags = v;
     return 0;
 }
 

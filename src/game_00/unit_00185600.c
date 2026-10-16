@@ -18,9 +18,15 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00185600", func_00185A20);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00185600", func_00185AE0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00185600", func_00185FF0);
+f32 func_00185FF0(f32 x)
+{
+    return x;
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00185600", func_00186000);
+f32 func_00186000(f32 x)
+{
+    return x;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00185600", func_00186010);
 

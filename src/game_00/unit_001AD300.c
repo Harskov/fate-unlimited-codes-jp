@@ -29,7 +29,7 @@ typedef struct Obj_001AE2F0 {
     unsigned char pad[0x44];
     Node *field_44[0x40];
     unsigned char pad2[0x184 - 0x44 - 0x100];
-    Sub sub;
+    /* 0x184 */ Sub unk_184;
     unsigned char pad3[0x53C - 0x184 - sizeof(Sub)];
     int field_53C;
     unsigned char pad4[0x5C0 - 0x53C - 4];
@@ -53,9 +53,9 @@ void func_001AD3D0(int index)
     }
 
     for (; i < end; i++) {
-        for (n = D_0051C858[i]->list; n != 0; n = n->next) {
-            ((Obj *)n->obj)->unk_2390 = 0;
-            ((Obj *)n->obj)->unk_238C = 0;
+        for (n = D_0051C858[i]->unk_C; n != 0; n = n->next) {
+            ((Obj *)n->unk_0)->unk_2390 = 0;
+            ((Obj *)n->unk_0)->unk_238C = 0;
         }
     }
 }
@@ -78,7 +78,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AD300", func_001AE150);
 
 void func_001AE2F0(Obj_001AE2F0 *p, int arg1)
 {
-    Sub *s = &p->sub;
+    Sub *s = &p->unk_184;
     if (arg1 < 0)
         return;
     s->field_0 = arg1;

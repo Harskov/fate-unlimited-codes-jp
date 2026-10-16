@@ -5,8 +5,8 @@
    func_0021DF20 (passes it to func_0013B9C8) and func_0021F320 (passes it to
    func_0013AA00); func_0021F190 passes the same field to func_0013B9C8 and
    func_0013B038. */
-typedef struct AdxOwner {
+typedef struct Obj38 {
     u8 pad0[0x34];
     void *unk34;
-} AdxOwner;
+} Obj38;
 #endif

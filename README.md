@@ -27,18 +27,19 @@ You need Linux x86-64 (WSL2 on Windows works), Python 3.9 or newer, git, and you
 
 ## Progress
 
-**238 of 5831 game functions are matched** (2,942 of 560,196 instructions, 0.53 %). 6 functions carry a name backed by evidence; 5831 carry a subsystem label.
+**537 of 5831 game functions are matched** (3,653 of 560,196 instructions, 0.65 %). 4 of the matched and 8 of all game functions carry a name whose evidence a script checked; so do 5 of 157 types, 49 of 277 members the matched code reaches, 0 of 158 globals the matched code reaches; 5831 functions carry a subsystem label. Every name and its evidence: [docs/NAMES.md](docs/NAMES.md).
 
 | Milestone | Status | Exit judged on |
 |---|---|---|
 | M1 Contributable | done | public-build.json ok=True; matched outside their unit: 0 |
-| M2 Identified | done | name pass closed: True; unlabelled game functions: 0; review pending: 0 |
-| M3 Platform boundary | current | 13/318 platform functions matched; PLATFORM.md present |
-| M4 Core | later | 14/142 core functions matched; FORMATS.md missing |
-| M5 Gameplay | later | 211/5371 gameplay functions matched |
-| M6 Complete | later | 238/5831 game functions matched; check ok=True |
+| M2 Identified | current | name pass closed: True; unlabelled game functions: 0; review pending: 299 |
+| M3 Platform boundary | later | 17/318 platform functions matched; PLATFORM.md present |
+| M4 Core | later | 26/142 core functions matched; FORMATS.md missing |
+| M5 Gameplay | later | 494/5371 gameplay functions matched |
+| M6 Complete | later | 537/5831 game functions matched; check ok=True |
 | M7 Documented | later | docs.py check ok=None (never run) |
-| M8 Behaviour-verified | later | last behaviour compare ok=None at never |
+| M8 Behaviour-verified | not required | last behaviour compare ok=None at never |
+| M9 Reverse-engineered | done | names without checked evidence: 0; matches since the last name pass: 0; named types with two layouts: 0 |
 
 The milestones and why they come in this order: [ROADMAP.md](ROADMAP.md).
 
@@ -50,8 +51,11 @@ The source here was written function by function and accepted only when the pinn
 original under the project's criterion (the compiled code must be byte for byte the original's). Much of it was drafted with AI assistance (Claude, and the
 batch lane's models); every accepted function was rebuilt and compared by the tooling on the maintainer's machine, and
 the commit that adds a function carries a credit line naming who wrote it (`Co-Authored-By: Claude <noreply@anthropic.com>`
-for the operator's model, `Assisted-by: <model> (batch)` for the batch lane). Names are given only with cited evidence (a
-string, a caller, a frame label, a field); otherwise the systematic placeholder stays. A function marked `// !FAKE:` matches
+for the operator's model, `Assisted-by: <model> (batch)` for the batch lane). A name — of a function, a type, a struct member
+or a global — is written only after a script has checked each fact it cites against the code (a string, an SDK prototype, a
+library symbol, a checked caller, what the matched code does with a member) and every word of the name against those facts;
+otherwise the systematic placeholder stays. [docs/NAMES.md](docs/NAMES.md) lists every name with its evidence, so each one can
+be checked again. A function marked `// !FAKE:` matches
 through an implausible form and is listed as readability debt in [ROADMAP.md](ROADMAP.md).
 
 ## Platform: PlayStation 2 (Metrowerks CodeWarrior)
@@ -83,7 +87,7 @@ maintainer's tooling does with a merged pull request.
 ## Layout
 
 `src/` the source in the layout the toolchain consumes (one file per unit; a function not yet accepted is a reference
-line) · `docs/` the architecture, the subsystem pages and the code map · `config/<SERIAL>/` each release's splat configuration, symbol map, checksums and tool pins · `include/` the shared headers and types · `orig/<SERIAL>/` where your copy of the executable goes (gitignored) · `symbols/` the symbol map with its evidence · `tools/` the contributor copies of the lint and the check ·
+line) · `docs/` the architecture, the subsystem pages, the code map and `NAMES.md` (every name and its evidence) · `config/<SERIAL>/` each release's splat configuration, symbol map, checksums and tool pins · `include/` the shared headers and types · `orig/<SERIAL>/` where your copy of the executable goes (gitignored) · `symbols/` the symbol map with its evidence · `tools/` the contributor copies of the lint and the check ·
 `progress/report.json` the progress report.
 
 ## License

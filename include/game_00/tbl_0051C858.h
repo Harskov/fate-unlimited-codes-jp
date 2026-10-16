@@ -5,19 +5,19 @@
    the same object are tested), so Node0051C858.obj stays untyped and each source casts
    it to its own view. */
 typedef struct Node0051C858 {
-    void *obj;
+    /* 0x00 */ void *unk_0;
     unsigned char unk_4[8];
     struct Node0051C858 *next;
 } Node0051C858;
 
 typedef struct Entry0051C858 {
     unsigned char unk_0[0xC];
-    Node0051C858 *list;
+    /* 0x0C */ Node0051C858 *unk_C;
 } Entry0051C858;
 
 typedef struct Ctx0051C858 {
     unsigned char unk_0[8];
-    int index;
+    /* 0x08 */ int unk_8;
 } Ctx0051C858;
 
 extern Entry0051C858 *D_0051C858[];

@@ -1,7 +1,7 @@
 address	name	label
 0x00100000	func_00100000	core
 0x00100008	entry	platform
-0x00100218	func_00100218	core
+0x00100218	_exit	core
 0x00100220	func_00100220	core
 0x00158030	func_00158030	gameplay/game_00.001
 0x00158348	func_00158348	gameplay/game_00.001
@@ -81,7 +81,7 @@ address	name	label
 0x0015A6F0	func_0015A6F0	gameplay/game_00.006
 0x0015A7C0	func_0015A7C0	platform
 0x0015A810	func_0015A810	core
-0x0015A9F0	func_0015A9F0	core
+0x0015A9F0	main	core
 0x0015AA30	func_0015AA30	gameplay/game_00.006
 0x0015AA40	func_0015AA40	platform
 0x0015AB90	func_0015AB90	platform
@@ -304,8 +304,8 @@ address	name	label
 0x00174600	func_00174600	gameplay/game_00.014
 0x00174A80	func_00174A80	gameplay/game_00.007
 0x00174CE0	func_00174CE0	gameplay/game_00.007
-0x00175070	func_00175070	gameplay/game_00.007
-0x00175080	func_00175080	gameplay/game_00.007
+0x00175070	Vec4_GetW	gameplay/game_00.007
+0x00175080	Vec4_GetZ	gameplay/game_00.007
 0x00175090	func_00175090	gameplay/game_00.007
 0x001750B0	func_001750B0	gameplay/game_00.007
 0x00175390	func_00175390	gameplay/game_00.018
@@ -2334,7 +2334,7 @@ address	name	label
 0x0021D4D0	func_0021D4D0	gameplay/game_00.031
 0x0021D510	func_0021D510	platform
 0x0021D5E0	func_0021D5E0	gameplay/game_00.031
-0x0021D5F0	waitNextField	platform
+0x0021D5F0	func_0021D5F0	platform
 0x0021D640	func_0021D640	gameplay/game_00.031
 0x0021D690	func_0021D690	platform
 0x0021D870	func_0021D870	gameplay/game_00.031
@@ -2639,7 +2639,7 @@ address	name	label
 0x002534A0	func_002534A0	gameplay/game_00.003
 0x00253500	func_00253500	platform
 0x00253590	func_00253590	platform
-0x002535E0	alarmWakeupHandler	platform
+0x002535E0	func_002535E0	platform
 0x00253610	func_00253610	gameplay/game_00.003
 0x00253690	func_00253690	gameplay/game_00.003
 0x00253740	func_00253740	gameplay/game_00.003

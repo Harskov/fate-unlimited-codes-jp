@@ -16,10 +16,10 @@ typedef struct Obj_001AB2B0 {
     int unk_23FC;
 } Obj_001AB2B0;
 
-typedef struct Cfg {
+typedef struct Obj_001AA740 {
     unsigned char unk_0[0xB4];
     int unk_B4;
-} Cfg;
+} Obj_001AA740;
 
 typedef struct Obj_001AB330 {
     unsigned char pad[0x3C];
@@ -28,7 +28,7 @@ typedef struct Obj_001AB330 {
 
 extern float func_00175B10(float v);
 
-extern Cfg *D_0051D8B4[];
+extern Obj_001AA740 *D_0051D8B4[];
 
 void func_001F27D0();
 
@@ -60,7 +60,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AA740", func_001AB230);
 
 void func_001AB2B0(Obj_001AB2B0 *obj)
 {
-    Cfg *cfg;
+    Obj_001AA740 *cfg;
     Node0051C858 *n;
     int v;
     int i;
@@ -74,8 +74,8 @@ void func_001AB2B0(Obj_001AB2B0 *obj)
         obj->unk_23FC = v;
     } else {
         for (i = 0; i < 2; i++) {
-            for (n = D_0051C858[i]->list; n != 0; n = n->next) {
-                ((Obj_001AB2B0 *)n->obj)->unk_23FC = v;
+            for (n = D_0051C858[i]->unk_C; n != 0; n = n->next) {
+                ((Obj_001AB2B0 *)n->unk_0)->unk_23FC = v;
             }
         }
     }

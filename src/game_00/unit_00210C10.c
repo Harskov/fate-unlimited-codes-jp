@@ -7,9 +7,15 @@ extern int D_005231D8[];
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00210C10", func_00210C10);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00210C10", func_00210CA0);
+char *func_00210CA0(char *base)
+{
+    return base + 0x30;
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00210C10", func_00210CB0);
+char *func_00210CB0(char *base)
+{
+    return base - 0x30;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00210C10", func_00210CC0);
 

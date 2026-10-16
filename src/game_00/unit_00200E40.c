@@ -6,7 +6,15 @@ extern f32 D_0051FE44[];
 
 extern int D_0051FE40[];
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00200E40", func_00200E40);
+typedef struct Obj_00200E40 {
+    unsigned char pad[0x30];
+    s32 unk_30;
+} Obj_00200E40;
+
+void func_00200E40(Obj_00200E40 *p, s32 arg1)
+{
+    p->unk_30 = arg1;
+}
 
 void func_00200E50(int v)
 {

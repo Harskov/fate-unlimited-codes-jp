@@ -31,7 +31,10 @@ void func_00189BE0(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001873A0", func_00189BF0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001873A0", func_0018A100);
+char *func_0018A100(char *base)
+{
+    return base - 4;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001873A0", func_0018A110);
 

@@ -1,0 +1,37 @@
+#include "common.h"
+
+void func_002DC248(void);
+
+void func_0020DBB0(f32 a, f32 b);
+
+INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020BC70", func_0020BC70);
+
+INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020BC70", func_0020BDE0);
+
+INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020BC70", func_0020BDF0);
+
+void func_0020BE50(void)
+{
+}
+
+INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020BC70", func_0020BE60);
+
+INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020BC70", func_0020BEF0);
+
+void func_0020BF20(f32 *arg0)
+{
+    func_0020DBB0(arg0[2], arg0[0]);
+}
+
+void func_0020BF30(void)
+{
+    func_002DC248();
+}
+
+INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020BC70", func_0020BF40);
+
+INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020BC70", func_0020C060);
+
+INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020BC70", func_0020C1B0);
+
+INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020BC70", func_0020C340);

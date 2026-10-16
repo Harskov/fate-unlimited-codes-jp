@@ -1,6 +1,8 @@
 #include "common.h"
 #include "types.h"
 
+extern s32 D_00523A28[];
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", _dpfge);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", func_00159910);
@@ -13,7 +15,11 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", _f_ulltof);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", func_001599B0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", func_00159A90);
+// stores the bit pattern of 1.0f; probably a float global, typed as s32 here
+void func_00159A90(void)
+{
+    D_00523A28[0] = 0x3F800000;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", func_00159AA0);
 

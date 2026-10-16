@@ -5,15 +5,32 @@
 
 void func_0013AA00(void *p);
 
+typedef struct Obj0021F370 {
+    u8 pad0[0x30];
+    s32 unk30;
+} Obj0021F370;
+
+void sceClose(s32 fd);
+
+typedef struct Obj0021F310 {
+    unsigned char pad[0x30];
+    void *unk_30;
+} Obj0021F310;
+
+void sceRead();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F160);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F190);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F280);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F310);
+void func_0021F310(Obj0021F310 *p)
+{
+    sceRead(p->unk_30);
+}
 
-int func_0021F320(AdxOwner *obj)
+int func_0021F320(Obj38 *obj)
 {
     func_0013AA00(obj->unk34);
     return 1;
@@ -21,7 +38,11 @@ int func_0021F320(AdxOwner *obj)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F340);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F370);
+int func_0021F370(Obj0021F370 *obj)
+{
+    sceClose(obj->unk30);
+    return 1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F390);
 

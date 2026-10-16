@@ -10,14 +10,14 @@ typedef struct Elem220 {
 
 typedef struct Sub220 {
     int unk_0;
-    unsigned char *base;
-    short count;
-    short index;
-    unsigned char *cur;
+    /* 0x04 */ unsigned char *unk_4;
+    /* 0x08 */ short unk_8;
+    /* 0x0A */ short unk_A;
+    /* 0x0C */ unsigned char *unk_C;
 } Sub220;
 
 typedef struct Arr220 {
     unsigned char unk_0[0x220];
-    Sub220 sub;
+    /* 0x220 */ Sub220 unk_220;
 } Arr220;
 #endif

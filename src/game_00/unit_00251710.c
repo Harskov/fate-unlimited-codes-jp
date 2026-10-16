@@ -5,6 +5,8 @@ extern s32 D_00529530[];
 
 extern int D_00529530[];
 
+void *memset(void *s, int c, u32 n);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00251710);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00251CE0);
@@ -41,7 +43,10 @@ void func_002522F0(int v)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00252300);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00252330);
+void func_00252330(void *arg0)
+{
+    memset(arg0, 0, 16);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00252340);
 

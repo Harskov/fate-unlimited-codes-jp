@@ -34,7 +34,7 @@ typedef struct Item150 {
 typedef struct Node23E8 {
     Item150 *unk_0;
     int unk_4;
-    struct Node23E8 *unk_8;
+    /* 0x08 */ struct Node23E8 *next;
 } Node23E8;
 
 typedef struct Obj53C {
@@ -63,7 +63,7 @@ typedef struct Sub14C {
     int unk_80;
 } Sub14C;
 
-typedef struct Cache2448 {
+typedef struct Obj1D0 {
     unsigned char unk_0[0xC];
     struct Obj2524 *unk_C;
     struct Obj53C *unk_10;
@@ -71,7 +71,7 @@ typedef struct Cache2448 {
     short unk_B0;
     unsigned char unk_B2[0x14C - 0xB2];
     Sub14C sub14C;
-} Cache2448;
+} Obj1D0;
 
 typedef struct Obj2524 {
     unsigned char unk_0[0xC];
@@ -79,16 +79,16 @@ typedef struct Obj2524 {
     unsigned char unk_10[0x3C - 0x10];
     int unk_3C;
     unsigned char unk_40[0x1F4 - 0x40];
-    int unk_1F4;
+    /* 0x1F4 */ int flags;
     unsigned char unk_1F8[0x220 - 0x1F8];
     Sub220 sub220;
     unsigned char unk_230[0x464 - 0x230];
     float unk_464;
     unsigned char unk_468[0x2448 - 0x468];
-    Cache2448 *unk_2448;
+    Obj1D0 *unk_2448;
     unsigned char unk_244C[0x2508 - 0x2448 - 4];
     Obj53C *unk_2508;
     unsigned char unk_250C[0x2524 - 0x2508 - 4];
-    Sub2524 sub;
+    /* 0x2524 */ Sub2524 unk_2524;
 } Obj2524;
 #endif

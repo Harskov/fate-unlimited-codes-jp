@@ -15,18 +15,18 @@ typedef struct Node {
 
 typedef struct Obj {
     unsigned char unk_0[0xC4];
-    u16 unk_C4;
+    /* 0xC4 */ u16 counter;
     unsigned char unk_C6[0xA];
-    struct Obj *unk_D0;
+    /* 0xD0 */ struct Obj *next;
 } Obj;
 
 typedef struct Ent0051AC78 {
     struct Ent0051AC78 *next;
     int unk_4;
     unsigned char unk_8[0x8];
-    Vec3 pos;
+    /* 0x10 */ Vec3 unk_10;
     Vec3 unk_1C;
-    Vec3 scale;
+    /* 0x28 */ Vec3 unk_28;
     unsigned char unk_34[0xC0 - 0x34];
     int unk_C0;
     short unk_C4;
@@ -89,10 +89,10 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_0017A550);
 
 int func_0017A590(Obj *arg0, Obj *arg1)
 {
-    if (arg1 == 0 || arg0 == 0 || arg0->unk_D0 != 0)
+    if (arg1 == 0 || arg0 == 0 || arg0->next != 0)
         return -1;
-    arg0->unk_D0 = arg1;
-    return ++arg1->unk_C4;
+    arg0->next = arg1;
+    return ++arg1->counter;
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_0017A5D0);
@@ -111,9 +111,9 @@ Ent0051AC78 *func_0017A670(char kind, short id)
         e->unk_C4 = 1;
         e->unk_C9 = 0;
         e->unk_C8 = kind;
-        e->pos.x = e->pos.y = e->pos.z = 0.0f;
-        e->unk_1C.x = e->unk_1C.y = e->unk_1C.z = 0.0f;
-        e->scale.x = e->scale.y = e->scale.z = 1.0f;
+        e->unk_10.unk_0 = e->unk_10.unk_4 = e->unk_10.unk_8 = 0.0f;
+        e->unk_1C.unk_0 = e->unk_1C.unk_4 = e->unk_1C.unk_8 = 0.0f;
+        e->unk_28.unk_0 = e->unk_28.unk_4 = e->unk_28.unk_8 = 1.0f;
         e->unk_C0 = 0;
         e->unk_CA = 0;
         e->unk_4 = 0;

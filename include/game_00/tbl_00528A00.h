@@ -5,13 +5,13 @@
    +0x8 and id[side] at +0x10, with the parallel rows D_00528A08 and D_00528A10
    addressed through their own symbols (that is what makes the relocations match). */
 typedef struct Slot00528A00 {
-    int used[2];
+    /* 0x00 */ int unk_0[2];
     int unk_8[2];
-    int id[2];
+    /* 0x10 */ int unk_10[2];
 } Slot00528A00;
 
 typedef struct Row00528A00 {
-    int v[2];
+    /* 0x00 */ int unk_0[2];
     int pad[4];
 } Row00528A00;
 

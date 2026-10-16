@@ -5,7 +5,7 @@
    func_001B3AD0 stores a value into the first slot whose +0x4 word is 0; func_001B3920
    sets bit 0x1 of a slot's flags only when that word is set, and func_001B38F0 clears it. */
 typedef struct Slot {
-    s32 flags;
+    /* 0x00 */ s32 unk_0;
     s32 unk_4;
     s32 unk_8[4];
     s32 unk_18[4];
@@ -15,7 +15,7 @@ typedef struct Slot {
 
 typedef struct Obj {
     u8 pad_0[0x5D0];
-    Slot slots[8];
+    /* 0x5D0 */ Slot unk_5D0[8];
 } Obj;
 
 void func_001B3A20(Obj *);
@@ -26,7 +26,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3230", func_001B3410);
 
 void func_001B35C0(Obj *o, s32 i, s32 v)
 {
-    o->slots[i].unk_C4 = v;
+    o->unk_5D0[i].unk_C4 = v;
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3230", func_001B35E0);
@@ -39,19 +39,19 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3230", func_001B37A0);
 
 void func_001B38F0(Obj *o, s32 i)
 {
-    Slot *s = &o->slots[i];
+    Slot *s = &o->unk_5D0[i];
 
-    s->flags &= ~1;
+    s->unk_0 &= ~1;
 }
 
 void func_001B3920(Obj *o, s32 i)
 {
-    Slot *s = &o->slots[i];
+    Slot *s = &o->unk_5D0[i];
 
     if (s->unk_4 == 0) {
         return;
     }
-    s->flags |= 1;
+    s->unk_0 |= 1;
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3230", func_001B3960);
@@ -64,8 +64,8 @@ void func_001B3AD0(Obj *o, s32 v)
 
     if (v != 0) {
         for (i = 0; i < 8; i++) {
-            if (o->slots[i].unk_4 == 0) {
-                o->slots[i].unk_4 = v;
+            if (o->unk_5D0[i].unk_4 == 0) {
+                o->unk_5D0[i].unk_4 = v;
                 return;
             }
         }
@@ -78,10 +78,10 @@ void func_001B3B20(Obj *o)
     s32 j;
 
     for (i = 0; i < 8; i++) {
-        o->slots[i].flags = 0;
+        o->unk_5D0[i].unk_0 = 0;
         for (j = 0; j < 4; j++) {
-            o->slots[i].unk_8[j] = -1;
-            o->slots[i].unk_18[j] = 0xF;
+            o->unk_5D0[i].unk_8[j] = -1;
+            o->unk_5D0[i].unk_18[j] = 0xF;
         }
     }
     func_001B3A20(o);

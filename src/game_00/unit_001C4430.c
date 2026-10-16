@@ -1,6 +1,8 @@
 #include "common.h"
 #include "types.h"
 
+void func_001A46A0(void);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C4430", func_001C4430);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C4430", func_001C4450);
@@ -19,7 +21,10 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C4430", func_001C4720);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C4430", func_001C4770);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C4430", func_001C4890);
+void func_001C4890(void)
+{
+    func_001A46A0();
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C4430", func_001C48A0);
 

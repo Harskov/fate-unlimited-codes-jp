@@ -15,10 +15,10 @@ typedef struct Obj {
     u8 pad_4[0x38];
     s32 *unk_3C;
     u8 pad_40[0x1A0];
-    s32 unk_1E0;
-    s32 unk_1E4;
+    /* 0x1E0 */ s32 flags_1E0;
+    /* 0x1E4 */ s32 flags_1E4;
     u8 pad_1E8[0x4];
-    s32 unk_1EC;
+    /* 0x1EC */ s32 flags_1EC;
     u8 pad_1F0[0x34C];
     s32 unk_53C;
     u8 pad_540[0xF84];
@@ -29,10 +29,10 @@ typedef struct Obj {
 
 /* func_001B2E60's second argument: a flag word, and the word it sets bits 0x10 and
    0x1000 in. */
-typedef struct FlagsPtr {
+typedef struct Obj_001B1360 {
     s32 flags;
-    s32 *bits;
-} FlagsPtr;
+    /* 0x04 */ s32 *unk_4;
+} Obj_001B1360;
 
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B1360", func_001B1360);
@@ -44,15 +44,15 @@ void func_001B13B0(Obj *o)
 
 s32 func_001B13C0(Obj *o)
 {
-    s32 a1 = o->unk_1E0;
+    s32 a1 = o->flags_1E0;
 
     if (a1 & 0x05008000)
         return 0;
-    if (o->unk_1EC & 0xC00000)
+    if (o->flags_1EC & 0xC00000)
         return 0;
     if (o->unk_24B8 > 0)
         return 0;
-    if (o->unk_1E4 & 0xA00)
+    if (o->flags_1E4 & 0xA00)
         return 0;
     if ((a1 & 0x02120000) && (o->unk_53C != 0x38))
         return 0;
@@ -73,19 +73,19 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B1360", func_001B2C30);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B1360", func_001B2D60);
 
-void func_001B2E60(Obj *o, FlagsPtr *m)
+void func_001B2E60(Obj *o, Obj_001B1360 *m)
 {
-    if (o->unk_1EC & 0x2000) {
-        *m->bits |= 0x10;
+    if (o->flags_1EC & 0x2000) {
+        *m->unk_4 |= 0x10;
     } else {
-        *m->bits &= ~0x10;
+        *m->unk_4 &= ~0x10;
     }
     if (m->flags & 2) {
-        *m->bits |= 0x1000;
+        *m->unk_4 |= 0x1000;
     } else {
-        *m->bits &= ~0x1000;
+        *m->unk_4 &= ~0x1000;
     }
-    func_001E7D20(m->bits, *o->unk_3C, D_00523B38[o->unk_0]);
+    func_001E7D20(m->unk_4, *o->unk_3C, D_00523B38[o->unk_0]);
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B1360", func_001B2EF0);

@@ -10,7 +10,7 @@ typedef struct Obj {
 } Obj;
 
 typedef struct Obj0019A9A0 {
-    int unk_0;
+    /* 0x00 */ int flags;
     unsigned char unk_4[0x4];
     int unk_8;
     unsigned char unk_C[0xAC];
@@ -31,7 +31,7 @@ typedef struct Obj0019AA30 {
 } Obj0019AA30;
 
 typedef struct Obj_0019B470 {
-    unsigned int flags;
+    /* 0x00 */ unsigned int unk_0;
     unsigned char unk_4[0x284];
     int unk_288;
     int unk_28C;
@@ -83,9 +83,9 @@ int func_0019A9A0(Obj0019A9A0 *o)
         if (o->unk_108 != 0)
             r |= 1;
     }
-    if (mode == 11 && (o->unk_0 & 0x4000) == 0)
+    if (mode == 11 && (o->flags & 0x4000) == 0)
         r |= 1;
-    if (D_0051D890[0].unk_0 & 0x02000000)
+    if (D_0051D890[0].flags & 0x02000000)
         r |= 1;
     return r;
 }
@@ -137,7 +137,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00199770", func_0019B390);
 
 void func_0019B470(Obj_0019B470 *p)
 {
-    p->flags &= 0xFF7FFFFF;
+    p->unk_0 &= 0xFF7FFFFF;
     p->unk_288 = 0;
     p->unk_28C = 0;
     p->unk_290 = 0;

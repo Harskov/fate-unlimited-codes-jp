@@ -1,6 +1,8 @@
 #include "common.h"
 
-typedef struct Holder { unsigned char pad[0x60]; short *table; } Holder;
+/* 0x60 */ typedef struct Holder { unsigned char pad[0x60]; short *unk_60; } Holder;
+
+void func_002E01C8(void);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00161800", func_00161800);
 
@@ -8,7 +10,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00161800", func_00161970);
 
 int func_001619C0(Holder *h, int i)
 {
-    short *t = h->table;
+    short *t = h->unk_60;
     if (t == 0)
         return -1;
     if (i < 0)
@@ -36,7 +38,10 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00161800", func_00165E40);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00161800", func_00165EA0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00161800", func_00165EE0);
+void func_00165EE0(void)
+{
+    func_002E01C8();
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00161800", func_00165EF0);
 

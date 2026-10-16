@@ -3,7 +3,7 @@
 
 typedef struct Obj {
     unsigned char unk_0[0x230];
-    int flags;
+    /* 0x230 */ int unk_230;
 } Obj;
 
 extern int D_00531C58[];
@@ -44,21 +44,21 @@ void func_001A3790(int i)
 {
     Rec0051D890 *r = &D_0051D890[i];
 
-    r[10].unk_4 = 0;
+    r[10].counter = 0;
 }
 
 void func_001A37B0(int i, int v)
 {
     Rec0051D890 *r = &D_0051D890[i];
 
-    r[10].unk_4 = v;
+    r[10].counter = v;
 }
 
 void func_001A37D0(int i)
 {
     Rec0051D890 *r = &D_0051D890[i];
 
-    r[10].unk_4++;
+    r[10].counter++;
 }
 
 void func_001A3800(int i, int v)
@@ -83,7 +83,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A36A0", func_001A39D0);
 
 int func_001A3A80(Obj *o, unsigned short mask)
 {
-    return o->flags & mask;
+    return o->unk_230 & mask;
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A36A0", func_001A3A90);

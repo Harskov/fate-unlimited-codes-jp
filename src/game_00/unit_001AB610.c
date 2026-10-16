@@ -3,15 +3,15 @@
 #include "game_00/tbl_0051C858.h"
 
 typedef struct Obj001AD0E0 {
-    int idx;
+    /* 0x00 */ int unk_0;
     unsigned char unk_4[4];
-    int group;
+    /* 0x08 */ int unk_8;
     unsigned char unk_C[0x1F8 - 0xC];
-    int flags;
+    /* 0x1F8 */ int unk_1F8;
     unsigned char unk_1FC[0x23A4 - 0x1FC];
     int unk_23A4;
     unsigned char unk_23A8[4];
-    int slots[10];
+    /* 0x23AC */ int unk_23AC[10];
     int unk_23D4;
 } Obj001AD0E0;
 
@@ -22,7 +22,7 @@ typedef struct Sub {
 
 typedef struct Obj {
     unsigned char pad[0x1DC];
-    int field_1DC;
+    /* 0x1DC */ int flags;
     unsigned char pad1[0x238C - 0x1DC - 4];
     int field_238C;
     unsigned char pad2[0x2398 - 0x238C - 4];
@@ -99,18 +99,18 @@ void func_001AD0E0(Obj001AD0E0 *self, int index, int value, int bits)
         end = index + 1;
     }
 
-    self->flags |= 1;
+    self->unk_1F8 |= 1;
     if (self->unk_23D4 <= 0)
         self->unk_23D4 = value;
 
     for (; i < end; i++) {
-        if (self != 0 && (bits & 4) != 0 && i == self->group)
+        if (self != 0 && (bits & 4) != 0 && i == self->unk_8)
             continue;
-        for (n = D_0051C858[i]->list; n != 0; n = n->next) {
-            if ((bits & 2) != 0 && self == n->obj)
+        for (n = D_0051C858[i]->unk_C; n != 0; n = n->next) {
+            if ((bits & 2) != 0 && self == n->unk_0)
                 continue;
-            ((Obj001AD0E0 *)n->obj)->slots[self->idx] = value;
-            ((Obj001AD0E0 *)n->obj)->unk_23A4 = bits;
+            ((Obj001AD0E0 *)n->unk_0)->unk_23AC[self->unk_0] = value;
+            ((Obj001AD0E0 *)n->unk_0)->unk_23A4 = bits;
         }
     }
 }
@@ -128,7 +128,7 @@ int func_001AD250(Obj *p, int arg1)
 
 int func_001AD2A0(Obj *p, int arg1)
 {
-    if (p->field_1DC & 0x80)
+    if (p->flags & 0x80)
         return 0;
     if (p->field_23A8 != 0 || p->field_238C != 0)
         return 0;

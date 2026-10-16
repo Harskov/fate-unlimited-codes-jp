@@ -5,14 +5,14 @@ typedef struct Sub {
     int field_C;
 } Sub;
 
-typedef struct Mid {
+typedef struct Obj_001AE7A0_2 {
     unsigned char pad[0x58];
     Sub *field_58;
-} Mid;
+} Obj_001AE7A0_2;
 
 typedef struct Obj {
     unsigned char pad[0x3C];
-    Mid *field_3C;
+    Obj_001AE7A0_2 *field_3C;
 } Obj;
 
 typedef struct Obj_001AE7D0 {
@@ -22,33 +22,33 @@ typedef struct Obj_001AE7D0 {
 
 typedef struct Sub001AE860 {
     unsigned char unk_0[2];
-    unsigned char flags;
+    /* 0x02 */ unsigned char unk_2;
     unsigned char unk_3;
 } Sub001AE860;
 
 typedef struct Item001AE860 {
-    int mask;
-    short id;
+    /* 0x00 */ int unk_0;
+    /* 0x04 */ short unk_4;
     unsigned char unk_6[6];
-    Sub001AE860 *sub;
+    /* 0x0C */ Sub001AE860 *unk_C;
 } Item001AE860;
 
-typedef struct Group001AE860 {
+typedef struct Obj_001AE7A0 {
     unsigned char unk_0[0x19C];
-    int count;
-    Item001AE860 *items;
-} Group001AE860;
+    /* 0x19C */ int unk_19C;
+    /* 0x1A0 */ Item001AE860 *cursor;
+} Obj_001AE7A0;
 
 typedef struct Ctx001AE860 {
     unsigned char unk_0[0x3C];
-    Group001AE860 *group;
+    /* 0x3C */ Obj_001AE7A0 *unk_3C;
 } Ctx001AE860;
 
 void func_002032B0(void *);
 
 void func_001AE7A0(Obj *p)
 {
-    Mid *m = p->field_3C;
+    Obj_001AE7A0_2 *m = p->field_3C;
     if (m != 0) {
         Sub *s = m->field_58;
         if (s != 0) {
@@ -71,15 +71,15 @@ void func_001AE860(Ctx001AE860 *c, int id, int on, int mask, int keep)
     int i;
     Item001AE860 *it;
 
-    it = c->group->items;
+    it = c->unk_3C->cursor;
     if (it == 0)
         return;
 
-    for (i = 0; i < c->group->count; i++, it++) {
-        if ((mask & it->mask) != 0) {
-            s = it->sub;
-            f = s->flags;
-            if (id == it->id) {
+    for (i = 0; i < c->unk_3C->unk_19C; i++, it++) {
+        if ((mask & it->unk_0) != 0) {
+            s = it->unk_C;
+            f = s->unk_2;
+            if (id == it->unk_4) {
                 if (on != 0) {
                     f |= 4;
                 } else {
@@ -88,7 +88,7 @@ void func_001AE860(Ctx001AE860 *c, int id, int on, int mask, int keep)
             } else if (keep == 0) {
                 f &= ~4;
             }
-            s->flags = f;
+            s->unk_2 = f;
         }
     }
 }

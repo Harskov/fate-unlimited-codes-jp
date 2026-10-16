@@ -39,9 +39,9 @@ void func_001B6F00(f32 *out, Vec3 *a, Vec3 *b, Vec3 *c)
     if (c == 0)
         return;
 
-    out[0] = (b->y - a->y) * (c->z - a->z) - (b->z - a->z) * (c->y - a->y);
-    out[1] = (b->z - a->z) * (c->x - a->x) - (b->x - a->x) * (c->z - a->z);
-    out[2] = (b->x - a->x) * (c->y - a->y) - (b->y - a->y) * (c->x - a->x);
+    out[0] = (b->unk_4 - a->unk_4) * (c->unk_8 - a->unk_8) - (b->unk_8 - a->unk_8) * (c->unk_4 - a->unk_4);
+    out[1] = (b->unk_8 - a->unk_8) * (c->unk_0 - a->unk_0) - (b->unk_0 - a->unk_0) * (c->unk_8 - a->unk_8);
+    out[2] = (b->unk_0 - a->unk_0) * (c->unk_4 - a->unk_4) - (b->unk_4 - a->unk_4) * (c->unk_0 - a->unk_0);
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B6090", func_001B6FD0);

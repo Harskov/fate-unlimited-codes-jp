@@ -13,7 +13,7 @@ int func_001BB140(Obj2524 *arg0)
         return 0;
     if (arg0->unk_C != 0x11)
         return 0;
-    p = &arg0->sub;
+    p = &arg0->unk_2524;
     if (p != 0)
         return p->unk_0 > 0;
     return 0;
@@ -47,7 +47,7 @@ int func_001BB270(Obj2524 *arg0)
         return 0;
     if (arg0->unk_C != 0xC)
         return 0;
-    p = &arg0->sub;
+    p = &arg0->unk_2524;
     if (p != 0)
         return p->unk_0 > 0;
     return 0;
@@ -62,7 +62,7 @@ int func_001BB2B0(Obj2524 *arg0)
         return 0;
     if (arg0->unk_C != 5)
         return 0;
-    p = &arg0->sub;
+    p = &arg0->unk_2524;
     if (p != 0) {
         v = p->unk_0;
         v ^= 0;
@@ -84,7 +84,7 @@ int func_001BB380(Obj2524 *arg0)
         return 0;
     p = &arg0->sub220;
     if (p != 0) {
-        v = p->index;
+        v = p->unk_A;
         return v == 1;
     }
     return 0;
@@ -123,7 +123,7 @@ int func_001BB5B0(Obj2524 *arg0)
         return 0;
     if (arg0->unk_C != 3)
         return 0;
-    p = &arg0->sub;
+    p = &arg0->unk_2524;
     if (p != 0) {
         v = p->unk_0;
         return (v != 0) ^ 1;

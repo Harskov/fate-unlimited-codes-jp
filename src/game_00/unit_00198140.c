@@ -1,7 +1,7 @@
 #include "common.h"
 
 /* the flag words func_001990C0 tests */
-typedef struct Flags { int f0; unsigned char pad[0xC]; int f10; } Flags;
+/* 0x00 */ typedef struct Flags { int flags; unsigned char pad[0xC]; int f10; } Flags;
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00198140", func_00198140);
 
@@ -40,7 +40,7 @@ void func_001990B0(void)
 void func_001990C0(Flags *f)
 {
     f->f10 |= 4;
-    if (f->f0 & 0x20)
+    if (f->flags & 0x20)
         f->f10 |= 0x80;
 }
 

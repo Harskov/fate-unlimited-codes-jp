@@ -14,19 +14,19 @@ typedef struct Obj {
 } Obj;
 
 typedef struct Rec00522E90 {
-    short flags;
+    /* 0x00 */ short unk_0;
     unsigned char unk_2[0x62];
 } Rec00522E90;
 
 typedef struct Ctx {
     int unk_0;
-    int index;
+    /* 0x04 */ int unk_4;
 } Ctx;
 
 typedef struct Node {
     unsigned char unk_0[0xC];
-    struct Node *unk_C;
-    struct Node *unk_10;
+    /* 0x0C */ struct Node *link_C;
+    /* 0x10 */ struct Node *link_10;
 } Node;
 
 extern Ent00531B60 D_00531B60[];
@@ -74,7 +74,7 @@ int *func_0019D0B0(int i)
         goto fail;
     if (i >= 10)
         goto fail;
-    return D_0051C874[i].owner;
+    return D_0051C874[i].unk_0;
 fail:
     return 0;
 }
@@ -88,11 +88,11 @@ void func_0019D4E0(Ctx *c, int clear)
     Rec00522E90 *r;
 
     if (c->unk_0 < 2) {
-        r = &D_00522E90[c->index];
+        r = &D_00522E90[c->unk_4];
         if (clear != 0) {
-            r->flags = r->flags & ~8;
+            r->unk_0 = r->unk_0 & ~8;
         } else {
-            r->flags = r->flags | 8;
+            r->unk_0 = r->unk_0 | 8;
         }
     }
 }
@@ -103,8 +103,8 @@ void func_0019D6A0(int *p)
 {
     int i = *p;
 
-    D_0051C870[i].used = 0;
-    D_0051C874[*p].owner = 0;
+    D_0051C870[i].unk_0 = 0;
+    D_0051C874[*p].unk_0 = 0;
 }
 
 void func_0019D6E0(int *p)
@@ -112,9 +112,9 @@ void func_0019D6E0(int *p)
     int i;
 
     for (i = 0; i < 10; i++) {
-        if (D_0051C870[i].used == 0) {
-            D_0051C870[i].used = 1;
-            D_0051C874[i].owner = p;
+        if (D_0051C870[i].unk_0 == 0) {
+            D_0051C870[i].unk_0 = 1;
+            D_0051C874[i].unk_0 = p;
             *p = i;
             break;
         }
@@ -132,11 +132,11 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019CB40", func_0019D7F0);
 
 Node *func_0019D850(Node *arg0)
 {
-    Node *p = arg0->unk_10;
-    p->unk_C = arg0->unk_C;
-    if (arg0->unk_C != 0)
-        arg0->unk_C->unk_10 = p;
-    return p->unk_C;
+    Node *p = arg0->link_10;
+    p->link_C = arg0->link_C;
+    if (arg0->link_C != 0)
+        arg0->link_C->link_10 = p;
+    return p->link_C;
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019CB40", func_0019D880);

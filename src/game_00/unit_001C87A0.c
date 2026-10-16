@@ -18,7 +18,10 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C87A0", func_001C8DD0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C87A0", func_001C8DF0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C87A0", func_001C8E80);
+int func_001C8E80(void)
+{
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C87A0", func_001C8E90);
 

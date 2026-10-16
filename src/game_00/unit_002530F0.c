@@ -19,8 +19,8 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_002530F0", func_00253500);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002530F0", func_00253590);
 
-/* evidence: func_00253590 passes its address to SetAlarm as the handler; it has SetAlarm's handler signature (id, time, arg) and ca… */
-void alarmWakeupHandler(int id, u16 time, void *arg)
+/* probably an alarm handler: func_00253590 passes its address to SetAlarm, and it wakes the thread passed as arg */
+void func_002535E0(int id, u16 time, void *arg)
 {
     iWakeupThread((int)arg);
     asm {

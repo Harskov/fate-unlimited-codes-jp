@@ -26,7 +26,10 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020F380", func_0020F690);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020F380", func_0020F6C0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020F380", func_0020F850);
+void *func_0020F850(void *arg0)
+{
+    return arg0;
+}
 
 s32 func_0020F860(void)
 {

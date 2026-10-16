@@ -4,14 +4,14 @@ extern s32 D_0051D728[];
 
 typedef struct Entry {
     char pad[0x20];
-    s32 flags;      /* 0x20 */
+    s32 unk_20;      /* 0x20 */
     char pad2[0x34 - 0x24];
 } Entry;
 
 typedef struct Holder {
     s32 count;      /* 0x0 */
     char pad[0x28];
-    Entry *entries; /* 0x2C */
+    Entry *unk_2C; /* 0x2C */
 } Holder;
 
 typedef struct Obj_001B4240 {
@@ -71,16 +71,16 @@ void func_001B43A0(Holder *arg0, s32 arg1, s32 arg2, s32 arg3)
     Entry *e;
 
     for (i = 0; i < arg0->count; i++) {
-        e = &arg0->entries[i];
+        e = &arg0->unk_2C[i];
             if (arg1 >= 0) {
                 if (arg1 == i) {
-                    e->flags |= arg2;
-                    e->flags &= ~arg3;
+                    e->unk_20 |= arg2;
+                    e->unk_20 &= ~arg3;
                     break;
                 }
             } else {
-                e->flags |= arg2;
-                e->flags &= ~arg3;
+                e->unk_20 |= arg2;
+                e->unk_20 &= ~arg3;
             }
     }
 }
