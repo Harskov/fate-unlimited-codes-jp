@@ -3,7 +3,7 @@
 
 void func_0013E810();
 
-extern int func_0015B6B0(void);
+int func_0015B6B0(void);
 
 extern void sceGsSyncVCallback(int (*cb)(void));
 

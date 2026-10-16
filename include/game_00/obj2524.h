@@ -16,7 +16,7 @@
    own argument, which would make it an Obj53C, but no second offset of either
    agrees with this layout, so neither is typed here.
 
-   Run 2026-09-23-016 extended the layout from func_001BB710 (sub220 at +0x220,
+   Further members come from func_001BB710 (sub220 at +0x220,
    the Sub220 of arr220.h, read at +0xA), func_001BB7A0 (flags at +0x1F4),
    func_001BB890 (+0x3C, and the list at +0x23E8 of the Obj53C), and
    func_001BB7F0 / func_001BB840 (the member struct at +0x14C of unk_2448).

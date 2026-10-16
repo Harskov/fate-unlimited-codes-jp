@@ -70,13 +70,9 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019CB40", func_0019D040);
 
 int *func_0019D0B0(int i)
 {
-    if (i < 0)
-        goto fail;
-    if (i >= 10)
-        goto fail;
+    if (i < 0 || i >= 10)
+        return 0;
     return D_0051C874[i].unk_0;
-fail:
-    return 0;
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019CB40", func_0019D0F0);
