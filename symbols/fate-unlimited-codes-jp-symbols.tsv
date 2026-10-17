@@ -4928,7 +4928,7 @@ func_00246520	unit_00242C60	function	asm	gameplay/game_00.007	call-graph communi
 func_002468D0	unit_002468D0	function	asm	gameplay/game_00.014	call-graph community of 137 function(s) from func_00166AF0
 func_002469B0	unit_002468D0	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_00247280	unit_002468D0	function	asm	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
-func_002475D0	unit_002468D0	function	asm	platform	calls fptodp
+func_002475D0	unit_002468D0	function	matched	platform	calls fptodp
 func_00247F70	unit_002468D0	function	asm	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
 func_00248D70	unit_002468D0	function	asm	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
 func_00249140	unit_002468D0	function	matched	gameplay/game_00.004	call-graph community of 104 function(s) from func_0015A260
