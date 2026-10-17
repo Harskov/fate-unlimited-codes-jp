@@ -92,8 +92,6 @@ extern void func_00144C10();
 
 extern void func_0015A7C0();
 
-extern void func_0015B6A0();
-
 extern void func_0015B9D0();
 
 extern s32 func_00207010();

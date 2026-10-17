@@ -1,7 +1,4 @@
 address	name	label
-0x00100008	entry	platform
-0x00100218	_exit	core
-0x00100220	func_00100220	core
 0x00158030	func_00158030	gameplay/game_00.001
 0x00158348	func_00158348	gameplay/game_00.001
 0x001583E8	func_001583E8	gameplay/game_00.001

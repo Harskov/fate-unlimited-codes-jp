@@ -1,8 +1,8 @@
 #include "common.h"
+#include "game_00/unit_0020D0D0.h"
 
 void func_002DC248(void);
 
-void func_0020DBB0(f32 a, f32 b);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020BC70", func_0020BC70);
 

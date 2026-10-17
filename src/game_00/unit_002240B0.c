@@ -1,4 +1,5 @@
 #include "common.h"
+#include "game_00/unit_0020D0D0.h"
 #include "types.h"
 
 extern s32 D_00527A08[];
@@ -42,7 +43,6 @@ f32 sqrtf(f32);
 
 f32 func_0012F110(f32);
 
-s32 func_0020DBB0(f32 a, f32 b);
 
 f32 func_0020E410(f32, f32, f32);
 

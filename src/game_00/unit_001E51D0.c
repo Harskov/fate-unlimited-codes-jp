@@ -1,4 +1,5 @@
 #include "common.h"
+#include "game_00/unit_0020D0D0.h"
 #include "game_00/vec.h"
 
 typedef struct Obj_001E52A0 {
@@ -78,7 +79,6 @@ void func_0020BC70(void *p);
 
 Vec4 *func_0020CE90(void *p);
 
-s32 func_0020DBB0(f32 a, f32 b);
 
 s32 func_00310B00(s32 n);
 
