@@ -590,5 +590,7 @@ segments:
       - [0x003FEAF4, rodata, rodata_str_1]
       - [0x003FF1C0, .rodata, game_00/unit_001BD110]
       - [0x003FF210, rodata, rodata_str_2]
+      - [0x00402310, .rodata, game_00/unit_002240B0]
+      - [0x00402368, rodata, rodata_str_3]
       - [0x00409180, bss, main_bss]
   - [0x00409180]
