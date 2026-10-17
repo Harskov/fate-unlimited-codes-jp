@@ -4,6 +4,16 @@ extern s32 D_00522DD0[];
 
 void func_0020F180();
 
+int DisableIntc(int intc);
+
+s32 RemoveIntcHandler(s32 cause, s32 handler_id);
+
+extern s32 D_00522D68[];
+
+void func_002E5AC8();
+
+void func_002E5E40();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020A540", func_0020A540);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020A540", func_0020A590);
@@ -17,7 +27,14 @@ void func_0020A640(s32 arg0)
     func_0020F180(D_00522DD0, arg0);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020A540", func_0020A650);
+// takes down the handler on INTC cause 9 (timer 0); D_00522D68 holds the id AddIntcHandler returned
+void func_0020A650(void)
+{
+    DisableIntc(9);
+    RemoveIntcHandler(9, D_00522D68[0]);
+    func_002E5AC8();
+    func_002E5E40();
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020A540", func_0020A690);
 
