@@ -11,6 +11,8 @@ void sceSdRemoteInit(void);
 
 void sceSdRemoteInit();
 
+extern s32 D_003DFB90[];
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00254D30", func_00254D30);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00254D30", func_00254DE0);
@@ -29,7 +31,10 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00254D30", func_00255090);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00254D30", func_00255290);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00254D30", func_00255430);
+s32 func_00255430(s32 arg0)
+{
+    return D_003DFB90[arg0];
+}
 
 void func_00255450(int *result, int arg)
 {

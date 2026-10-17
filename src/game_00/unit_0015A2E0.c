@@ -1,6 +1,12 @@
 #include "common.h"
 #include "types.h"
 
+extern s32 D_003D3418[];
+
+s32 GetThreadId(void);
+
+s32 ChangeThreadPriority(s32 threadId, s32 priority);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015A2E0", func_0015A2E0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015A2E0", func_0015A310);
@@ -31,7 +37,11 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015A2E0", func_0015A690);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015A2E0", func_0015A6F0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015A2E0", func_0015A7C0);
+void func_0015A7C0(void)
+{
+    D_003D3418[0] = ChangeThreadPriority(GetThreadId(), 1);
+    ChangeThreadPriority(GetThreadId(), D_003D3418[0]);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015A2E0", func_0015A810);
 

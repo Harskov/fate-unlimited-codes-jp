@@ -5,14 +5,14 @@ The project serves four purposes — preservation, recompilation, porting and le
 | # | Milestone | Status | Exit judged on |
 |---|---|---|---|
 | M1 | Contributable | done | public-build.json ok=True; matched outside their unit: 0 |
-| M2 | Identified | done | name pass closed: True; unlabelled game functions: 0; review pending: 0 |
-| M3 | Platform boundary | current | 30/317 platform functions matched; PLATFORM.md present |
+| M2 | Identified | current | name pass closed: True; unlabelled game functions: 0; review pending: 12 |
+| M3 | Platform boundary | later | 34/317 platform functions matched; PLATFORM.md present |
 | M4 | Core | later | 27/139 core functions matched; FORMATS.md missing |
-| M5 | Gameplay | later | 647/5371 gameplay functions matched |
-| M6 | Complete | later | 704/5827 game functions matched; check ok=True |
+| M5 | Gameplay | later | 655/5371 gameplay functions matched |
+| M6 | Complete | later | 716/5827 game functions matched; check ok=True |
 | M7 | Documented | later | docs.py check ok=None (never run) |
 | M8 | Behaviour-verified | not required | last behaviour compare ok=None at never |
-| M9 | Reverse-engineered | later | names without checked evidence: 0; matches since the last name pass: 12; named types with two layouts: 0 |
+| M9 | Reverse-engineered | later | names without checked evidence: 0; matches since the last name pass: 25; named types with two layouts: 0 |
 
 Readability debt: 0 function(s) carry a `// !FAKE:` body and 0 carry a lint finding (see CONTRIBUTING.md); a pull request that replaces one with plain source that still matches is welcome.
 

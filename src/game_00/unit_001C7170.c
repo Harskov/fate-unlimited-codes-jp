@@ -52,7 +52,10 @@ void func_001C8660(s32 arg0)
     func_0020E040(D_005237A0, 0xB0, arg0);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C7170", func_001C8680);
+void func_001C8680(s32 arg0)
+{
+    func_0020DF80(D_005237A0, 0xB0, arg0);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C7170", func_001C86A0);
 

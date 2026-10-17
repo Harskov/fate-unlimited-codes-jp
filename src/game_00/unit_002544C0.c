@@ -21,7 +21,9 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_002544C0", func_002548D0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002544C0", func_00254940);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002544C0", func_00254A10);
+void func_00254A10(void)
+{
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002544C0", func_00254A20);
 

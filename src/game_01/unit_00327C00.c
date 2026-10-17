@@ -20,7 +20,10 @@ int func_00327C20(Obj_00327C40 *p)
     return p->unk_1C;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00327C00", func_00327C30);
+int func_00327C30(int *arg0)
+{
+    return arg0[1];
+}
 
 f32 func_00327C40(Obj_00327C40 *p, s32 i)
 {

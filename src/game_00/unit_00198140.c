@@ -3,6 +3,10 @@
 /* the flag words func_001990C0 tests */
 /* 0x00 */ typedef struct Flags { int flags; unsigned char pad[0xC]; int f10; } Flags;
 
+extern s32 D_0051C270[];
+
+void func_00199020();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00198140", func_00198140);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00198140", func_00198190);
@@ -31,7 +35,11 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00198140", func_00198FC0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00198140", func_00199020);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00198140", func_00199080);
+void func_00199080(void)
+{
+    memset(D_0051C270, 0, 0x588);
+    func_00199020();
+}
 
 void func_001990B0(void)
 {

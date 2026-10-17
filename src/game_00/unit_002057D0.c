@@ -23,7 +23,9 @@ void func_00206220(void)
 {
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002057D0", func_00206230);
+void func_00206230(void)
+{
+}
 
 void func_00206240(void)
 {
