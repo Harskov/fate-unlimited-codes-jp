@@ -25,7 +25,7 @@ typedef struct Obj_001F1F50 {
 typedef struct Obj_001F14B0 {
     s32 unk_0;
     u8 pad_4[4];
-    struct Obj_001F14B0 *unk_8;
+    /* 0x08 */ struct Obj_001F14B0 *next;
 } Obj_001F14B0;
 
 extern Obj_001F14B0 *D_0051FA28[];
@@ -56,7 +56,7 @@ s32 func_001F14B0(s32 arg0)
     while (p->unk_0 != 1) {
         if (i == arg0)
             return p->unk_0;
-        p = p->unk_8;
+        p = p->next;
         i++;
     }
     return 0;

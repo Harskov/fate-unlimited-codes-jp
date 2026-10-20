@@ -2,7 +2,7 @@
 
 typedef struct Obj_00324A30 {
     u8 unk_0[0x24];
-    s32 unk_24;
+    /* 0x24 */ s32 flags;
 } Obj_00324A30;
 
 void func_00324A30();
@@ -35,7 +35,7 @@ void func_00324A30(void *arg0, Obj_00324A30 *arg1)
 {
     s32 v;
 
-    v = arg1->unk_24;
+    v = arg1->flags;
     if (v == 0) {
         return;
     }
@@ -49,7 +49,7 @@ void func_00324A80(void *arg0, Obj_00324A30 *arg1)
 {
     s32 v;
 
-    v = arg1->unk_24;
+    v = arg1->flags;
     if (v == 0) {
         return;
     }

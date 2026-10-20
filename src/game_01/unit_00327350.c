@@ -14,7 +14,7 @@ typedef struct Slot_00327390 {
 typedef struct Obj_00327390 {
     u32 unk_0;
     u8 pad_4[0xD4];
-    Slot_00327390 slots[1];
+    /* 0xD8 */ Slot_00327390 unk_D8[1];
 } Obj_00327390;
 
 typedef struct Slot_003273C0 {
@@ -25,22 +25,22 @@ typedef struct Slot_003273C0 {
 typedef struct Obj_003273C0 {
     u32 unk_0;
     u8 pad_4[0x5C];
-    Slot_003273C0 slots[1];
+    /* 0x60 */ Slot_003273C0 unk_60[1];
 } Obj_003273C0;
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00327350", func_00327350);
 
 void func_00327390(Obj_00327390 *arg0, s32 arg1, f32 arg2)
 {
-    arg0->slots[arg1].unk_18 = arg2;
-    arg0->slots[arg1].unk_0 = 0;
-    arg0->slots[arg1].unk_C = 0;
+    arg0->unk_D8[arg1].unk_18 = arg2;
+    arg0->unk_D8[arg1].unk_0 = 0;
+    arg0->unk_D8[arg1].unk_C = 0;
     arg0->unk_0 |= 0x482;
 }
 
 void func_003273C0(Obj_003273C0 *arg0, s32 arg1, s32 arg2)
 {
-    arg0->slots[arg1].unk_0 = arg2 << 8;
+    arg0->unk_60[arg1].unk_0 = arg2 << 8;
     arg0->unk_0 |= 0x402;
 }
 

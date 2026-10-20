@@ -6,14 +6,14 @@ void func_0036D830(void);
 
 void func_0036CE00();
 
-typedef struct Obj_00383E20_Inner {
+typedef struct Obj_00383E10 {
     u8 pad_0[0x3C];
     u32 unk_3C;
-} Obj_00383E20_Inner;
+} Obj_00383E10;
 
 typedef struct Obj_00383E20 {
     u32 unk_0;
-    Obj_00383E20_Inner *unk_4;
+    Obj_00383E10 *unk_4;
 } Obj_00383E20;
 
 extern s32 D_004DCB60[];

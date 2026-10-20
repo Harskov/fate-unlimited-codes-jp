@@ -17,7 +17,7 @@ void func_00210C10(s32 a, s32 b);
 
 typedef struct Obj_0020FC50 {
     u8 pad_0[0xA];
-    s16 unk_A;
+    /* 0x0A */ s16 counter;
     s32 unk_C;
     s32 unk_10;
     s32 unk_14;
@@ -61,12 +61,12 @@ void func_0020FC50(Obj_0020FC50 *o, s32 a, s32 b)
     o->unk_1C = o->unk_14;
     v = o->unk_10;
     if (v != 0 && v == o->unk_C) {
-        if (--o->unk_A == 0) {
+        if (--o->counter == 0) {
             o->unk_1C = o->unk_10;
-            o->unk_A = 2;
+            o->counter = 2;
         }
     } else {
-        o->unk_A = 0x10;
+        o->counter = 0x10;
     }
 }
 

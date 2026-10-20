@@ -15,9 +15,9 @@ extern s32 D_003D7BA0[];
 
 extern s32 D_003D7BA8[];
 
-extern char D_00501960[];
+extern char gFormat_501960[];
 
-extern char D_00501970[];
+extern char gFormat_501970[];
 
 extern char D_00522BE0[];
 
@@ -36,8 +36,8 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00207310", func_00207380);
 
 char *func_002073D0(void)
 {
-    sprintf(D_00522C20, D_00501960, D_003D7B90[0], D_003D7B98[0], D_003D7BA0[0], D_003D7BA8[0]);
-    sprintf(D_00522BE0, D_00501970, D_00522C20);
+    sprintf(D_00522C20, gFormat_501960, D_003D7B90[0], D_003D7B98[0], D_003D7BA0[0], D_003D7BA8[0]);
+    sprintf(D_00522BE0, gFormat_501970, D_00522C20);
     return D_00522C20;
 }
 

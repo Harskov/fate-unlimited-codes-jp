@@ -18,8 +18,8 @@ void func_0020D0C0();
 
 typedef struct Obj12 {
     s32 unk_0;
-    struct Obj12 *unk_4;
-    struct Obj12 *unk_8;
+    /* 0x04 */ struct Obj12 *link_4;
+    /* 0x08 */ struct Obj12 *link_8;
 } Obj12;
 
 typedef struct Obj_00166F30 {
@@ -55,11 +55,11 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_00166F90);
 
 Obj12 *func_00167130(s32 a0, Obj12 *a1, Obj12 *a2)
 {
-    a2->unk_8->unk_4 = a1;
+    a2->link_8->link_4 = a1;
     a1->unk_0 = a0;
-    a1->unk_4 = a2;
-    a1->unk_8 = a2->unk_8;
-    a2->unk_8 = a1;
+    a1->link_4 = a2;
+    a1->link_8 = a2->link_8;
+    a2->link_8 = a1;
     return a1;
 }
 

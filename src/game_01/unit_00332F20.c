@@ -35,7 +35,7 @@ typedef struct Slot_00333630 {
 
 typedef struct Obj_00333630 {
     u8 pad_0[0x258];
-    Slot_00333630 slots[6];
+    /* 0x258 */ Slot_00333630 unk_258[6];
 } Obj_00333630;
 
 typedef struct Sub_003333A0 {
@@ -83,7 +83,7 @@ typedef struct Sub_00333310 {
 
 typedef struct Obj_00333310 {
     u8 pad_0[0x1E0];
-    u32 unk_1E0;
+    /* 0x1E0 */ u32 flags;
     u8 pad_1E4[0x74];
     Sub_00333310 unk_258[6];
 } Obj_00333310;
@@ -98,7 +98,7 @@ f32 func_00333310(Obj_00333310 *arg0)
     s32 i;
 
     r = 1.0f;
-    if (!(arg0->unk_1E0 & 0x8000)) {
+    if (!(arg0->flags & 0x8000)) {
         for (i = 0; i < 6; i++) {
             if (arg0->unk_258[i].unk_0 != -1) {
                 r *= arg0->unk_258[i].unk_2C;
@@ -175,8 +175,8 @@ u32 func_00333630(Obj_00333630 *arg0, u32 arg1)
 
     result = 0;
     for (i = 0; i < 6; i++) {
-        if (arg0->slots[i].unk_0 != -1) {
-            result |= arg0->slots[i].unk_10 & arg1;
+        if (arg0->unk_258[i].unk_0 != -1) {
+            result |= arg0->unk_258[i].unk_10 & arg1;
         }
     }
     return result;

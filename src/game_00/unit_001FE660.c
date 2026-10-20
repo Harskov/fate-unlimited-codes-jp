@@ -10,7 +10,7 @@ void *func_0020F180();
 
 typedef struct Obj_00200650 {
     u8 unk_0[0x34];
-    s32 unk_34;
+    /* 0x34 */ s32 counter;
 } Obj_00200650;
 
 void func_00200690();
@@ -99,8 +99,8 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FE660", func_00200630);
 
 void func_00200650(Obj_00200650 *arg0)
 {
-    arg0->unk_34--;
-    if (arg0->unk_34 <= 0)
+    arg0->counter--;
+    if (arg0->counter <= 0)
         func_00200690();
 }
 

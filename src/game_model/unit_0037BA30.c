@@ -1,7 +1,7 @@
 #include "common.h"
 
 typedef struct Obj_0037C120 {
-    /* 0x00 */ s32 unk_0;
+    /* 0x00 */ s32 flags;
     /* 0x04 */ s32 unk_4;
     /* 0x08 */ s32 unk_8;
     /* 0x0C */ s32 unk_C;
@@ -47,7 +47,7 @@ s32 func_0037C120(s32 arg0, Obj_0037C120 *arg1)
     if (D_0051D8A0[0] & arg1->unk_14) {
         func_0037C170(arg1);
     }
-    return arg1->unk_0 & 1;
+    return arg1->flags & 1;
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037BA30", func_0037C170);

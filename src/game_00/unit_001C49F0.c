@@ -25,7 +25,7 @@ typedef struct Sub_001C4FA0 {
 
 typedef struct Obj_001C4FA0 {
     unsigned char unk_0[0x1E4];
-    /* 0x1E4 */ int unk_1E4;
+    /* 0x1E4 */ int flags;
     unsigned char pad_1E8[0x2448 - 0x1E8];
     /* 0x2448 */ Sub_001C4FA0 *unk_2448;
 } Obj_001C4FA0;
@@ -67,7 +67,7 @@ int func_001C4FA0(Obj_001C4FA0 *p, int *arg1)
 {
     Sub_001C4FA0 *s = p->unk_2448;
 
-    if (!(p->unk_1E4 & 0x4) && *arg1 != -1) {
+    if (!(p->flags & 0x4) && *arg1 != -1) {
         s->unk_7C = arg1;
         s->unk_78 = 0;
         return 1;

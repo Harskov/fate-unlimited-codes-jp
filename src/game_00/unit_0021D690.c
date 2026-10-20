@@ -10,7 +10,7 @@ extern s32 D_00527820[];
 
 extern void func_0021D030(void *);
 
-extern s32 D_003D3418[];
+extern s32 gChangeThreadPriorityResult[];
 
 void RotateThreadReadyQueue(s32);
 
@@ -111,7 +111,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021E300);
 
 void func_0021E330(void)
 {
-    RotateThreadReadyQueue(D_003D3418[0]);
+    RotateThreadReadyQueue(gChangeThreadPriorityResult[0]);
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021E340);

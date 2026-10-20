@@ -15,13 +15,13 @@ void func_001EBDC0();
 void func_002B1E28();
 
 typedef struct Elem_001EB6C0 {
-    s32 unk_0;
+    /* 0x00 */ s32 flags;
     u8 pad_4[0xEC];
 } Elem_001EB6C0;
 
 typedef struct Obj_001EB6C0 {
     u8 pad_0[0x68];
-    s32 unk_68;
+    /* 0x68 */ s32 count;
     Elem_001EB6C0 *unk_6C;
 } Obj_001EB6C0;
 
@@ -31,11 +31,11 @@ void func_001EB6C0(Obj_001EB6C0 *arg0, s32 arg1)
     Elem_001EB6C0 *e;
     s32 v;
 
-    for (i = 0; i < arg0->unk_68; i++) {
+    for (i = 0; i < arg0->count; i++) {
         e = &arg0->unk_6C[i];
-        v = e->unk_0;
+        v = e->flags;
         if ((v & 0x740000) == 0)
-            e->unk_0 = v ^ arg1;
+            e->flags = v ^ arg1;
     }
 }
 

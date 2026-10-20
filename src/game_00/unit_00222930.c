@@ -1,12 +1,12 @@
 #include "common.h"
 #include "types.h"
 
-typedef struct Key {
-    s32 id;
-} Key;
+typedef struct Obj_00222930 {
+    /* 0x00 */ s32 unk_0;
+} Obj_00222930;
 
 typedef struct Node {
-    Key *key;
+    /* 0x00 */ Obj_00222930 *unk_0;
     s32 unk_4;
     struct Node *next;
 } Node;
@@ -64,8 +64,8 @@ s32 func_00223EA0(s32 arg0)
     Node *n;
 
     n = D_00527A14[0];
-    while ((s32)n->key != 1) {
-        if (n->key->id == arg0) {
+    while ((s32)n->unk_0 != 1) {
+        if (n->unk_0->unk_0 == arg0) {
             return 1;
         }
         n = n->next;

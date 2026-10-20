@@ -8,9 +8,9 @@ typedef struct Obj {
     int unk_2390;
 } Obj;
 
-extern char D_004FEEA0[];
+extern char gFormat_4FEEA0[];
 
-extern char D_004FEEA8[];
+extern char gFormat_4FEEA8[];
 
 int sprintf();
 
@@ -98,11 +98,11 @@ void func_001AE4D0(Obj_001AE2F0 *p)
     s->field_20 = 0;
     s->field_10 = 0;
     s->field_14 = func_0020E850(0x3C, 0xB4);
-    sprintf(buf, D_004FEEA0);
+    sprintf(buf, gFormat_4FEEA0);
     args[0] = buf;
     args[1] = s->field_24;
     func_002B1E28(p->field_3C->field_38, func_001AE6A0, args);
-    sprintf(buf, D_004FEEA8);
+    sprintf(buf, gFormat_4FEEA8);
     args[0] = buf;
     args[1] = s->field_2C;
     func_002B1E28(p->field_3C->field_38, func_001AE6A0, args);

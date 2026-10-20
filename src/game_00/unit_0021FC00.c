@@ -4,7 +4,7 @@ typedef struct Obj0021FC00 {
     u8 pad_0[0x14];
     /* 0x14 */ s32 unk_14;
     u8 pad_18[0x28];
-    /* 0x40 */ s32 unk_40;
+    /* 0x40 */ s32 semaId;
 } Obj0021FC00;
 
 extern void WaitSema(s32);
@@ -21,9 +21,9 @@ extern void EIntr(void);
 
 void func_0021FC00(Obj0021FC00 *obj)
 {
-    WaitSema(obj->unk_40);
+    WaitSema(obj->semaId);
     obj->unk_14 = (obj->unk_14 + 0x7FF) / 0x800 * 0x800;
-    SignalSema(obj->unk_40);
+    SignalSema(obj->semaId);
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021FC00", func_0021FC50);
@@ -34,7 +34,7 @@ int func_0021FCA0(Obj0021FC00 *obj)
     *(volatile s32 *)0x1000B420 = 0;
     *(volatile s32 *)0x1000B410 = 0;
     *(volatile s32 *)0x1000B430 = 0;
-    DeleteSema(obj->unk_40);
+    DeleteSema(obj->semaId);
     return 1;
 }
 

@@ -13,9 +13,9 @@ Classes of evidence:
 |---|---|
 | Game functions | 6 of 5827 (5821 placeholders, 0 awaiting evidence) |
 | Functions, library included | 742 of 8234 (7492 placeholders, 0 awaiting evidence) |
-| Types | 4 of 346 (335 placeholders, 7 awaiting evidence) |
-| Members the matched code reaches | 54 of 680 (617 placeholders, 9 awaiting evidence) |
-| Globals the matched code reaches | 0 of 601 (601 placeholders, 0 awaiting evidence) |
+| Types | 4 of 346 (342 placeholders, 0 awaiting evidence) |
+| Members the matched code reaches | 74 of 680 (606 placeholders, 0 awaiting evidence) |
+| Globals the matched code reaches | 8 of 601 (593 placeholders, 0 awaiting evidence) |
 
 ## Functions
 
@@ -170,7 +170,7 @@ Classes of evidence:
 | `sceTtyRead` | 0x00104B30 | anchored | SCE symbol database match (sce-symbol-scanner data via PS2Recomp, GPL-3.0): libkernl sceTtyRead, SDK 2.0.0-3.1.0, relocation-masked sha1 07948f7446de — checked: SCE database libkernl sceTtyRead (relocation-masked sha1 07948f7446de); byte-identical (relocations masked) to stretch-panic:sceTtyRead |
 | `sceTtyInit` | 0x00104C00 | anchored | SCE symbol database match (sce-symbol-scanner data via PS2Recomp, GPL-3.0): libkernl sceTtyInit, SDK 1.4.2-3.1.0, relocation-masked sha1 7dcdf0cb3749 — checked: SCE database libkernl sceTtyInit (relocation-masked sha1 7dcdf0cb3749); byte-identical (relocations masked) to stretch-panic:sceTtyInit |
 | `kputchar` | 0x00104CC0 | anchored | SCE symbol database match (sce-symbol-scanner data via PS2Recomp, GPL-3.0): libkernl kputchar, SDK 2.0.0-3.1.0, relocation-masked sha1 2b7ca6473db1 — checked: SCE database libkernl kputchar (relocation-masked sha1 2b7ca6473db1); byte-identical (relocations masked) to stretch-panic:kputchar |
-| `deci2Putchar` | 0x00104CF8 | anchored | SCE symbol database match (sce-symbol-scanner data via PS2Recomp, GPL-3.0): libkernl deci2Putchar, SDK 2.0.0-3.1.0, relocation-masked sha1 2d68176436ff — checked: SCE database libkernl deci2Putchar (relocation-masked sha1 2d68176436ff); byte-identical (relocations masked) to stretch-panic:deci2Putchar |
+| `deci2Putchar` | 0x00104CF8 | anchored | SCE symbol database match (sce-symbol-scanner data via PS2Recomp, GPL-3.0): libkernl deci2Putchar, SDK 2.0.0-3.1.0, relocation-masked sha1 2d68176436ff — checked: SCE database libkernl deci2Putchar (relocation-masked sha1 2d68176436ff) |
 | `serialPutchar` | 0x00104DA8 | anchored | SCE symbol database match (sce-symbol-scanner data via PS2Recomp, GPL-3.0): libkernl serialPutchar, SDK 1.4.2-3.1.0, relocation-masked sha1 a32b5fbe1297 — checked: SCE database libkernl serialPutchar (relocation-masked sha1 a32b5fbe1297); byte-identical (relocations masked) to stretch-panic:serialPutchar |
 | `ftoi` | 0x00104DE0 | anchored | SCE symbol database match (sce-symbol-scanner data via PS2Recomp, GPL-3.0): libkernl ftoi, SDK 1.4.2-3.1.0, relocation-masked sha1 90246e26b693 — checked: SCE database libkernl ftoi (relocation-masked sha1 90246e26b693); byte-identical (relocations masked) to stretch-panic:ftoi |
 | `printfloat` | 0x00104E70 | anchored | SCE symbol database match (sce-symbol-scanner data via PS2Recomp, GPL-3.0): libkernl printfloat, SDK 3.0.0-3.1.0, relocation-masked sha1 347816674240 — checked: SCE database libkernl printfloat (relocation-masked sha1 347816674240) |
@@ -777,6 +777,7 @@ Classes of evidence:
 
 | Member | Offset | Class | Evidence |
 |---|---|---|---|
+| `Elem_001EB6C0.flags` | 0x0 | behavioural | mask-test — checked: func_001EB6C0 tests it against 0x740000 |
 | `Ent0051AC78.next` | 0x0 | behavioural | the member's name already given, with the facts that support it — checked: it points to another Ent0051AC78 |
 | `Flags.flags` | 0x0 | behavioural | mask-test — checked: func_001990C0 tests it against 0x20 |
 | `Flags4.flags` | 0x4 | behavioural | mask-test — checked: func_001BBC20 tests it against 0x1, 0x2; func_001BBC50 tests it against 0x1, 0x2; func_001BBC80 tests it against 0x1, 0x2 |
@@ -789,11 +790,20 @@ Classes of evidence:
 | `Node@unit_0019C590.next` | 0xC | behavioural | the member's name already given, with the facts that support it — checked: it points to another Node@unit_0019C590 |
 | `Node@unit_0019CB40.link_10` | 0x10 | behavioural | self-link — checked: it points to another Node@unit_0019CB40 |
 | `Node@unit_0019CB40.link_C` | 0xC | behavioural | self-link — checked: it points to another Node@unit_0019CB40 |
+| `Node@unit_00222930.next` | 0x8 | behavioural | the member's name already given, with the facts that support it — checked: it points to another Node@unit_00222930 |
+| `Node_0015A3D0.next` | 0x8 | behavioural | self-link — checked: it points to another Node_0015A3D0 |
+| `Node_0015A410.next` | 0x4 | behavioural | self-link — checked: it points to another Node_0015A410 |
 | `Node_00177B00.next` | 0x0 | behavioural | the member's name already given, with the facts that support it — checked: it points to another Node_00177B00 |
 | `Node_00178060.next` | 0x4 | behavioural | the member's name already given, with the facts that support it — checked: it points to another Node_00178060 |
 | `Node_00178060.prev` | 0x8 | behavioural | the member's name already given, with the facts that support it — checked: it points to another Node_00178060 |
 | `Node_002113E0.next` | 0x0 | behavioural | the member's name already given, with the facts that support it — checked: it points to another Node_002113E0 |
 | `Obj0019A9A0.flags` | 0x0 | behavioural | mask-test — checked: func_0019A9A0 tests it against 0x4000 |
+| `Obj0021FC00.semaId` | 0x40 | anchored | prototype — checked: func_0021FC00 passes it as argument 0 of SignalSema (s32 SignalSema(s32 sema_id)); func_0021FC00 passes it as argument 0 of WaitSema (s32 WaitSema(s32 sema_id)); func_0021FCA0 passes it as argument 0 of DeleteSema (s32 DeleteSema(s32 sema_id)) |
+| `Obj12@unit_00166E80.link_4` | 0x4 | behavioural | self-link — checked: it points to another Obj12@unit_00166E80 |
+| `Obj12@unit_00166E80.link_8` | 0x8 | behavioural | self-link — checked: it points to another Obj12@unit_00166E80 |
+| `Obj12@unit_00259200.x` | 0x0 | behavioural | member 0 of a vector of floats — checked: member 0 of Obj12@unit_00259200, a vector of 3 floats |
+| `Obj12@unit_00259200.y` | 0x4 | behavioural | member 1 of a vector of floats — checked: member 1 of Obj12@unit_00259200, a vector of 3 floats |
+| `Obj12@unit_00259200.z` | 0x8 | behavioural | member 2 of a vector of floats — checked: member 2 of Obj12@unit_00259200, a vector of 3 floats |
 | `Obj2524.flags` | 0x1F4 | behavioural | mask-test — checked: func_001BB7A0 tests it against 0x20000 |
 | `Obj8.flags` | 0x4 | behavioural | the member's name already given, with the facts that support it — checked: func_001A6370 tests it against 0x1; func_001A6380 tests it against 0x1; func_001A6390 tests it against 0x1; func_001AA210 tests it against 0xfffffffe; func_001AA230 tests it against 0xfffffffe; func_001AA310 tests it against 0x1; func_001AA340 tests it against 0x1; func_001AA370 tests it against 0x1; func_001AA460 tests it against 0x1; func_001AA490 tests it against 0x1; func_001AA4C0 tests it against 0x1 |
 | `Obj@unit_00179310.counter` | 0xC4 | behavioural | counter — checked: func_0017A590 steps it by a constant |
@@ -812,18 +822,31 @@ Classes of evidence:
 | `Obj@unit_001B1360.flags_1E0` | 0x1E0 | behavioural | mask-test — checked: func_001B13C0 tests it against 0x2120000, 0x5008000 |
 | `Obj@unit_001B1360.flags_1E4` | 0x1E4 | behavioural | mask-test — checked: func_001B13C0 tests it against 0xa00 |
 | `Obj@unit_001B1360.flags_1EC` | 0x1EC | behavioural | mask-test — checked: func_001B13C0 tests it against 0xc00000; func_001B2E60 tests it against 0x2000 |
+| `Obj_0015D130.x` | 0x0 | behavioural | member 0 of a vector of floats — checked: member 0 of Obj_0015D130, a vector of 3 floats |
+| `Obj_0015D130.y` | 0x4 | behavioural | member 1 of a vector of floats — checked: member 1 of Obj_0015D130, a vector of 3 floats |
+| `Obj_0015D130.z` | 0x8 | behavioural | member 2 of a vector of floats — checked: member 2 of Obj_0015D130, a vector of 3 floats |
+| `Obj_0015E5C0.flags` | 0x4 | behavioural | mask-test — checked: func_0015DD00 tests it against 0xffff0000 |
 | `Obj_001768D0.count` | 0x64 | behavioural | the member's name already given, with the facts that support it — checked: func_001775A0 bounds the index i with it |
 | `Obj_001A3EA0.flags` | 0x1F4 | behavioural | mask-test — checked: func_001A3EA0 tests it against 0x18000 |
 | `Obj_001A9A00.flags_1E0` | 0x1E0 | behavioural | mask-test — checked: func_001A9A00 tests it against 0x20000 |
 | `Obj_001A9A00.flags_1EC` | 0x1EC | behavioural | mask-test — checked: func_001A9A00 tests it against 0x10000100 |
 | `Obj_001AE7A0.cursor` | 0x1A0 | behavioural | the member's name already given, with the facts that support it — checked: func_001AE860 steps it by a constant |
 | `Obj_001B1360.flags` | 0x0 | behavioural | the member's name already given, with the facts that support it — checked: func_001B2E60 tests it against 0x2 |
+| `Obj_001C4FA0.flags` | 0x1E4 | behavioural | mask-test — checked: func_001C4FA0 tests it against 0x4 |
 | `Obj_001E52A0.flags` | 0x0 | behavioural | the member's name already given, with the facts that support it — checked: func_001E52A0 tests it against 0x80 |
+| `Obj_001EB6C0.count` | 0x68 | behavioural | bound — checked: func_001EB6C0 bounds the index i with it |
+| `Obj_001F14B0.next` | 0x8 | behavioural | self-link — checked: it points to another Obj_001F14B0 |
+| `Obj_00200650.counter` | 0x34 | behavioural | counter — checked: func_00200650 steps it by a constant |
+| `Obj_0020FC50.counter` | 0xA | behavioural | counter — checked: func_0020FC50 steps it by a constant |
 | `Obj_00210D40.link_0` | 0x0 | behavioural | self-link — checked: it points to another Obj_00210D40 |
 | `Obj_00210D40.link_4` | 0x4 | behavioural | self-link — checked: it points to another Obj_00210D40 |
 | `Obj_002A5558.flags` | 0xF0 | behavioural | the member's name already given, with the facts that support it — checked: func_002A5558 tests it against 0x1 |
+| `Obj_00324A30.flags` | 0x24 | behavioural | mask-test — checked: func_00324A30 tests it against 0x2; func_00324A80 tests it against 0x2 |
+| `Obj_00333310.flags` | 0x1E0 | behavioural | mask-test — checked: func_00333310 tests it against 0x8000 |
+| `Obj_0037C120.flags` | 0x0 | behavioural | mask-test — checked: func_0037C120 tests it against 0x1 |
 | `Rec0051D890.counter` | 0x4 | behavioural | counter — checked: func_001A37D0 steps it by a constant |
 | `Rec0051D890.flags` | 0x0 | behavioural | mask-test — checked: func_0019A9A0 tests it against 0x2000000 |
+| `Sub_0036E6D0.flags` | 0x1DC | behavioural | mask-test — checked: func_0036E6D0 tests it against 0x80000 |
 | `Vec3.x` | 0x0 | behavioural | member 0 of a vector of floats — checked: member 0 of Vec3, a vector of 3 floats |
 | `Vec3.y` | 0x4 | behavioural | member 1 of a vector of floats — checked: member 1 of Vec3, a vector of 3 floats |
 | `Vec3.z` | 0x8 | behavioural | member 2 of a vector of floats — checked: member 2 of Vec3, a vector of 3 floats |
@@ -832,25 +855,15 @@ Classes of evidence:
 | `Vec4.y` | 0x4 | behavioural | member 1 of a vector of floats — checked: member 1 of Vec4, a vector of 4 floats |
 | `Vec4.z` | 0x8 | behavioural | member 2 of a vector of floats — checked: member 2 of Vec4, a vector of 4 floats |
 
-## Names awaiting their evidence
+## Globals
 
-Names given before the writer checked evidence, or whose facts it has not yet verified. The next name pass confirms each with a checked fact or returns it to its placeholder.
-
-| Kind | Name | Recorded |
-|---|---|---|
-| field | `Bank_00532060.entries` | no checked fact recorded |
-| field | `Key.id` | no checked fact recorded |
-| field | `Node@unit_00222930.key` | no checked fact recorded |
-| field | `Node@unit_00222930.next` | no checked fact recorded |
-| field | `Obj_00327120.elems` | no checked fact recorded |
-| field | `Obj_003272F0.elems` | no checked fact recorded |
-| field | `Obj_00327390.slots` | no checked fact recorded |
-| field | `Obj_003273C0.slots` | no checked fact recorded |
-| field | `Obj_00333630.slots` | no checked fact recorded |
-| type | `Bank_00532060` | no checked fact recorded |
-| type | `Key` | no checked fact recorded |
-| type | `Obj_003711E0_Inner` | no checked fact recorded |
-| type | `Obj_00373DA0_Inner` | no checked fact recorded |
-| type | `Obj_0037A460_Inner` | no checked fact recorded |
-| type | `Obj_0037D550_Inner` | no checked fact recorded |
-| type | `Obj_00383E20_Inner` | no checked fact recorded |
+| Global | Address | Class | Evidence |
+|---|---|---|---|
+| `gChangeThreadPriorityResult` |  | anchored | prototype — checked: func_0015A7C0 passes it as the result of ChangeThreadPriority (s32 …; func_0015A7C0 passes it as argument 1 of ChangeThreadPriority (s32 … |
+| `gFormat_4FEEA0` | 0x004FEEA0 | anchored | prototype — checked: func_001AE4D0 passes it as argument 1 of sprintf (int sprintf(char *buf, const char … |
+| `gFormat_4FEEA8` | 0x004FEEA8 | anchored | prototype — checked: func_001AE4D0 passes it as argument 1 of sprintf (int sprintf(char *buf, const char … |
+| `gFormat_501960` | 0x00501960 | anchored | prototype — checked: func_002073D0 passes it as argument 1 of sprintf (int sprintf(char *buf, const char … |
+| `gFormat_501970` | 0x00501970 | anchored | prototype — checked: func_002073D0 passes it as argument 1 of sprintf (int sprintf(char *buf, const char … |
+| `gFormat_501F28` | 0x00501F28 | anchored | prototype — checked: func_002209C0 passes it as argument 0 of printf (int printf(const char *format, ...)) |
+| `gFormat_502280` | 0x00502280 | anchored | prototype — checked: func_00225730 passes it as argument 1 of sprintf (int sprintf(char *buf, const char … |
+| `gHandlerId` |  | anchored | prototype — checked: func_0020A650 passes it as argument 1 of RemoveIntcHandler (s32 RemoveIntcHandler(s32 … |

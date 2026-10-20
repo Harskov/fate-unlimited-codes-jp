@@ -2,7 +2,7 @@
 
 typedef struct Obj_0015E5C0 {
     int unk_0;
-    /* 0x04 */ unsigned int unk_4;
+    /* 0x04 */ unsigned int flags;
 } Obj_0015E5C0;
 
 typedef struct Obj_0015D700 {
@@ -21,9 +21,9 @@ extern s32 D_0051A9B8[];
 void func_00210D60();
 
 typedef struct Obj_0015D130 {
-    f32 unk_0;
-    f32 unk_4;
-    f32 unk_8;
+    /* 0x00 */ f32 x;
+    /* 0x04 */ f32 y;
+    /* 0x08 */ f32 z;
 } Obj_0015D130;
 
 typedef struct Obj_0015DED0 {
@@ -181,7 +181,7 @@ void func_0015DD00(void)
 {
     Obj_0015E5C0 *p = (Obj_0015E5C0 *)D_0051A9B8[0];
 
-    p->unk_4 = p->unk_4 & 0xFFFF0000;
+    p->flags = p->flags & 0xFFFF0000;
 }
 
 void func_0015DD20(void)
@@ -211,12 +211,12 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015D010", func_0015E530);
 
 void func_0015E5C0(Obj_0015E5C0 *p)
 {
-    p->unk_4 &= ~0x800;
+    p->flags &= ~0x800;
 }
 
 void func_0015E5E0(Obj_0015E5C0 *p)
 {
-    p->unk_4 |= 0x800;
+    p->flags |= 0x800;
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015D010", func_0015E5F0);

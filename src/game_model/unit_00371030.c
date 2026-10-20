@@ -14,14 +14,14 @@ extern s32 D_00507A80[];
 
 void func_0036DC20();
 
-typedef struct Obj_003711E0_Inner {
+typedef struct Obj_00371030 {
     u8 unk_0[0x3C];
     s32 unk_3C;
-} Obj_003711E0_Inner;
+} Obj_00371030;
 
 typedef struct Obj_003711E0 {
     s32 unk_0;
-    Obj_003711E0_Inner *unk_4;
+    Obj_00371030 *unk_4;
 } Obj_003711E0;
 
 extern s32 D_004DDA90[];

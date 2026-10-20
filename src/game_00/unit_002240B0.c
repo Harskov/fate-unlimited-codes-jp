@@ -31,7 +31,7 @@ typedef union Sub_00225730 {
     /* 0x00 */ s32 i0;
 } Sub_00225730;
 
-extern char D_00502280[];
+extern char gFormat_502280[];
 
 extern f32 *D_00522D98[];
 
@@ -150,7 +150,7 @@ u32 *func_00225730(void *arg0, Obj_00225730 *arg1, u32 *pc)
     switch ((*pc >> 8) & 0xFF) {
     case 0:
         pc = func_002235A0(arg0, arg1, &dst, pc);
-        sprintf(buf, D_00502280, dst->f0);
+        sprintf(buf, gFormat_502280, dst->f0);
         func_00223860(arg0, buf);
         break;
     case 1:

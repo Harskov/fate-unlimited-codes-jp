@@ -12,9 +12,9 @@ typedef struct Obj_00532060 {
     u8 pad_14[0x54];
 } Obj_00532060;
 
-typedef struct Bank_00532060 {
-    Obj_00532060 entries[16];
-} Bank_00532060;
+typedef struct Obj_0036D830 {
+    /* 0x00 */ Obj_00532060 unk_0[16];
+} Obj_0036D830;
 
 typedef struct Entry {
     u8 unk_0[0x14];
@@ -30,7 +30,7 @@ typedef struct Sub_0036E6D0 {
     u8 pad_0[0xC];
     s32 unk_C;
     u8 pad_10[0x1CC];
-    s32 unk_1DC;
+    /* 0x1DC */ s32 flags;
 } Sub_0036E6D0;
 
 typedef struct Obj_0036E6D0 {
@@ -61,12 +61,12 @@ INCLUDE_ASM("asm/nonmatchings/game_02/unit_0036D830", func_0036E0A0);
 
 void func_0036E140(s32 *arg0, s32 arg1, f32 arg2)
 {
-    Bank_00532060 *bank;
+    Obj_0036D830 *bank;
 
     if (arg0 != 0) {
-        bank = (Bank_00532060 *)D_00532060 + *arg0;
+        bank = (Obj_0036D830 *)D_00532060 + *arg0;
         if (bank != 0 && arg1 >= 0 && arg1 < 16) {
-            bank->entries[arg1].unk_10 = arg2;
+            bank->unk_0[arg1].unk_10 = arg2;
         }
     }
 }
@@ -94,7 +94,7 @@ s32 func_0036E6D0(Obj_0036E6D0 *arg0, s32 arg1)
     handler = D_004DCB10[sub->unk_C];
     if (handler == 0)
         return 0;
-    if (arg0->unk_0 == 1 && arg1 == 0 && (sub->unk_1DC & 0x80000))
+    if (arg0->unk_0 == 1 && arg1 == 0 && (sub->flags & 0x80000))
         return 0;
     return handler(arg0, 0);
 }

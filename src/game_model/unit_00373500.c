@@ -14,14 +14,14 @@ extern s32 D_00507B80[];
 
 void func_0036DC20();
 
-typedef struct Obj_00373DA0_Inner {
+typedef struct Obj_00373500 {
     u8 unk_0[0x3C];
     s32 unk_3C;
-} Obj_00373DA0_Inner;
+} Obj_00373500;
 
 typedef struct Obj_00373DA0 {
     s32 unk_0;
-    Obj_00373DA0_Inner *unk_4;
+    Obj_00373500 *unk_4;
 } Obj_00373DA0;
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00373500", func_00373500);

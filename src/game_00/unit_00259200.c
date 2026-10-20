@@ -3,16 +3,16 @@
 void func_00210D60(void);
 
 typedef struct Obj12 {
-    float unk_0;
-    float unk_4;
-    float unk_8;
+    /* 0x00 */ float x;
+    /* 0x04 */ float y;
+    /* 0x08 */ float z;
 } Obj12;
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00259200", func_00259200);
 
 int func_00259790(Obj12 *arg0, Obj12 *arg1)
 {
-    if (arg0->unk_0 == arg1->unk_0 && arg0->unk_4 == arg1->unk_4 && arg0->unk_8 == arg1->unk_8) {
+    if (arg0->x == arg1->x && arg0->y == arg1->y && arg0->z == arg1->z) {
         return 1;
     }
     return 0;

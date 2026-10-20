@@ -13,7 +13,7 @@ typedef struct Elem_003272F0 {
 
 typedef struct Obj_003272F0 {
     u8 pad_0[0xD8];
-    Elem_003272F0 elems[1];
+    /* 0xD8 */ Elem_003272F0 unk_D8[1];
 } Obj_003272F0;
 
 typedef struct Elem_00327120 {
@@ -24,12 +24,12 @@ typedef struct Elem_00327120 {
 typedef struct Obj_00327120 {
     s32 unk_0;
     u8 pad_4[0x14C];
-    Elem_00327120 elems[1];
+    /* 0x150 */ Elem_00327120 unk_150[1];
 } Obj_00327120;
 
 void func_00327120(Obj_00327120 *a0, s32 a1, s32 a2)
 {
-    a0->elems[a1].unk_0 = a2 << 8;
+    a0->unk_150[a1].unk_0 = a2 << 8;
     a0->unk_0 |= 0x402;
 }
 
@@ -66,8 +66,8 @@ INCLUDE_ASM("asm/nonmatchings/game_01/unit_00327120", func_003272D0);
 
 void func_003272F0(Obj_003272F0 *a0, s32 a1)
 {
-    a0->elems[a1].unk_0 = 0;
-    a0->elems[a1].unk_C = 0;
+    a0->unk_D8[a1].unk_0 = 0;
+    a0->unk_D8[a1].unk_C = 0;
 }
 
 void func_00327310(s32 a0, s32 a1, s32 a2)

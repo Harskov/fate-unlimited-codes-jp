@@ -1,7 +1,7 @@
 #include "common.h"
 #include "types.h"
 
-extern s32 D_003D3418[];
+extern s32 gChangeThreadPriorityResult[];
 
 s32 GetThreadId(void);
 
@@ -9,12 +9,12 @@ s32 ChangeThreadPriority(s32 threadId, s32 priority);
 
 typedef struct Node_0015A410 {
     unsigned char pad_0[0x4];
-    struct Node_0015A410 *unk_4;
+    /* 0x04 */ struct Node_0015A410 *next;
 } Node_0015A410;
 
 typedef struct Node_0015A3D0 {
     unsigned char pad_0[0x8];
-    struct Node_0015A3D0 *unk_8;
+    /* 0x08 */ struct Node_0015A3D0 *next;
 } Node_0015A3D0;
 
 extern s32 D_00518410[];
@@ -44,10 +44,10 @@ Node_0015A3D0 *func_0015A3D0(Node_0015A3D0 *arg0)
 
     if (arg0 == 0)
         return 0;
-    node = arg0->unk_8;
+    node = arg0->next;
     while (node != 0) {
         arg0 = node;
-        node = node->unk_8;
+        node = node->next;
     }
     return arg0;
 }
@@ -58,10 +58,10 @@ Node_0015A410 *func_0015A410(Node_0015A410 *arg0)
 
     if (arg0 == 0)
         return 0;
-    node = arg0->unk_4;
+    node = arg0->next;
     while (node != 0) {
         arg0 = node;
-        node = node->unk_4;
+        node = node->next;
     }
     return arg0;
 }
@@ -105,8 +105,8 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015A2E0", func_0015A6F0);
 
 void func_0015A7C0(void)
 {
-    D_003D3418[0] = ChangeThreadPriority(GetThreadId(), 1);
-    ChangeThreadPriority(GetThreadId(), D_003D3418[0]);
+    gChangeThreadPriorityResult[0] = ChangeThreadPriority(GetThreadId(), 1);
+    ChangeThreadPriority(GetThreadId(), gChangeThreadPriorityResult[0]);
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015A2E0", func_0015A810);

@@ -48,7 +48,7 @@ void func_002200E0();
 
 extern int printf();
 
-extern s32 D_00501F28[];
+extern s32 gFormat_501F28[];
 
 typedef struct Obj002209C0 {
     s32 unk_0;
@@ -81,7 +81,7 @@ int func_00220980(void)
 
 int func_002209C0(void *arg0, Obj002209C0 *arg1)
 {
-    printf(D_00501F28, arg1->unk_4);
+    printf(gFormat_501F28, arg1->unk_4);
     return 1;
 }
 
