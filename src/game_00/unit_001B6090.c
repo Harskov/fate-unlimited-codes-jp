@@ -5,6 +5,10 @@ extern s32 D_0051D754[];
 
 extern s32 D_0051D760[];
 
+extern s32 D_0051D75C[];
+
+void func_0015D130();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B6090", func_001B6090);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B6090", func_001B6110);
@@ -24,7 +28,11 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B6090", func_001B6BD0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B6090", func_001B6CE0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B6090", func_001B6E30);
+void func_001B6E30(s32 arg0, s32 arg1)
+{
+    if (arg0 != 0 && arg1 != 0)
+        func_0020D070(arg0, arg1);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B6090", func_001B6E60);
 
@@ -46,7 +54,20 @@ void func_001B6F00(f32 *out, Vec3 *a, Vec3 *b, Vec3 *c)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B6090", func_001B6FD0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B6090", func_001B7040);
+s32 func_001B7040(s32 *arg0, s32 arg1, s32 arg2)
+{
+    if (arg0 == 0) {
+        D_0051D75C[0] = -1;
+    } else if (D_0051D75C[0] >= 0 && arg1 != 0) {
+        D_0051D75C[0] += 1;
+        if (arg2 != 0)
+            *arg0 |= 0x40;
+        else
+            *arg0 |= 0x140;
+        func_0015D130(arg0 + 8, arg1);
+    }
+    return D_0051D75C[0];
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B6090", func_001B70C0);
 

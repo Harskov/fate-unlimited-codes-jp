@@ -1,4 +1,6 @@
 #include "common.h"
+#include "game_01/unit_00302130.h"
+#include "game_01/unit_00302178.h"
 
 extern s32 D_00522D30[];
 
@@ -19,11 +21,37 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00201620", func_002016C0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00201620", func_00201A30);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00201620", func_00201E10);
+void func_00201E10(s32 arg0)
+{
+    func_00302160(arg0);
+    func_00302178(arg0);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00201620", func_00201E40);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00201620", func_00201F90);
+void func_00201F90(s32 arg0, s32 arg1)
+{
+    s64 v;
+
+    switch (arg0) {
+    case 1:
+        v = (arg1 << 24) | 0x64;
+        break;
+    case 2:
+        v = (arg1 << 24) | 0x68;
+        break;
+    case 3:
+        v = (arg1 << 24) | 0x62;
+        break;
+    case 4:
+        v = (arg1 << 24) | 0x6;
+        break;
+    default:
+        v = 0x24;
+        break;
+    }
+    func_002F7E20(2, v);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00201620", func_00202010);
 

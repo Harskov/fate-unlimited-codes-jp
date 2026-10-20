@@ -7,6 +7,8 @@ typedef struct Obj {
 
 void func_001F4FD0();
 
+void func_002D1048();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FB440", func_001FB440);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FB440", func_001FB630);
@@ -19,7 +21,11 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FB440", func_001FCDB0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FB440", func_001FD200);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FB440", func_001FD280);
+s32 func_001FD280(void)
+{
+    func_002D1048();
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FB440", func_001FD2A0);
 

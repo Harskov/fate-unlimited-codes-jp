@@ -2,6 +2,18 @@
 
 void func_001E8F10(s32 arg0, s32 arg1);
 
+extern s32 D_0051F338[];
+
+extern s32 D_0051F340[];
+
+extern s32 D_0051F344[];
+
+extern s32 D_0051F348[];
+
+extern s32 D_0051F34C[];
+
+s32 func_001F1520();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E7D20", func_001E7D20);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E7D20", func_001E7DF0);
@@ -28,7 +40,17 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E7D20", func_001E8870);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E7D20", func_001E8AF0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E7D20", func_001E8B70);
+// stores one result into five globals, the last one first
+void func_001E8B70(void)
+{
+    s32 v = func_001F1520();
+
+    D_0051F34C[0] = v;
+    D_0051F348[0] = v;
+    D_0051F344[0] = v;
+    D_0051F340[0] = v;
+    D_0051F338[0] = v;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E7D20", func_001E8BC0);
 

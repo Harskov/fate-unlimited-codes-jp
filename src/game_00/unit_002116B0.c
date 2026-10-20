@@ -23,10 +23,24 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_002116B0", func_00211BB0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002116B0", func_00211E00);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002116B0", func_00211F60);
+int func_00211F60(int *ids)
+{
+    int count = 0;
+
+    while (*ids != 0xFFFF) {
+        ids++;
+        count++;
+    }
+    return count;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002116B0", func_00211FA0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002116B0", func_00211FF0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002116B0", func_00212460);
+int func_00212460(unsigned int id)
+{
+    if (id >= 0x34D)
+        return -1;
+    return id / 625;
+}

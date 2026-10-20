@@ -18,7 +18,16 @@ typedef struct Obj_001E6C00 {
     u8 unk_44[8];
 } Obj_001E6C00;
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E6380", func_001E6380);
+typedef struct Obj_001E6380 {
+    u8 unk_0[0x58];
+    f32 unk_58;
+} Obj_001E6380;
+
+void func_001E6380(Obj_001E6380 *arg0, f32 arg1)
+{
+    if (arg1 != 0.0f)
+        arg0->unk_58 = arg0->unk_58 + 1.5f * -arg1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E6380", func_001E63C0);
 

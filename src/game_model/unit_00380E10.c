@@ -2,6 +2,12 @@
 
 void memset();
 
+typedef struct Obj_00381E50 {
+    /* 0x000 */ u8 pad_0[0xC];
+    /* 0x00C */ s32 unk_C;
+    /* 0x010 */ u8 pad_10[0x12C];
+} Obj_00381E50;
+
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00380E10);
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00380E60);
@@ -29,7 +35,14 @@ void func_00381CD0(s32 arg0)
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00381CE0);
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00381E50);
+void func_00381E50(Obj_00381E50 *arg0)
+{
+    s32 saved;
+
+    saved = arg0->unk_C;
+    memset(arg0, 0, 0x13C);
+    arg0->unk_C = saved;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00381E90);
 

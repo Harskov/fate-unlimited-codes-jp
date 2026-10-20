@@ -4,6 +4,36 @@ void func_002C2C38(void);
 
 void func_00204EE0(void);
 
+extern s32 D_00522B24[];
+
+extern s16 D_00522B28[];
+
+extern s16 D_00522B2A[];
+
+extern s32 D_00522B2C[];
+
+extern s32 D_00522B30[];
+
+extern s32 D_00522B34[];
+
+void func_002050F0(void);
+
+extern s32 D_00509318[];
+
+extern s32 D_00522B20[];
+
+extern u8 D_0052C138[];
+
+typedef struct Elem_00205050 {
+    s32 unk_0;
+    s32 unk_4;
+} Elem_00205050;
+
+typedef struct Obj_00205050 {
+    s32 unk_0;
+    Elem_00205050 *unk_4;
+} Obj_00205050;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_00204AD0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_00204D80);
@@ -19,16 +49,37 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_00204EE0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_00205020);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_00205050);
+s32 func_00205050(s32 arg0, Obj_00205050 *arg1)
+{
+    s32 i;
+
+    i = arg1->unk_0;
+    arg1->unk_4[i].unk_0 = i;
+    arg1->unk_4[arg1->unk_0].unk_4 = arg0;
+    arg1->unk_0 = arg1->unk_0 + 1;
+    return arg0;
+}
 
 void func_00205090(void)
 {
     func_00204EE0();
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_002050A0);
+void func_002050A0(void)
+{
+    func_002050F0();
+    D_00522B24[0] = 0;
+    D_00522B28[0] = 1;
+    D_00522B2A[0] = 0;
+    D_00522B2C[0] = 0;
+    D_00522B30[0] = 0;
+    D_00522B34[0] = 0;
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_002050F0);
+void func_002050F0(void)
+{
+    D_00522B20[0] = *(s32 *)(D_0052C138 + D_00509318[0] + 0x40);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_00205120);
 

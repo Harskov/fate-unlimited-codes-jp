@@ -2,6 +2,16 @@
 
 extern void DelayThread(int usec);
 
+extern u8 D_00522BD0[];
+
+extern u8 D_00522BD1[];
+
+extern u8 D_00522BD2[];
+
+extern void (*D_00522BC8[])(void);
+
+void func_00206B80(void);
+
 int func_002062B0(void)
 {
     return 0;
@@ -36,13 +46,27 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206600);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206870);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206A10);
+int func_00206A10(int count)
+{
+    int i;
+
+    for (i = 0; i < count; i++) {
+        D_00522BC8[0]();
+    }
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206A80);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206AA0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206B50);
+void func_00206B50(void)
+{
+    D_00522BD0[0] = 0;
+    D_00522BD1[0] = 1;
+    D_00522BD2[0] = 0;
+    D_00522BC8[0] = func_00206B80;
+}
 
 void func_00206B80(void)
 {

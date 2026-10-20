@@ -34,7 +34,13 @@ INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00328FE0);
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00329000);
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00329020);
+void func_00329020(Obj_00328BD0 *o, int i, int v)
+{
+    if (o != 0) {
+        s32 *base = *(s32 **)o->unk_34;
+        base[i] = v;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00329050);
 
@@ -65,9 +71,13 @@ INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_003297B0);
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00329830);
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00329960);
+void func_00329960(void)
+{
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00329970);
+void func_00329970(void)
+{
+}
 
 int func_00329980(void)
 {

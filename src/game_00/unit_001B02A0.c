@@ -38,7 +38,12 @@ s32 func_001B03C0(void)
     return D_0051C900[0];
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B02A0", func_001B03D0);
+void func_001B03D0(s32 arg0)
+{
+    D_0051C900[0] = 0;
+    if (arg0 != 0)
+        memset(D_0051C900, 0, 0xE20);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B02A0", func_001B0410);
 

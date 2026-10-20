@@ -6,7 +6,7 @@ void func_00358250();
 
 extern s32 D_00531F20[];
 
-void *memset(void *s, int c, unsigned int n);
+#include "libc.h"
 
 INCLUDE_ASM("asm/nonmatchings/game_02/unit_00357AE0", func_00357AE0);
 

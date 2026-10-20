@@ -7,7 +7,17 @@ extern u32 D_0051AE50[];
 
 extern s32 D_0051C0D0[];
 
-void *memset(void *s, int c, u32 n);
+#include "libc.h"
+
+void func_00183B50();
+
+void func_00183C40();
+
+typedef struct Obj36 {
+    u8 unk_0[36];
+} Obj36;
+
+extern Obj36 D_0051AED0[];
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00183660", func_00183660);
 
@@ -52,7 +62,11 @@ void func_00184180(void)
 {
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00183660", func_00184190);
+void func_00184190(void)
+{
+    func_001837E0();
+    func_00185480();
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00183660", func_001841C0);
 
@@ -69,7 +83,13 @@ int func_001847A0(int *arg0)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00183660", func_001847B0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00183660", func_00184800);
+void func_00184800(s32 arg0, s32 arg1)
+{
+    if (arg1 >= 0x80)
+        return;
+    func_00183C40(arg1, arg0);
+    func_00183B50(arg1, arg0);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00183660", func_00184850);
 
@@ -105,4 +125,7 @@ s32 *func_00185560(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00183660", func_00185570);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00183660", func_001855E0);
+Obj36 *func_001855E0(s32 arg0)
+{
+    return &D_0051AED0[arg0];
+}

@@ -5,7 +5,9 @@ extern s32 D_005361A8[];
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380720", func_00380720);
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380720", func_003808B0);
+void func_003808B0(void)
+{
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380720", func_003808C0);
 
@@ -24,6 +26,9 @@ s32 func_00380D80(void)
     return D_005361A8[0];
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380720", func_00380D90);
+void func_00380D90(void)
+{
+    memset(D_005361A8[0], 0, 0x3C);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380720", func_00380DB0);

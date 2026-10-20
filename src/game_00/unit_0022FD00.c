@@ -1,9 +1,17 @@
 #include "common.h"
+#include "types.h"
 
 typedef struct Obj_00235380 {
     unsigned char pad[0xC8];
     s32 unk_C8;
 } Obj_00235380;
+
+typedef struct Obj001FF000 {
+    u8 unk_0[0x38];
+    s32 unk_38;
+} Obj001FF000;
+
+extern Obj001FF000 *func_001FF000(void *, s32);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022FD00", func_0022FD00);
 
@@ -31,11 +39,65 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022FD00", func_00230510);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022FD00", func_002306E0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022FD00", func_00232AF0);
+int *func_00232AF0(int *base, int i, int flag)
+{
+    int *p = &base[i];
+    if (i == 21)
+    {
+        if (flag != 0)
+        {
+            p = base + 27;
+        }
+    }
+    else if (i == 19)
+    {
+        if (flag != 0)
+        {
+            p = base + 28;
+        }
+    }
+    return p;
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022FD00", func_00232B40);
+int *func_00232B40(int *base, int i, int flag)
+{
+    int *p = &base[i];
+    if (i == 21)
+    {
+        if (flag != 0)
+        {
+            p = base + 27;
+        }
+    }
+    else if (i == 19)
+    {
+        if (flag != 0)
+        {
+            p = base + 28;
+        }
+    }
+    return p;
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022FD00", func_00232B90);
+int *func_00232B90(int *base, int i, int flag)
+{
+    int *p = &base[i];
+    if (i == 21)
+    {
+        if (flag != 0)
+        {
+            p = base + 27;
+        }
+    }
+    else if (i == 19)
+    {
+        if (flag != 0)
+        {
+            p = base + 28;
+        }
+    }
+    return p;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022FD00", func_00232BE0);
 
@@ -56,7 +118,15 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022FD00", func_00235390);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022FD00", func_002367E0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022FD00", func_00236810);
+s32 func_00236810(void *arg0, s32 arg1)
+{
+    Obj001FF000 *obj = func_001FF000(arg0, arg1 | 0x20);
+    if (obj != 0)
+    {
+        return obj->unk_38;
+    }
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022FD00", func_00236840);
 

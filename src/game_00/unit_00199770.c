@@ -44,6 +44,17 @@ extern int D_0051C804[];
 
 extern int D_0051C830[];
 
+typedef struct Obj0019ADA0 {
+    unsigned char unk_0[0x64];
+    float unk_64;
+    unsigned char unk_68[0x2D8];
+    unsigned char unk_340[0x10];
+} Obj0019ADA0;
+
+#include "libc.h"
+
+extern void func_0019ADE0(Obj0019ADA0 *o, int mode, float value);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00199770", func_00199770);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00199770", func_00199850);
@@ -103,7 +114,12 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00199770", func_0019AA60);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00199770", func_0019ACF0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00199770", func_0019ADA0);
+void func_0019ADA0(Obj0019ADA0 *arg0, void *arg1)
+{
+    if (arg1 != 0)
+        memcpy(arg0->unk_340, arg1, 0x10);
+    func_0019ADE0(arg0, 3, arg0->unk_64);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00199770", func_0019ADE0);
 

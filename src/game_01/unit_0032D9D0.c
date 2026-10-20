@@ -8,7 +8,11 @@ INCLUDE_ASM("asm/nonmatchings/game_01/unit_0032D9D0", func_0032D9D0);
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_0032D9D0", func_0032DDB0);
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_0032D9D0", func_0032E430);
+void func_0032E430(f32 *out, f32 *a, f32 *b, f32 t)
+{
+    out[0] = t * a[0] + (1.0f - t) * b[0];
+    out[1] = t * a[1] + (1.0f - t) * b[1];
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_0032D9D0", func_0032E470);
 
@@ -24,7 +28,9 @@ void func_0032E920(void)
     func_00333920();
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_0032D9D0", func_0032E930);
+void func_0032E930(void)
+{
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_0032D9D0", func_0032E940);
 
@@ -44,6 +50,8 @@ INCLUDE_ASM("asm/nonmatchings/game_01/unit_0032D9D0", func_0032F4A0);
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_0032D9D0", func_0032F780);
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_0032D9D0", func_0032FF80);
+void func_0032FF80(void)
+{
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_0032D9D0", func_0032FF90);

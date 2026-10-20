@@ -11,6 +11,16 @@ typedef struct Obj_001F0C70 {
     f32 unk_40;
 } Obj_001F0C70;
 
+typedef struct Obj_001F0C80 {
+    u8 pad_0[0x14];
+    s32 unk_14;
+    u8 pad_18[0x2C];
+    s32 unk_44;
+    s32 unk_48;
+    s32 unk_4C;
+    s32 unk_50;
+} Obj_001F0C80;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001ED8F0", func_001ED8F0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001ED8F0", func_001EDDF0);
@@ -56,7 +66,21 @@ void func_001F0C70(Obj_001F0C70 *p, f32 arg1, f32 arg2)
     p->unk_40 = arg2;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001ED8F0", func_001F0C80);
+void func_001F0C80(Obj_001F0C80 *p, s32 arg1, s32 arg2, s32 arg3)
+{
+    p->unk_50 = 0;
+    p->unk_44 = arg1;
+    p->unk_48 = arg2;
+    p->unk_4C = arg3;
+    p->unk_14 = 1;
+    if (arg1 <= 0) {
+        if (arg2 == 0) {
+            p->unk_14 = 2;
+        } else {
+            p->unk_14 = 0;
+        }
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001ED8F0", func_001F0CC0);
 

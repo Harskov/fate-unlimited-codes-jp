@@ -1,6 +1,6 @@
 #include "common.h"
 
-void memset();
+#include "libc.h"
 
 extern s32 D_00523B38[];
 
@@ -35,6 +35,13 @@ typedef struct Obj_001B1360 {
 } Obj_001B1360;
 
 
+typedef struct Obj_001B24C0 {
+    u8 pad_0[0x5C];
+    s32 unk_5C;
+    s32 unk_60;
+    s32 unk_64;
+} Obj_001B24C0;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B1360", func_001B1360);
 
 void func_001B13B0(Obj *o)
@@ -61,7 +68,13 @@ s32 func_001B13C0(Obj *o)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B1360", func_001B1440);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B1360", func_001B24C0);
+void func_001B24C0(Obj_001B24C0 *o)
+{
+    memset(o, 0, 0x68);
+    o->unk_5C = -1;
+    o->unk_60 = -1;
+    o->unk_64 = -1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B1360", func_001B2500);
 

@@ -9,7 +9,7 @@ extern s32 D_00522C80[];
 
 extern char *D_003D7BB0[];
 
-char *strcpy(char *dst, const char *src);
+#include "libc.h"
 
 char *strstr(const char *, const char *);
 
@@ -25,6 +25,22 @@ typedef struct Obj_002084D0 {
 } Obj_002084D0;
 
 extern s32 D_00522C70[];
+
+extern int strlen(const char *s);
+
+extern int strcmp(const char *a, const char *b);
+
+extern s32 D_00522C84[];
+
+typedef struct Obj_002077F0 {
+    u8 unk_0[4];
+    s32 unk_4;
+    u8 unk_8[0x80];
+} Obj_002077F0;
+
+extern s32 D_00522C48[];
+
+extern Obj_002077F0 *D_00522C60[];
 
 s32 func_002076B0(char *arg0)
 {
@@ -43,11 +59,37 @@ char *func_00207700(char *dst)
     return D_003D7BB0[0];
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00207730);
+int func_00207730(char *a, char *b)
+{
+    int len;
+
+    len = strlen(b);
+    if (len > 0x1F)
+        b += len - 0x1F;
+    return strcmp(a, b);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00207790);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_002077F0);
+int func_002077F0(void)
+{
+    int i;
+    int n;
+    Obj_002077F0 *p;
+
+    i = 0;
+    n = D_00522C48[0];
+    if (0 < n) {
+        p = D_00522C60[0];
+        do {
+            if (p->unk_4 == 0)
+                break;
+            i++;
+            p++;
+        } while (i < n);
+    }
+    return i;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00207830);
 
@@ -77,7 +119,10 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00207E70);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00207F00);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00207F50);
+s32 func_00207F50(void)
+{
+    return D_00522C78[0] - D_00522C84[0];
+}
 
 s32 func_00207F70(void)
 {
@@ -105,7 +150,15 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00208300);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00208410);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00208470);
+void func_00208470(char *dst, char *src)
+{
+    int len;
+
+    len = strlen(src);
+    if (len > 0x1F)
+        src += len - 0x1F;
+    strcpy(dst, src);
+}
 
 s32 func_002084D0(Obj_002084D0 *arg0)
 {

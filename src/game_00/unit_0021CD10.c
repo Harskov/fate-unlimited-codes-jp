@@ -18,6 +18,17 @@ typedef struct Obj_0021D1C0 {
     s32 unk_54;
 } Obj_0021D1C0;
 
+typedef struct Obj_0021D1E0 {
+    s32 unk_0;
+    u8 unk_4[0x28];
+    u32 unk_2C;
+    u8 unk_30[0x4];
+    s32 unk_34;
+    s32 unk_38;
+    s32 unk_3C;
+    s32 unk_40;
+} Obj_0021D1E0;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021CD10", func_0021CD10);
 
 void func_0021CD70(int arg0)
@@ -26,7 +37,23 @@ void func_0021CD70(int arg0)
     sceSdRemote(1, 0x8010, 0x1080, arg0);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021CD10", func_0021CDC0);
+int func_0021CDC0(int arg0, int arg1, int arg2)
+{
+    int packet[4];
+    int id;
+
+    if (arg2 <= 0)
+        return 0;
+    packet[1] = arg0;
+    packet[0] = arg1;
+    packet[2] = arg2;
+    packet[3] = 0;
+    FlushCache(0);
+    id = sceSifSetDma(packet, 1);
+    while (sceSifDmaStat(id) >= 0)
+        ;
+    return arg2;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021CD10", func_0021CE40);
 
@@ -39,7 +66,23 @@ int func_0021D1C0(Obj_0021D1C0 *arg0)
     return arg0->unk_54 >= arg0->unk_48;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021CD10", func_0021D1E0);
+void func_0021D1E0(Obj_0021D1E0 *arg0, u32 arg1)
+{
+    u32 n;
+
+    if (arg0->unk_0 == 0) {
+        n = 0x28 - arg0->unk_2C;
+        n = (n < arg1) ? n : arg1;
+        arg0->unk_2C = arg0->unk_2C + n;
+        if (arg0->unk_2C >= 0x28) {
+            arg0->unk_0 = 1;
+        }
+        arg1 -= n;
+    }
+    arg0->unk_34 = (arg0->unk_34 + (s32)arg1) % arg0->unk_3C;
+    arg0->unk_38 = arg0->unk_38 + (s32)arg1;
+    arg0->unk_40 = arg0->unk_40 + (s32)arg1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021CD10", func_0021D260);
 

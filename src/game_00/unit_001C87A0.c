@@ -2,6 +2,10 @@
 
 extern int D_00523970[];
 
+extern s32 D_0051D8A0[];
+
+extern s32 D_0052396C[];
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C87A0", func_001C87A0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C87A0", func_001C8830);
@@ -23,7 +27,11 @@ int func_001C8E80(void)
     return 0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C87A0", func_001C8E90);
+void func_001C8E90(void)
+{
+    if (D_0051D8A0[0] & 2)
+        D_0052396C[0] += 1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C87A0", func_001C8ED0);
 

@@ -13,6 +13,10 @@ void sceSdRemoteInit();
 
 extern s32 D_003DFB90[];
 
+extern s32 D_00529950[];
+
+void func_00254FD0();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00254D30", func_00254D30);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00254D30", func_00254DE0);
@@ -25,7 +29,17 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00254D30", func_00254F20);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00254D30", func_00254FD0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00254D30", func_00255040);
+void func_00255040(void)
+{
+    s32 i;
+    s32 *p;
+
+    p = D_00529950;
+    for (i = 0; i < 8; i++) {
+        func_00254FD0(p);
+        p += 4;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00254D30", func_00255090);
 
@@ -44,7 +58,11 @@ void func_00255450(int *result, int arg)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00254D30", func_002554A0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00254D30", func_00255520);
+void func_00255520(void)
+{
+    func_00255290(0, 2);
+    func_00255290(1, 2);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00254D30", func_00255550);
 

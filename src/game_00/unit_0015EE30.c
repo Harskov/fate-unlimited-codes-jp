@@ -1,6 +1,8 @@
 #include "common.h"
 
-void *memset(void *s, int c, u32 n);
+#include "libc.h"
+
+void func_002E03D0(s32, s32, s32, s32);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015EE30", func_0015EE30);
 
@@ -11,7 +13,10 @@ void func_0015F050(void *arg0)
     memset(arg0, 0, 12);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015EE30", func_0015F060);
+void func_0015F060(s32 arg0, s32 arg1, s32 arg2)
+{
+    func_002E03D0(arg0, arg2, 1, arg1);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015EE30", func_0015F070);
 

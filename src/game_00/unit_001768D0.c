@@ -29,6 +29,19 @@ typedef struct Node_00178060 {
 
 extern Handler jtbl_003D66B0[];
 
+/* the object func_00178380 hands back: a header word, then two list nodes at +0x78 and +0x84 */
+typedef struct Obj_00177FE0 {
+    /* 0x00 */ int unk_0;
+    /* 0x04 */ int unk_4;
+    unsigned char unk_8[0x70];
+    /* 0x78 */ Node_00178060 unk_78;
+    /* 0x84 */ Node_00178060 unk_84;
+} Obj_00177FE0;
+
+Obj_00177FE0 *func_00178380(int arg0, int arg1, int arg2, int arg3);
+
+void func_00178060(Node_00178060 *n);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001768D0", func_001768D0);
 
 int func_00176BC0(int *table, int i, int v)
@@ -114,7 +127,21 @@ void *func_00177B00(Node_00177B00 **head)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001768D0", func_00177B20);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001768D0", func_00177FE0);
+Obj_00177FE0 *func_00177FE0(int arg0, int arg1, int arg2, int arg3)
+{
+    Obj_00177FE0 *o;
+
+    o = func_00178380(arg3, arg0, arg1, arg2);
+    if (o == 0)
+        return 0;
+    o->unk_0 = 0;
+    o->unk_4 = 0;
+    o->unk_0 |= 8;
+    o->unk_0 |= 0x400000;
+    func_00178060(&o->unk_78);
+    func_00178060(&o->unk_84);
+    return o;
+}
 
 void func_00178060(Node_00178060 *n)
 {

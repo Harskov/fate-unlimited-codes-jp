@@ -84,6 +84,12 @@ s32 func_00310B00(s32 n);
 
 #define CLAMP(x, lo, hi) ((x) < (lo) ? (lo) : (x) > (hi) ? (hi) : (x))
 
+extern char D_00501458[];
+
+void func_002002E0();
+
+void func_00200A90();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E51D0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E5230);
@@ -93,7 +99,11 @@ int func_001E52A0(Obj_001E52A0 *p)
     return p->flags & 0x80;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E52B0);
+int func_001E52B0(int *arg0)
+{
+    *arg0 &= ~0x80;
+    return 0;
+}
 
 int func_001E52D0(int *arg0)
 {
@@ -101,7 +111,11 @@ int func_001E52D0(int *arg0)
     return 0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E52F0);
+int func_001E52F0(Obj_001E5860 *arg0, f32 arg1)
+{
+    arg0->unk_44 = arg1 / 60.0f;
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E5320);
 
@@ -109,7 +123,14 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E5350);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E53C0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E5430);
+// formats a string into a 256-byte buffer with a fixed format, then passes it on with 8, 0x04000000 and -1 (probably a debug text draw)
+void func_001E5430(char *arg0)
+{
+    char buf[256];
+
+    func_002002E0(buf, arg0, D_00501458);
+    func_00200A90(buf, 8, 0x04000000, -1);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E5470);
 

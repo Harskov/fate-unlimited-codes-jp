@@ -1,6 +1,18 @@
 #include "common.h"
 #include "types.h"
 
+typedef struct Key {
+    s32 id;
+} Key;
+
+typedef struct Node {
+    Key *key;
+    s32 unk_4;
+    struct Node *next;
+} Node;
+
+extern Node *D_00527A14[];
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00222930", func_00222930);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00222930", func_002229D0);
@@ -47,7 +59,19 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00222930", func_00223D60);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00222930", func_00223E00);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00222930", func_00223EA0);
+s32 func_00223EA0(s32 arg0)
+{
+    Node *n;
+
+    n = D_00527A14[0];
+    while ((s32)n->key != 1) {
+        if (n->key->id == arg0) {
+            return 1;
+        }
+        n = n->next;
+    }
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00222930", func_00223EF0);
 

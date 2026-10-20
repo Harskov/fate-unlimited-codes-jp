@@ -44,6 +44,18 @@ extern unsigned int D_0051AE58[];
 
 extern unsigned int D_0051AE40[];
 
+extern s32 D_0051AC60[];
+
+extern s32 D_0051AC68[];
+
+void *func_00211400(int size, int count);
+
+void *func_0020EC40(int size, int count);
+
+void func_0015D710();
+
+void func_00179380();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_00179310);
 
 void func_00179380(Link *n)
@@ -54,7 +66,13 @@ void func_00179380(Link *n)
     next->prev = prev;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_001793A0);
+void func_001793A0(Ent0051AC78 *arg0)
+{
+    if (arg0 != 0) {
+        func_00179380((Link *)&arg0->unk_10);
+        func_0015D710(D_0051AC60[0], arg0);
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_001793E0);
 
@@ -79,7 +97,11 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_0017A290);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_0017A3C0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_0017A420);
+void func_0017A420(void)
+{
+    D_0051AC68[0] = (s32)func_00211400(0x20, 0x18);
+    D_0051AC60[0] = (s32)func_0020EC40(0x12C, 0x60);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_0017A460);
 

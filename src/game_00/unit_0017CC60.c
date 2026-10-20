@@ -6,6 +6,18 @@ extern u32 D_0051AE48[];
 
 void func_00183640(s32 arg0, s32 arg1);
 
+extern s32 D_0051AD38[];
+
+extern s32 D_0051AD50[];
+
+extern s32 D_00522DB0[];
+
+void func_0020F230();
+
+extern s32 D_0051AD48[];
+
+void func_0017EA40();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0017CC60", func_0017CC60);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0017CC60", func_0017CD10);
@@ -29,9 +41,24 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0017CC60", func_0017E940);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0017CC60", func_0017EA40);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0017CC60", func_0017EB30);
+void func_0017EB30(void)
+{
+    s32 *node;
+    s32 *next;
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0017CC60", func_0017EB80);
+    node = (s32 *)D_0051AD48[0];
+    while (node != 0) {
+        next = (s32 *)node[0];
+        func_0017EA40(node);
+        node = next;
+    }
+}
+
+void func_0017EB80(void)
+{
+    func_0020F230(D_00522DB0, D_0051AD38[0]);
+    D_0051AD50[0] = 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0017CC60", func_0017EBB0);
 

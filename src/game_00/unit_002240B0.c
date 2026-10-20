@@ -58,6 +58,11 @@ u32 *func_002235A0(void *arg0, Obj_00225730 *arg1, Sub_00225730 **out, u32 *pc);
 
 void func_00223860(void *arg0, char *str);
 
+typedef struct Obj_002256E0 {
+    u8 unk_0[0x5C];
+    s32 *unk_5C;
+} Obj_002256E0;
+
 s32 func_002240B0(void)
 {
     return D_00527A08[0];
@@ -74,21 +79,53 @@ void func_002240F0(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002240B0", func_00224110);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002240B0", func_002246D0);
+u32 *func_002246D0(u32 *arg0)
+{
+    u32 w;
+
+    for (;;) {
+        w = *arg0;
+        if (!(w & 0xFF000000) || !(w & 0xFF0000) || !(w & 0xFF00) || !(w & 0xFF)) {
+            break;
+        }
+        arg0++;
+    }
+    return arg0 + 1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002240B0", func_00224730);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002240B0", func_00224920);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002240B0", func_00224E10);
+void func_00224E10(f32 *arg0, f32 *arg1, f32 *arg2)
+{
+    arg0[0] = arg1[0] / arg2[0];
+    arg0[1] = arg1[1] / arg2[1];
+    arg0[2] = arg1[2] / arg2[2];
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002240B0", func_00224E50);
+void func_00224E50(f32 *arg0, f32 *arg1, f32 *arg2)
+{
+    arg0[0] = arg1[0] * arg2[0];
+    arg0[1] = arg1[1] * arg2[1];
+    arg0[2] = arg1[2] * arg2[2];
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002240B0", func_00224E90);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002240B0", func_002256E0);
+s32 func_002256E0(Obj_002256E0 *arg0)
+{
+    s32 *p = arg0->unk_5C;
+    s32 v = *p;
+    arg0->unk_5C = p + 1;
+    return v;
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002240B0", func_00225700);
+void func_00225700(Obj_002256E0 *arg0, s32 arg1)
+{
+    arg0->unk_5C = arg0->unk_5C - 1;
+    *arg0->unk_5C = arg1;
+}
 
 s32 func_00225720(Obj_00225720 *arg0, s32 arg1)
 {

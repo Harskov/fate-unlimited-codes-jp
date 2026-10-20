@@ -7,6 +7,12 @@ typedef struct Obj_00327A20 {
 
 void func_003279B0(s32 a0, s32 a1, s32 a2, s32 a3);
 
+typedef struct Obj_00327A30 {
+    s32 unk_0;
+    unsigned char pad_4[0x10];
+    s32 unk_14;
+} Obj_00327A30;
+
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_003278C0", func_003278C0);
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_003278C0", func_003278E0);
@@ -27,7 +33,11 @@ void func_00327A20(Obj_00327A20 *p, s32 arg1)
     p->unk_28 = arg1;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_003278C0", func_00327A30);
+void func_00327A30(Obj_00327A30 *p, s32 arg1)
+{
+    p->unk_14 = p->unk_14 & ~(arg1 & 0x3C);
+    p->unk_0 = p->unk_0 | 0x402;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_003278C0", func_00327A60);
 

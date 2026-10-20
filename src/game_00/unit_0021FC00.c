@@ -11,6 +11,14 @@ extern void WaitSema(s32);
 
 extern void SignalSema(s32);
 
+extern void func_00220670(s32);
+
+extern void DeleteSema(s32);
+
+extern void DIntr(void);
+
+extern void EIntr(void);
+
 void func_0021FC00(Obj0021FC00 *obj)
 {
     WaitSema(obj->unk_40);
@@ -20,7 +28,15 @@ void func_0021FC00(Obj0021FC00 *obj)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021FC00", func_0021FC50);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021FC00", func_0021FCA0);
+int func_0021FCA0(Obj0021FC00 *obj)
+{
+    func_00220670(5);
+    *(volatile s32 *)0x1000B420 = 0;
+    *(volatile s32 *)0x1000B410 = 0;
+    *(volatile s32 *)0x1000B430 = 0;
+    DeleteSema(obj->unk_40);
+    return 1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021FC00", func_0021FCF0);
 
@@ -38,8 +54,22 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021FC00", func_002205B0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021FC00", func_00220640);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021FC00", func_00220670);
+void func_00220670(s32 arg0)
+{
+    DIntr();
+    *(s32 *)0x1000F590 = *(s32 *)0x1000F520 | 0x10000;
+    *(s32 *)0x1000B400 = arg0;
+    *(s32 *)0x1000F590 = *(s32 *)0x1000F520 & 0xFFFEFFFF;
+    EIntr();
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021FC00", func_002206D0);
+void func_002206D0(s32 arg0)
+{
+    DIntr();
+    *(s32 *)0x1000F590 = *(s32 *)0x1000F520 | 0x10000;
+    *(s32 *)0x1000B000 = arg0;
+    *(s32 *)0x1000F590 = *(s32 *)0x1000F520 & 0xFFFEFFFF;
+    EIntr();
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021FC00", func_00220730);

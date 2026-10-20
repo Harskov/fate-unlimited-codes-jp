@@ -3,7 +3,7 @@
 
 extern s32 D_00529530[];
 
-void *memset(void *s, int c, u32 n);
+#include "libc.h"
 
 typedef struct Obj_00251710 {
     /* 0x00 */ int *unk_0;
@@ -51,7 +51,13 @@ void func_00252330(void *arg0)
     memset(arg0, 0, 16);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00252340);
+int func_00252340(int *arg0)
+{
+    int v = *arg0;
+    if (v >= 0x7FFFFF00)
+        v += 0x80000100;
+    return v;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00252370);
 

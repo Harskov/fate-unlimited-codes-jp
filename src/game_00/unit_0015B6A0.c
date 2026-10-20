@@ -74,7 +74,7 @@ extern s32 D_0051A570[];
 
 extern s32 D_00522DB0[];
 
-extern void *memset(void *, int, unsigned int);
+#include "libc.h"
 
 extern void func_0013C4E0();
 
@@ -99,6 +99,14 @@ extern s32 func_00207010();
 extern void func_00207320();
 
 extern s32 func_0020F180();
+
+extern f32 D_003D63F0[];
+
+extern s32 D_00523DA8[];
+
+void func_0015BCA0();
+
+extern s32 D_0051A5C0[];
 
 void func_0015B6A0(void)
 {
@@ -187,11 +195,19 @@ void func_0015B6E0(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015B6A0", func_0015B9D0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015B6A0", func_0015BB20);
+Obj_0015B6A0 *func_0015BB20(s32 arg0)
+{
+    if (arg0 < 0 || arg0 >= 4)
+        return 0;
+    return &D_0051A420[arg0];
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015B6A0", func_0015BB60);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015B6A0", func_0015BC00);
+f32 func_0015BC00(s32 arg0)
+{
+    return D_003D63F0[arg0];
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015B6A0", func_0015BC20);
 
@@ -201,13 +217,35 @@ void func_0015BC60(void)
     func_00211130(0x8000);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015B6A0", func_0015BC80);
+void func_0015BC80(s32 arg0)
+{
+    D_00523DA8[0] = arg0;
+    D_00523DAC[0] = -1;
+    func_0015BCA0(arg0, 0x8000, 1);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015B6A0", func_0015BCA0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015B6A0", func_0015BD90);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015B6A0", func_0015BE70);
+s32 func_0015BE70(s32 arg0)
+{
+    s32 i;
+    s32 *found;
+
+    found = 0;
+    for (i = 0; i < 10; i++) {
+        if (arg0 == D_0051A5C0[i * 2]) {
+            found = &D_0051A5C0[i * 2];
+        }
+    }
+    if (found == 0) {
+        *(long long *)1 = 0;
+    }
+    found[0] = -1;
+    found[1] = 0;
+    return 1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015B6A0", func_0015BED0);
 

@@ -2,11 +2,15 @@
 
 extern u32 D_0051D8A0[];
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00345B80", func_00345B80);
+void func_00345B80(void)
+{
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00345B80", func_00345B90);
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00345B80", func_00346050);
+void func_00346050(void)
+{
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00345B80", func_00346060);
 
@@ -16,7 +20,9 @@ INCLUDE_ASM("asm/nonmatchings/game_01/unit_00345B80", func_00346620);
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00345B80", func_00346760);
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00345B80", func_003469B0);
+void func_003469B0(void)
+{
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00345B80", func_003469C0);
 

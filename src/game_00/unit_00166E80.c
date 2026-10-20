@@ -8,6 +8,26 @@ void func_002E0290(void);
 
 void func_0023D4A0(s32 a0, s32 a1, s32 a2, s32 a3);
 
+void func_0015D130();
+
+void func_00165EE0();
+
+void func_0020C340();
+
+void func_0020D0C0();
+
+typedef struct Obj12 {
+    s32 unk_0;
+    struct Obj12 *unk_4;
+    struct Obj12 *unk_8;
+} Obj12;
+
+typedef struct Obj_00166F30 {
+    s32 unk_0;
+    s32 unk_4;
+    s32 unk_8;
+} Obj_00166F30;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_00166E80);
 
 void func_00166F20(void)
@@ -15,7 +35,13 @@ void func_00166F20(void)
     func_002E0290();
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_00166F30);
+s32 func_00166F30(s32 a0, Obj_00166F30 *a1)
+{
+    if (a1->unk_0 == a1->unk_4)
+        a1->unk_8 = a0;
+    a1->unk_0 = a1->unk_0 + 1;
+    return a0;
+}
 
 int func_00166F60(void)
 {
@@ -27,7 +53,15 @@ int func_00166F60(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_00166F90);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_00167130);
+Obj12 *func_00167130(s32 a0, Obj12 *a1, Obj12 *a2)
+{
+    a2->unk_8->unk_4 = a1;
+    a1->unk_0 = a0;
+    a1->unk_4 = a2;
+    a1->unk_8 = a2->unk_8;
+    a2->unk_8 = a1;
+    return a1;
+}
 
 void func_00167160(s32 a0, s32 a1, s32 a2)
 {
@@ -92,16 +126,36 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_0016D1E0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_0016D230);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_0016E8A0);
+void func_0016E8A0(Vec4 *a, Vec4 *b)
+{
+    func_00165EE0(a, b);
+    func_00165EE0(a + 1, b + 1);
+    func_00165EE0(a + 2, b + 2);
+    func_0020D0C0(a);
+}
 
 float func_0016E8F0(Vec4 *a, Vec4 *b)
 {
     return a->x * b->x + a->y * b->y + a->z * b->z;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_0016E920);
+void func_0016E920(Vec4 *dst, Vec4 *a, Vec4 *b)
+{
+    Vec4 cross;
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_0016E990);
+    cross.x = a->y * b->z - a->z * b->y;
+    cross.y = a->z * b->x - a->x * b->z;
+    cross.z = a->x * b->y - a->y * b->x;
+    func_0015D130(dst, &cross);
+}
+
+void func_0016E990(Vec4 *dst, Vec4 *a, Vec4 *b)
+{
+    Vec4 scaled;
+
+    func_00165EE0(&scaled, b);
+    func_0020C340(dst, a, &scaled, 0);
+}
 
 void func_0016E9E0(Vec4 *dst, Vec4 *a, Vec4 *b)
 {
@@ -112,7 +166,11 @@ void func_0016E9E0(Vec4 *dst, Vec4 *a, Vec4 *b)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_0016EA20);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_0016F640);
+void func_0016F640(Vec4 *dst, Vec4 *src)
+{
+    func_0015D130(dst, src);
+    dst->w = src->w;
+}
 
 void func_0016F680(Vec4 *dst, Vec4 *a, Vec4 *b)
 {

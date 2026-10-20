@@ -1,13 +1,25 @@
 #include "common.h"
 #include "types.h"
 
-extern void *memset(void *s, int c, unsigned int n);
+#include "libc.h"
+
+void func_00218E20(void);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00213210);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00213420);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_002134F0);
+void func_002134F0(f32 *v)
+{
+    v[0] += -0.5f;
+    v[1] += -0.5f;
+    v[2] += -0.5f;
+    v[3] += -0.5f;
+    v[4] += -0.5f;
+    v[5] += -0.5f;
+    v[6] += -0.5f;
+    v[7] += -0.5f;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00213560);
 
@@ -18,9 +30,35 @@ void func_002135C0(void *dst, unsigned int n)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_002135D0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_002138B0);
+int func_002138B0(float x, float y)
+{
+    if (x > 4096.0f)
+        return 0;
+    if (x < -4096.0f)
+        return 0;
+    if (y > 4096.0f)
+        return 0;
+    if (y < -4096.0f)
+        return 0;
+    return 1;
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00213910);
+int func_00213910(float *p)
+{
+    int i;
+
+    for (i = 0; i < 4; i++, p += 2) {
+        if (p[0] > 4096.0f)
+            return 0;
+        if (p[0] < -4096.0f)
+            return 0;
+        if (p[1] > 4096.0f)
+            return 0;
+        if (p[1] < -4096.0f)
+            return 0;
+    }
+    return 1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_002139A0);
 
@@ -68,7 +106,10 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00217920);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00217A70);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00217DE0);
+void func_00217DE0(void)
+{
+    func_00218E20();
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00217DF0);
 

@@ -41,12 +41,22 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001DFC70", func_001E0C70);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001DFC70", func_001E0E00);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001DFC70", func_001E1220);
+void func_001E1220(void)
+{
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001DFC70", func_001E1230);
+void func_001E1230(void)
+{
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001DFC70", func_001E1240);
+void func_001E1240(void)
+{
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001DFC70", func_001E1250);
+void func_001E1250(void)
+{
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001DFC70", func_001E1260);
+void func_001E1260(void)
+{
+}

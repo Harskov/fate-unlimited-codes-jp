@@ -1,5 +1,10 @@
 #include "common.h"
 
+typedef struct Obj_001DEAB0 {
+    u8 pad_0[0x194];
+    s32 *unk_194;
+} Obj_001DEAB0;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001DCFB0", func_001DCFB0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001DCFB0", func_001DD060);
@@ -26,7 +31,12 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001DCFB0", func_001DE6D0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001DCFB0", func_001DEA20);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001DCFB0", func_001DEAB0);
+void func_001DEAB0(Obj_001DEAB0 *arg0, s32 arg1)
+{
+    s32 *p = arg0->unk_194;
+    if (p != 0)
+        *p = arg1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001DCFB0", func_001DEAD0);
 

@@ -72,7 +72,10 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F650);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F780);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F940);
+int func_0021F940(int a0, int a1, int a2, int a3)
+{
+    return (a0 + a3 - a1) % a3 < a2;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F960);
 

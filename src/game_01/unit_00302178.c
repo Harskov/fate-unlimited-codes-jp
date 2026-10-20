@@ -1,4 +1,5 @@
 #include "common.h"
+#include "game_01/unit_00302178.h"
 
 extern s32 D_0050904C;
 

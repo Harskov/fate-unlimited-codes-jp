@@ -21,6 +21,10 @@ typedef struct Node {
 
 extern int D_0051C860[];
 
+extern Node *D_0051C858[];
+
+Node *func_0019D850(Node *arg0);
+
 int func_0019CB40(void)
 {
     Ent00531B60 *e;
@@ -110,7 +114,14 @@ int func_0019D750(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019CB40", func_0019D760);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019CB40", func_0019D7F0);
+void func_0019D7F0(int arg0)
+{
+    Node *n;
+
+    n = D_0051C858[arg0];
+    while (n->link_C != 0)
+        n = func_0019D850(n->link_C);
+}
 
 Node *func_0019D850(Node *arg0)
 {

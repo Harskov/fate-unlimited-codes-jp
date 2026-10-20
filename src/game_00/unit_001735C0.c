@@ -14,6 +14,16 @@ extern int D_00523AF0[];
 
 extern int D_00523D50[];
 
+extern s32 D_0051AC50[];
+
+extern s32 D_0051AC54[];
+
+extern s32 D_0051AC58[];
+
+extern s32 D_0051AC5C[];
+
+#include "libc.h"
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001735C0", func_001735C0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001735C0", func_001736B0);
@@ -145,4 +155,11 @@ int func_00176740(int id, int side)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001735C0", func_001767B0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001735C0", func_00176880);
+void func_00176880(void)
+{
+    memset(D_0051AC50, 0, 0x10);
+    D_0051AC50[0] = 0;
+    D_0051AC54[0] = 0;
+    D_0051AC58[0] = 0;
+    D_0051AC5C[0] = 0;
+}

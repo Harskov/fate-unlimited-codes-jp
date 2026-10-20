@@ -13,9 +13,9 @@ Classes of evidence:
 |---|---|
 | Game functions | 6 of 5827 (5821 placeholders, 0 awaiting evidence) |
 | Functions, library included | 742 of 8234 (7492 placeholders, 0 awaiting evidence) |
-| Types | 4 of 213 (209 placeholders, 0 awaiting evidence) |
-| Members the matched code reaches | 54 of 395 (341 placeholders, 0 awaiting evidence) |
-| Globals the matched code reaches | 0 of 275 (275 placeholders, 0 awaiting evidence) |
+| Types | 4 of 346 (335 placeholders, 7 awaiting evidence) |
+| Members the matched code reaches | 54 of 680 (617 placeholders, 9 awaiting evidence) |
+| Globals the matched code reaches | 0 of 601 (601 placeholders, 0 awaiting evidence) |
 
 ## Functions
 
@@ -831,3 +831,26 @@ Classes of evidence:
 | `Vec4.x` | 0x0 | behavioural | member 0 of a vector of floats — checked: member 0 of Vec4, a vector of 4 floats |
 | `Vec4.y` | 0x4 | behavioural | member 1 of a vector of floats — checked: member 1 of Vec4, a vector of 4 floats |
 | `Vec4.z` | 0x8 | behavioural | member 2 of a vector of floats — checked: member 2 of Vec4, a vector of 4 floats |
+
+## Names awaiting their evidence
+
+Names given before the writer checked evidence, or whose facts it has not yet verified. The next name pass confirms each with a checked fact or returns it to its placeholder.
+
+| Kind | Name | Recorded |
+|---|---|---|
+| field | `Bank_00532060.entries` | no checked fact recorded |
+| field | `Key.id` | no checked fact recorded |
+| field | `Node@unit_00222930.key` | no checked fact recorded |
+| field | `Node@unit_00222930.next` | no checked fact recorded |
+| field | `Obj_00327120.elems` | no checked fact recorded |
+| field | `Obj_003272F0.elems` | no checked fact recorded |
+| field | `Obj_00327390.slots` | no checked fact recorded |
+| field | `Obj_003273C0.slots` | no checked fact recorded |
+| field | `Obj_00333630.slots` | no checked fact recorded |
+| type | `Bank_00532060` | no checked fact recorded |
+| type | `Key` | no checked fact recorded |
+| type | `Obj_003711E0_Inner` | no checked fact recorded |
+| type | `Obj_00373DA0_Inner` | no checked fact recorded |
+| type | `Obj_0037A460_Inner` | no checked fact recorded |
+| type | `Obj_0037D550_Inner` | no checked fact recorded |
+| type | `Obj_00383E20_Inner` | no checked fact recorded |
