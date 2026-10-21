@@ -11,7 +11,7 @@ int func_001BF7C0(int a, int b)
 float func_001BF7D0(Obj2524 *arg0)
 {
     if (arg0 != 0)
-        return arg0->unk_2448 != 0 ? arg0->unk_2448->sub14C.unk_24 : 0.0f;
+        return arg0->unk_2448 != 0 ? arg0->unk_2448->unk_14C.unk_24 : 0.0f;
     return 0.0f;
 }
 
@@ -23,21 +23,21 @@ int func_001BF810(Obj2524 *arg0)
         return 0;
     c = arg0->unk_2448;
     if (c != 0)
-        return c->sub14C.unk_80;
+        return c->unk_14C.unk_80;
     return 0;
 }
 
 float func_001BF830(Obj2524 *arg0)
 {
     if (arg0 != 0)
-        return arg0->unk_2448 != 0 ? arg0->unk_2448->sub14C.unk_20 : 0.0f;
+        return arg0->unk_2448 != 0 ? arg0->unk_2448->unk_14C.unk_20 : 0.0f;
     return 0.0f;
 }
 
 float func_001BF870(Obj2524 *arg0)
 {
     if (arg0 != 0)
-        return arg0->unk_2448 != 0 ? arg0->unk_2448->sub14C.unk_1C : 0.0f;
+        return arg0->unk_2448 != 0 ? arg0->unk_2448->unk_14C.unk_1C : 0.0f;
     return 0.0f;
 }
 

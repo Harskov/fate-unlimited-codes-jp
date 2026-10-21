@@ -70,7 +70,7 @@ typedef struct Obj1D0 {
     unsigned char unk_14[0xB0 - 0x14];
     short unk_B0;
     unsigned char unk_B2[0x14C - 0xB2];
-    Sub14C sub14C;
+    /* 0x14C */ Sub14C unk_14C;
 } Obj1D0;
 
 typedef struct Obj2524 {
@@ -81,7 +81,7 @@ typedef struct Obj2524 {
     unsigned char unk_40[0x1F4 - 0x40];
     /* 0x1F4 */ int flags;
     unsigned char unk_1F8[0x220 - 0x1F8];
-    Sub220 sub220;
+    /* 0x220 */ Sub220 unk_220;
     unsigned char unk_230[0x464 - 0x230];
     float unk_464;
     unsigned char unk_468[0x2448 - 0x468];

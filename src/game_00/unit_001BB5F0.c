@@ -49,7 +49,7 @@ int func_001BB710(Obj2524 *arg0)
         return 0;
     if (arg0->unk_C != 2)
         return 0;
-    p = &arg0->sub220;
+    p = &arg0->unk_220;
     if (p != 0) {
         v = p->unk_A;
         return v == 1;
@@ -102,7 +102,7 @@ float func_001BB7F0(Obj2524 *arg0)
     c = arg0->unk_2448;
     if (c == 0)
         return 0.0f;
-    p = &c->sub14C;
+    p = &c->unk_14C;
     if (p != 0)
         return p->unk_6C;
     return 0.0f;
@@ -118,7 +118,7 @@ int func_001BB840(Obj2524 *arg0)
     c = arg0->unk_2448;
     if (c == 0)
         return 0;
-    p = &c->sub14C;
+    p = &c->unk_14C;
     if (p == 0)
         return 0;
     if (p->unk_7C < p->unk_1C)

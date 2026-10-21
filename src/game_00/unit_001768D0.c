@@ -22,7 +22,7 @@ typedef struct Obj_001768D0 {
 typedef struct Node_00177B00 { struct Node_00177B00 *next; } Node_00177B00;
 
 typedef struct Node_00178060 {
-    int f0;
+    /* 0x00 */ int unk_0;
     struct Node_00178060 *next;
     struct Node_00178060 *prev;
 } Node_00178060;
@@ -145,7 +145,7 @@ Obj_00177FE0 *func_00177FE0(int arg0, int arg1, int arg2, int arg3)
 
 void func_00178060(Node_00178060 *n)
 {
-    n->f0 = 1;
+    n->unk_0 = 1;
     n->next = n;
     n->prev = n;
 }

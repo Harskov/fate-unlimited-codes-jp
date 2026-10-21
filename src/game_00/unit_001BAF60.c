@@ -82,7 +82,7 @@ int func_001BB380(Obj2524 *arg0)
         return 0;
     if (arg0->unk_C != 8)
         return 0;
-    p = &arg0->sub220;
+    p = &arg0->unk_220;
     if (p != 0) {
         v = p->unk_A;
         return v == 1;
