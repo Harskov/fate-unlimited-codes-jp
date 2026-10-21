@@ -14,7 +14,7 @@ Classes of evidence:
 | Game functions | 6 of 5827 (5821 placeholders, 0 awaiting evidence) |
 | Functions, library included | 742 of 8234 (7492 placeholders, 0 awaiting evidence) |
 | Types | 4 of 345 (341 placeholders, 0 awaiting evidence) |
-| Members the matched code reaches | 74 of 679 (605 placeholders, 0 awaiting evidence) |
+| Members the matched code reaches | 74 of 679 (601 placeholders, 4 awaiting evidence) |
 | Globals the matched code reaches | 8 of 601 (593 placeholders, 0 awaiting evidence) |
 
 ## Functions
@@ -867,3 +867,14 @@ Classes of evidence:
 | `gFormat_501F28` | 0x00501F28 | anchored | prototype — checked: func_002209C0 passes it as argument 0 of printf (int printf(const char *format, ...)) |
 | `gFormat_502280` | 0x00502280 | anchored | prototype — checked: func_00225730 passes it as argument 1 of sprintf (int sprintf(char *buf, const char … |
 | `gHandlerId` |  | anchored | prototype — checked: func_0020A650 passes it as argument 1 of RemoveIntcHandler (s32 RemoveIntcHandler(s32 … |
+
+## Names awaiting their evidence
+
+Names given before the writer checked evidence, or whose facts it has not yet verified. The next name pass confirms each with a checked fact or returns it to its placeholder.
+
+| Kind | Name | Recorded |
+|---|---|---|
+| field | `Flags.f10` | no checked fact recorded |
+| field | `Node_00178060.f0` | no checked fact recorded |
+| field | `Obj1D0.sub14C` | no checked fact recorded |
+| field | `Obj2524.sub220` | no checked fact recorded |
