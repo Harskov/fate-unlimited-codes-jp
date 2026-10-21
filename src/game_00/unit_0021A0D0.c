@@ -1,10 +1,5 @@
 #include "common.h"
-
-typedef struct Unk_0021A860 {
-    s16 unk_0;
-    s16 pad_2;
-    s32 unk_4;
-} Unk_0021A860;
+#include "game_00/unit_0021A0D0.h"
 
 typedef struct Unk_0021A870 {
     /* 0x00 */ short unk_0;

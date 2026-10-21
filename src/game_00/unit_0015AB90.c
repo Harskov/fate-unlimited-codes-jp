@@ -1,5 +1,6 @@
 #include "common.h"
 #include "types.h"
+#include "game_00/unit_0015AB90.h"
 
 typedef struct Rec0051A424 {
     s32 unk_00;
@@ -28,9 +29,9 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015AB90", func_0015AE00);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015AB90", func_0015AF20);
 
-void func_0015AF90(s32 i)
+void func_0015AF90(s32 i, s32 arg1)
 {
-    func_00144F88(D_0051A424[i].unk_00);
+    func_00144F88(D_0051A424[i].unk_00, arg1);
 }
 
 void func_0015AFB0(s32 i)

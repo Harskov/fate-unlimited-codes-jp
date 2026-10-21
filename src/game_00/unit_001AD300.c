@@ -1,6 +1,7 @@
 #include "common.h"
 #include "game_00/tbl_0051C858.h"
 #include "game_00/obj_001ae2f0.h"
+#include "game_00/unit_001FE660.h"
 
 typedef struct Obj {
     unsigned char unk_0[0x238C];
@@ -19,8 +20,6 @@ int func_0020E850();
 void func_001AE6A0();
 
 void func_001CCFD0();
-
-void *func_001FF000();
 
 void func_002B1E28();
 

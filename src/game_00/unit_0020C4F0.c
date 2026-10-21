@@ -1,19 +1,11 @@
 #include "common.h"
+#include "game_00/unit_0020C4F0.h"
 
 void func_002DC8B8(void);
 
 void func_002DC008(void);
 
 void func_002DBC08(void);
-
-typedef struct Obj_0020CE80 {
-    u8 pad[0x10];
-    s32 unk_10;
-    u8 pad_14[0xC];
-    s32 unk_20;
-    u8 pad_24[0xC];
-    s32 unk_30;
-} Obj_0020CE80;
 
 typedef struct Obj64 {
     s32 unk_0[16];
@@ -43,7 +35,7 @@ void *func_0020CE80(Obj_0020CE80 *o)
     return &o->unk_30;
 }
 
-void *func_0020CE90(Obj_0020CE80 *o)
+Vec4 *func_0020CE90(Obj_0020CE80 *o)
 {
     return &o->unk_20;
 }

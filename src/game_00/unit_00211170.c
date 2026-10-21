@@ -1,4 +1,6 @@
 #include "common.h"
+#include "game_00/unit_0020EB60.h"
+#include "game_00/unit_00211170.h"
 
 /* free-list node: func_002113E0 pops the head of a singly linked list (derived from func_00177B00) */
 typedef struct Node_002113E0 { struct Node_002113E0 *next; } Node_002113E0;
@@ -9,12 +11,6 @@ typedef struct Obj {
 } Obj;
 
 void func_00211370();
-void func_0020EC40();
-
-typedef struct Obj_00211400 {
-    u8 pad[0x30];
-    s32 unk_30;
-} Obj_00211400;
 
 extern s32 D_005231F0[];
 
@@ -55,9 +51,9 @@ void *func_002113E0(Node_002113E0 **head)
     return (void *)(n + 1);
 }
 
-void func_00211400(int a0, Obj_00211400 *a1)
+void *func_00211400(s32 a0, s32 a1)
 {
-    func_0020EC40(a0, &a1->unk_30);
+    return func_0020EC40(a0, a1 + 0x30);
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00211170", func_00211410);

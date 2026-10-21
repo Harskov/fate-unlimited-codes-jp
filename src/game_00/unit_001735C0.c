@@ -23,6 +23,7 @@ extern s32 D_0051AC58[];
 extern s32 D_0051AC5C[];
 
 #include "libc.h"
+#include "game_00/unit_001735C0.h"
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001735C0", func_001735C0);
 

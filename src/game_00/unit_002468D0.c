@@ -1,4 +1,5 @@
 #include "common.h"
+#include "game_00/unit_002076B0.h"
 
 typedef struct Obj_00225730 {
     /* 0x00 */ u8 unk_0[0x4C];
@@ -62,8 +63,6 @@ s32 func_002076A0(void);
 s32 func_00207F50(void);
 
 s32 func_00207F70(void);
-
-s16 *func_00207F80(void);
 
 u32 func_0020ED50(s32 *);
 

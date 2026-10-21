@@ -12,7 +12,7 @@
    which is what makes the relocations match (as for D_00528A08/D_00528A10). */
 typedef struct Slot0051C870 {
     /* 0x00 */ int unk_0;
-    int *owner;
+    /* 0x04 */ int *pad_4;
 } Slot0051C870;
 
 /* the owner column, addressed through its own symbol */

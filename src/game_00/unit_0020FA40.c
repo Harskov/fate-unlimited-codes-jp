@@ -1,4 +1,5 @@
 #include "common.h"
+#include "eekernel.h"
 #include "types.h"
 
 extern s32 D_003D7BC8[];
@@ -6,8 +7,6 @@ extern s32 D_003D7BC8[];
 extern u32 D_00522E08[];
 
 extern u32 D_00522E18[];
-
-extern s32 DelayThread(s32 usec);
 
 extern s32 D_00522E10[];
 

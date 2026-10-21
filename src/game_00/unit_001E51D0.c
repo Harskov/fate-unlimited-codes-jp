@@ -1,6 +1,7 @@
 #include "common.h"
 #include "game_00/unit_0020D0D0.h"
 #include "game_00/vec.h"
+#include "game_00/unit_0020C4F0.h"
 
 typedef struct Obj_001E52A0 {
     unsigned int flags;
@@ -77,7 +78,6 @@ void func_002052F0(const char *fmt, ...);
 
 void func_0020BC70(void *p);
 
-Vec4 *func_0020CE90(void *p);
 
 
 s32 func_00310B00(s32 n);

@@ -1,6 +1,5 @@
 #include "common.h"
-
-extern void DelayThread(int usec);
+#include "eekernel.h"
 
 extern u8 D_00522BD0[];
 

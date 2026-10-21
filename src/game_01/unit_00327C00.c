@@ -1,4 +1,5 @@
 #include "common.h"
+#include "game_01/unit_00327D30.h"
 
 /* one element of the table func_00250220 indexes in steps of 0x370; each accessor here takes one */
 typedef struct Obj_00327C40 {
@@ -12,8 +13,6 @@ typedef struct Obj_00327C40 {
     /* 0x358 */ s32 unk_358;
     /* 0x35C */ u8 unk_35C[0x14];
 } Obj_00327C40;
-
-void func_00328250(void);
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00327C00", func_00327C00);
 
@@ -69,9 +68,9 @@ void func_00327CC0(s32 *arg0, s32 arg1, s32 arg2)
     arg0[0] |= 0x402;
 }
 
-void func_00327CE0(void)
+void func_00327CE0(Obj_00328250 *p)
 {
-    func_00328250();
+    func_00328250(p);
 }
 
 void func_00327CF0(Obj_00327C40 *p)

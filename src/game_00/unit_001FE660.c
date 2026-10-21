@@ -18,6 +18,7 @@ void func_00200690();
 extern int strlen(const char *s);
 
 #include "libc.h"
+#include "game_00/unit_001FE660.h"
 
 extern s32 D_0051FDD8[];
 

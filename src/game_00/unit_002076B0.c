@@ -5,11 +5,12 @@ extern s32 D_00522C78[];
 
 void func_00207CE0(void);
 
-extern s32 D_00522C80[];
+extern s16 D_00522C80[];
 
 extern char *D_003D7BB0[];
 
 #include "libc.h"
+#include "game_00/unit_002076B0.h"
 
 char *strstr(const char *, const char *);
 
@@ -129,7 +130,7 @@ s32 func_00207F70(void)
     return D_00522C78[0];
 }
 
-s32 *func_00207F80(void)
+s16 *func_00207F80(void)
 {
     return D_00522C80;
 }

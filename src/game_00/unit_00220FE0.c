@@ -1,5 +1,6 @@
 #include "common.h"
 #include "types.h"
+#include "game_00/unit_001FE660.h"
 
 typedef struct Obj00221190 {
     unsigned char unk_0[0x8];
@@ -22,8 +23,6 @@ typedef struct Obj001FF000 {
     u8 unk_0[0x38];
     s32 unk_38;
 } Obj001FF000;
-
-extern Obj001FF000 *func_001FF000(void *, s32);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220FE0", func_00220FE0);
 

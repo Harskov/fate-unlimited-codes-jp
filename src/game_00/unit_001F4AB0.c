@@ -1,10 +1,9 @@
 #include "common.h"
+#include "game_00/unit_001FE660.h"
 
 extern s32 D_00501678[];
 
 extern s32 D_0051FA30[];
-
-extern s32 func_001FF000();
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F4AB0", func_001F4AB0);
 
@@ -60,7 +59,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F4AB0", func_001F5A00);
 
 void func_001F5A30(void)
 {
-    D_0051FA30[0] = func_001FF000(D_00501678, 0x04000040);
+    D_0051FA30[0] = (s32)func_001FF000(D_00501678, 0x04000040);
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F4AB0", func_001F5A60);

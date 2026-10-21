@@ -1,5 +1,7 @@
 #include "common.h"
 #include "game_00/vec.h"
+#include "game_00/unit_0020EB60.h"
+#include "game_00/unit_00211170.h"
 
 /* doubly linked list unlink: prev at +4, next at +8 */
 typedef struct Link {
@@ -47,10 +49,6 @@ extern unsigned int D_0051AE40[];
 extern s32 D_0051AC60[];
 
 extern s32 D_0051AC68[];
-
-void *func_00211400(int size, int count);
-
-void *func_0020EC40(int size, int count);
 
 void func_0015D710();
 

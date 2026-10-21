@@ -11,7 +11,7 @@ extern void WaitSema(s32);
 
 extern void SignalSema(s32);
 
-extern void func_00220670(s32);
+void func_00220670(s32 arg0);
 
 extern void DeleteSema(s32);
 

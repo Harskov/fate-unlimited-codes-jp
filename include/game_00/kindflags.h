@@ -7,7 +7,7 @@
    func_001A6300 and func_001AA2A0 and updates +0x4 of it itself, so the variants in
    unit_001A5D70 and unit_001AA110 work on the same object. */
 typedef struct Obj8 {
-    int kind;
+    /* 0x00 */ int unk_0;
     unsigned int flags;
 } Obj8;
 #endif

@@ -1,8 +1,10 @@
 #include "common.h"
+#include "eekernel.h"
 #include "types.h"
 
 #include "game_00/adxowner.h"
 #include "game_00/tbl_0051E444.h"
+#include "game_00/unit_0015AB90.h"
 
 int func_0013B9C8(void *p);
 
@@ -42,8 +44,6 @@ void func_0021E7B0(s32);
 
 void func_0015B6A0(void);
 
-void func_0015AF90(s32, s32);
-
 void func_00253870(void);
 
 s32 func_002543F0(s32);
@@ -61,8 +61,6 @@ void sceGsSetDefDBuff(s32 *, s32, s32, s32, s32, s32, s32);
 void sceGsSyncPath(s32, s32);
 
 void FlushCache(s32);
-
-void DelayThread(s32);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021D690);
 

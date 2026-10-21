@@ -1,15 +1,15 @@
 #include "common.h"
 #include "types.h"
+#include "game_00/unit_0021A0D0.h"
 
 extern s32 D_005247A0[];
 
-extern s32 D_00525160[];
+extern Unk_0021A860 D_00525160[];
 
 extern s32 D_00525164[];
 
 void func_00200BB0(s32 arg0, s32 arg1, s32 arg2);
 
-void func_0021A860(s32 *arg0);
 
 typedef struct Sub_00219050 {
     u8 pad_0[0x88];
@@ -81,5 +81,5 @@ void func_0021A070(s32 arg0)
     if (*entry == 0)
         return;
     func_00200BB0(*entry, 0x400, -1);
-    func_0021A860(&D_00525160[arg0 * 2]);
+    func_0021A860(&D_00525160[arg0]);
 }
