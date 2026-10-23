@@ -1,4 +1,5 @@
 #include "common.h"
+#include "eekernel.h"
 
 typedef struct Obj0021FC00 {
     u8 pad_0[0x14];
@@ -6,10 +7,6 @@ typedef struct Obj0021FC00 {
     u8 pad_18[0x28];
     /* 0x40 */ s32 semaId;
 } Obj0021FC00;
-
-extern void WaitSema(s32);
-
-extern void SignalSema(s32);
 
 void func_00220670(s32 arg0);
 

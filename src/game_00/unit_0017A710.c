@@ -1,4 +1,5 @@
 #include "common.h"
+#include "libc.h"
 
 extern int D_0051AC70[];
 
@@ -11,8 +12,6 @@ extern int D_0051AE58[];
 extern int D_00522DB0[];
 
 int func_0020F180(void *p, int size);
-
-extern void *memset(void *s, int c, unsigned int n);
 
 int func_0017A820(int *p, int v);
 

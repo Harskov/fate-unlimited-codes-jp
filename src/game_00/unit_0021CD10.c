@@ -1,4 +1,5 @@
 #include "common.h"
+#include "libc.h"
 #include "types.h"
 
 int sceGsSyncV(int mode);
@@ -34,8 +35,6 @@ void func_0021CD70(int arg0);
 int func_0021CDC0(int arg0, int arg1, int arg2);
 
 int sceSifAllocSysMemory(int type, int size, int addr);
-
-void *memset(void *s, int c, unsigned int n);
 
 extern int D_00526580[];
 

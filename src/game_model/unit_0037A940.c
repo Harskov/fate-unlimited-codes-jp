@@ -1,4 +1,5 @@
 #include "common.h"
+#include "libc.h"
 
 typedef struct Obj_0037AF70 {
     u8 pad_0[0x1E0];
@@ -11,8 +12,6 @@ typedef struct Obj_0037AF70 {
     s32 unk_564;
     u8 pad_568[0x58];
 } Obj_0037AF70;
-
-extern void *memset(void *s, int c, u32 n);
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037A940", func_0037A940);
 

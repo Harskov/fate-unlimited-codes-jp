@@ -4,12 +4,20 @@
    clears each slot's flag word and fills its two four-word arrays with -1 and 0xF;
    func_001B3AD0 stores a value into the first slot whose +0x4 word is 0; func_001B3920
    sets bit 0x1 of a slot's flags only when that word is set, and func_001B38F0 clears it. */
+typedef struct Sub_001B3960 {
+    /* 0x00 */ u8 pad_0[4];
+    /* 0x04 */ f32 unk_4[3];
+    /* 0x10 */ u8 pad_10[0x24];
+} Sub_001B3960;
+
 typedef struct Slot {
     /* 0x00 */ s32 unk_0;
     s32 unk_4;
     s32 unk_8[4];
     s32 unk_18[4];
-    u8 pad_28[0x9C];
+    /* 0x28 */ Sub_001B3960 unk_28;
+    /* 0x5C */ Sub_001B3960 unk_5C;
+    /* 0x90 */ Sub_001B3960 unk_90;
     s32 unk_C4;
 } Slot;
 
@@ -65,10 +73,10 @@ void func_001B3960(Obj *o)
 
         if (s->unk_4 != 0) {
             s->unk_0 &= ~2;
-            memset(s->pad_28, 0, 0x34);
-            memset(s->pad_28 + 0x34, 0, 0x34);
-            memset(s->pad_28 + 0x68, 0, 0x34);
-            func_0015EE20(s->pad_28 + 0x6C, 1.0f, 1.0f, 1.0f);
+            memset(&s->unk_28, 0, sizeof(Sub_001B3960));
+            memset(&s->unk_5C, 0, sizeof(Sub_001B3960));
+            memset(&s->unk_90, 0, sizeof(Sub_001B3960));
+            func_0015EE20(s->unk_90.unk_4, 1.0f, 1.0f, 1.0f);
         }
     }
 }

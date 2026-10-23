@@ -1,4 +1,5 @@
 #include "common.h"
+#include "libc.h"
 
 extern int D_0051AE60[];
 
@@ -27,8 +28,6 @@ extern s32 D_0051AD40[];
 s32 func_0020F180();
 
 s32 *func_0017A820();
-
-void *memset(void *, int, int);
 
 typedef struct Obj_0017E770 {
     u8 pad_0[0xB8];

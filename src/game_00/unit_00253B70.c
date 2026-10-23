@@ -1,4 +1,5 @@
 #include "common.h"
+#include "libc.h"
 
 typedef struct Obj22 {
     u8 pad_0[2];
@@ -15,8 +16,6 @@ int func_00255590();
 void func_002530F0();
 
 void func_00253160();
-
-void *memset(void *, int, unsigned int);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00253B70", func_00253B70);
 

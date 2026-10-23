@@ -81,7 +81,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021DC80);
 
 int func_0021DF20(Obj38 *obj)
 {
-    switch (func_0013B9C8(obj->unk34)) {
+    switch (func_0013B9C8(obj->unk_34)) {
     case 4:
         return 1;
     }

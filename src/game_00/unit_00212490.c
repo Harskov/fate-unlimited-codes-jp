@@ -1,4 +1,5 @@
 #include "common.h"
+#include "libc.h"
 
 typedef struct Obj_005247CC {
     u8 pad_0[0x60];
@@ -18,8 +19,6 @@ extern Obj_005247CC *D_005247CC[];
 extern Obj_005247CC *D_005247E0[];
 
 extern Sub_00525150 D_00525150;
-
-void *memcpy(void *dst, const void *src, unsigned int n);
 
 void func_0020A1B0();
 

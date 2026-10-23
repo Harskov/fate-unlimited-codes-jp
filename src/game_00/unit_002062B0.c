@@ -1,5 +1,7 @@
 #include "common.h"
+#include "libc.h"
 #include "eekernel.h"
+#include "game_00/unit_0015AB90.h"
 
 extern u8 D_00522BD0[];
 
@@ -12,8 +14,6 @@ extern void (*D_00522BC8[])(void);
 void func_00206B80(void);
 
 extern u8 D_00522DB0[];
-
-void *memcpy(void *, const void *, unsigned int);
 
 void *func_0020F130();
 
@@ -28,8 +28,6 @@ s32 func_0013A7D0();
 s32 func_0013B6C0();
 
 void func_0013B038();
-
-void func_0015ACE0();
 
 void func_0013AA00();
 

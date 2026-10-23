@@ -1,4 +1,5 @@
 #include "common.h"
+#include "libc.h"
 #include "types.h"
 
 int func_0010C5E8(int a, int b, int c);
@@ -24,8 +25,6 @@ extern s32 D_005299D0[];
 extern s32 D_00529D90[];
 
 extern s32 D_00529D94[];
-
-void *memset(void *s, int c, unsigned int n);
 
 void func_0015B6E0();
 

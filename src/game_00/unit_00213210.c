@@ -25,8 +25,6 @@ Obj_00215AF0 *func_002190A0(int size);
 
 void func_00218090(int arg, Obj_00215AF0 *obj);
 
-unsigned int strlen(const char *s);
-
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00213210);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00213420);

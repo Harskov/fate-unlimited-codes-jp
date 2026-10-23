@@ -1,4 +1,5 @@
 #include "common.h"
+#include "libc.h"
 
 /* 0x60 */ typedef struct Holder { unsigned char pad[0x60]; short *unk_60; } Holder;
 
@@ -50,8 +51,6 @@ typedef struct Sub_00161E60 {
 } Sub_00161E60;
 
 extern Sub_00161E60 *func_0018A110(s32, void *, void *);
-
-extern void *memcpy(void *, void *, u32);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00161800", func_00161800);
 

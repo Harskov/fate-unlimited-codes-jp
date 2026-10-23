@@ -5,5 +5,6 @@
 void *memset(void *s, int c, unsigned int n);
 void *memcpy(void *dst, const void *src, unsigned int n);
 char *strcpy(char *dst, const char *src);
+unsigned int strlen(const char *s);
 
 #endif

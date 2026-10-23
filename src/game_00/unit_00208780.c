@@ -1,4 +1,5 @@
 #include "common.h"
+#include "libc.h"
 
 extern s32 D_00522C70[];
 
@@ -7,8 +8,6 @@ extern s32 D_00522C78[];
 extern s32 D_00522DB0[];
 
 s32 func_0020F180(s32 *arg0, s32 arg1);
-
-extern int strlen(const char *s);
 
 extern int strcmp(const char *a, const char *b);
 

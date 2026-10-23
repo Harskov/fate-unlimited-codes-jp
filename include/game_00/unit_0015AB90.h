@@ -2,5 +2,6 @@
 #define GAME_00_UNIT_0015AB90_H
 
 void func_0015AF90(s32 i, s32 arg1);
+s32 func_0015ACE0(s32 arg0, s32 arg1);
 
 #endif

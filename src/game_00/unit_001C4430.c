@@ -1,4 +1,5 @@
 #include "common.h"
+#include "libc.h"
 #include "types.h"
 
 void func_001A46A0(void);
@@ -35,7 +36,7 @@ typedef struct Obj_001C4470 {
     s32 unk_28;
     s32 unk_2C;
     s32 unk_30;
-    u8 pad_34[4];
+    /* 0x34 */ u8 unk_34[4];
     s32 unk_38;
     s32 unk_3C;
     s32 unk_40;
@@ -63,8 +64,6 @@ typedef struct Obj_001C4470 {
     s32 unk_D8;
     u8 unk_DC[0x20];
 } Obj_001C4470;
-
-void *memset(void *s, int c, unsigned int n);
 
 void func_001C4590();
 
@@ -127,7 +126,7 @@ void func_001C4470(Obj_001C4470 *arg0, s32 arg1, s32 arg2)
         arg0->unk_D8 = 0;
         memset(arg0->unk_DC, 0, 0x20);
         if (arg2 == 0 && arg1 != 0) {
-            func_001C4590(arg0->pad_34, arg1);
+            func_001C4590(arg0->unk_34, arg1);
         }
     }
 }

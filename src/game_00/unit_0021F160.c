@@ -1,4 +1,5 @@
 #include "common.h"
+#include "eekernel.h"
 #include "types.h"
 
 #include "game_00/adxowner.h"
@@ -41,8 +42,6 @@ typedef struct Obj0021F4D0 {
 
 extern s32 D_005279E8[];
 
-int DelayThread(int usec);
-
 void func_0013B038();
 
 int func_0013B960();
@@ -66,10 +65,6 @@ typedef struct Obj0021F960 {
     s32 unk_5C;
 } Obj0021F960;
 
-int WaitSema(int sema);
-
-int SignalSema(int sema);
-
 void func_0021FA90();
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F160);
@@ -82,7 +77,7 @@ int func_0021F190(Obj38 *obj, s32 arg1, s32 arg2)
     result = 0;
     if (D_005279E8[0] != 0) {
         ready = 0;
-        switch (func_0013B9C8(obj->unk34)) {
+        switch (func_0013B9C8(obj->unk_34)) {
         case 4:
         case 2:
             ready = 0;
@@ -93,13 +88,13 @@ int func_0021F190(Obj38 *obj, s32 arg1, s32 arg2)
             break;
         }
         if (ready != 0) {
-            result = func_0013B960(obj->unk34) << 11;
+            result = func_0013B960(obj->unk_34) << 11;
             D_005279E8[0] = 0;
         } else {
             DelayThread(0x1046);
         }
     } else {
-        func_0013B038(obj->unk34, arg2 >> 11, arg1);
+        func_0013B038(obj->unk_34, arg2 >> 11, arg1);
         D_005279E8[0] = 1;
     }
     return result;
@@ -114,7 +109,7 @@ int func_0021F310(Obj0021F310 *p, void *buf, int nbyte)
 
 int func_0021F320(Obj38 *obj)
 {
-    func_0013AA00(obj->unk34);
+    func_0013AA00(obj->unk_34);
     return 1;
 }
 

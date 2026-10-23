@@ -1,4 +1,5 @@
 #include "common.h"
+#include "libc.h"
 #include "types.h"
 
 typedef struct Obj_00222930 {
@@ -28,8 +29,6 @@ typedef struct Obj_00223940 {
 extern s32 D_00522DB0[];
 
 extern u8 *func_0020F180(s32 *pool, s32 size);
-
-extern void *memset(void *s, int c, u32 n);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00222930", func_00222930);
 

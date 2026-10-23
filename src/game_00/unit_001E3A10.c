@@ -1,4 +1,5 @@
 #include "common.h"
+#include "libc.h"
 
 extern s32 D_0051F190[];
 
@@ -34,8 +35,6 @@ typedef struct Obj_001E3DA0 {
     u8 pad_B4[0xC];
     s32 unk_C0;
 } Obj_001E3DA0;
-
-void *memset(void *s, int c, u32 n);
 
 void func_001E3120();
 

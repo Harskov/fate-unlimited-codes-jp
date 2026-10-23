@@ -70,18 +70,9 @@ void func_001FE140(Obj_001FE140 *arg0, s32 arg1)
 {
     s32 i;
 
-    i = 0;
-    do {
-        arg0->unk_1490[i + 0] = 0;
-        arg0->unk_1490[i + 1] = 0;
-        arg0->unk_1490[i + 2] = 0;
-        arg0->unk_1490[i + 3] = 0;
-        arg0->unk_1490[i + 4] = 0;
-        arg0->unk_1490[i + 5] = 0;
-        arg0->unk_1490[i + 6] = 0;
-        arg0->unk_1490[i + 7] = 0;
-        i += 8;
-    } while (i < 0x40);
+    for (i = 0; i < 0x40; i++) {
+        arg0->unk_1490[i] = 0;
+    }
     arg0->unk_1490[0] = 0x04000160;
     arg0->unk_1490[1] = 0x04000160;
     arg0->unk_1490[2] = 0x04000160;

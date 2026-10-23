@@ -27,8 +27,6 @@ typedef struct Obj_002084D0 {
 
 extern s32 D_00522C70[];
 
-extern int strlen(const char *s);
-
 extern int strcmp(const char *a, const char *b);
 
 extern s32 D_00522C84[];

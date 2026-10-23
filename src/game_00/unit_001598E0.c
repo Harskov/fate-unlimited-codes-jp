@@ -69,7 +69,7 @@ void func_001599B0(Obj_001599B0 *arg0)
     arg0->unk_C = 0x79C;
     arg0->unk_14 = 8;
     arg0->unk_18 = 0x18;
-    for (i = 0; i < 10; i += 5) {
+    for (i = 0; i < 10; i++) {
         arg0->unk_70[i] = 0;
         arg0->unk_48[i] = 1;
         arg0->unk_198[i] = 0;
@@ -77,34 +77,6 @@ void func_001599B0(Obj_001599B0 *arg0)
         arg0->unk_1E8[i] = 0;
         arg0->unk_210[i] = 0;
         arg0->unk_238[i] = 0;
-        arg0->unk_70[i + 1] = 0;
-        arg0->unk_48[i + 1] = 1;
-        arg0->unk_198[i + 1] = 0;
-        arg0->unk_1C0[i + 1] = 0;
-        arg0->unk_1E8[i + 1] = 0;
-        arg0->unk_210[i + 1] = 0;
-        arg0->unk_238[i + 1] = 0;
-        arg0->unk_70[i + 2] = 0;
-        arg0->unk_48[i + 2] = 1;
-        arg0->unk_198[i + 2] = 0;
-        arg0->unk_1C0[i + 2] = 0;
-        arg0->unk_1E8[i + 2] = 0;
-        arg0->unk_210[i + 2] = 0;
-        arg0->unk_238[i + 2] = 0;
-        arg0->unk_70[i + 3] = 0;
-        arg0->unk_48[i + 3] = 1;
-        arg0->unk_198[i + 3] = 0;
-        arg0->unk_1C0[i + 3] = 0;
-        arg0->unk_1E8[i + 3] = 0;
-        arg0->unk_210[i + 3] = 0;
-        arg0->unk_238[i + 3] = 0;
-        arg0->unk_70[i + 4] = 0;
-        arg0->unk_48[i + 4] = 1;
-        arg0->unk_198[i + 4] = 0;
-        arg0->unk_1C0[i + 4] = 0;
-        arg0->unk_1E8[i + 4] = 0;
-        arg0->unk_210[i + 4] = 0;
-        arg0->unk_238[i + 4] = 0;
     }
     arg0->unk_C4 = 1;
     arg0->unk_CC = 0;

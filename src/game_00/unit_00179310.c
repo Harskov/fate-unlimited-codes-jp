@@ -1,4 +1,5 @@
 #include "common.h"
+#include "libc.h"
 #include "game_00/vec.h"
 #include "game_00/unit_0020EB60.h"
 #include "game_00/unit_00211170.h"
@@ -97,8 +98,6 @@ void *func_0015D810();
 void func_0015D130();
 
 double pow(double, double);
-
-void *memset(void *, int, unsigned int);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_00179310);
 

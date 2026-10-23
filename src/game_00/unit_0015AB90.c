@@ -1,4 +1,5 @@
 #include "common.h"
+#include "eekernel.h"
 #include "types.h"
 #include "game_00/unit_0015AB90.h"
 
@@ -22,8 +23,6 @@ void func_00145DC0();
 void func_00145C50();
 
 s32 func_0013B9C8();
-
-void DelayThread(s32);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015AB90", func_0015AB90);
 
@@ -51,12 +50,12 @@ s32 func_0015ACE0(s32 arg0, s32 arg1)
                 result = 1;
                 break;
             }
-            if (result == 1 || i >= 0xBB9)
+            if (result == 1 || i > 3000)
                 break;
-            DelayThread(0x682);
+            DelayThread(1666);
         }
     } else {
-        state = func_0013B9C8();
+        state = func_0013B9C8(arg0);
         switch (state) {
         case 4:
         case 1:
