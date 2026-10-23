@@ -8,5 +8,6 @@ typedef struct Obj_001E6C10 {
 } Obj_001E6C10;
 
 f32 func_001E6C10(Obj_001E6C10 *arg0);
+void func_001E7560(int *arg0, int arg1, int arg2);
 
 #endif

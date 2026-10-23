@@ -12,7 +12,7 @@ extern f32 *D_00522D98[];
 
 void func_00165EA0();
 
-void func_00165EE0();
+void func_00165EE0(f32 *arg0, f32 *arg1);
 
 f32 fabsf(f32);
 

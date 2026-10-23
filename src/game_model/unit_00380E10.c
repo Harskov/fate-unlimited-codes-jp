@@ -1,6 +1,5 @@
 #include "common.h"
-
-void memset();
+#include "libc.h"
 
 typedef struct Obj_00381E50 {
     /* 0x000 */ u8 pad_0[0xC];
@@ -28,9 +27,14 @@ INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_003819C0);
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00381BB0);
 
-void func_00381CD0(s32 arg0)
+typedef struct Obj_00381CD0 {
+    /* 0x00 */ u8 pad_0[0x8C];
+    /* 0x8C */ u8 unk_8C[0xB0];
+} Obj_00381CD0;
+
+void func_00381CD0(Obj_00381CD0 *arg0)
 {
-    memset(arg0 + 0x8C, 0, 0xB0);
+    memset(arg0->unk_8C, 0, 0xB0);
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00381CE0);
@@ -68,9 +72,14 @@ INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00382C60);
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00382D90);
 
-void func_00382EB0(s32 arg0)
+typedef struct Obj_00382EB0 {
+    /* 0x000 */ u8 pad_0[0x1B4];
+    /* 0x1B4 */ u8 unk_1B4[0xE0];
+} Obj_00382EB0;
+
+void func_00382EB0(Obj_00382EB0 *arg0)
 {
-    memset(arg0 + 0x1B4, 0, 0xE0);
+    memset(arg0->unk_1B4, 0, 0xE0);
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00382EC0);

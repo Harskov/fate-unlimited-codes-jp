@@ -3,7 +3,7 @@
 
 /* 0x60 */ typedef struct Holder { unsigned char pad[0x60]; short *unk_60; } Holder;
 
-void func_002E01C8(void);
+void func_002E01C8(float *arg0, float *arg1);
 
 extern s32 D_00523DA8[];
 
@@ -117,9 +117,9 @@ void func_00165EA0(float *arg0, float *arg1, float *arg2)
     arg0[2] = arg1[2] - arg2[2];
 }
 
-void func_00165EE0(void)
+void func_00165EE0(float *arg0, float *arg1)
 {
-    func_002E01C8();
+    func_002E01C8(arg0, arg1);
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00161800", func_00165EF0);

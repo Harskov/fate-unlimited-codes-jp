@@ -70,7 +70,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00208780", func_00209750);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00208780", func_00209830);
 
-s32 func_00209870(void)
+s32 func_00209870(s32 arg0)
 {
     func_00208D10(D_00522CA0, 0);
     return 0;

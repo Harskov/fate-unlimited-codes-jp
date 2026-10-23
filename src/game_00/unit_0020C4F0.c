@@ -1,7 +1,7 @@
 #include "common.h"
 #include "game_00/unit_0020C4F0.h"
 
-void func_002DC8B8(void);
+void func_002DC8B8(f32 (*arg0)[4]);
 
 void func_002DC008(void);
 
@@ -70,7 +70,7 @@ void func_0020D040(Obj64 *arg0, Obj64 *arg1)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020C4F0", func_0020D070);
 
-void func_0020D0C0(void)
+void func_0020D0C0(f32 (*arg0)[4])
 {
-    func_002DC8B8();
+    func_002DC8B8(arg0);
 }

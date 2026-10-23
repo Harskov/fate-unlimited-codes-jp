@@ -55,7 +55,7 @@ void func_001F5A30();
 
 void func_002009A0();
 
-void func_00209870();
+s32 func_00209870(s32 arg0);
 
 void func_002098B0();
 

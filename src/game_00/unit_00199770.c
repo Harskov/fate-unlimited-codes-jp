@@ -1,6 +1,7 @@
 #include "common.h"
 #include "game_00/tbl_0051E444.h"
 #include "game_00/tbl_0051D890.h"
+#include "game_00/unit_001E6380.h"
 
 typedef struct Obj {
     unsigned char unk_0[0x13C];
@@ -131,8 +132,6 @@ extern int D_0052479C[];
 extern void func_0015EE20(float *v, float x, float y, float z);
 
 extern void func_0019B090(Obj_0019BDD0 *o);
-
-extern void func_001E7560(int *p, int a, int b);
 
 extern void func_002C3E88(int a, int b);
 
