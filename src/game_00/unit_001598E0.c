@@ -23,6 +23,29 @@ extern s32 D_00523890[];
 
 #include "libc.h"
 
+typedef struct Obj_001599B0 {
+    /* 0x00 */ s32 unk_0;
+    /* 0x04 */ s32 unk_4;
+    /* 0x08 */ s32 unk_8;
+    /* 0x0C */ s32 unk_C;
+    /* 0x10 */ u8 pad_10[4];
+    /* 0x14 */ s32 unk_14;
+    /* 0x18 */ s32 unk_18;
+    /* 0x1C */ u8 pad_1C[0x2C];
+    /* 0x48 */ s32 unk_48[10];
+    /* 0x70 */ s32 unk_70[10];
+    /* 0x98 */ u8 pad_98[0x2C];
+    /* 0xC4 */ s32 unk_C4;
+    /* 0xC8 */ u8 pad_C8[4];
+    /* 0xCC */ s32 unk_CC;
+    /* 0xD0 */ u8 pad_D0[0xC8];
+    /* 0x198 */ s32 unk_198[10];
+    /* 0x1C0 */ s32 unk_1C0[10];
+    /* 0x1E8 */ s32 unk_1E8[10];
+    /* 0x210 */ s32 unk_210[10];
+    /* 0x238 */ s32 unk_238[10];
+} Obj_001599B0;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", _dpfge);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", func_00159910);
@@ -36,7 +59,56 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", func_00159950);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", _f_ulltof);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", func_001599B0);
+void func_001599B0(Obj_001599B0 *arg0)
+{
+    s32 i;
+
+    arg0->unk_0 = 0;
+    arg0->unk_4 = 4;
+    arg0->unk_8 = 0;
+    arg0->unk_C = 0x79C;
+    arg0->unk_14 = 8;
+    arg0->unk_18 = 0x18;
+    for (i = 0; i < 10; i += 5) {
+        arg0->unk_70[i] = 0;
+        arg0->unk_48[i] = 1;
+        arg0->unk_198[i] = 0;
+        arg0->unk_1C0[i] = 0;
+        arg0->unk_1E8[i] = 0;
+        arg0->unk_210[i] = 0;
+        arg0->unk_238[i] = 0;
+        arg0->unk_70[i + 1] = 0;
+        arg0->unk_48[i + 1] = 1;
+        arg0->unk_198[i + 1] = 0;
+        arg0->unk_1C0[i + 1] = 0;
+        arg0->unk_1E8[i + 1] = 0;
+        arg0->unk_210[i + 1] = 0;
+        arg0->unk_238[i + 1] = 0;
+        arg0->unk_70[i + 2] = 0;
+        arg0->unk_48[i + 2] = 1;
+        arg0->unk_198[i + 2] = 0;
+        arg0->unk_1C0[i + 2] = 0;
+        arg0->unk_1E8[i + 2] = 0;
+        arg0->unk_210[i + 2] = 0;
+        arg0->unk_238[i + 2] = 0;
+        arg0->unk_70[i + 3] = 0;
+        arg0->unk_48[i + 3] = 1;
+        arg0->unk_198[i + 3] = 0;
+        arg0->unk_1C0[i + 3] = 0;
+        arg0->unk_1E8[i + 3] = 0;
+        arg0->unk_210[i + 3] = 0;
+        arg0->unk_238[i + 3] = 0;
+        arg0->unk_70[i + 4] = 0;
+        arg0->unk_48[i + 4] = 1;
+        arg0->unk_198[i + 4] = 0;
+        arg0->unk_1C0[i + 4] = 0;
+        arg0->unk_1E8[i + 4] = 0;
+        arg0->unk_210[i + 4] = 0;
+        arg0->unk_238[i + 4] = 0;
+    }
+    arg0->unk_C4 = 1;
+    arg0->unk_CC = 0;
+}
 
 // stores the bit pattern of 1.0f; probably a float global, typed as s32 here
 void func_00159A90(void)

@@ -8,6 +8,8 @@ void func_001B5DC0();
 
 s32 func_001B5800(s32 arg0, s32 arg1);
 
+s32 *func_001FF000();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B4430", func_001B4430);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B4430", func_001B49E0);
@@ -39,7 +41,15 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B4430", func_001B5CE0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B4430", func_001B5DC0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B4430", func_001B5DD0);
+s32 func_001B5DD0(s32 arg0)
+{
+    s32 *p;
+
+    p = func_001FF000(arg0, 0x800);
+    if (p != 0)
+        return p[14];
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B4430", func_001B5E00);
 

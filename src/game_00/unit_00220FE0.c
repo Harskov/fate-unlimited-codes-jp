@@ -24,6 +24,23 @@ typedef struct Obj001FF000 {
     s32 unk_38;
 } Obj001FF000;
 
+typedef struct Elem_002210E0 {
+    s32 unk_0;
+    u8 pad_4[0x3563C];
+} Elem_002210E0;
+
+typedef struct Obj_002210E0 {
+    u8 unk_0[4];
+    Elem_002210E0 *unk_4;
+    s32 unk_8;
+    s32 unk_C;
+    s32 unk_10;
+} Obj_002210E0;
+
+extern int DIntr();
+
+extern int EIntr();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220FE0", func_00220FE0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220FE0", func_00221000);
@@ -35,7 +52,14 @@ int func_00221080(Obj00221080 *o)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220FE0", func_00221090);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220FE0", func_002210E0);
+void func_002210E0(Obj_002210E0 *o)
+{
+    DIntr();
+    o->unk_4[o->unk_8].unk_0 = 2;
+    o->unk_C = o->unk_C + 1;
+    o->unk_8 = (o->unk_8 + 1) % o->unk_10;
+    EIntr();
+}
 
 int func_00221170(Obj00221170 *o)
 {

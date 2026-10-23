@@ -20,6 +20,8 @@ typedef struct Obj {
 
 void func_001B3A20(Obj *);
 
+void func_0015EE20(void *, f32, f32, f32);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3230", func_001B3230);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3230", func_001B3410);
@@ -54,7 +56,22 @@ void func_001B3920(Obj *o, s32 i)
     s->unk_0 |= 1;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3230", func_001B3960);
+void func_001B3960(Obj *o)
+{
+    s32 i;
+
+    for (i = 0; i < 8; i++) {
+        Slot *s = &o->unk_5D0[i];
+
+        if (s->unk_4 != 0) {
+            s->unk_0 &= ~2;
+            memset(s->pad_28, 0, 0x34);
+            memset(s->pad_28 + 0x34, 0, 0x34);
+            memset(s->pad_28 + 0x68, 0, 0x34);
+            func_0015EE20(s->pad_28 + 0x6C, 1.0f, 1.0f, 1.0f);
+        }
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3230", func_001B3A20);
 

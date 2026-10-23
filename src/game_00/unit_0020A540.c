@@ -32,6 +32,8 @@ void func_0020A640();
 
 void func_0020EF40();
 
+void func_0020F230();
+
 // fills the four handler slots with the timer-0 callbacks and returns the first slot's address
 s32 *func_0020A540(void)
 {
@@ -49,7 +51,13 @@ void func_0020A5F0(s32 arg0, s32 arg1)
     func_0020EF40(D_00522DD0, arg0, arg1);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020A540", func_0020A610);
+void func_0020A610(s32 arg0)
+{
+    if (arg0 == 0) {
+        return;
+    }
+    func_0020F230(D_00522DD0, arg0);
+}
 
 void func_0020A640(s32 arg0)
 {

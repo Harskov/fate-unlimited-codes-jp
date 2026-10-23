@@ -13,9 +13,9 @@ Classes of evidence:
 |---|---|
 | Game functions | 6 of 5827 (5821 placeholders, 0 awaiting evidence) |
 | Functions, library included | 742 of 8234 (7492 placeholders, 0 awaiting evidence) |
-| Types | 4 of 345 (341 placeholders, 0 awaiting evidence) |
-| Members the matched code reaches | 74 of 679 (605 placeholders, 0 awaiting evidence) |
-| Globals the matched code reaches | 8 of 601 (593 placeholders, 0 awaiting evidence) |
+| Types | 4 of 398 (394 placeholders, 0 awaiting evidence) |
+| Members the matched code reaches | 84 of 952 (868 placeholders, 0 awaiting evidence) |
+| Globals the matched code reaches | 11 of 735 (724 placeholders, 0 awaiting evidence) |
 
 ## Functions
 
@@ -777,6 +777,7 @@ Classes of evidence:
 
 | Member | Offset | Class | Evidence |
 |---|---|---|---|
+| `Elem_001C6720.next` | 0xC | behavioural | self-link — checked: it points to another Elem_001C6720 |
 | `Elem_001EB6C0.flags` | 0x0 | behavioural | mask-test — checked: func_001EB6C0 tests it against 0x740000 |
 | `Ent0051AC78.next` | 0x0 | behavioural | the member's name already given, with the facts that support it — checked: it points to another Ent0051AC78 |
 | `Flags.flags` | 0x0 | behavioural | mask-test — checked: func_001990C0 tests it against 0x20 |
@@ -798,6 +799,7 @@ Classes of evidence:
 | `Node_00178060.prev` | 0x8 | behavioural | the member's name already given, with the facts that support it — checked: it points to another Node_00178060 |
 | `Node_002113E0.next` | 0x0 | behavioural | the member's name already given, with the facts that support it — checked: it points to another Node_002113E0 |
 | `Obj0019A9A0.flags` | 0x0 | behavioural | mask-test — checked: func_0019A9A0 tests it against 0x4000 |
+| `Obj0021F960.semaId` | 0x40 | anchored | prototype — checked: func_0021F960 passes it as argument 0 of SignalSema (s32 SignalSema(s32 sema_id)); func_0021F960 passes it as argument 0 of WaitSema (s32 WaitSema(s32 sema_id)) |
 | `Obj0021FC00.semaId` | 0x40 | anchored | prototype — checked: func_0021FC00 passes it as argument 0 of SignalSema (s32 SignalSema(s32 sema_id)); func_0021FC00 passes it as argument 0 of WaitSema (s32 WaitSema(s32 sema_id)); func_0021FCA0 passes it as argument 0 of DeleteSema (s32 DeleteSema(s32 sema_id)) |
 | `Obj12@unit_00166E80.link_4` | 0x4 | behavioural | self-link — checked: it points to another Obj12@unit_00166E80 |
 | `Obj12@unit_00166E80.link_8` | 0x8 | behavioural | self-link — checked: it points to another Obj12@unit_00166E80 |
@@ -832,6 +834,8 @@ Classes of evidence:
 | `Obj_001A9A00.flags_1EC` | 0x1EC | behavioural | mask-test — checked: func_001A9A00 tests it against 0x10000100 |
 | `Obj_001AE7A0.cursor` | 0x1A0 | behavioural | the member's name already given, with the facts that support it — checked: func_001AE860 steps it by a constant |
 | `Obj_001B1360.flags` | 0x0 | behavioural | the member's name already given, with the facts that support it — checked: func_001B2E60 tests it against 0x2 |
+| `Obj_001C41A0.count` | 0xB4 | behavioural | bound; counter — checked: func_001C41A0 bounds the index i with it; func_001C41A0 steps it by a constant |
+| `Obj_001C42B0.flags` | 0x0 | behavioural | mask-test — checked: func_001C41A0 tests it against 0x8, 0x10 |
 | `Obj_001C4FA0.flags` | 0x1E4 | behavioural | mask-test — checked: func_001C4FA0 tests it against 0x4 |
 | `Obj_001E52A0.flags` | 0x0 | behavioural | the member's name already given, with the facts that support it — checked: func_001E52A0 tests it against 0x80 |
 | `Obj_001EB6C0.count` | 0x68 | behavioural | bound — checked: func_001EB6C0 bounds the index i with it |
@@ -840,9 +844,15 @@ Classes of evidence:
 | `Obj_0020FC50.counter` | 0xA | behavioural | counter — checked: func_0020FC50 steps it by a constant |
 | `Obj_00210D40.link_0` | 0x0 | behavioural | self-link — checked: it points to another Obj_00210D40 |
 | `Obj_00210D40.link_4` | 0x4 | behavioural | self-link — checked: it points to another Obj_00210D40 |
+| `Obj_0021BFD0.count` | 0x1694 | behavioural | bound — checked: func_0021BFD0 bounds the index i with it |
 | `Obj_002A5558.flags` | 0xF0 | behavioural | the member's name already given, with the facts that support it — checked: func_002A5558 tests it against 0x1 |
 | `Obj_00324A30.flags` | 0x24 | behavioural | mask-test — checked: func_00324A30 tests it against 0x2; func_00324A80 tests it against 0x2 |
 | `Obj_00333310.flags` | 0x1E0 | behavioural | mask-test — checked: func_00333310 tests it against 0x8000 |
+| `Obj_00358C00.flags_10` | 0x10 | behavioural | mask-test — checked: func_00358C00 tests it against 0x1, 0x2 |
+| `Obj_00358C00.flags_14` | 0x14 | behavioural | mask-test — checked: func_00358C00 tests it against 0x400000 |
+| `Obj_00358C00.flags_18` | 0x18 | behavioural | mask-test — checked: func_00358C00 tests it against 0x4, 0x8, 0x20 |
+| `Obj_0037AF70.flags_1E0` | 0x1E0 | behavioural | mask-test — checked: func_0037AF70 tests it against 0x1000000 |
+| `Obj_0037AF70.flags_1E4` | 0x1E4 | behavioural | mask-test — checked: func_0037AF70 tests it against 0x80, 0x400000 |
 | `Obj_0037C120.flags` | 0x0 | behavioural | mask-test — checked: func_0037C120 tests it against 0x1 |
 | `Rec0051D890.counter` | 0x4 | behavioural | counter — checked: func_001A37D0 steps it by a constant |
 | `Rec0051D890.flags` | 0x0 | behavioural | mask-test — checked: func_0019A9A0 tests it against 0x2000000 |
@@ -859,6 +869,7 @@ Classes of evidence:
 
 | Global | Address | Class | Evidence |
 |---|---|---|---|
+| `gAddIntcHandlerResult` |  | anchored | prototype — checked: func_0020F900 passes it as the result of AddIntcHandler (s32 AddIntcHandler(s32 cause, … |
 | `gChangeThreadPriorityResult` |  | anchored | prototype — checked: func_0015A7C0 passes it as the result of ChangeThreadPriority (s32 …; func_0015A7C0 passes it as argument 1 of ChangeThreadPriority (s32 … |
 | `gFormat_4FEEA0` | 0x004FEEA0 | anchored | prototype — checked: func_001AE4D0 passes it as argument 1 of sprintf (int sprintf(char *buf, const char … |
 | `gFormat_4FEEA8` | 0x004FEEA8 | anchored | prototype — checked: func_001AE4D0 passes it as argument 1 of sprintf (int sprintf(char *buf, const char … |
@@ -866,4 +877,6 @@ Classes of evidence:
 | `gFormat_501970` | 0x00501970 | anchored | prototype — checked: func_002073D0 passes it as argument 1 of sprintf (int sprintf(char *buf, const char … |
 | `gFormat_501F28` | 0x00501F28 | anchored | prototype — checked: func_002209C0 passes it as argument 0 of printf (int printf(const char *format, ...)) |
 | `gFormat_502280` | 0x00502280 | anchored | prototype — checked: func_00225730 passes it as argument 1 of sprintf (int sprintf(char *buf, const char … |
+| `gFormat_5068B0` | 0x005068B0 | anchored | prototype — checked: func_0033F840 passes it as argument 1 of sprintf (int sprintf(char *buf, const char … |
+| `gFormat_5068B8` | 0x005068B8 | anchored | prototype — checked: func_0033F840 passes it as argument 1 of sprintf (int sprintf(char *buf, const char … |
 | `gHandlerId` |  | anchored | prototype — checked: func_0020A650 passes it as argument 1 of RemoveIntcHandler (s32 RemoveIntcHandler(s32 … |

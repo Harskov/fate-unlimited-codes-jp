@@ -9,6 +9,18 @@ void func_001F4FD0();
 
 void func_002D1048();
 
+typedef struct Obj_001FE140 {
+    u8 pad_0[0x1490];
+    s32 unk_1490[0x40];
+    u8 pad_1590[0x80];
+    s32 *unk_1610;
+    s32 *unk_1614;
+} Obj_001FE140;
+
+extern s32 D_003D7890[];
+
+extern s32 D_003D7990[];
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FB440", func_001FB440);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FB440", func_001FB630);
@@ -54,7 +66,49 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FB440", func_001FDF60);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FB440", func_001FE0C0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FB440", func_001FE140);
+void func_001FE140(Obj_001FE140 *arg0, s32 arg1)
+{
+    s32 i;
+
+    i = 0;
+    do {
+        arg0->unk_1490[i + 0] = 0;
+        arg0->unk_1490[i + 1] = 0;
+        arg0->unk_1490[i + 2] = 0;
+        arg0->unk_1490[i + 3] = 0;
+        arg0->unk_1490[i + 4] = 0;
+        arg0->unk_1490[i + 5] = 0;
+        arg0->unk_1490[i + 6] = 0;
+        arg0->unk_1490[i + 7] = 0;
+        i += 8;
+    } while (i < 0x40);
+    arg0->unk_1490[0] = 0x04000160;
+    arg0->unk_1490[1] = 0x04000160;
+    arg0->unk_1490[2] = 0x04000160;
+    arg0->unk_1490[3] = 0x04000130;
+    arg0->unk_1490[4] = 0x04000130;
+    arg0->unk_1490[5] = 0x04000130;
+    arg0->unk_1490[6] = 0x04000130;
+    arg0->unk_1490[7] = 0x04000130;
+    arg0->unk_1490[8] = 0x04400130;
+    arg0->unk_1490[9] = 0x04200130;
+    arg0->unk_1490[10] = 0x04000130;
+    arg0->unk_1490[11] = 0x04000130;
+    arg0->unk_1490[12] = 0x04400130;
+    arg0->unk_1490[13] = 0x04200130;
+    arg0->unk_1490[14] = 0x04000130;
+    arg0->unk_1490[15] = 0x04000130;
+    arg0->unk_1490[19] = 0x04000130;
+    arg0->unk_1490[20] = 0x04000130;
+    arg0->unk_1490[21] = 0x04000130;
+    arg0->unk_1490[16] = 0x04000130;
+    arg0->unk_1490[17] = 0x04000130;
+    arg0->unk_1490[18] = 0x04000130;
+    if (arg1 == 0) {
+        arg0->unk_1610 = D_003D7890;
+        arg0->unk_1614 = D_003D7990;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FB440", func_001FE220);
 

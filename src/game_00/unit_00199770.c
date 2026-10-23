@@ -55,7 +55,49 @@ typedef struct Obj0019ADA0 {
 
 extern void func_0019ADE0(Obj0019ADA0 *o, int mode, float value);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00199770", func_00199770);
+typedef struct Obj00199770 {
+    unsigned char unk_0[0x350];
+    unsigned char unk_350[0x10];
+    float unk_360;
+    float unk_364;
+    unsigned char unk_368[0x4];
+    float unk_36C;
+    unsigned char unk_370[0x4];
+    int unk_374;
+} Obj00199770;
+
+typedef struct Obj0019D040 {
+    unsigned char unk_0[0x3C];
+    int unk_3C;
+} Obj0019D040;
+
+extern void func_0015D130(float *v, int a);
+
+extern int func_00199850(int a, int b);
+
+extern Obj0019D040 *func_0019D040(int a);
+
+extern float func_0020E410(float a, float b, float c);
+
+void func_00199770(Obj00199770 *o)
+{
+    float a[4];
+    float b[4];
+    Obj0019D040 *p;
+
+    memset(o->unk_350, 0, 0x10);
+    memset(&o->unk_360, 0, 0x20);
+    o->unk_36C = 0.5f;
+    p = func_0019D040(0);
+    if (p != 0) {
+        func_0015D130(a, func_00199850(p->unk_3C, 3));
+        o->unk_360 = a[1];
+        func_0015D130(a, func_00199850(p->unk_3C, 5));
+        func_0015D130(b, func_00199850(p->unk_3C, 7));
+        o->unk_364 = func_0020E410(a[1], b[1], 0.5f);
+        o->unk_374 = 0;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00199770", func_00199850);
 

@@ -19,6 +19,28 @@ void func_0020FAE0();
 
 extern s32 D_00523D90[];
 
+s32 AddIntcHandler(s32, s32 (*)(), s32);
+
+void EnableIntc(s32);
+
+s32 scePadPortOpen(s32, s32, void *);
+
+extern s32 gAddIntcHandlerResult[];
+
+extern s32 D_00522DF0[];
+
+extern s32 D_00522DF8[];
+
+extern s32 D_00522E00[];
+
+extern u8 D_00522F80[];
+
+void func_0020F530();
+
+void func_0020F6C0();
+
+s32 func_0020FA00(void);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020F380", func_0020F380);
 
 void func_0020F400(int v)
@@ -59,7 +81,34 @@ s32 func_0020F860(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020F380", func_0020F870);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020F380", func_0020F900);
+void func_0020F900(void)
+{
+    s32 i;
+    s16 *info;
+    u8 *buf;
+
+    gAddIntcHandlerResult[0] = AddIntcHandler(3, func_0020FA00, 0);
+    EnableIntc(3);
+    func_0020F6C0();
+    D_00522DF8[0] = 2;
+    i = 0;
+    info = D_00522E90;
+    buf = D_00522F80;
+    do {
+        info[0] = 0;
+        info[1] = 0;
+        if (scePadPortOpen(i, 0, buf) == 0) {
+            info[1] = -1;
+        }
+        func_0020F530(i, 0);
+        i++;
+        info += 50;
+        buf += 0x100;
+    } while (i < D_00522DF8[0]);
+    D_00522E00[0] = 1;
+    D_00522DE8[0] = 0;
+    D_00522DF0[0] = 1;
+}
 
 void func_0020F9F0(void)
 {

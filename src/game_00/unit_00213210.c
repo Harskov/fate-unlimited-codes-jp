@@ -5,6 +5,28 @@
 
 void func_00218E20(void);
 
+typedef struct Obj_00215AF0 {
+    u8 unk_0;
+    u8 pad_1[7];
+    f32 unk_8;
+    f32 unk_C;
+    u8 unk_10[0x40];
+    u8 unk_50[4];
+    s32 unk_54;
+    s32 unk_58;
+    s32 unk_5C;
+    s32 unk_60;
+    u8 pad_64[8];
+    s32 unk_6C;
+    s32 unk_70;
+} Obj_00215AF0;
+
+Obj_00215AF0 *func_002190A0(int size);
+
+void func_00218090(int arg, Obj_00215AF0 *obj);
+
+unsigned int strlen(const char *s);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00213210);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00213420);
@@ -72,7 +94,35 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00213F40);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00214180);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_002146B0);
+void func_002146B0(void *arg0, void *arg1, int arg2, int arg3, int arg4, char *arg5, int arg6, f32 x, f32 y)
+{
+    Obj_00215AF0 *o;
+    int len;
+
+    if (arg5 != 0) {
+        len = strlen(arg5) + 1;
+        o = func_002190A0(0x70);
+        if (o != 0) {
+            func_00218090(arg6, o);
+            o->unk_0 = 0x10;
+            o->unk_8 = x;
+            o->unk_C = y;
+            o->unk_5C = arg4;
+            if (arg0 != 0) {
+                memcpy(o->unk_10, arg0, 0x40);
+            } else {
+                o->unk_5C |= 8;
+            }
+            memcpy(o->unk_50, arg1, 4);
+            o->unk_54 = arg2;
+            o->unk_58 = arg3;
+            o->unk_60 = (s32)func_002190A0(len);
+            if (o->unk_60 != 0) {
+                strcpy((char *)o->unk_60, arg5);
+            }
+        }
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_002147F0);
 
@@ -80,7 +130,32 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00215180);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00215950);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00215AF0);
+void func_00215AF0(void *arg0, void *arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, f32 x, f32 y, int arg8)
+{
+    Obj_00215AF0 *p;
+
+    if (arg5 == 0)
+        return;
+    p = func_002190A0(0x80);
+    if (p == 0)
+        return;
+    func_00218090(arg8, p);
+    p->unk_0 = 0x11;
+    p->unk_8 = x;
+    p->unk_C = y;
+    if (arg0 != 0) {
+        memcpy(p->unk_10, arg0, 0x40);
+        p->unk_70 = arg6;
+    } else {
+        p->unk_70 = arg6 | 8;
+    }
+    memcpy(p->unk_50, arg1, 4);
+    p->unk_54 = arg2;
+    p->unk_5C = arg4;
+    p->unk_58 = arg3;
+    p->unk_60 = arg5;
+    p->unk_6C = arg7;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00215C10);
 
@@ -90,7 +165,32 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00216400);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00216CE0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00216E30);
+void func_00216E30(void *arg0, void *arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, f32 x, f32 y, int arg8)
+{
+    Obj_00215AF0 *p;
+
+    if (arg5 == 0)
+        return;
+    p = func_002190A0(0x80);
+    if (p == 0)
+        return;
+    func_00218090(arg8, p);
+    p->unk_0 = 0xF;
+    p->unk_8 = x;
+    p->unk_C = y;
+    if (arg0 != 0) {
+        memcpy(p->unk_10, arg0, 0x40);
+        p->unk_70 = arg6;
+    } else {
+        p->unk_70 = arg6 | 8;
+    }
+    memcpy(p->unk_50, arg1, 4);
+    p->unk_54 = arg2;
+    p->unk_5C = arg4;
+    p->unk_58 = arg3;
+    p->unk_60 = arg5;
+    p->unk_6C = arg7;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00213210", func_00216F50);
 

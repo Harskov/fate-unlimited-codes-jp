@@ -54,6 +54,52 @@ void func_0015D710();
 
 void func_00179380();
 
+typedef struct Sub_00179600 {
+    s32 unk_0;
+    s32 unk_4;
+    s8 unk_8;
+    s8 unk_9;
+    unsigned char pad_A[2];
+    s32 unk_C;
+    s32 unk_10;
+    s32 unk_14;
+    f32 unk_18;
+} Sub_00179600;
+
+typedef struct Obj_00179600 {
+    unsigned char pad_0[4];
+    s32 unk_4;
+    s32 unk_8;
+    s32 unk_C;
+    unsigned char pad_10[0x10];
+    s8 unk_20;
+    s8 unk_21;
+    unsigned char pad_22[2];
+    s32 unk_24;
+    union {
+        f32 f0;
+        s32 i0;
+    } unk_28;
+    unsigned char pad_2C[8];
+    union {
+        f32 f0;
+        s32 i0;
+    } unk_34;
+    unsigned char pad_38[0xC];
+    s32 unk_44;
+    unsigned char pad_48[4];
+    f32 unk_4C;
+    f32 unk_50;
+} Obj_00179600;
+
+void *func_0015D810();
+
+void func_0015D130();
+
+double pow(double, double);
+
+void *memset(void *, int, unsigned int);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_00179310);
 
 void func_00179380(Link *n)
@@ -83,7 +129,43 @@ void func_001795F0(void *arg0, void *arg1, Node *arg2)
     func_00167130(arg0, arg1, arg2->unk_4);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_00179600);
+Obj_00179600 *func_00179600(Sub_00179600 *arg0)
+{
+    Obj_00179600 *obj = func_0015D810(D_0051AC60[0]);
+
+    if (obj == 0) {
+        return 0;
+    }
+    memset(obj, 0, 0x54);
+    obj->unk_4 = 0xF;
+    obj->unk_8 = arg0->unk_0;
+    obj->unk_C = arg0->unk_4;
+    obj->unk_20 = arg0->unk_8;
+    obj->unk_21 = arg0->unk_9;
+    obj->unk_24 = arg0->unk_C;
+    switch ((u8)arg0->unk_9) {
+    case 0:
+        obj->unk_28.f0 = *(f32 *)arg0->unk_10;
+        obj->unk_34.f0 = *(f32 *)arg0->unk_14;
+        break;
+    case 1:
+        obj->unk_28.i0 = arg0->unk_10;
+        obj->unk_34.i0 = arg0->unk_14;
+        break;
+    case 2:
+        obj->unk_28.i0 = arg0->unk_10;
+        obj->unk_34.i0 = arg0->unk_14;
+        break;
+    case 3:
+        func_0015D130(&obj->unk_28, arg0->unk_10);
+        func_0015D130(&obj->unk_34, arg0->unk_14);
+        break;
+    }
+    obj->unk_44 = arg0->unk_4;
+    obj->unk_4C = arg0->unk_18;
+    obj->unk_50 = 1.0 / pow((f32)arg0->unk_4, arg0->unk_18);
+    return obj;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_00179760);
 

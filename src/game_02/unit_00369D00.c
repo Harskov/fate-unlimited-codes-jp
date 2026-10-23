@@ -1,5 +1,7 @@
 #include "common.h"
 
+void func_0036ABD0();
+
 INCLUDE_ASM("asm/nonmatchings/game_02/unit_00369D00", func_00369D00);
 
 INCLUDE_ASM("asm/nonmatchings/game_02/unit_00369D00", func_00369DB0);
@@ -16,7 +18,12 @@ INCLUDE_ASM("asm/nonmatchings/game_02/unit_00369D00", func_0036A4B0);
 
 INCLUDE_ASM("asm/nonmatchings/game_02/unit_00369D00", func_0036A830);
 
-INCLUDE_ASM("asm/nonmatchings/game_02/unit_00369D00", func_0036ABA0);
+void func_0036ABA0(int arg0, int arg1, int arg2, int arg3)
+{
+    if (arg2 != 0 && arg3 != 0) {
+        func_0036ABD0(arg2, arg3);
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_02/unit_00369D00", func_0036ABD0);
 

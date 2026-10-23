@@ -2,7 +2,7 @@
 #include "eekernel.h"
 #include "types.h"
 
-extern s32 D_003D7BC8[];
+extern s32 gAddIntcHandlerResult[];
 
 extern u32 D_00522E08[];
 
@@ -31,7 +31,7 @@ s32 func_0020FA40(void)
 
 void func_0020FA50(void)
 {
-    if (D_003D7BC8[0] != -1 && D_00522E08[0] <= D_00522E18[0]) {
+    if (gAddIntcHandlerResult[0] != -1 && D_00522E08[0] <= D_00522E18[0]) {
         do {
             DelayThread(1);
         } while (D_00522E08[0] <= D_00522E18[0]);

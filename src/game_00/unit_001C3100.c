@@ -6,7 +6,7 @@ typedef struct Obj {
 } Obj;
 
 typedef struct Obj_001C42B0 {
-    u16 unk_0;
+    /* 0x00 */ u16 flags;
     u8 unk_2;
     u8 unk_3;
 } Obj_001C42B0;
@@ -29,6 +29,13 @@ typedef struct Obj_001C3940 {
     u8 pad[0x94];
     s16 unk_94;
 } Obj_001C3940;
+
+typedef struct Obj_001C41A0 {
+    u8 pad_0[0xB4];
+    /* 0xB4 */ u8 count;
+    u8 pad_B5[0xB];
+    Obj_001C42B0 unk_C0[16];
+} Obj_001C41A0;
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C3100", func_001C3100);
 
@@ -93,12 +100,42 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C3100", func_001C3B20);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C3100", func_001C4080);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C3100", func_001C41A0);
+Obj_001C42B0 *func_001C41A0(Obj_001C41A0 *arg0, Obj_001C42B0 *arg1)
+{
+    s32 i;
+    u8 n;
+
+    if (arg0 == 0) {
+        return 0;
+    }
+    if (arg1 == 0) {
+        return 0;
+    }
+    n = arg0->count;
+    if (n >= 0x10) {
+        return 0;
+    }
+    for (i = 0; i < n; i++) {
+        if (arg0->unk_C0[i].unk_3 == arg1->unk_3) {
+            if (arg1->flags & 8) {
+                arg0->unk_C0[i].flags |= 8;
+            } else if (arg1->flags & 0x10) {
+                arg0->unk_C0[i].flags |= 0x10;
+            } else if (arg0->unk_C0[i].unk_2 < arg1->unk_2) {
+                arg0->unk_C0[i].unk_2 = arg1->unk_2;
+            }
+            return 0;
+        }
+    }
+    arg0->unk_C0[n] = *arg1;
+    arg0->count++;
+    return &arg0->unk_C0[arg0->count - 1];
+}
 
 void func_001C42B0(Obj_001C42B0 *arg0)
 {
     if (arg0 != 0) {
-        arg0->unk_0 = 0;
+        arg0->flags = 0;
         arg0->unk_2 = 0;
         arg0->unk_3 = 0xFF;
     }

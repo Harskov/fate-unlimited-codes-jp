@@ -10,6 +10,8 @@ typedef struct Obj_0037E6F0 {
     s32 unk_14;
 } Obj_0037E6F0;
 
+extern s16 *func_0037E6A0();
+
 f32 func_0037E310(u16 arg0)
 {
     union {
@@ -23,7 +25,11 @@ f32 func_0037E310(u16 arg0)
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037E310", func_0037E330);
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037E310", func_0037E4A0);
+s16 func_0037E4A0(s32 arg0, s32 arg1, s32 arg2, s32 arg3)
+{
+    s16 *table = func_0037E6A0();
+    return table[arg3];
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037E310", func_0037E4D0);
 

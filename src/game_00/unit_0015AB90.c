@@ -21,9 +21,55 @@ void func_00145DC0();
 
 void func_00145C50();
 
+s32 func_0013B9C8();
+
+void DelayThread(s32);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015AB90", func_0015AB90);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015AB90", func_0015ACE0);
+s32 func_0015ACE0(s32 arg0, s32 arg1)
+{
+    s32 result;
+    s32 i;
+    s32 state;
+
+    result = 0;
+    if (arg1 != 0) {
+        i = 0;
+        for (;;) {
+            state = func_0013B9C8(arg0);
+            switch (state) {
+            case 4:
+            case 2:
+                result = 0;
+                break;
+            case 1:
+                i++;
+                result = 0;
+                break;
+            case 3:
+                result = 1;
+                break;
+            }
+            if (result == 1 || i >= 0xBB9)
+                break;
+            DelayThread(0x682);
+        }
+    } else {
+        state = func_0013B9C8();
+        switch (state) {
+        case 4:
+        case 1:
+        case 2:
+            result = 0;
+            break;
+        case 3:
+            result = 1;
+            break;
+        }
+    }
+    return result;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015AB90", func_0015AE00);
 

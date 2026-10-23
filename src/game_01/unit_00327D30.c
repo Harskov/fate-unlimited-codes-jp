@@ -1,6 +1,10 @@
 #include "common.h"
 #include "game_01/unit_00327D30.h"
 
+extern s32 D_00522DB0[];
+
+void func_0020F230();
+
 void func_00327D30(s32 *arg0, s32 arg1)
 {
     arg0[3] = arg1;
@@ -63,7 +67,14 @@ void func_00328250(Obj_00328250 *arg0)
     arg0->unk_288 = -1;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00327D30", func_00328300);
+void func_00328300(s32 *arg0)
+{
+    s32 v = *arg0;
+    if (v == 0) {
+        return;
+    }
+    func_0020F230(D_00522DB0, v);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00327D30", func_00328330);
 

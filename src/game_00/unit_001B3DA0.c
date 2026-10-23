@@ -19,6 +19,8 @@ typedef struct Obj_001B4240 {
     s32 unk_14;
 } Obj_001B4240;
 
+s32 func_001B42A0(void);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3DA0", func_001B3DA0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3DA0", func_001B3E30);
@@ -53,7 +55,12 @@ void func_001B4240(Obj_001B4240 *o)
     o->unk_14 = -1;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3DA0", func_001B4260);
+void func_001B4260(Obj_001B4240 *o)
+{
+    if (o != 0) {
+        o->unk_14 = func_001B42A0();
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3DA0", func_001B42A0);
 

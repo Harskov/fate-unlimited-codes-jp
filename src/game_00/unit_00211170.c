@@ -18,6 +18,13 @@ void func_002111E0(s32);
 
 extern s32 D_00523200[];
 
+typedef struct Obj_00210CB0 {
+    u8 unk_0[0x2C];
+    s32 unk_2C;
+} Obj_00210CB0;
+
+Obj_00210CB0 *func_00210CB0(s32);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00211170", func_00211170);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00211170", func_00211190);
@@ -29,7 +36,11 @@ void func_00211260(void)
     func_002111E0(D_005231F0[0]);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00211170", func_00211270);
+void func_00211270(s32 arg0, s32 arg1)
+{
+    Obj_00210CB0 *o = func_00210CB0(arg0);
+    o->unk_2C = arg1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00211170", func_002112A0);
 

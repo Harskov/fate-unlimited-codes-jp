@@ -10,13 +10,28 @@ typedef struct Obj_00251710 {
     /* 0x04 */ int unk_4;
 } Obj_00251710;
 
+void func_002523D0();
+
+void func_00328300();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00251710);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00251CE0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00251D80);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00251F00);
+void func_00251F00(int *arg0, int arg1, int arg2, int arg3)
+{
+    int *sub;
+
+    arg0[0] = 0;
+    arg0[1] = 0;
+    sub = arg0 + 2;
+    func_002112A0(arg0, 2);
+    func_00211270(arg0, sub);
+    func_00223A60(sub, arg1, arg2, arg3, arg0);
+    memset(arg0 + 10, 0, 16);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00251FA0);
 
@@ -44,7 +59,11 @@ void func_002522F0(int v)
     D_00529530[0] = v;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00252300);
+void func_00252300(Obj_00251710 *arg0)
+{
+    func_002523D0();
+    func_00328300(&arg0->unk_4);
+}
 
 void func_00252330(void *arg0)
 {

@@ -12,6 +12,10 @@ extern int strlen(const char *s);
 
 extern int strcmp(const char *a, const char *b);
 
+extern s32 D_00522CA0[];
+
+void func_00208D10(s32 *arg0, s32 arg1);
+
 // registers the table at D_00522DB0 with the size 0x1C8000 and keeps the result
 void func_00208780(void)
 {
@@ -67,4 +71,8 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00208780", func_00209750);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00208780", func_00209830);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00208780", func_00209870);
+s32 func_00209870(void)
+{
+    func_00208D10(D_00522CA0, 0);
+    return 0;
+}

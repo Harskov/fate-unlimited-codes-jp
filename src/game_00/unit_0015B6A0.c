@@ -108,6 +108,8 @@ void func_0015BCA0();
 
 extern s32 D_0051A5C0[];
 
+extern s32 D_005240B4[];
+
 void func_0015B6A0(void)
 {
     sceGsSyncVCallback(func_0015B6B0);
@@ -209,7 +211,15 @@ f32 func_0015BC00(s32 arg0)
     return D_003D63F0[arg0];
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015B6A0", func_0015BC20);
+void func_0015BC20(s32 arg0)
+{
+    if (arg0 == 0) {
+        return;
+    }
+    D_00523DAC[0] = 1010;
+    D_005240B4[0] = arg0;
+    func_00211130(0x8000);
+}
 
 void func_0015BC60(void)
 {

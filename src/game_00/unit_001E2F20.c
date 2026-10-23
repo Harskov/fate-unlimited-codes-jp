@@ -17,6 +17,18 @@ typedef struct Obj_001E3120 {
 
 extern s32 D_0051D8A0[];
 
+extern f32 D_0051F140[];
+
+extern f32 D_0051F144[];
+
+extern f32 D_0051F148[];
+
+extern f32 D_0051F160[];
+
+extern f32 D_0051F164[];
+
+extern f32 D_0051F168[];
+
 s32 func_001E2F20(void)
 {
     return D_0051F138[0];
@@ -74,4 +86,16 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E2F20", func_001E3880);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E2F20", func_001E38D0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E2F20", func_001E3920);
+s32 func_001E3920(s32 arg0, f32 *arg1)
+{
+    if (arg0 >= 2) {
+        *(long long *)1 = 0;
+    }
+    if (!(D_0051F160[arg0 * 3] <= arg1[0] && D_0051F164[arg0 * 3] <= arg1[1] && D_0051F168[arg0 * 3] <= arg1[2])) {
+        return 0;
+    }
+    if (D_0051F140[arg0 * 3] < arg1[0] || D_0051F144[arg0 * 3] < arg1[1] || D_0051F148[arg0 * 3] < arg1[2]) {
+        return 0;
+    }
+    return 1;
+}

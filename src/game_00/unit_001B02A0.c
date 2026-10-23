@@ -11,6 +11,15 @@ extern s32 D_0051C900[];
 
 extern s32 D_003D6DA0[][10];
 
+typedef struct Obj_001B0450 {
+    u8 unk_0[4];
+    s32 unk_4;
+    u8 pad_8[0x2438];
+    s32 unk_2440;
+} Obj_001B0450;
+
+void func_0020F410();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B02A0", func_001B02A0);
 
 int func_001B0380(void)
@@ -47,7 +56,11 @@ void func_001B03D0(s32 arg0)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B02A0", func_001B0410);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B02A0", func_001B0450);
+void func_001B0450(Obj_001B0450 *arg0)
+{
+    if (arg0->unk_2440 == 0)
+        func_0020F410(arg0->unk_4);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B02A0", func_001B0490);
 

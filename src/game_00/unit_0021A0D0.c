@@ -8,6 +8,31 @@ typedef struct Unk_0021A870 {
     /* 0x08 */ int unk_8;
 } Unk_0021A870;
 
+typedef struct Elem_0021BFD0 {
+    u8 pad_0[0x10];
+    char unk_10[1];
+} Elem_0021BFD0;
+
+typedef struct Sub_0021BFD0 {
+    Elem_0021BFD0 *unk_0;
+} Sub_0021BFD0;
+
+typedef struct Obj96 {
+    u8 pad_0[0x40];
+    Sub_0021BFD0 *unk_40;
+    u8 pad_44[8];
+    s32 unk_4C;
+    u8 pad_50[0x10];
+} Obj96;
+
+typedef struct Obj_0021BFD0 {
+    u8 pad_0[0x1690];
+    Obj96 *unk_1690;
+    /* 0x1694 */ s32 count;
+} Obj_0021BFD0;
+
+int strcmp(const char *, const char *);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A0D0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A140);
@@ -74,7 +99,23 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021BE90);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021BF20);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021BFD0);
+void func_0021BFD0(Obj_0021BFD0 *arg0, s32 arg1, s32 arg2, char *arg3)
+{
+    s32 i;
+
+    for (i = 0; i < arg0->count; i++) {
+        if (arg0->unk_1690[i].unk_40 != 0 && strcmp(arg3, arg0->unk_1690[i].unk_40->unk_0->unk_10) == 0) {
+            switch (arg2) {
+            case 0:
+                arg0->unk_1690[i].unk_4C = arg0->unk_1690[i].unk_4C & ~arg1;
+                break;
+            case 1:
+                arg0->unk_1690[i].unk_4C = arg0->unk_1690[i].unk_4C | arg1;
+                break;
+            }
+        }
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021C0E0);
 

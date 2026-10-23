@@ -22,6 +22,10 @@ extern int strlen(const char *s);
 
 extern s32 D_0051FDD8[];
 
+extern char *strchr(const char *s, int c);
+
+extern char *strcat(char *dst, const char *src);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FE660", func_001FE660);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FE660", func_001FE7F0);
@@ -64,7 +68,19 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FE660", func_001FF000);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FE660", func_001FFDC0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FE660", func_002002E0);
+void func_002002E0(char *dst, char *src, char *ext)
+{
+    char buf[0x100];
+    char *p;
+
+    strcpy(buf, src);
+    p = strchr(buf, '.');
+    if (p != 0 && *p == '.')
+        *p = 0;
+    if (ext != 0)
+        strcat(buf, ext);
+    strcpy(dst, buf);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FE660", func_00200360);
 

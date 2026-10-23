@@ -30,6 +30,12 @@ typedef struct Obj_001D7090 {
     s32 unk_444;
 } Obj_001D7090;
 
+s32 func_001E3800(s32 arg0);
+
+void func_0015D130(f32 *arg0, s32 arg1);
+
+f32 fabsf(f32);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D6EA0", func_001D6EA0);
 
 void func_001D7090(Obj_001D7090 *arg0)
@@ -71,7 +77,21 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D6EA0", func_001D79D0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D6EA0", func_001D7E70);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D6EA0", func_001D7EF0);
+s32 func_001D7EF0(f32 *arg0, f32 arg1)
+{
+    f32 lo[4];
+    f32 hi[4];
+
+    func_0015D130(lo, func_001E3800(0));
+    func_0015D130(hi, func_001E3800(1));
+    if (!(lo[0] <= arg0[0] && lo[2] <= arg0[2]))
+        return 0;
+    if (hi[0] < arg0[0] || hi[2] < arg0[2])
+        return 0;
+    if (arg0[1] < 0.0f || fabsf(arg0[1]) <= arg1)
+        return 1;
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D6EA0", func_001D7FE0);
 

@@ -18,6 +18,8 @@ typedef struct Obj_001A9D80 {
     float unk_4EC;
 } Obj_001A9D80;
 
+int func_001B7CC0();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A5D70", func_001A5D70);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A5D70", func_001A6190);
@@ -43,7 +45,15 @@ int func_001A6390(Obj8 *p)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A5D70", func_001A63A0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A5D70", func_001A6680);
+int func_001A6680(void)
+{
+    int r;
+
+    r = func_001B7CC0();
+    if (r != 0)
+        return r;
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A5D70", func_001A66B0);
 

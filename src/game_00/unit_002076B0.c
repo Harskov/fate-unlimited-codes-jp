@@ -43,6 +43,13 @@ extern s32 D_00522C48[];
 
 extern Obj_002077F0 *D_00522C60[];
 
+typedef struct Obj_00208200 {
+    u8 unk_0[0x14];
+    s32 unk_14;
+} Obj_00208200;
+
+extern Obj_00208200 *func_00208200(void);
+
 s32 func_002076B0(char *arg0)
 {
     char *found = strstr(arg0, D_003D7BB0[0]);
@@ -141,7 +148,13 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00208120);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00208180);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_002081D0);
+s32 func_002081D0(void)
+{
+    Obj_00208200 *p = func_00208200();
+    if (p != 0)
+        return p->unk_14;
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00208200);
 

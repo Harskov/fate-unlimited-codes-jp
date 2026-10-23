@@ -63,12 +63,20 @@ typedef struct Obj_002256E0 {
     s32 *unk_5C;
 } Obj_002256E0;
 
+extern s32 D_00527A0C[];
+
+void func_00178060();
+
 s32 func_002240B0(void)
 {
     return D_00527A08[0];
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002240B0", func_002240C0);
+void func_002240C0(void)
+{
+    func_00178060(D_00527A0C);
+    D_00527A08[0] = 0;
+}
 
 void func_002240F0(void)
 {

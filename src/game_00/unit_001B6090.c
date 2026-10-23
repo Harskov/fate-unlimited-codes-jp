@@ -9,6 +9,10 @@ extern s32 D_0051D75C[];
 
 void func_0015D130();
 
+f32 fabsf(f32);
+
+f32 func_0016E8F0();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B6090", func_001B6090);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B6090", func_001B6110);
@@ -26,7 +30,31 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B6090", func_001B6780);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B6090", func_001B6BD0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B6090", func_001B6CE0);
+s32 func_001B6CE0(Vec4 *arg0, s32 arg1, Vec4 *arg2, Vec4 *arg3, Vec4 *out)
+{
+    f32 base;
+    f32 dist;
+    f32 denom;
+    f32 t;
+
+    base = func_0016E8F0(arg2);
+    dist = func_0016E8F0(arg2, arg0);
+    if (arg3 != 0) {
+        denom = func_0016E8F0(arg2, arg3);
+        if (fabsf(denom) <= 1.1920929e-7f)
+            return 0;
+        t = (base - dist) / denom;
+        out->x = arg0->x + t * arg3->x;
+        out->y = arg0->y + t * arg3->y;
+        out->z = arg0->z + t * arg3->z;
+    } else {
+        t = base - dist;
+        out->x = arg0->x + t * arg2->x;
+        out->y = arg0->y + t * arg2->y;
+        out->z = arg0->z + t * arg2->z;
+    }
+    return 1;
+}
 
 void func_001B6E30(s32 arg0, s32 arg1)
 {
