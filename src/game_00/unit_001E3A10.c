@@ -27,10 +27,13 @@ typedef struct Obj_001E3DA0 {
     s32 unk_0;
     u8 pad_4[0x4];
     s32 unk_8;
-    u8 pad_C[0xC];
+    s32 unk_C;
+    s32 unk_10;
+    s32 unk_14;
     s32 unk_18;
     s32 unk_1C;
-    u8 pad_20[0x90];
+    s32 unk_20;
+    u8 pad_24[0x8C];
     s32 unk_B0;
     u8 pad_B4[0xC];
     s32 unk_C0;
@@ -117,7 +120,14 @@ s32 func_001E3B30(f32 arg0, f32 arg1, f32 arg2, f32 arg3)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E3A10", func_001E3C20);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E3A10", func_001E3CA0);
+// resets the object func_001E3DA0 sets up; -1 in unk_10 is the value func_001E3CC0 reads as empty
+void func_001E3CA0(Obj_001E3DA0 *p)
+{
+    p->unk_C = 0;
+    p->unk_10 = -1;
+    p->unk_14 = 0;
+    p->unk_20 = 0;
+}
 
 s32 func_001E3CC0(Obj_001E3CC0 *p)
 {

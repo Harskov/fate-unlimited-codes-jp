@@ -55,7 +55,15 @@ void func_0036DFB0(s32 *arg0, s32 arg1, s32 arg2, f32 arg3)
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_02/unit_0036D830", func_0036E020);
+void func_0036E020(s32 *arg0, s32 arg1, f32 *arg2)
+{
+    Entry *entry;
+    s32 i;
+
+    entry = &((Slot *)D_00532060)[*arg0].unk_0[arg1];
+    for (i = 0; i < 8; i++)
+        entry->unk_14[i] = arg2[i];
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_02/unit_0036D830", func_0036E0A0);
 

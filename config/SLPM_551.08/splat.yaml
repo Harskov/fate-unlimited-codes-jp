@@ -273,6 +273,7 @@ segments:
       - [0x0012412C, asm, game_00_97]
       - [0x00124130, c, game_00/unit_002240B0]
       - [0x0012D434, asm, game_00_98]
+      - [0x0012D440, c, game_00/unit_0022D3C0]
       - [0x0012FD80, c, game_00/unit_0022FD00]
       - [0x0013A658, asm, game_00_99]
       - [0x0013A660, c, game_00/unit_0023A5E0]

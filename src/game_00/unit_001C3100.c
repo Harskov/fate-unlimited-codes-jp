@@ -37,6 +37,17 @@ typedef struct Obj_001C41A0 {
     Obj_001C42B0 unk_C0[16];
 } Obj_001C41A0;
 
+typedef struct Sub_001C42D0 {
+    /* 0x00 */ s16 unk_0;
+    /* 0x02 */ s16 unk_2;
+} Sub_001C42D0;
+
+typedef struct Obj_001C42D0 {
+    u8 pad_0[4];
+    /* 0x04 */ Sub_001C42D0 unk_4[7];
+    /* 0x20 */ Sub_001C42D0 unk_20[6];
+} Obj_001C42D0;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C3100", func_001C3100);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C3100", func_001C3260);
@@ -141,7 +152,51 @@ void func_001C42B0(Obj_001C42B0 *arg0)
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C3100", func_001C42D0);
+/* averages the second halfword of the entries whose first halfword is a bit set in arg0;
+   arg2 == 1 selects the six-entry table at 0x20, anything else the seven-entry one at 0x4;
+   100 when nothing is found */
+u16 func_001C42D0(u16 arg0, Obj_001C42D0 *arg1, s32 arg2)
+{
+    s32 count;
+    s32 sum;
+    s32 i;
+    s32 j;
+
+    count = 0;
+    sum = 0;
+    if (arg1 == 0) {
+        return 100;
+    }
+    if (arg2 != 1) {
+        for (i = 0; i < 7; i++) {
+            if (arg0 & (1 << i)) {
+                for (j = 0; j < 7; j++) {
+                    if (arg1->unk_4[j].unk_0 == i) {
+                        count++;
+                        sum += arg1->unk_4[j].unk_2;
+                        break;
+                    }
+                }
+            }
+        }
+    } else {
+        for (i = 0; i < 6; i++) {
+            if (arg0 & (1 << i)) {
+                for (j = 0; j < 6; j++) {
+                    if (arg1->unk_20[j].unk_0 == i) {
+                        count++;
+                        sum += arg1->unk_20[j].unk_2;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+    if (count != 0) {
+        return sum / count;
+    }
+    return 100;
+}
 
 void func_001C43F0(Obj56 *arg0, Obj56 *arg1)
 {

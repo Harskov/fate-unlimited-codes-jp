@@ -24,6 +24,13 @@ extern char *strchr(const char *s, int c);
 
 extern char *strcat(char *dst, const char *src);
 
+typedef struct Obj_00200DF0 {
+    u8 unk_0[0x3C];
+    /* 0x3C */ void *unk_3C;
+} Obj_00200DF0;
+
+void func_002D0B70(void *arg0);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FE660", func_001FE660);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FE660", func_001FE7F0);
@@ -127,7 +134,13 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FE660", func_00200A90);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FE660", func_00200BB0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FE660", func_00200DF0);
+void func_00200DF0(Obj_00200DF0 *arg0)
+{
+    if (arg0->unk_3C != 0) {
+        func_002D0B70(arg0->unk_3C);
+        arg0->unk_3C = 0;
+    }
+}
 
 int func_00200E30(int arg0)
 {

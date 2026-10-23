@@ -4,9 +4,17 @@ extern f32 D_003D7AC0[];
 
 extern s32 func_00203F50();
 
+void func_002EA0B0();
+
+void func_00310208();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00202880", func_00202880);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00202880", func_00202A80);
+void func_00202A80(s32 arg0)
+{
+    func_00310208(arg0, 0);
+    func_002EA0B0(arg0);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00202880", func_00202AB0);
 

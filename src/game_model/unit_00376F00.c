@@ -32,6 +32,25 @@ extern s32 D_004E0860[];
 
 extern s32 D_00507D30[];
 
+typedef struct Sub_00377630 {
+    /* 0x000 */ u8 pad_0[0x1DC];
+    /* 0x1DC */ s32 unk_1DC;
+    /* 0x1E0 */ s32 unk_1E0;
+    /* 0x1E4 */ u8 pad_1E4[0x8];
+    /* 0x1EC */ s32 unk_1EC;
+} Sub_00377630;
+
+typedef struct Obj_00377630 {
+    /* 0x00 */ u8 pad_0[0x8];
+    /* 0x08 */ s32 unk_8;
+    /* 0x0C */ u8 pad_C[0x4];
+    /* 0x10 */ Sub_00377630 *unk_10;
+    /* 0x14 */ u8 pad_14[0xC];
+    /* 0x20 */ s32 unk_20;
+    /* 0x24 */ u8 pad_24[0x4];
+    /* 0x28 */ f32 unk_28;
+} Obj_00377630;
+
 void func_00376F00(void)
 {
     func_0036D830();
@@ -76,4 +95,45 @@ INCLUDE_ASM("asm/nonmatchings/game_model/unit_00376F00", func_003773D0);
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00376F00", func_00377500);
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00376F00", func_00377630);
+// registers: a3 = the object's unk_10 (p), a2 = unk_1E0 under the mask 0x2722020 (bits), t0 = set unless bits is clear and unk_20 is below 91 (flag)
+// clamps unk_20 to 0..300 (90 when any of the mask's bits are set), then steps the state in unk_8: 2 -> 3 when the flag is set, 4 -> 1 when it is clear
+void func_00377630(Obj_00377630 *arg0)
+{
+    Sub_00377630 *p;
+    s32 bits;
+    s32 flag;
+
+    if (arg0 == 0)
+        return;
+    p = arg0->unk_10;
+    if (p == 0)
+        return;
+    bits = p->unk_1E0 & 0x2722020;
+    flag = 1;
+    if (bits == 0 && arg0->unk_20 < 91)
+        flag = 0;
+    if (p->unk_1DC & 0x8000080)
+        return;
+    if (p->unk_1EC & 0x8000)
+        return;
+    if (bits != 0)
+        arg0->unk_20 = 90;
+    if (arg0->unk_20 < 0)
+        arg0->unk_20 = 0;
+    if (arg0->unk_20 >= 300)
+        arg0->unk_20 = 300;
+    switch (arg0->unk_8) {
+    case 2:
+        if (flag != 0) {
+            arg0->unk_28 = 1.0f;
+            arg0->unk_8 = 3;
+        }
+        break;
+    case 4:
+        if (flag == 0) {
+            arg0->unk_28 = 0.0f;
+            arg0->unk_8 = 1;
+        }
+        break;
+    }
+}

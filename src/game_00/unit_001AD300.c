@@ -1,4 +1,5 @@
 #include "common.h"
+#include "libc.h"
 #include "game_00/tbl_0051C858.h"
 #include "game_00/obj_001ae2f0.h"
 #include "game_00/unit_001FE660.h"
@@ -7,6 +8,11 @@ typedef struct Obj {
     unsigned char unk_0[0x238C];
     int unk_238C;
     int unk_2390;
+    unsigned char pad_2394[0x10];
+    int unk_23A4;
+    int unk_23A8;
+    unsigned char unk_23AC[0x28];
+    int unk_23D4;
 } Obj;
 
 extern char gFormat_4FEEA0[];
@@ -23,7 +29,30 @@ void func_001CCFD0();
 
 void func_002B1E28();
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AD300", func_001AD300);
+
+void func_001AD300(int index)
+{
+    Node0051C858 *n;
+    int i;
+    int end;
+
+    if (index < 0) {
+        i = 0;
+        end = 2;
+    } else {
+        i = index;
+        end = index + 1;
+    }
+
+    for (; i < end; i++) {
+        for (n = D_0051C858[i]->unk_C; n != 0; n = n->next) {
+            ((Obj *)n->unk_0)->unk_23A8 = 0;
+            ((Obj *)n->unk_0)->unk_23D4 = 0;
+            ((Obj *)n->unk_0)->unk_23A4 = 0;
+            memset(((Obj *)n->unk_0)->unk_23AC, 0, 0x28);
+        }
+    }
+}
 
 void func_001AD3D0(int index)
 {

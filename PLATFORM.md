@@ -452,7 +452,7 @@ Every function whose code carries COP2 instructions, matched or not. The matched
 | `func_002A67D0` | asm | platform | lqc2, sqc2, vaddax.y, vadday.x, vadday.z, vaddw.xyz … |
 | `func_002DBC08` | asm | platform | lqc2, sqc2, vmadday.xyz, vmaddaz.xyz, vmaddw.xyz, vmaddz.xyz … |
 | `func_002DC540` | wip | platform | lqc2, sqc2, vmadday.xyz, vmaddaz.xyz, vmaddw.xyz, vmaddz.xyz … |
-| `func_002DC5C0` | asm | platform | lqc2, sqc2, vmadday.xyz, vmaddaz.xyz, vmaddw.xyz, vmaddz.xyz … |
+| `func_002DC5C0` | wip | platform | lqc2, sqc2, vmadday.xyz, vmaddaz.xyz, vmaddw.xyz, vmaddz.xyz … |
 | `func_002F4238` | asm | platform | cfc2.ni |
 | `func_002F6F10` | wip | platform | cfc2.ni, ctc2.ni |
 | `func_00302810` | matched | platform | lqc2, sqc2, vmadday.xyz, vmaddaz.xyz, vmaddw.xyz, vmaddz.xyz … |

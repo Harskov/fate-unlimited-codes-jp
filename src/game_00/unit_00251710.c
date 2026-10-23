@@ -21,6 +21,10 @@ typedef struct Obj_00251F00 {
     /* 0x28 */ u8 unk_28[0x10];
 } Obj_00251F00;
 
+extern s32 D_00522DB0[];
+
+void func_0020F230();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00251710);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00251CE0);
@@ -92,6 +96,13 @@ void func_002523B0(Obj_00251710 *arg0)
     memset(arg0->unk_0, 0, arg0->unk_4 * 4);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_002523D0);
+void func_002523D0(s32 *arg0)
+{
+    s32 v = *arg0;
+    if (v == 0)
+        return;
+    func_0020F230(D_00522DB0, v);
+    *arg0 = 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00252410);

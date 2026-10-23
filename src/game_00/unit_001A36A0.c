@@ -2,11 +2,15 @@
 #include "game_00/tbl_0051D890.h"
 
 typedef struct Obj {
-    unsigned char unk_0[0x230];
+    unsigned char unk_0[0x1DC];
+    /* 0x1DC */ int unk_1DC;
+    unsigned char unk_1E0[0x50];
     /* 0x230 */ int unk_230;
 } Obj;
 
 extern int D_00531C58[];
+
+void func_001A5130();
 
 int func_001A36A0(int arg0, int arg1)
 {
@@ -86,4 +90,8 @@ int func_001A3A80(Obj *o, unsigned short mask)
     return o->unk_230 & mask;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A36A0", func_001A3A90);
+void func_001A3A90(Obj *o)
+{
+    func_001A5130(o, 5);
+    o->unk_1DC &= ~0x3000;
+}

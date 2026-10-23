@@ -12,6 +12,10 @@ typedef struct Obj001FF000 {
     s32 unk_38;
 } Obj001FF000;
 
+void func_00175F60();
+
+void func_002235A0();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022FD00", func_0022FD00);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022FD00", func_0022FDC0);
@@ -20,7 +24,15 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022FD00", func_0022FE80);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022FD00", func_0022FEE0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022FD00", func_0022FF80);
+// the fifth argument chooses the callee; the first four are handed on unchanged
+void func_0022FF80(s32 arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4)
+{
+    if (arg4 != 0) {
+        func_00175F60(arg0, arg1, arg2, arg3);
+    } else {
+        func_002235A0(arg0, arg1, arg2, arg3);
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022FD00", func_0022FFB0);
 

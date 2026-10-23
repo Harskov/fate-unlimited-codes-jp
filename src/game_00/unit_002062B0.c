@@ -31,6 +31,20 @@ void func_0013B038();
 
 void func_0013AA00();
 
+int func_00206A10(int count);
+
+s32 func_00206A80();
+
+s32 sceCdDiskReady(s32 mode);
+
+s32 sceCdRead(u32 lbn, u32 sectors, void *buf, void *mode);
+
+s32 sceCdStandby(void);
+
+s32 sceCdSync(s32 mode);
+
+s32 sceCdGetError(void);
+
 int func_002062B0(void)
 {
     return 0;
@@ -63,7 +77,40 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206550);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206600);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206870);
+/* Reads from the disc with sceCdRead until a read completes without error,
+   spinning the drive back up (sceCdStandby) after a failed request or an error;
+   returns the sector count from func_00206A80 in bytes (2048 per sector). */
+s32 func_00206870(s32 arg0, s32 arg1, s32 arg2)
+{
+    s32 n;
+
+    n = func_00206A80(arg1);
+    for (;;) {
+        sceCdDiskReady(0);
+        if (sceCdRead(arg0, n, (void *)arg2, D_00522BD0) == 0) {
+            while (!sceCdStandby()) {
+                func_00206A10(1);
+            }
+            while (sceCdSync(1)) {
+                func_00206A10(1);
+            }
+            continue;
+        }
+        while (sceCdSync(1)) {
+            func_00206A10(1);
+        }
+        if (sceCdGetError() == 0) {
+            break;
+        }
+        while (!sceCdStandby()) {
+            func_00206A10(1);
+        }
+        while (sceCdSync(1)) {
+            func_00206A10(1);
+        }
+    }
+    return n << 11;
+}
 
 int func_00206A10(int count)
 {

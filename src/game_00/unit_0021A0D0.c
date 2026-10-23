@@ -1,4 +1,5 @@
 #include "common.h"
+#include "libc.h"
 #include "game_00/unit_0021A0D0.h"
 
 typedef struct Unk_0021A870 {
@@ -32,6 +33,55 @@ typedef struct Obj_0021BFD0 {
 } Obj_0021BFD0;
 
 int strcmp(const char *, const char *);
+
+typedef struct Sub_0021AF20 {
+    u8 pad_0[0x38];
+    /* 0x38 */ s32 unk_38;
+} Sub_0021AF20;
+
+typedef struct Elem_0021AF20 {
+    u8 pad_0[0xC];
+    /* 0x0C */ s32 unk_C;
+    /* 0x10 */ s32 unk_10;
+    /* 0x14 */ s32 unk_14;
+} Elem_0021AF20;
+
+typedef struct Obj12 {
+    /* 0x00 */ s32 unk_0;
+    /* 0x04 */ s32 unk_4;
+    /* 0x08 */ s32 unk_8;
+} Obj12;
+
+typedef struct Obj_0021AF20 {
+    u8 pad_0[0x10];
+    /* 0x0010 */ Sub_0021AF20 *unk_10;
+    u8 pad_14[0x1788];
+    /* 0x179C */ Obj12 unk_179C;
+    /* 0x17A8 */ Obj12 unk_17A8;
+    /* 0x17B4 */ Elem_0021AF20 *unk_17B4;
+    /* 0x17B8 */ s32 unk_17B8;
+    /* 0x17BC */ s32 unk_17BC;
+} Obj_0021AF20;
+
+typedef struct Obj8 {
+    /* 0x00 */ Obj_0021AF20 *unk_0;
+    /* 0x04 */ s32 unk_4;
+} Obj8;
+
+extern s32 D_00522DB0[];
+
+
+void func_00178060(Obj12 *arg0);
+
+void func_001795F0(Elem_0021AF20 *arg0, Elem_0021AF20 *arg1, Obj12 *arg2);
+
+void *func_0020F180(s32 *arg0, s32 arg1);
+
+void func_0021A890();
+
+void func_002B1E28(s32 arg0, void (*arg1)(), Obj8 *arg2);
+
+s32 func_002B2760(s32 arg0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A0D0);
 
@@ -79,7 +129,50 @@ void func_0021A870(Unk_0021A870 *arg0)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A890);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021AF20);
+// registers: s1 = the entry count func_002B2760 returns (n), sp+0x68 = the block handed to func_002B1E28 with func_0021A890 (ctx), a0 = the entry being visited (e)
+// builds the 24-byte entry table, then walks it by the key at +0xC from 0 to 99 twice:
+// entries with bit 0x1 clear go to the first list, entries with it set to the second
+void func_0021AF20(Obj_0021AF20 *arg0)
+{
+    Obj8 ctx;
+    Elem_0021AF20 *e;
+    s32 n;
+    s32 size;
+    s32 j;
+    s32 i;
+
+    n = func_002B2760(arg0->unk_10->unk_38);
+    size = n * (s32)sizeof(Elem_0021AF20);
+    arg0->unk_17B4 = func_0020F180(D_00522DB0, size);
+    memset(arg0->unk_17B4, 0, size);
+    ctx.unk_0 = arg0;
+    ctx.unk_4 = 0;
+    func_002B1E28(arg0->unk_10->unk_38, func_0021A890, &ctx);
+
+    func_00178060(&arg0->unk_179C);
+    arg0->unk_17B8 = 0;
+    for (i = 0; i < 100; i++) {
+        for (j = 0; j < n; j++) {
+            e = &arg0->unk_17B4[j];
+            if (e->unk_14 != 0 && i == e->unk_C && !(e->unk_10 & 0x1)) {
+                func_001795F0(e, e, &arg0->unk_179C);
+                arg0->unk_17B8++;
+            }
+        }
+    }
+
+    func_00178060(&arg0->unk_17A8);
+    arg0->unk_17BC = 0;
+    for (i = 0; i < 100; i++) {
+        for (j = 0; j < n; j++) {
+            e = &arg0->unk_17B4[j];
+            if (e->unk_14 != 0 && i == e->unk_C && (e->unk_10 & 0x1)) {
+                func_001795F0(e, e, &arg0->unk_17A8);
+                arg0->unk_17BC++;
+            }
+        }
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021B0D0);
 

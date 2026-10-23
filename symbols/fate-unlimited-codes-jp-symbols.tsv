@@ -2423,8 +2423,8 @@ func_00159AA0	unit_001598E0	function	asm	gameplay/game_00.002	call-graph communi
 func_00159B20	unit_001598E0	function	matched	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
 func_00159B40	unit_001598E0	function	matched	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
 func_00159B60	unit_001598E0	function	matched	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
-func_00159BB0	unit_001598E0	function	wip	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
-func_00159C90	unit_001598E0	function	asm	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
+func_00159BB0	unit_001598E0	function	matched	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
+func_00159C90	unit_001598E0	function	matched	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
 func_00159E30	unit_001598E0	function	matched	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
 func_00159E40	unit_001598E0	function	asm	platform	calls func_0013E828
 func_0015A220	unit_001598E0	function	wip	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
@@ -2580,7 +2580,7 @@ func_0015FD10	unit_0015EE30	function	asm	gameplay/game_00.013	call-graph communi
 func_0015FDE0	unit_0015FDE0	function	asm	gameplay/game_00.013	call-graph community of 43 function(s) from func_0015E9C0
 func_0015FE90	unit_0015FDE0	function	asm	gameplay/game_00.013	call-graph community of 43 function(s) from func_0015E9C0
 func_0015FF40	unit_0015FDE0	function	asm	gameplay/game_00.013	call-graph community of 43 function(s) from func_0015E9C0
-func_0015FFE0	unit_0015FDE0	function	wip	gameplay/game_00.013	call-graph community of 43 function(s) from func_0015E9C0
+func_0015FFE0	unit_0015FDE0	function	matched	gameplay/game_00.013	call-graph community of 43 function(s) from func_0015E9C0
 func_00160020	unit_0015FDE0	function	asm	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
 func_001600E0	unit_0015FDE0	function	matched	core	utility called by 32 functions
 func_00160100	unit_0015FDE0	function	asm	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
@@ -2616,11 +2616,11 @@ func_00166E80	unit_00166E80	function	asm	gameplay/game_00.003	call-graph communi
 func_00166F20	unit_00166E80	function	matched	core	utility called by 86 functions
 func_00166F30	unit_00166E80	function	matched	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
 func_00166F60	unit_00166E80	function	matched	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
-func_00166F90	unit_00166E80	function	asm	platform	calls fptodp
+func_00166F90	unit_00166E80	function	wip	platform	calls fptodp
 func_00167130	unit_00166E80	function	matched	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
 func_00167160	unit_00166E80	function	matched	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
 func_00167170	unit_00166E80	function	asm	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
-func_00167D10	unit_00166E80	function	asm	core	utility called by 63 functions
+func_00167D10	unit_00166E80	function	wip	core	utility called by 63 functions
 func_00167D40	unit_00166E80	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_00167DE0	unit_00166E80	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_00167E40	unit_00166E80	function	asm	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
@@ -2896,7 +2896,7 @@ func_00193350	unit_00192510	function	asm	gameplay/game_00.011	call-graph communi
 func_00193F10	unit_00192510	function	asm	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
 func_001941A0	unit_00192510	function	asm	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
 func_00194330	unit_00192510	function	asm	platform	calls fptodp
-func_00194B10	unit_00192510	function	asm	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
+func_00194B10	unit_00192510	function	wip	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
 func_00194C80	unit_00192510	function	asm	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
 func_00195190	unit_00192510	function	asm	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
 func_00195480	unit_00192510	function	asm	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
@@ -2958,7 +2958,7 @@ func_0019BA00	unit_00199770	function	asm	gameplay/game_00.014	call-graph communi
 func_0019BBE0	unit_00199770	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_0019BC90	unit_00199770	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_0019BD60	unit_00199770	function	asm	gameplay/game_00.014	call-graph community of 137 function(s) from func_00166AF0
-func_0019BDD0	unit_00199770	function	asm	gameplay/game_00.014	call-graph community of 137 function(s) from func_00166AF0
+func_0019BDD0	unit_00199770	function	matched	gameplay/game_00.014	call-graph community of 137 function(s) from func_00166AF0
 func_0019BF90	unit_00199770	function	asm	gameplay/game_00.014	call-graph community of 137 function(s) from func_00166AF0
 func_0019C1D0	unit_00199770	function	matched	gameplay/game_00.014	call-graph community of 137 function(s) from func_00166AF0
 func_0019C1E0	unit_00199770	function	matched	gameplay/game_00.014	call-graph community of 137 function(s) from func_00166AF0
@@ -3020,7 +3020,7 @@ func_001A0E20	unit_0019E550	function	asm	gameplay/game_00.016	call-graph communi
 func_001A0F00	unit_0019E550	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001A1270	unit_0019E550	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001A1350	unit_0019E550	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
-func_001A17A0	unit_0019E550	function	asm	platform	EE hardware: timers
+func_001A17A0	unit_0019E550	function	wip	platform	EE hardware: timers
 func_001A1980	unit_0019E550	function	asm	platform	EE hardware: timers
 func_001A1B80	unit_0019E550	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001A1D70	unit_0019E550	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
@@ -3057,7 +3057,7 @@ func_001A3840	unit_001A36A0	function	asm	gameplay/game_00.016	call-graph communi
 func_001A3890	unit_001A36A0	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001A39D0	unit_001A36A0	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001A3A80	unit_001A36A0	function	matched	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
-func_001A3A90	unit_001A36A0	function	wip	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
+func_001A3A90	unit_001A36A0	function	matched	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001A3AD0	unit_001A3AD0	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001A3BA0	unit_001A3AD0	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001A3C10	unit_001A3AD0	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
@@ -3132,7 +3132,7 @@ func_001AA790	unit_001AA740	function	asm	gameplay/game_00.008	call-graph communi
 func_001AA880	unit_001AA740	function	matched	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001AA8A0	unit_001AA740	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001AB030	unit_001AA740	function	matched	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
-func_001AB040	unit_001AA740	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
+func_001AB040	unit_001AA740	function	matched	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001AB1D0	unit_001AA740	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001AB200	unit_001AA740	function	wip	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001AB230	unit_001AA740	function	asm	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
@@ -3162,12 +3162,12 @@ func_001AD0E0	unit_001AB610	function	matched	gameplay/game_00.016	call-graph com
 func_001AD1D0	unit_001AB610	function	wip	core	utility called by 18 functions
 func_001AD250	unit_001AB610	function	matched	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001AD2A0	unit_001AB610	function	matched	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
-func_001AD300	unit_001AD300	function	wip	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
+func_001AD300	unit_001AD300	function	matched	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001AD3D0	unit_001AD300	function	matched	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001AD460	unit_001AD300	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001AD4C0	unit_001AD300	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001AD5F0	unit_001AD300	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
-func_001AD9C0	unit_001AD300	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
+func_001AD9C0	unit_001AD300	function	wip	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001ADBB0	unit_001AD300	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001ADCD0	unit_001AD300	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001ADFE0	unit_001AD300	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
@@ -3194,7 +3194,7 @@ func_001AF3F0	unit_001AE7A0	function	asm	gameplay/game_00.016	call-graph communi
 func_001AF600	unit_001AF600	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001AF6D0	unit_001AF600	function	asm	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
 func_001AF760	unit_001AF600	function	asm	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
-func_001AF7B0	unit_001AF600	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
+func_001AF7B0	unit_001AF600	function	matched	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001AF7F0	unit_001AF600	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001AF910	unit_001AF600	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001AFA90	unit_001AF600	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
@@ -3234,7 +3234,7 @@ func_001B2E60	unit_001B1360	function	matched	gameplay/game_00.014	call-graph com
 func_001B2EF0	unit_001B1360	function	asm	gameplay/game_00.014	call-graph community of 137 function(s) from func_00166AF0
 func_001B2FA0	unit_001B1360	function	asm	gameplay/game_00.014	call-graph community of 137 function(s) from func_00166AF0
 func_001B30E0	unit_001B1360	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
-func_001B3230	unit_001B3230	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
+func_001B3230	unit_001B3230	function	wip	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001B3410	unit_001B3230	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001B35C0	unit_001B3230	function	matched	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001B35E0	unit_001B3230	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
@@ -3407,7 +3407,7 @@ func_001C07F0	unit_001BF730	function	matched	gameplay/game_00.018	call-graph com
 func_001C0810	unit_001C0810	function	asm	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
 func_001C0840	unit_001C0810	function	asm	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
 func_001C09C0	unit_001C0810	function	asm	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
-func_001C0A60	unit_001C0810	function	asm	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
+func_001C0A60	unit_001C0810	function	matched	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
 func_001C0B80	unit_001C0810	function	asm	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
 func_001C0F00	unit_001C0810	function	asm	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
 func_001C0FA0	unit_001C0810	function	asm	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
@@ -3431,7 +3431,7 @@ func_001C1F90	unit_001C12C0	function	asm	gameplay/game_00.018	call-graph communi
 func_001C2060	unit_001C12C0	function	asm	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
 func_001C2290	unit_001C12C0	function	asm	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
 func_001C24A0	unit_001C12C0	function	asm	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
-func_001C2530	unit_001C12C0	function	asm	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
+func_001C2530	unit_001C12C0	function	wip	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
 func_001C2640	unit_001C12C0	function	asm	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
 func_001C2900	unit_001C12C0	function	wip	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
 func_001C2A10	unit_001C12C0	function	asm	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
@@ -3457,7 +3457,7 @@ func_001C3B20	unit_001C3100	function	asm	gameplay/game_00.018	call-graph communi
 func_001C4080	unit_001C3100	function	asm	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
 func_001C41A0	unit_001C3100	function	matched	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
 func_001C42B0	unit_001C3100	function	matched	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
-func_001C42D0	unit_001C3100	function	asm	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
+func_001C42D0	unit_001C3100	function	matched	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
 func_001C43F0	unit_001C3100	function	matched	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
 func_001C4420	unit_001C3100	function	matched	core	utility called by 19 functions
 func_001C4430	unit_001C4430	function	matched	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
@@ -3609,11 +3609,11 @@ func_001CDF50	unit_001CDE30	function	matched	gameplay/game_00.002	call-graph com
 func_001CDF70	unit_001CDE30	function	matched	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
 func_001CDFB0	unit_001CDE30	function	asm	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
 func_001CE060	unit_001CDE30	function	asm	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
-func_001CE0F0	unit_001CDE30	function	asm	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
+func_001CE0F0	unit_001CDE30	function	wip	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
 func_001CE2B0	unit_001CDE30	function	asm	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
 func_001CE510	unit_001CDE30	function	matched	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
 func_001CE520	unit_001CDE30	function	asm	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
-func_001CE770	unit_001CDE30	function	asm	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
+func_001CE770	unit_001CDE30	function	wip	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
 func_001CE8E0	unit_001CDE30	function	asm	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
 func_001CE990	unit_001CE990	function	asm	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
 func_001CEA80	unit_001CE990	function	asm	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
@@ -3706,7 +3706,7 @@ func_001DE4D0	unit_001DCFB0	function	asm	gameplay/game_00.008	call-graph communi
 func_001DE6D0	unit_001DCFB0	function	asm	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
 func_001DEA20	unit_001DCFB0	function	asm	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
 func_001DEAB0	unit_001DCFB0	function	matched	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
-func_001DEAD0	unit_001DCFB0	function	asm	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
+func_001DEAD0	unit_001DCFB0	function	wip	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
 func_001DEC60	unit_001DCFB0	function	matched	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
 func_001DEC70	unit_001DCFB0	function	matched	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
 func_001DEC80	unit_001DCFB0	function	matched	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
@@ -3714,7 +3714,7 @@ func_001DEC90	unit_001DCFB0	function	matched	gameplay/game_00.008	call-graph com
 func_001DECA0	unit_001DCFB0	function	asm	platform	EE hardware: timers
 func_001DEED0	unit_001DCFB0	function	asm	platform	EE hardware: timers
 func_001DF180	unit_001DCFB0	function	asm	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
-func_001DF210	unit_001DCFB0	function	asm	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
+func_001DF210	unit_001DCFB0	function	wip	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
 func_001DF390	unit_001DCFB0	function	asm	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
 func_001DF420	unit_001DCFB0	function	asm	platform	EE hardware: timers
 func_001DFBE0	unit_001DCFB0	function	asm	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
@@ -3729,7 +3729,7 @@ func_001E08E0	unit_001DFC70	function	matched	gameplay/game_00.008	call-graph com
 func_001E08F0	unit_001DFC70	function	matched	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
 func_001E0900	unit_001DFC70	function	asm	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
 func_001E0C10	unit_001DFC70	function	asm	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
-func_001E0C70	unit_001DFC70	function	asm	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
+func_001E0C70	unit_001DFC70	function	wip	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
 func_001E0E00	unit_001DFC70	function	asm	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
 func_001E1220	unit_001DFC70	function	matched	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
 func_001E1230	unit_001DFC70	function	matched	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
@@ -3745,11 +3745,11 @@ func_001E17B0	unit_001E1270	function	asm	gameplay/game_00.008	call-graph communi
 func_001E1920	unit_001E1270	function	asm	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
 func_001E1AD0	unit_001E1270	function	asm	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
 func_001E2800	unit_001E1270	function	matched	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
-func_001E2820	unit_001E1270	function	asm	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
+func_001E2820	unit_001E1270	function	matched	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
 func_001E2860	unit_001E1270	function	matched	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
 func_001E2890	unit_001E1270	function	asm	platform	EE hardware: timers
 func_001E2C90	unit_001E1270	function	asm	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
-func_001E2CF0	unit_001E1270	function	asm	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
+func_001E2CF0	unit_001E1270	function	wip	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
 func_001E2EA0	unit_001E1270	function	matched	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
 func_001E2EB0	unit_001E1270	function	matched	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
 func_001E2EC0	unit_001E1270	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
@@ -3774,7 +3774,7 @@ func_001E3A10	unit_001E3A10	function	wip	gameplay/game_00.009	call-graph communi
 func_001E3AA0	unit_001E3A10	function	wip	gameplay/game_00.009	call-graph community of 107 function(s) from func_0015BCA0
 func_001E3B30	unit_001E3A10	function	matched	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
 func_001E3C20	unit_001E3A10	function	wip	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
-func_001E3CA0	unit_001E3A10	function	asm	gameplay/game_00.009	call-graph community of 107 function(s) from func_0015BCA0
+func_001E3CA0	unit_001E3A10	function	matched	gameplay/game_00.009	call-graph community of 107 function(s) from func_0015BCA0
 func_001E3CC0	unit_001E3A10	function	matched	gameplay/game_00.009	call-graph community of 107 function(s) from func_0015BCA0
 func_001E3D00	unit_001E3A10	function	matched	gameplay/game_00.009	call-graph community of 107 function(s) from func_0015BCA0
 func_001E3D20	unit_001E3A10	function	asm	gameplay/game_00.009	call-graph community of 107 function(s) from func_0015BCA0
@@ -3804,7 +3804,7 @@ func_001E4E20	unit_001E3A10	function	asm	gameplay/game_00.009	call-graph communi
 func_001E4E60	unit_001E3A10	function	asm	gameplay/game_00.009	call-graph community of 107 function(s) from func_0015BCA0
 func_001E4EC0	unit_001E3A10	function	asm	gameplay/game_00.009	call-graph community of 107 function(s) from func_0015BCA0
 func_001E4FA0	unit_001E3A10	function	matched	gameplay/game_00.009	call-graph community of 107 function(s) from func_0015BCA0
-func_001E4FE0	unit_001E3A10	function	asm	gameplay/game_00.009	call-graph community of 107 function(s) from func_0015BCA0
+func_001E4FE0	unit_001E3A10	function	wip	gameplay/game_00.009	call-graph community of 107 function(s) from func_0015BCA0
 func_001E50E0	unit_001E3A10	function	matched	gameplay/game_00.009	call-graph community of 107 function(s) from func_0015BCA0
 func_001E51D0	unit_001E51D0	function	asm	gameplay/game_00.009	call-graph community of 107 function(s) from func_0015BCA0
 func_001E5230	unit_001E51D0	function	asm	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
@@ -3824,7 +3824,7 @@ func_001E57F0	unit_001E51D0	function	asm	gameplay/game_00.004	call-graph communi
 func_001E5860	unit_001E51D0	function	matched	platform	calls fptodp
 func_001E5C90	unit_001E51D0	function	asm	gameplay/game_00.023	call-graph community of 134 function(s) from func_001E5C90
 func_001E5EF0	unit_001E51D0	function	asm	gameplay/game_00.023	call-graph community of 134 function(s) from func_001E5C90
-func_001E60E0	unit_001E51D0	function	asm	gameplay/game_00.014	call-graph community of 137 function(s) from func_00166AF0
+func_001E60E0	unit_001E51D0	function	matched	gameplay/game_00.014	call-graph community of 137 function(s) from func_00166AF0
 func_001E6240	unit_001E51D0	function	matched	gameplay/game_00.014	call-graph community of 137 function(s) from func_00166AF0
 func_001E6310	unit_001E51D0	function	asm	gameplay/game_00.014	call-graph community of 137 function(s) from func_00166AF0
 func_001E6380	unit_001E6380	function	matched	gameplay/game_00.014	call-graph community of 137 function(s) from func_00166AF0
@@ -3954,7 +3954,7 @@ func_001F0F00	unit_001F0DD0	function	asm	gameplay/game_00.006	call-graph communi
 func_001F0F50	unit_001F0DD0	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_001F0FA0	unit_001F0DD0	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_001F0FF0	unit_001F0DD0	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
-func_001F1300	unit_001F0DD0	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
+func_001F1300	unit_001F0DD0	function	wip	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_001F14B0	unit_001F0DD0	function	matched	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_001F1510	unit_001F0DD0	function	matched	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_001F1520	unit_001F0DD0	function	matched	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
@@ -4002,7 +4002,7 @@ func_001F36E0	unit_001F3630	function	wip	gameplay/game_00.017	call-graph communi
 func_001F37D0	unit_001F3630	function	asm	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_001F3830	unit_001F3630	function	matched	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_001F3850	unit_001F3630	function	asm	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
-func_001F39D0	unit_001F3630	function	asm	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
+func_001F39D0	unit_001F3630	function	wip	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_001F3B60	unit_001F3630	function	asm	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_001F3C70	unit_001F3630	function	asm	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_001F4070	unit_001F3630	function	asm	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
@@ -4154,7 +4154,7 @@ func_00200690	unit_001FE660	function	asm	gameplay/game_00.007	call-graph communi
 func_002009A0	unit_001FE660	function	asm	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
 func_00200A90	unit_001FE660	function	asm	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
 func_00200BB0	unit_001FE660	function	asm	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
-func_00200DF0	unit_001FE660	function	asm	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
+func_00200DF0	unit_001FE660	function	matched	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
 func_00200E30	unit_001FE660	function	matched	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
 func_00200E40	unit_00200E40	function	matched	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
 func_00200E50	unit_00200E40	function	matched	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
@@ -4190,7 +4190,7 @@ func_002024C0	unit_00201620	function	matched	gameplay/game_00.028	call-graph com
 func_002024D0	unit_00201620	function	asm	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
 func_00202860	unit_00201620	function	matched	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
 func_00202880	unit_00202880	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
-func_00202A80	unit_00202880	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
+func_00202A80	unit_00202880	function	matched	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_00202AB0	unit_00202880	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_00202B00	unit_00202880	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_00202C80	unit_00202880	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
@@ -4214,18 +4214,18 @@ func_00203A40	unit_00202880	function	asm	gameplay/game_00.017	call-graph communi
 func_00203AB0	unit_00202880	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_00203B00	unit_00202880	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_00203BD0	unit_00202880	function	wip	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
-func_00203C20	unit_00202880	function	asm	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
+func_00203C20	unit_00202880	function	wip	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_00203DB0	unit_00202880	function	wip	gameplay/game_00.026	call-graph community of 172 function(s) from func_001F88C0
 func_00203DE0	unit_00202880	function	matched	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_00203E30	unit_00202880	function	asm	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_00203EA0	unit_00202880	function	asm	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_00203F50	unit_00202880	function	wip	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_00204010	unit_00204010	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
-func_00204090	unit_00204010	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
+func_00204090	unit_00204010	function	matched	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_00204270	unit_00204010	function	wip	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
-func_002043E0	unit_00204010	function	asm	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
+func_002043E0	unit_00204010	function	wip	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
 func_00204420	unit_00204010	function	wip	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
-func_002044A0	unit_00204010	function	asm	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
+func_002044A0	unit_00204010	function	wip	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
 func_00204650	unit_00204010	function	wip	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
 func_00204730	unit_00204010	function	matched	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
 func_00204740	unit_00204010	function	asm	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
@@ -4282,7 +4282,7 @@ func_00206300	unit_002062B0	function	wip	platform	calls func_00353FD0, sceCdDisk
 func_00206430	unit_002062B0	function	wip	platform	calls func_00353FD0, sceCdDiskReady, sceCdGetError …
 func_00206550	unit_002062B0	function	asm	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
 func_00206600	unit_002062B0	function	asm	platform	calls FlushCache, func_00353FD0, sceCdDiskReady …
-func_00206870	unit_002062B0	function	asm	platform	calls sceCdDiskReady, sceCdGetError, sceCdRead …
+func_00206870	unit_002062B0	function	matched	platform	calls sceCdDiskReady, sceCdGetError, sceCdRead …
 func_00206A10	unit_002062B0	function	matched	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
 func_00206A80	unit_002062B0	function	asm	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
 func_00206AA0	unit_002062B0	function	asm	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
@@ -4420,7 +4420,7 @@ func_0020BF30	unit_0020BC70	function	matched	gameplay/game_00.021	call-graph com
 func_0020BF40	unit_0020BC70	function	asm	core	utility called by 25 functions
 func_0020C060	unit_0020BC70	function	asm	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
 func_0020C1B0	unit_0020BC70	function	asm	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
-func_0020C340	unit_0020BC70	function	asm	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
+func_0020C340	unit_0020BC70	function	matched	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
 func_0020C4F0	unit_0020C4F0	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_0020C5C0	unit_0020C4F0	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_0020C680	unit_0020C4F0	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
@@ -4479,7 +4479,7 @@ func_0020EB60	unit_0020EB60	function	asm	gameplay/game_00.007	call-graph communi
 func_0020EBC0	unit_0020EB60	function	matched	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
 func_0020EBD0	unit_0020EB60	function	asm	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
 func_0020EC40	unit_0020EB60	function	asm	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
-func_0020ECB0	unit_0020EB60	function	asm	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
+func_0020ECB0	unit_0020EB60	function	matched	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
 func_0020ECF0	unit_0020EB60	function	asm	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
 func_0020ED50	unit_0020EB60	function	wip	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
 func_0020EDE0	unit_0020EB60	function	asm	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
@@ -4563,7 +4563,7 @@ func_00211810	unit_002116B0	function	asm	gameplay/game_00.021	call-graph communi
 func_002118B0	unit_002116B0	function	asm	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
 func_00211930	unit_002116B0	function	matched	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
 func_00211940	unit_002116B0	function	asm	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
-func_002119D0	unit_002116B0	function	asm	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
+func_002119D0	unit_002116B0	function	wip	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
 func_00211BB0	unit_002116B0	function	asm	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
 func_00211E00	unit_002116B0	function	asm	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
 func_00211F60	unit_002116B0	function	matched	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
@@ -4571,7 +4571,7 @@ func_00211FA0	unit_002116B0	function	asm	gameplay/game_00.021	call-graph communi
 func_00211FF0	unit_002116B0	function	asm	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
 func_00212460	unit_002116B0	function	matched	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
 func_00212490	unit_00212490	function	matched	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
-func_002124C0	unit_00212490	function	asm	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
+func_002124C0	unit_00212490	function	wip	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
 func_002126A0	unit_00212490	function	wip	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
 func_00212740	unit_00212490	function	asm	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
 func_002129B0	unit_00212490	function	asm	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
@@ -4599,7 +4599,7 @@ func_00214180	unit_00213210	function	asm	gameplay/game_00.021	call-graph communi
 func_002146B0	unit_00213210	function	matched	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
 func_002147F0	unit_00213210	function	asm	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
 func_00215180	unit_00213210	function	asm	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
-func_00215950	unit_00213210	function	asm	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
+func_00215950	unit_00213210	function	wip	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
 func_00215AF0	unit_00213210	function	matched	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
 func_00215C10	unit_00213210	function	asm	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
 func_00215F80	unit_00213210	function	asm	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
@@ -4663,7 +4663,7 @@ func_0021A840	unit_0021A0D0	function	matched	gameplay/game_00.027	call-graph com
 func_0021A860	unit_0021A0D0	function	matched	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_0021A870	unit_0021A0D0	function	matched	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_0021A890	unit_0021A0D0	function	asm	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
-func_0021AF20	unit_0021A0D0	function	asm	gameplay/game_00.009	call-graph community of 107 function(s) from func_0015BCA0
+func_0021AF20	unit_0021A0D0	function	matched	gameplay/game_00.009	call-graph community of 107 function(s) from func_0015BCA0
 func_0021B0D0	unit_0021A0D0	function	asm	gameplay/game_00.019	call-graph community of 136 function(s) from func_0017A1B0
 func_0021B140	unit_0021A0D0	function	asm	gameplay/game_00.019	call-graph community of 136 function(s) from func_0017A1B0
 func_0021B440	unit_0021A0D0	function	asm	gameplay/game_00.019	call-graph community of 136 function(s) from func_0017A1B0
@@ -4677,7 +4677,7 @@ func_0021BFD0	unit_0021A0D0	function	matched	gameplay/game_00.024	call-graph com
 func_0021C0E0	unit_0021A0D0	function	asm	gameplay/game_00.024	call-graph community of 92 function(s) from func_001F4160
 func_0021C190	unit_0021A0D0	function	wip	gameplay/game_00.024	call-graph community of 92 function(s) from func_001F4160
 func_0021C240	unit_0021A0D0	function	wip	gameplay/game_00.024	call-graph community of 92 function(s) from func_001F4160
-func_0021C360	unit_0021A0D0	function	asm	gameplay/game_00.024	call-graph community of 92 function(s) from func_001F4160
+func_0021C360	unit_0021A0D0	function	wip	gameplay/game_00.024	call-graph community of 92 function(s) from func_001F4160
 func_0021C4F0	unit_0021A0D0	function	asm	gameplay/game_00.024	call-graph community of 92 function(s) from func_001F4160
 func_0021C530	unit_0021A0D0	function	asm	gameplay/game_00.009	call-graph community of 107 function(s) from func_0015BCA0
 func_0021C920	unit_0021A0D0	function	asm	gameplay/game_00.024	call-graph community of 92 function(s) from func_001F4160
@@ -4687,7 +4687,7 @@ func_0021CD70	unit_0021CD10	function	matched	platform	calls sceSdRemote
 func_0021CDC0	unit_0021CD10	function	matched	platform	calls FlushCache, sceSifDmaStat, _sceSifSetDma
 func_0021CE40	unit_0021CD10	function	asm	gameplay/game_00.024	call-graph community of 92 function(s) from func_001F4160
 func_0021CF90	unit_0021CD10	function	asm	gameplay/game_00.024	call-graph community of 92 function(s) from func_001F4160
-func_0021D030	unit_0021CD10	function	asm	platform	calls sceSdRemote
+func_0021D030	unit_0021CD10	function	wip	platform	calls sceSdRemote
 func_0021D1C0	unit_0021CD10	function	matched	gameplay/game_00.031	call-graph community of 56 function(s) from func_0021D1C0
 func_0021D1E0	unit_0021CD10	function	matched	gameplay/game_00.031	call-graph community of 56 function(s) from func_0021D1C0
 func_0021D260	unit_0021CD10	function	asm	gameplay/game_00.031	call-graph community of 56 function(s) from func_0021D1C0
@@ -4700,7 +4700,7 @@ func_0021D510	unit_0021CD10	function	matched	platform	calls sceSifAllocSysMemory
 func_0021D5E0	unit_0021CD10	function	matched	gameplay/game_00.031	call-graph community of 56 function(s) from func_0021D1C0
 func_0021D5F0	unit_0021CD10	function	matched	platform	calls sceGsSyncV; renamed from func_0021D5F0, waitNextField
 func_0021D640	unit_0021CD10	function	asm	gameplay/game_00.031	call-graph community of 56 function(s) from func_0021D1C0
-func_0021D690	unit_0021D690	function	asm	platform	calls func_00102520, func_0013E810, sceDmaGetChan …
+func_0021D690	unit_0021D690	function	wip	platform	calls func_00102520, func_0013E810, sceDmaGetChan …
 func_0021D870	unit_0021D690	function	matched	gameplay/game_00.031	call-graph community of 56 function(s) from func_0021D1C0
 func_0021D890	unit_0021D690	function	asm	platform	calls func_0011D388, func_0011D398, func_0011D3A8 …
 func_0021DC70	unit_0021D690	function	matched	gameplay/game_00.031	call-graph community of 56 function(s) from func_0021D1C0
@@ -4739,7 +4739,7 @@ func_0021F4D0	unit_0021F160	function	matched	platform	calls sceClose, sceLseek, 
 func_0021F570	unit_0021F160	function	asm	gameplay/game_00.031	call-graph community of 56 function(s) from func_0021D1C0
 func_0021F5E0	unit_0021F160	function	asm	gameplay/game_00.031	call-graph community of 56 function(s) from func_0021D1C0
 func_0021F650	unit_0021F160	function	wip	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
-func_0021F780	unit_0021F160	function	asm	platform	calls SignalSema, WaitSema
+func_0021F780	unit_0021F160	function	wip	platform	calls SignalSema, WaitSema
 func_0021F940	unit_0021F160	function	matched	gameplay/game_00.031	call-graph community of 56 function(s) from func_0021D1C0
 func_0021F960	unit_0021F160	function	matched	platform	calls SignalSema, WaitSema
 func_0021FA90	unit_0021F160	function	asm	gameplay/game_00.031	call-graph community of 56 function(s) from func_0021D1C0
@@ -4772,7 +4772,7 @@ func_00220DE0	unit_00220790	function	asm	gameplay/game_00.031	call-graph communi
 func_00220E20	unit_00220790	function	matched	gameplay/game_00.031	call-graph community of 56 function(s) from func_0021D1C0
 func_00220E30	unit_00220790	function	matched	gameplay/game_00.031	call-graph community of 56 function(s) from func_0021D1C0
 func_00220E40	unit_00220790	function	matched	gameplay/game_00.031	call-graph community of 56 function(s) from func_0021D1C0
-func_00220E50	unit_00220790	function	asm	platform	calls func_00117230
+func_00220E50	unit_00220790	function	matched	platform	calls func_00117230
 func_00220E90	unit_00220790	function	matched	gameplay/game_00.031	call-graph community of 56 function(s) from func_0021D1C0
 func_00220EA0	unit_00220790	function	matched	gameplay/game_00.031	call-graph community of 56 function(s) from func_0021D1C0
 func_00220EB0	unit_00220790	function	matched	gameplay/game_00.031	call-graph community of 56 function(s) from func_0021D1C0
@@ -4799,7 +4799,7 @@ func_002223E0	unit_00220FE0	function	asm	gameplay/game_00.017	call-graph communi
 func_00222610	unit_00220FE0	function	asm	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_00222930	unit_00222930	function	wip	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_002229D0	unit_00222930	function	asm	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
-func_00222A70	unit_00222930	function	asm	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
+func_00222A70	unit_00222930	function	matched	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_00222B80	unit_00222930	function	asm	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_00222C50	unit_00222930	function	asm	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_00223130	unit_00222930	function	asm	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
@@ -4847,7 +4847,7 @@ sys_bp	unit_002240B0	function	wip	gameplay/game_00.014	call-graph community of 1
 func_00229800	unit_002240B0	function	asm	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
 func_0022D3C0	unit_0022D3C0	function	asm	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
 func_0022E120	unit_0022D3C0	function	asm	gameplay/game_00.024	call-graph community of 92 function(s) from func_001F4160
-func_0022E250	unit_0022D3C0	function	asm	gameplay/game_00.024	call-graph community of 92 function(s) from func_001F4160
+func_0022E250	unit_0022D3C0	function	matched	gameplay/game_00.024	call-graph community of 92 function(s) from func_001F4160
 func_0022E400	unit_0022D3C0	function	asm	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
 func_0022EE30	unit_0022D3C0	function	asm	gameplay/game_00.008	call-graph community of 217 function(s) from func_0015BC80
 func_0022F930	unit_0022D3C0	function	asm	gameplay/game_00.024	call-graph community of 92 function(s) from func_001F4160
@@ -4859,7 +4859,7 @@ func_0022FD00	unit_0022FD00	function	asm	gameplay/game_00.006	call-graph communi
 func_0022FDC0	unit_0022FD00	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_0022FE80	unit_0022FD00	function	asm	gameplay/game_00.012	call-graph community of 140 function(s) from func_0015D010
 func_0022FEE0	unit_0022FD00	function	asm	gameplay/game_00.014	call-graph community of 137 function(s) from func_00166AF0
-func_0022FF80	unit_0022FD00	function	asm	core	utility called by 34 functions
+func_0022FF80	unit_0022FD00	function	matched	core	utility called by 34 functions
 func_0022FFB0	unit_0022FD00	function	asm	gameplay/game_00.014	call-graph community of 137 function(s) from func_00166AF0
 func_00230060	unit_0022FD00	function	asm	gameplay/game_00.014	call-graph community of 137 function(s) from func_00166AF0
 func_00230150	unit_0022FD00	function	asm	gameplay/game_00.014	call-graph community of 137 function(s) from func_00166AF0
@@ -4978,7 +4978,7 @@ func_00252330	unit_00251710	function	matched	gameplay/game_00.009	call-graph com
 func_00252340	unit_00251710	function	matched	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_00252370	unit_00251710	function	asm	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_002523B0	unit_00251710	function	matched	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
-func_002523D0	unit_00251710	function	asm	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
+func_002523D0	unit_00251710	function	matched	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_00252410	unit_00251710	function	asm	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_00252470	unit_00252470	function	asm	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
 func_002526C0	unit_00252470	function	asm	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
@@ -4989,10 +4989,10 @@ func_00252A20	unit_00252470	function	wip	gameplay/game_00.003	call-graph communi
 func_00252A60	unit_00252470	function	wip	platform	calls PollSema, SignalSema, WaitSema
 func_00252AD0	unit_00252470	function	wip	platform	calls SignalSema, WaitSema, sceSifCallRpc
 func_00252B70	unit_00252470	function	matched	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
-func_00252B80	unit_00252470	function	asm	platform	calls PollSema, SignalSema, WaitSema …
+func_00252B80	unit_00252470	function	matched	platform	calls PollSema, SignalSema, WaitSema …
 func_00252D10	unit_00252470	function	asm	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
 func_00252D80	unit_00252470	function	asm	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
-func_00252EC0	unit_00252470	function	asm	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
+func_00252EC0	unit_00252470	function	wip	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
 func_00252FD0	unit_00252470	function	asm	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
 func_00253080	unit_00252470	function	asm	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
 func_002530F0	unit_002530F0	function	asm	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
@@ -5011,7 +5011,7 @@ func_002537F0	unit_002530F0	function	asm	gameplay/game_00.003	call-graph communi
 func_00253870	unit_002530F0	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_00253900	unit_002530F0	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_00253B70	unit_00253B70	function	asm	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
-func_00253BD0	unit_00253B70	function	wip	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
+func_00253BD0	unit_00253B70	function	matched	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
 func_00253C00	unit_00253B70	function	asm	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
 func_00253C70	unit_00253B70	function	asm	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
 func_00253DB0	unit_00253B70	function	asm	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
@@ -5036,7 +5036,7 @@ func_00254A20	unit_002544C0	function	asm	gameplay/game_00.003	call-graph communi
 func_00254AC0	unit_002544C0	function	wip	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
 func_00254B30	unit_002544C0	function	matched	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
 func_00254B90	unit_002544C0	function	matched	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
-func_00254C20	unit_002544C0	function	asm	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
+func_00254C20	unit_002544C0	function	matched	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
 func_00254CA0	unit_002544C0	function	matched	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
 func_00254CB0	unit_002544C0	function	asm	platform	calls func_001468B8
 func_00254D30	unit_00254D30	function	asm	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
@@ -5090,7 +5090,7 @@ func_0025BC20	unit_00259200	function	asm	gameplay/game_00.011	call-graph communi
 func_0025BFC0	unit_00259200	function	asm	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
 func_0025C070	unit_00259200	function	asm	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
 func_0025C560	unit_00259200	function	asm	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
-func_0025C5E0	unit_00259200	function	asm	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
+func_0025C5E0	unit_00259200	function	wip	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
 func_0025C778	unit_0025C778	function	asm	gameplay/game_00.026	call-graph community of 172 function(s) from func_001F88C0
 func_0025C918	unit_0025C778	function	asm	gameplay/game_00.026	call-graph community of 172 function(s) from func_001F88C0
 func_0025CBC8	unit_0025C778	function	asm	gameplay/game_00.026	call-graph community of 172 function(s) from func_001F88C0
@@ -5149,7 +5149,7 @@ func_00265558	unit_00265558	function	asm	gameplay/game_00.028	call-graph communi
 func_002657E0	unit_002657E0	function	asm	gameplay/game_00.028	call-graph community of 39 function(s) from func_00202470
 func_00265920	unit_002657E0	function	asm	gameplay/game_00.028	call-graph community of 39 function(s) from func_00202470
 func_00265A40	unit_002657E0	function	asm	gameplay/game_00.028	call-graph community of 39 function(s) from func_00202470
-func_00265B68	unit_00265B68	function	asm	gameplay/game_00.028	call-graph community of 39 function(s) from func_00202470
+func_00265B68	unit_00265B68	function	wip	gameplay/game_00.028	call-graph community of 39 function(s) from func_00202470
 func_00265C78	unit_00265B68	function	asm	gameplay/game_00.028	call-graph community of 39 function(s) from func_00202470
 func_00266148	unit_00265B68	function	asm	gameplay/game_00.028	call-graph community of 39 function(s) from func_00202470
 func_00266608	unit_00265B68	function	asm	gameplay/game_00.028	call-graph community of 39 function(s) from func_00202470
@@ -5242,7 +5242,7 @@ func_0026AD90	unit_0026AD90	function	wip	gameplay/game_00.024	call-graph communi
 func_0026ADB8	unit_0026ADB8	function	wip	gameplay/game_00.024	call-graph community of 92 function(s) from func_001F4160
 func_0026ADE8	unit_0026ADB8	function	wip	gameplay/game_00.024	call-graph community of 92 function(s) from func_001F4160
 func_0026AE48	unit_0026ADB8	function	asm	gameplay/game_00.024	call-graph community of 92 function(s) from func_001F4160
-func_0026AE60	unit_0026AE60	function	asm	gameplay/game_00.024	call-graph community of 92 function(s) from func_001F4160
+func_0026AE60	unit_0026AE60	function	wip	gameplay/game_00.024	call-graph community of 92 function(s) from func_001F4160
 func_0026AF70	unit_0026AE60	function	asm	gameplay/game_00.024	call-graph community of 92 function(s) from func_001F4160
 func_0026B008	unit_0026B008	function	asm	gameplay/game_00.024	call-graph community of 92 function(s) from func_001F4160
 func_0026B060	unit_0026B060	function	matched	gameplay/game_00.024	call-graph community of 92 function(s) from func_001F4160
@@ -5320,7 +5320,7 @@ func_0027D9F0	unit_0027D9F0	function	wip	gameplay/game_00.012	call-graph communi
 func_0027DA18	unit_0027DA18	function	wip	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_0027DA30	unit_0027DA30	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_0027DAF0	unit_0027DA30	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
-func_0027DB90	unit_0027DA30	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
+func_0027DB90	unit_0027DA30	function	wip	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_0027DCA8	unit_0027DCA8	function	wip	platform	EE hardware: timers
 func_0027DF88	unit_0027DCA8	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_0027E3E8	unit_0027DCA8	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
@@ -5424,7 +5424,7 @@ func_0029C130	unit_0029B9B0	function	asm	gameplay/game_00.025	call-graph communi
 func_0029C4B8	unit_0029C4B8	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_0029C608	unit_0029C4B8	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_0029C7A0	unit_0029C7A0	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
-func_0029C940	unit_0029C7A0	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
+func_0029C940	unit_0029C7A0	function	wip	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_0029CA58	unit_0029CA58	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_0029CB90	unit_0029CB90	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_0029CCC8	unit_0029CCC8	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
@@ -5432,7 +5432,7 @@ func_0029CDF0	unit_0029CDF0	function	asm	gameplay/game_00.025	call-graph communi
 func_0029CF20	unit_0029CDF0	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_0029D0B8	unit_0029D0B8	function	wip	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_0029D0D8	unit_0029D0B8	function	asm	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
-func_0029D1A0	unit_0029D1A0	function	asm	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
+func_0029D1A0	unit_0029D1A0	function	wip	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_0029D328	unit_0029D328	function	matched	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_0029D330	unit_0029D330	function	matched	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_0029D338	unit_0029D338	function	matched	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
@@ -5475,7 +5475,7 @@ func_0029E960	unit_0029E720	function	matched	gameplay/game_00.017	call-graph com
 func_0029E968	unit_0029E968	function	matched	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_0029E970	unit_0029E970	function	asm	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_0029EC00	unit_0029E970	function	asm	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
-func_0029ED58	unit_0029ED58	function	asm	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
+func_0029ED58	unit_0029ED58	function	wip	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_0029EF30	unit_0029EF30	function	matched	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_0029EF38	unit_0029EF38	function	wip	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_0029EF88	unit_0029EF38	function	matched	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
@@ -5488,10 +5488,10 @@ func_002A09E0	unit_0029F2D0	function	asm	gameplay/game_00.034	call-graph communi
 func_002A0BE8	unit_002A0BE8	function	asm	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
 func_002A0D00	unit_002A0D00	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_002A1128	unit_002A1128	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
-func_002A1848	unit_002A1128	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
+func_002A1848	unit_002A1128	function	wip	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_002A19E8	unit_002A1128	function	asm	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
 func_002A1B18	unit_002A1128	function	asm	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
-func_002A1D28	unit_002A1128	function	asm	gameplay/game_00.032	call-graph community of 126 function(s) from func_0025EBB8
+func_002A1D28	unit_002A1128	function	wip	gameplay/game_00.032	call-graph community of 126 function(s) from func_0025EBB8
 func_002A1D60	unit_002A1D60	function	asm	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
 func_002A1DD8	unit_002A1DD8	function	asm	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
 func_002A1E40	unit_002A1E40	function	asm	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
@@ -5607,7 +5607,7 @@ func_002A67D0	unit_002A67B0	function	asm	platform	VU0 macro mode: lqc2, sqc2, va
 func_002A6A48	unit_002A6A48	function	matched	gameplay/game_00.035	call-graph community of 60 function(s) from func_002A2460
 func_002A6A50	unit_002A6A50	function	matched	gameplay/game_00.035	call-graph community of 60 function(s) from func_002A2460
 func_002A6A58	unit_002A6A58	function	wip	gameplay/game_00.035	call-graph community of 60 function(s) from func_002A2460
-func_002A6A78	unit_002A6A58	function	asm	gameplay/game_00.035	call-graph community of 60 function(s) from func_002A2460
+func_002A6A78	unit_002A6A58	function	wip	gameplay/game_00.035	call-graph community of 60 function(s) from func_002A2460
 func_002A6C20	unit_002A6C20	function	wip	gameplay/game_00.035	call-graph community of 60 function(s) from func_002A2460
 func_002A6E10	unit_002A6C20	function	asm	gameplay/game_00.035	call-graph community of 60 function(s) from func_002A2460
 func_002A6FA8	unit_002A6FA8	function	asm	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
@@ -5701,14 +5701,14 @@ func_002AA0C8	unit_002AA0C8	function	asm	gameplay/game_00.017	call-graph communi
 func_002AA128	unit_002AA0C8	function	matched	gameplay/game_00.026	call-graph community of 172 function(s) from func_001F88C0
 func_002AA130	unit_002AA130	function	wip	gameplay/game_00.026	call-graph community of 172 function(s) from func_001F88C0
 func_002AA180	unit_002AA130	function	wip	gameplay/game_00.026	call-graph community of 172 function(s) from func_001F88C0
-func_002AA1C8	unit_002AA1C8	function	asm	gameplay/game_00.026	call-graph community of 172 function(s) from func_001F88C0
+func_002AA1C8	unit_002AA1C8	function	wip	gameplay/game_00.026	call-graph community of 172 function(s) from func_001F88C0
 func_002AA388	unit_002AA1C8	function	matched	gameplay/game_00.026	call-graph community of 172 function(s) from func_001F88C0
 func_002AA398	unit_002AA1C8	function	asm	gameplay/game_00.026	call-graph community of 172 function(s) from func_001F88C0
 func_002AA438	unit_002AA1C8	function	matched	gameplay/game_00.026	call-graph community of 172 function(s) from func_001F88C0
 func_002AA440	unit_002AA440	function	matched	gameplay/game_00.026	call-graph community of 172 function(s) from func_001F88C0
 func_002AA448	unit_002AA448	function	wip	gameplay/game_render.001	call-graph community of 50 function(s) from func_002A9D00
 func_002AA480	unit_002AA480	function	wip	gameplay/game_render.001	call-graph community of 50 function(s) from func_002A9D00
-func_002AA4B8	unit_002AA4B8	function	asm	gameplay/game_render.001	call-graph community of 50 function(s) from func_002A9D00
+func_002AA4B8	unit_002AA4B8	function	wip	gameplay/game_render.001	call-graph community of 50 function(s) from func_002A9D00
 func_002AA660	unit_002AA660	function	asm	gameplay/game_render.001	call-graph community of 50 function(s) from func_002A9D00
 func_002AA890	unit_002AA660	function	asm	gameplay/game_render.001	call-graph community of 50 function(s) from func_002A9D00
 func_002AAA70	unit_002AA660	function	asm	gameplay/game_render.001	call-graph community of 50 function(s) from func_002A9D00
@@ -5926,13 +5926,13 @@ func_002B5590	unit_002B53E0	function	asm	gameplay/game_00.025	call-graph communi
 func_002B55D8	unit_002B55D8	function	asm	core	utility called by 17 functions
 func_002B5698	unit_002B55D8	function	matched	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_002B56B0	unit_002B56B0	function	asm	gameplay/game_00.032	call-graph community of 126 function(s) from func_0025EBB8
-func_002B56F8	unit_002B56F8	function	asm	gameplay/game_00.032	call-graph community of 126 function(s) from func_0025EBB8
+func_002B56F8	unit_002B56F8	function	wip	gameplay/game_00.032	call-graph community of 126 function(s) from func_0025EBB8
 func_002B5730	unit_002B5730	function	wip	gameplay/game_00.032	call-graph community of 126 function(s) from func_0025EBB8
 func_002B5758	unit_002B5758	function	wip	gameplay/game_00.032	call-graph community of 126 function(s) from func_0025EBB8
 func_002B5780	unit_002B5780	function	matched	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_002B5788	unit_002B5788	function	wip	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_002B5830	unit_002B5830	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
-func_002B5AD8	unit_002B5AD8	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
+func_002B5AD8	unit_002B5AD8	function	wip	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_002B5C50	unit_002B5C50	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_002B5CD0	unit_002B5C50	function	wip	gameplay/game_00.032	call-graph community of 126 function(s) from func_0025EBB8
 func_002B5D48	unit_002B5D48	function	matched	gameplay/game_00.032	call-graph community of 126 function(s) from func_0025EBB8
@@ -5965,7 +5965,7 @@ func_002B6BD0	unit_002B6BC0	function	asm	gameplay/game_00.025	call-graph communi
 func_002B6C88	unit_002B6C88	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_002B6D08	unit_002B6C88	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_002B6D60	unit_002B6D60	function	asm	gameplay/game_00.032	call-graph community of 126 function(s) from func_0025EBB8
-func_002B6DA8	unit_002B6DA8	function	asm	gameplay/game_00.032	call-graph community of 126 function(s) from func_0025EBB8
+func_002B6DA8	unit_002B6DA8	function	wip	gameplay/game_00.032	call-graph community of 126 function(s) from func_0025EBB8
 func_002B6DE0	unit_002B6DE0	function	matched	gameplay/game_00.032	call-graph community of 126 function(s) from func_0025EBB8
 func_002B6DF0	unit_002B6DE0	function	wip	gameplay/game_00.032	call-graph community of 126 function(s) from func_0025EBB8
 func_002B6E18	unit_002B6E18	function	wip	gameplay/game_00.032	call-graph community of 126 function(s) from func_0025EBB8
@@ -6147,7 +6147,7 @@ func_002C66E0	unit_002C66E0	function	asm	gameplay/game_00.030	call-graph communi
 func_002C6710	unit_002C66E0	function	wip	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
 func_002C6740	unit_002C66E0	function	wip	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
 func_002C6770	unit_002C66E0	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
-func_002C67C0	unit_002C66E0	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
+func_002C67C0	unit_002C66E0	function	wip	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
 func_002C6930	unit_002C66E0	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
 func_002C69D0	unit_002C66E0	function	wip	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
 func_002C69F8	unit_002C69F8	function	wip	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
@@ -6177,7 +6177,7 @@ func_002C9B60	unit_002C9B60	function	asm	gameplay/game_00.030	call-graph communi
 func_002C9B90	unit_002C9B60	function	asm	gameplay/game_00.033	call-graph community of 81 function(s) from func_0026CA68
 func_002C9C10	unit_002C9B60	function	asm	gameplay/game_00.033	call-graph community of 81 function(s) from func_0026CA68
 func_002C9CC8	unit_002C9CC8	function	asm	gameplay/game_00.033	call-graph community of 81 function(s) from func_0026CA68
-func_002CA0D0	unit_002CA0D0	function	asm	gameplay/game_00.033	call-graph community of 81 function(s) from func_0026CA68
+func_002CA0D0	unit_002CA0D0	function	wip	gameplay/game_00.033	call-graph community of 81 function(s) from func_0026CA68
 func_002CA1E8	unit_002CA1E8	function	asm	gameplay/game_00.033	call-graph community of 81 function(s) from func_0026CA68
 func_002CA438	unit_002CA1E8	function	asm	gameplay/game_00.033	call-graph community of 81 function(s) from func_0026CA68
 func_002CA558	unit_002CA1E8	function	asm	gameplay/game_00.033	call-graph community of 81 function(s) from func_0026CA68
@@ -6286,9 +6286,9 @@ func_002D13D0	unit_002D13D0	function	wip	gameplay/game_00.004	call-graph communi
 func_002D1410	unit_002D13D0	function	asm	gameplay/game_00.004	call-graph community of 104 function(s) from func_0015A260
 func_002D17B8	unit_002D17B8	function	asm	gameplay/game_00.004	call-graph community of 104 function(s) from func_0015A260
 func_002D1AB0	unit_002D1AB0	function	asm	gameplay/game_00.004	call-graph community of 104 function(s) from func_0015A260
-func_002D1C70	unit_002D1AB0	function	asm	gameplay/game_00.004	call-graph community of 104 function(s) from func_0015A260
+func_002D1C70	unit_002D1AB0	function	wip	gameplay/game_00.004	call-graph community of 104 function(s) from func_0015A260
 func_002D1E40	unit_002D1AB0	function	wip	gameplay/game_00.004	call-graph community of 104 function(s) from func_0015A260
-func_002D1E60	unit_002D1AB0	function	asm	gameplay/game_00.029	call-graph community of 101 function(s) from func_00205FC0
+func_002D1E60	unit_002D1AB0	function	wip	gameplay/game_00.029	call-graph community of 101 function(s) from func_00205FC0
 func_002D2040	unit_002D1AB0	function	asm	gameplay/game_00.029	call-graph community of 101 function(s) from func_00205FC0
 func_002D22C8	unit_002D22C8	function	asm	gameplay/game_00.029	call-graph community of 101 function(s) from func_00205FC0
 func_002D2368	unit_002D22C8	function	asm	gameplay/game_00.029	call-graph community of 101 function(s) from func_00205FC0
@@ -6297,7 +6297,7 @@ func_002D2538	unit_002D22C8	function	asm	gameplay/game_00.029	call-graph communi
 func_002D2608	unit_002D22C8	function	asm	gameplay/game_00.029	call-graph community of 101 function(s) from func_00205FC0
 func_002D2658	unit_002D22C8	function	asm	gameplay/game_00.004	call-graph community of 104 function(s) from func_0015A260
 func_002D26F0	unit_002D26F0	function	asm	gameplay/game_00.026	call-graph community of 172 function(s) from func_001F88C0
-func_002D2840	unit_002D26F0	function	asm	gameplay/game_00.026	call-graph community of 172 function(s) from func_001F88C0
+func_002D2840	unit_002D26F0	function	wip	gameplay/game_00.026	call-graph community of 172 function(s) from func_001F88C0
 func_002D2950	unit_002D26F0	function	asm	gameplay/game_00.026	call-graph community of 172 function(s) from func_001F88C0
 func_002D3180	unit_002D26F0	function	asm	gameplay/game_00.026	call-graph community of 172 function(s) from func_001F88C0
 func_002D3640	unit_002D26F0	function	asm	gameplay/game_00.026	call-graph community of 172 function(s) from func_001F88C0
@@ -6327,7 +6327,7 @@ func_002D5048	unit_002D4D68	function	asm	gameplay/game_00.026	call-graph communi
 func_002D50D8	unit_002D4D68	function	asm	gameplay/game_00.026	call-graph community of 172 function(s) from func_001F88C0
 func_002D5150	unit_002D5150	function	asm	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
 func_002D5328	unit_002D5328	function	asm	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
-func_002D5398	unit_002D5328	function	asm	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
+func_002D5398	unit_002D5328	function	wip	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
 func_002D5570	unit_002D5570	function	wip	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
 func_002D55C0	unit_002D5570	function	asm	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
 func_002D55E8	unit_002D55E8	function	asm	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
@@ -6341,9 +6341,9 @@ func_002D5790	unit_002D5790	function	matched	gameplay/game_00.034	call-graph com
 func_002D5798	unit_002D5798	function	matched	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
 func_002D57A8	unit_002D5798	function	asm	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
 func_002D5830	unit_002D5830	function	asm	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
-func_002D5988	unit_002D5988	function	asm	platform	calls SignalSema, WaitSema
+func_002D5988	unit_002D5988	function	wip	platform	calls SignalSema, WaitSema
 func_002D5B10	unit_002D5B10	function	wip	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
-func_002D5C50	unit_002D5B10	function	asm	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
+func_002D5C50	unit_002D5B10	function	wip	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
 func_002D5DC0	unit_002D5B10	function	wip	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
 func_002D5EB0	unit_002D5B10	function	asm	platform	calls SignalSema, WaitSema
 func_002D5F08	unit_002D5F08	function	asm	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
@@ -6366,7 +6366,7 @@ func_002D64E8	unit_002D6458	function	wip	gameplay/game_00.034	call-graph communi
 func_002D6590	unit_002D6590	function	wip	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
 func_002D65E8	unit_002D65E8	function	asm	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
 func_002D66A0	unit_002D66A0	function	asm	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
-func_002D6710	unit_002D66A0	function	asm	platform	calls SignalSema, WaitSema
+func_002D6710	unit_002D66A0	function	wip	platform	calls SignalSema, WaitSema
 func_002D68B0	unit_002D66A0	function	matched	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
 func_002D68C0	unit_002D66A0	function	wip	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
 func_002D68E0	unit_002D66A0	function	asm	gameplay/game_00.034	call-graph community of 73 function(s) from func_0029F098
@@ -6382,7 +6382,7 @@ func_002D9110	unit_002D9090	function	wip	gameplay/game_00.019	call-graph communi
 func_002D9190	unit_002D9090	function	asm	gameplay/game_00.019	call-graph community of 136 function(s) from func_0017A1B0
 func_002D9210	unit_002D9090	function	asm	gameplay/game_00.005	call-graph community of 183 function(s) from func_0015A2E0
 func_002D9590	unit_002D9090	function	asm	gameplay/game_00.005	call-graph community of 183 function(s) from func_0015A2E0
-func_002D9A18	unit_002D9A18	function	asm	gameplay/game_00.005	call-graph community of 183 function(s) from func_0015A2E0
+func_002D9A18	unit_002D9A18	function	wip	gameplay/game_00.005	call-graph community of 183 function(s) from func_0015A2E0
 func_002D9BF8	unit_002D9A18	function	asm	gameplay/game_00.019	call-graph community of 136 function(s) from func_0017A1B0
 func_002D9CB8	unit_002D9A18	function	asm	gameplay/game_00.019	call-graph community of 136 function(s) from func_0017A1B0
 func_002D9D18	unit_002D9A18	function	asm	gameplay/game_00.019	call-graph community of 136 function(s) from func_0017A1B0
@@ -6429,14 +6429,14 @@ func_002DB9E8	unit_002DB9E8	function	asm	gameplay/game_00.025	call-graph communi
 func_002DBC08	unit_002DB9E8	function	asm	platform	VU0 macro mode: lqc2, sqc2, vmadday.xyz, vmaddaz.xyz
 func_002DBE90	unit_002DBE90	function	asm	gameplay/game_00.019	call-graph community of 136 function(s) from func_0017A1B0
 func_002DC008	unit_002DC008	function	asm	gameplay/game_00.019	call-graph community of 136 function(s) from func_0017A1B0
-func_002DC248	unit_002DC008	function	asm	gameplay/game_00.019	call-graph community of 136 function(s) from func_0017A1B0
+func_002DC248	unit_002DC008	function	wip	gameplay/game_00.019	call-graph community of 136 function(s) from func_0017A1B0
 func_002DC408	unit_002DC008	function	asm	gameplay/game_00.019	call-graph community of 136 function(s) from func_0017A1B0
 func_002DC438	unit_002DC008	function	asm	gameplay/game_00.019	call-graph community of 136 function(s) from func_0017A1B0
 func_002DC468	unit_002DC008	function	matched	gameplay/game_00.019	call-graph community of 136 function(s) from func_0017A1B0
 func_002DC478	unit_002DC008	function	asm	gameplay/game_00.019	call-graph community of 136 function(s) from func_0017A1B0
 func_002DC4B0	unit_002DC4B0	function	asm	gameplay/game_00.019	call-graph community of 136 function(s) from func_0017A1B0
 func_002DC540	unit_002DC4B0	function	wip	platform	VU0 macro mode: lqc2, sqc2, vmadday.xyz, vmaddaz.xyz
-func_002DC5C0	unit_002DC4B0	function	asm	platform	VU0 macro mode: lqc2, sqc2, vmadday.xyz, vmaddaz.xyz
+func_002DC5C0	unit_002DC4B0	function	wip	platform	VU0 macro mode: lqc2, sqc2, vmadday.xyz, vmaddaz.xyz
 func_002DC780	unit_002DC4B0	function	wip	gameplay/game_00.019	call-graph community of 136 function(s) from func_0017A1B0
 func_002DC7A0	unit_002DC4B0	function	wip	gameplay/game_00.019	call-graph community of 136 function(s) from func_0017A1B0
 func_002DC898	unit_002DC898	function	wip	gameplay/game_00.019	call-graph community of 136 function(s) from func_0017A1B0
@@ -6567,7 +6567,7 @@ func_002E2228	unit_002E2128	function	asm	gameplay/game_00.025	call-graph communi
 func_002E22D0	unit_002E22D0	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_002E25C0	unit_002E22D0	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_002E2910	unit_002E22D0	function	matched	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
-func_002E2918	unit_002E2918	function	asm	gameplay/game_00.032	call-graph community of 126 function(s) from func_0025EBB8
+func_002E2918	unit_002E2918	function	wip	gameplay/game_00.032	call-graph community of 126 function(s) from func_0025EBB8
 func_002E2950	unit_002E2950	function	wip	gameplay/game_00.032	call-graph community of 126 function(s) from func_0025EBB8
 func_002E2978	unit_002E2978	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_002E2A70	unit_002E2A70	function	wip	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
@@ -6824,10 +6824,10 @@ func_002F0C68	unit_002F0C68	function	asm	gameplay/game_00.023	call-graph communi
 func_002F0E88	unit_002F0C68	function	asm	gameplay/game_00.023	call-graph community of 134 function(s) from func_001E5C90
 func_002F10B8	unit_002F0C68	function	asm	gameplay/game_00.023	call-graph community of 134 function(s) from func_001E5C90
 func_002F13F0	unit_002F13F0	function	asm	gameplay/game_00.029	call-graph community of 101 function(s) from func_00205FC0
-func_002F1528	unit_002F1528	function	asm	gameplay/game_00.029	call-graph community of 101 function(s) from func_00205FC0
+func_002F1528	unit_002F1528	function	wip	gameplay/game_00.029	call-graph community of 101 function(s) from func_00205FC0
 func_002F1638	unit_002F1528	function	asm	gameplay/game_00.029	call-graph community of 101 function(s) from func_00205FC0
 func_002F1780	unit_002F1780	function	asm	gameplay/game_00.029	call-graph community of 101 function(s) from func_00205FC0
-func_002F18A8	unit_002F18A8	function	asm	gameplay/game_00.029	call-graph community of 101 function(s) from func_00205FC0
+func_002F18A8	unit_002F18A8	function	wip	gameplay/game_00.029	call-graph community of 101 function(s) from func_00205FC0
 func_002F19A0	unit_002F19A0	function	asm	gameplay/game_00.029	call-graph community of 101 function(s) from func_00205FC0
 func_002F1E80	unit_002F19A0	function	asm	gameplay/game_00.029	call-graph community of 101 function(s) from func_00205FC0
 func_002F20C0	unit_002F19A0	function	asm	gameplay/game_00.029	call-graph community of 101 function(s) from func_00205FC0
@@ -7028,7 +7028,7 @@ func_00310C80	unit_00310BE0	function	wip	gameplay/game_00.023	call-graph communi
 func_00310CA8	unit_00310CA8	function	wip	gameplay/game_00.023	call-graph community of 134 function(s) from func_001E5C90
 func_00310D38	unit_00310CA8	function	wip	gameplay/game_00.023	call-graph community of 134 function(s) from func_001E5C90
 func_00310D48	unit_00310CA8	function	matched	gameplay/game_00.023	call-graph community of 134 function(s) from func_001E5C90
-func_00310D50	unit_00310D50	function	asm	platform	calls SyncDCache
+func_00310D50	unit_00310D50	function	wip	platform	calls SyncDCache
 func_00310F08	unit_00310F08	function	matched	gameplay/game_00.023	call-graph community of 134 function(s) from func_001E5C90
 func_00310F10	unit_00310F10	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
 func_003110A0	unit_00310F10	function	asm	core	utility called by 37 functions
@@ -7078,13 +7078,13 @@ func_00313008	unit_00313008	function	asm	gameplay/game_00.030	call-graph communi
 func_00313080	unit_00313080	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
 func_00313320	unit_00313080	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
 func_00313790	unit_00313080	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
-func_00313B70	unit_00313080	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
+func_00313B70	unit_00313080	function	wip	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
 func_00313D50	unit_00313080	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
 func_00314128	unit_00314128	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
 func_003145A8	unit_00314128	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
 func_00314FD0	unit_00314FD0	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
 func_00315160	unit_00314FD0	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
-func_00315470	unit_00314FD0	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
+func_00315470	unit_00314FD0	function	wip	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
 func_00315610	unit_00314FD0	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
 func_00315CE0	unit_00314FD0	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
 func_00315E50	unit_00314FD0	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
@@ -7113,7 +7113,7 @@ func_00317FB8	unit_00317FB8	function	asm	gameplay/game_00.030	call-graph communi
 func_00318560	unit_00318560	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
 func_00318698	unit_00318698	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
 func_003186E8	unit_00318698	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
-func_00318940	unit_00318940	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
+func_00318940	unit_00318940	function	wip	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
 func_00318AD8	unit_00318AD8	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
 func_00318D20	unit_00318D20	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
 func_00319010	unit_00318D20	function	asm	gameplay/game_00.030	call-graph community of 202 function(s) from func_0020AD60
@@ -7143,7 +7143,7 @@ func_0031BBA0	unit_0031A5C0	function	asm	gameplay/game_00.011	call-graph communi
 func_0031BEB0	unit_0031A5C0	function	asm	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
 func_0031C3E0	unit_0031A5C0	function	asm	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
 func_0031C450	unit_0031A5C0	function	wip	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
-func_0031C5B0	unit_0031A5C0	function	asm	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
+func_0031C5B0	unit_0031A5C0	function	wip	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
 func_0031C720	unit_0031A5C0	function	asm	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
 func_0031C790	unit_0031A5C0	function	matched	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_0031C7C0	unit_0031C7C0	function	asm	gameplay/game_00.009	call-graph community of 107 function(s) from func_0015BCA0
@@ -7316,7 +7316,7 @@ func_00329120	unit_00328B00	function	asm	gameplay/game_00.027	call-graph communi
 func_003291B0	unit_00328B00	function	wip	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_003291D0	unit_00328B00	function	asm	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_00329380	unit_00328B00	function	asm	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
-func_003294D0	unit_00328B00	function	asm	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
+func_003294D0	unit_00328B00	function	wip	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_00329650	unit_00328B00	function	matched	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_00329670	unit_00328B00	function	asm	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_003296C0	unit_00328B00	function	asm	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
@@ -7363,7 +7363,7 @@ func_0032F780	unit_0032D9D0	function	asm	gameplay/game_00.021	call-graph communi
 func_0032FF80	unit_0032D9D0	function	matched	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_0032FF90	unit_0032D9D0	function	asm	platform	calls func_003536B0
 func_003303B0	unit_003303B0	function	asm	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
-func_00330410	unit_003303B0	function	asm	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
+func_00330410	unit_003303B0	function	matched	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
 func_003305B0	unit_003303B0	function	asm	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
 func_00330B80	unit_003303B0	function	asm	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
 func_003313D0	unit_003303B0	function	asm	gameplay/game_00.011	call-graph community of 237 function(s) from func_0015C160
@@ -7670,7 +7670,7 @@ func_0036D830	unit_0036D830	function	wip	gameplay/game_02.001	call-graph communi
 func_0036D890	unit_0036D830	function	asm	gameplay/game_02.001	call-graph community of 113 function(s) from func_0036D830
 func_0036DC20	unit_0036D830	function	asm	core	utility called by 107 functions
 func_0036DFB0	unit_0036D830	function	matched	gameplay/game_00.005	call-graph community of 183 function(s) from func_0015A2E0
-func_0036E020	unit_0036D830	function	asm	gameplay/game_00.005	call-graph community of 183 function(s) from func_0015A2E0
+func_0036E020	unit_0036D830	function	matched	gameplay/game_00.005	call-graph community of 183 function(s) from func_0015A2E0
 func_0036E0A0	unit_0036D830	function	asm	gameplay/game_00.005	call-graph community of 183 function(s) from func_0015A2E0
 func_0036E140	unit_0036D830	function	matched	gameplay/game_00.005	call-graph community of 183 function(s) from func_0015A2E0
 func_0036E1B0	unit_0036D830	function	asm	gameplay/game_00.005	call-graph community of 183 function(s) from func_0015A2E0
@@ -7707,7 +7707,7 @@ func_0036F090	unit_0036F040	function	asm	gameplay/game_02.002	call-graph communi
 func_0036F0F0	unit_0036F040	function	matched	gameplay/game_02.002	call-graph community of 57 function(s) from func_0036EAE0
 func_0036F100	unit_0036F040	function	asm	gameplay/game_02.002	call-graph community of 57 function(s) from func_0036EAE0
 func_0036F230	unit_0036F040	function	asm	gameplay/game_02.002	call-graph community of 57 function(s) from func_0036EAE0
-func_0036F290	unit_0036F040	function	wip	gameplay/game_02.002	call-graph community of 57 function(s) from func_0036EAE0
+func_0036F290	unit_0036F040	function	matched	gameplay/game_02.002	call-graph community of 57 function(s) from func_0036EAE0
 func_0036F2A0	unit_0036F040	function	asm	gameplay/game_02.002	call-graph community of 57 function(s) from func_0036EAE0
 func_0036F3D0	unit_0036F040	function	wip	gameplay/game_02.002	call-graph community of 57 function(s) from func_0036EAE0
 func_0036F430	unit_0036F040	function	matched	gameplay/game_02.002	call-graph community of 57 function(s) from func_0036EAE0
@@ -7951,7 +7951,7 @@ func_00377250	unit_00376F00	function	asm	gameplay/game_model.003	call-graph comm
 func_00377390	unit_00376F00	function	wip	gameplay/game_model.003	call-graph community of 47 function(s) from func_003756E0
 func_003773D0	unit_00376F00	function	asm	gameplay/game_model.003	call-graph community of 47 function(s) from func_003756E0
 func_00377500	unit_00376F00	function	asm	gameplay/game_model.003	call-graph community of 47 function(s) from func_003756E0
-func_00377630	unit_00376F00	function	asm	gameplay/game_model.003	call-graph community of 47 function(s) from func_003756E0
+func_00377630	unit_00376F00	function	matched	gameplay/game_model.003	call-graph community of 47 function(s) from func_003756E0
 func_00377740	unit_00377740	function	matched	gameplay/game_00.005	call-graph community of 183 function(s) from func_0015A2E0
 func_00377770	unit_00377740	function	asm	gameplay/game_00.005	call-graph community of 183 function(s) from func_0015A2E0
 func_00377870	unit_00377740	function	asm	gameplay/game_00.005	call-graph community of 183 function(s) from func_0015A2E0
@@ -7979,7 +7979,7 @@ func_00378D90	unit_00377DF0	function	asm	gameplay/game_00.005	call-graph communi
 func_00378DE0	unit_00377DF0	function	asm	gameplay/game_00.005	call-graph community of 183 function(s) from func_0015A2E0
 func_00378E60	unit_00377DF0	function	asm	gameplay/game_00.005	call-graph community of 183 function(s) from func_0015A2E0
 func_00378ED0	unit_00377DF0	function	asm	gameplay/game_00.005	call-graph community of 183 function(s) from func_0015A2E0
-func_00378F40	unit_00377DF0	function	asm	gameplay/game_00.005	call-graph community of 183 function(s) from func_0015A2E0
+func_00378F40	unit_00377DF0	function	matched	gameplay/game_00.005	call-graph community of 183 function(s) from func_0015A2E0
 func_00379100	unit_00377DF0	function	asm	gameplay/game_00.005	call-graph community of 183 function(s) from func_0015A2E0
 func_00379150	unit_00377DF0	function	asm	gameplay/game_00.005	call-graph community of 183 function(s) from func_0015A2E0
 func_00379310	unit_00377DF0	function	asm	gameplay/game_00.005	call-graph community of 183 function(s) from func_0015A2E0
@@ -8040,7 +8040,7 @@ func_0037B500	unit_0037A940	function	asm	gameplay/game_00.022	call-graph communi
 func_0037B6F0	unit_0037A940	function	asm	gameplay/game_00.022	call-graph community of 84 function(s) from func_001CDC70
 func_0037B740	unit_0037A940	function	asm	gameplay/game_00.022	call-graph community of 84 function(s) from func_001CDC70
 func_0037B7A0	unit_0037A940	function	asm	gameplay/game_00.022	call-graph community of 84 function(s) from func_001CDC70
-func_0037B800	unit_0037A940	function	asm	gameplay/game_00.022	call-graph community of 84 function(s) from func_001CDC70
+func_0037B800	unit_0037A940	function	wip	gameplay/game_00.022	call-graph community of 84 function(s) from func_001CDC70
 func_0037B990	unit_0037A940	function	asm	gameplay/game_00.022	call-graph community of 84 function(s) from func_001CDC70
 func_0037B9E0	unit_0037A940	function	asm	gameplay/game_00.022	call-graph community of 84 function(s) from func_001CDC70
 func_0037BA30	unit_0037BA30	function	asm	gameplay/game_00.022	call-graph community of 84 function(s) from func_001CDC70

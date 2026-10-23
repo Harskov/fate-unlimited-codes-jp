@@ -124,6 +124,8 @@ void func_0016E9E0(void *dst, void *a, void *b);
 
 f32 fabsf(f32);
 
+f32 func_001E6C00(Obj_001E6240 *o);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E51D0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E5230);
@@ -233,7 +235,34 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E5C90);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E5EF0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E60E0);
+// the same two vector steps as func_001E6240, then unk_50 set from func_001E6C00's result:
+// 50 above 4.5, otherwise 10 plus 40 times (result - 1.5) / 3, the factor kept above 0.0001
+void func_001E60E0(Obj_001E6240 *arg0)
+{
+    Vec4 vec;
+    f32 f;
+    f32 t;
+
+    func_00165EA0(&vec, arg0->unk_20, arg0->unk_2C);
+    func_0016CFD0(&vec, &vec, arg0->unk_1C);
+    func_0016E9E0(arg0->unk_2C, arg0->unk_2C, &vec);
+    func_00165EA0(&vec, arg0->unk_38, arg0->unk_44);
+    func_0016CFD0(&vec, &vec, arg0->unk_1C);
+    func_0016E9E0(arg0->unk_44, arg0->unk_44, &vec);
+    f = func_001E6C00(arg0);
+    if (f <= 4.5f) {
+        t = (f - 1.5f) / 3.0f;
+        if (t < 0.0001f)
+            t = 0.0001f;
+        arg0->unk_50 = 10.0f + 40.0f * t;
+    } else {
+        arg0->unk_50 = 50.0f;
+    }
+    if (!(fabsf(arg0->unk_50 - arg0->unk_54) < 0.0001f))
+        arg0->unk_0 |= 1;
+    arg0->unk_5C = arg0->unk_58;
+    arg0->unk_54 = arg0->unk_50;
+}
 
 void func_001E6240(Obj_001E6240 *arg0)
 {

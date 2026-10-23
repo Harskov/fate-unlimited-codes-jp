@@ -79,6 +79,63 @@ extern Obj0019D040 *func_0019D040(int a);
 
 extern float func_0020E410(float a, float b, float c);
 
+void func_0019AA30(Obj0019AA30 *o);
+
+void func_0019ADA0(Obj0019ADA0 *arg0, void *arg1);
+
+void func_0019B470(Obj_0019B470 *p);
+
+typedef struct Obj_00524798 {
+    unsigned char unk_0[0x4];
+    int unk_4;
+    unsigned char unk_8[0x58];
+    int unk_60;
+    int unk_64;
+} Obj_00524798;
+
+typedef struct Obj_0019BDD0 {
+    int unk_0;
+    unsigned char unk_4[0x4];
+    int unk_8;
+    int unk_C;
+    int unk_10;
+    unsigned char unk_14[0x5C];
+    int unk_70;
+    unsigned char unk_74[0x4];
+    float unk_78[3];
+    float unk_84[3];
+    float unk_90[3];
+    int unk_9C;
+    int unk_A0;
+    int unk_A4;
+    unsigned char unk_A8[0xC];
+    int unk_B4;
+    unsigned char unk_B8[0x80];
+    unsigned char unk_138[0x150];
+    unsigned char unk_288[0x34];
+    int unk_2BC;
+    unsigned char unk_2C0[0x6C];
+    int unk_32C;
+    int unk_330;
+    int unk_334;
+    int unk_338;
+    int unk_33C;
+    int unk_340;
+    int unk_344;
+    int unk_348;
+    int unk_34C;
+} Obj_0019BDD0;
+
+extern int D_0052479C[];
+
+extern void func_0015EE20(float *v, float x, float y, float z);
+
+extern void func_0019B090(Obj_0019BDD0 *o);
+
+extern void func_001E7560(int *p, int a, int b);
+
+extern void func_002C3E88(int a, int b);
+
 void func_00199770(Obj00199770 *o)
 {
     float a[4];
@@ -217,7 +274,53 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00199770", func_0019BC90);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00199770", func_0019BD60);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00199770", func_0019BDD0);
+Obj_0019BDD0 *func_0019BDD0(Obj_0019BDD0 *o)
+{
+    int saved;
+
+    o->unk_8 = 0;
+    o->unk_C = 0;
+    o->unk_A4 = 0;
+    o->unk_A0 = 0;
+    o->unk_2BC = 0;
+    o->unk_B4 = 0;
+    o->unk_9C = 0x360B;
+    o->unk_334 = 0;
+    o->unk_33C = 0;
+    func_0019AA30((Obj0019AA30 *)o);
+    /* 0x40BC28F5: the single just below 5.88 */
+    func_0015EE20(o->unk_78, 0.0f, 0.0f, 5.8799996f);
+    func_0015EE20(o->unk_84, 0.0f, 0.0f, 0.0f);
+    func_0015EE20(o->unk_90, 0.0f, 0.0f, 1.0f);
+    if (o->unk_0 & 0x80) {
+        // !FAKE: the reference reloads D_00524798 after every store into o; the plain reads share one load, the volatile view forces the reloads
+        o->unk_334 = ((volatile int *)D_00524798)[0];
+        o->unk_32C = ((Obj_00524798 *)((volatile int *)D_00524798)[0])->unk_60;
+        o->unk_330 = ((Obj_00524798 *)((volatile int *)D_00524798)[0])->unk_64;
+        o->unk_338 = ((Obj_00524798 *)((volatile int *)D_00524798)[0])->unk_4;
+        o->unk_33C = D_0052479C[0];
+    } else {
+        func_0019B090(o);
+        func_002C3E88(D_0052479C[0], o->unk_334);
+        o->unk_33C = D_0052479C[0];
+    }
+    o->unk_340 = 0;
+    o->unk_344 = 0;
+    o->unk_348 = 0x280;
+    o->unk_34C = 0x1C0;
+    o->unk_70 = -1;
+    memset(o->unk_B8, 0, 0x80);
+    memset(o->unk_138, 0, 0x150);
+    func_0019B470((Obj_0019B470 *)o);
+    saved = D_00524798[0];
+    D_00524798[0] = o->unk_334;
+    func_001E7560(&o->unk_10, o->unk_334, 0);
+    D_00524798[0] = saved;
+    o->unk_10 |= 0x100;
+    o->unk_10 |= 0x40;
+    func_0019ADA0((Obj0019ADA0 *)o, 0);
+    return o;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00199770", func_0019BF90);
 

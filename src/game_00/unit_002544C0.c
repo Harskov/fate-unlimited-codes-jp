@@ -78,7 +78,27 @@ f32 func_00254B90(u32 arg0)
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002544C0", func_00254C20);
+// the setter that pairs with func_00254B90: stores the value into the slot the selector names
+void func_00254C20(s32 arg0, f32 arg1)
+{
+    switch (arg0) {
+    case 5:
+        D_00529D9C[0] = arg1;
+        break;
+    case 0:
+        D_00529DA0[0] = arg1;
+        break;
+    case 1:
+        D_00529DA4[0] = arg1;
+        break;
+    case 2:
+        D_00529DA8[0] = arg1;
+        break;
+    case 3:
+        D_00529DAC[0] = arg1;
+        break;
+    }
+}
 
 s32 func_00254CA0(void)
 {

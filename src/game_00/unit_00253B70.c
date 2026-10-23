@@ -17,9 +17,17 @@ void func_002530F0();
 
 void func_00253160();
 
+int func_00252A20();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00253B70", func_00253B70);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00253B70", func_00253BD0);
+int func_00253BD0(void)
+{
+    if (func_00255590() != 0) {
+        return func_00252A20(9, 0);
+    }
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00253B70", func_00253C00);
 
