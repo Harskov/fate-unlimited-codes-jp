@@ -13,9 +13,9 @@ Classes of evidence:
 |---|---|
 | Game functions | 6 of 5827 (5821 placeholders, 0 awaiting evidence) |
 | Functions, library included | 742 of 8234 (7492 placeholders, 0 awaiting evidence) |
-| Types | 4 of 428 (424 placeholders, 0 awaiting evidence) |
-| Members the matched code reaches | 84 of 1124 (1040 placeholders, 0 awaiting evidence) |
-| Globals the matched code reaches | 11 of 762 (751 placeholders, 0 awaiting evidence) |
+| Types | 4 of 503 (499 placeholders, 0 awaiting evidence) |
+| Members the matched code reaches | 117 of 1268 (1151 placeholders, 0 awaiting evidence) |
+| Globals the matched code reaches | 13 of 798 (785 placeholders, 0 awaiting evidence) |
 
 ## Functions
 
@@ -779,6 +779,7 @@ Classes of evidence:
 |---|---|---|---|
 | `Elem_001C6720.next` | 0xC | behavioural | self-link — checked: it points to another Elem_001C6720 |
 | `Elem_001EB6C0.flags` | 0x0 | behavioural | mask-test — checked: func_001EB6C0 tests it against 0x740000 |
+| `Elem_0021AF20.flags` | 0x10 | behavioural | mask-test — checked: func_0021AF20 tests it against 0x1 |
 | `Ent0051AC78.next` | 0x0 | behavioural | the member's name already given, with the facts that support it — checked: it points to another Ent0051AC78 |
 | `Flags.flags` | 0x0 | behavioural | mask-test — checked: func_001990C0 tests it against 0x20 |
 | `Flags4.flags` | 0x4 | behavioural | mask-test — checked: func_001BBC20 tests it against 0x1, 0x2; func_001BBC50 tests it against 0x1, 0x2; func_001BBC80 tests it against 0x1, 0x2 |
@@ -806,6 +807,10 @@ Classes of evidence:
 | `Obj12@unit_00259200.x` | 0x0 | behavioural | member 0 of a vector of floats — checked: member 0 of Obj12@unit_00259200, a vector of 3 floats |
 | `Obj12@unit_00259200.y` | 0x4 | behavioural | member 1 of a vector of floats — checked: member 1 of Obj12@unit_00259200, a vector of 3 floats |
 | `Obj12@unit_00259200.z` | 0x8 | behavioural | member 2 of a vector of floats — checked: member 2 of Obj12@unit_00259200, a vector of 3 floats |
+| `Obj16@unit_001F2070.w` | 0xC | behavioural | member 3 of a vector of floats — checked: member 3 of Obj16@unit_001F2070, a vector of 4 floats |
+| `Obj16@unit_001F2070.x` | 0x0 | behavioural | member 0 of a vector of floats — checked: member 0 of Obj16@unit_001F2070, a vector of 4 floats |
+| `Obj16@unit_001F2070.y` | 0x4 | behavioural | member 1 of a vector of floats — checked: member 1 of Obj16@unit_001F2070, a vector of 4 floats |
+| `Obj16@unit_001F2070.z` | 0x8 | behavioural | member 2 of a vector of floats — checked: member 2 of Obj16@unit_001F2070, a vector of 4 floats |
 | `Obj2524.flags` | 0x1F4 | behavioural | mask-test — checked: func_001BB7A0 tests it against 0x20000 |
 | `Obj8.flags` | 0x4 | behavioural | the member's name already given, with the facts that support it — checked: func_001A6370 tests it against 0x1; func_001A6380 tests it against 0x1; func_001A6390 tests it against 0x1; func_001AA210 tests it against 0xfffffffe; func_001AA230 tests it against 0xfffffffe; func_001AA310 tests it against 0x1; func_001AA340 tests it against 0x1; func_001AA370 tests it against 0x1; func_001AA460 tests it against 0x1; func_001AA490 tests it against 0x1; func_001AA4C0 tests it against 0x1 |
 | `Obj@unit_00179310.counter` | 0xC4 | behavioural | counter — checked: func_0017A590 steps it by a constant |
@@ -824,39 +829,71 @@ Classes of evidence:
 | `Obj@unit_001B1360.flags_1E0` | 0x1E0 | behavioural | mask-test — checked: func_001B13C0 tests it against 0x2120000, 0x5008000 |
 | `Obj@unit_001B1360.flags_1E4` | 0x1E4 | behavioural | mask-test — checked: func_001B13C0 tests it against 0xa00 |
 | `Obj@unit_001B1360.flags_1EC` | 0x1EC | behavioural | mask-test — checked: func_001B13C0 tests it against 0xc00000; func_001B2E60 tests it against 0x2000 |
+| `Obj_0015A360.link_4` | 0x4 | behavioural | self-link — checked: it points to another Obj_0015A360 |
+| `Obj_0015A360.link_8` | 0x8 | behavioural | self-link — checked: it points to another Obj_0015A360 |
 | `Obj_0015D130.x` | 0x0 | behavioural | member 0 of a vector of floats — checked: member 0 of Obj_0015D130, a vector of 3 floats |
 | `Obj_0015D130.y` | 0x4 | behavioural | member 1 of a vector of floats — checked: member 1 of Obj_0015D130, a vector of 3 floats |
 | `Obj_0015D130.z` | 0x8 | behavioural | member 2 of a vector of floats — checked: member 2 of Obj_0015D130, a vector of 3 floats |
 | `Obj_0015E5C0.flags` | 0x4 | behavioural | mask-test — checked: func_0015DD00 tests it against 0xffff0000 |
 | `Obj_001768D0.count` | 0x64 | behavioural | the member's name already given, with the facts that support it — checked: func_001775A0 bounds the index i with it |
+| `Obj_0018BE30.link_8` | 0x8 | behavioural | self-link — checked: it points to another Obj_0018BE30 |
+| `Obj_0018D000.flags` | 0x0 | behavioural | mask-test — checked: func_0018D000 tests it against 0x400000, 0x800000 |
+| `Obj_0019BDD0.flags` | 0x0 | behavioural | mask-test — checked: func_0019BDD0 tests it against 0x80 |
 | `Obj_001A3EA0.flags` | 0x1F4 | behavioural | mask-test — checked: func_001A3EA0 tests it against 0x18000 |
+| `Obj_001A44A0.flags` | 0x1DC | behavioural | mask-test — checked: func_001A44A0 tests it against 0x20; func_001A4640 tests it against 0x20 |
 | `Obj_001A9A00.flags_1E0` | 0x1E0 | behavioural | mask-test — checked: func_001A9A00 tests it against 0x20000 |
 | `Obj_001A9A00.flags_1EC` | 0x1EC | behavioural | mask-test — checked: func_001A9A00 tests it against 0x10000100 |
+| `Obj_001AB040.flags_1DC` | 0x1DC | behavioural | mask-test — checked: func_001AB040 tests it against 0x8, 0x80, 0x1000 |
+| `Obj_001AB040.flags_23A4` | 0x23A4 | behavioural | mask-test — checked: func_001AB040 tests it against 0x1 |
 | `Obj_001AE7A0.cursor` | 0x1A0 | behavioural | the member's name already given, with the facts that support it — checked: func_001AE860 steps it by a constant |
 | `Obj_001B1360.flags` | 0x0 | behavioural | the member's name already given, with the facts that support it — checked: func_001B2E60 tests it against 0x2 |
+| `Obj_001C0A80.next` | 0x2508 | behavioural | self-link — checked: it points to another Obj_001C0A80 |
+| `Obj_001C2AD0.flags` | 0x1E0 | behavioural | mask-test — checked: func_001C2AD0 tests it against 0x800000 |
 | `Obj_001C41A0.count` | 0xB4 | behavioural | bound; counter — checked: func_001C41A0 bounds the index i with it; func_001C41A0 steps it by a constant |
 | `Obj_001C42B0.flags` | 0x0 | behavioural | mask-test — checked: func_001C41A0 tests it against 0x8, 0x10 |
 | `Obj_001C4FA0.flags` | 0x1E4 | behavioural | mask-test — checked: func_001C4FA0 tests it against 0x4 |
 | `Obj_001E52A0.flags` | 0x0 | behavioural | the member's name already given, with the facts that support it — checked: func_001E52A0 tests it against 0x80 |
 | `Obj_001EB6C0.count` | 0x68 | behavioural | bound — checked: func_001EB6C0 bounds the index i with it |
 | `Obj_001F14B0.next` | 0x8 | behavioural | self-link — checked: it points to another Obj_001F14B0 |
+| `Obj_001F1C20.flags` | 0x0 | behavioural | mask-test — checked: func_001F1C20 tests it against 0x2 |
+| `Obj_001F2EF0.flags` | 0x4C | behavioural | mask-test — checked: func_001F2EF0 tests it against 0x2 |
 | `Obj_00200650.counter` | 0x34 | behavioural | counter — checked: func_00200650 steps it by a constant |
+| `Obj_00203230.next` | 0x8 | behavioural | self-link — checked: it points to another Obj_00203230 |
 | `Obj_0020FC50.counter` | 0xA | behavioural | counter — checked: func_0020FC50 steps it by a constant |
 | `Obj_00210D40.link_0` | 0x0 | behavioural | self-link — checked: it points to another Obj_00210D40 |
 | `Obj_00210D40.link_4` | 0x4 | behavioural | self-link — checked: it points to another Obj_00210D40 |
+| `Obj_0021AF20.counter_17B8` | 0x17B8 | behavioural | counter — checked: func_0021AF20 steps it by a constant |
+| `Obj_0021AF20.counter_17BC` | 0x17BC | behavioural | counter — checked: func_0021AF20 steps it by a constant |
 | `Obj_0021BFD0.count` | 0x1694 | behavioural | bound — checked: func_0021BFD0 bounds the index i with it |
+| `Obj_0022E284.count` | 0x24 | behavioural | bound — checked: func_0022E250 bounds the index i with it |
 | `Obj_002A5558.flags` | 0xF0 | behavioural | the member's name already given, with the facts that support it — checked: func_002A5558 tests it against 0x1 |
+| `Obj_0031C3E0.next` | 0x8 | behavioural | self-link — checked: it points to another Obj_0031C3E0 |
 | `Obj_00324A30.flags` | 0x24 | behavioural | mask-test — checked: func_00324A30 tests it against 0x2; func_00324A80 tests it against 0x2 |
+| `Obj_00330410.flags` | 0x0 | behavioural | mask-test — checked: func_00330410 tests it against 0x100000 |
 | `Obj_00333310.flags` | 0x1E0 | behavioural | mask-test — checked: func_00333310 tests it against 0x8000 |
 | `Obj_00358C00.flags_10` | 0x10 | behavioural | mask-test — checked: func_00358C00 tests it against 0x1, 0x2 |
 | `Obj_00358C00.flags_14` | 0x14 | behavioural | mask-test — checked: func_00358C00 tests it against 0x400000 |
 | `Obj_00358C00.flags_18` | 0x18 | behavioural | mask-test — checked: func_00358C00 tests it against 0x4, 0x8, 0x20 |
+| `Obj_0036F7F0@unit_0036EB30.flags` | 0x0 | behavioural | mask-test — checked: func_0036EDB0 tests it against 0x1, 0x2 |
+| `Obj_0036F7F0@unit_0036F780.flags` | 0x0 | behavioural | mask-test — checked: func_0036F7F0 tests it against 0x1, 0x2 |
+| `Obj_0036F7F0@unit_00370610.flags` | 0x0 | behavioural | mask-test — checked: func_00370A10 tests it against 0x1, 0x2 |
+| `Obj_0036F7F0@unit_00371690.flags` | 0x0 | behavioural | mask-test — checked: func_00371710 tests it against 0x1, 0x2; func_00371810 tests it against 0x1, 0x2; func_00371910 tests it against 0x1, 0x2 |
+| `Obj_00371610.flags` | 0x0 | behavioural | mask-test — checked: func_00371610 tests it against 0x1, 0x2 |
 | `Obj_0037AF70.flags_1E0` | 0x1E0 | behavioural | mask-test — checked: func_0037AF70 tests it against 0x1000000 |
 | `Obj_0037AF70.flags_1E4` | 0x1E4 | behavioural | mask-test — checked: func_0037AF70 tests it against 0x80, 0x400000 |
 | `Obj_0037C120.flags` | 0x0 | behavioural | mask-test — checked: func_0037C120 tests it against 0x1 |
+| `Obj_003812B0.flags` | 0x0 | behavioural | mask-test — checked: func_003812B0 tests it against 0x100 |
+| `Rec0051A424.flags` | 0x0 | behavioural | mask-test — checked: func_0015B240 tests it against 0x4 |
 | `Rec0051D890.counter` | 0x4 | behavioural | counter — checked: func_001A37D0 steps it by a constant |
 | `Rec0051D890.flags` | 0x0 | behavioural | mask-test — checked: func_0019A9A0 tests it against 0x2000000 |
+| `Sub_001C4FE0.counter_128` | 0x128 | behavioural | counter — checked: func_001C4FE0 steps it by a constant |
+| `Sub_001C4FE0.counter_12C` | 0x12C | behavioural | counter — checked: func_001C4FE0 steps it by a constant |
+| `Sub_00222A70.flags_10` | 0x10 | behavioural | mask-test — checked: func_00222A70 tests it against 0x7f |
+| `Sub_00222A70.flags_8` | 0x8 | behavioural | mask-test — checked: func_00223860 tests it against 0x4 |
 | `Sub_0036E6D0.flags` | 0x1DC | behavioural | mask-test — checked: func_0036E6D0 tests it against 0x80000 |
+| `Sub_00377630.flags_1DC` | 0x1DC | behavioural | mask-test — checked: func_00377630 tests it against 0x8000080 |
+| `Sub_00377630.flags_1E0` | 0x1E0 | behavioural | mask-test — checked: func_00377630 tests it against 0x2722020 |
+| `Sub_00377630.flags_1EC` | 0x1EC | behavioural | mask-test — checked: func_00377630 tests it against 0x8000 |
 | `Vec3.x` | 0x0 | behavioural | member 0 of a vector of floats — checked: member 0 of Vec3, a vector of 3 floats |
 | `Vec3.y` | 0x4 | behavioural | member 1 of a vector of floats — checked: member 1 of Vec3, a vector of 3 floats |
 | `Vec3.z` | 0x8 | behavioural | member 2 of a vector of floats — checked: member 2 of Vec3, a vector of 3 floats |
@@ -880,3 +917,5 @@ Classes of evidence:
 | `gFormat_5068B0` | 0x005068B0 | anchored | prototype — checked: func_0033F840 passes it as argument 1 of sprintf (int sprintf(char *buf, const char … |
 | `gFormat_5068B8` | 0x005068B8 | anchored | prototype — checked: func_0033F840 passes it as argument 1 of sprintf (int sprintf(char *buf, const char … |
 | `gHandlerId` |  | anchored | prototype — checked: func_0020A650 passes it as argument 1 of RemoveIntcHandler (s32 RemoveIntcHandler(s32 … |
+| `gMode` |  | anchored | prototype — checked: func_00206870 passes it as argument 3 of sceCdRead (int sceCdRead(u32 lbn, u32 sectors, … |
+| `gSemaId` |  | anchored | prototype — checked: func_00252B80 passes it as argument 0 of PollSema (s32 PollSema(s32 sema_id)); func_00252B80 passes it as argument 0 of WaitSema (s32 WaitSema(s32 sema_id)); func_00252B80 passes it as argument 0 of SignalSema (s32 SignalSema(s32 sema_id)) |

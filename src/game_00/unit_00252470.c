@@ -15,7 +15,7 @@ int SignalSema(int semid);
 
 void func_00252B70(int semid);
 
-extern s32 D_003DF8F0[];
+extern s32 gSemaId[];
 
 extern s32 D_00529540[];
 
@@ -65,11 +65,11 @@ int func_00252B80(int arg0)
         return 0;
     }
     if (arg0 != 0) {
-        if (PollSema(D_003DF8F0[0]) < 0) {
+        if (PollSema(gSemaId[0]) < 0) {
             return -1;
         }
     } else {
-        WaitSema(D_003DF8F0[0]);
+        WaitSema(gSemaId[0]);
     }
     i = D_00529550[0];
     p = &D_00529560[i];
@@ -88,13 +88,13 @@ int func_00252B80(int arg0)
         if (arg0 != 0) {
             arg0 = 1;
         }
-        if (sceSifCallRpc(D_00529690, 0, arg0, D_00529700, size, D_00529700, 0, func_00252B70, D_003DF8F0[0]) < 0) {
-            SignalSema(D_003DF8F0[0]);
+        if (sceSifCallRpc(D_00529690, 0, arg0, D_00529700, size, D_00529700, 0, func_00252B70, gSemaId[0]) < 0) {
+            SignalSema(gSemaId[0]);
             return -1;
         }
         D_00529540[0] = 0;
     } else {
-        SignalSema(D_003DF8F0[0]);
+        SignalSema(gSemaId[0]);
     }
     return 0;
 }

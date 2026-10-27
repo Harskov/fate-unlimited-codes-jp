@@ -85,6 +85,18 @@ typedef struct Obj_00249A20 {
     u8 unk_2;
 } Obj_00249A20;
 
+typedef struct Sub_00249A90 {
+    /* 0x00 */ u8 unk_0;
+    /* 0x01 */ u8 unk_1;
+    /* 0x02 */ u8 unk_2;
+    /* 0x03 */ u8 unk_3;
+} Sub_00249A90;
+
+typedef struct Obj_00249A90 {
+    /* 0x00 */ u8 unk_0[0x4];
+    /* 0x04 */ Sub_00249A90 unk_4;
+} Obj_00249A90;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002468D0", func_002468D0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002468D0", func_002469B0);
@@ -326,7 +338,12 @@ Obj_00249A20 *func_00249A20(Obj_00249A20 *a0, s32 a1)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002468D0", func_00249A40);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002468D0", func_00249A90);
+/* copies the four bytes whole into the member at +0x4 and returns the object */
+Obj_00249A90 *func_00249A90(Obj_00249A90 *a0, Sub_00249A90 *a1)
+{
+    a0->unk_4 = *a1;
+    return a0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002468D0", func_00249AC0);
 

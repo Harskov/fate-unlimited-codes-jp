@@ -95,7 +95,7 @@ typedef struct Obj_00524798 {
 } Obj_00524798;
 
 typedef struct Obj_0019BDD0 {
-    int unk_0;
+    /* 0x00 */ int flags;
     unsigned char unk_4[0x4];
     int unk_8;
     int unk_C;
@@ -135,6 +135,28 @@ extern void func_0019B090(Obj_0019BDD0 *o);
 
 extern void func_002C3E88(int a, int b);
 
+typedef struct Sub_00199850 {
+    unsigned char unk_0[0xC];
+    int unk_C;
+} Sub_00199850;
+
+typedef struct Elem_00199850 {
+    unsigned char unk_0[0xC];
+    Sub_00199850 *unk_C;
+    unsigned char unk_10[0xE0];
+} Elem_00199850;
+
+typedef struct Obj_00199850 {
+    unsigned char unk_0[0x6C];
+    Elem_00199850 *unk_6C;
+} Obj_00199850;
+
+extern int func_001619C0(int a, int b);
+
+extern int func_002E6C10(int v);
+
+extern int func_0020CE80(int v);
+
 void func_00199770(Obj00199770 *o)
 {
     float a[4];
@@ -155,7 +177,15 @@ void func_00199770(Obj00199770 *o)
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00199770", func_00199850);
+int func_00199850(int a, int b)
+{
+    int i;
+
+    i = func_001619C0(a, b);
+    if (i < 0)
+        return 0;
+    return func_0020CE80(func_002E6C10(((Obj_00199850 *)a)->unk_6C[i].unk_C->unk_C));
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00199770", func_001998B0);
 
@@ -291,7 +321,7 @@ Obj_0019BDD0 *func_0019BDD0(Obj_0019BDD0 *o)
     func_0015EE20(o->unk_78, 0.0f, 0.0f, 5.8799996f);
     func_0015EE20(o->unk_84, 0.0f, 0.0f, 0.0f);
     func_0015EE20(o->unk_90, 0.0f, 0.0f, 1.0f);
-    if (o->unk_0 & 0x80) {
+    if (o->flags & 0x80) {
         // !FAKE: the reference reloads D_00524798 after every store into o; the plain reads share one load, the volatile view forces the reloads
         o->unk_334 = ((volatile int *)D_00524798)[0];
         o->unk_32C = ((Obj_00524798 *)((volatile int *)D_00524798)[0])->unk_60;

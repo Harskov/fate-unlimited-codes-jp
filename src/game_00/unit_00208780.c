@@ -36,7 +36,15 @@ int func_002088B0(char *a, char *b)
     return strcmp(a, b);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00208780", func_00208910);
+void func_00208910(char *dst, char *src)
+{
+    int len;
+
+    len = strlen(src);
+    if (len > 0x3F)
+        src += len - 0x3F;
+    strcpy(dst, src);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00208780", func_00208970);
 

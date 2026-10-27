@@ -15,13 +15,43 @@ extern f32 D_00529DA8[];
 
 extern f32 D_00529DAC[];
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002544C0", func_002544C0);
+s32 func_00255590(void);
+
+void func_0015B310(s32 arg0);
+
+void func_0015B1B0(s32 arg0, s32 arg1, f32 arg2);
+
+void func_002544C0(s32 arg0, s32 arg1, f32 arg2)
+{
+    if (func_00255590() == 0) {
+        return;
+    }
+    func_0015B1B0(arg0, arg1, arg2);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002544C0", func_00254520);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002544C0", func_00254560);
+void func_00254560(s32 arg0)
+{
+    if (func_00255590() == 0) {
+        return;
+    }
+    func_0015B310(arg0);
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002544C0", func_002545A0);
+void func_002545A0(s32 arg0)
+{
+    s32 i;
+
+    if (arg0 != 0) {
+        i = 0;
+    } else {
+        i = 1;
+    }
+    for (; i < 4; i++) {
+        func_00254600(i);
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002544C0", func_00254600);
 

@@ -110,7 +110,16 @@ void func_001AE2F0(Obj_001AE2F0 *p, int arg1)
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AD300", func_001AE340);
+void func_001AE340(Obj_001AE2F0 *p)
+{
+    Obj_001AE2F0_2 *s = &p->unk_184;
+
+    s->field_10 = s->field_10 + 1;
+    if (s->field_10 >= s->field_14 + 6) {
+        s->field_10 = 0;
+        s->field_14 = func_0020E850(0x3C, 0xB4);
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AD300", func_001AE3A0);
 

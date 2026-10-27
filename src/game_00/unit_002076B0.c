@@ -75,7 +75,15 @@ int func_00207730(char *a, char *b)
     return strcmp(a, b);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00207790);
+void func_00207790(char *dst, char *src)
+{
+    int len;
+
+    len = strlen(src);
+    if (len > 0x7F)
+        src += len - 0x7F;
+    strcpy(dst, src);
+}
 
 int func_002077F0(void)
 {
@@ -160,7 +168,15 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00208280);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00208300);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00208410);
+int func_00208410(char *a, char *b)
+{
+    int len;
+
+    len = strlen(b);
+    if (len > 0x1F)
+        b += len - 0x1F;
+    return strcmp(a, b);
+}
 
 void func_00208470(char *dst, char *src)
 {

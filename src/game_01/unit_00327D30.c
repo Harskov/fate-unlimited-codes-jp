@@ -5,6 +5,10 @@ extern s32 D_00522DB0[];
 
 void func_0020F230();
 
+extern s32 D_00531988[];
+
+void func_00327E80();
+
 void func_00327D30(s32 *arg0, s32 arg1)
 {
     arg0[3] = arg1;
@@ -27,7 +31,14 @@ INCLUDE_ASM("asm/nonmatchings/game_01/unit_00327D30", func_00327D90);
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00327D30", func_00327E80);
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00327D30", func_00328090);
+void func_00328090(s32 arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4, s32 arg5, s32 arg6, s32 arg7)
+{
+    s32 saved = D_00531988[0];
+
+    D_00531988[0] = arg0;
+    func_00327E80(arg3, arg1, arg4, arg2, arg5, arg6, arg7);
+    D_00531988[0] = saved;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00327D30", func_003280F0);
 

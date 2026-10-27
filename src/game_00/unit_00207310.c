@@ -25,12 +25,27 @@ extern char D_00522C20[];
 
 extern int sprintf(char *, const char *, ...);
 
+void func_00206B50();
+
 s32 func_00207310(void)
 {
     return D_00522C40[0];
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00207310", func_00207320);
+void func_00207320(s32 arg0)
+{
+    D_00522C40[0] = arg0;
+    switch (arg0) {
+    case 0:
+        break;
+    case 1:
+        func_00206B50();
+        break;
+    case 2:
+    case 3:
+        break;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00207310", func_00207380);
 

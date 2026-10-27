@@ -1,5 +1,13 @@
 #include "common.h"
 
+void func_00165EA0();
+
+void func_00165EE0();
+
+void func_0016CFD0(f32 *v, f32 x, ...);
+
+f32 func_0016E8F0();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020D0D0", func_0020D0D0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020D0D0", func_0020D1C0);
@@ -10,7 +18,15 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020D0D0", func_0020D610);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020D0D0", func_0020D6A0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020D0D0", func_0020D750);
+void func_0020D750(s32 arg0, s32 arg1, s32 arg2)
+{
+    f32 v[4];
+
+    func_0016CFD0(v, -1.0f);
+    func_0016CFD0(v, 2.0f * func_0016E8F0(arg2, v), arg2);
+    func_00165EA0(v, v, arg2);
+    func_00165EE0(arg0, v);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020D0D0", func_0020D7D0);
 

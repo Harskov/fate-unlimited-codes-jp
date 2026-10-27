@@ -5,6 +5,19 @@ extern s32 D_00501678[];
 
 extern s32 D_0051FA30[];
 
+extern s32 D_00522DB0[];
+
+void func_001F59E0();
+
+void func_0020F230();
+
+typedef struct Obj_001F5500 {
+    u8 unk_0[0x60];
+    void *unk_60;
+    u8 unk_64[0x13C];
+    void *unk_1A0;
+} Obj_001F5500;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F4AB0", func_001F4AB0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F4AB0", func_001F4B00);
@@ -45,7 +58,21 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F4AB0", func_001F5340);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F4AB0", func_001F5490);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F4AB0", func_001F5500);
+void func_001F5500(Obj_001F5500 *arg0)
+{
+    void *p;
+
+    p = arg0->unk_60;
+    if (p != 0) {
+        func_0020F230(D_00522DB0, p);
+    }
+    p = arg0->unk_1A0;
+    if (p != 0) {
+        func_0020F230(D_00522DB0, p);
+    }
+    func_001F59E0(arg0);
+    func_0020F230(D_00522DB0, arg0);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F4AB0", func_001F5570);
 

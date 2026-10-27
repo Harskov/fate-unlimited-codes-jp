@@ -42,7 +42,7 @@ typedef struct Sub_0021AF20 {
 typedef struct Elem_0021AF20 {
     u8 pad_0[0xC];
     /* 0x0C */ s32 unk_C;
-    /* 0x10 */ s32 unk_10;
+    /* 0x10 */ s32 flags;
     /* 0x14 */ s32 unk_14;
 } Elem_0021AF20;
 
@@ -59,8 +59,8 @@ typedef struct Obj_0021AF20 {
     /* 0x179C */ Obj12 unk_179C;
     /* 0x17A8 */ Obj12 unk_17A8;
     /* 0x17B4 */ Elem_0021AF20 *unk_17B4;
-    /* 0x17B8 */ s32 unk_17B8;
-    /* 0x17BC */ s32 unk_17BC;
+    /* 0x17B8 */ s32 counter_17B8;
+    /* 0x17BC */ s32 counter_17BC;
 } Obj_0021AF20;
 
 typedef struct Obj8 {
@@ -83,13 +83,34 @@ void func_002B1E28(s32 arg0, void (*arg1)(), Obj8 *arg2);
 
 s32 func_002B2760(s32 arg0);
 
+extern Unk_0021A870 D_00525960[];
+
+extern s32 D_00525964[];
+
+extern s32 D_00525968[];
+
+void func_00200BB0();
+
+void func_0020F230();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A0D0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A140);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A1B0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A210);
+void func_0021A210(s32 arg0)
+{
+    s32 *entry;
+    void func_0021A870(Unk_0021A870 *arg0);
+
+    entry = &D_00525964[arg0 * 3];
+    if (*entry == 0)
+        return;
+    func_0020F230(D_00522DB0, *entry);
+    func_00200BB0(D_00525968[arg0 * 3], 4, -1);
+    func_0021A870(&D_00525960[arg0]);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A290);
 
@@ -150,25 +171,25 @@ void func_0021AF20(Obj_0021AF20 *arg0)
     func_002B1E28(arg0->unk_10->unk_38, func_0021A890, &ctx);
 
     func_00178060(&arg0->unk_179C);
-    arg0->unk_17B8 = 0;
+    arg0->counter_17B8 = 0;
     for (i = 0; i < 100; i++) {
         for (j = 0; j < n; j++) {
             e = &arg0->unk_17B4[j];
-            if (e->unk_14 != 0 && i == e->unk_C && !(e->unk_10 & 0x1)) {
+            if (e->unk_14 != 0 && i == e->unk_C && !(e->flags & 0x1)) {
                 func_001795F0(e, e, &arg0->unk_179C);
-                arg0->unk_17B8++;
+                arg0->counter_17B8++;
             }
         }
     }
 
     func_00178060(&arg0->unk_17A8);
-    arg0->unk_17BC = 0;
+    arg0->counter_17BC = 0;
     for (i = 0; i < 100; i++) {
         for (j = 0; j < n; j++) {
             e = &arg0->unk_17B4[j];
-            if (e->unk_14 != 0 && i == e->unk_C && (e->unk_10 & 0x1)) {
+            if (e->unk_14 != 0 && i == e->unk_C && (e->flags & 0x1)) {
                 func_001795F0(e, e, &arg0->unk_17A8);
-                arg0->unk_17BC++;
+                arg0->counter_17BC++;
             }
         }
     }

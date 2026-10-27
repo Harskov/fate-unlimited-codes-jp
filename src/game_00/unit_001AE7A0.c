@@ -42,6 +42,22 @@ typedef struct Ctx001AE860 {
 
 void func_002032B0(void *);
 
+void func_001AE900();
+
+typedef struct Obj_001AEFA0 {
+    unsigned char unk_0[0x3C];
+    void *unk_3C;
+    unsigned char unk_40[0x460 - 0x40];
+    unsigned char unk_460[0x24];
+    int unk_484;
+} Obj_001AEFA0;
+
+void func_00165EA0(void *, void *, void *);
+
+int func_0020DBB0(float, float);
+
+void func_001E9590(void *, int);
+
 void func_001AE7A0(Obj *p)
 {
     Obj_001AE7A0_2 *m = p->field_3C;
@@ -91,7 +107,11 @@ void func_001AE860(Ctx001AE860 *c, int id, int on, int mask, int keep)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AE7A0", func_001AE900);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AE7A0", func_001AE9A0);
+void func_001AE9A0(void *arg0)
+{
+    func_001AE900(arg0, 0, 1, 1);
+    func_001AE900(arg0, 0, 1, 0);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AE7A0", func_001AE9F0);
 
@@ -99,7 +119,21 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AE7A0", func_001AEA40);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AE7A0", func_001AEB40);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AE7A0", func_001AEFA0);
+int func_001AEFA0(Obj_001AEFA0 *arg0, Obj_001AEFA0 *arg1, int arg2)
+{
+    float v[4];
+    int r;
+
+    if (arg0 == 0 || arg1 == 0)
+        return 0;
+
+    func_00165EA0(v, arg1->unk_460, arg0->unk_460);
+    r = func_0020DBB0(v[0], v[2]);
+    r += arg2;
+    func_001E9590(arg0->unk_3C, r);
+    arg0->unk_484 = r;
+    return 1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AE7A0", func_001AF020);
 

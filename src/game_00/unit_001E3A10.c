@@ -78,6 +78,8 @@ typedef struct Obj_001E4470 {
 
 s32 func_001E4FE0(s32 arg0);
 
+s32 func_001E4BF0();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E3A10", func_001E3A10);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E3A10", func_001E3AA0);
@@ -180,7 +182,18 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E3A10", func_001E3FF0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E3A10", func_001E4330);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E3A10", func_001E43B0);
+void func_001E43B0(Obj_001E4470 *arg0)
+{
+    Obj_001E3CC0 *p = (Obj_001E3CC0 *)arg0->unk_BC;
+    s32 saved;
+
+    if (p != 0) {
+        saved = p->unk_C;
+        if (func_001E4BF0(p) == 2) {
+            arg0->unk_BC = saved;
+        }
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E3A10", func_001E4400);
 

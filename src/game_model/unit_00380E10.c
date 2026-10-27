@@ -7,6 +7,15 @@ typedef struct Obj_00381E50 {
     /* 0x010 */ u8 pad_10[0x12C];
 } Obj_00381E50;
 
+void func_001A6190();
+
+typedef struct Obj_003812B0 {
+    /* 0x00 */ s32 flags;
+    /* 0x04 */ u8 pad_4[0xC];
+    /* 0x10 */ u8 unk_10[0x7C];
+    /* 0x8C */ u8 unk_8C[4];
+} Obj_003812B0;
+
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00380E10);
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00380E60);
@@ -15,7 +24,12 @@ INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00380E90);
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00380F00);
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_003812B0);
+void func_003812B0(Obj_003812B0 *arg0)
+{
+    if (arg0->flags & 0x100) {
+        func_001A6190(arg0->unk_10, 0, arg0->unk_8C);
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_003812F0);
 

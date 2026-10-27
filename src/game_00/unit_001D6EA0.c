@@ -1,7 +1,9 @@
 #include "common.h"
 
 typedef struct Obj_001DC510 {
-    u8 unk_0[0x23E8];
+    u8 unk_0[0x1E4];
+    s32 unk_1E4;
+    u8 pad_1E8[0x23E8 - 0x1E8];
     s32 *unk_23E8;
 } Obj_001DC510;
 
@@ -35,6 +37,20 @@ s32 func_001E3800(s32 arg0);
 void func_0015D130(f32 *arg0, s32 arg1);
 
 f32 fabsf(f32);
+
+void func_001DC240();
+
+void func_0019C820();
+
+void func_0019C930();
+
+void func_0019CA40();
+
+void func_001DBD10();
+
+void func_001DC020();
+
+void func_001DC080();
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D6EA0", func_001D6EA0);
 
@@ -95,7 +111,14 @@ s32 func_001D7EF0(f32 *arg0, f32 arg1)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D6EA0", func_001D7FE0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D6EA0", func_001D8240);
+void func_001D8240(void *arg0, f32 *arg1)
+{
+    f32 zero = 0.0f;
+
+    if (zero == arg1[0] && zero == arg1[1] && zero == arg1[2])
+        arg1[2] = 0.001f;
+    func_00165EE0();
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D6EA0", func_001D82A0);
 
@@ -129,13 +152,31 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D6EA0", func_001DC020);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D6EA0", func_001DC080);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D6EA0", func_001DC0C0);
+void func_001DC0C0(void)
+{
+    func_0019CA40(func_001DC080, 0);
+    func_0019C820(func_001DBD10);
+    func_0019C930(func_001DBD10);
+    func_0019CA40(func_001DC020, 0);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D6EA0", func_001DC110);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D6EA0", func_001DC240);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D6EA0", func_001DC450);
+void func_001DC450(Obj_001DC510 *arg0)
+{
+    s32 *node;
+
+    if (arg0 != 0) {
+        arg0->unk_1E4 &= 0xE7FFFFFF;
+        node = arg0->unk_23E8;
+        while (*node != 1) {
+            func_001DC240(arg0, *node);
+            node = (s32 *)node[2];
+        }
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D6EA0", func_001DC4D0);
 

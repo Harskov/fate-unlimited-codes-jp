@@ -61,6 +61,28 @@ s32 *func_0016D020(s32 arg0, s32 arg1);
 
 s32 func_00171E40(s32 arg0, s32 arg1);
 
+typedef struct Obj_003795F0 {
+    s32 unk_0;
+    s32 unk_4;
+    u8 pad_8[8];
+    s32 unk_10;
+    s32 unk_14;
+} Obj_003795F0;
+
+void func_003784B0();
+
+void func_00378980();
+
+void func_00378ED0(Obj_00378F40 *arg0, Elem_00378F40 *arg1, f32 arg2);
+
+typedef struct Obj_00379550 {
+    u8 pad_0[0x8];
+    /* 0x008 */ s32 unk_8;
+    u8 pad_C[0x1C];
+    /* 0x028 */ f32 unk_28;
+    /* 0x02C */ f32 unk_2C;
+} Obj_00379550;
+
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377DF0", func_00377DF0);
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377DF0", func_00377F50);
@@ -83,7 +105,16 @@ INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377DF0", func_00378D90);
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377DF0", func_00378DE0);
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377DF0", func_00378E60);
+s32 func_00378E60(Obj_00378F40 *arg0)
+{
+    if (arg0 == 0)
+        return 1;
+    func_00378980();
+    if (arg0->unk_30[0].unk_0 != arg0->unk_30[1].unk_0)
+        func_00378ED0(arg0, &arg0->unk_30[0], 0.5f);
+    func_00378ED0(arg0, &arg0->unk_30[1], 1.0f);
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377DF0", func_00378ED0);
 
@@ -158,7 +189,15 @@ INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377DF0", func_00379310);
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377DF0", func_00379510);
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377DF0", func_00379550);
+// steps the value at +0x28 by the one at +0x2C; once it reaches 1.0 it is held there and the word at +0x8 becomes 2
+void func_00379550(Obj_00379550 *arg0)
+{
+    arg0->unk_28 += arg0->unk_2C;
+    if (!(arg0->unk_28 < 1.0f)) {
+        arg0->unk_28 = 1.0f;
+        arg0->unk_8 = 2;
+    }
+}
 
 s32 func_003795A0(Obj_003795A0 *arg0)
 {
@@ -169,7 +208,16 @@ s32 func_003795A0(Obj_003795A0 *arg0)
     return 1;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377DF0", func_003795F0);
+s32 func_003795F0(Obj_003795F0 *arg0)
+{
+    if (arg0 == 0)
+        return 0;
+    if (arg0->unk_4 == 3)
+        arg0->unk_14 = arg0->unk_10;
+    else
+        func_003784B0();
+    return 1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377DF0", func_00379640);
 

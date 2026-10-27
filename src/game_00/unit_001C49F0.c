@@ -30,6 +30,19 @@ typedef struct Obj_001C4FA0 {
     /* 0x2448 */ Sub_001C4FA0 *unk_2448;
 } Obj_001C4FA0;
 
+typedef struct Sub_001C4FE0 {
+    unsigned char unk_0[0x128];
+    /* 0x128 */ int counter_128;
+    /* 0x12C */ int counter_12C;
+} Sub_001C4FE0;
+
+typedef struct Obj_001C4FE0 {
+    unsigned char unk_0[0x244C];
+    /* 0x244C */ Sub_001C4FE0 *unk_244C;
+    unsigned char pad_2450[0x246C - 0x2450];
+    /* 0x246C */ int unk_246C;
+} Obj_001C4FE0;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C49F0", func_001C49F0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C49F0", func_001C4AA0);
@@ -76,4 +89,20 @@ int func_001C4FA0(Obj_001C4FA0 *p, int *arg1)
     return 0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C49F0", func_001C4FE0);
+int func_001C4FE0(Obj_001C4FE0 *p)
+{
+    Sub_001C4FE0 *s = p->unk_244C;
+
+    if (p->unk_246C != 0) {
+        s->counter_12C = 0;
+    }
+    if (s->counter_12C != 0) {
+        s->counter_12C--;
+        return 1;
+    }
+    if (s->counter_128 != 0) {
+        s->counter_128--;
+        return 1;
+    }
+    return 0;
+}

@@ -3,7 +3,7 @@
 #include "eekernel.h"
 #include "game_00/unit_0015AB90.h"
 
-extern u8 D_00522BD0[];
+extern u8 gMode[];
 
 extern u8 D_00522BD1[];
 
@@ -44,6 +44,14 @@ s32 sceCdStandby(void);
 s32 sceCdSync(s32 mode);
 
 s32 sceCdGetError(void);
+
+extern s32 D_00522C40[];
+
+s32 func_00206430();
+
+s32 func_00206B90();
+
+s32 func_00207010();
 
 int func_002062B0(void)
 {
@@ -87,7 +95,7 @@ s32 func_00206870(s32 arg0, s32 arg1, s32 arg2)
     n = func_00206A80(arg1);
     for (;;) {
         sceCdDiskReady(0);
-        if (sceCdRead(arg0, n, (void *)arg2, D_00522BD0) == 0) {
+        if (sceCdRead(arg0, n, (void *)arg2, gMode) == 0) {
             while (!sceCdStandby()) {
                 func_00206A10(1);
             }
@@ -128,7 +136,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206AA0);
 
 void func_00206B50(void)
 {
-    D_00522BD0[0] = 0;
+    gMode[0] = 0;
     D_00522BD1[0] = 1;
     D_00522BD2[0] = 0;
     D_00522BC8[0] = func_00206B80;
@@ -141,7 +149,19 @@ void func_00206B80(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206B90);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206C20);
+s32 func_00206C20(void)
+{
+    switch (D_00522C40[0]) {
+    case 3:
+        return func_00207010();
+    case 0:
+        return func_00206B90();
+    case 1:
+        return func_00206430();
+    default:
+        return 0;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206C90);
 

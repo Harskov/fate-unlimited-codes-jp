@@ -31,6 +31,8 @@ typedef struct Obj_00200DF0 {
 
 void func_002D0B70(void *arg0);
 
+extern int strcmp(const char *a, const char *b);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FE660", func_001FE660);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FE660", func_001FE7F0);
@@ -87,7 +89,15 @@ void func_002002E0(char *dst, char *src, char *ext)
     strcpy(dst, buf);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FE660", func_00200360);
+int func_00200360(char *a, char *b)
+{
+    int len;
+
+    len = strlen(b);
+    if (len > 0x1F)
+        b += len - 0x1F;
+    return strcmp(a, b);
+}
 
 void func_002003C0(char *dst, char *src)
 {

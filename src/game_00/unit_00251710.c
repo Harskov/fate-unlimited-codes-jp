@@ -25,6 +25,12 @@ extern s32 D_00522DB0[];
 
 void func_0020F230();
 
+Obj_00251F00 *func_00211510();
+
+void func_00251D80();
+
+Obj_00251F00 *func_00211490();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00251710);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00251CE0);
@@ -48,9 +54,31 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00251FA0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00252040);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_002520E0);
+Obj_00251F00 *func_002520E0(int arg0, int arg1, int arg2, int arg3)
+{
+    Obj_00251F00 *obj;
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00252160);
+    obj = func_00211510(arg2, func_00251D80, 0x38);
+    if (obj == 0)
+        return 0;
+    obj->unk_0 = 0;
+    obj->unk_4 = arg3;
+    func_00251F00(obj, arg0, 0, arg1);
+    return obj;
+}
+
+Obj_00251F00 *func_00252160(int arg0, int arg1, int arg2, int arg3)
+{
+    Obj_00251F00 *obj;
+
+    obj = func_00211490(arg2, func_00251D80, 0x38);
+    if (obj == 0)
+        return 0;
+    obj->unk_0 = 0;
+    obj->unk_4 = arg3;
+    func_00251F00(obj, arg0, 0, arg1);
+    return obj;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_002521E0);
 

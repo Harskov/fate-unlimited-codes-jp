@@ -26,7 +26,18 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A5D70", func_001A6190);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A5D70", func_001A6290);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A5D70", func_001A6300);
+int func_001A6300(Obj8 *p)
+{
+    switch (p->unk_0) {
+    case 1:
+        return func_001A6390(p);
+    case 2:
+        return func_001A6380(p);
+    case 3:
+        return func_001A6370(p);
+    }
+    return 0;
+}
 
 int func_001A6370(Obj8 *p)
 {

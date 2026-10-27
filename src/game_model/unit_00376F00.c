@@ -34,10 +34,10 @@ extern s32 D_00507D30[];
 
 typedef struct Sub_00377630 {
     /* 0x000 */ u8 pad_0[0x1DC];
-    /* 0x1DC */ s32 unk_1DC;
-    /* 0x1E0 */ s32 unk_1E0;
+    /* 0x1DC */ s32 flags_1DC;
+    /* 0x1E0 */ s32 flags_1E0;
     /* 0x1E4 */ u8 pad_1E4[0x8];
-    /* 0x1EC */ s32 unk_1EC;
+    /* 0x1EC */ s32 flags_1EC;
 } Sub_00377630;
 
 typedef struct Obj_00377630 {
@@ -51,12 +51,20 @@ typedef struct Obj_00377630 {
     /* 0x28 */ f32 unk_28;
 } Obj_00377630;
 
+void func_0036CE00();
+
 void func_00376F00(void)
 {
     func_0036D830();
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00376F00", func_00376F10);
+void func_00376F10(Obj_0036EBE0_A *arg0, s32 *arg1)
+{
+    s32 v = *arg1;
+    if ((v & 1) && (v & 2)) {
+        func_0036CE00(arg0, arg1, arg0->unk_4->unk_3C, 1);
+    }
+}
 
 void func_00376F50(Obj_0036EBE0_A *arg0, s32 arg1)
 {
@@ -108,13 +116,13 @@ void func_00377630(Obj_00377630 *arg0)
     p = arg0->unk_10;
     if (p == 0)
         return;
-    bits = p->unk_1E0 & 0x2722020;
+    bits = p->flags_1E0 & 0x2722020;
     flag = 1;
     if (bits == 0 && arg0->unk_20 < 91)
         flag = 0;
-    if (p->unk_1DC & 0x8000080)
+    if (p->flags_1DC & 0x8000080)
         return;
-    if (p->unk_1EC & 0x8000)
+    if (p->flags_1EC & 0x8000)
         return;
     if (bits != 0)
         arg0->unk_20 = 90;

@@ -18,13 +18,20 @@ void func_0020D070(f32 (*arg0)[4]);
 
 void func_0020D0C0(f32 (*arg0)[4]);
 
+extern s32 D_00501A80[];
+
+void func_002052F0();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020BC70", func_0020BC70);
 
 void func_0020BDE0(void)
 {
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020BC70", func_0020BDF0);
+void func_0020BDF0(f32 *arg0)
+{
+    func_002052F0(D_00501A80, arg0[0], arg0[1], arg0[2]);
+}
 
 void func_0020BE50(void)
 {

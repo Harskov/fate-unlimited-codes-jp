@@ -126,6 +126,19 @@ f32 fabsf(f32);
 
 f32 func_001E6C00(Obj_001E6240 *o);
 
+int func_002D3F38();
+
+int func_001FE9A0();
+
+void func_002D0B70();
+
+typedef struct Obj001FF000 {
+    u8 unk_0[0x3C];
+    s32 unk_3C;
+} Obj001FF000;
+
+extern Obj001FF000 *func_001FF000(void *, s32);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E51D0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E5230);
@@ -161,7 +174,18 @@ int func_001E5320(Obj_001E5320 *arg0)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E5350);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E53C0);
+int func_001E53C0(char *arg0, int arg1, int arg2)
+{
+    char buf[128];
+    int result;
+    int handle;
+
+    handle = func_002D3F38(arg1);
+    func_002002E0(buf, arg0, arg2);
+    result = func_001FE9A0(buf, handle);
+    func_002D0B70(handle);
+    return result;
+}
 
 // formats a string into a 256-byte buffer with a fixed format, then passes it on with 8, 0x04000000 and -1 (probably a debug text draw)
 void func_001E5430(char *arg0)
@@ -174,7 +198,15 @@ void func_001E5430(char *arg0)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E5470);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E54E0);
+s32 func_001E54E0(void *arg0, s32 arg1)
+{
+    Obj001FF000 *obj = func_001FF000(arg0, arg1 | 8);
+    if (obj != 0)
+    {
+        return obj->unk_3C;
+    }
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E5510);
 

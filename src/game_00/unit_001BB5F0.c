@@ -152,7 +152,18 @@ int func_001BB890(Obj2524 *arg0, int arg1)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001BB5F0", func_001BB900);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001BB5F0", func_001BBBB0);
+int func_001BBBB0(Flags4 *arg0)
+{
+    switch (arg0->unk_0) {
+    case 1:
+        return func_001BBC80(arg0);
+    case 2:
+        return func_001BBC50(arg0);
+    case 3:
+        return func_001BBC20(arg0);
+    }
+    return 0;
+}
 
 int func_001BBC20(Flags4 *arg0)
 {

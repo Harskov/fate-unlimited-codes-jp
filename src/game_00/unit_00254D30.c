@@ -40,11 +40,30 @@ void func_00255520(void);
 
 void func_00255550();
 
+s32 func_00252A20();
+
+void func_00252B80();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00254D30", func_00254D30);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00254D30", func_00254DE0);
+void func_00254DE0(void)
+{
+    if (func_00255590() == 0) {
+        return;
+    }
+    do {
+        func_00252B80(0);
+    } while (func_00252A20(0x8000000C, 1) != 0);
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00254D30", func_00254E30);
+s32 func_00254E30(void)
+{
+    if (func_00255590() != 0) {
+        func_00252B80(0);
+        return func_00252A20(0x8000000C, 1);
+    }
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00254D30", func_00254E80);
 

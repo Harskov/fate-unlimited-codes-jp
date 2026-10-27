@@ -20,6 +20,12 @@ extern void func_001F4300();
 
 extern void func_002E6908();
 
+extern int D_0052479C[];
+
+extern void func_002C42A0();
+
+extern void func_002C4200();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F3630", func_001F3630);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F3630", func_001F36E0);
@@ -63,7 +69,12 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F3630", func_001F4360);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F3630", func_001F47B0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F3630", func_001F4870);
+int func_001F4870(int arg0, int arg1)
+{
+    func_002C42A0(D_0052479C[0], arg0);
+    func_002C4200(arg1, arg0);
+    return arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F3630", func_001F48C0);
 

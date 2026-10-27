@@ -37,6 +37,18 @@ Sub_00377B80 *func_0015A4F0(void);
 
 void func_00378F40(void *arg0, Obj_00377740 *arg1, s32 arg2, s32 arg3, s32 arg4, s32 arg5, s32 arg6, s32 arg7, f32 arg8);
 
+typedef struct Sub_00377CC0 {
+    u8 pad_0[0x10];
+    s32 unk_10;
+} Sub_00377CC0;
+
+typedef struct Obj_00377CC0 {
+    u8 pad_0[8];
+    Sub_00377CC0 *unk_8;
+    u8 pad_C[0x184];
+    s32 unk_190;
+} Obj_00377CC0;
+
 s32 func_00377740(Obj_00377740 *arg0, s32 arg1)
 {
     if (arg0 == 0)
@@ -133,6 +145,17 @@ void *func_00377B80(Obj_00377740 *arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4, 
     return p;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377740", func_00377CC0);
+void func_00377CC0(Obj_00377CC0 *arg0)
+{
+    s32 a;
+    s32 b;
+
+    if (arg0 != 0) {
+        a = func_0020CE80(&arg0->unk_190);
+        b = func_0020CE80(&arg0->unk_8->unk_10);
+        func_0015D130(a, b);
+        func_002E65E0(arg0->unk_8, &arg0->unk_190, 0);
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377740", func_00377D20);

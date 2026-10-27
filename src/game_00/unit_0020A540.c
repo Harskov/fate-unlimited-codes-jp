@@ -34,6 +34,8 @@ void func_0020EF40();
 
 void func_0020F230();
 
+float sqrtf(float x);
+
 // fills the four handler slots with the timer-0 callbacks and returns the first slot's address
 s32 *func_0020A540(void)
 {
@@ -97,4 +99,14 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020A540", func_0020B8E0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020A540", func_0020BB40);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020A540", func_0020BC10);
+// scales the four floats at arg1 by the inverse of their length into arg0 (a quaternion normalise, probably: w at +0xC is written first)
+void func_0020BC10(f32 *arg0, f32 *arg1)
+{
+    f32 len;
+
+    len = sqrtf(arg1[3] * arg1[3] + arg1[0] * arg1[0] + arg1[1] * arg1[1] + arg1[2] * arg1[2]);
+    arg0[3] = arg1[3] / len;
+    arg0[0] = arg1[0] / len;
+    arg0[1] = arg1[1] / len;
+    arg0[2] = arg1[2] / len;
+}

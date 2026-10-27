@@ -25,6 +25,14 @@ typedef struct Obj_00210CB0 {
 
 Obj_00210CB0 *func_00210CB0(s32);
 
+extern s32 D_005231D8[];
+
+extern s32 D_005231E0[];
+
+void func_00210F70();
+
+void func_00211600();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00211170", func_00211170);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00211170", func_00211190);
@@ -82,6 +90,12 @@ void func_00211580(s32 arg0)
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00211170", func_002115C0);
+void func_002115C0(void)
+{
+    D_005231D8[0] = 0;
+    func_00211600(D_00523200, 0x1E);
+    func_00211580(0);
+    func_00210F70(D_005231E0);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00211170", func_00211600);

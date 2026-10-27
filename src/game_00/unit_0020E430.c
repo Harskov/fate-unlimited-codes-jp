@@ -4,6 +4,8 @@ extern s32 D_00522D80[];
 
 void func_00123470();
 
+s32 func_0011E260(s32 arg0);
+
 s32 func_0020E430(s32 a, s32 b, f32 t)
 {
     f32 fa = (f32)a;
@@ -48,7 +50,20 @@ s32 func_0020E5F0(s32 arg0, s32 arg1, s32 arg2, s32 arg3)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020E430", func_0020E620);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020E430", func_0020E6B0);
+s32 func_0020E6B0(s32 arg0)
+{
+    s32 rem;
+
+    arg0 %= 360;
+    if (func_0011E260(arg0) > 180) {
+        rem = arg0 % 180;
+        if (arg0 >= 0)
+            arg0 = rem - 180;
+        else
+            arg0 = rem + 180;
+    }
+    return arg0;
+}
 
 void func_0020E720(s32 arg0)
 {

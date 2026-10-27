@@ -10,15 +10,51 @@ extern s32 D_0051EE90[];
 
 extern s32 D_0051EF10[];
 
+s32 func_001A27C0();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D5FE0", func_001D5FE0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D5FE0", func_001D6050);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D5FE0", func_001D63B0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D5FE0", func_001D6550);
+s32 func_001D6550(s32 arg0, s32 arg1, s32 arg2)
+{
+    s32 *slot;
+    s32 v;
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D5FE0", func_001D65D0);
+    if (arg1 < 0 || arg1 >= 0x20) {
+        *(long long *)1 = 0;
+    }
+    slot = &D_0051EE90[arg1];
+    if (*slot == 0) {
+        *(long long *)1 = 0;
+    }
+    v = ((s32 *)*slot)[arg2];
+    if (v == -1) {
+        return 0;
+    }
+    return func_001A27C0(arg0, v);
+}
+
+s32 func_001D65D0(s32 arg0, s32 arg1, s32 arg2)
+{
+    s32 *slot;
+    s32 v;
+
+    if (arg1 < 0 || arg1 >= 0x20) {
+        *(long long *)1 = 0;
+    }
+    slot = &D_0051EF10[arg1];
+    if (*slot == 0) {
+        *(long long *)1 = 0;
+    }
+    v = ((s32 *)*slot)[arg2];
+    if (v == -1) {
+        return 0;
+    }
+    return func_001A27C0(arg0, v);
+}
 
 void func_001D6650(void)
 {

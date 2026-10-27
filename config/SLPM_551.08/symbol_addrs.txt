@@ -759,3 +759,5 @@ gHandlerId = 0x00522D68;
 gAddIntcHandlerResult = 0x003D7BC8;
 gFormat_5068B0 = 0x005068B0;
 gFormat_5068B8 = 0x005068B8;
+gSemaId = 0x003DF8F0;
+gMode = 0x00522BD0;

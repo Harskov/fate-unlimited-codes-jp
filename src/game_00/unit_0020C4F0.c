@@ -52,7 +52,23 @@ void *func_0020CEB0(void *arg0)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020C4F0", func_0020CEC0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020C4F0", func_0020CF00);
+void func_0020CF00(s32 arg0, s32 arg1, s32 arg2)
+{
+    switch (arg1) {
+    case 0:
+        func_0015D130(arg0, arg2);
+        break;
+    case 1:
+        func_0015D130(arg0, arg2 + 0x10);
+        break;
+    case 2:
+        func_0015D130(arg0, arg2 + 0x20);
+        break;
+    case 3:
+        func_0015D130(arg0, arg2 + 0x30);
+        break;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020C4F0", func_0020CF80);
 

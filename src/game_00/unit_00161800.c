@@ -1,7 +1,12 @@
 #include "common.h"
 #include "libc.h"
 
-/* 0x60 */ typedef struct Holder { unsigned char pad[0x60]; short *unk_60; } Holder;
+/* 0x60 */ typedef struct Holder {
+    unsigned char pad[0x60];
+    /* 0x60 */ short *unk_60;
+    u8 pad_64[8];
+    /* 0x6C */ struct Elem_00161970 *unk_6C;
+} Holder;
 
 void func_002E01C8(float *arg0, float *arg1);
 
@@ -52,9 +57,28 @@ typedef struct Sub_00161E60 {
 
 extern Sub_00161E60 *func_0018A110(s32, void *, void *);
 
+typedef struct Sub_00161970 {
+    u8 pad_0[0xC];
+    /* 0x0C */ s32 unk_C;
+} Sub_00161970;
+
+typedef struct Elem_00161970 {
+    u8 pad_0[0xC];
+    /* 0x0C */ Sub_00161970 *unk_C;
+    u8 pad_10[0xE0];
+} Elem_00161970;
+
+int func_002E6C10();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00161800", func_00161800);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00161800", func_00161970);
+int func_00161970(Holder *h, int i)
+{
+    int idx = func_001619C0(h, i);
+    if (idx < 0)
+        return 0;
+    return func_002E6C10(h->unk_6C[idx].unk_C->unk_C);
+}
 
 int func_001619C0(Holder *h, int i)
 {

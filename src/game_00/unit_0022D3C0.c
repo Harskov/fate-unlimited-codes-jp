@@ -4,7 +4,7 @@
 typedef struct Obj_0022E284 {
     u8 unk_0[0x20];
     void **unk_20;
-    s32 unk_24;
+    /* 0x24 */ s32 count;
 } Obj_0022E284;
 
 typedef struct Obj_0022E250 {
@@ -41,7 +41,7 @@ Obj_0022E250 *func_0022E250(Obj_0022E250 *arg0)
     sub = arg0->unk_18;
     if (sub == 0)
         return arg0;
-    count = sub->unk_24;
+    count = sub->count;
     for (i = 0; i < count; i++) {
         item = sub->unk_20[i];
         if (func_002ADB48(item) == 0) {

@@ -34,6 +34,16 @@ typedef struct Obj_00205050 {
     Elem_00205050 *unk_4;
 } Obj_00205050;
 
+extern s32 D_00522BB8[];
+
+extern s32 D_00522BBC[];
+
+s32 func_0020FA40(void);
+
+void func_002053E0(char *arg0, s32 arg1);
+
+int sprintf(char *s, const char *format, ...);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_00204AD0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_00204D80);
@@ -89,10 +99,27 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_00205250);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_002052F0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_00205390);
+/* formats the message into a local buffer and hands it on, but only while func_0020FA40 reports below 2 */
+s32 func_00205390(const char *format)
+{
+    char buf[256];
+
+    if (func_0020FA40() > 1)
+        return 0;
+    sprintf(buf, format);
+    func_002053E0(buf, 0);
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_002053E0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_00205760);
+void func_00205760(s32 arg0, s32 arg1)
+{
+    if (func_0020FA40() >= 2) {
+        return;
+    }
+    D_00522BB8[0] = arg0;
+    D_00522BBC[0] = arg1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_002057B0);

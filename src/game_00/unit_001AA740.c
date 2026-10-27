@@ -33,7 +33,7 @@ extern int D_0051D968[];
 typedef struct Obj_001AB040 {
     /* 0x0000 */ int unk_0;
     u8 pad_4[0x1D8];
-    /* 0x01DC */ int unk_1DC;
+    /* 0x01DC */ int flags_1DC;
     /* 0x01E0 */ int unk_1E0;
     /* 0x01E4 */ int unk_1E4;
     /* 0x01E8 */ int unk_1E8;
@@ -72,7 +72,7 @@ typedef struct Obj_001AB040 {
     /* 0x2398 */ int unk_2398;
     /* 0x239C */ int unk_239C;
     /* 0x23A0 */ int unk_23A0;
-    /* 0x23A4 */ int unk_23A4;
+    /* 0x23A4 */ int flags_23A4;
     /* 0x23A8 */ int unk_23A8;
     /* 0x23AC */ u8 unk_23AC[0x28];
     /* 0x23D4 */ int unk_23D4;
@@ -87,7 +87,25 @@ typedef struct Obj_001AB040 {
 Obj_001AB040 *func_0019D0B0(int i);
 
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AA740", func_001AA740);
+typedef struct Elem_001AA740 {
+    u8 unk_0[0x1C];
+} Elem_001AA740;
+
+typedef struct Sub_001AA740 {
+    u8 unk_0[0x10EC];
+    Elem_001AA740 unk_10EC[16];
+} Sub_001AA740;
+
+void func_001AA180();
+
+void func_001AA740(Sub_001AA740 *p)
+{
+    int i;
+
+    for (i = 0; i < 16; i++) {
+        func_001AA180(&p->unk_10EC[i]);
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AA740", func_001AA790);
 
@@ -127,8 +145,8 @@ void func_001AB040(Obj_001AB040 *o)
         p = func_0019D0B0(i);
         if (p == 0)
             break;
-        flags = p->unk_1DC;
-        if (!(flags & 0x80) && !(flags & 0x8) && !(flags & 0x1000) && (p->unk_23A4 & 1)) {
+        flags = p->flags_1DC;
+        if (!(flags & 0x80) && !(flags & 0x8) && !(flags & 0x1000) && (p->flags_23A4 & 1)) {
             found = 1;
             break;
         }

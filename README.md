@@ -27,19 +27,19 @@ You need Linux x86-64 (WSL2 on Windows works), Python 3.9 or newer, git, and you
 
 ## Progress
 
-**1324 of 5827 game functions are matched** (17,270 of 560,059 instructions, 3.08 %). 4 of the matched and 6 of all game functions carry a name whose evidence a script checked; so do 4 of 428 types, 84 of 1124 members the matched code reaches, 11 of 762 globals the matched code reaches; 5827 functions carry a subsystem label. Every name and its evidence: [docs/NAMES.md](docs/NAMES.md).
+**1477 of 5827 game functions are matched** (20,777 of 560,059 instructions, 3.71 %). 5 of the matched and 6 of all game functions carry a name whose evidence a script checked; so do 4 of 503 types, 117 of 1268 members the matched code reaches, 13 of 798 globals the matched code reaches; 5827 functions carry a subsystem label. Every name and its evidence: [docs/NAMES.md](docs/NAMES.md).
 
 | Milestone | Status | Exit judged on |
 |---|---|---|
 | M1 Contributable | done | public-build.json ok=True; matched outside their unit: 0 |
-| M2 Identified | done | name pass closed: True; unlabelled game functions: 0; review pending: 0 |
-| M3 Platform boundary | current | 56/317 platform functions matched; PLATFORM.md present |
-| M4 Core | later | 40/139 core functions matched; FORMATS.md missing |
-| M5 Gameplay | later | 1228/5371 gameplay functions matched |
-| M6 Complete | later | 1324/5827 game functions matched; check ok=True |
+| M2 Identified | current | name pass closed: True; unlabelled game functions: 0; review pending: 153 |
+| M3 Platform boundary | later | 57/317 platform functions matched; PLATFORM.md present |
+| M4 Core | later | 48/139 core functions matched; FORMATS.md missing |
+| M5 Gameplay | later | 1372/5371 gameplay functions matched |
+| M6 Complete | later | 1477/5827 game functions matched; check ok=True |
 | M7 Documented | later | docs.py check ok=None (never run) |
 | M8 Behaviour-verified | not required | last behaviour compare ok=None at never |
-| M9 Reverse-engineered | later | names without checked evidence: 0; matches since the last name pass: 37; named types with two layouts: 0 |
+| M9 Reverse-engineered | done | names without checked evidence: 0; matches since the last name pass: 0; named types with two layouts: 0 |
 
 The milestones and why they come in this order: [ROADMAP.md](ROADMAP.md).
 

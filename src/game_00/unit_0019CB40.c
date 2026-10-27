@@ -56,7 +56,21 @@ int func_0019CFF0(Obj *p)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019CB40", func_0019D000);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019CB40", func_0019D040);
+int *func_0019D040(int arg0)
+{
+    int *func_0019D0B0(int i);
+    int i;
+    int *p;
+
+    if (arg0 < 0)
+        return 0;
+    for (i = 0; i < 10; i++) {
+        p = func_0019D0B0(i);
+        if (p != 0 && p[1] == arg0)
+            return p;
+    }
+    return 0;
+}
 
 int *func_0019D0B0(int i)
 {

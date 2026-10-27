@@ -62,6 +62,20 @@ void sceGsSyncPath(s32, s32);
 
 void FlushCache(s32);
 
+extern s32 D_00527880[];
+
+extern s32 D_00527948[];
+
+extern s32 D_00527950[];
+
+extern s32 D_00527998[];
+
+void func_0021E040();
+
+void func_0021E0F0();
+
+void func_0021E340();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021D690);
 
 /* probably the uncached mirror of a main-memory address: the EE maps RAM uncached at 0x20000000 */
@@ -114,7 +128,13 @@ void func_0021E330(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021E340);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021E760);
+s32 func_0021E760(void)
+{
+    func_0021E0F0();
+    func_0021E340(D_00527880, D_00527998[0], D_00527950);
+    func_0021E040();
+    return D_00527948[0];
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021E7B0);
 

@@ -21,9 +21,21 @@ typedef struct Obj_00219050 {
     Sub_00219050 *unk_334;
 } Obj_00219050;
 
+extern s32 D_00522DB0[];
+
+extern s32 D_00524800[];
+
+extern s32 D_00524804[];
+
+s32 func_0020F180(s32 *arg0, s32 arg1);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00218F20", func_00218F20);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00218F20", func_00218F60);
+void func_00218F60(s32 arg0)
+{
+    D_00524800[0] = func_0020F180(D_00522DB0, (arg0 * 0x180 + 0xF) & ~0xF);
+    D_00524804[0] = arg0 * 6;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00218F20", func_00218FC0);
 

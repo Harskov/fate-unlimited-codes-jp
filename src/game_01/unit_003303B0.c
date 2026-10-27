@@ -3,7 +3,7 @@
 extern s32 D_00531BB4[][29];
 
 typedef struct Obj_00330410 {
-    /* 0x00 */ s32 unk_0;
+    /* 0x00 */ s32 flags;
     /* 0x04 */ u8 pad_4[0x30];
     /* 0x34 */ f32 unk_34;
 } Obj_00330410;
@@ -27,7 +27,7 @@ void func_00330410(Obj_00330410 *arg0, f32 *arg1, f32 *arg2, f32 *arg3, f32 *arg
     f32 x;
     f32 ofs;
 
-    if (!(arg0->unk_0 & 0x100000)) {
+    if (!(arg0->flags & 0x100000)) {
         arg4[0] = arg3[0];
         arg4[1] = arg3[1];
         arg4[2] = arg3[2];

@@ -1,6 +1,21 @@
 #include "common.h"
 #include "game_00/obj2524.h"
 
+typedef struct Obj_001BFA60 {
+    unsigned char unk_0[0x460];
+    float unk_460;
+    float unk_464;
+    float unk_468;
+} Obj_001BFA60;
+
+typedef struct Sub_001BFA60 {
+    float unk_0;
+    int unk_4;
+    float unk_8;
+} Sub_001BFA60;
+
+float func_00167D10(Sub_001BFA60 *a, Sub_001BFA60 *b);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001BF730", func_001BF730);
 
 int func_001BF7C0(int a, int b)
@@ -59,7 +74,23 @@ float func_001BF8B0(Obj2524 *arg0)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001BF730", func_001BF920);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001BF730", func_001BFA60);
+float func_001BFA60(Obj_001BFA60 *arg0, Obj_001BFA60 *arg1)
+{
+    Sub_001BFA60 a;
+    Sub_001BFA60 b;
+
+    if (arg0 == 0)
+        return 0.0f;
+    if (arg1 == 0)
+        return 0.0f;
+    a.unk_0 = arg0->unk_460;
+    a.unk_4 = 0;
+    a.unk_8 = arg0->unk_468;
+    b.unk_0 = arg1->unk_460;
+    b.unk_4 = 0;
+    b.unk_8 = arg1->unk_468;
+    return func_00167D10(&a, &b);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001BF730", func_001BFAD0);
 

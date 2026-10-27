@@ -4,7 +4,7 @@
 #include "game_00/unit_0015AB90.h"
 
 typedef struct Rec0051A424 {
-    s32 unk_00;
+    /* 0x00 */ s32 flags;
     u8 unk_04[0x34];
 } Rec0051A424;
 
@@ -23,6 +23,17 @@ void func_00145DC0();
 void func_00145C50();
 
 s32 func_0013B9C8();
+
+typedef struct Obj_0051A440 {
+    f32 unk_00;
+    u8 unk_04[0x34];
+} Obj_0051A440;
+
+extern Rec0051A424 D_0051A420[];
+
+extern Rec0051A424 D_0051A434[];
+
+extern Obj_0051A440 D_0051A440[];
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015AB90", func_0015AB90);
 
@@ -76,22 +87,22 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015AB90", func_0015AF20);
 
 void func_0015AF90(s32 i, s32 arg1)
 {
-    func_00144F88(D_0051A424[i].unk_00, arg1);
+    func_00144F88(D_0051A424[i].flags, arg1);
 }
 
 void func_0015AFB0(s32 i)
 {
-    func_00145938(D_0051A424[i].unk_00);
+    func_00145938(D_0051A424[i].flags);
 }
 
 s32 func_0015AFD0(s32 i)
 {
-    return func_00144570(D_0051A424[i].unk_00) * 60 / 100;
+    return func_00144570(D_0051A424[i].flags) * 60 / 100;
 }
 
 void func_0015B030(s32 i)
 {
-    func_00143EA8(D_0051A424[i].unk_00);
+    func_00143EA8(D_0051A424[i].flags);
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015AB90", func_0015B050);
@@ -100,21 +111,32 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015AB90", func_0015B0F0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015AB90", func_0015B1B0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015AB90", func_0015B240);
+s32 func_0015B240(s32 i)
+{
+    if (!(D_0051A420[i].flags & 4)) {
+        return 0;
+    }
+    if (D_0051A434[i].flags != 0) {
+        if (D_0051A440[i].unk_00 < 0.0001f) {
+            return 1;
+        }
+    }
+    return 0;
+}
 
 void func_0015B2C0(s32 i)
 {
-    func_00145DC0(D_0051A424[i].unk_00);
+    func_00145DC0(D_0051A424[i].flags);
 }
 
 void func_0015B2E0(s32 i)
 {
-    func_00145C50(D_0051A424[i].unk_00, 0);
+    func_00145C50(D_0051A424[i].flags, 0);
 }
 
 void func_0015B310(s32 i)
 {
-    func_00145C50(D_0051A424[i].unk_00, 1);
+    func_00145C50(D_0051A424[i].flags, 1);
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015AB90", func_0015B340);

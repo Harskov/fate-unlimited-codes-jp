@@ -30,7 +30,7 @@ typedef struct Obj_001C0A80 {
     u8 unk_44[0xBD0];
     f32 unk_C14;
     u8 unk_C18[0x18F0];
-    struct Obj_001C0A80 *unk_2508;
+    /* 0x2508 */ struct Obj_001C0A80 *next;
 } Obj_001C0A80;
 
 void func_001C1000(Obj2524 *arg0);
@@ -60,7 +60,7 @@ int func_001C0A60(Obj2524 *arg0, s32 arg1, s32 arg2, s32 arg3)
     p = c->unk_C;
     if (p == 0)
         return 0;
-    q = p->unk_2508;
+    q = p->next;
     if (q == 0)
         return 0;
     if (&arg0->unk_220 == 0)

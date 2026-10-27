@@ -17,11 +17,25 @@ extern s8 D_00522D19[];
 
 extern s8 D_00522D1A[];
 
+void func_00209950();
+
+void func_00253870();
+
 void func_002098A0(void)
 {
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002098A0", func_002098B0);
+void func_002098B0(s32 arg0, s32 arg1)
+{
+    void func_002099F0(s32 arg0);
+
+    func_002099F0(arg0);
+    func_002098A0();
+    func_00209950(arg0, 0);
+    if (arg1 != 0) {
+        func_00253870();
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002098A0", func_00209910);
 

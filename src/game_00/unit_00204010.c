@@ -68,7 +68,30 @@ s32 func_002E6CC0(void);
 
 void func_002EDCA8(s32 arg0, s32 arg1);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204010", func_00204010);
+extern s32 D_00522B10[];
+
+extern s32 D_00522B14[];
+
+void func_002B5E40();
+
+void func_002E6D18();
+
+void func_002C1A78();
+
+// releases the handles func_00204090 sets up; the last one only while flag 0x800 is set
+void func_00204010(void)
+{
+    if (D_00520074[0] != 0) {
+        if (D_00520078[0] != 0) {
+            func_002E6D18(D_00520078[0]);
+        }
+        func_002B5E40(D_00520074[0]);
+    }
+    if (D_0052007C[0] != 0 && (D_00520060[0] & 0x800)) {
+        func_002C1A78(D_0052007C[0]);
+        D_0052007C[0] = 0;
+    }
+}
 
 // clears the 0x24-byte block at D_00520060, sets up its handles, then sets flag 0x800
 void func_00204090(void)
@@ -155,7 +178,17 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204010", func_00204860);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204010", func_00204900);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204010", func_00204A10);
+void func_00204A10(void)
+{
+    if (D_00522B10[0] == 0) {
+        return;
+    }
+    func_002EDCA8(D_00522B10[0], 0);
+    func_002E6D18(D_00522B14[0]);
+    func_002B5E40(D_00522B10[0]);
+    D_00522B10[0] = 0;
+    D_00522B14[0] = 0;
+}
 
 void func_00204A70(void)
 {

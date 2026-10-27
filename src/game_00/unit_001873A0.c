@@ -6,6 +6,13 @@ extern s32 D_0051A89C[];
 
 void func_003115F8();
 
+typedef struct Obj_0018BE30 {
+    s32 unk_0;
+    s32 unk_4;
+    /* 0x08 */ struct Obj_0018BE30 *link_8;
+    struct Obj_0018BE30 *unk_C;
+} Obj_0018BE30;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001873A0", func_001873A0);
 
 int func_00187940(void)
@@ -66,6 +73,16 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001873A0", func_0018B8C0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001873A0", func_0018BDA0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001873A0", func_0018BE30);
+void func_0018BE30(s32 *arg0)
+{
+    Obj_0018BE30 *node;
+
+    node = ((Obj_0018BE30 *)func_0018A100(arg0))->unk_C;
+    while (node->unk_0 != 1) {
+        func_0018BDA0(node->unk_0);
+        node = node->link_8;
+    }
+    func_00210D60(arg0);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001873A0", func_0018BEA0);

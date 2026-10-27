@@ -99,6 +99,10 @@ void func_0015D130();
 
 double pow(double, double);
 
+void func_00165EA0();
+
+void func_0016CFD0(Vec4 *dst, Vec4 *src, f32 scale);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_00179310);
 
 void func_00179380(Link *n)
@@ -170,7 +174,14 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_00179760);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_0017A1B0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_0017A230);
+void func_0017A230(void *arg0, s32 arg1, f32 scale)
+{
+    Vec4 v;
+
+    func_00165EA0(&v);
+    func_0016CFD0(&v, &v, scale);
+    func_00165EA0(arg0, arg1, &v);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_0017A290);
 

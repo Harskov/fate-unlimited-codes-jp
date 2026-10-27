@@ -20,6 +20,14 @@ void func_0015E900();
 
 void func_0015C360();
 
+extern s32 D_0051A578[];
+
+void func_0015BFC0();
+
+void func_0015C610();
+
+void func_0015E8A0();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015BFC0", func_0015BFC0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015BFC0", func_0015C020);
@@ -57,7 +65,17 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015BFC0", func_0015C610);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015BFC0", func_0015CB70);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015BFC0", func_0015CF10);
+void func_0015CF10(void)
+{
+    if (D_0051A580[0] == 1) {
+        D_0051A580[0] = 0;
+        func_0015E8A0();
+        func_0015BFC0(D_0051A578);
+        func_0015C610();
+        func_0015C580();
+        func_0015BF70();
+    }
+}
 
 // one-time setup: guard on the init flag, then clear the two state blocks
 void func_0015CF80(void)

@@ -150,7 +150,20 @@ int func_0021F4D0(Obj0021F4D0 *obj, void *path)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F570);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F5E0);
+void func_0021F5E0(s32 *arg0)
+{
+    switch (*arg0) {
+    case 0:
+        func_0021F370((Obj0021F370 *)arg0);
+        break;
+    case 1:
+        func_0021F340((Obj0021F340 *)arg0);
+        break;
+    case 3:
+        func_0021F320((Obj38 *)arg0);
+        break;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F650);
 
