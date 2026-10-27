@@ -111,13 +111,13 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015AB90", func_0015B0F0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015AB90", func_0015B1B0);
 
-s32 func_0015B240(s32 i)
+s32 func_0015B240(s32 arg0)
 {
-    if (!(D_0051A420[i].flags & 4)) {
+    if (!(D_0051A420[arg0].flags & 4)) {
         return 0;
     }
-    if (D_0051A434[i].flags != 0) {
-        if (D_0051A440[i].unk_00 < 0.0001f) {
+    if (D_0051A434[arg0].flags != 0) {
+        if (D_0051A440[arg0].unk_00 < 0.0001f) {
             return 1;
         }
     }

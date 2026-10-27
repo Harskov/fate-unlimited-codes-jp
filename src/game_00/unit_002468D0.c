@@ -338,11 +338,10 @@ Obj_00249A20 *func_00249A20(Obj_00249A20 *a0, s32 a1)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002468D0", func_00249A40);
 
-/* copies the four bytes whole into the member at +0x4 and returns the object */
-Obj_00249A90 *func_00249A90(Obj_00249A90 *a0, Sub_00249A90 *a1)
+Obj_00249A90 *func_00249A90(Obj_00249A90 *arg0, Sub_00249A90 *arg1)
 {
-    a0->unk_4 = *a1;
-    return a0;
+    arg0->unk_4 = *arg1;
+    return arg0;
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002468D0", func_00249AC0);

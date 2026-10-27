@@ -117,7 +117,7 @@ void func_001D8240(void *arg0, f32 *arg1)
 
     if (zero == arg1[0] && zero == arg1[1] && zero == arg1[2])
         arg1[2] = 0.001f;
-    func_00165EE0();
+    func_00165EE0(arg0, arg1);
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D6EA0", func_001D82A0);

@@ -89,14 +89,14 @@ void func_002002E0(char *dst, char *src, char *ext)
     strcpy(dst, buf);
 }
 
-int func_00200360(char *a, char *b)
+int func_00200360(char *arg0, char *arg1)
 {
     int len;
 
-    len = strlen(b);
+    len = strlen(arg1);
     if (len > 0x1F)
-        b += len - 0x1F;
-    return strcmp(a, b);
+        arg1 += len - 0x1F;
+    return strcmp(arg0, arg1);
 }
 
 void func_002003C0(char *dst, char *src)

@@ -71,12 +71,12 @@ void func_001A2BF0(int arg0, int arg1, int arg2, int arg3)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A27D0", func_001A2C70);
 
-int func_001A2DD0(Obj_001A2DD0 *h, int i)
+int func_001A2DD0(Obj_001A2DD0 *arg0, int arg1)
 {
-    int idx = func_001619C0(h, i);
+    int idx = func_001619C0(arg0, arg1);
     if (idx < 0)
         return 0;
-    return func_002E6C10(h->unk_6C[idx].unk_C->unk_C);
+    return func_002E6C10(arg0->unk_6C[idx].unk_C->unk_C);
 }
 
 int func_001A2E20(Src *s, Vec3 *dst, float *out, Obj_001A27D0 *o, int i, float w)
@@ -88,14 +88,14 @@ int func_001A2E20(Src *s, Vec3 *dst, float *out, Obj_001A27D0 *o, int i, float w
     return i + 1;
 }
 
-void func_001A2E60(Src *s)
+void func_001A2E60(Src *arg0)
 {
     Vec4 a;
     Vec3 b;
     float c;
 
     func_0015EE20(&b, 0.0f, -1.0f, 0.0f);
-    func_0015D130(&a, &s->unk_460);
+    func_0015D130(&a, &arg0->unk_460);
     func_001B7BF0(&a, &c);
 }
 
@@ -112,9 +112,9 @@ void func_001A3560(int i)
     r[9].unk_14 = 0;
 }
 
-void func_001A3580(int i)
+void func_001A3580(int arg0)
 {
-    Rec0051D890 *r = &D_0051D890[i];
+    Rec0051D890 *r = &D_0051D890[arg0];
     int *p = &r[9].unk_10;
 
     p[1] = func_0020E5F0(p[1], 1, 0, 100);

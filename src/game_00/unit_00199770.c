@@ -74,7 +74,7 @@ typedef struct Obj0019D040 {
 
 extern void func_0015D130(float *v, int a);
 
-extern int func_00199850(int a, int b);
+int func_00199850(int arg0, int arg1);
 
 extern Obj0019D040 *func_0019D040(int a);
 
@@ -177,14 +177,14 @@ void func_00199770(Obj00199770 *o)
     }
 }
 
-int func_00199850(int a, int b)
+int func_00199850(int arg0, int arg1)
 {
     int i;
 
-    i = func_001619C0(a, b);
+    i = func_001619C0(arg0, arg1);
     if (i < 0)
         return 0;
-    return func_0020CE80(func_002E6C10(((Obj_00199850 *)a)->unk_6C[i].unk_C->unk_C));
+    return func_0020CE80(func_002E6C10(((Obj_00199850 *)arg0)->unk_6C[i].unk_C->unk_C));
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00199770", func_001998B0);

@@ -98,20 +98,20 @@ void func_001F65E0(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F5B10", func_001F65F0);
 
-void func_001F6630(f32 *dst, u16 *a, u16 *b, f32 t)
+void func_001F6630(f32 *arg0, u16 *arg1, u16 *arg2, f32 arg3)
 {
     s32 la[4];
     s32 lb[4];
 
-    la[0] = a[0] << 16;
-    la[1] = a[1] << 16;
-    la[2] = a[2] << 16;
-    la[3] = a[3] << 16;
-    lb[0] = b[0] << 16;
-    lb[1] = b[1] << 16;
-    lb[2] = b[2] << 16;
-    lb[3] = b[3] << 16;
-    func_001F6180(dst, (f32 *)la, (f32 *)lb, t);
+    la[0] = arg1[0] << 16;
+    la[1] = arg1[1] << 16;
+    la[2] = arg1[2] << 16;
+    la[3] = arg1[3] << 16;
+    lb[0] = arg2[0] << 16;
+    lb[1] = arg2[1] << 16;
+    lb[2] = arg2[2] << 16;
+    lb[3] = arg2[3] << 16;
+    func_001F6180(arg0, (f32 *)la, (f32 *)lb, arg3);
 }
 
 void func_001F66B0(f32 *dst, u16 *src)

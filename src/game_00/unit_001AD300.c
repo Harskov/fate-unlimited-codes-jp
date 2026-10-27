@@ -110,9 +110,9 @@ void func_001AE2F0(Obj_001AE2F0 *p, int arg1)
     }
 }
 
-void func_001AE340(Obj_001AE2F0 *p)
+void func_001AE340(Obj_001AE2F0 *arg0)
 {
-    Obj_001AE2F0_2 *s = &p->unk_184;
+    Obj_001AE2F0_2 *s = &arg0->unk_184;
 
     s->field_10 = s->field_10 + 1;
     if (s->field_10 >= s->field_14 + 6) {

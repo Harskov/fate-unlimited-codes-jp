@@ -54,7 +54,7 @@ void func_001C5490(s32 arg0, s32 arg1, s32 arg2, s32 arg3)
 {
     s32 r;
 
-    r = func_001C4B60();
+    r = func_001C4B60(arg0, arg1);
     func_001C4C30(arg0, arg2 + r, arg3);
 }
 
@@ -62,7 +62,7 @@ void func_001C54E0(s32 arg0, s32 arg1, s32 arg2)
 {
     s32 r;
 
-    r = func_001C4B60();
+    r = func_001C4B60(arg0, arg1);
     func_001C4C30(arg0, r, arg2);
 }
 

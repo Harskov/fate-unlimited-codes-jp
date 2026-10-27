@@ -111,7 +111,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220FE0", func_00221C20);
 
 void *func_00221D60(void *arg0)
 {
-    int a = func_002E6C10();
+    int a = func_002E6C10(arg0);
     func_00221DB0(a, func_002683F0(arg0));
     return arg0;
 }

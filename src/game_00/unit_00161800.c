@@ -72,12 +72,12 @@ int func_002E6C10();
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00161800", func_00161800);
 
-int func_00161970(Holder *h, int i)
+int func_00161970(Holder *arg0, int arg1)
 {
-    int idx = func_001619C0(h, i);
+    int idx = func_001619C0(arg0, arg1);
     if (idx < 0)
         return 0;
-    return func_002E6C10(h->unk_6C[idx].unk_C->unk_C);
+    return func_002E6C10(arg0->unk_6C[idx].unk_C->unk_C);
 }
 
 int func_001619C0(Holder *h, int i)

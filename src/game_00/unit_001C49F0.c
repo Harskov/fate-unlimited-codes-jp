@@ -89,11 +89,11 @@ int func_001C4FA0(Obj_001C4FA0 *p, int *arg1)
     return 0;
 }
 
-int func_001C4FE0(Obj_001C4FE0 *p)
+int func_001C4FE0(Obj_001C4FE0 *arg0)
 {
-    Sub_001C4FE0 *s = p->unk_244C;
+    Sub_001C4FE0 *s = arg0->unk_244C;
 
-    if (p->unk_246C != 0) {
+    if (arg0->unk_246C != 0) {
         s->counter_12C = 0;
     }
     if (s->counter_12C != 0) {

@@ -98,12 +98,12 @@ typedef struct Sub_001AA740 {
 
 void func_001AA180();
 
-void func_001AA740(Sub_001AA740 *p)
+void func_001AA740(Sub_001AA740 *arg0)
 {
     int i;
 
     for (i = 0; i < 16; i++) {
-        func_001AA180(&p->unk_10EC[i]);
+        func_001AA180(&arg0->unk_10EC[i]);
     }
 }
 

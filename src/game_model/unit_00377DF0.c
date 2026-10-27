@@ -189,7 +189,6 @@ INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377DF0", func_00379310);
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377DF0", func_00379510);
 
-// steps the value at +0x28 by the one at +0x2C; once it reaches 1.0 it is held there and the word at +0x8 becomes 2
 void func_00379550(Obj_00379550 *arg0)
 {
     arg0->unk_28 += arg0->unk_2C;

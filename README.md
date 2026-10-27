@@ -32,14 +32,14 @@ You need Linux x86-64 (WSL2 on Windows works), Python 3.9 or newer, git, and you
 | Milestone | Status | Exit judged on |
 |---|---|---|
 | M1 Contributable | done | public-build.json ok=True; matched outside their unit: 0 |
-| M2 Identified | current | name pass closed: True; unlabelled game functions: 0; review pending: 153 |
+| M2 Identified | current | name pass closed: True; unlabelled game functions: 0; review pending: 3 |
 | M3 Platform boundary | later | 57/317 platform functions matched; PLATFORM.md present |
 | M4 Core | later | 48/139 core functions matched; FORMATS.md missing |
 | M5 Gameplay | later | 1372/5371 gameplay functions matched |
 | M6 Complete | later | 1477/5827 game functions matched; check ok=True |
 | M7 Documented | later | docs.py check ok=None (never run) |
 | M8 Behaviour-verified | not required | last behaviour compare ok=None at never |
-| M9 Reverse-engineered | done | names without checked evidence: 0; matches since the last name pass: 0; named types with two layouts: 0 |
+| M9 Reverse-engineered | later | names without checked evidence: 0; matches since the last name pass: 5; named types with two layouts: 0 |
 
 The milestones and why they come in this order: [ROADMAP.md](ROADMAP.md).
 

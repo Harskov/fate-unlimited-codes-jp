@@ -99,7 +99,6 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_00205250);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_002052F0);
 
-/* formats the message into a local buffer and hands it on, but only while func_0020FA40 reports below 2 */
 s32 func_00205390(const char *format)
 {
     char buf[256];

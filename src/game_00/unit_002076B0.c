@@ -168,14 +168,14 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00208280);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002076B0", func_00208300);
 
-int func_00208410(char *a, char *b)
+int func_00208410(char *arg0, char *arg1)
 {
     int len;
 
-    len = strlen(b);
+    len = strlen(arg1);
     if (len > 0x1F)
-        b += len - 0x1F;
-    return strcmp(a, b);
+        arg1 += len - 0x1F;
+    return strcmp(arg0, arg1);
 }
 
 void func_00208470(char *dst, char *src)
