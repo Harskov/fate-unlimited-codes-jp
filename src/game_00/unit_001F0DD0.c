@@ -42,6 +42,8 @@ typedef struct Obj_001F1C20 {
     s32 unk_10;
 } Obj_001F1C20;
 
+void func_001F1C20(Obj_001F1C20 *arg0);
+
 typedef struct Obj_001F1CA0 {
     u8 pad_0[4];
     void *unk_4;
@@ -123,7 +125,7 @@ void func_001F1BE0(void)
     }
 }
 
-s32 func_001F1C20(Obj_001F1C20 *arg0)
+void func_001F1C20(Obj_001F1C20 *arg0)
 {
     func_001F1CA0(arg0->unk_10);
     func_00179380(arg0->unk_4);

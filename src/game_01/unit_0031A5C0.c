@@ -58,14 +58,14 @@ void func_0031C3E0(s32 arg0)
     Obj_0031C3E0 *n;
     s32 v;
 
-    n = func_0018A100()->unk_C;
+    n = func_0018A100(arg0)->unk_C;
     v = n->unk_0;
     while (v != 1) {
         func_0015D710(D_0051A8B0[0], v);
         n = n->next;
         v = n->unk_0;
     }
-    func_00210D60(arg0, v);
+    func_00210D60(arg0);
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_0031A5C0", func_0031C450);

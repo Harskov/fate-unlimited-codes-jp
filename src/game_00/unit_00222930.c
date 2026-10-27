@@ -139,8 +139,7 @@ void func_00223860(Obj_00222A70 *arg0, s32 arg1)
 {
     Sub_00222A70 *sub = arg0->unk_C;
 
-    if (sub->unk_30 > 0) {
-    } else if (sub->flags_8 & 4) {
+    if (sub->unk_30 <= 0 && (sub->flags_8 & 4)) {
         func_002052F0(arg1);
     }
 }
