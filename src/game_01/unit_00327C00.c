@@ -16,12 +16,12 @@ typedef struct Obj_00327C40 {
     /* 0x35C */ u8 unk_35C[0x14];
 } Obj_00327C40;
 
-void func_00327C00(Obj_00327C40 *p, s32 arg1, s32 arg2)
+void func_00327C00(Obj_00327C40 *arg0, s32 arg1, s32 arg2)
 {
-    p->unk_2D0 = arg1;
-    p->unk_1C = 0;
-    p->unk_20 = arg2 | 0x200;
-    p->unk_0 |= 0x402;
+    arg0->unk_2D0 = arg1;
+    arg0->unk_1C = 0;
+    arg0->unk_20 = arg2 | 0x200;
+    arg0->unk_0 |= 0x402;
 }
 
 int func_00327C20(Obj_00327C40 *p)

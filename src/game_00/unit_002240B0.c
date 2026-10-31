@@ -1,35 +1,18 @@
 #include "common.h"
+
 #include "game_00/unit_0020D0D0.h"
+
 #include "types.h"
 
+#include "game_00/unit_002240B0.h"
+
 extern s32 D_00527A08[];
-
-typedef struct Obj_002240B0 {
-    u8 unk_0[0x5C];
-    s32 unk_5C;
-} Obj_002240B0;
-
-typedef struct Obj_00225720 {
-    u8 unk_0[0xC];
-    Obj_002240B0 *unk_C;
-} Obj_00225720;
 
 extern s32 D_00527A00[];
 
 extern s32 D_00527A04[];
 
 void func_002240C0(void);
-
-typedef struct Obj_00225730 {
-    /* 0x00 */ u8 unk_0[0x54];
-    /* 0x54 */ s32 unk_54;
-} Obj_00225730;
-
-/* an operand slot: the opcodes read and write it as a float or as an integer */
-typedef union Sub_00225730 {
-    /* 0x00 */ f32 f0;
-    /* 0x00 */ s32 i0;
-} Sub_00225730;
 
 extern char gFormat_502280[];
 
@@ -43,20 +26,11 @@ f32 sqrtf(f32);
 
 f32 func_0012F110(f32);
 
-
 f32 func_0020E410(f32, f32, f32);
 
 f32 func_0020E570(f32, f32, f32, f32);
 
 f32 func_0020E740(f32, f32);
-
-void func_00223240();
-
-u32 *func_00223250(void *arg0, Obj_00225730 *arg1, Sub_00225730 **dst, Sub_00225730 **src, u32 *pc);
-
-u32 *func_002235A0(void *arg0, Obj_00225730 *arg1, Sub_00225730 **out, u32 *pc);
-
-void func_00223860(void *arg0, char *str);
 
 typedef struct Obj_002256E0 {
     u8 unk_0[0x5C];
@@ -291,20 +265,3 @@ u32 *func_00225730(void *arg0, Obj_00225730 *arg1, u32 *pc)
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002240B0", func_00225E80);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002240B0", func_002267A0);
-
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002240B0", func_00227080);
-
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002240B0", func_00227AD0);
-
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002240B0", func_00227CD0);
-
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002240B0", func_00228510);
-
-int *func_00229500(int *base, int i)
-{
-    return &base[i * 2 + 1];
-}
-
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002240B0", sys_bp);
-
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002240B0", func_00229800);

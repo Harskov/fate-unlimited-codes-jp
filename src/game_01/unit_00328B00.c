@@ -50,18 +50,18 @@ INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00328EA0);
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00328FB0);
 
-void func_00328FE0(Obj_00328FE0 *o, int i, f32 v)
+void func_00328FE0(Obj_00328FE0 *arg0, s32 arg1, f32 arg2)
 {
-    if (o != 0) {
-        Sub_00328FE0 *s = o->unk_20;
-        s->unk_60[i] = v;
+    if (arg0 != 0) {
+        Sub_00328FE0 *s = arg0->unk_20;
+        s->unk_60[arg1] = arg2;
     }
 }
 
-void func_00329000(Obj_00329000 *o, int i, int v)
+void func_00329000(Obj_00329000 *arg0, s32 arg1, s32 arg2)
 {
-    if (o != 0) {
-        o->unk_20->unk_60[i] = v;
+    if (arg0 != 0) {
+        arg0->unk_20->unk_60[arg1] = arg2;
     }
 }
 

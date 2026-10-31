@@ -1,11 +1,16 @@
 #include "common.h"
 
+typedef struct Sub_001C1290 {
+    u8 unk_0[0x10];
+    s32 unk_10;
+    u8 unk_14[0x78];
+} Sub_001C1290;
+
 typedef struct Obj1D0 {
     u8 unk_0[0xC];
     struct Obj_001C0A80 *unk_C;
     u8 unk_10[0x4];
-    s32 unk_14;
-    u8 unk_18[0x88];
+    Sub_001C1290 unk_14;
     s32 unk_A0;
     s32 unk_A4;
     u8 unk_A8[0x8];
@@ -145,14 +150,14 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C0810", func_001C1250);
 void func_001C1290(Obj2524 *arg0, s32 arg1)
 {
     Obj1D0 *c;
-    s32 *p;
+    Sub_001C1290 *p;
 
     if (arg0 != 0) {
         c = arg0->unk_2448;
         if (c != 0) {
             p = &c->unk_14;
             if (p != 0) {
-                p[4] = arg1;
+                p->unk_10 = arg1;
             }
         }
     }

@@ -78,9 +78,9 @@ void func_00210F70(Obj_00210F70 *o)
     o->unk_C = -1;
 }
 
-void func_00210F90(int a)
+void func_00210F90(s32 arg0)
 {
-    func_00210FB0(D_005231F0[0] + a * 48);
+    func_00210FB0(D_005231F0[0] + arg0 * 48);
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00210C10", func_00210FB0);

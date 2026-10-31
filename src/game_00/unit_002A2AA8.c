@@ -5,8 +5,8 @@ typedef struct Obj_002A2AA8 {
     s32 unk_8;
 } Obj_002A2AA8;
 
-Obj_002A2AA8 *func_002A2AA8(Obj_002A2AA8 *p, s32 bits)
+Obj_002A2AA8 *func_002A2AA8(Obj_002A2AA8 *arg0, s32 arg1)
 {
-    p->unk_8 |= bits;
-    return p;
+    arg0->unk_8 |= arg1;
+    return arg0;
 }

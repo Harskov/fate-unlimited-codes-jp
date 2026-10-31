@@ -24,13 +24,13 @@ void func_0021FC00(Obj0021FC00 *obj)
     SignalSema(obj->semaId);
 }
 
-int func_0021FC50(Obj0021FC00 *obj)
+int func_0021FC50(Obj0021FC00 *arg0)
 {
     int result;
 
-    WaitSema(obj->semaId);
-    result = obj->unk_14 + (obj->unk_10 << 11);
-    SignalSema(obj->semaId);
+    WaitSema(arg0->semaId);
+    result = arg0->unk_14 + (arg0->unk_10 << 11);
+    SignalSema(arg0->semaId);
     return result;
 }
 

@@ -13,16 +13,16 @@ s32 func_0020E430(s32 a, s32 b, f32 t)
     return (s32)(fa - t * (fa - fb));
 }
 
-f32 func_0020E470(f32 a, f32 b, f32 lo, f32 hi)
+f32 func_0020E470(f32 arg0, f32 arg1, f32 arg2, f32 arg3)
 {
-    a = a + b;
-    if (a < lo) {
-        a = hi;
+    arg0 = arg0 + arg1;
+    if (arg0 < arg2) {
+        arg0 = arg3;
     }
-    if (a > hi) {
-        a = lo;
+    if (arg0 > arg3) {
+        arg0 = arg2;
     }
-    return a;
+    return arg0;
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020E430", func_0020E4A0);
