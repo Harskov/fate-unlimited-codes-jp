@@ -14,9 +14,20 @@ extern void func_001FA590(f32 arg0);
 
 extern void func_001FAA30(f32 arg0);
 
+typedef struct Obj_001F9060 {
+    /* 0x00 */ f32 x;
+    /* 0x04 */ f32 y;
+    /* 0x08 */ f32 z;
+} Obj_001F9060;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F8E30", func_001F8E30);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F8E30", func_001F9060);
+void func_001F9060(Obj_001F9060 *arg0, Obj_001F9060 *arg1)
+{
+    arg0->x = -arg1->x;
+    arg0->y = -arg1->y;
+    arg0->z = -arg1->z;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F8E30", func_001F9090);
 

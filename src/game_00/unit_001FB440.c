@@ -72,6 +72,13 @@ void func_002E6C50();
 
 void func_001A2DD0();
 
+typedef struct Obj_001FE2C0 {
+    u8 pad_0[0x1648];
+    f32 unk_1648[2];
+    s32 unk_1650[2];
+    f32 unk_1658[2];
+} Obj_001FE2C0;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FB440", func_001FB440);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FB440", func_001FB630);
@@ -181,7 +188,12 @@ void func_001FE140(Obj_001FE140 *arg0, s32 arg1)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FB440", func_001FE220);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FB440", func_001FE2C0);
+void func_001FE2C0(Obj_001FE2C0 *arg0, s32 arg1, f32 arg2)
+{
+    arg0->unk_1648[arg1] = arg2;
+    arg0->unk_1650[arg1] = 0;
+    arg0->unk_1658[arg1] = arg2 / 3.0f;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001FB440", func_001FE2F0);
 

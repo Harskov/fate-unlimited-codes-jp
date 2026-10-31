@@ -13,6 +13,26 @@ typedef struct Obj_00328BD0 {
     s32 unk_34;
 } Obj_00328BD0;
 
+typedef struct Sub_00328FE0 {
+    u8 unk_0[0x60];
+    f32 unk_60[1];
+} Sub_00328FE0;
+
+typedef struct Obj_00328FE0 {
+    u8 unk_0[0x20];
+    Sub_00328FE0 *unk_20;
+} Obj_00328FE0;
+
+typedef struct Elem_00329000 {
+    u8 unk_0[0x60];
+    s32 unk_60[1];
+} Elem_00329000;
+
+typedef struct Obj_00329000 {
+    u8 unk_0[0x20];
+    Elem_00329000 *unk_20;
+} Obj_00329000;
+
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00328B00);
 
 void *func_00328BD0(Obj_00328BD0 *o)
@@ -30,9 +50,20 @@ INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00328EA0);
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00328FB0);
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00328FE0);
+void func_00328FE0(Obj_00328FE0 *o, int i, f32 v)
+{
+    if (o != 0) {
+        Sub_00328FE0 *s = o->unk_20;
+        s->unk_60[i] = v;
+    }
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00328B00", func_00329000);
+void func_00329000(Obj_00329000 *o, int i, int v)
+{
+    if (o != 0) {
+        o->unk_20->unk_60[i] = v;
+    }
+}
 
 void func_00329020(Obj_00328BD0 *o, int i, int v)
 {

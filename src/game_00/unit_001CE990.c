@@ -29,13 +29,23 @@ s32 func_0020E850(s32 arg0, s32 arg1);
 
 s32 func_001D4E60(s32 arg0, s32 arg1, s32 arg2);
 
+extern s32 D_004FFD88[][3][3];
+
+extern s32 D_004FFD84[][3][3];
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001CE990", func_001CE990);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001CE990", func_001CEA80);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001CE990", func_001CEFA0);
+s32 func_001CEFA0(s32 arg0, s32 arg1)
+{
+    return D_004FFD88[arg0][arg1][0];
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001CE990", func_001CEFD0);
+s32 func_001CEFD0(s32 arg0, s32 arg1)
+{
+    return D_004FFD84[arg0][arg1][0];
+}
 
 s32 func_001CF000(s32 arg0, s32 arg1)
 {

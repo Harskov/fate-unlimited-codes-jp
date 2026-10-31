@@ -13,13 +13,31 @@ s32 func_0020E430(s32 a, s32 b, f32 t)
     return (s32)(fa - t * (fa - fb));
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020E430", func_0020E470);
+f32 func_0020E470(f32 a, f32 b, f32 lo, f32 hi)
+{
+    a = a + b;
+    if (a < lo) {
+        a = hi;
+    }
+    if (a > hi) {
+        a = lo;
+    }
+    return a;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020E430", func_0020E4A0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020E430", func_0020E520);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020E430", func_0020E570);
+f32 func_0020E570(f32 arg0, f32 arg1, f32 arg2, f32 arg3)
+{
+    arg0 += arg1;
+    if (arg0 < arg2)
+        arg0 = arg2;
+    if (!(arg0 <= arg3))
+        arg0 = arg3;
+    return arg0;
+}
 
 s32 func_0020E5A0(s32 *arg0, s32 arg1, s32 arg2, s32 arg3)
 {

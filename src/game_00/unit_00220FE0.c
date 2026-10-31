@@ -58,7 +58,13 @@ extern void func_0015D130(void *, void *);
 
 extern void func_001E7960(void *, s32, f32);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220FE0", func_00220FE0);
+void func_00220FE0(volatile Obj00221080 *o)
+{
+    // !FAKE: the counter is loaded again before the decrement; a volatile view of the object forces the reload
+    if (o->unk_C > 0) {
+        o->unk_C = o->unk_C - 1;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220FE0", func_00221000);
 

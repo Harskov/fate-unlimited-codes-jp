@@ -8,8 +8,6 @@ extern s32 D_0051F9B8[];
 
 extern s32 D_0051F9C0[];
 
-void func_001EBD90();
-
 void func_001EBDC0();
 
 void func_002B1E28();
@@ -24,6 +22,8 @@ typedef struct Obj_001EB6C0 {
     /* 0x68 */ s32 count;
     Elem_001EB6C0 *unk_6C;
 } Obj_001EB6C0;
+
+s32 *func_001EBD90(s32 *arg0);
 
 void func_001EB6C0(Obj_001EB6C0 *arg0, s32 arg1)
 {
@@ -75,7 +75,12 @@ s32 func_001EBD10(u32 *arg0, s32 arg1, s32 arg2)
     return D_0051F9B8[0];
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001EB6C0", func_001EBD90);
+s32 *func_001EBD90(s32 *arg0)
+{
+    if (D_0051F9C0[0] == arg0[1])
+        D_0051F9B8[0] = (s32)arg0;
+    return arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001EB6C0", func_001EBDC0);
 

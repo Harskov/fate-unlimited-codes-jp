@@ -38,7 +38,23 @@ extern s16 D_00508010[][22];
 
 extern s32 D_005361D0[];
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00383000", func_00383000);
+typedef struct Obj_00383000 {
+    /* 0x000 */ u8 unk_0[0x160];
+    /* 0x160 */ s32 unk_160;
+    /* 0x164 */ u8 unk_164[8];
+    /* 0x16C */ f32 unk_16C;
+    /* 0x170 */ u8 unk_170[0x30];
+    /* 0x1A0 */ s32 unk_1A0;
+    /* 0x1A4 */ s32 unk_1A4;
+} Obj_00383000;
+
+void func_00383000(Obj_00383000 *arg0, s32 arg1, f32 arg2)
+{
+    arg0->unk_160 = 3;
+    arg0->unk_1A0 = 0;
+    arg0->unk_1A4 = arg1;
+    arg0->unk_16C = arg2;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00383000", func_00383020);
 

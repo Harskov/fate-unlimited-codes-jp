@@ -16,9 +16,14 @@ typedef struct Obj_003812B0 {
     /* 0x8C */ u8 unk_8C[4];
 } Obj_003812B0;
 
+extern u8 *D_005361B8[];
+
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00380E10);
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00380E60);
+u8 *func_00380E60(s32 arg0)
+{
+    return D_005361B8[0] + arg0 * 316;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00380E90);
 

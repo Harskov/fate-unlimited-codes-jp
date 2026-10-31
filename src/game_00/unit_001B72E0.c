@@ -13,6 +13,8 @@ typedef struct Blk0051D750 {
 
 extern Blk0051D750 D_0051D750;
 
+void func_001B7E70(s32 arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4, s32 arg5, s32 arg6);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B72E0", func_001B72E0);
 
 s16 *func_001B7460(s32 arg0)
@@ -66,4 +68,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B72E0", func_001B7C70);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B72E0", func_001B7CC0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B72E0", func_001B7E60);
+void func_001B7E60(s32 arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4)
+{
+    func_001B7E70(arg0, arg1, arg2, arg3, 9, arg4, 1);
+}

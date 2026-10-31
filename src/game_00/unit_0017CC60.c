@@ -36,6 +36,12 @@ typedef struct Obj_0017E770 {
 
 f32 func_0015DED0(Obj_0017E770 *arg0);
 
+typedef struct Obj_00183640 {
+    u32 unk_0;
+    /* 0x04 */ struct Obj_00183640 *link_4;
+    /* 0x08 */ struct Obj_00183640 *link_8;
+} Obj_00183640;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0017CC60", func_0017CC60);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0017CC60", func_0017CD10);
@@ -157,4 +163,14 @@ void func_00183630(s32 arg0, s32 *arg1)
     func_00183640(arg0, arg1[1]);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0017CC60", func_00183640);
+void func_00183640(s32 arg0, s32 arg1)
+{
+    Obj_00183640 *node = (Obj_00183640 *)arg0;
+    Obj_00183640 *at = (Obj_00183640 *)arg1;
+    Obj_00183640 *next = at->link_8;
+
+    at->link_8 = node;
+    next->link_4 = node;
+    node->link_8 = next;
+    node->link_4 = at;
+}

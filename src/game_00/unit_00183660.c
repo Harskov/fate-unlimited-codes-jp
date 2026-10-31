@@ -40,6 +40,14 @@ s32 func_002E6CC0();
 
 void func_0020D070();
 
+typedef struct Obj12 {
+    s32 unk_0;
+    s32 unk_4;
+    s32 unk_8;
+} Obj12;
+
+extern Obj12 D_0051AD88[];
+
 void func_00183660(Obj_00183660 *arg0)
 {
     void func_001836B0(void);
@@ -67,7 +75,10 @@ void func_00183780(void)
         D_0051AE50[0] = n;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00183660", func_001837C0);
+s32 func_001837C0(s32 arg0)
+{
+    return D_0051AD88[arg0].unk_0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00183660", func_001837E0);
 

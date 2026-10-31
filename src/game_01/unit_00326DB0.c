@@ -83,7 +83,13 @@ typedef struct Obj_00326F80 {
     /* 0x1EC */ Entry_00326F80 unk_1EC[1];
 } Obj_00326F80;
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00326DB0", func_00326DB0);
+void func_00326DB0(Obj_00326E00 *arg0, s32 arg1, s32 arg2)
+{
+    arg0->unk_24 = 2;
+    arg0->unk_18 = arg1;
+    arg0->unk_2D0 = arg2;
+    arg0->unk_0 |= 0x402;
+}
 
 void func_00326DD0(Obj_00326E00 *arg0, s32 arg1, s32 *arg2)
 {
@@ -107,7 +113,11 @@ void func_00326E20(Obj_00326E20 *arg0, s32 arg1, s32 arg2)
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00326DB0", func_00326E60);
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00326DB0", func_00326EB0);
+void func_00326EB0(Obj_00326EE0 *arg0, s32 arg1, s32 arg2)
+{
+    arg0->unk_1EC[arg1].unk_10 = arg2 << 8;
+    arg0->unk_0 |= 2;
+}
 
 void func_00326EE0(Obj_00326EE0 *arg0, s32 arg1)
 {

@@ -44,6 +44,17 @@ void func_002053E0(char *arg0, s32 arg1);
 
 int sprintf(char *s, const char *format, ...);
 
+typedef struct Obj_00205020 {
+    u8 pad_0[0x84];
+    u16 unk_84;
+} Obj_00205020;
+
+typedef struct Sub_00205020 {
+    u8 pad_0[0xE];
+    s16 unk_E;
+    s32 unk_10;
+} Sub_00205020;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_00204AD0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_00204D80);
@@ -57,7 +68,12 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_00204E20);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_00204EE0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00204AD0", func_00205020);
+Obj_00205020 *func_00205020(Obj_00205020 *arg0, Sub_00205020 *arg1)
+{
+    arg1->unk_E = arg1->unk_E + 1;
+    arg1->unk_10 = arg1->unk_10 + arg0->unk_84;
+    return arg0;
+}
 
 s32 func_00205050(s32 arg0, Obj_00205050 *arg1)
 {

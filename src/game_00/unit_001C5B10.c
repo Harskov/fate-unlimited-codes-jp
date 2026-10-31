@@ -36,7 +36,18 @@ extern s32 D_00522DB0[];
 
 void func_0020F230();
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C5B10", func_001C5B10);
+typedef struct Obj_001C5B10 {
+    u8 pad_0[0x2450];
+    s32 unk_2450;
+} Obj_001C5B10;
+
+s32 func_001C5B10(Obj_001C5B10 *arg0, s32 arg1)
+{
+    if (arg0 == 0)
+        return 0;
+    arg0->unk_2450 = arg1;
+    return 1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C5B10", func_001C5B30);
 

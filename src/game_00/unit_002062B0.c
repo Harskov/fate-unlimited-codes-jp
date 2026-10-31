@@ -130,7 +130,16 @@ int func_00206A10(int count)
     return 0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206A80);
+s32 func_00206A80(u32 arg0)
+{
+    s32 sectors;
+
+    sectors = arg0 >> 11;
+    if (arg0 & 0x7FF) {
+        sectors++;
+    }
+    return sectors;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206AA0);
 

@@ -5102,7 +5102,7 @@ address	name	label
 0x0034EA40	func_0034EA40	gameplay/game_00.021
 0x00351EF0	func_00351EF0	platform
 0x00351F10	func_00351F10	gameplay/game_00.021
-0x00355250	func_00355250	platform
+0x00355250	sceCdChgSys	gameplay/game_00.011
 0x00355820	func_00355820	gameplay/game_00.011
 0x00355FE0	func_00355FE0	gameplay/game_00.011
 0x003560E0	func_003560E0	gameplay/game_00.011

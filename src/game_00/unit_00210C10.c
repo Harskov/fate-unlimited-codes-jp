@@ -23,6 +23,8 @@ typedef struct Obj_00210F70 {
     /* 0x0C */ s32 unk_C;
 } Obj_00210F70;
 
+void func_00210FB0();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00210C10", func_00210C10);
 
 void *func_00210CA0(Obj_00210CA0 *p)
@@ -76,7 +78,10 @@ void func_00210F70(Obj_00210F70 *o)
     o->unk_C = -1;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00210C10", func_00210F90);
+void func_00210F90(int a)
+{
+    func_00210FB0(D_005231F0[0] + a * 48);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00210C10", func_00210FB0);
 

@@ -13,7 +13,40 @@ typedef struct Obj_00327A30 {
     s32 unk_14;
 } Obj_00327A30;
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_003278C0", func_003278C0);
+typedef struct Obj_00327B10 {
+    s32 unk_0;
+    unsigned char pad_4[0x28];
+    f32 unk_2C;
+    f32 unk_30;
+} Obj_00327B10;
+
+typedef struct Elem_003278C0 {
+    f32 unk_0;
+    unsigned char pad_4[0x28];
+} Elem_003278C0;
+
+typedef struct Obj_003278C0 {
+    unsigned char pad_0[0x70];
+    Elem_003278C0 unk_70[1];
+} Obj_003278C0;
+
+typedef struct Obj_00327A00 {
+    unsigned char *unk_0;
+} Obj_00327A00;
+
+typedef struct Obj_00327AB0 {
+    s32 unk_0;
+    unsigned char pad_4[0x18];
+    s32 unk_1C;
+    s32 unk_20;
+    unsigned char pad_24[0x2AC];
+    s32 unk_2D0;
+} Obj_00327AB0;
+
+f32 func_003278C0(Obj_003278C0 *p, s32 i)
+{
+    return p->unk_70[i].unk_0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_003278C0", func_003278E0);
 
@@ -26,7 +59,10 @@ void func_003279A0(s32 a0, s32 a1, s32 a2)
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_003278C0", func_003279B0);
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_003278C0", func_00327A00);
+unsigned char *func_00327A00(Obj_00327A00 *p, s32 arg1)
+{
+    return p->unk_0 + arg1 * 880;
+}
 
 void func_00327A20(Obj_00327A20 *p, s32 arg1)
 {
@@ -39,15 +75,36 @@ void func_00327A30(Obj_00327A30 *p, s32 arg1)
     p->unk_0 = p->unk_0 | 0x402;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_003278C0", func_00327A60);
+void func_00327A60(Obj_00327A30 *p, s32 arg1)
+{
+    p->unk_14 = p->unk_14 & ~(arg1 & 0x3);
+    p->unk_0 = p->unk_0 | 0x402;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_003278C0", func_00327A90);
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_003278C0", func_00327AB0);
+void func_00327AB0(Obj_00327AB0 *p, s32 arg1, s32 arg2, s32 arg3)
+{
+    p->unk_2D0 = arg1;
+    p->unk_1C = 0;
+    p->unk_20 = arg3 | 0x400 | (arg2 << 16);
+    p->unk_0 = p->unk_0 | 0x402;
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_003278C0", func_00327AE0);
+void func_00327AE0(Obj_00327AB0 *p, s32 arg1, s32 arg2, s32 arg3)
+{
+    p->unk_2D0 = arg1;
+    p->unk_1C = 0;
+    p->unk_20 = arg3 | 0x80 | (arg2 << 16);
+    p->unk_0 = p->unk_0 | 0x402;
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_003278C0", func_00327B10);
+void func_00327B10(Obj_00327B10 *p, f32 arg1, f32 arg2)
+{
+    p->unk_2C = arg1;
+    p->unk_30 = arg2;
+    p->unk_0 = p->unk_0 | 0x402;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_003278C0", func_00327B30);
 

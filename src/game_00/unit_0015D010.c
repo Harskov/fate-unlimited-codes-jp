@@ -134,7 +134,15 @@ void func_0015D710(Link_0015D710 *head, Link_0015D710 *node)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015D010", func_0015D720);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015D010", func_0015D810);
+Link_0015D710 *func_0015D810(Link_0015D710 **head)
+{
+    Link_0015D710 *n = *head;
+    if (n != 0) {
+        *head = n->next;
+        return n;
+    }
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015D010", func_0015D830);
 

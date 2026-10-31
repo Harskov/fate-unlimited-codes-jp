@@ -7496,7 +7496,7 @@ sceCdGetError 0x00354F78 f
 sceCdStatus 0x00355010 f
 sceCdBreak 0x003550C8 f
 sceCdMmode 0x00355180 f
-func_00355250 0x00355250 f
+sceCdChgSys 0x00355250 f
 sceCdReadClock 0x00355278 f
 sceCdStInit 0x00355338 f
 sceCdStStart 0x00355368 f

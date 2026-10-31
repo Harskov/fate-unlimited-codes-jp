@@ -328,7 +328,11 @@ int func_00249150(int arg0, int arg1, int arg2)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002468D0", func_00249160);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002468D0", func_00249A00);
+Obj_00249A20 *func_00249A00(Obj_00249A20 *a0, s32 a1)
+{
+    a0->unk_2 = a0->unk_2 & ~a1;
+    return a0;
+}
 
 Obj_00249A20 *func_00249A20(Obj_00249A20 *a0, s32 a1)
 {

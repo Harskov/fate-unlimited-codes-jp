@@ -45,7 +45,14 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001ED8F0", func_001EF530);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001ED8F0", func_001EFBD0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001ED8F0", func_001EFE00);
+f32 func_001EFE00(f32 *v)
+{
+    f32 y = v[1];
+    f32 x = v[0];
+    f32 z = v[2];
+
+    return x * x + y * y + z * z;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001ED8F0", func_001EFE20);
 

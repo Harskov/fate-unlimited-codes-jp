@@ -7,14 +7,22 @@ typedef struct Obj_00327C40 {
     /* 0x004 */ u8 unk_4[0x18];
     /* 0x01C */ int unk_1C;
     /* 0x020 */ s32 unk_20;
-    /* 0x024 */ u8 unk_24[0x2B4];
+    /* 0x024 */ u8 unk_24[0x2AC];
+    /* 0x2D0 */ s32 unk_2D0;
+    /* 0x2D4 */ u8 unk_2D4[0x4];
     /* 0x2D8 */ s32 unk_2D8[16];
     /* 0x318 */ f32 unk_318[16];
     /* 0x358 */ s32 unk_358;
     /* 0x35C */ u8 unk_35C[0x14];
 } Obj_00327C40;
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00327C00", func_00327C00);
+void func_00327C00(Obj_00327C40 *p, s32 arg1, s32 arg2)
+{
+    p->unk_2D0 = arg1;
+    p->unk_1C = 0;
+    p->unk_20 = arg2 | 0x200;
+    p->unk_0 |= 0x402;
+}
 
 int func_00327C20(Obj_00327C40 *p)
 {

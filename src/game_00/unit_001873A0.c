@@ -10,7 +10,7 @@ typedef struct Obj_0018BE30 {
     s32 unk_0;
     s32 unk_4;
     /* 0x08 */ struct Obj_0018BE30 *link_8;
-    struct Obj_0018BE30 *unk_C;
+    /* 0x0C */ struct Obj_0018BE30 *link;
 } Obj_0018BE30;
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001873A0", func_001873A0);
@@ -77,7 +77,7 @@ void func_0018BE30(s32 *arg0)
 {
     Obj_0018BE30 *node;
 
-    node = ((Obj_0018BE30 *)func_0018A100(arg0))->unk_C;
+    node = ((Obj_0018BE30 *)func_0018A100(arg0))->link;
     while (node->unk_0 != 1) {
         func_0018BDA0(node->unk_0);
         node = node->link_8;
