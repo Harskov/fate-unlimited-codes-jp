@@ -4949,7 +4949,7 @@ func_0024C200	unit_0024B270	function	asm	gameplay/game_00.006	call-graph communi
 func_0024C250	unit_0024B270	function	asm	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_0024C690	unit_0024B270	function	asm	gameplay/game_00.009	call-graph community of 107 function(s) from func_0015BCA0
 func_0024CAE0	unit_0024B270	function	asm	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
-func_0024CD20	unit_0024B270	function	asm	platform	calls fptodp
+func_0024CD20	unit_0024B270	function	wip	platform	calls fptodp
 func_0024D9E0	unit_0024B270	function	asm	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_0024DE60	unit_0024B270	function	asm	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_0024E200	unit_0024B270	function	asm	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
