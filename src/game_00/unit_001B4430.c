@@ -10,6 +10,8 @@ s32 func_001B5800(s32 arg0, s32 arg1);
 
 s32 *func_001FF000();
 
+void func_001795F0();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B4430", func_001B4430);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B4430", func_001B49E0);
@@ -39,7 +41,10 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B4430", func_001B5870);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B4430", func_001B5CE0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B4430", func_001B5DC0);
+void func_001B5DC0(s32 arg0, s32 *arg1)
+{
+    func_001795F0(arg0, arg0 + 4, arg1);
+}
 
 s32 func_001B5DD0(s32 arg0)
 {

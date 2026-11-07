@@ -1,4 +1,5 @@
 #include "common.h"
+#include "game_00/vec.h"
 
 typedef struct Obj16 {
     f32 unk_0;
@@ -76,4 +77,9 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015EA80", func_0015EC60);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015EA80", func_0015ED00);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015EA80", func_0015EE20);
+void func_0015EE20(Vec3 *arg0, f32 x, f32 y, f32 z)
+{
+    arg0->x = x;
+    arg0->y = y;
+    arg0->z = z;
+}

@@ -76,6 +76,76 @@ void func_0021E0F0();
 
 void func_0021E340();
 
+extern s32 D_00527800[];
+
+extern s32 D_00527930[];
+
+extern s32 D_00527990[];
+
+extern s32 D_005279A0[];
+
+extern s32 D_005279A8[];
+
+extern s32 D_005279B0[];
+
+extern s32 D_005279B8[];
+
+extern s32 D_005279C8[];
+
+extern s32 D_005279D0[];
+
+extern s32 D_005279D8[];
+
+extern s32 D_005279E0[];
+
+extern s32 D_00510470[];
+
+typedef struct Obj_0021E0F0 {
+    /* 0x00 */ s32 unk_00;
+    /* 0x04 */ void *unk_04;
+    /* 0x08 */ s32 unk_08;
+    /* 0x0C */ s32 unk_0C;
+    /* 0x10 */ void *unk_10;
+    /* 0x14 */ s32 unk_14;
+    /* 0x18 */ u8 pad_18[8];
+    /* 0x20 */ s32 unk_20;
+    /* 0x24 */ u8 pad_24[0xC];
+} Obj_0021E0F0;
+
+void func_0021D640();
+
+void func_0021D690();
+
+void func_0021EE00();
+
+void func_0021EEE0();
+
+void func_00220C20();
+
+void func_0021F160(s32);
+
+void sceMpegInit(void);
+
+void func_00220EE0(void *, s32, s32, s32, s32, s32, s32, s32);
+
+s32 func_0021D510(void *, s32, s32, s32);
+
+int mpegAddStrCallback(void *, int, int, void *, void *);
+
+void func_002211B0(void *, u64, s32, s32);
+
+s32 CreateThread(void *);
+
+s32 StartThread(s32, void *);
+
+s32 func_0021F650(void *, s32);
+
+void sceGsSyncVCallback(void *);
+
+s32 AddDmacHandler(s32, void *, s32);
+
+s32 EnableDmac(s32);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021D690);
 
 /* probably the uncached mirror of a main-memory address: the EE maps RAM uncached at 0x20000000 */
@@ -117,7 +187,39 @@ void func_0021E030(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021E040);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021E0F0);
+void func_0021E0F0(s32 arg0)
+{
+    Obj_0021E0F0 param;
+
+    /* the DMAC's D_CTRL and D_STAT registers */
+    *(s32 *)0x1000E000 |= 3;
+    *(s32 *)0x1000E010 = 4;
+    func_0021F160(D_00527998[0]);
+    sceMpegInit();
+    func_00220EE0(D_00527880, D_005279C8[0], 0x13D800, D_005279B0[0], D_005279D0[0], 0x100, D_005279A0[0], 0x200);
+    if (D_005275A8[0] != 0) {
+        func_0021D510(D_00527820, D_005279B8[0], 0xC000, 0x6000);
+    }
+    mpegAddStrCallback(D_00527880, 0, 0, func_0021EEE0, (void *)D_00527998[0]);
+    if (D_005275A8[0] != 0) {
+        mpegAddStrCallback(D_00527880, 2, 0, func_0021EE00, (void *)D_00527998[0]);
+    }
+    func_002211B0(D_00527800, func_0021D870(D_005279E0[0]), D_005279D8[0], 2);
+    param.unk_20 = 0;
+    param.unk_04 = func_00220C20;
+    param.unk_08 = D_005279A8[0];
+    param.unk_0C = 0x4000;
+    param.unk_14 = gChangeThreadPriorityResult[0];
+    param.unk_10 = D_00510470;
+    D_00527990[0] = CreateThread(&param);
+    StartThread(D_00527990[0], D_00527880);
+    while (!func_0021F650(D_00527950, arg0)) {
+        DelayThread(0x1046);
+    }
+    sceGsSyncVCallback(func_0021D690);
+    D_00527930[0] = AddDmacHandler(2, func_0021D640, 0);
+    EnableDmac(2);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021E300);
 
@@ -128,9 +230,9 @@ void func_0021E330(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021E340);
 
-s32 func_0021E760(void)
+s32 func_0021E760(s32 arg0)
 {
-    func_0021E0F0();
+    func_0021E0F0(arg0);
     func_0021E340(D_00527880, D_00527998[0], D_00527950);
     func_0021E040();
     return D_00527948[0];
