@@ -4473,7 +4473,7 @@ func_0020E740	unit_0020E430	function	asm	core	utility called by 27 functions
 func_0020E7D0	unit_0020E430	function	asm	gameplay/game_00.012	call-graph community of 140 function(s) from func_0015D010
 func_0020E850	unit_0020E430	function	wip	core	utility called by 43 functions
 func_0020E8C0	unit_0020E430	function	asm	gameplay/game_00.018	call-graph community of 188 function(s) from func_00175390
-func_0020E920	unit_0020E430	function	asm	platform	calls sceCdReadClock
+func_0020E920	unit_0020E430	function	matched	platform	calls sceCdReadClock
 func_0020EB50	unit_0020E430	function	matched	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_0020EB60	unit_0020EB60	function	asm	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
 func_0020EBC0	unit_0020EB60	function	matched	gameplay/game_00.007	call-graph community of 147 function(s) from func_0015BC00
@@ -6884,7 +6884,7 @@ func_002FCF78	unit_002FCF78	function	asm	gameplay/game_00.006	call-graph communi
 func_002FD330	unit_002FD330	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_002FD610	unit_002FD330	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_002FD9C0	unit_002FD330	function	asm	platform	calls SyncDCache, sceDmaGetChan, sceGsExecStoreImage …
-func_002FE290	unit_002FD330	function	asm	platform	calls SyncDCache
+func_002FE290	unit_002FD330	function	wip	platform	calls SyncDCache
 func_002FE4A0	unit_002FD330	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
 func_002FE788	unit_002FE788	function	asm	platform	calls SyncDCache
 func_002FEAD0	unit_002FEAD0	function	asm	gameplay/game_00.025	call-graph community of 339 function(s) from func_001F48C0
@@ -6931,7 +6931,7 @@ func_00302250	unit_00302250	function	asm	gameplay/game_00.032	call-graph communi
 func_00302308	unit_00302308	function	wip	gameplay/game_00.023	call-graph community of 134 function(s) from func_001E5C90
 func_00302380	unit_00302380	function	wip	gameplay/game_00.023	call-graph community of 134 function(s) from func_001E5C90
 func_003023D8	unit_003023D8	function	wip	gameplay/game_00.023	call-graph community of 134 function(s) from func_001E5C90
-func_003023F8	unit_003023D8	function	asm	platform	EE hardware: timers
+func_003023F8	unit_003023D8	function	wip	platform	EE hardware: timers
 func_003024B0	unit_003024B0	function	asm	gameplay/game_00.023	call-graph community of 134 function(s) from func_001E5C90
 func_00302548	unit_00302548	function	matched	gameplay/game_00.023	call-graph community of 134 function(s) from func_001E5C90
 func_00302558	unit_00302548	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
