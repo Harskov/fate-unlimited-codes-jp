@@ -53,6 +53,22 @@ s32 func_00206B90();
 
 s32 func_00207010();
 
+extern char D_00501958[];
+
+char *strcat(char *, const char *);
+
+int sceOpen(void *, int);
+
+int sceLseek(int, int, int);
+
+int sceWrite(int fd, void *buf, int nbyte);
+
+int sceClose(int);
+
+extern char D_00501948[];
+
+int sceRead(int fd, void *buf, int nbyte);
+
 int func_002062B0(void)
 {
     return 0;
@@ -174,11 +190,39 @@ s32 func_00206C20(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206C90);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206D20);
+// writes a buffer to a file on the development host (the prefix is "host0:"); 0x602 is write-only, create, truncate
+s32 func_00206D20(char *name, void *buf, s32 size)
+{
+    char path[272];
+    s32 fd;
+    s32 written;
+
+    strcpy(path, D_00501958);
+    strcat(path, name);
+    fd = sceOpen(path, 0x602);
+    sceLseek(fd, 0, 0);
+    written = sceWrite(fd, buf, size);
+    sceClose(fd);
+    return written;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206DC0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206ED0);
+// reads part of a file under the development host's data folder (the prefix is "host0:data/")
+s32 func_00206ED0(const char *name, void *buf, s32 offset, s32 size)
+{
+    char path[264];
+    s32 fd;
+    s32 result;
+
+    strcpy(path, D_00501948);
+    strcat(path, name);
+    fd = sceOpen(path, 1);
+    sceLseek(fd, offset, 0);
+    result = sceRead(fd, buf, size);
+    sceClose(fd);
+    return result;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206F70);
 
@@ -213,6 +257,21 @@ s32 func_00207090(s32 arg0, void *arg1, s32 arg2)
     return arg2;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_002071B0);
+// reads a whole file under the development host's data folder; its size comes from a seek to the end
+s32 func_002071B0(char *name, void *buf)
+{
+    char path[260];
+    s32 fd;
+    s32 size;
+
+    strcpy(path, D_00501948);
+    strcat(path, name);
+    fd = sceOpen(path, 1);
+    size = sceLseek(fd, 0, 2);
+    sceLseek(fd, 0, 0);
+    sceRead(fd, buf, size);
+    sceClose(fd);
+    return size;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00207250);

@@ -4179,7 +4179,7 @@ func_00201A30	unit_00201620	function	asm	gameplay/game_00.017	call-graph communi
 func_00201E10	unit_00201620	function	matched	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_00201E40	unit_00201620	function	asm	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_00201F90	unit_00201620	function	matched	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
-func_00202010	unit_00201620	function	wip	core	utility called by 20 functions
+func_00202010	unit_00201620	function	matched	core	utility called by 20 functions
 func_00202050	unit_00201620	function	matched	gameplay/game_00.017	call-graph community of 284 function(s) from func_00171210
 func_00202060	unit_00201620	function	asm	gameplay/game_00.011	call-graph community of 238 function(s) from func_0015C160
 func_00202120	unit_00201620	function	matched	gameplay/game_00.011	call-graph community of 238 function(s) from func_0015C160
@@ -4291,13 +4291,13 @@ func_00206B80	unit_002062B0	function	matched	gameplay/game_00.010	call-graph com
 func_00206B90	unit_002062B0	function	wip	platform	calls sceClose, sceLseek, sceOpen
 func_00206C20	unit_002062B0	function	matched	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
 func_00206C90	unit_002062B0	function	asm	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
-func_00206D20	unit_002062B0	function	wip	platform	calls sceClose, sceLseek, sceOpen …
+func_00206D20	unit_002062B0	function	matched	platform	calls sceClose, sceLseek, sceOpen …
 func_00206DC0	unit_002062B0	function	asm	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
-func_00206ED0	unit_002062B0	function	wip	platform	calls sceClose, sceLseek, sceOpen …
+func_00206ED0	unit_002062B0	function	matched	platform	calls sceClose, sceLseek, sceOpen …
 func_00206F70	unit_002062B0	function	asm	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
 func_00207010	unit_002062B0	function	wip	platform	calls func_0013A188, func_0013A7D0, func_0013AA00 …
 func_00207090	unit_002062B0	function	matched	platform	calls func_0013A188, func_0013A7D0, func_0013AA00 …
-func_002071B0	unit_002062B0	function	wip	platform	calls sceClose, sceLseek, sceOpen …
+func_002071B0	unit_002062B0	function	matched	platform	calls sceClose, sceLseek, sceOpen …
 func_00207250	unit_002062B0	function	asm	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
 func_00207310	unit_00207310	function	matched	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
 func_00207320	unit_00207310	function	matched	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
@@ -4382,14 +4382,14 @@ func_00209E70	unit_002098A0	function	matched	gameplay/game_00.006	call-graph com
 func_00209EB0	unit_002098A0	function	wip	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_00209EE0	unit_002098A0	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_00209F20	unit_00209F20	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
-func_00209FD0	unit_00209F20	function	wip	platform	calls func_0010C5E8, sceCdInit, sceCdMmode …
+func_00209FD0	unit_00209F20	function	matched	platform	calls func_0010C5E8, sceCdInit, sceCdMmode …
 func_0020A100	unit_00209F20	function	matched	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_0020A110	unit_00209F20	function	wip	platform	calls FlushCache, sceDmaReset, sceGsPutDrawEnv …
 func_0020A1B0	unit_00209F20	function	asm	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_0020A210	unit_00209F20	function	wip	gameplay/game_00.006	call-graph community of 254 function(s) from func_0015A6F0
 func_0020A260	unit_00209F20	function	asm	platform	calls func_0013E828
 func_0020A380	unit_00209F20	function	matched	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
-func_0020A3D0	unit_00209F20	function	asm	platform	calls GetTimerSystemTime
+func_0020A3D0	unit_00209F20	function	matched	platform	calls GetTimerSystemTime
 func_0020A440	unit_00209F20	function	asm	platform	EE hardware: timers
 func_0020A4E0	unit_00209F20	function	matched	platform	EE hardware: timers
 func_0020A540	unit_0020A540	function	matched	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
@@ -4694,7 +4694,7 @@ func_0021D260	unit_0021CD10	function	asm	gameplay/game_00.031	call-graph communi
 func_0021D320	unit_0021CD10	function	asm	gameplay/game_00.031	call-graph community of 56 function(s) from func_0021D1C0
 func_0021D370	unit_0021CD10	function	matched	gameplay/game_00.031	call-graph community of 56 function(s) from func_0021D1C0
 func_0021D380	unit_0021CD10	function	asm	platform	calls sceSdRemote
-func_0021D450	unit_0021CD10	function	asm	platform	calls sceSdRemote
+func_0021D450	unit_0021CD10	function	wip	platform	calls sceSdRemote
 func_0021D4D0	unit_0021CD10	function	matched	gameplay/game_00.031	call-graph community of 56 function(s) from func_0021D1C0
 func_0021D510	unit_0021CD10	function	matched	platform	calls sceSifAllocSysMemory
 func_0021D5E0	unit_0021CD10	function	matched	gameplay/game_00.031	call-graph community of 56 function(s) from func_0021D1C0
@@ -5002,7 +5002,7 @@ func_002532C0	unit_002530F0	function	wip	gameplay/game_00.006	call-graph communi
 func_002533B0	unit_002530F0	function	matched	platform	calls CreateSema
 func_002534A0	unit_002530F0	function	asm	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
 func_00253500	unit_002530F0	function	matched	platform	calls sceSifBindRpc
-func_00253590	unit_002530F0	function	asm	platform	calls GetThreadId, SetAlarm, SleepThread
+func_00253590	unit_002530F0	function	matched	platform	calls GetThreadId, SetAlarm, SleepThread
 func_002535E0	unit_002530F0	function	matched	platform	calls iWakeupThread; renamed from func_002535E0, alarmWakeupHandler
 func_00253610	unit_002530F0	function	matched	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30
 func_00253690	unit_002530F0	function	asm	gameplay/game_00.003	call-graph community of 192 function(s) from func_00159E30

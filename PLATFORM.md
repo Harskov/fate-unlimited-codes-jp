@@ -469,10 +469,10 @@ Every function whose code carries COP2 instructions, matched or not. The matched
 | `src/game_00/unit_001DCFB0.c` | 47 | u128 |
 | `src/game_00/unit_001E6380.c` | 52 | u128 |
 | `src/game_00/unit_001E6380.c` | 53 | u128 |
-| `src/game_00/unit_00209F20.c` | 55 | inline asm |
+| `src/game_00/unit_00209F20.c` | 123 | inline asm |
 | `src/game_00/unit_0020F380.c` | 122 | inline asm |
 | `src/game_00/unit_00220FE0.c` | 135 | u128 |
-| `src/game_00/unit_002530F0.c` | 120 | inline asm |
+| `src/game_00/unit_002530F0.c` | 134 | inline asm |
 | `src/game_01/unit_00302810.c` | 6 | inline asm |
 | `src/game_01/unit_00302810.c` | 8 | COP2 |
 | `src/game_01/unit_00302810.c` | 9 | COP2 |

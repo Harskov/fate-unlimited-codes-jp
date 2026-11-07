@@ -53,7 +53,29 @@ void func_00201F90(s32 arg0, s32 arg1)
     func_002F7E20(2, v);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00201620", func_00202010);
+void func_00202010(s32 arg0)
+{
+    s64 v;
+
+    switch (arg0) {
+    case 1:
+        v = 0x44;
+        break;
+    case 2:
+        v = 0x48;
+        break;
+    case 3:
+        v = 0x42;
+        break;
+    case 4:
+        v = 0x6;
+        break;
+    default:
+        v = 0x24;
+        break;
+    }
+    func_002F7E20(2, v);
+}
 
 int func_00202050(void)
 {

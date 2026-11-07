@@ -47,6 +47,12 @@ typedef struct Obj_002537F0 {
     s16 unk_A;
 } Obj_002537F0;
 
+int SetAlarm(int time, void (*handler)(int, u16, void *), int thid);
+
+int SleepThread(void);
+
+void func_002535E0(int id, u16 time, void *arg);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002530F0", func_002530F0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002530F0", func_00253160);
@@ -111,7 +117,15 @@ int func_00253500(Obj_00253500 *arg0, int arg1)
     return 0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002530F0", func_00253590);
+int func_00253590(int arg)
+{
+    void func_002535E0(int id, u16 time, void *arg);
+
+    if (SetAlarm(arg & 0xFFFF, func_002535E0, GetThreadId()) < 0) {
+        return -2;
+    }
+    return SleepThread();
+}
 
 /* probably an alarm handler: func_00253590 passes its address to SetAlarm, and it wakes the thread passed as arg */
 void func_002535E0(int id, u16 time, void *arg)
