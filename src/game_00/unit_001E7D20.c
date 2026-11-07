@@ -87,7 +87,7 @@ void func_001E8AF0(s32 *arg0, s32 arg1, s32 arg2)
 }
 
 // stores one result into five globals, the last one first
-void func_001E8B70(void)
+void func_001E8B70(s32 arg0)
 {
     s32 v = func_001F1520();
 

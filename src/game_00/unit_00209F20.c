@@ -105,6 +105,7 @@ f32 func_0020A3D0(s64 *arg0, s32 arg1)
 
     result = 0;
     if (arg1 != 0) {
+        /* probably microseconds: 147.456 is the bus clock in MHz */
         result = (f32)(u64)(GetTimerSystemTime() - *arg0) / 147.456f;
     } else {
         *arg0 = GetTimerSystemTime();

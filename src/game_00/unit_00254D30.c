@@ -2,7 +2,7 @@
 #include "libc.h"
 #include "types.h"
 
-int func_0010C5E8(int a, int b, int c);
+s32 func_0010C5E8(const char *path, s32 argc, const char *argv);
 
 extern s32 D_00529900[];
 
@@ -42,7 +42,7 @@ void func_00255550();
 
 s32 func_00252A20();
 
-void func_00252B80();
+int func_00252B80(int);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00254D30", func_00254D30);
 
@@ -92,9 +92,9 @@ s32 func_00255430(s32 arg0)
     return D_003DFB90[arg0];
 }
 
-void func_00255450(int *result, int arg)
+void func_00255450(int *result, const char *arg1)
 {
-    while ((*result = func_0010C5E8(arg, 0, 0)) < 0) {
+    while ((*result = func_0010C5E8(arg1, 0, 0)) < 0) {
     }
 }
 

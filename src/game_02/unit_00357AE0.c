@@ -20,7 +20,7 @@ int func_0019CB40();
 
 int func_002542F0();
 
-int func_0015AFB0();
+int func_0015AFB0(s32);
 
 int func_00357AE0(void)
 {

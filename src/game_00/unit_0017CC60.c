@@ -34,7 +34,7 @@ typedef struct Obj_0017E770 {
     f32 unk_B8;
 } Obj_0017E770;
 
-f32 func_0015DED0(Obj_0017E770 *arg0);
+f32 func_0015DED0(void);
 
 typedef struct Obj_00183640 {
     u32 unk_0;
@@ -52,7 +52,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0017CC60", func_0017E4D0);
 
 f32 func_0017E770(Obj_0017E770 *arg0)
 {
-    return arg0->unk_B8 * func_0015DED0(arg0);
+    return arg0->unk_B8 * func_0015DED0();
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0017CC60", func_0017E7A0);

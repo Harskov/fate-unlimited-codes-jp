@@ -48,10 +48,10 @@ typedef struct Obj12 {
 
 extern Obj12 D_0051AD88[];
 
+void func_001836B0(void);
+
 void func_00183660(Obj_00183660 *arg0)
 {
-    void func_001836B0(void);
-
     func_00185030(arg0->unk_C8);
     func_00179380(arg0);
     func_001795F0(arg0, arg0, D_0051AD68);

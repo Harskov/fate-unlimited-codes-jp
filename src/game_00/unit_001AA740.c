@@ -216,9 +216,9 @@ void func_001AB2B0(Obj_001AB2B0 *obj)
     }
 }
 
-void func_001AB330(Obj_001AE2F0 *p)
+void func_001AB330(Obj_001AE2F0 *p, void *arg1)
 {
-    func_001F27D0(p->field_3C);
+    func_001F27D0(p->field_3C, arg1);
 }
 
 int func_001AB340(int skip)

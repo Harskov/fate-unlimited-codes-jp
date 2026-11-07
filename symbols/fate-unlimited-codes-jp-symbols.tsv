@@ -3167,7 +3167,7 @@ func_001AD3D0	unit_001AD300	function	matched	gameplay/game_00.016	call-graph com
 func_001AD460	unit_001AD300	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001AD4C0	unit_001AD300	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001AD5F0	unit_001AD300	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
-func_001AD9C0	unit_001AD300	function	wip	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
+func_001AD9C0	unit_001AD300	function	matched	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001ADBB0	unit_001AD300	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001ADCD0	unit_001AD300	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40
 func_001ADFE0	unit_001AD300	function	asm	gameplay/game_00.016	call-graph community of 282 function(s) from func_00167D40

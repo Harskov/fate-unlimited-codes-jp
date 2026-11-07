@@ -192,7 +192,7 @@ void func_0015DD00(void)
     p->flags = p->flags & 0xFFFF0000;
 }
 
-void func_0015DD20(void)
+void func_0015DD20(s32 arg0)
 {
     if (D_0051A9B8[0] == 0)
         return;

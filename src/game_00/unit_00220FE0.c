@@ -1,5 +1,6 @@
 #include "common.h"
 #include "types.h"
+#include "eekernel.h"
 #include "game_00/unit_001FE660.h"
 
 typedef struct Obj00221190 {
@@ -36,10 +37,6 @@ typedef struct Obj_002210E0 {
     s32 unk_C;
     s32 unk_10;
 } Obj_002210E0;
-
-extern int DIntr();
-
-extern int EIntr();
 
 extern int func_002E6C10();
 

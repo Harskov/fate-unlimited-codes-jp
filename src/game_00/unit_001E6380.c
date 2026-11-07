@@ -46,9 +46,10 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E6380", func_001E6960);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E6380", func_001E69E0);
 
+void func_001E6BC0(Obj_001E6C10 *arg0, s32 arg1);
+
 void func_001E6A30(Obj_001E6C10 *arg0, s32 arg1)
 {
-    void func_001E6BC0(Obj_001E6C10 *arg0, s32 arg1);
     u128 b;
     u128 a;
 
@@ -66,9 +67,9 @@ void func_001E6BC0(Obj_001E6C10 *arg0, s32 arg1)
     func_00165EE0(arg1, arg1);
 }
 
-void func_001E6C00(Obj_001E6C00 *arg0)
+f32 func_001E6C00(Obj_001E6C00 *arg0)
 {
-    func_00167D10(arg0->unk_44, arg0->unk_2C);
+    return func_00167D10(arg0->unk_44, arg0->unk_2C);
 }
 
 f32 func_001E6C10(Obj_001E6C10 *arg0)

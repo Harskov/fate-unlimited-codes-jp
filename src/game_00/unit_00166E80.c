@@ -44,7 +44,7 @@ typedef struct Obj_00167DE0 {
     Elem_00167DE0 *unk_6C;
 } Obj_00167DE0;
 
-extern int func_001619C0(Obj_00167DE0 *a);
+extern int func_001619C0(Obj_00167DE0 *a, int i);
 
 extern int func_002E6C10(int v);
 
@@ -96,11 +96,11 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_00167D10);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_00167D40);
 
-int func_00167DE0(Obj_00167DE0 *arg0)
+int func_00167DE0(Obj_00167DE0 *arg0, int arg1)
 {
     int i;
 
-    i = func_001619C0(arg0);
+    i = func_001619C0(arg0, arg1);
     if (i < 0)
         return 0;
     return func_0020CE80(func_002E6C10(arg0->unk_6C[i].unk_C->unk_C));

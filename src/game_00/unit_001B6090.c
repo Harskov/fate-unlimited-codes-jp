@@ -30,14 +30,14 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B6090", func_001B6780);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B6090", func_001B6BD0);
 
-s32 func_001B6CE0(Vec4 *arg0, s32 arg1, Vec4 *arg2, Vec4 *arg3, Vec4 *out)
+s32 func_001B6CE0(Vec4 *arg0, Vec4 *arg1, Vec4 *arg2, Vec4 *arg3, Vec4 *out)
 {
     f32 base;
     f32 dist;
     f32 denom;
     f32 t;
 
-    base = func_0016E8F0(arg2);
+    base = func_0016E8F0(arg2, arg1);
     dist = func_0016E8F0(arg2, arg0);
     if (arg3 != 0) {
         denom = func_0016E8F0(arg2, arg3);

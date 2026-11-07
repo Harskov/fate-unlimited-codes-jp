@@ -5,5 +5,7 @@
 s32 DelayThread(s32);
 s32 WaitSema(s32);
 s32 SignalSema(s32);
+int DIntr(void);
+int EIntr(void);
 
 #endif

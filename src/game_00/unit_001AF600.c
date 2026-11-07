@@ -2,9 +2,9 @@
 
 f32 fabsf(f32);
 
-f32 func_00333310(void);
+f32 func_00333310(void *);
 
-f32 func_001A47A0(s32);
+f32 func_001A47A0(void *);
 
 typedef struct Obj_001AF7B0 {
     u8 pad_0[0x460];
@@ -45,9 +45,9 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AF600", func_001B00B0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AF600", func_001B0140);
 
-f32 func_001B0230(s32 arg0)
+f32 func_001B0230(void *arg0)
 {
-    if (fabsf(func_00333310() - 1.0f) < 0.001f) {
+    if (fabsf(func_00333310(arg0) - 1.0f) < 0.001f) {
         return 1.0f;
     }
     return func_001A47A0(arg0);

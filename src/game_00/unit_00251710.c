@@ -100,7 +100,7 @@ void func_002522F0(int v)
 
 void func_00252300(Obj_00251710 *arg0)
 {
-    func_002523D0();
+    func_002523D0(&arg0->unk_0);
     func_00328300(&arg0->unk_4);
 }
 

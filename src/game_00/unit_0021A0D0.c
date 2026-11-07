@@ -99,10 +99,11 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A140);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A1B0);
 
+void func_0021A870(Unk_0021A870 *arg0);
+
 void func_0021A210(s32 arg0)
 {
     s32 *entry;
-    void func_0021A870(Unk_0021A870 *arg0);
 
     entry = &D_00525964[arg0 * 3];
     if (*entry == 0)

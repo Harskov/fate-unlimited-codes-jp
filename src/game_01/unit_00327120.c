@@ -2,7 +2,7 @@
 
 void func_00327200(s32 a0, s32 a1, s32 a2, s32 a3);
 
-void func_00327350(s32 a0, s32 a1, s32 a2, s32 a3);
+void func_00327350(void *arg0, s32 arg1, s32 arg2, s32 arg3, f32 arg4);
 
 typedef struct Elem_003272F0 {
     s32 unk_0;
@@ -70,22 +70,22 @@ void func_003272F0(Obj_003272F0 *a0, s32 a1)
     a0->unk_D8[a1].unk_C = 0;
 }
 
-void func_00327310(s32 a0, s32 a1, s32 a2)
+void func_00327310(void *arg0, s32 arg1, s32 arg2, f32 arg3)
 {
-    func_00327350(a0, a1, a2, 16);
+    func_00327350(arg0, arg1, arg2, 16, arg3);
 }
 
-void func_00327320(s32 a0, s32 a1, s32 a2)
+void func_00327320(void *arg0, s32 arg1, s32 arg2, f32 arg3)
 {
-    func_00327350(a0, a1, a2, 8);
+    func_00327350(arg0, arg1, arg2, 8, arg3);
 }
 
-void func_00327330(s32 a0, s32 a1, s32 a2)
+void func_00327330(void *arg0, s32 arg1, s32 arg2, f32 arg3)
 {
-    func_00327350(a0, a1, a2, 4);
+    func_00327350(arg0, arg1, arg2, 4, arg3);
 }
 
-void func_00327340(s32 a0, s32 a1, s32 a2)
+void func_00327340(void *arg0, s32 arg1, s32 arg2, f32 arg3)
 {
-    func_00327350(a0, a1, a2, 2);
+    func_00327350(arg0, arg1, arg2, 2, arg3);
 }

@@ -4,7 +4,7 @@
 
 void func_002E03D0(s32, s32, s32, s32);
 
-void func_0020D040(void *);
+void func_0020D040(void *, void *);
 
 void *func_0020CE80(void *);
 
@@ -31,13 +31,15 @@ void func_0015D130();
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015EE30", func_0015EE30);
 
-void func_0015EFF0(s32 arg0, s32 arg1, s32 arg2)
+void func_0015F060(s32 arg0, s32 arg1, s32 arg2);
+
+void func_0015F050(void *arg0);
+
+void func_0015EFF0(s32 arg0, void *arg1, s32 arg2)
 {
-    void func_0015F050(void *arg0);
-    void func_0015F060(s32 arg0, s32 arg1, s32 arg2);
     u128 buf[4];
 
-    func_0020D040(buf);
+    func_0020D040(buf, arg1);
     func_0015F050(func_0020CE80(buf));
     func_0015F060(arg0, (s32)buf, arg2);
 }

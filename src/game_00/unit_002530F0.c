@@ -10,7 +10,9 @@ typedef struct Obj_00253500 {
 
 int sceSifBindRpc(Obj_00253500 *client, int id, int mode);
 
-int func_00253590(int arg);
+int func_00253590(int arg0);
+
+void func_002535E0(int id, u16 time, void *arg);
 
 int func_00253500(Obj_00253500 *arg0, int arg1);
 
@@ -117,11 +119,9 @@ int func_00253500(Obj_00253500 *arg0, int arg1)
     return 0;
 }
 
-int func_00253590(int arg)
+int func_00253590(int arg0)
 {
-    void func_002535E0(int id, u16 time, void *arg);
-
-    if (SetAlarm(arg & 0xFFFF, func_002535E0, GetThreadId()) < 0) {
+    if (SetAlarm(arg0 & 0xFFFF, func_002535E0, GetThreadId()) < 0) {
         return -2;
     }
     return SleepThread();

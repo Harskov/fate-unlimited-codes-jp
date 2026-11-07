@@ -22,4 +22,6 @@ typedef struct Vec3 {
     /* 0x04 */ float y;
     /* 0x08 */ float z;
 } Vec3;
+
+void func_0017A230(f32 *dst, f32 *a, f32 *b, f32 t);
 #endif

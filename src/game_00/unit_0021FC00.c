@@ -13,10 +13,6 @@ void func_00220670(s32 arg0);
 
 extern void DeleteSema(s32);
 
-extern void DIntr(void);
-
-extern void EIntr(void);
-
 void func_0021FC00(Obj0021FC00 *obj)
 {
     WaitSema(obj->semaId);

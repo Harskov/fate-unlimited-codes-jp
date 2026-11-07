@@ -7,11 +7,11 @@ typedef struct Obj_001F5EE0 {
     u8 *unk_34;
 } Obj_001F5EE0;
 
-extern s32 D_005017A0[];
+extern char D_005017A0[];
 
-extern s32 D_005017B0[];
+extern char D_005017B0[];
 
-void func_00205390();
+s32 func_00205390(const char *);
 
 void func_0020BC70();
 

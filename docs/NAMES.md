@@ -13,8 +13,8 @@ Classes of evidence:
 |---|---|
 | Game functions | 7 of 5827 (5820 placeholders, 0 awaiting evidence) |
 | Functions, library included | 743 of 8234 (7491 placeholders, 0 awaiting evidence) |
-| Types | 4 of 530 (526 placeholders, 0 awaiting evidence) |
-| Members the matched code reaches | 125 of 1317 (1192 placeholders, 0 awaiting evidence) |
+| Types | 4 of 535 (531 placeholders, 0 awaiting evidence) |
+| Members the matched code reaches | 125 of 1323 (1198 placeholders, 0 awaiting evidence) |
 | Globals the matched code reaches | 13 of 814 (801 placeholders, 0 awaiting evidence) |
 
 ## Functions

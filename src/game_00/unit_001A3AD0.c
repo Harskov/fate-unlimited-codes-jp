@@ -83,7 +83,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A3AD0", func_001A4120);
 void func_001A44A0(Obj_001A44A0 *arg0, int arg1)
 {
     if (arg0->flags & 0x20)
-        arg0 = func_0019CFF0();
+        arg0 = func_0019CFF0(arg0);
     arg0->unk_240 += arg1;
 }
 
@@ -94,7 +94,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A3AD0", func_001A45B0);
 void func_001A4640(Obj_001A44A0 *arg0, int arg1)
 {
     if (arg0->flags & 0x20)
-        arg0 = func_0019CFF0();
+        arg0 = func_0019CFF0(arg0);
     arg0->unk_23C = func_0020E5F0(arg0->unk_234 - arg1, 0, arg0->unk_238, arg0->unk_234);
     arg0->unk_240 = 0;
 }

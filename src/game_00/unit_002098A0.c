@@ -5,7 +5,7 @@ void func_002E58F0(void);
 
 extern s32 D_00522D18[];
 
-void func_002C1CE0();
+s32 func_002C1CE0(f32 *);
 
 void func_00200F30();
 
@@ -25,10 +25,10 @@ void func_002098A0(void)
 {
 }
 
+void func_002099F0(s32 arg0);
+
 void func_002098B0(s32 arg0, s32 arg1)
 {
-    void func_002099F0(s32 arg0);
-
     func_002099F0(arg0);
     func_002098A0();
     func_00209950(arg0, 0);

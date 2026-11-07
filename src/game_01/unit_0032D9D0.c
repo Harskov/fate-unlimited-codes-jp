@@ -50,7 +50,7 @@ INCLUDE_ASM("asm/nonmatchings/game_01/unit_0032D9D0", func_0032F4A0);
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_0032D9D0", func_0032F780);
 
-void func_0032FF80(void)
+void func_0032FF80(void *arg0)
 {
 }
 

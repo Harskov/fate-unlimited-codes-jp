@@ -1,5 +1,6 @@
 #include "common.h"
 #include "types.h"
+#include "libc.h"
 
 int sceMcInit(void);
 
@@ -27,9 +28,9 @@ extern s32 D_005033B0[];
 
 extern s32 D_005033E0[];
 
-extern s32 D_00503410[];
+extern char D_00503410[];
 
-extern s32 D_00528B80[];
+extern char D_00528B80[];
 
 extern s16 D_00528B86[];
 
@@ -43,19 +44,15 @@ extern s32 D_00528C00[];
 
 extern s32 D_00528C30[];
 
-extern s32 D_00528C40[];
+extern char D_00528C40[];
 
-extern s32 D_00528C84[];
+extern char D_00528C84[];
 
-extern s32 D_00528CC4[];
+extern char D_00528CC4[];
 
-extern s32 D_00528D04[];
-
-extern void *memcpy(void *, void *, unsigned int);
+extern char D_00528D04[];
 
 extern void *memset(void *, int, unsigned int);
-
-extern char *strcpy(void *, void *);
 
 extern s32 D_0051C270[];
 

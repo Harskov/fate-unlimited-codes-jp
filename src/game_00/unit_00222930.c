@@ -117,7 +117,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00222930", func_00222C50);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00222930", func_00223130);
 
-void func_00223240(void)
+void func_00223240(void *arg0, void *arg1, void *arg2)
 {
 }
 

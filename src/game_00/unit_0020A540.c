@@ -30,7 +30,7 @@ void func_0020A610();
 
 void func_0020A640();
 
-void func_0020EF40();
+void *func_0020EF40();
 
 void func_0020F230();
 

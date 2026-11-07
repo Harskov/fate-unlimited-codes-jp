@@ -58,7 +58,7 @@ char *func_002073D0(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00207310", func_00207440);
 
-void func_00207630(void)
+void func_00207630(s32 arg0)
 {
 }
 

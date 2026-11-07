@@ -107,10 +107,12 @@ Obj_0015A360 *func_0015A360(Obj_0015A360 *arg0)
         next->link_4 = prev;
     if (prev != 0)
         prev->link_8 = next;
-    func_0015A590();
+    func_0015A590(arg0);
     if (prev != 0)
         return prev;
-    return next != 0 ? next : 0;
+    if (next != 0)
+        return next;
+    return 0;
 }
 
 Node_0015A3D0 *func_0015A3D0(Node_0015A3D0 *arg0)

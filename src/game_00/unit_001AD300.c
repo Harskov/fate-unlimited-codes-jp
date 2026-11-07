@@ -3,6 +3,7 @@
 #include "game_00/tbl_0051C858.h"
 #include "game_00/obj_001ae2f0.h"
 #include "game_00/unit_001FE660.h"
+#include "game_00/vec.h"
 
 typedef struct Obj {
     unsigned char unk_0[0x238C];
@@ -29,6 +30,35 @@ void func_001CCFD0();
 
 void func_002B1E28();
 
+
+typedef struct Obj28 {
+    /* 0x00 */ int unk_0;
+    /* 0x04 */ f32 unk_4[3];
+    /* 0x10 */ f32 unk_10[3];
+} Obj28;
+
+typedef struct Obj_001AD9C0 {
+    u8 unk_0[0x38];
+    /* 0x38 */ Obj28 *unk_38;
+} Obj_001AD9C0;
+
+typedef struct Obj_001AD9C0_2 {
+    u8 unk_0[8];
+    /* 0x08 */ int unk_8;
+} Obj_001AD9C0_2;
+
+typedef struct Sub_001AD9C0 {
+    u8 unk_0[8];
+    /* 0x08 */ int unk_8;
+} Sub_001AD9C0;
+
+typedef struct Elem_001AD9C0 {
+    /* 0x00 */ int unk_0;
+    /* 0x04 */ int unk_4;
+    u8 unk_8[8];
+} Elem_001AD9C0;
+
+void func_001AD460();
 
 void func_001AD300(int index)
 {
@@ -82,7 +112,61 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AD300", func_001AD4C0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AD300", func_001AD5F0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AD300", func_001AD9C0);
+/* Probably a blend between two 0x1C-byte entries: the one reached through arg4's index and
+   the next element after arg6 whose index is set, weighted by where arg5 falls between their
+   +0 values; with no such element the first entry is passed on unchanged. */
+void func_001AD9C0(Obj_001AE2F0 *arg0, Obj_001AD9C0_2 *arg1, Sub_001AD9C0 *arg2,
+                   Elem_001AD9C0 *arg3, Elem_001AD9C0 *arg4, int arg5, int arg6, int arg7)
+{
+    Obj_001AD9C0 *p;
+    Obj28 *a;
+    Obj28 *b;
+    Elem_001AD9C0 *e;
+    Obj28 res;
+    int i;
+    int j;
+    f32 t;
+
+    p = arg0->field_144[arg4->unk_4];
+    if (p == 0)
+        return;
+
+    a = p->unk_38;
+    e = 0;
+    for (i = arg6 + 1; i < arg2->unk_8; i++) {
+        if (arg3[i].unk_4 != -1) {
+            e = &arg3[i];
+            j = i;
+            switch (e->unk_4) {
+            case -2:
+            case -3:
+                memset(&res, 0, sizeof(res));
+                b = &res;
+                break;
+            default:
+                p = arg0->field_144[e->unk_4];
+                if (p == 0)
+                    return;
+                b = p->unk_38;
+                break;
+            }
+            break;
+        }
+    }
+
+    if (e != 0) {
+        t = ((f32)arg5 - (f32)arg4->unk_0) / (f32)(e->unk_0 - arg4->unk_0);
+        if (arg7 != 0 && t >= 1.0f) {
+            arg1->unk_8 = j;
+            t = 1.0f;
+        }
+        func_0017A230(res.unk_4, a->unk_4, b->unk_4, t);
+        func_0017A230(res.unk_10, a->unk_10, b->unk_10, t);
+    } else {
+        memcpy(&res, a, sizeof(res));
+    }
+    func_001AD460(arg0->field_3C, &res);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AD300", func_001ADBB0);
 

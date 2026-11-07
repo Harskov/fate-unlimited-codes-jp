@@ -55,7 +55,7 @@ void func_00201F90(s32 arg0, s32 arg1)
 
 void func_00202010(s32 arg0)
 {
-    s64 v;
+    s32 v;
 
     switch (arg0) {
     case 1:

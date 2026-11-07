@@ -42,7 +42,7 @@ void func_001E3110(void)
 {
 }
 
-void func_001E3120(Obj_001E3120 *p)
+void func_001E3120(Obj_001E3120 *p, s32 arg1)
 {
     p->unk_B4 = 0xFF;
     p->unk_B5 = 0xFF;
@@ -84,20 +84,20 @@ void func_001E37F0(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E2F20", func_001E3800);
 
-void func_001E3880(s32 arg0)
+void func_001E3880(s32 arg0, f32 *arg1)
 {
     if (arg0 >= 2) {
         *(long long *)1 = 0;
     }
-    func_0015D130(&D_0051F140[arg0 * 3]);
+    func_0015D130(&D_0051F140[arg0 * 3], arg1);
 }
 
-void func_001E38D0(s32 arg0)
+void func_001E38D0(s32 arg0, f32 *arg1)
 {
     if (arg0 >= 2) {
         *(long long *)1 = 0;
     }
-    func_0015D130(&D_0051F160[arg0 * 3]);
+    func_0015D130(&D_0051F160[arg0 * 3], arg1);
 }
 
 s32 func_001E3920(s32 arg0, f32 *arg1)

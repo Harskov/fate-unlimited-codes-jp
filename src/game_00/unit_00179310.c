@@ -174,12 +174,13 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_00179760);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_0017A1B0);
 
-void func_0017A230(void *arg0, s32 arg1, f32 scale)
+/* The blend of arg1 and arg2 by arg3: arg1 at 0, arg2 at 1. */
+void func_0017A230(f32 *arg0, f32 *arg1, f32 *arg2, f32 arg3)
 {
     Vec4 v;
 
-    func_00165EA0(&v);
-    func_0016CFD0(&v, &v, scale);
+    func_00165EA0(&v, arg1, arg2);
+    func_0016CFD0(&v, &v, arg3);
     func_00165EA0(arg0, arg1, &v);
 }
 

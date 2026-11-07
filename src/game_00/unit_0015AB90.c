@@ -12,11 +12,11 @@ extern Rec0051A424 D_0051A424[];
 
 s32 func_00144570(s32);
 
-void func_00143EA8();
+int func_00143EA8();
 
 void func_00144F88();
 
-void func_00145938();
+int func_00145938();
 
 void func_00145DC0();
 
@@ -90,9 +90,9 @@ void func_0015AF90(s32 i, s32 arg1)
     func_00144F88(D_0051A424[i].flags, arg1);
 }
 
-void func_0015AFB0(s32 i)
+int func_0015AFB0(s32 i)
 {
-    func_00145938(D_0051A424[i].flags);
+    return func_00145938(D_0051A424[i].flags);
 }
 
 s32 func_0015AFD0(s32 i)
@@ -100,9 +100,9 @@ s32 func_0015AFD0(s32 i)
     return func_00144570(D_0051A424[i].flags) * 60 / 100;
 }
 
-void func_0015B030(s32 i)
+int func_0015B030(s32 i)
 {
-    func_00143EA8(D_0051A424[i].flags);
+    return func_00143EA8(D_0051A424[i].flags);
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015AB90", func_0015B050);
