@@ -27,16 +27,16 @@ You need Linux x86-64 (WSL2 on Windows works), Python 3.9 or newer, git, and you
 
 ## Progress
 
-**1538 of 5827 game functions are matched** (22,504 of 560,059 instructions, 4.02 %). 6 of the matched and 7 of all game functions carry a name whose evidence a script checked; so do 4 of 537 types, 125 of 1330 members the matched code reaches, 13 of 827 globals the matched code reaches; 5827 functions carry a subsystem label. Every name and its evidence: [docs/NAMES.md](docs/NAMES.md).
+**1324 of 3745 game functions are matched** (21,822 of 366,070 instructions, 5.96 %). 5 of the matched and 6 of all game functions carry a name whose evidence a script checked; so do 4 of 537 types, 125 of 1330 members the matched code reaches, 13 of 827 globals the matched code reaches; 3745 functions carry a subsystem label. Every name and its evidence: [docs/NAMES.md](docs/NAMES.md).
 
 | Milestone | Status | Exit judged on |
 |---|---|---|
 | M1 Contributable | done | public-build.json ok=True; matched outside their unit: 0 |
 | M2 Identified | done | name pass closed: True; unlabelled game functions: 0; review pending: 0 |
-| M3 Platform boundary | current | 66/316 platform functions matched; PLATFORM.md present |
-| M4 Core | later | 52/139 core functions matched; FORMATS.md missing |
-| M5 Gameplay | later | 1420/5372 gameplay functions matched |
-| M6 Complete | later | 1538/5827 game functions matched; check ok=True |
+| M3 Platform boundary | current | 63/166 platform functions matched; PLATFORM.md present |
+| M4 Core | later | 52/109 core functions matched; FORMATS.md missing |
+| M5 Gameplay | later | 1209/3470 gameplay functions matched |
+| M6 Complete | later | 1324/3745 game functions matched; check ok=True |
 | M7 Documented | later | docs.py check ok=None (never run) |
 | M8 Behaviour-verified | not required | last behaviour compare ok=None at never |
 | M9 Reverse-engineered | later | names without checked evidence: 0; matches since the last name pass: 16; named types with two layouts: 0 |

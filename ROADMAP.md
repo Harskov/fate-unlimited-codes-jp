@@ -6,10 +6,10 @@ The project serves four purposes — preservation, recompilation, porting and le
 |---|---|---|---|
 | M1 | Contributable | done | public-build.json ok=True; matched outside their unit: 0 |
 | M2 | Identified | done | name pass closed: True; unlabelled game functions: 0; review pending: 0 |
-| M3 | Platform boundary | current | 66/316 platform functions matched; PLATFORM.md present |
-| M4 | Core | later | 52/139 core functions matched; FORMATS.md missing |
-| M5 | Gameplay | later | 1420/5372 gameplay functions matched |
-| M6 | Complete | later | 1538/5827 game functions matched; check ok=True |
+| M3 | Platform boundary | current | 63/166 platform functions matched; PLATFORM.md present |
+| M4 | Core | later | 52/109 core functions matched; FORMATS.md missing |
+| M5 | Gameplay | later | 1209/3470 gameplay functions matched |
+| M6 | Complete | later | 1324/3745 game functions matched; check ok=True |
 | M7 | Documented | later | docs.py check ok=None (never run) |
 | M8 | Behaviour-verified | not required | last behaviour compare ok=None at never |
 | M9 | Reverse-engineered | later | names without checked evidence: 0; matches since the last name pass: 16; named types with two layouts: 0 |
