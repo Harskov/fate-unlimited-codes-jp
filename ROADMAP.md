@@ -10,7 +10,7 @@ The project serves four purposes — preservation, recompilation, porting and le
 | M4 | Core | later | 52/109 core functions matched; FORMATS.md missing |
 | M5 | Gameplay | later | 1209/3470 gameplay functions matched |
 | M6 | Complete | later | 1324/3745 game functions matched; check ok=True |
-| M7 | Documented | later | docs.py check ok=None (never run) |
+| M7 | Documented | later | docs.py check on the tree as it stands: 43 gap(s), first: 1324 matched function(s) without a purpose line: ['func_001598C8', 'func_00159930', 'func_001599B0', 'func_00159A90',...; last recorded ok=None (never run) |
 | M8 | Behaviour-verified | not required | last behaviour compare ok=None at never |
 | M9 | Reverse-engineered | later | names without checked evidence: 0; matches since the last name pass: 16; named types with two layouts: 0 |
 | M10 | Designed | later | no design document yet |
