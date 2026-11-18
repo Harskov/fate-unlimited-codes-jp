@@ -915,8 +915,8 @@ Classes of evidence:
 
 | Global | Address | Class | Evidence |
 |---|---|---|---|
-| `gAddIntcHandlerResult` |  | anchored | prototype — checked: func_0020F900 passes it as the result of AddIntcHandler (s32 AddIntcHandler(s32 cause, … |
-| `gChangeThreadPriorityResult` |  | anchored | prototype — checked: func_0015A7C0 passes it as the result of ChangeThreadPriority (s32 …; func_0015A7C0 passes it as argument 1 of ChangeThreadPriority (s32 … |
+| `gAddIntcHandlerResult` | 0x003D7BC8 | anchored | prototype — checked: func_0020F900 passes it as the result of AddIntcHandler (s32 AddIntcHandler(s32 cause, … |
+| `gChangeThreadPriorityResult` | 0x003D3418 | anchored | prototype — checked: func_0015A7C0 passes it as the result of ChangeThreadPriority (s32 …; func_0015A7C0 passes it as argument 1 of ChangeThreadPriority (s32 … |
 | `gFormat_4FEEA0` | 0x004FEEA0 | anchored | prototype — checked: func_001AE4D0 passes it as argument 1 of sprintf (int sprintf(char *buf, const char … |
 | `gFormat_4FEEA8` | 0x004FEEA8 | anchored | prototype — checked: func_001AE4D0 passes it as argument 1 of sprintf (int sprintf(char *buf, const char … |
 | `gFormat_501960` | 0x00501960 | anchored | prototype — checked: func_002073D0 passes it as argument 1 of sprintf (int sprintf(char *buf, const char … |
@@ -925,6 +925,6 @@ Classes of evidence:
 | `gFormat_502280` | 0x00502280 | anchored | prototype — checked: func_00225730 passes it as argument 1 of sprintf (int sprintf(char *buf, const char … |
 | `gFormat_5068B0` | 0x005068B0 | anchored | prototype — checked: func_0033F840 passes it as argument 1 of sprintf (int sprintf(char *buf, const char … |
 | `gFormat_5068B8` | 0x005068B8 | anchored | prototype — checked: func_0033F840 passes it as argument 1 of sprintf (int sprintf(char *buf, const char … |
-| `gHandlerId` |  | anchored | prototype — checked: func_0020A650 passes it as argument 1 of RemoveIntcHandler (s32 RemoveIntcHandler(s32 … |
-| `gMode` |  | anchored | prototype — checked: func_00206870 passes it as argument 3 of sceCdRead (int sceCdRead(u32 lbn, u32 sectors, … |
-| `gSemaId` |  | anchored | prototype — checked: func_00252B80 passes it as argument 0 of PollSema (s32 PollSema(s32 sema_id)); func_00252B80 passes it as argument 0 of WaitSema (s32 WaitSema(s32 sema_id)); func_00252B80 passes it as argument 0 of SignalSema (s32 SignalSema(s32 sema_id)) |
+| `gHandlerId` | 0x00522D68 | anchored | prototype — checked: func_0020A650 passes it as argument 1 of RemoveIntcHandler (s32 RemoveIntcHandler(s32 … |
+| `gMode` | 0x00522BD0 | anchored | prototype — checked: func_00206870 passes it as argument 3 of sceCdRead (int sceCdRead(u32 lbn, u32 sectors, … |
+| `gSemaId` | 0x003DF8F0 | anchored | prototype — checked: func_00252B80 passes it as argument 0 of PollSema (s32 PollSema(s32 sema_id)); func_00252B80 passes it as argument 0 of WaitSema (s32 WaitSema(s32 sema_id)); func_00252B80 passes it as argument 0 of SignalSema (s32 SignalSema(s32 sema_id)) |
