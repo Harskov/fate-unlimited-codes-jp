@@ -4281,7 +4281,7 @@ func_002062F0	unit_002062B0	function	matched	gameplay/game_00.010	call-graph com
 func_00206300	unit_002062B0	function	wip	platform	calls func_00353FD0, sceCdDiskReady, sceCdGetError …
 func_00206430	unit_002062B0	function	wip	platform	calls func_00353FD0, sceCdDiskReady, sceCdGetError …
 func_00206550	unit_002062B0	function	asm	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
-func_00206600	unit_002062B0	function	asm	platform	calls FlushCache, func_00353FD0, sceCdDiskReady …
+func_00206600	unit_002062B0	function	matched	platform	calls FlushCache, func_00353FD0, sceCdDiskReady …
 func_00206870	unit_002062B0	function	matched	platform	calls sceCdDiskReady, sceCdGetError, sceCdRead …
 func_00206A10	unit_002062B0	function	matched	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
 func_00206A80	unit_002062B0	function	matched	gameplay/game_00.010	call-graph community of 149 function(s) from func_0015BF70
@@ -7169,7 +7169,7 @@ func_00322CE0	unit_003216C0	function	asm	gameplay/game_00.002	call-graph communi
 func_003237A0	unit_003216C0	function	asm	gameplay/game_00.002	call-graph community of 117 function(s) from func_00159A90
 func_00323A70	unit_003216C0	function	asm	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
 func_00323E50	unit_003216C0	function	asm	gameplay/game_00.021	call-graph community of 157 function(s) from func_001B02A0
-func_003241B0	unit_003216C0	function	asm	platform	EE hardware: GS privileged
+func_003241B0	unit_003216C0	function	matched	platform	EE hardware: GS privileged
 func_00324260	unit_003216C0	function	asm	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_00324A30	unit_003216C0	function	matched	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_00324A80	unit_003216C0	function	matched	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
@@ -7457,7 +7457,7 @@ func_00348DA0	unit_00345B80	function	matched	platform	EE hardware: GS privileged
 func_00348DC0	unit_00345B80	function	asm	platform	EE hardware: GS privileged
 func_00348FF0	unit_00345B80	function	asm	platform	EE hardware: GS privileged
 func_00349390	unit_00349390	function	matched	platform	EE hardware: GS privileged
-func_003493B0	unit_00349390	function	asm	platform	EE hardware: GS privileged
+func_003493B0	unit_00349390	function	wip	platform	EE hardware: GS privileged
 func_003494F0	unit_00349390	function	matched	platform	EE hardware: GS privileged
 func_00349510	unit_00349390	function	asm	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630
 func_00349780	unit_00349390	function	matched	gameplay/game_00.027	call-graph community of 209 function(s) from func_00200630

@@ -69,6 +69,18 @@ extern char D_00501948[];
 
 int sceRead(int fd, void *buf, int nbyte);
 
+typedef struct Obj24 {
+    /* 0x00 */ u32 unk_0;
+    /* 0x04 */ u32 unk_4;
+    /* 0x08 */ u8 pad_8[0x1C];
+} Obj24;
+
+void func_00206AA0(char *dst, char *src);
+
+s32 func_00353FD0(Obj24 *file, char *path);
+
+void FlushCache(s32);
+
 int func_002062B0(void)
 {
     return 0;
@@ -99,7 +111,58 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206430);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206550);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206600);
+/* Looks a file up on the disc by name and reads all of it into buf, retrying the
+   search, the read and any reported error until the read completes cleanly;
+   returns the file's length rounded up to whole 2048-byte sectors. */
+s32 func_00206600(char *name, void *buf)
+{
+    char path[256];
+    Obj24 file;
+    s32 n;
+
+    func_00206AA0(path, name);
+    for (;;) {
+        if (func_00353FD0(&file, path) == 0) {
+            while (!sceCdStandby()) {
+                func_00206A10(1);
+            }
+            while (sceCdSync(1)) {
+                func_00206A10(1);
+            }
+            sceCdDiskReady(0);
+            continue;
+        }
+        n = func_00206A80(file.unk_4);
+        sceCdDiskReady(0);
+        if (sceCdRead(file.unk_0, n, buf, gMode) == 0) {
+            while (!sceCdStandby()) {
+                func_00206A10(1);
+            }
+            while (sceCdSync(1)) {
+                func_00206A10(1);
+            }
+            sceCdDiskReady(0);
+            continue;
+        }
+        while (sceCdSync(1)) {
+            func_00206A10(5);
+        }
+        FlushCache(0);
+        if (sceCdGetError() == 0) {
+            break;
+        }
+        sceCdDiskReady(0);
+        while (!sceCdStandby()) {
+            sceCdGetError();
+            func_00206A10(5);
+        }
+        while (sceCdSync(1)) {
+            func_00206A10(1);
+        }
+        sceCdDiskReady(0);
+    }
+    return n << 11;
+}
 
 /* Reads from the disc with sceCdRead until a read completes without error,
    spinning the drive back up (sceCdStandby) after a failed request or an error;
