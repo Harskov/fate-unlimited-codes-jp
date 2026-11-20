@@ -67,6 +67,14 @@ typedef struct Obj0021F960 {
 
 void func_0021FA90();
 
+s32 func_0015AE00();
+
+void *func_0013A188();
+
+void *func_0013A7D0();
+
+s32 func_0013B6C0();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F160);
 
 int func_0021F190(Obj38 *obj, s32 arg1, s32 arg2)
@@ -126,7 +134,22 @@ int func_0021F370(Obj0021F370 *obj)
     return 1;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F390);
+int func_0021F390(Obj38 *obj, s32 arg1)
+{
+    s32 v;
+
+    v = func_0015AE00(0, arg1);
+    if (v == -1) {
+        obj->unk_34 = func_0013A188(arg1, 0);
+    } else {
+        obj->unk_34 = func_0013A7D0(0, v);
+    }
+    if (obj->unk_34 == 0) {
+        return 0;
+    }
+    obj->unk_4 = func_0013B6C0(obj->unk_34) << 11;
+    return 1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021F160", func_0021F420);
 
