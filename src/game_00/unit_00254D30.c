@@ -2,7 +2,7 @@
 #include "libc.h"
 #include "types.h"
 
-s32 func_0010C5E8(const char *path, s32 argc, const char *argv);
+s32 sceSifLoadModule(const char *path, s32 argc, const char *argv);
 
 extern s32 D_00529900[];
 
@@ -43,6 +43,25 @@ void func_00255550();
 s32 func_00252A20();
 
 int func_00252B80(int);
+
+typedef struct Obj_00523AF0 {
+    u8 unk_0[0xE8];
+    s16 unk_E8[16];
+} Obj_00523AF0;
+
+extern Obj_00523AF0 D_00523AF0[];
+
+extern s32 D_00523BC0[];
+
+extern s32 D_00523BC4[];
+
+extern s32 D_00523BC8[];
+
+extern s32 D_00523BCC[];
+
+extern s32 D_00523BD0[];
+
+extern s32 D_00523BD4[];
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00254D30", func_00254D30);
 
@@ -94,7 +113,7 @@ s32 func_00255430(s32 arg0)
 
 void func_00255450(int *result, const char *arg1)
 {
-    while ((*result = func_0010C5E8(arg1, 0, 0)) < 0) {
+    while ((*result = sceSifLoadModule(arg1, 0, 0)) < 0) {
     }
 }
 
@@ -137,4 +156,17 @@ void func_002555A0(void)
     func_00254B30(2, 4);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00254D30", func_002556C0);
+void func_002556C0(void)
+{
+    s32 i;
+
+    D_00523BC0[0] = 1;
+    D_00523BC4[0] = 1;
+    D_00523BC8[0] = 0;
+    D_00523BCC[0] = 0;
+    D_00523BD0[0] = 0;
+    D_00523BD4[0] = 1;
+    for (i = 0; i < 16; i++) {
+        D_00523AF0[0].unk_E8[i] = 0;
+    }
+}

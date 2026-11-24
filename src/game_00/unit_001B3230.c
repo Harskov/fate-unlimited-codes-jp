@@ -11,7 +11,7 @@ typedef struct Sub_001B3960 {
 } Sub_001B3960;
 
 typedef struct Slot {
-    /* 0x00 */ s32 unk_0;
+    /* 0x00 */ s32 flags;
     s32 unk_4;
     s32 unk_8[4];
     s32 unk_18[4];
@@ -30,6 +30,8 @@ void func_001B3A20(Obj *);
 
 void func_0015EE20(void *, f32, f32, f32);
 
+void func_001F27D0(s32, s32);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3230", func_001B3230);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3230", func_001B3410);
@@ -39,7 +41,28 @@ void func_001B35C0(Obj *o, s32 i, s32 v)
     o->unk_5D0[i].unk_C4 = v;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3230", func_001B35E0);
+/* Passes v with the +0x4 word of slot i when its bit 0x1 is set; a negative i
+   does so for every one of the eight slots. */
+void func_001B35E0(Obj *o, s32 i, s32 v)
+{
+    s32 j;
+
+    if (i >= 0) {
+        Slot *s = &o->unk_5D0[i];
+
+        if (s->flags & 1) {
+            func_001F27D0(s->unk_4, v);
+        }
+    } else {
+        for (j = 0; j < 8; j++) {
+            Slot *s = &o->unk_5D0[j];
+
+            if (s->flags & 1) {
+                func_001F27D0(s->unk_4, v);
+            }
+        }
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B3230", func_001B36A0);
 
@@ -51,7 +74,7 @@ void func_001B38F0(Obj *o, s32 i)
 {
     Slot *s = &o->unk_5D0[i];
 
-    s->unk_0 &= ~1;
+    s->flags &= ~1;
 }
 
 void func_001B3920(Obj *o, s32 i)
@@ -61,7 +84,7 @@ void func_001B3920(Obj *o, s32 i)
     if (s->unk_4 == 0) {
         return;
     }
-    s->unk_0 |= 1;
+    s->flags |= 1;
 }
 
 void func_001B3960(Obj *o)
@@ -72,7 +95,7 @@ void func_001B3960(Obj *o)
         Slot *s = &o->unk_5D0[i];
 
         if (s->unk_4 != 0) {
-            s->unk_0 &= ~2;
+            s->flags &= ~2;
             memset(&s->unk_28, 0, sizeof(Sub_001B3960));
             memset(&s->unk_5C, 0, sizeof(Sub_001B3960));
             memset(&s->unk_90, 0, sizeof(Sub_001B3960));
@@ -103,7 +126,7 @@ void func_001B3B20(Obj *o)
     s32 j;
 
     for (i = 0; i < 8; i++) {
-        o->unk_5D0[i].unk_0 = 0;
+        o->unk_5D0[i].flags = 0;
         for (j = 0; j < 4; j++) {
             o->unk_5D0[i].unk_8[j] = -1;
             o->unk_5D0[i].unk_18[j] = 0xF;

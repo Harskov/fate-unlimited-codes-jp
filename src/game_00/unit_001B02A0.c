@@ -20,6 +20,13 @@ typedef struct Obj_001B0450 {
 
 void func_0020F410();
 
+typedef struct Obj_001B0410 {
+    u8 unk_0[0x1508];
+    u8 unk_1508[0x20];
+} Obj_001B0410;
+
+void func_0020F4B0();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B02A0", func_001B02A0);
 
 int func_001B0380(void)
@@ -54,7 +61,16 @@ void func_001B03D0(s32 arg0)
         memset(D_0051C900, 0, 0xE20);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B02A0", func_001B0410);
+s32 func_001B0410(Obj_001B0410 *arg0, s32 arg1, s32 arg2)
+{
+    s32 i;
+
+    for (i = 0; i < 32; i++) {
+        if (arg1 & (1 << i))
+            break;
+    }
+    return arg0->unk_1508[i] - arg2;
+}
 
 void func_001B0450(Obj_001B0450 *arg0)
 {
@@ -62,7 +78,11 @@ void func_001B0450(Obj_001B0450 *arg0)
         func_0020F410(arg0->unk_4);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001B02A0", func_001B0490);
+void func_001B0490(Obj_001B0450 *arg0)
+{
+    if (arg0->unk_2440 == 0)
+        func_0020F4B0(arg0->unk_4);
+}
 
 void func_001B04D0(s32 arg0, s32 arg1)
 {

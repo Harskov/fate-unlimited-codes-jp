@@ -48,6 +48,12 @@ typedef struct Obj_00383000 {
     /* 0x1A4 */ s32 unk_1A4;
 } Obj_00383000;
 
+extern s32 D_00522DB0[];
+
+void func_0020F230(s32 *arg0, u8 *arg1);
+
+u8 *func_0020F180(s32 *arg0, s32 arg1);
+
 void func_00383000(Obj_00383000 *arg0, s32 arg1, f32 arg2)
 {
     arg0->unk_160 = 3;
@@ -119,9 +125,29 @@ Obj_003833C0 *func_00383410(s32 arg0)
     return obj;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00383000", func_00383470);
+void func_00383470(void)
+{
+    u8 *p;
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00383000", func_003834B0);
+    p = (u8 *)D_005361C8[0];
+    if (p != 0) {
+        func_0020F230(D_00522DB0, p);
+        D_005361C8[0] = 0;
+        D_005361D0[0] = 0;
+    }
+}
+
+void func_003834B0(void)
+{
+    u8 *p;
+
+    if (D_005361C8[0] != 0) {
+        return;
+    }
+    p = func_0020F180(D_00522DB0, 0x5480);
+    D_005361C8[0] = (s32)p;
+    memset(p, 0, 0x5480);
+}
 
 s16 func_00383500(s32 arg0)
 {

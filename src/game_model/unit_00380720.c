@@ -19,19 +19,41 @@ void func_003834B0();
 
 void func_00381F40();
 
+extern s32 D_005361B0[];
+
+s32 func_0020E5F0(s32, s32, s32, s32);
+
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380720", func_00380720);
 
 void func_003808B0(void)
 {
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380720", func_003808C0);
+s64 func_003808C0(void)
+{
+    s32 v = D_005361B0[0] + 1;
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380720", func_00380900);
+    D_005361B0[0] = v;
+    if (v >= 0x65) {
+        v = 0;
+        D_005361B0[0] = 0;
+    }
+    return v;
+}
+
+// !FAKE: the word at D_005361A8 holds a pointer the unit declares as s32; read as a pointer the store through it may reach the global, so the second statement reloads it as the reference does
+void func_00380900(s32 arg0)
+{
+    ((s32 **)D_005361A8)[0][14] = arg0;
+    ((s32 **)D_005361A8)[0][0] |= 0x100;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380720", func_00380930);
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380720", func_00380C60);
+void func_00380C60(s32 arg0)
+{
+    ((s32 *)D_005361A8[0])[4] = func_0020E5F0(((s32 *)D_005361A8[0])[4], arg0, 0, 0x98967F);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380720", func_00380CA0);
 

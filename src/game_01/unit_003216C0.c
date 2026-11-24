@@ -1,7 +1,7 @@
 #include "common.h"
 
 typedef struct Obj_00324A30 {
-    /* 0x00 */ u32 unk_0;
+    /* 0x00 */ u32 flags_0;
     /* 0x04 */ u8 pad_4[0x20];
     /* 0x24 */ s32 flags;
 } Obj_00324A30;
@@ -40,17 +40,17 @@ void func_003241B0(void *arg0, Obj_00324A30 *arg1, s32 arg2)
 {
     s32 skip;
 
-    skip = (D_0051D8A0[0] & 0x12000000) && (arg1->unk_0 & 0x100000);
+    skip = (D_0051D8A0[0] & 0x12000000) && (arg1->flags_0 & 0x100000);
     if (skip) {
         return;
     }
     if ((arg1->flags & 2) && func_0032F780(arg1, arg2) == 0) {
         return;
     }
-    if (arg1->unk_0 & 8) {
+    if (arg1->flags_0 & 8) {
         return;
     }
-    if (arg1->unk_0 & 4) {
+    if (arg1->flags_0 & 4) {
         func_00323A70(arg1);
     } else {
         func_00323E50(arg1);

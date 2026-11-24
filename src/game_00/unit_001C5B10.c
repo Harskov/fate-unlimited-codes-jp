@@ -41,6 +41,24 @@ typedef struct Obj_001C5B10 {
     s32 unk_2450;
 } Obj_001C5B10;
 
+typedef struct Obj_00531B60 {
+    s32 unk_0;
+    s32 unk_4;
+    s32 unk_8;
+    u8 pad_C[0x30];
+    s32 unk_3C;
+    s32 unk_40[4];
+    u8 pad_50[0x24];
+} Obj_00531B60;
+
+extern Obj_00531B60 D_00531B60[];
+
+s32 func_0019D540(s32 arg0, s32 arg1, s32 arg2);
+
+extern s32 D_0051D890[];
+
+extern s32 D_0051D894[];
+
 s32 func_001C5B10(Obj_001C5B10 *arg0, s32 arg1)
 {
     if (arg0 == 0)
@@ -109,9 +127,56 @@ void func_001C67F0(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C5B10", func_001C6840);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C5B10", func_001C68C0);
+/* Sets bit 0x80 of D_0051D890, then clears it again when the mode in D_0051D894 is 7,
+   when it is 8 with bit 0x20000000 set, or when either entry of D_00531B60 holds a 2
+   in any of its checked slots. */
+void func_001C68C0(void)
+{
+    s32 v;
+    s32 i;
+    s32 j;
+    s32 r;
+    Obj_00531B60 *p;
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C5B10", func_001C69E0);
+    v = D_0051D890[0] | 0x80;
+    D_0051D890[0] = v;
+    switch (D_0051D894[0]) {
+    case 7:
+        D_0051D890[0] &= ~0x80;
+        return;
+    case 8:
+        if (v & 0x20000000) {
+            D_0051D890[0] = v & ~0x80;
+            return;
+        }
+        break;
+    }
+
+    p = D_00531B60;
+    for (i = 0; i < 2; i++, p++) {
+        r = 0;
+        if (p->unk_8 == 2)
+            r = 1;
+        if (p->unk_3C == 2)
+            r = 1;
+        for (j = 0; j < 4; j++) {
+            if (p->unk_40[j] == 2) {
+                r = 1;
+                break;
+            }
+        }
+        if (r != 0) {
+            D_0051D890[0] &= ~0x80;
+            return;
+        }
+    }
+}
+
+s32 func_001C69E0(s32 arg0)
+{
+    Obj_00531B60 *p = &D_00531B60[arg0];
+    return func_0019D540(0, p->unk_8, 1) != 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C5B10", func_001C6A30);
 

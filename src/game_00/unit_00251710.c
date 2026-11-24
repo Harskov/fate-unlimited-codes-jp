@@ -31,6 +31,8 @@ void func_00251D80();
 
 Obj_00251F00 *func_00211490();
 
+Obj_00251710 *func_0020F180(s32 *arg0, s32 arg1);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00251710);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00251CE0);
@@ -117,7 +119,13 @@ int func_00252340(int *arg0)
     return v;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00252370);
+int func_00252370(int *arg0)
+{
+    int v = *arg0;
+    if (v >= 0x7FFFFF00)
+        v = (**(int ***)D_00529530[0])[v + 0x100];
+    return v;
+}
 
 void func_002523B0(Obj_00251710 *arg0)
 {
@@ -133,4 +141,11 @@ void func_002523D0(s32 *arg0)
     *arg0 = 0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00251710", func_00252410);
+Obj_00251710 *func_00252410(int arg0)
+{
+    Obj_00251710 *p = func_0020F180(D_00522DB0, arg0 * 4 + 8);
+    p->unk_0 = (int *)(p + 1);
+    p->unk_4 = arg0;
+    func_002523B0(p);
+    return p;
+}

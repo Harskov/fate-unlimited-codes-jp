@@ -1,10 +1,23 @@
 #include "common.h"
 
+typedef struct Obj_00359500 {
+    u8 unk_0[0x2524];
+    s32 unk_2524;
+} Obj_00359500;
+
 INCLUDE_ASM("asm/nonmatchings/game_02/unit_003593B0", func_003593B0);
 
 INCLUDE_ASM("asm/nonmatchings/game_02/unit_003593B0", func_00359470);
 
-INCLUDE_ASM("asm/nonmatchings/game_02/unit_003593B0", func_00359500);
+void func_00359500(Obj_00359500 *arg0)
+{
+    s32 *p;
+
+    p = &arg0->unk_2524;
+    if (*p > 0) {
+        *p = func_0020E5F0(*p, -1, 0, 0x1869F);
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_02/unit_003593B0", func_00359550);
 

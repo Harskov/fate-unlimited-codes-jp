@@ -23,6 +23,41 @@ s8 *func_0015D810();
 
 void func_00159B60();
 
+void * func_0020EC40(s32, s32);
+
+extern s32 D_00522DB0[];
+
+void func_0020F230();
+
+typedef struct Obj14 {
+    /* 0x00 */ s32 unk_0;
+    /* 0x04 */ s32 unk_4;
+    /* 0x08 */ s32 unk_8;
+    /* 0x0C */ s32 unk_C;
+    /* 0x10 */ s32 unk_10;
+} Obj14;
+
+typedef struct Obj88 {
+    /* 0x00 */ s8 unk_0;
+    u8 pad_1[3];
+    /* 0x04 */ Obj14 unk_4;
+    u8 pad_18[0x70];
+} Obj88;
+
+typedef struct Obj10 {
+    /* 0x00 */ s32 unk_0;
+    /* 0x04 */ s32 unk_4;
+    /* 0x08 */ s32 unk_8;
+    /* 0x0C */ s32 unk_C;
+} Obj10;
+
+typedef struct Obj_00198C30 {
+    u8 pad_0[0x6C];
+    /* 0x6C */ Obj88 *unk_6C;
+} Obj_00198C30;
+
+s8 *func_00198EF0(s8 arg0);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00198140", func_00198140);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00198140", func_00198190);
@@ -35,7 +70,30 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00198140", func_00198730);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00198140", func_00198B70);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00198140", func_00198C30);
+/* fills the 0x88-byte block at +0x6C (allocated through func_00198EF0 on first use)
+   from arg2: each word of arg2 equal to 1 sets the matching word of the block */
+void func_00198C30(Obj_00198C30 *arg0, s32 arg1, Obj10 *arg2)
+{
+    Obj14 *s;
+
+    if (arg0 == 0 || arg1 == 0)
+        return;
+    if (arg0->unk_6C == 0) {
+        arg0->unk_6C = (Obj88 *)func_00198EF0(1);
+        if (arg0->unk_6C == 0)
+            return;
+    }
+    s = &arg0->unk_6C->unk_4;
+    s->unk_0 = arg1;
+    if (arg2->unk_4 == 1) {
+        s->unk_8 = 1;
+        s->unk_4 = arg2->unk_0;
+    }
+    if (arg2->unk_8 == 1)
+        s->unk_C = 1;
+    if (arg2->unk_C == 1)
+        s->unk_10 = 1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00198140", func_00198D00);
 
@@ -54,9 +112,18 @@ s8 *func_00198EF0(s8 arg0)
     return 0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00198140", func_00198F50);
+void func_00198F50(void)
+{
+    if (D_0051C260[0] == 0)
+        return;
+    func_0020F230(D_00522DB0, D_0051C260[0]);
+    D_0051C260[0] = 0;
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00198140", func_00198F90);
+void func_00198F90(void)
+{
+    D_0051C260[0] = (s32)func_0020EC40(0xC, 0x88);
+}
 
 void func_00198FC0(void)
 {

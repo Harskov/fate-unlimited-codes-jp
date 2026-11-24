@@ -18,6 +18,32 @@ typedef struct Obj_003812B0 {
 
 extern u8 *D_005361B8[];
 
+typedef struct Obj_00381F90 {
+    /* 0x000 */ u8 pad_0[0x1B0];
+    /* 0x1B0 */ s32 unk_1B0;
+    /* 0x1B4 */ u8 pad_1B4[0xF0];
+} Obj_00381F90;
+
+extern Obj_00381F90 *D_005361C8[];
+
+extern s32 D_00522DB0[];
+
+extern s32 D_005361C0[];
+
+void func_0020F230(s32 *arg0, u8 *arg1);
+
+u8 *func_0020F180(s32 *arg0, s32 arg1);
+
+typedef struct Obj_00380E90 {
+    /* 0x00 */ u8 pad_0[0x44];
+    /* 0x44 */ f32 unk_44;
+    /* 0x48 */ f32 unk_48;
+    /* 0x4C */ u8 pad_4C[0x40];
+    /* 0x8C */ u8 unk_8C[4];
+} Obj_00380E90;
+
+f32 func_00167D10(u8 *arg0, s32 arg1);
+
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00380E10);
 
 u8 *func_00380E60(s32 arg0)
@@ -25,7 +51,18 @@ u8 *func_00380E60(s32 arg0)
     return D_005361B8[0] + arg0 * 316;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00380E90);
+void func_00380E90(Obj_00380E90 *arg0, s32 arg1)
+{
+    u8 buf[16];
+    f32 v;
+
+    func_001A6190(buf, 0, arg0->unk_8C);
+    v = func_00167D10(buf, arg1) - arg0->unk_48;
+    arg0->unk_44 = v;
+    if (v < 0.0f) {
+        arg0->unk_44 = 0.0f;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00380F00);
 
@@ -67,13 +104,55 @@ void func_00381E50(Obj_00381E50 *arg0)
     arg0->unk_C = saved;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00381E90);
+Obj_00381E50 *func_00381E90(s32 arg0)
+{
+    Obj_00381E50 *p;
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00381F00);
+    p = (Obj_00381E50 *)(D_005361B8[0] + D_005361C0[0] * 0x13C);
+    p->unk_C = arg0;
+    func_00381E50(p);
+    D_005361C0[0]++;
+    return p;
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00381F40);
+void func_00381F00(void)
+{
+    if (D_005361B8[0] != 0) {
+        func_0020F230(D_00522DB0, D_005361B8[0]);
+        D_005361B8[0] = 0;
+        D_005361C0[0] = 0;
+    }
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00381F90);
+void func_00381F40(void)
+{
+    u8 *p;
+
+    if (D_005361B8[0] != 0) {
+        return;
+    }
+    p = func_0020F180(D_00522DB0, 0x62C0);
+    D_005361B8[0] = p;
+    memset(p, 0, 0x62C0);
+}
+
+/* counts the 32 table entries whose word at +0x1B0 is set */
+s32 func_00381F90(void)
+{
+    s32 count;
+    s32 i;
+    Obj_00381F90 *p;
+
+    count = 0;
+    p = D_005361C8[0];
+    for (i = 0; i < 0x20; i++) {
+        if (p->unk_1B0 != 0) {
+            count++;
+        }
+        p++;
+    }
+    return count;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00380E10", func_00381FD0);
 

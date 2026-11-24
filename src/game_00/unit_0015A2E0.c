@@ -87,6 +87,17 @@ typedef struct Obj_0015A360 {
     /* 0x08 */ struct Obj_0015A360 *link_8;
 } Obj_0015A360;
 
+typedef struct Obj_0015A4F0 {
+    unsigned char pad_0[0x4];
+    /* 0x04 */ s32 unk_4;
+    /* 0x08 */ s32 unk_8;
+    /* 0x0C */ s32 unk_C;
+} Obj_0015A4F0;
+
+Obj_0015A4F0 *func_0015A5B0(void);
+
+Obj_0015A4F0 *func_0015A4F0(void);
+
 void func_0015A2E0(Node_0015A410 *arg0)
 {
     if (arg0 != 0) {
@@ -145,9 +156,32 @@ Node_0015A410 *func_0015A410(Node_0015A410 *arg0)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015A2E0", func_0015A450);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015A2E0", func_0015A4A0);
+Obj_0015A4F0 *func_0015A4A0(Node_0015A410 *arg0)
+{
+    Obj_0015A4F0 *obj;
+    Node_0015A410 *node;
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015A2E0", func_0015A4F0);
+    obj = func_0015A4F0();
+    if (arg0 != 0 && obj != 0) {
+        node = func_0015A410(arg0);
+        obj->unk_8 = (s32)node;
+        node->next = (Node_0015A410 *)obj;
+    }
+    return obj;
+}
+
+Obj_0015A4F0 *func_0015A4F0(void)
+{
+    Obj_0015A4F0 *obj;
+
+    obj = func_0015A5B0();
+    if (obj != 0) {
+        obj->unk_4 = 0;
+        obj->unk_8 = 0;
+        obj->unk_C = 0;
+    }
+    return obj;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015A2E0", func_0015A520);
 
@@ -163,7 +197,32 @@ void func_0015A590(s32 *arg0)
     arg0[3] = 0xAAAAAAAA;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015A2E0", func_0015A5B0);
+// probably an allocator over a ring of 512 four-word entries: scans from the cursor
+// for an entry whose first word is zero, marks it and advances the cursor past it
+Obj_0015A4F0 *func_0015A5B0(void)
+{
+    s32 *entry;
+    s32 index;
+    s32 i;
+
+    for (i = 0; i < 0x200; i++) {
+        if (D_00518420[D_00518410[0] * 4] == 0)
+            break;
+        D_00518410[0] = (D_00518410[0] + 1) % 0x200;
+    }
+    if (i != 0x200) {
+        index = D_00518410[0];
+        entry = &D_00518420[index * 4];
+        entry[0] = 1;
+        entry[1] = 0;
+        entry[2] = 0;
+        entry[3] = 0;
+        D_00518410[0] = (index + 1) % 0x200;
+        return (Obj_0015A4F0 *)entry;
+    }
+    func_0015A580();
+    return 0;
+}
 
 void func_0015A690(void)
 {

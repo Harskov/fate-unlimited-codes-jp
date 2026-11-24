@@ -98,16 +98,28 @@ void func_001B04D0(s32, s32);
 
 void func_001CE2B0(void);
 
+extern s32 D_005239D0[];
+
+extern s32 D_00524790[];
+
+void func_0020FAC0(u32);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", _dpfge);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", func_00159910);
+s32 _dpfgt(void)
+{
+    return dpcmp() > 0;
+}
 
-s32 func_00159930(void)
+s32 _dpflt(void)
 {
     return dpcmp() < 0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", func_00159950);
+s32 _dpfne(void)
+{
+    return dpcmp() != 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", _f_ulltof);
 
@@ -140,7 +152,23 @@ void func_00159A90(void)
     D_00523A28[0] = 0x3F800000;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", func_00159AA0);
+void func_00159AA0(void)
+{
+    switch (D_005239D0[0]) {
+    case 0:
+        D_00523A28[0] = 0x3F4CCCCD;
+        break;
+    case 1:
+        D_00523A28[0] = 0x3F800000;
+        break;
+    case 2:
+        D_00523A28[0] = 0x3FA00000;
+        break;
+    case 3:
+        D_00523A28[0] = 0x3FC00000;
+        break;
+    }
+}
 
 void func_00159B20(s32 arg0)
 {
@@ -233,6 +261,11 @@ void func_00159E30(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", func_00159E40);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", func_0015A220);
+s32 func_0015A220(void)
+{
+    D_00524790[0] &= 0xFFFDFFFF;
+    func_0020FAC0(0);
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001598E0", func_0015A260);

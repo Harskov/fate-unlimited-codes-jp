@@ -23,6 +23,8 @@ void func_0026A8C0(void *item, f32 *a, f32 *b);
 s32 func_002ADB48(void *item);
 
 
+s32 func_0020E850(s32, s32);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022D3C0", func_0022D3C0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022D3C0", func_0022E120);
@@ -82,4 +84,40 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022D3C0", func_0022FAC0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022D3C0", func_0022FB90);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022D3C0", func_0022FC70);
+// maps func_0020E850's result 0..8 to a multiple of 0x1000; for any other result the
+// return value is left unset, as the original leaves it
+s32 func_0022FC70(s32 arg0, s32 arg1)
+{
+    s32 result;
+
+    switch (func_0020E850(arg0, arg1)) {
+    case 0:
+        result = 0;
+        break;
+    case 1:
+        result = 0x1000;
+        break;
+    case 2:
+        result = 0x2000;
+        break;
+    case 3:
+        result = 0x3000;
+        break;
+    case 4:
+        result = 0x4000;
+        break;
+    case 5:
+        result = 0x5000;
+        break;
+    case 6:
+        result = 0x6000;
+        break;
+    case 7:
+        result = 0x7000;
+        break;
+    case 8:
+        result = 0x8000;
+        break;
+    }
+    return result;
+}

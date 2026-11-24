@@ -12,6 +12,12 @@ typedef struct Obj_0037E6F0 {
 
 extern s16 *func_0037E6A0();
 
+extern s32 D_005361A0[];
+
+extern void func_0037F220();
+
+extern void func_0037ED90();
+
 f32 func_0037E310(u16 arg0)
 {
     union {
@@ -35,7 +41,11 @@ INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037E310", func_0037E4D0);
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037E310", func_0037E5B0);
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037E310", func_0037E660);
+s32 func_0037E660(s32 arg0, s32 arg1, s32 arg2, s32 arg3)
+{
+    s32 *table = (s32 *)func_0037E6A0();
+    return arg0 + table[arg3 + 2];
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037E310", func_0037E6A0);
 
@@ -55,4 +65,16 @@ INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037E310", func_0037ED90);
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037E310", func_0037F220);
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037E310", func_0037F4F0);
+void func_0037F4F0(void)
+{
+    s32 *count;
+
+    if (D_005361A0[0] == 0)
+        return;
+    func_0037F220();
+    func_0037ED90();
+    count = &((s32 *)D_005361A0[0])[0x17C / 4];
+    if (*count > 0) {
+        *count = *count - 1;
+    }
+}

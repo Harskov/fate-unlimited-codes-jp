@@ -26,6 +26,31 @@ extern s32 D_0051FAC4[];
 
 void func_001795F0();
 
+typedef struct Obj_001F5AD0 {
+    /* 0x00 */ s32 flags;
+    u8 unk_4[0x1C];
+    s16 *unk_20;
+    s16 *unk_24;
+} Obj_001F5AD0;
+
+void func_001F51B0();
+
+typedef struct Obj_001F5980 {
+    s32 unk_0;
+    u8 pad_4[4];
+    /* 0x08 */ struct Obj_001F5980 *next;
+} Obj_001F5980;
+
+extern Obj_001F5980 *D_0051FACC[];
+
+extern f32 D_0051FA80[][4];
+
+extern f32 D_0051FA40[][4];
+
+void func_00178060();
+
+void func_0020D070(f32 (*)[4]);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F4AB0", func_001F4AB0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F4AB0", func_001F4B00);
@@ -86,7 +111,25 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F4AB0", func_001F5570);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F4AB0", func_001F58F0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F4AB0", func_001F5980);
+s32 func_001F5980(s32 arg0)
+{
+    s32 i;
+    Obj_001F5980 *p;
+
+    if (arg0 < 0)
+        return 0;
+    if (arg0 >= D_0051FAC0[0])
+        return 0;
+    p = D_0051FACC[0];
+    i = 0;
+    while (p->unk_0 != 1) {
+        if (i == arg0)
+            return p->unk_0;
+        p = p->next;
+        i++;
+    }
+    return 0;
+}
 
 void func_001F59E0(s32 arg0)
 {
@@ -105,8 +148,27 @@ void func_001F5A30(void)
     D_0051FA30[0] = (s32)func_001FF000(D_00501678, 0x04000040);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F4AB0", func_001F5A60);
+void func_001F5A60(void)
+{
+    D_0051FAC0[0] = 0;
+    func_00178060(D_0051FAC4);
+    func_0020D070(D_0051FA80);
+    func_0020D070(D_0051FA40);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F4AB0", func_001F5AA0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F4AB0", func_001F5AD0);
+void func_001F5AD0(Obj_001F5AD0 *arg0, s32 arg1, s32 arg2)
+{
+    s16 *table;
+
+    if (arg0->flags & 4) {
+        table = arg0->unk_24;
+    } else {
+        table = arg0->unk_20;
+    }
+    if (arg2 < table[0]) {
+        arg2 = table[arg2 + 1];
+    }
+    func_001F51B0(arg1, arg2);
+}

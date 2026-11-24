@@ -8,7 +8,8 @@ typedef struct Obj {
     /* 0x1EC */ s32 flags_1EC;
     u8 pad_1F0[0x4];
     /* 0x1F4 */ s32 flags_1F4;
-    u8 pad_1F8[0x540 - 0x1F8];
+    u8 pad_1F8[0x53C - 0x1F8];
+    s32 unk_53C;
     s32 unk_540;
     u8 pad_544[0x14B8 - 0x544];
     s32 unk_14B8;
@@ -44,6 +45,10 @@ typedef struct Obj_001A2620 {
     /* 0x24 */ s32 unk_24;
 } Obj_001A2620;
 
+extern s32 D_0051D8A0[];
+
+void func_0019DA00(Obj *o);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019E550", func_0019E550);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019E550", func_0019E7F0);
@@ -54,7 +59,15 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019E550", func_0019F920);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019E550", func_0019F9F0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019E550", func_0019FD10);
+/* 0 when the halfword the second argument points to is 7, else 1; the first argument is not read */
+s32 func_0019FD10(s32 arg0, s16 *arg1)
+{
+    switch (*arg1) {
+    case 7:
+        return 0;
+    }
+    return 1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019E550", func_0019FD30);
 
@@ -138,7 +151,32 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019E550", func_001A0E20);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019E550", func_001A0F00);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019E550", func_001A1270);
+/* the same flag reset as func_001A04B0's branches, refused while 0x53C holds 0x30 or 0x33 */
+s32 func_001A1270(Obj *o)
+{
+    s32 flags = o->flags_1F4;
+    s32 bits;
+    s32 v;
+
+    if (!(flags & 0x2))
+        return -1;
+    if (D_0051D8A0[0] & 0x400)
+        return -1;
+    bits = o->flags_1E0;
+    if (!(bits & 0x100000) && (bits & 0x2000))
+        return -1;
+    v = o->unk_53C;
+    if (v == 0x33 || v == 0x30)
+        return -1;
+    if ((flags & 0x8) && !(o->flags_1E4 & 0x200)) {
+        o->flags_1F4 |= 0x10;
+    }
+    o->flags_1F4 &= ~0x6A;
+    o->flags_1E4 &= ~0xA01;
+    o->flags_1E4 |= 0x2;
+    func_0019DA00(o);
+    return 0xC;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0019E550", func_001A1350);
 

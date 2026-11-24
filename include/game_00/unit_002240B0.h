@@ -4,7 +4,7 @@
 
 typedef struct Obj_002240B0 {
     u8 unk_0[0x8];
-    s32 unk_8;
+    /* 0x08 */ s32 flags;
     u8 unk_C[0x50];
     s32 unk_5C;
 } Obj_002240B0;

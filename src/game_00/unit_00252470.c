@@ -31,6 +31,10 @@ int func_00252470(Obj_00529560 *arg0);
 
 int func_00255590(void);
 
+extern s32 gSemaId_3DF8F8[];
+
+extern s32 D_005296C0[];
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00252470", func_00252470);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00252470", func_002526C0);
@@ -43,7 +47,21 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00252470", func_00252940);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00252470", func_00252A20);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00252470", func_00252A60);
+int func_00252A60(int arg0)
+{
+    int r;
+
+    if (arg0 != 0) {
+        if (PollSema(gSemaId_3DF8F8[0]) < 0) {
+            return -1;
+        }
+    } else {
+        WaitSema(gSemaId_3DF8F8[0]);
+    }
+    r = D_005296C0[0];
+    SignalSema(gSemaId_3DF8F8[0]);
+    return r;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00252470", func_00252AD0);
 

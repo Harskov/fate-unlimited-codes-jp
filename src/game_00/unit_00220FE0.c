@@ -55,6 +55,8 @@ extern void func_0015D130(void *, void *);
 
 extern void func_001E7960(void *, s32, f32);
 
+int func_00221080(Obj00221080 *o);
+
 void func_00220FE0(volatile Obj00221080 *arg0)
 {
     // !FAKE: the counter is loaded again before the decrement; a volatile view of the object forces the reload
@@ -63,7 +65,13 @@ void func_00220FE0(volatile Obj00221080 *arg0)
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220FE0", func_00221000);
+Elem_002210E0 *func_00221000(Obj_002210E0 *o)
+{
+    if (func_00221080((Obj00221080 *)o) != 0) {
+        return 0;
+    }
+    return &o->unk_4[(o->unk_8 - o->unk_C + o->unk_10) % o->unk_10];
+}
 
 int func_00221080(Obj00221080 *o)
 {

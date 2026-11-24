@@ -139,9 +139,35 @@ typedef struct Obj001FF000 {
 
 extern Obj001FF000 *func_001FF000(void *, s32);
 
+void func_0015D130(void *dst, void *src);
+
+extern s32 D_00522DB0[];
+
+extern void *D_0051F178[];
+
+extern void *D_0051F180[];
+
+void *func_0020F180(void *, s32);
+
+void *func_0020EC40(s32, s32);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E51D0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E5230);
+void func_001E5230(void)
+{
+    void *p;
+
+    p = func_0020F180(D_00522DB0, 0xC8);
+    D_0051F178[0] = p;
+    if (p == 0) {
+        *(long long *)1 = 0;
+    }
+    p = func_0020EC40(0xF, 0x60);
+    D_0051F180[0] = p;
+    if (p == 0) {
+        *(long long *)1 = 0;
+    }
+}
 
 int func_001E52A0(Obj_001E52A0 *p)
 {
@@ -312,4 +338,12 @@ void func_001E6240(Obj_001E6240 *arg0)
     arg0->unk_54 = arg0->unk_50;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E51D0", func_001E6310);
+void func_001E6310(Obj_001E6240 *arg0)
+{
+    func_0015D130(arg0->unk_2C, arg0->unk_20);
+    func_0015D130(arg0->unk_44, arg0->unk_38);
+    if (arg0->unk_50 != arg0->unk_54)
+        arg0->unk_0 |= 1;
+    arg0->unk_5C = arg0->unk_58;
+    arg0->unk_54 = arg0->unk_50;
+}

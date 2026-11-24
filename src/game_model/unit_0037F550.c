@@ -10,6 +10,8 @@ s32 func_0020F180();
 
 void func_0037F980();
 
+void func_0020F230();
+
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037F550", func_0037F550);
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037F550", func_0037F670);
@@ -29,7 +31,13 @@ s32 func_0037F970(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037F550", func_0037F980);
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037F550", func_0037FA80);
+void func_0037FA80(void)
+{
+    if (D_005361A0[0] == 0)
+        return;
+    func_0020F230(D_00522DB0, D_005361A0[0]);
+    D_005361A0[0] = 0;
+}
 
 s32 func_0037FAC0(s32 arg0)
 {

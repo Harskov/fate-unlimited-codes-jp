@@ -28,6 +28,22 @@ extern s32 D_00507B00[];
 
 void func_0036D890();
 
+extern s32 D_004DE8C0[];
+
+extern s32 D_004DE980[];
+
+extern s32 D_004DE990[];
+
+extern s32 D_00507B10[];
+
+extern s32 D_004DE7C0[];
+
+extern s32 D_004DE880[];
+
+extern s32 D_004DE890[];
+
+extern s32 D_00507B18[];
+
 void func_00372D40(void)
 {
     func_0036D830();
@@ -59,7 +75,10 @@ void func_00373010(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00372D40", func_00373020);
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00372D40", func_00373120);
+void func_00373120(Obj_0036EBE0_A *arg0, s32 arg1)
+{
+    func_0036DC20(arg0, arg1, arg0->unk_4->unk_3C, 4, 0xCC, D_004DCB60, D_004DE8C0, D_004DE980, D_004DE990, 0, D_00507B10);
+}
 
 void func_00373180(void)
 {
@@ -68,7 +87,10 @@ void func_00373180(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00372D40", func_00373190);
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00372D40", func_00373290);
+void func_00373290(Obj_0036EBE0_A *arg0, s32 arg1)
+{
+    func_0036DC20(arg0, arg1, arg0->unk_4->unk_3C, 4, 0xC8, D_004DCB60, D_004DE7C0, D_004DE880, D_004DE890, 0, D_00507B18);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00372D40", func_003732F0);
 

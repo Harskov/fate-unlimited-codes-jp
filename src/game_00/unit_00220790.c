@@ -59,9 +59,32 @@ void func_00117230();
 
 void func_0021FCA0();
 
+extern void func_0021F960();
+
+typedef struct Obj00220DE0 {
+    u8 pad[0x48];
+    s32 unk_48;
+} Obj00220DE0;
+
+extern void func_0021F780();
+
+typedef struct Obj002208D0 {
+    u8 unk_0[8];
+    s64 unk_8;
+    s64 unk_10;
+} Obj002208D0;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220790", func_00220790);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220790", func_002208D0);
+int func_002208D0(void *arg0, Obj002208D0 *arg1)
+{
+    s64 buf[4];
+
+    func_0021F780(D_005278C8, buf);
+    arg1->unk_8 = buf[0];
+    arg1->unk_10 = buf[1];
+    return 1;
+}
 
 int func_00220920(void)
 {
@@ -102,7 +125,21 @@ void func_00220DD0(Obj00220DD0 *o)
     func_0021FC50(&o->unk_48);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00220790", func_00220DE0);
+void func_00220DE0(Obj00220DE0 *o, s64 arg1, s64 arg2, s32 arg3, s32 arg4)
+{
+    struct {
+        s64 unk_0;
+        s64 unk_8;
+        s32 unk_10;
+        s32 unk_14;
+    } buf;
+
+    buf.unk_0 = arg1;
+    buf.unk_8 = arg2;
+    buf.unk_10 = arg3 - o->unk_48;
+    buf.unk_14 = arg4;
+    func_0021F960(D_005278C8, &buf);
+}
 
 s32 func_00220E20(Obj00220E20 *o, s32 value)
 {

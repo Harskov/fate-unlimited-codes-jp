@@ -30,7 +30,41 @@ void func_001E2860();
 
 s32 func_0020EC40();
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001DC530", func_001DC530);
+typedef struct Obj_001DC530 {
+    u8 unk_0[0x23E8];
+    s32 *unk_23E8;
+} Obj_001DC530;
+
+typedef struct Node_001DC530 {
+    u8 unk_0[0x1C];
+    /* 0x1C */ u32 flags;
+    u8 unk_20[0x130];
+    s32 unk_150;
+} Node_001DC530;
+
+extern s32 *D_0051EF90[];
+
+void *func_001DC530(Obj_001DC530 *arg0, s32 arg1, s32 arg2)
+{
+    s32 *node;
+    Node_001DC530 *entry;
+
+    if (arg2 != 0) {
+        node = (s32 *)D_0051EF90[0][2];
+    } else {
+        node = arg0->unk_23E8;
+    }
+    entry = (Node_001DC530 *)*node;
+    while ((s32)entry != 1) {
+        if (entry->unk_150 == arg1 && !(entry->flags & 0x80000000)) {
+            D_0051EF90[0] = node;
+            return entry;
+        }
+        node = (s32 *)node[2];
+        entry = (Node_001DC530 *)*node;
+    }
+    return 0;
+}
 
 void func_001DC5A0(void *arg0, Obj8 *arg1)
 {

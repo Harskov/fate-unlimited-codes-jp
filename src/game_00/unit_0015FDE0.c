@@ -4,6 +4,16 @@ extern s32 D_005240B8[];
 
 void func_0015BD90();
 
+extern s32 (*D_003D6600[])(s32, s32 *, s32, s32);
+
+extern s32 D_00523DA8[];
+
+extern s32 D_00523DAC[];
+
+extern s32 D_005240B4[];
+
+s32 func_001600E0(s32 *arg0);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015FDE0", func_0015FDE0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015FDE0", func_0015FE90);
@@ -17,7 +27,16 @@ s32 func_0015FFE0(s32 arg0, s32 arg1, s32 arg2, s32 arg3)
     return arg3;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015FDE0", func_00160020);
+s32 func_00160020(s32 arg0, s32 arg1, s32 arg2, s32 arg3, s32 *arg4, s32 arg5, s32 arg6)
+{
+    if (arg3 >= 0)
+        D_00523DA8[0] = arg3;
+    else
+        D_00523DA8[0] = func_001600E0(arg4);
+    D_00523DAC[0] = arg1;
+    D_005240B4[0] = (s32)arg4;
+    return D_003D6600[arg2](arg0, arg4, arg5, arg6);
+}
 
 s32 func_001600E0(s32 *arg0)
 {

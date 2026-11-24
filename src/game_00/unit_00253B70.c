@@ -28,7 +28,19 @@ int func_0015B030(s32 arg0);
 
 Obj_0015BB20 *func_0015BB20(s32 arg0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00253B70", func_00253B70);
+void func_00253B70(void)
+{
+    int i;
+    Obj22 *p;
+
+    if (func_00255590() == 0) {
+        return;
+    }
+    p = D_00529DB0;
+    for (i = 0; i < 0x40; i++, p++) {
+        p->unk_2 = 0;
+    }
+}
 
 int func_00253BD0(void)
 {
@@ -38,7 +50,22 @@ int func_00253BD0(void)
     return 0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00253B70", func_00253C00);
+Obj22 *func_00253C00(void)
+{
+    int i;
+    Obj22 *p;
+
+    if (func_00255590() == 0) {
+        return 0;
+    }
+    p = D_00529DB0;
+    for (i = 0; i < 0x40; i++, p++) {
+        if (p->unk_2 == 0) {
+            return &D_00529DB0[i];
+        }
+    }
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00253B70", func_00253C70);
 

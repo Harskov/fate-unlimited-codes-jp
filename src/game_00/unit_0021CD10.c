@@ -57,6 +57,14 @@ typedef struct Obj_0021D510 {
 
 void func_0010B810();
 
+void func_0021D450(void);
+
+extern int D_00527590[];
+
+extern int D_00527800[];
+
+void func_00220FE0(int *arg0);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021CD10", func_0021CD10);
 
 void func_0021CD70(int arg0)
@@ -114,7 +122,18 @@ void func_0021D1E0(Obj_0021D1E0 *arg0, u32 arg1)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021CD10", func_0021D260);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021CD10", func_0021D320);
+void func_0021D320(Obj_0021D510 *arg0)
+{
+    func_0021D450();
+    arg0->unk_0 = 0;
+    arg0->unk_2C = 0;
+    arg0->unk_34 = 0;
+    arg0->unk_38 = 0;
+    arg0->unk_40 = 0;
+    arg0->unk_54 = 0;
+    arg0->unk_4C = 0;
+    arg0->unk_50 = 0;
+}
 
 void func_0021D370(void)
 {
@@ -174,4 +193,15 @@ void func_0021D5F0(int field)
     D_00527588[0] = 0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021CD10", func_0021D640);
+int func_0021D640(void)
+{
+    if (D_00527590[0] != 0) {
+        func_00220FE0(D_00527800);
+        D_00527590[0] = 0;
+    }
+    asm {
+        sync
+        ei
+    }
+    return 0;
+}

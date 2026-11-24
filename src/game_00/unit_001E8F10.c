@@ -23,7 +23,13 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E8F10", func_001E9590);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E8F10", func_001E9710);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E8F10", func_001E98B0);
+void func_001E98B0(Obj_001E98F0 *arg0)
+{
+    if (arg0->unk_38 == 0)
+        return;
+    func_001EB670(arg0, 0);
+    func_001E9930(arg0, 0);
+}
 
 void func_001E98F0(Obj_001E98F0 *arg0)
 {

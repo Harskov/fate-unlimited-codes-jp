@@ -78,9 +78,9 @@ void func_0021E340();
 
 extern s32 D_00527800[];
 
-extern s32 D_00527930[];
+extern s32 gAddDmacHandlerResult[];
 
-extern s32 D_00527990[];
+extern s32 gCreateThreadResult[];
 
 extern s32 D_005279A0[];
 
@@ -98,7 +98,7 @@ extern s32 D_005279D8[];
 
 extern s32 D_005279E0[];
 
-extern s32 D_00510470[];
+extern s32 _gp[];
 
 typedef struct Obj_0021E0F0 {
     /* 0x00 */ s32 unk_00;
@@ -146,6 +146,8 @@ s32 AddDmacHandler(s32, void *, s32);
 
 s32 EnableDmac(s32);
 
+s32 func_0021D1C0(s32 *);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021D690);
 
 /* probably the uncached mirror of a main-memory address: the EE maps RAM uncached at 0x20000000 */
@@ -174,7 +176,13 @@ int func_0021DF20(Obj38 *obj)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021DF50);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021DFE0);
+int func_0021DFE0(Obj_0021E0F0 *arg0)
+{
+    if (D_00527940[0] != -1 && D_00527940[0] < arg0->unk_08) {
+        return 1;
+    }
+    return 0;
+}
 
 void func_0021E020(void)
 {
@@ -210,18 +218,24 @@ void func_0021E0F0(s32 arg0)
     param.unk_08 = D_005279A8[0];
     param.unk_0C = 0x4000;
     param.unk_14 = gChangeThreadPriorityResult[0];
-    param.unk_10 = D_00510470;
-    D_00527990[0] = CreateThread(&param);
-    StartThread(D_00527990[0], D_00527880);
+    param.unk_10 = _gp;
+    gCreateThreadResult[0] = CreateThread(&param);
+    StartThread(gCreateThreadResult[0], D_00527880);
     while (!func_0021F650(D_00527950, arg0)) {
         DelayThread(0x1046);
     }
     sceGsSyncVCallback(func_0021D690);
-    D_00527930[0] = AddDmacHandler(2, func_0021D640, 0);
+    gAddDmacHandlerResult[0] = AddDmacHandler(2, func_0021D640, 0);
     EnableDmac(2);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021E300);
+s32 func_0021E300(void)
+{
+    if (D_005275A8[0] != 0) {
+        return func_0021D1C0(D_00527820);
+    }
+    return 1;
+}
 
 void func_0021E330(void)
 {

@@ -58,6 +58,16 @@ typedef struct Obj_0036F7F0 {
     /* 0x0C */ s32 unk_C;
 } Obj_0036F7F0;
 
+extern s32 D_004DE300[];
+
+extern s32 D_004DE390[];
+
+extern s32 D_004DE3A0[];
+
+extern s32 D_00507AB0[];
+
+void func_0036DC20();
+
 void func_00371690(Obj_0036EBE0_A *arg0, s32 arg1)
 {
     func_0036D890(arg0, arg1, arg0->unk_4->unk_3C, 2, D_004DE608, D_004DCB60, D_004DE610, D_004DE670, D_004DE680, 4, D_00507A90);
@@ -133,7 +143,10 @@ void func_00371A00(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00371690", func_00371A10);
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00371690", func_00371B40);
+void func_00371B40(Obj_0036EBE0_A *arg0, s32 arg1)
+{
+    func_0036DC20(arg0, arg1, arg0->unk_4->unk_3C, 3, 0xD7, D_004DCB60, D_004DE300, D_004DE390, D_004DE3A0, 0, D_00507AB0);
+}
 
 void func_00371BA0(void)
 {

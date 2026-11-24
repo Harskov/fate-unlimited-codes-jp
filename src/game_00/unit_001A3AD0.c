@@ -40,6 +40,20 @@ Obj_001A44A0 *func_0019CFF0();
 
 int func_0020E5F0();
 
+typedef struct Obj_001A5550 {
+    unsigned char unk_0[0x1E8];
+    /* 0x1E8 */ int flags;
+    unsigned char unk_1EC[0x2478 - 0x1EC];
+    /* 0x2478 */ int unk_2478;
+} Obj_001A5550;
+
+typedef struct Sub_001A5550 {
+    unsigned char unk_0[0x58];
+    /* 0x58 */ int unk_58;
+} Sub_001A5550;
+
+void func_00332EA0(Obj_001A5550 *, int);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A3AD0", func_001A3AD0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A3AD0", func_001A3BA0);
@@ -101,7 +115,17 @@ void func_001A4640(Obj_001A44A0 *arg0, int arg1)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A3AD0", func_001A46A0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A3AD0", func_001A4730);
+float func_001A4730(Obj_001A44A0 *arg0)
+{
+    float v;
+
+    if (arg0->flags & 0x20)
+        arg0 = func_0019CFF0(arg0);
+    v = (float)(arg0->unk_234 - arg0->unk_23C);
+    if (v < 0.0f)
+        return 0.0f;
+    return v;
+}
 
 float func_001A47A0(Obj_001A47A0 *o)
 {
@@ -158,7 +182,27 @@ void func_001A5450(Arr220 *a, int i, int val)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A3AD0", func_001A54C0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A3AD0", func_001A5550);
+void func_001A5550(Obj_001A5550 *a, Sub_001A5550 *b)
+{
+    int n = b->unk_58;
+
+    if (n < 0) {
+        int f = a->flags;
+
+        if (f & 0x8000000)
+            n = 5;
+        else if (f & 0x4000000)
+            n = 3;
+        else if (f & 4)
+            n = 3;
+        else if (f & 2)
+            n = 2;
+        else
+            n = 1;
+    }
+    a->unk_2478 += n;
+    func_00332EA0(a, n);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A3AD0", func_001A55D0);
 

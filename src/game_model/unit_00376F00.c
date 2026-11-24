@@ -41,7 +41,8 @@ typedef struct Sub_00377630 {
 } Sub_00377630;
 
 typedef struct Obj_00377630 {
-    /* 0x00 */ u8 pad_0[0x8];
+    /* 0x00 */ s32 flags;
+    /* 0x04 */ u8 pad_4[0x4];
     /* 0x08 */ s32 unk_8;
     /* 0x0C */ u8 pad_C[0x4];
     /* 0x10 */ Sub_00377630 *unk_10;
@@ -52,6 +53,8 @@ typedef struct Obj_00377630 {
 } Obj_00377630;
 
 void func_0036CE00();
+
+extern s32 D_0051D8A0[];
 
 void func_00376F00(void)
 {
@@ -99,9 +102,65 @@ INCLUDE_ASM("asm/nonmatchings/game_model/unit_00376F00", func_00377250);
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00376F00", func_00377390);
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00376F00", func_003773D0);
+// steps the state in unk_8 as func_00377630 does, driven by bits of unk_0: states 1 and 2 raise bit 0x2
+// when bit 0x8 of D_0051D8A0 or bit 0x100000 of unk_10's flags_1E0 is set; 2 -> 3 on bit 0x2, 4 -> 1 on bit 0x1
+void func_003773D0(Obj_00377630 *arg0)
+{
+    if (arg0 == 0)
+        return;
+    switch (arg0->unk_8) {
+    case 1:
+        if ((D_0051D8A0[0] & 0x8) || (arg0->unk_10->flags_1E0 & 0x100000))
+            arg0->flags |= 2;
+        break;
+    case 2:
+        if ((D_0051D8A0[0] & 0x8) || (arg0->unk_10->flags_1E0 & 0x100000))
+            arg0->flags |= 2;
+        if (arg0->flags & 2) {
+            arg0->unk_28 = 1.0f;
+            arg0->unk_8 = 3;
+            arg0->flags &= ~2;
+        }
+        break;
+    case 4:
+        if (arg0->flags & 1) {
+            arg0->unk_28 = 0.0f;
+            arg0->unk_8 = 1;
+            arg0->flags &= ~1;
+        }
+        break;
+    }
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00376F00", func_00377500);
+// the same state step as func_003773D0: states 1 and 2 raise bit 0x2 of unk_0 when bit 0x8 of D_0051D8A0
+// or bit 0x100000 of unk_10's flags_1E0 is set; 2 -> 3 on bit 0x2, 4 -> 1 on bit 0x1
+void func_00377500(Obj_00377630 *arg0)
+{
+    if (arg0 == 0)
+        return;
+    switch (arg0->unk_8) {
+    case 1:
+        if ((D_0051D8A0[0] & 0x8) || (arg0->unk_10->flags_1E0 & 0x100000))
+            arg0->flags |= 2;
+        break;
+    case 2:
+        if ((D_0051D8A0[0] & 0x8) || (arg0->unk_10->flags_1E0 & 0x100000))
+            arg0->flags |= 2;
+        if (arg0->flags & 2) {
+            arg0->unk_28 = 1.0f;
+            arg0->unk_8 = 3;
+            arg0->flags &= ~2;
+        }
+        break;
+    case 4:
+        if (arg0->flags & 1) {
+            arg0->unk_28 = 0.0f;
+            arg0->unk_8 = 1;
+            arg0->flags &= ~1;
+        }
+        break;
+    }
+}
 
 // registers: a3 = the object's unk_10 (p), a2 = unk_1E0 under the mask 0x2722020 (bits), t0 = set unless bits is clear and unk_20 is below 91 (flag)
 // clamps unk_20 to 0..300 (90 when any of the mask's bits are set), then steps the state in unk_8: 2 -> 3 when the flag is set, 4 -> 1 when it is clear

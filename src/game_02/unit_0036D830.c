@@ -42,6 +42,18 @@ typedef s32 (*Handler_0036E6D0)(Obj_0036E6D0 *, s32);
 
 extern Handler_0036E6D0 D_004DCB10[];
 
+void func_0036CE00();
+
+typedef struct Sub_0036EAF0 {
+    u8 pad_0[0x3C];
+    u32 unk_3C;
+} Sub_0036EAF0;
+
+typedef struct Obj_0036EAF0 {
+    u32 unk_0;
+    Sub_0036EAF0 *unk_4;
+} Obj_0036EAF0;
+
 INCLUDE_ASM("asm/nonmatchings/game_02/unit_0036D830", func_0036D830);
 
 INCLUDE_ASM("asm/nonmatchings/game_02/unit_0036D830", func_0036D890);
@@ -126,4 +138,10 @@ void func_0036EAE0(void)
     func_0036D830();
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_02/unit_0036D830", func_0036EAF0);
+void func_0036EAF0(Obj_0036EAF0 *arg0, s32 *arg1)
+{
+    s32 v = *arg1;
+    if ((v & 1) && (v & 2)) {
+        func_0036CE00(arg0, arg1, arg0->unk_4->unk_3C, 1);
+    }
+}

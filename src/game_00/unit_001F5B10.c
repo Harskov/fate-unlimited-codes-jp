@@ -51,9 +51,40 @@ typedef struct Obj_001F7BD0 {
 
 void func_001F7C60(Obj_001F7BD0 *a, Obj_001F7BD0 *b, s32 arg2);
 
+extern s32 D_00522DB0[];
+
+void func_0020F230();
+
+typedef struct Obj_001F8430 {
+    /* 0x00 */ s32 flags;
+    /* 0x04 */ u8 pad_4[0x4];
+    /* 0x08 */ s32 unk_8;
+    /* 0x0C */ u8 pad_C[0x8];
+    /* 0x14 */ s32 unk_14;
+    /* 0x18 */ u8 pad_18[0x14];
+    /* 0x2C */ s32 *unk_2C;
+    /* 0x30 */ s32 count;
+    /* 0x34 */ u8 pad_34[0x4];
+} Obj_001F8430;
+
+s32 func_001F78B0(Obj_001F8430 *arg0, s32 arg1, s32 arg2, f32 arg3);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F5B10", func_001F5B10);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F5B10", func_001F5E00);
+void func_001F5E00(u8 *arg0, s32 arg1)
+{
+    u8 *end;
+    u8 c;
+
+    end = arg0 + arg1 - 1;
+    while (arg0 < end) {
+        c = *arg0;
+        *arg0 = *end;
+        *end = c;
+        arg0++;
+        end--;
+    }
+}
 
 void func_001F5E40(u32 *arg0)
 {
@@ -219,12 +250,54 @@ int func_001F8270(s32 *arg0)
     return 0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F5B10", func_001F82B0);
+/* clears +0x8 and +0x14, applies the same 0x400/0x4 flag step as func_001F8270,
+   then returns the index of the first table entry func_001F78B0 accepts, or -1 */
+s32 func_001F82B0(Obj_001F8430 *arg0, s32 arg1, f32 arg2)
+{
+    s32 flags;
+    s32 i;
+    s32 found;
+
+    arg0->unk_8 = 0;
+    arg0->unk_14 = 0;
+    flags = arg0->flags;
+    if (flags & 0x400) {
+        arg0->flags = flags & ~0x400;
+        arg0->flags ^= 4;
+    }
+
+    for (i = 0; i < arg0->count; i++) {
+        found = func_001F78B0(arg0, arg0->unk_2C[i], arg1, arg2);
+        if (!found)
+            continue;
+        return i;
+    }
+    return -1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F5B10", func_001F8390);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F5B10", func_001F8430);
+/* writes arg3 into entry arg2 of each record's table, across arg1 records;
+   an index past the first record's bound at +0x30 writes nothing */
+void func_001F8430(Obj_001F8430 *arg0, s32 arg1, s32 arg2, s32 arg3)
+{
+    s32 i;
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F5B10", func_001F8590);
+    if (arg2 >= arg0->count)
+        return;
+
+    for (i = 0; i < arg1; i++) {
+        arg0[i].unk_2C[arg2] = arg3;
+    }
+}
+
+void func_001F8590(s32 arg0)
+{
+    switch (arg0) {
+    case 0:
+        return;
+    }
+    func_0020F230(D_00522DB0, arg0);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F5B10", func_001F85C0);

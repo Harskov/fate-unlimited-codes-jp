@@ -5,11 +5,11 @@
 #include "types.h"
 #include "game_00/unit_002240B0.h"
 
-extern char D_005022E8[];
+extern char gFormat_5022E8[];
 
-extern char D_005023F8[];
+extern char gFormat_5023F8[];
 
-extern char D_00502400[];
+extern char gFormat_502400[];
 
 extern int sprintf(char *, const char *, ...);
 
@@ -37,12 +37,12 @@ u32 *func_00227080(Obj_00225720 *arg0, Obj_00225730 *arg1, u32 *pc)
     switch ((*pc >> 8) & 0xFF) {
     case 0:
         pc = func_002235A0(arg0, arg1, &dst, pc);
-        if (arg0->unk_C->unk_8 & 0x80) {
-            sprintf(buf, D_00502400, dst->i0);
-        } else if (arg0->unk_C->unk_8 & 0x100) {
-            sprintf(buf, D_005023F8, dst->i0);
+        if (arg0->unk_C->flags & 0x80) {
+            sprintf(buf, gFormat_502400, dst->i0);
+        } else if (arg0->unk_C->flags & 0x100) {
+            sprintf(buf, gFormat_5023F8, dst->i0);
         } else {
-            sprintf(buf, D_005022E8, dst->i0, dst->i0);
+            sprintf(buf, gFormat_5022E8, dst->i0, dst->i0);
         }
         func_00223860(arg0, buf);
         break;

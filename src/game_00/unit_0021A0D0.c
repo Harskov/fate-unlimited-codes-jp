@@ -22,8 +22,10 @@ typedef struct Obj96 {
     u8 pad_0[0x40];
     Sub_0021BFD0 *unk_40;
     u8 pad_44[8];
-    s32 unk_4C;
-    u8 pad_50[0x10];
+    /* 0x4C */ s32 flags;
+    u8 pad_50[4];
+    Unk_0021A870 *unk_54;
+    u8 pad_58[8];
 } Obj96;
 
 typedef struct Obj_0021BFD0 {
@@ -93,6 +95,13 @@ void func_00200BB0();
 
 void func_0020F230();
 
+typedef struct Obj_0021C4F0 {
+    u8 pad_0[0x169C];
+    s32 unk_169C[0x40];
+} Obj_0021C4F0;
+
+void func_0021A640(s32 arg0, s32 arg1, void *arg2, s32 arg3);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A0D0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A140);
@@ -121,7 +130,10 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A3F0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A4B0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A5D0);
+void func_0021A5D0(s32 arg0, s32 arg1, s32 arg2)
+{
+    func_0021A640(arg0, arg2, func_0020F180(D_00522DB0, arg1 * 0x24), arg1);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A640);
 
@@ -196,7 +208,22 @@ void func_0021AF20(Obj_0021AF20 *arg0)
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021B0D0);
+s32 func_0021B0D0(Obj_0021BFD0 *arg0)
+{
+    Obj96 *o;
+    Unk_0021A870 *p;
+    s32 i;
+
+    for (i = 0; i < arg0->count; i++) {
+        o = &arg0->unk_1690[i];
+        p = o->unk_54;
+        if (p != 0 && (o->flags & 0x4)) {
+            p->unk_4 = -1;
+            p->unk_8 = -1;
+        }
+    }
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021B140);
 
@@ -222,10 +249,10 @@ void func_0021BFD0(Obj_0021BFD0 *arg0, s32 arg1, s32 arg2, char *arg3)
         if (arg0->unk_1690[i].unk_40 != 0 && strcmp(arg3, arg0->unk_1690[i].unk_40->unk_0->unk_10) == 0) {
             switch (arg2) {
             case 0:
-                arg0->unk_1690[i].unk_4C = arg0->unk_1690[i].unk_4C & ~arg1;
+                arg0->unk_1690[i].flags = arg0->unk_1690[i].flags & ~arg1;
                 break;
             case 1:
-                arg0->unk_1690[i].unk_4C = arg0->unk_1690[i].unk_4C | arg1;
+                arg0->unk_1690[i].flags = arg0->unk_1690[i].flags | arg1;
                 break;
             }
         }
@@ -240,7 +267,14 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021C240);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021C360);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021C4F0);
+void func_0021C4F0(Obj_0021C4F0 *arg0)
+{
+    s32 i;
+
+    for (i = 0; i < 0x40; i++) {
+        arg0->unk_169C[i] = 1;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021C530);
 

@@ -36,6 +36,36 @@ void func_0020F230();
 
 float sqrtf(float x);
 
+typedef struct Obj_0020AD60 {
+    /* 0x00 */ s32 *unk_0;
+    /* 0x04 */ s32 unk_4;
+    /* 0x08 */ s32 unk_8;
+    /* 0x0C */ s32 unk_C;
+    /* 0x10 */ s32 unk_10;
+} Obj_0020AD60;
+
+extern s32 D_003E16C0[];
+
+extern s32 D_003E1748[];
+
+extern s32 D_004B4440[];
+
+extern s32 D_004B44C8[];
+
+extern s32 D_004B44F0[];
+
+extern s32 D_004B4590[];
+
+extern s32 D_004B4630[];
+
+extern s32 D_004B46B8[];
+
+extern s32 D_004B46E0[];
+
+extern s32 D_004B4780[];
+
+void func_0026B3F8(Obj_0020AD60 *arg0);
+
 // fills the four handler slots with the timer-0 callbacks and returns the first slot's address
 s32 *func_0020A540(void)
 {
@@ -77,7 +107,90 @@ void func_0020A650(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020A540", func_0020A690);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020A540", func_0020AD60);
+// hands func_0026B3F8 ten stack records in turn, each a data table, a 0x500xx id and a count of 1 or 2
+void func_0020AD60(void)
+{
+    Obj_0020AD60 obj0;
+    Obj_0020AD60 obj1;
+    Obj_0020AD60 obj2;
+    Obj_0020AD60 obj3;
+    Obj_0020AD60 obj4;
+    Obj_0020AD60 obj5;
+    Obj_0020AD60 obj6;
+    Obj_0020AD60 obj7;
+    Obj_0020AD60 obj8;
+    Obj_0020AD60 obj9;
+
+    obj0.unk_0 = D_004B4440;
+    obj0.unk_4 = 0;
+    obj0.unk_10 = 0;
+    obj0.unk_8 = 0x50019;
+    obj0.unk_C = 1;
+    func_0026B3F8(&obj0);
+
+    obj1.unk_0 = D_004B44C8;
+    obj1.unk_4 = 0;
+    obj1.unk_10 = 0;
+    obj1.unk_8 = 0x5001F;
+    obj1.unk_C = 2;
+    func_0026B3F8(&obj1);
+
+    obj2.unk_0 = D_004B4590;
+    obj2.unk_4 = 0;
+    obj2.unk_10 = 0;
+    obj2.unk_8 = 0x5001B;
+    obj2.unk_C = 1;
+    func_0026B3F8(&obj2);
+
+    obj3.unk_0 = D_004B44F0;
+    obj3.unk_4 = 0;
+    obj3.unk_10 = 0;
+    obj3.unk_8 = 0x5001A;
+    obj3.unk_C = 1;
+    func_0026B3F8(&obj3);
+
+    obj4.unk_0 = D_004B4630;
+    obj4.unk_4 = 0;
+    obj4.unk_10 = 0;
+    obj4.unk_8 = 0x5001C;
+    obj4.unk_C = 1;
+    func_0026B3F8(&obj4);
+
+    obj5.unk_0 = D_004B46B8;
+    obj5.unk_4 = 0;
+    obj5.unk_10 = 0;
+    obj5.unk_8 = 0x50020;
+    obj5.unk_C = 2;
+    func_0026B3F8(&obj5);
+
+    obj6.unk_0 = D_004B4780;
+    obj6.unk_4 = 0;
+    obj6.unk_10 = 0;
+    obj6.unk_8 = 0x5001E;
+    obj6.unk_C = 1;
+    func_0026B3F8(&obj6);
+
+    obj7.unk_0 = D_004B46E0;
+    obj7.unk_4 = 0;
+    obj7.unk_10 = 0;
+    obj7.unk_8 = 0x5001D;
+    obj7.unk_C = 1;
+    func_0026B3F8(&obj7);
+
+    obj8.unk_0 = D_003E1748;
+    obj8.unk_4 = 0;
+    obj8.unk_10 = 0;
+    obj8.unk_8 = 0x5004B;
+    obj8.unk_C = 2;
+    func_0026B3F8(&obj8);
+
+    obj9.unk_0 = D_003E16C0;
+    obj9.unk_4 = 0;
+    obj9.unk_10 = 0;
+    obj9.unk_8 = 0x5004C;
+    obj9.unk_C = 1;
+    func_0026B3F8(&obj9);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020A540", func_0020AF60);
 

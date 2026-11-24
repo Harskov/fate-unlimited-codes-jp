@@ -48,6 +48,14 @@ extern s32 D_004E1210[];
 
 extern s32 D_00507EB8[];
 
+extern s32 D_004E1500[];
+
+extern s32 D_004E1560[];
+
+extern s32 D_004E1570[];
+
+extern s32 D_00507E90[];
+
 void func_0037D750(void)
 {
     func_0036D830();
@@ -55,7 +63,10 @@ void func_0037D750(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037D750", func_0037D760);
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037D750", func_0037D860);
+void func_0037D860(Obj_0036EBE0_A *arg0, s32 arg1)
+{
+    func_0036DC20(arg0, arg1, arg0->unk_4->unk_3C, 2, 0xDE, D_004DCB60, D_004E1500, D_004E1560, D_004E1570, 0, D_00507E90);
+}
 
 void func_0037D8C0(void)
 {

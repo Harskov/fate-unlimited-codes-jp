@@ -21,6 +21,14 @@ void func_00209950();
 
 void func_00253870();
 
+extern s32 D_00522D48[];
+
+extern s32 D_00524798[];
+
+void func_002E4CD0();
+
+s32 func_00209EB0(void);
+
 void func_002098A0(void)
 {
 }
@@ -95,6 +103,21 @@ void func_00209E70(void)
     func_002C1CE0(vals);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002098A0", func_00209EB0);
+s32 func_00209EB0(void)
+{
+    func_002E4CD0(D_00524798[0], 0, 1);
+    return 0;
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002098A0", func_00209EE0);
+s32 func_00209EE0(s32 arg0)
+{
+    s32 prev;
+
+    prev = D_00522D48[0];
+    if (arg0 != 0) {
+        D_00522D48[0] = arg0;
+    } else {
+        D_00522D48[0] = (s32)func_00209EB0;
+    }
+    return prev;
+}

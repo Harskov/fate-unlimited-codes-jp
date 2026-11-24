@@ -98,6 +98,12 @@ typedef struct Sub_001AA740 {
 
 void func_001AA180();
 
+extern int D_0051D894[];
+
+extern int D_0051D8D8[];
+
+extern int D_00531B8C[];
+
 void func_001AA740(Sub_001AA740 *arg0)
 {
     int i;
@@ -191,7 +197,15 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AA740", func_001AB1D0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AA740", func_001AB200);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AA740", func_001AB230);
+void func_001AB230(int arg0)
+{
+    int total;
+
+    total = 0;
+    total += func_001CF030(D_0051D894[0], D_0051D8D8[0]);
+    total += D_00531B8C[arg0 * 29];
+    func_0020E5F0(total, 0, 0, 0xFF);
+}
 
 void func_001AB2B0(Obj_001AB2B0 *obj)
 {

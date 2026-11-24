@@ -6,11 +6,15 @@ typedef struct Obj {
     /* 0x1DC */ int unk_1DC;
     unsigned char unk_1E0[0x50];
     /* 0x230 */ int unk_230;
+    unsigned char unk_234[0x2220];
+    /* 0x2454 */ int unk_2454;
 } Obj;
 
 extern int D_00531C58[];
 
 void func_001A5130();
+
+void func_001A3890();
 
 int func_001A36A0(int arg0, int arg1)
 {
@@ -79,7 +83,14 @@ void func_001A3820(int i)
     r[9].unk_10 = 0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A36A0", func_001A3840);
+void func_001A3840(Obj *o)
+{
+    int n = o->unk_2454;
+
+    if (n >= 2) {
+        func_001A3890(o, n * 100, 1, 1);
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001A36A0", func_001A3890);
 

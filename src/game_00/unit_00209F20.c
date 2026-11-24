@@ -41,7 +41,13 @@ s32 sceFsReset(void);
 
 s32 sceSifInitIopHeap(void);
 
-s32 func_0010C5E8(const char *path, s32 argc, const char *argv);
+s32 sceSifLoadModule(const char *path, s32 argc, const char *argv);
+
+extern s32 D_00524790[];
+
+s32 func_002E4C58();
+
+s32 func_002E4C78();
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00209F20", func_00209F20);
 
@@ -60,15 +66,15 @@ void func_00209FD0(void)
     sceCdMmode(2);
     sceFsReset();
     sceSifInitIopHeap();
-    while (func_0010C5E8(D_005019C0, 0, 0) < 0) {
+    while (sceSifLoadModule(D_005019C0, 0, 0) < 0) {
     }
-    while (func_0010C5E8(D_005019E0, 0, 0) < 0) {
+    while (sceSifLoadModule(D_005019E0, 0, 0) < 0) {
     }
-    while (func_0010C5E8(D_00501A00, 0, 0) < 0) {
+    while (sceSifLoadModule(D_00501A00, 0, 0) < 0) {
     }
-    while (func_0010C5E8(D_00501A20, 0, 0) < 0) {
+    while (sceSifLoadModule(D_00501A20, 0, 0) < 0) {
     }
-    while (func_0010C5E8(D_00501A40, 0, 0) < 0) {
+    while (sceSifLoadModule(D_00501A40, 0, 0) < 0) {
     }
 }
 
@@ -78,9 +84,23 @@ void func_0020A100(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00209F20", func_0020A110);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00209F20", func_0020A1B0);
+s32 func_0020A1B0(s32 arg0)
+{
+    if (func_002E4C78() == 0) {
+        return 0;
+    }
+    D_00524790[0] &= 0xFFFBFFFF;
+    return arg0;
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00209F20", func_0020A210);
+s32 func_0020A210(s32 arg0)
+{
+    if (func_002E4C58() == 0) {
+        return 0;
+    }
+    D_00524790[0] |= 0x40000;
+    return arg0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00209F20", func_0020A260);
 

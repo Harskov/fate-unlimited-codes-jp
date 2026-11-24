@@ -18,7 +18,7 @@ int func_00253500(Obj_00253500 *arg0, int arg1);
 
 extern s32 gSemaId[];
 
-extern s32 D_003DF8F8[];
+extern s32 gSemaId_3DF8F8[];
 
 extern s32 D_00529538[];
 
@@ -55,9 +55,24 @@ int SleepThread(void);
 
 void func_002535E0(int id, u16 time, void *arg);
 
+extern s32 D_00529548[];
+
+extern s32 D_00529560[];
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002530F0", func_002530F0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002530F0", func_00253160);
+int func_00253160(void)
+{
+    s32 i = D_00529548[0];
+    s32 *slot = &D_00529560[i * 2];
+
+    if (*slot < 0) {
+        *slot = 0x40000000;
+        D_00529548[0] = (i + 1) % 32;
+        return 0;
+    }
+    return -1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002530F0", func_002531C0);
 
@@ -88,12 +103,12 @@ int func_002533B0(void)
         }
         gSemaId[0] = sema;
     }
-    if (D_003DF8F8[0] < 0) {
+    if (gSemaId_3DF8F8[0] < 0) {
         sema = CreateSema(param);
         if (sema <= 0) {
             return -1;
         }
-        D_003DF8F8[0] = sema;
+        gSemaId_3DF8F8[0] = sema;
     }
     D_00529538[0] = 1;
     return 0;

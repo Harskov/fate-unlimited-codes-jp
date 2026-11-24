@@ -10,7 +10,21 @@ s32 func_0015B240(s32 arg0);
 
 void func_00254560(s32 arg0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001CDE30", func_001CDE30);
+extern s32 D_00523EB4[];
+
+extern s32 D_00523EB8[];
+
+s32 func_001C8750(void);
+
+void func_00211130(s32);
+
+s32 func_001CDE30(void)
+{
+    D_00523EB4[0] = 5;
+    D_00523EB8[0] = func_001C8750();
+    func_00211130(0x20000);
+    return 0;
+}
 
 void func_001CDE70(void)
 {

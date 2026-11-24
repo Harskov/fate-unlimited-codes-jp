@@ -21,6 +21,12 @@ void func_0015B310(s32 arg0);
 
 void func_0015B1B0(s32 arg0, s32 arg1, f32 arg2);
 
+void func_00253080(s32 arg0);
+
+void func_001468B8(s32 arg0);
+
+void func_0015B2E0(s32);
+
 void func_002544C0(s32 arg0, s32 arg1, f32 arg2)
 {
     if (func_00255590() == 0) {
@@ -29,7 +35,13 @@ void func_002544C0(s32 arg0, s32 arg1, f32 arg2)
     func_0015B1B0(arg0, arg1, arg2);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002544C0", func_00254520);
+void func_00254520(s32 arg0)
+{
+    if (func_00255590() == 0) {
+        return;
+    }
+    func_0015B2E0(arg0);
+}
 
 void func_00254560(s32 arg0)
 {
@@ -135,4 +147,21 @@ s32 func_00254CA0(void)
     return D_00529D90[0];
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002544C0", func_00254CB0);
+void func_00254CB0(s32 arg0)
+{
+    if (func_00255590() == 0)
+        return;
+
+    switch (arg0) {
+    case 0:
+        D_00529D90[0] = 0;
+        func_00253080(0);
+        func_001468B8(1);
+        break;
+    case 1:
+        D_00529D90[0] = 1;
+        func_00253080(1);
+        func_001468B8(0);
+        break;
+    }
+}

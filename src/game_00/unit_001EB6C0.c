@@ -8,8 +8,6 @@ extern s32 D_0051F9B8[];
 
 extern s32 D_0051F9C0[];
 
-void func_001EBDC0();
-
 void func_002B1E28();
 
 typedef struct Elem_001EB6C0 {
@@ -25,6 +23,8 @@ typedef struct Obj_001EB6C0 {
 
 s32 *func_001EBD90(s32 *arg0);
 
+s32 func_001EBDC0(s32 arg0);
+
 void func_001EB6C0(Obj_001EB6C0 *arg0, s32 arg1)
 {
     s32 i;
@@ -39,11 +39,42 @@ void func_001EB6C0(Obj_001EB6C0 *arg0, s32 arg1)
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001EB6C0", func_001EB720);
+void func_001EB720(Obj_001EB6C0 *arg0, s32 arg1)
+{
+    s32 i;
+    Elem_001EB6C0 *e;
+    s32 v;
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001EB6C0", func_001EB790);
+    for (i = 0; i < arg0->count; i++) {
+        e = &arg0->unk_6C[i];
+        v = e->flags;
+        if ((v & 0x740000) == 0)
+            e->flags = v & ~arg1;
+    }
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001EB6C0", func_001EB7F0);
+void func_001EB790(Obj_001EB6C0 *arg0, s32 arg1)
+{
+    s32 i;
+    Elem_001EB6C0 *e;
+    s32 v;
+
+    for (i = 0; i < arg0->count; i++) {
+        e = &arg0->unk_6C[i];
+        v = e->flags;
+        if ((v & 0x740000) == 0)
+            e->flags = v | arg1;
+    }
+}
+
+void func_001EB7F0(Obj_001EB6C0 *arg0, s32 arg1)
+{
+    s32 i;
+
+    for (i = 0; i < arg0->count; i++) {
+        arg0->unk_6C[i].flags = arg1;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001EB6C0", func_001EB830);
 
@@ -82,7 +113,15 @@ s32 *func_001EBD90(s32 *arg0)
     return arg0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001EB6C0", func_001EBDC0);
+s32 func_001EBDC0(s32 arg0)
+{
+    while (D_0051F9B0[0] == D_0051F9A8[0]) {
+        D_0051F9B8[0] = arg0;
+        break;
+    }
+    D_0051F9B0[0] += 1;
+    return arg0;
+}
 
 int func_001EBE10(void)
 {

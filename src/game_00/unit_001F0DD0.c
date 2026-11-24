@@ -7,7 +7,7 @@ extern s16 D_0051FA2C[];
 void func_001F1CA0();
 
 typedef struct Obj_001F1F50 {
-    s32 unk_0;
+    /* 0x00 */ s32 flags;
     u8 pad_4[0x10];
     s32 unk_14;
     u8 pad_18[0xC];
@@ -59,6 +59,10 @@ void func_002E6D18();
 
 void func_002B5E40();
 
+void func_001F1F50(Obj_001F1F50 *arg0);
+
+void func_00203630();
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F0DD0", func_001F0DD0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F0DD0", func_001F0F00);
@@ -101,7 +105,22 @@ s32 func_001F1520(void)
     return D_0051FA10[0];
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F0DD0", func_001F1530);
+void func_001F1530(void)
+{
+    Obj_001F14B0 *p;
+    s32 *q;
+    s32 v;
+
+    p = D_0051FA28[0];
+    q = (s32 *)p->unk_0;
+    while (q != (s32 *)1) {
+        v = *q;
+        if (v & 0x200)
+            *q = v & ~4;
+        p = p->next;
+        q = (s32 *)p->unk_0;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F0DD0", func_001F1590);
 
@@ -163,15 +182,43 @@ void func_001F1D10(void)
     D_0051FA10[0] = 0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F0DD0", func_001F1D40);
+Obj_001F1C20 *func_001F1D40(void)
+{
+    s32 i;
+    Obj_001F1C20 *p;
+
+    for (i = 0; ; i++) {
+        p = (Obj_001F1C20 *)func_001F14B0(i);
+        if (p == 0) {
+            return 0;
+        }
+        if (p->flags & 0x80) {
+            func_00203630(p->unk_10);
+            return p;
+        }
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F0DD0", func_001F1DB0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001F0DD0", func_001F1ED0);
+void func_001F1ED0(void)
+{
+    Obj_001F14B0 *node;
+    Obj_001F1F50 *obj;
+
+    node = D_0051FA28[0];
+    while (node->unk_0 != 1) {
+        obj = (Obj_001F1F50 *)node->unk_0;
+        if (obj->flags & 0x40) {
+            func_001F1F50(obj);
+        }
+        node = node->next;
+    }
+}
 
 void func_001F1F50(Obj_001F1F50 *arg0)
 {
-    arg0->unk_0 = arg0->unk_0 & ~0xEFC;
+    arg0->flags = arg0->flags & ~0xEFC;
     arg0->unk_14 = 3;
     arg0->unk_60 = 2;
     arg0->unk_34 = -1;

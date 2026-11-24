@@ -35,6 +35,8 @@ extern Rec0051A424 D_0051A434[];
 
 extern Obj_0051A440 D_0051A440[];
 
+double log10(double);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015AB90", func_0015AB90);
 
 s32 func_0015ACE0(s32 arg0, s32 arg1)
@@ -83,7 +85,13 @@ s32 func_0015ACE0(s32 arg0, s32 arg1)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015AB90", func_0015AE00);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015AB90", func_0015AF20);
+s32 func_0015AF20(f32 x)
+{
+    if (x < 0.001f) {
+        return -960;
+    }
+    return (s32)(f32)(200.0 * log10(x));
+}
 
 void func_0015AF90(s32 i, s32 arg1)
 {

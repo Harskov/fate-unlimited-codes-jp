@@ -12,6 +12,24 @@ extern s32 D_0051EF10[];
 
 s32 func_001A27C0();
 
+typedef struct Elem_001D6790 {
+    u8 unk_0[0x10];
+    /* 0x10 */ u32 flags_10;
+    u8 unk_14[0x8];
+    /* 0x1C */ u32 flags_1C;
+} Elem_001D6790;
+
+typedef struct Sub_001D6790 {
+    Elem_001D6790 *unk_0;
+    s32 unk_4;
+    /* 0x08 */ struct Sub_001D6790 *next;
+} Sub_001D6790;
+
+typedef struct Obj_001D6790 {
+    u8 unk_0[0x23E8];
+    Sub_001D6790 *unk_23E8;
+} Obj_001D6790;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D5FE0", func_001D5FE0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D5FE0", func_001D6050);
@@ -82,7 +100,23 @@ void func_001D66B0(s32 arg0, s32 arg1, s32 arg2)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D5FE0", func_001D66F0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001D5FE0", func_001D6790);
+void func_001D6790(Obj_001D6790 *arg0, Obj_001D6790 *arg1)
+{
+    Sub_001D6790 *link;
+    Elem_001D6790 *item;
+
+    if (arg0 != arg1) {
+        link = arg0->unk_23E8;
+        item = link->unk_0;
+        while (item != (Elem_001D6790 *)1) {
+            if (!(item->flags_1C & 0x80000000) && !(item->flags_10 & 0x80000000)) {
+                item->flags_1C = item->flags_1C | 0x08000000;
+            }
+            link = link->next;
+            item = link->unk_0;
+        }
+    }
+}
 
 void func_001D6800(s32 arg0)
 {

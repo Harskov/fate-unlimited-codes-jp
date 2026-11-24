@@ -25,9 +25,18 @@ extern s32 D_0051AC5C[];
 #include "libc.h"
 #include "game_00/unit_001735C0.h"
 
+void func_00176490(int a, int b, int c, int d);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001735C0", func_001735C0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001735C0", func_001736B0);
+void *func_001736B0(int *arg0)
+{
+    int n = *arg0;
+
+    if (n & 3)
+        *(long long *)1 = 0;
+    return (char *)arg0 + ((n + 3) & ~3);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001735C0", func_001736F0);
 
@@ -119,7 +128,53 @@ void func_00176140(int kind, void **out)
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001735C0", func_001761F0);
+/* Picks four two-bit settings from the argument where its enable bits 0x40, 0x80 and
+   0x100 are set, from the globals at D_0051AC50..D_0051AC5C where they are not, and
+   passes them on; nothing happens when none of the three bits is set. */
+void func_001761F0(unsigned int arg0)
+{
+    int p0;
+    int p1;
+    int p2;
+    int p3;
+
+    if (arg0 & 0x1C0) {
+        if (arg0 & 0x40) {
+            switch ((arg0 >> 9) & 3) {
+            default:
+                p1 = 0;
+                p2 = 0;
+                break;
+            case 1:
+                p1 = 1;
+                p2 = 0;
+                break;
+            case 2:
+                p1 = 0;
+                p2 = 1;
+                break;
+            case 3:
+                p1 = 1;
+                p2 = 1;
+                break;
+            }
+        } else {
+            p1 = D_0051AC54[0];
+            p2 = D_0051AC58[0];
+        }
+        if (arg0 & 0x80) {
+            p0 = (arg0 >> 11) & 3;
+        } else {
+            p0 = D_0051AC50[0];
+        }
+        if (arg0 & 0x100) {
+            p3 = (arg0 >> 13) & 3;
+        } else {
+            p3 = D_0051AC5C[0];
+        }
+        func_00176490(p0, p1, p2, p3);
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001735C0", func_001762D0);
 

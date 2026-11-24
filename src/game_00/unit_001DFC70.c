@@ -1,5 +1,16 @@
 #include "common.h"
 
+typedef struct Obj_001E0C10 {
+    u8 unk_0[0x158];
+    void *unk_158;
+    u8 unk_15C[0x38];
+    s32 *unk_194;
+} Obj_001E0C10;
+
+void func_001DCE30(void *);
+
+void func_00210D60(s32 *);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001DFC70", func_001DFC70);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001DFC70", func_001DFE70);
@@ -35,7 +46,18 @@ int func_001E08F0(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001DFC70", func_001E0900);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001DFC70", func_001E0C10);
+void func_001E0C10(s32 *arg0)
+{
+    Obj_001E0C10 *obj = (Obj_001E0C10 *)func_0018A100(arg0);
+
+    if (obj->unk_158 != 0) {
+        func_001DCE30(obj->unk_158);
+    }
+    if (obj->unk_194 != 0) {
+        *obj->unk_194 = 9;
+    }
+    func_00210D60(arg0);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001DFC70", func_001E0C70);
 

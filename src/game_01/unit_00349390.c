@@ -34,7 +34,7 @@ typedef struct Obj_003493B0 {
     /* 0x214 */ u8 pad_214[0x7C];
     /* 0x290 */ u8 unk_290[0x48];
     /* 0x2D8 */ s32 unk_2D8;
-    /* 0x2DC */ s32 unk_2DC;
+    /* 0x2DC */ s32 counter;
 } Obj_003493B0;
 
 Obj_0021A3F0 *func_0021A3F0(s32 arg0);
@@ -67,9 +67,9 @@ void func_003493B0(Obj_003493B0 *arg0)
     col[2] = arg0->unk_210;
     col[3] = arg0->unk_210;
     if (D_005231C0[0] == 0) {
-        arg0->unk_2DC++;
+        arg0->counter++;
     }
-    x = (f32)arg0->unk_2D8 * (f32)arg0->unk_2DC;
+    x = (f32)arg0->unk_2D8 * (f32)arg0->counter;
     if (x > 700.0f) {
         x = 700.0f;
     }

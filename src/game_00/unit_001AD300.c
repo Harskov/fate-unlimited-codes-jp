@@ -49,7 +49,7 @@ typedef struct Obj_001AD9C0_2 {
 
 typedef struct Sub_001AD9C0 {
     u8 unk_0[8];
-    /* 0x08 */ int unk_8;
+    /* 0x08 */ int count;
 } Sub_001AD9C0;
 
 typedef struct Elem_001AD9C0 {
@@ -59,6 +59,17 @@ typedef struct Elem_001AD9C0 {
 } Elem_001AD9C0;
 
 void func_001AD460();
+
+typedef struct Obj_001AD460 {
+    int unk_0;
+    u8 unk_4[0xC];
+    u8 unk_10[0x20];
+    u8 unk_30[0x10];
+} Obj_001AD460;
+
+Obj_001AD460 *func_001F51B0();
+
+void func_0015D130();
 
 void func_001AD300(int index)
 {
@@ -106,7 +117,17 @@ void func_001AD3D0(int index)
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AD300", func_001AD460);
+void func_001AD460(Obj_001AD300 *arg0, Obj28 *arg1)
+{
+    Obj_001AD460 *p;
+
+    p = func_001F51B0(arg0, 0x37);
+    if (p != 0) {
+        p->unk_0 |= 0xE04;
+        func_0015D130(p->unk_10, arg1->unk_10);
+        func_0015D130(p->unk_30, arg1->unk_4);
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AD300", func_001AD4C0);
 
@@ -133,7 +154,7 @@ void func_001AD9C0(Obj_001AE2F0 *arg0, Obj_001AD9C0_2 *arg1, Sub_001AD9C0 *arg2,
 
     a = p->unk_38;
     e = 0;
-    for (i = arg6 + 1; i < arg2->unk_8; i++) {
+    for (i = arg6 + 1; i < arg2->count; i++) {
         if (arg3[i].unk_4 != -1) {
             e = &arg3[i];
             j = i;

@@ -49,6 +49,31 @@ typedef struct Obj_00377CC0 {
     s32 unk_190;
 } Obj_00377CC0;
 
+typedef struct Sub_00377AC0 {
+    u8 pad_0[0x3D0];
+    f32 unk_3D0;
+} Sub_00377AC0;
+
+typedef struct Elem_00377870 {
+    u8 pad_0[0xE4];
+    s8 unk_E4;
+} Elem_00377870;
+
+typedef struct Sub_00377870 {
+    u8 pad_0[0x1B0];
+    Elem_00377870 *unk_1B0;
+    u8 pad_1B4[0x1CC];
+    Elem_00377870 *unk_380;
+} Sub_00377870;
+
+typedef struct Sub_00377960 {
+    u8 pad_0[0x1C];
+    s32 unk_1C;
+    u8 pad_20[8];
+    s32 unk_28;
+    f32 unk_2C;
+} Sub_00377960;
+
 s32 func_00377740(Obj_00377740 *arg0, s32 arg1)
 {
     if (arg0 == 0)
@@ -62,7 +87,15 @@ s32 func_00377740(Obj_00377740 *arg0, s32 arg1)
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377740", func_00377770);
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377740", func_00377870);
+void func_00377870(Obj_00377740 *arg0, s32 arg1, s8 arg2)
+{
+    if (arg0 != 0 && arg0 != 0 && arg1 < 4) {
+        if (arg0->unk_23EC[arg1] != 0) {
+            ((Sub_00377870 *)arg0->unk_23EC[arg1])->unk_380->unk_E4 = arg2;
+            ((Sub_00377870 *)arg0->unk_23EC[arg1])->unk_1B0->unk_E4 = arg2;
+        }
+    }
+}
 
 void func_003778C0(Obj_00377740 *arg0, s32 arg1, f32 arg2, f32 arg3, f32 arg4)
 {
@@ -89,7 +122,16 @@ s32 func_00377910(Obj_00377740 *arg0, s32 arg1)
     return 0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377740", func_00377960);
+void func_00377960(Obj_00377740 *arg0, s32 arg1, s32 arg2)
+{
+    if (arg0 != 0 && arg0 != 0 && arg1 < 4) {
+        if (arg0->unk_23EC[arg1] != 0) {
+            ((Sub_00377960 *)arg0->unk_23EC[arg1])->unk_1C = arg2;
+            ((Sub_00377960 *)arg0->unk_23EC[arg1])->unk_28 = 0;
+            ((Sub_00377960 *)arg0->unk_23EC[arg1])->unk_2C = 1.0f / (f32)arg2;
+        }
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377740", func_003779D0);
 
@@ -115,7 +157,16 @@ void func_00377A70(Obj_00377740 *arg0, s32 arg1)
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377740", func_00377AC0);
+void func_00377AC0(Obj_00377740 *arg0, s32 arg1, f32 arg2)
+{
+    Sub_00377AC0 *p;
+
+    if (arg0 != 0 && arg0 != 0 && arg1 < 4) {
+        p = (Sub_00377AC0 *)arg0->unk_23EC[arg1];
+        if (p != 0)
+            p->unk_3D0 = arg2;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377740", func_00377B00);
 

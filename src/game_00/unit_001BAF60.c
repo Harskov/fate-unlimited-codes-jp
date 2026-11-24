@@ -1,6 +1,8 @@
 #include "common.h"
 #include "game_00/obj2524.h"
 
+int func_00333630(void *arg0, int arg1);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001BAF60", func_001BAF60);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001BAF60", func_001BB0F0);
@@ -108,7 +110,34 @@ int func_001BB3C0(Obj2524 *arg0)
     return 0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001BAF60", func_001BB420);
+/* A func_001BB* predicate: true for state 6 when the +0x2508 object's +0x53C
+   is 0x10F0 or 0x10ED, or when func_00333630 accepts that object with 0x100. */
+int func_001BB420(Obj2524 *arg0)
+{
+    Obj53C *p;
+    int c;
+
+    if (arg0 == 0)
+        return 0;
+    c = arg0->unk_C;
+    if (c != 6)
+        return 0;
+    p = arg0->unk_2508;
+    if (p == 0)
+        return 0;
+    /* the state is tested a second time here; probably a guard the author's
+       helper or macro carried */
+    if (c == 6) {
+        switch (p->unk_53C) {
+        case 0x10ED:
+        case 0x10F0:
+            return 1;
+        }
+        if (func_00333630(p, 0x100) != 0)
+            return 1;
+    }
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001BAF60", func_001BB4B0);
 

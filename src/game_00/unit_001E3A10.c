@@ -13,6 +13,13 @@ typedef struct Obj_001E4E00 {
     s32 unk_4;
     u8 pad_8[0x3C];
     s32 unk_44;
+    u8 pad_48[0x4];
+    f32 unk_4C;
+    s16 unk_50;
+    s16 unk_52;
+    s32 unk_54;
+    s32 unk_58;
+    s32 unk_5C;
 } Obj_001E4E00;
 
 typedef struct Obj_001E3CC0 {
@@ -79,6 +86,10 @@ typedef struct Obj_001E4470 {
 s32 func_001E4FE0(s32 arg0);
 
 s32 func_001E4BF0();
+
+void func_001E4E60(s32 arg0);
+
+s32 func_001E4EC0(s32 arg0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E3A10", func_001E3A10);
 
@@ -195,9 +206,20 @@ void func_001E43B0(Obj_001E4470 *arg0)
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E3A10", func_001E4400);
+void func_001E4400(Obj_001E4470 *arg0)
+{
+    func_001E4E60(arg0->unk_BC);
+    arg0->unk_BC = 0;
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E3A10", func_001E4430);
+void func_001E4430(Obj_001E4470 *arg0, Obj_001E3CC0 *arg1)
+{
+    s32 saved = arg1->unk_C;
+
+    if (func_001E4EC0(arg0->unk_BC) == 2) {
+        arg0->unk_BC = saved;
+    }
+}
 
 void func_001E4470(Obj_001E4470 *arg0)
 {
@@ -259,7 +281,18 @@ void func_001E4E00(Obj_001E4E00 *arg0, s32 arg1)
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E3A10", func_001E4E20);
+void func_001E4E20(Obj_001E4E00 *arg0, s16 arg1, f32 arg2)
+{
+    if (arg0 != 0) {
+        arg0->unk_4 |= 2;
+        arg0->unk_4C = arg2;
+        arg0->unk_50 = arg1;
+        arg0->unk_52 = arg1;
+        arg0->unk_54 = 0;
+        arg0->unk_58 = 0;
+        arg0->unk_5C = 0;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001E3A10", func_001E4E60);
 

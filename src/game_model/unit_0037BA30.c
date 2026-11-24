@@ -18,6 +18,14 @@ typedef struct Obj_0037C980 {
     /* 0x74 */ f32 unk_74[4];
 } Obj_0037C980;
 
+extern s32 D_00523EB4[];
+
+extern s32 D_00523EB8[];
+
+extern s32 D_00536170[];
+
+Obj_0037C120 *func_0019D040(s32 arg0);
+
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037BA30", func_0037BA30);
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037BA30", func_0037BB20);
@@ -52,7 +60,21 @@ s32 func_0037C120(s32 arg0, Obj_0037C120 *arg1)
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037BA30", func_0037C170);
 
-INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037BA30", func_0037C1E0);
+void func_0037C1E0(s32 arg0)
+{
+    Obj_0037C120 *p;
+    s32 a;
+    s32 r;
+
+    if (arg0 >= 12) {
+        *(long long *)1 = 0;
+    }
+    p = func_0019D040(0);
+    a = D_00536170[arg0];
+    r = p->unk_C == a && p->unk_10 == 0;
+    D_00523EB4[0] = a;
+    D_00523EB8[0] = r;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_0037BA30", func_0037C260);
 

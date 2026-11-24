@@ -227,6 +227,13 @@ int func_001711F0(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_00171210);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_00171E40);
+int func_00171E40(Obj_00167DE0 *arg0, int arg1)
+{
+    int i = func_001619C0(arg0, arg1);
+
+    if (i < 0)
+        return 0;
+    return arg0->unk_6C[i].unk_C->unk_C;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00166E80", func_00171E90);

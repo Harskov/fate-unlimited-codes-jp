@@ -50,6 +50,16 @@ extern Obj12 D_0051AD88[];
 
 void func_001836B0(void);
 
+typedef struct Sub_001847B0 {
+    u8 unk_0[2];
+    u16 unk_2;
+} Sub_001847B0;
+
+typedef struct Obj_001847B0 {
+    u8 unk_0[8];
+    Sub_001847B0 *unk_8;
+} Obj_001847B0;
+
 void func_00183660(Obj_00183660 *arg0)
 {
     func_00185030(arg0->unk_C8);
@@ -121,7 +131,12 @@ int func_001847A0(int *arg0)
     return *arg0 > 0;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00183660", func_001847B0);
+u16 func_001847B0(Obj_001847B0 *arg0)
+{
+    func_00183C40(arg0->unk_8->unk_2, arg0);
+    func_00183B50(arg0->unk_8->unk_2, arg0);
+    return arg0->unk_8->unk_2;
+}
 
 void func_00184800(s32 arg0, s32 arg1)
 {

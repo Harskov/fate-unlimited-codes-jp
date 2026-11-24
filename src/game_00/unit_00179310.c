@@ -17,7 +17,8 @@ typedef struct Node {
 } Node;
 
 typedef struct Obj {
-    unsigned char unk_0[0xC4];
+    unsigned char unk_0[0xC0];
+    /* 0xC0 */ struct Obj *link;
     /* 0xC4 */ u16 counter;
     unsigned char unk_C6[0xA];
     /* 0xD0 */ struct Obj *next;
@@ -103,6 +104,14 @@ void func_00165EA0();
 
 void func_0016CFD0(Vec4 *dst, Vec4 *src, f32 scale);
 
+void func_00210D60(Link *arg0);
+
+void *func_002D9BF8(int a0);
+
+void func_002D9D18(void *a0, int a1, int a2);
+
+void func_002D9210(void *a0, int a1, f32 a2);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_00179310);
 
 void func_00179380(Link *n)
@@ -121,7 +130,16 @@ void func_001793A0(Ent0051AC78 *arg0)
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_001793E0);
+void func_001793E0(Link *arg0)
+{
+    Link *cur = arg0->next;
+
+    while (cur->unk_0 != 1) {
+        func_0015D710(D_0051AC60[0], cur->unk_0);
+        cur = cur->next;
+    }
+    func_00210D60(arg0);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_00179450);
 
@@ -172,7 +190,14 @@ Obj_00179600 *func_00179600(Sub_00179600 *arg0)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_00179760);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_0017A1B0);
+void func_0017A1B0(int arg0, int arg1, int arg2, f32 arg3)
+{
+    void *h;
+
+    h = func_002D9BF8(0);
+    func_002D9D18(h, arg1, arg2);
+    func_002D9210(h, arg0, arg3);
+}
 
 /* The blend of arg1 and arg2 by arg3: arg1 at 0, arg2 at 1. */
 void func_0017A230(f32 *arg0, f32 *arg1, f32 *arg2, f32 arg3)
@@ -198,7 +223,13 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_0017A460);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_0017A4E0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_0017A550);
+int func_0017A550(Obj *arg0, Obj *arg1)
+{
+    if (arg1 == 0 || arg0 == 0 || arg0->link != 0)
+        return -1;
+    arg0->link = arg1;
+    return ++arg1->counter;
+}
 
 int func_0017A590(Obj *arg0, Obj *arg1)
 {
@@ -210,7 +241,17 @@ int func_0017A590(Obj *arg0, Obj *arg1)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_0017A5D0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00179310", func_0017A610);
+void func_0017A610(Ent0051AC78 *arg0)
+{
+    void (*callback)();
+
+    callback = (void (*)())arg0->unk_C0;
+    if (callback != 0)
+        callback();
+    arg0->next = D_0051AC78[0];
+    D_0051AC78[0] = arg0;
+    D_0051AE58[0] -= 1;
+}
 
 Ent0051AC78 *func_0017A670(char kind, short id)
 {

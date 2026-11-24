@@ -32,6 +32,14 @@ extern void func_0020DE10(void *, s32, s32, s32);
 
 extern void func_0020DEC0(void *, s32, s32, s32, s32);
 
+typedef struct Obj_00522E90 {
+    u8 unk_0[0x14];
+    /* 0x14 */ s32 flags;
+    u8 unk_18[0x4C];
+} Obj_00522E90;
+
+extern Obj_00522E90 D_00522E90[];
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C7170", func_001C7170);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C7170", func_001C7390);
@@ -96,4 +104,19 @@ void func_001C8730(s32 arg0)
     func_0020E040(D_00523850, 0xB0, arg0);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C7170", func_001C8750);
+s32 func_001C8750(void)
+{
+    s32 i;
+    Obj_00522E90 *p;
+    s32 clear;
+
+    p = D_00522E90;
+    for (i = 0; i < 2; i++) {
+        clear = !((p->flags & 0x800) != 0);
+        if (!clear) {
+            return i;
+        }
+        p++;
+    }
+    return 0;
+}

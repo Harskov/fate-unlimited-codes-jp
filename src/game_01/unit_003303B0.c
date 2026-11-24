@@ -16,6 +16,22 @@ void func_00165EE0(f32 *arg0, f32 *arg1);
 
 f32 fabsf(f32);
 
+typedef struct Obj_00531B60 {
+    /* 0x00 */ s32 unk_0;
+    /* 0x04 */ s32 unk_4;
+    /* 0x08 */ u8 pad_8[0xC];
+    /* 0x14 */ s32 unk_14;
+    /* 0x18 */ s32 unk_18;
+    /* 0x1C */ s32 unk_1C;
+    /* 0x20 */ s32 unk_20;
+    /* 0x24 */ u8 pad_24[0x18];
+    /* 0x3C */ s32 unk_3C;
+    /* 0x40 */ u8 unk_40[0x10];
+    /* 0x50 */ u8 pad_50[0x24];
+} Obj_00531B60;
+
+extern Obj_00531B60 D_00531B60[];
+
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_003303B0", func_003303B0);
 
 /* Copies a four-float value from arg3 to arg4; with bit 0x100000 of the flag word set, adds an offset read from
@@ -68,7 +84,24 @@ INCLUDE_ASM("asm/nonmatchings/game_01/unit_003303B0", func_00332AD0);
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_003303B0", func_00332B40);
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_003303B0", func_00332CB0);
+void func_00332CB0(void)
+{
+    s32 i;
+    Obj_00531B60 *p;
+
+    p = D_00531B60;
+    for (i = 0; i < 2; i++) {
+        p->unk_0 = 0;
+        p->unk_4 = 0;
+        p->unk_14 = 0;
+        p->unk_18 = 0;
+        p->unk_1C = 0;
+        p->unk_20 = 0;
+        p->unk_3C = 0;
+        memset(p->unk_40, 0, 0x10);
+        p++;
+    }
+}
 
 s32 func_00332D20(s32 arg0, s32 arg1)
 {

@@ -291,7 +291,22 @@ void func_0019B470(Obj_0019B470 *p)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00199770", func_0019B4A0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00199770", func_0019B660);
+void func_0019B660(Obj_0019BDD0 *o)
+{
+    if (o->flags & 0x100000) {
+        o->flags |= 0x200000;
+        o->flags &= 0xFFEBFFFF;
+        if (o->flags & 0x80000) {
+            o->flags |= 0x40000;
+        }
+    }
+    if (o->flags & 0x2) {
+        func_0015EE20(o->unk_78, 0.0f, 1.0f, 5.0f);
+        func_0015EE20(o->unk_84, 0.0f, 1.0f, 0.0f);
+        func_0015EE20(o->unk_90, 0.0f, 0.0f, 1.0f);
+        o->flags &= 0xFFF3FFFF;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00199770", func_0019B750);
 

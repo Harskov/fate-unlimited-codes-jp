@@ -27,6 +27,22 @@ typedef struct Obj_00327120 {
     /* 0x150 */ Elem_00327120 unk_150[1];
 } Obj_00327120;
 
+typedef struct Elem_00327250 {
+    s32 unk_0;
+    u8 pad_4[0x4];
+    f32 unk_8;
+    u8 pad_C[0x4];
+    s32 unk_10;
+    s32 unk_14;
+    s32 unk_18;
+} Elem_00327250;
+
+typedef struct Obj_00327250 {
+    s32 unk_0;
+    u8 pad_4[0x134];
+    /* 0x138 */ Elem_00327250 unk_138[1];
+} Obj_00327250;
+
 void func_00327120(Obj_00327120 *a0, s32 a1, s32 a2)
 {
     a0->unk_150[a1].unk_0 = a2 << 8;
@@ -35,7 +51,16 @@ void func_00327120(Obj_00327120 *a0, s32 a1, s32 a2)
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00327120", func_00327150);
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00327120", func_00327170);
+void func_00327170(Obj_00327250 *a0, s32 a1, s32 a2, f32 a3)
+{
+    a0->unk_138[a1].unk_8 = a3;
+    a0->unk_138[a1].unk_0 = 0x80;
+    a0->unk_138[a1].unk_18 = 0;
+    a0->unk_138[a1].unk_14 = a2;
+    a0->unk_138[a1].unk_10 = 0;
+    a0->unk_0 |= 0x502;
+    a0->unk_138[a1].unk_0 |= 0x80000000;
+}
 
 void func_003271C0(void)
 {
@@ -58,7 +83,14 @@ void func_003271F0(s32 a0, s32 a1, s32 a2)
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00327120", func_00327200);
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00327120", func_00327250);
+void func_00327250(Obj_00327250 *a0, s32 a1, f32 a2)
+{
+    a0->unk_138[a1].unk_8 = a2;
+    a0->unk_138[a1].unk_0 = 2;
+    a0->unk_138[a1].unk_18 = 0;
+    a0->unk_0 |= 0x502;
+    a0->unk_138[a1].unk_0 |= 0x80000000;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00327120", func_00327290);
 

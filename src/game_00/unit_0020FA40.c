@@ -24,6 +24,26 @@ typedef struct Obj_0020FC50 {
     s32 unk_1C;
 } Obj_0020FC50;
 
+extern s16 D_005231C0[];
+
+extern s16 D_005231C2[];
+
+extern s16 D_005231C6[];
+
+extern s16 D_005231C4[];
+
+extern s32 D_005231CC[];
+
+extern s32 D_005231D0[];
+
+extern s32 D_005231C8[];
+
+extern s32 D_005231B0[];
+
+extern s32 D_005231A8[];
+
+extern s32 D_005231A0[];
+
 s32 func_0020FA40(void)
 {
     return D_00522E10[0];
@@ -77,9 +97,32 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020FA40", func_002108E0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020FA40", func_00210AF0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020FA40", func_00210B30);
+void func_00210B30(s32 arg0)
+{
+    D_005231C0[0] = 0;
+    D_005231C2[0] = 0;
+    D_005231C4[0] = 0;
+    D_005231CC[0] = 0;
+    D_005231D0[0] = 0;
+    D_005231C6[0] = 0;
+    D_005231C8[0] = arg0;
+    D_005231B0[0] = 0;
+    if (arg0 < 0) {
+        D_005231C4[0] = -1;
+    }
+    D_005231A8[0] = D_005231C4[0];
+    D_005231A0[0] = D_005231C4[0];
+}
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020FA40", func_00210BB0);
+void func_00210BB0(s16 arg0)
+{
+    D_005231C2[0] = 8;
+    D_005231C6[0] = arg0;
+    if (D_005231C6[0] == 0) {
+        D_005231C0[0] = 0;
+        D_005231C2[0] = 0;
+    }
+}
 
 void func_00210C00(s32 arg0)
 {

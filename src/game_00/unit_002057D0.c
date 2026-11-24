@@ -25,9 +25,25 @@ void func_002D2368();
 
 void func_002D2608();
 
+extern s32 D_00522B98[];
+
+extern s32 D_00522B9C[];
+
+extern s32 D_00522BA0[];
+
+s8 tolower(s8);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002057D0", func_002057D0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002057D0", func_00205970);
+void func_00205970(s32 arg0, s32 arg1)
+{
+    if (func_0020FA40() >= 2) {
+        return;
+    }
+    D_00522B98[0] = arg0;
+    D_00522BA0[0] = arg0;
+    D_00522B9C[0] = arg1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002057D0", func_002059D0);
 
@@ -58,7 +74,21 @@ void func_00206160(void)
     D_00522B94[0] = D_00522B90[0];
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002057D0", func_002061A0);
+void func_002061A0(s8 *arg0, s8 *arg1)
+{
+    s8 c;
+
+    for (;;) {
+        c = *arg1;
+        if (c == 0 || c == 0xD || c == 0xA) {
+            break;
+        }
+        arg1++;
+        *arg0 = tolower(c);
+        arg0++;
+    }
+    *arg0 = 0;
+}
 
 void func_00206210(void)
 {

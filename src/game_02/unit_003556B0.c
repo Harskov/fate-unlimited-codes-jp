@@ -25,13 +25,53 @@ typedef struct Obj_00356630 {
 
 float func_0020E740(float, float);
 
+typedef struct Obj_003560E0 {
+    unsigned char unk_0[0x3C];
+    /* 0x3C */ f32 counter_3C;
+    /* 0x40 */ f32 counter_40;
+    /* 0x44 */ f32 counter_44;
+    /* 0x48 */ f32 counter_48;
+    /* 0x4C */ f32 unk_4C;
+    /* 0x50 */ f32 unk_50;
+    /* 0x54 */ f32 unk_54;
+    /* 0x58 */ f32 unk_58;
+} Obj_003560E0;
+
 INCLUDE_ASM("asm/nonmatchings/game_02/unit_003556B0", sceCdStream);
 
 INCLUDE_ASM("asm/nonmatchings/game_02/unit_003556B0", func_00355820);
 
 INCLUDE_ASM("asm/nonmatchings/game_02/unit_003556B0", func_00355FE0);
 
-INCLUDE_ASM("asm/nonmatchings/game_02/unit_003556B0", func_003560E0);
+/* steps four values by their rates at +0x4C..+0x58, then pulls each back by 2*pi
+   (6.2831855f) once it leaves [-2*pi, 2*pi]: probably angles in radians */
+void func_003560E0(Obj_003560E0 *arg0)
+{
+    arg0->counter_3C += arg0->unk_4C;
+    arg0->counter_40 += arg0->unk_50;
+    arg0->counter_44 += arg0->unk_54;
+    arg0->counter_48 += arg0->unk_58;
+
+    if (arg0->counter_3C < -6.2831855f)
+        arg0->counter_3C += 6.2831855f;
+    if (arg0->counter_3C > 6.2831855f)
+        arg0->counter_3C -= 6.2831855f;
+
+    if (arg0->counter_40 < -6.2831855f)
+        arg0->counter_40 += 6.2831855f;
+    if (arg0->counter_40 > 6.2831855f)
+        arg0->counter_40 -= 6.2831855f;
+
+    if (arg0->counter_44 < -6.2831855f)
+        arg0->counter_44 += 6.2831855f;
+    if (arg0->counter_44 > 6.2831855f)
+        arg0->counter_44 -= 6.2831855f;
+
+    if (arg0->counter_48 < -6.2831855f)
+        arg0->counter_48 += 6.2831855f;
+    if (arg0->counter_48 > 6.2831855f)
+        arg0->counter_48 -= 6.2831855f;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_02/unit_003556B0", func_003562B0);
 

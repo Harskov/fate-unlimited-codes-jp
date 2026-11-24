@@ -22,6 +22,10 @@ extern s32 D_00501A80[];
 
 void func_002052F0();
 
+void func_0020CFD0(f32 (*)[4], f32 (*)[4], f32 (*)[4]);
+
+extern f32 *D_00522D98[];
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020BC70", func_0020BC70);
 
 void func_0020BDE0(void)
@@ -51,7 +55,66 @@ void func_0020BF30(void)
     func_002DC248();
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020BC70", func_0020BF40);
+/* Probably builds a rotation of angle arg2 about axis arg1 (0, 1, 2) and applies it to arg0.
+   The table at D_00522D98 holds 0x4000 entries; the entry a quarter turn on (+0x1000) is
+   read as the cosine (c) of the one at i (s). Each case fills the matrix a column at a time. */
+void func_0020BF40(f32 (*arg0)[4], s32 arg1, s32 arg2)
+{
+    f32 m[4][4];
+    s32 i;
+    f32 s;
+    f32 c;
+
+    i = (arg2 + 2) >> 2;
+    s = D_00522D98[0][i & 0x3FFF];
+    c = D_00522D98[0][(i + 0x1000) & 0x3FFF];
+
+    switch (arg1) {
+    case 0:
+        m[0][0] = 1.0f;
+        m[1][0] = 0.0f;
+        m[2][0] = 0.0f;
+        m[3][0] = 0.0f;
+        m[0][1] = 0.0f;
+        m[1][1] = c;
+        m[2][1] = -s;
+        m[3][1] = 0.0f;
+        m[0][2] = 0.0f;
+        m[1][2] = s;
+        m[2][2] = c;
+        m[3][2] = 0.0f;
+        break;
+    case 1:
+        m[0][0] = c;
+        m[1][0] = 0.0f;
+        m[2][0] = s;
+        m[3][0] = 0.0f;
+        m[0][1] = 0.0f;
+        m[1][1] = 1.0f;
+        m[2][1] = 0.0f;
+        m[3][1] = 0.0f;
+        m[0][2] = -s;
+        m[1][2] = 0.0f;
+        m[2][2] = c;
+        m[3][2] = 0.0f;
+        break;
+    case 2:
+        m[0][0] = c;
+        m[1][0] = -s;
+        m[2][0] = 0.0f;
+        m[3][0] = 0.0f;
+        m[0][1] = s;
+        m[1][1] = c;
+        m[2][1] = 0.0f;
+        m[3][1] = 0.0f;
+        m[0][2] = 0.0f;
+        m[1][2] = 0.0f;
+        m[2][2] = 1.0f;
+        m[3][2] = 0.0f;
+        break;
+    }
+    func_0020CFD0(arg0, m, arg0);
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020BC70", func_0020C060);
 

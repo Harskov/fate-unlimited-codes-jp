@@ -7,7 +7,44 @@ typedef struct Obj_00326D90 {
     s32 unk_24;
 } Obj_00326D90;
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00325D40", func_00325D40);
+// a ratio of two integers chosen by mode: 2 plain, 4 squared, 8 one minus the squared ratio of
+// their difference; both squares are halved together until the denominator is at most 512 squared
+f32 func_00325D40(s32 arg0, s32 arg1, s32 arg2)
+{
+    f32 r;
+    f32 n;
+    f32 d;
+
+    r = 0.0f;
+    switch (arg2) {
+    case 2:
+        r = (f32)arg0 / (f32)arg1;
+        break;
+    case 4:
+        n = (f32)arg0;
+        d = (f32)arg1;
+        n = n * n;
+        d = d * d;
+        while (d > 262144.0f) {
+            n /= 2.0f;
+            d /= 2.0f;
+        }
+        r = n / d;
+        break;
+    case 8:
+        n = (f32)(arg1 - arg0);
+        d = (f32)arg1;
+        n = n * n;
+        d = d * d;
+        while (d > 262144.0f) {
+            n /= 2.0f;
+            d /= 2.0f;
+        }
+        r = 1.0f - n / d;
+        break;
+    }
+    return r;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_01/unit_00325D40", func_00325EC0);
 

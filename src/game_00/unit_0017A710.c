@@ -15,7 +15,13 @@ int func_0020F180(void *p, int size);
 
 int func_0017A820(int *p, int v);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0017A710", func_0017A710);
+void func_0020F230();
+
+void func_0017A710(void)
+{
+    func_0020F230(D_00522DB0, D_0051AC70[0]);
+    D_0051AC78[0] = 0;
+}
 
 int func_0017A740(int n)
 {
@@ -52,7 +58,21 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0017A710", func_0017A9F0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0017A710", func_0017AC30);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0017A710", func_0017B990);
+int *func_0017B990(int a, int b)
+{
+    int *node;
+    int *e;
+
+    node = (int *)((int *)func_00185560())[2];
+    e = (int *)node[0];
+    while (e != (int *)1) {
+        if (e[1] == a && e[2] == b)
+            return e;
+        node = (int *)node[2];
+        e = (int *)node[0];
+    }
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0017A710", func_0017BA10);
 

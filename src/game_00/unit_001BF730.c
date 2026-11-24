@@ -16,7 +16,22 @@ typedef struct Sub_001BFA60 {
 
 float func_00167D10(Sub_001BFA60 *a, Sub_001BFA60 *b);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001BF730", func_001BF730);
+int func_001C4720(void *a);
+
+int func_001C45B0(void *a, int b, int c);
+
+int func_001BF730(void *arg0, int arg1)
+{
+    if (arg0 == 0)
+        return 0;
+    if (arg1 >= 2) {
+        arg1 -= (func_001C4720(arg0) >> 4) * 3;
+        arg1 -= func_001C45B0(arg0, 0, 0x10);
+        if (arg1 <= 0)
+            arg1 = 1;
+    }
+    return arg1;
+}
 
 int func_001BF7C0(int a, int b)
 {

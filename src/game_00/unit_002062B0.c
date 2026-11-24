@@ -70,7 +70,7 @@ extern char D_00501948[];
 int sceRead(int fd, void *buf, int nbyte);
 
 typedef struct Obj24 {
-    /* 0x00 */ u32 unk_0;
+    /* 0x00 */ u32 lbn;
     /* 0x04 */ u32 unk_4;
     /* 0x08 */ u8 pad_8[0x1C];
 } Obj24;
@@ -80,6 +80,8 @@ void func_00206AA0(char *dst, char *src);
 s32 func_00353FD0(Obj24 *file, char *path);
 
 void FlushCache(s32);
+
+int toupper(int c);
 
 int func_002062B0(void)
 {
@@ -134,7 +136,7 @@ s32 func_00206600(char *name, void *buf)
         }
         n = func_00206A80(file.unk_4);
         sceCdDiskReady(0);
-        if (sceCdRead(file.unk_0, n, buf, gMode) == 0) {
+        if (sceCdRead(file.lbn, n, buf, gMode) == 0) {
             while (!sceCdStandby()) {
                 func_00206A10(1);
             }
@@ -220,7 +222,27 @@ s32 func_00206A80(u32 arg0)
     return n;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002062B0", func_00206AA0);
+// builds a disc file name in the ISO 9660 form: a leading backslash, every '/'
+// turned into a backslash, every other character passed through toupper
+// (probably a case conversion), then the ";1" version suffix
+void func_00206AA0(char *dst, char *src)
+{
+    char *p;
+    s32 i;
+
+    p = dst;
+    *p++ = '\\';
+    for (i = 0; src[i] != 0; i++) {
+        if (src[i] == '/') {
+            *p++ = '\\';
+        } else {
+            *p++ = toupper(src[i]);
+        }
+    }
+    p[0] = ';';
+    p[1] = '1';
+    p[2] = '\0';
+}
 
 void func_00206B50(void)
 {

@@ -1,8 +1,20 @@
 #include "common.h"
 
+extern char D_003DEED0[][20];
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002116B0", func_002116B0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_002116B0", func_00211760);
+int func_00211760(const char *arg0)
+{
+    int i;
+
+    for (i = 0; i < 0x4D; i++) {
+        if (strcmp(D_003DEED0[i], arg0) == 0) {
+            return i;
+        }
+    }
+    return -1;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_002116B0", func_002117D0);
 

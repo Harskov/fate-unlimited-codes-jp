@@ -68,9 +68,14 @@ typedef struct Obj_00326E20 {
 
 typedef struct Entry_00326F80 {
     s32 unk_0;
-    u8 pad_4[0xC];
+    s32 unk_4;
+    s32 unk_8;
+    s32 unk_C;
     s32 unk_10;
-    u8 pad_14[0x10];
+    s32 unk_14;
+    s32 unk_18;
+    s32 unk_1C;
+    s32 unk_20;
     /* 0x24 */ union {
         u32 unk_0;
         u8 field_0[4];
@@ -111,7 +116,10 @@ void func_00326E20(Obj_00326E20 *arg0, s32 arg1, s32 arg2)
     func_00326F80(arg0, arg1, (arg2 << 24) | ((arg0->unk_210[arg1].unk_2 << 16) | (arg0->unk_210[arg1].unk_0 | (arg0->unk_210[arg1].unk_1 << 8))));
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00326DB0", func_00326E60);
+void func_00326E60(Obj_00326E20 *arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4)
+{
+    func_00326F30(arg0, arg1, 0, 0x100, (arg2 << 24) | ((arg0->unk_210[arg1].unk_2 << 16) | (arg0->unk_210[arg1].unk_0 | (arg0->unk_210[arg1].unk_1 << 8))), arg3, arg4, 2);
+}
 
 void func_00326EB0(Obj_00326EE0 *arg0, s32 arg1, s32 arg2)
 {
@@ -136,7 +144,19 @@ void func_00326F20(s32 a0, s32 a1, s32 a2, s32 a3, s32 a4, s32 a5, s32 a6)
     func_00326F30(a0, a1, a2, a3, a4, a5, a6, 2);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_01/unit_00326DB0", func_00326F30);
+void func_00326F30(Obj_00326F80 *arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4, s32 arg5, s32 arg6, s32 arg7)
+{
+    arg0->unk_1EC[arg1].unk_14 = arg2;
+    arg0->unk_1EC[arg1].unk_18 = arg3;
+    arg0->unk_1EC[arg1].unk_8 = arg6 << 8;
+    arg0->unk_1EC[arg1].unk_C = arg5 << 8;
+    arg0->unk_1EC[arg1].unk_4 = 0;
+    arg0->unk_1EC[arg1].unk_20 = arg4;
+    arg0->unk_1EC[arg1].unk_1C = arg0->unk_1EC[arg1].unk_24.unk_0;
+    arg0->unk_1EC[arg1].unk_0 = arg7;
+    arg0->unk_1EC[arg1].unk_10 = 0;
+    arg0->unk_0 |= 2;
+}
 
 void func_00326F80(Obj_00326F80 *arg0, s32 arg1, u32 arg2)
 {

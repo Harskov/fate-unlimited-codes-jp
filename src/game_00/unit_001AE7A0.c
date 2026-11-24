@@ -58,6 +58,13 @@ int func_0020DBB0(float, float);
 
 void func_001E9590(void *, int);
 
+typedef struct Obj_001AE9F0 {
+    unsigned char unk_0[0x18];
+    /* 0x18 */ int unk_18;
+    /* 0x1C */ void *unk_1C[8];
+    /* 0x3C */ void *unk_3C;
+} Obj_001AE9F0;
+
 void func_001AE7A0(Obj *p)
 {
     Obj_001AE7A0_2 *m = p->field_3C;
@@ -113,7 +120,18 @@ void func_001AE9A0(void *arg0)
     func_001AE900(arg0, 0, 1, 0);
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AE7A0", func_001AE9F0);
+int func_001AE9F0(Obj_001AE9F0 *arg0, void *arg1)
+{
+    if (arg1 == 0)
+        return arg0->unk_18;
+    if (arg0->unk_18 < 8) {
+        arg0->unk_1C[arg0->unk_18] = arg1;
+        if (arg0->unk_18 == 0)
+            arg0->unk_3C = arg1;
+        arg0->unk_18 = arg0->unk_18 + 1;
+    }
+    return arg0->unk_18;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001AE7A0", func_001AEA40);
 

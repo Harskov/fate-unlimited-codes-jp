@@ -29,6 +29,24 @@ extern s32 D_00524804[];
 
 s32 func_0020F180(s32 *arg0, s32 arg1);
 
+typedef struct Obj_005247D0 {
+    u8 pad_0[0x8];
+    s32 unk_8;
+    s32 unk_C;
+    s32 unk_10;
+    s16 unk_14;
+    s16 unk_16;
+    s16 unk_18;
+} Obj_005247D0;
+
+typedef struct Holder_005247D0 {
+    Obj_005247D0 *unk_0;
+    s32 unk_4;
+    s32 unk_8;
+} Holder_005247D0;
+
+extern Holder_005247D0 D_005247D0;
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00218F20", func_00218F20);
 
 void func_00218F60(s32 arg0)
@@ -77,7 +95,17 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_00218F20", func_00219980);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00218F20", func_00219CF0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_00218F20", func_00219D20);
+void func_00219D20(s32 arg0, s32 arg1, s32 arg2, s16 arg3, s16 arg4)
+{
+    if (D_005247D0.unk_0 != 0) {
+        D_005247D0.unk_0->unk_8 = arg0;
+        D_005247D0.unk_0->unk_C = arg1;
+        D_005247D0.unk_0->unk_10 = arg2;
+        D_005247D0.unk_0->unk_18 = arg3;
+        D_005247D0.unk_0->unk_14 = arg4;
+        D_005247D0.unk_0->unk_16 = arg4;
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00218F20", func_00219D80);
 

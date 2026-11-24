@@ -29,6 +29,21 @@ typedef struct Obj_001F0CC0 {
 
 void func_0015D130();
 
+typedef struct Obj_001F0CF0 {
+    u8 pad_0[0x18];
+    s32 unk_18;
+} Obj_001F0CF0;
+
+typedef struct Obj_001F0BD0 {
+    s32 unk_0;
+    s32 unk_4;
+    s32 unk_8;
+    f32 unk_C[3];
+    f32 unk_18;
+} Obj_001F0BD0;
+
+void func_0015EE20(f32 *arg0, f32 arg1, f32 arg2, f32 arg3);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001ED8F0", func_001ED8F0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001ED8F0", func_001EDDF0);
@@ -68,7 +83,21 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001ED8F0", func_001F0A70);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001ED8F0", func_001F0AF0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001ED8F0", func_001F0BD0);
+void func_001F0BD0(Obj_001F0BD0 *p, s32 arg1, s32 arg2, f32 arg3)
+{
+    p->unk_0 = 1;
+    p->unk_4 = 3;
+    p->unk_8 = arg1;
+    p->unk_18 = arg3;
+    if (arg2 != 0) {
+        func_0015D130(p->unk_C, arg2);
+    } else {
+        func_0015EE20(p->unk_C, 0.0f, 0.0f, 0.0f);
+    }
+    if (arg2 == 0) {
+        p->unk_4 |= 4;
+    }
+}
 
 void func_001F0C60(Obj_001F0C60 *p, s32 arg1)
 {
@@ -105,6 +134,11 @@ void func_001F0CC0(Obj_001F0CC0 *p, s32 arg1, s32 arg2)
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001ED8F0", func_001F0CF0);
+void func_001F0CF0(Obj_001F0CF0 *p, s32 arg1)
+{
+    if (p != 0) {
+        func_0015D130(&p->unk_18, arg1);
+    }
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001ED8F0", func_001F0D10);

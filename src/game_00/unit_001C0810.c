@@ -13,7 +13,8 @@ typedef struct Obj1D0 {
     Sub_001C1290 unk_14;
     s32 unk_A0;
     s32 unk_A4;
-    u8 unk_A8[0x8];
+    u8 unk_A8[0x6];
+    s16 unk_AE;
     /* 0xB0 */ s16 counter;
     u8 unk_B2[0x9A];
     s32 unk_14C;
@@ -43,6 +44,8 @@ typedef struct Obj_001C0A80 {
 void func_001C1000(Obj2524 *arg0);
 
 void func_001C1030(Obj2524 *arg0, s64 v, s32 w);
+
+int func_001C45B0(void *, int, int);
 
 void func_001C0810(Obj2524 *arg0)
 {
@@ -109,7 +112,29 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C0810", func_001C0B80);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C0810", func_001C0F00);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C0810", func_001C0FA0);
+int func_001C0FA0(Obj2524 *arg0, s64 arg1)
+{
+    Obj1D0 *c;
+    s16 n;
+
+    if (arg0 == 0) {
+        return 1;
+    }
+    c = arg0->unk_2448;
+    if (c == 0) {
+        return 1;
+    }
+    if (c->unk_AE == 0) {
+        c->unk_AE = (s16)arg1 + 1;
+    }
+    n = c->unk_AE - 1;
+    c->unk_AE = n;
+    if (n <= 0) {
+        c->unk_AE = 0;
+        return 1;
+    }
+    return 0;
+}
 
 void func_001C1000(Obj2524 *arg0)
 {
@@ -137,7 +162,36 @@ void func_001C1030(Obj2524 *arg0, s64 v, s32 w)
     }
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C0810", func_001C1060);
+int func_001C1060(Obj2524 *arg0, s64 arg1, s32 arg2)
+{
+    Obj1D0 *c;
+    Sub_001C1290 *s;
+    s16 n;
+
+    if (arg0 == 0) {
+        return 1;
+    }
+    c = arg0->unk_2448;
+    if (c == 0) {
+        return 1;
+    }
+    s = &c->unk_14;
+    if (s == 0) {
+        return 1;
+    }
+    if (c->unk_AE == 0) {
+        c->unk_AE = (((s16)arg1 * func_001C45B0(c, 0, 0x100)) >> 8) + 1;
+    }
+    n = c->unk_AE - 1;
+    c->unk_AE = n;
+    if (n <= 0) {
+        c->unk_AE = 0;
+        s->unk_10 = c->unk_A0;
+        return 1;
+    }
+    s->unk_10 |= arg2 | c->unk_A0;
+    return 0;
+}
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C0810", func_001C1140);
 

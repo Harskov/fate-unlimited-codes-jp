@@ -110,6 +110,20 @@ extern s32 D_0051A5C0[];
 
 extern s32 D_005240B4[];
 
+s32 func_00211150(void);
+
+void func_00211160(int);
+
+typedef struct Obj_00210CB0 {
+    s32 unk_0;
+    s32 unk_4;
+    /* 0x08 */ s32 (*callback)(s32, s32);
+} Obj_00210CB0;
+
+s32 func_00210CA0(Obj_00210CB0 *arg0);
+
+Obj_00210CB0 *func_00210CB0(s32 arg0);
+
 void func_0015B6A0(void)
 {
     sceGsSyncVCallback(func_0015B6B0);
@@ -236,7 +250,38 @@ void func_0015BC80(s32 arg0)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015B6A0", func_0015BCA0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015B6A0", func_0015BD90);
+/* Walks the ten (key, handle) pairs at D_0051A5C0, calling each live entry's
+   handler with arg0; with arg1 non-zero it stops once func_00211150 reaches arg1. */
+s32 func_0015BD90(s32 arg0, s32 arg1)
+{
+    Obj_00210CB0 *obj;
+    s32 i;
+    s32 result;
+    s32 *p;
+
+    result = -1;
+    func_00211160(0);
+    for (i = 0, p = D_0051A5C0; i < 10; i++, p += 2) {
+        if (p[0] == -1) {
+            continue;
+        }
+        if (p[1] == 0) {
+            continue;
+        }
+        obj = func_00210CB0(p[1]);
+        if (obj->callback == 0) {
+            continue;
+        }
+        result = obj->callback(func_00210CA0(obj), arg0);
+        if (arg1 == 0) {
+            continue;
+        }
+        if (func_00211150() >= arg1) {
+            break;
+        }
+    }
+    return result;
+}
 
 s32 func_0015BE70(s32 arg0)
 {
@@ -259,4 +304,12 @@ s32 func_0015BE70(s32 arg0)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015B6A0", func_0015BED0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015B6A0", func_0015BF70);
+void func_0015BF70(void)
+{
+    s32 i;
+
+    for (i = 0; i < 10; i++) {
+        D_0051A5C0[i * 2] = -1;
+        D_0051A5C0[i * 2 + 1] = 0;
+    }
+}
