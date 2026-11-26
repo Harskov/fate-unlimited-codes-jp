@@ -3,8 +3,8 @@
 #include "game_00/unit_0021A0D0.h"
 
 typedef struct Unk_0021A870 {
-    /* 0x00 */ short unk_0;
-    /* 0x02 */ short unk_2;
+    /* 0x00 */ u16 unk_0;
+    /* 0x02 */ u16 unk_2;
     /* 0x04 */ int unk_4;
     /* 0x08 */ int unk_8;
 } Unk_0021A870;
@@ -102,6 +102,33 @@ typedef struct Obj_0021C4F0 {
 
 void func_0021A640(s32 arg0, s32 arg1, void *arg2, s32 arg3);
 
+typedef struct Obj_0021A4B0 {
+    /* 0x00 */ u8 pad_0[0xC];
+    /* 0x0C */ s32 unk_C;
+    /* 0x10 */ s32 unk_10;
+} Obj_0021A4B0;
+
+typedef struct Sub_0021A4B0 {
+    /* 0x00 */ Obj_0021A4B0 *unk_0;
+    /* 0x04 */ u8 pad_4[0xC];
+    /* 0x10 */ s32 unk_10;
+} Sub_0021A4B0;
+
+typedef struct Elem_0021A4B0 {
+    /* 0x00 */ s32 unk_0;
+    /* 0x04 */ Obj_0021A4B0 *unk_4;
+    /* 0x08 */ Sub_0021A4B0 *unk_8;
+    /* 0x0C */ u8 pad_C[4];
+    /* 0x10 */ f32 unk_10;
+    /* 0x14 */ f32 unk_14;
+    /* 0x18 */ u8 pad_18[8];
+    /* 0x20 */ s32 *unk_20;
+} Elem_0021A4B0;
+
+extern u16 D_00525962[];
+
+s32 func_002ED838(s32, s32);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A0D0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A140);
@@ -128,7 +155,36 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A2F0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A3F0);
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021A0D0", func_0021A4B0);
+void func_0021A4B0(s32 arg0, s32 arg1, s32 arg2)
+{
+    Unk_0021A870 *e;
+    Sub_0021A4B0 *r;
+    Elem_0021A4B0 *elem;
+    s32 i;
+
+    for (i = 0, e = D_00525960; i < 0x100; i++, e++) {
+        if (arg0 == e->unk_0 && e->unk_4 != 0) {
+            break;
+        }
+    }
+    if (i == 0x100) {
+        return;
+    }
+    r = (Sub_0021A4B0 *)func_002ED838(D_00525968[i * 3], arg2);
+    if (r == 0) {
+        *(long long *)1 = 0;
+    }
+    if (D_00525962[i * 6] <= arg1) {
+        *(long long *)1 = 0;
+    }
+    elem = &((Elem_0021A4B0 *)D_00525964[i * 3])[arg1];
+    elem->unk_0 = 0;
+    elem->unk_8 = r;
+    elem->unk_4 = r->unk_0;
+    elem->unk_10 = elem->unk_4->unk_C;
+    elem->unk_14 = elem->unk_4->unk_10;
+    elem->unk_20 = &r->unk_10;
+}
 
 void func_0021A5D0(s32 arg0, s32 arg1, s32 arg2)
 {
