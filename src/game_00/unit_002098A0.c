@@ -1,5 +1,6 @@
 #include "common.h"
 #include "types.h"
+#include "game_00/unit_00209F20.h"
 
 void func_002E58F0(void);
 
@@ -11,7 +12,6 @@ void func_00200F30();
 
 void func_002059D0();
 
-void func_0020A1B0();
 
 extern s8 D_00522D19[];
 

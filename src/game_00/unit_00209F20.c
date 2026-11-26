@@ -1,5 +1,6 @@
 #include "common.h"
 #include "types.h"
+#include "game_00/unit_00209F20.h"
 
 extern u64 D_00522D60[];
 

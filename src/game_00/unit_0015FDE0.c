@@ -1,8 +1,8 @@
 #include "common.h"
+#include "game_00/unit_0015B6A0.h"
 
 extern s32 D_005240B8[];
 
-void func_0015BD90();
 
 extern s32 (*D_003D6600[])(s32, s32 *, s32, s32);
 

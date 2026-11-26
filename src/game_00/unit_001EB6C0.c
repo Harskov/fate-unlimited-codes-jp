@@ -115,9 +115,8 @@ s32 *func_001EBD90(s32 *arg0)
 
 s32 func_001EBDC0(s32 arg0)
 {
-    while (D_0051F9B0[0] == D_0051F9A8[0]) {
+    if (D_0051F9B0[0] == D_0051F9A8[0]) {
         D_0051F9B8[0] = arg0;
-        break;
     }
     D_0051F9B0[0] += 1;
     return arg0;

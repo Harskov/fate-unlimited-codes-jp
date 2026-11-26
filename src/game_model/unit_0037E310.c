@@ -18,6 +18,11 @@ extern void func_0037F220();
 
 extern void func_0037ED90();
 
+typedef struct Obj_005361A0 {
+    /* 0x000 */ u8 pad_0[0x17C];
+    /* 0x17C */ s32 unk_17C;
+} Obj_005361A0;
+
 f32 func_0037E310(u16 arg0)
 {
     union {
@@ -73,7 +78,7 @@ void func_0037F4F0(void)
         return;
     func_0037F220();
     func_0037ED90();
-    count = &((s32 *)D_005361A0[0])[0x17C / 4];
+    count = &((Obj_005361A0 *)D_005361A0[0])->unk_17C;
     if (*count > 0) {
         *count = *count - 1;
     }

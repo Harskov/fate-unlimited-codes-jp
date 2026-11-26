@@ -102,8 +102,7 @@ INCLUDE_ASM("asm/nonmatchings/game_model/unit_00376F00", func_00377250);
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00376F00", func_00377390);
 
-// steps the state in unk_8 as func_00377630 does, driven by bits of unk_0: states 1 and 2 raise bit 0x2
-// when bit 0x8 of D_0051D8A0 or bit 0x100000 of unk_10's flags_1E0 is set; 2 -> 3 on bit 0x2, 4 -> 1 on bit 0x1
+// the same body as func_00377500
 void func_003773D0(Obj_00377630 *arg0)
 {
     if (arg0 == 0)
@@ -132,8 +131,7 @@ void func_003773D0(Obj_00377630 *arg0)
     }
 }
 
-// the same state step as func_003773D0: states 1 and 2 raise bit 0x2 of unk_0 when bit 0x8 of D_0051D8A0
-// or bit 0x100000 of unk_10's flags_1E0 is set; 2 -> 3 on bit 0x2, 4 -> 1 on bit 0x1
+// the same body as func_003773D0
 void func_00377500(Obj_00377630 *arg0)
 {
     if (arg0 == 0)

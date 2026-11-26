@@ -1,6 +1,7 @@
 #include "common.h"
 
 #include "libc.h"
+#include "game_00/unit_0015B6A0.h"
 
 void func_002E03D0(s32, s32, s32, s32);
 
@@ -18,7 +19,6 @@ extern f32 D_00523FB8[];
 
 extern s32 D_005240B8[];
 
-void func_0015BD90();
 
 union Sub_0015F4A0 {
     s32 i0;

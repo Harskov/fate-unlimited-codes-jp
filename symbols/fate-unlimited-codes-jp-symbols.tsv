@@ -2463,7 +2463,7 @@ func_0015B240	unit_0015AB90	function	matched	gameplay/game_00.002	call-graph com
 func_0015B2C0	unit_0015AB90	function	matched	gameplay/game_00.002	call-graph community of 185 function(s) from func_00159E30
 func_0015B2E0	unit_0015AB90	function	matched	gameplay/game_00.002	call-graph community of 185 function(s) from func_00159E30
 func_0015B310	unit_0015AB90	function	matched	gameplay/game_00.002	call-graph community of 185 function(s) from func_00159E30
-func_0015B340	unit_0015AB90	function	wip	platform	calls func_00143DB8
+func_0015B340	unit_0015AB90	function	matched	platform	calls func_00143DB8
 func_0015B3E0	unit_0015AB90	function	wip	platform	calls func_00143EA8, func_001448A0, func_00144C10 …
 func_0015B6A0	unit_0015B6A0	function	matched	gameplay/game_00.002	call-graph community of 185 function(s) from func_00159E30
 func_0015B6B0	unit_0015B6A0	function	matched	platform	calls func_0013E810
@@ -4704,7 +4704,7 @@ func_0021D690	unit_0021D690	function	wip	platform	calls func_00102520, func_0013
 func_0021D870	unit_0021D690	function	matched	gameplay/game_00.028	call-graph community of 64 function(s) from func_0021BFD0
 func_0021D890	unit_0021D690	function	asm	platform	calls func_0011D388, func_0011D398, func_0011D3A8 …
 func_0021DC70	unit_0021D690	function	matched	gameplay/game_00.028	call-graph community of 64 function(s) from func_0021BFD0
-func_0021DC80	unit_0021D690	function	wip	platform	calls FlushCache, func_0011D388, func_0011D398 …
+func_0021DC80	unit_0021D690	function	matched	platform	calls FlushCache, func_0011D388, func_0011D398 …
 func_0021DF20	unit_0021D690	function	matched	platform	calls func_0013B9C8
 func_0021DF50	unit_0021D690	function	asm	platform	calls sceMpegGetPictureAbort
 func_0021DFE0	unit_0021D690	function	matched	gameplay/game_00.028	call-graph community of 64 function(s) from func_0021BFD0

@@ -260,9 +260,6 @@ void func_0015DD20(s32 arg0)
     D_0051A9B8[0] = 0;
 }
 
-// A nonzero arg1 arms the object (state -1) when bit 0x8000 is set and D_00523DAC is 0x3E9 or 0x3F8;
-// a zero arg1 steps it: state 1 counts unk_4 down (unless D_005231C0 holds it), and at zero or in
-// state -1 the object's unk_C is handed to the shared object before func_00210D60 runs.
 s32 func_0015DD60(Obj_0015DD60 *arg0, s32 arg1)
 {
     if (arg1 != 0) {

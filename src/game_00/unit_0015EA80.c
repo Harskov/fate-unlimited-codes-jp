@@ -1,5 +1,6 @@
 #include "common.h"
 #include "game_00/vec.h"
+#include "game_00/unit_0015B6A0.h"
 
 typedef struct Obj16 {
     f32 unk_0;
@@ -18,7 +19,6 @@ extern f32 D_00523FBC[];
 
 extern s32 D_005240B8[];
 
-void func_0015BD90();
 
 s32 func_0015EA80(s32 arg0, s32 arg1, s32 arg2, s32 arg3, s32 arg4, s32 arg5)
 {

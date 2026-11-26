@@ -55,7 +55,6 @@ void func_00200E50(int v)
     D_0051FDE4[0] = v;
 }
 
-// zero clears the block; any other value is stored, passed on with 0x48, and the result kept
 void func_00200E60(int v)
 {
     if (v == 0) {

@@ -136,8 +136,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0022FD00", func_00235390);
 
 s32 func_002367E0(Obj_002367E0 *arg0, s32 *arg1, s32 arg2)
 {
-    if (arg2 != 0)
-    {
+    if (arg2 != 0) {
         return arg0->unk_74 + *arg1;
     }
     return func_001A27C0(arg0, *arg1);

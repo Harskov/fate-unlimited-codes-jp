@@ -39,8 +39,6 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C87A0", func_001C8DA0);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_001C87A0", func_001C8DD0);
 
-// clears bit 0x400 of D_0051D8A0 when func_0019A9A0 refuses D_0051E444, then drops the
-// object at +0xC0 (after func_001EC6A0(0x14)) once its +0x53C no longer equals +0xC4
 void func_001C8DF0(void)
 {
     Obj_0051D8B0 *o = &D_0051D8B0;

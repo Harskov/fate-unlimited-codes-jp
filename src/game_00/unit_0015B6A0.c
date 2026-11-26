@@ -1,5 +1,6 @@
 #include "common.h"
 #include "types.h"
+#include "game_00/unit_0015AB90.h"
 
 void func_0013E810();
 
@@ -15,24 +16,11 @@ typedef struct Slot {
     s32 unk_8;
 } Slot;
 
-typedef struct Obj_0015B6A0 {
-    s32 unk_0;
-    s32 unk_4;
-    s32 unk_8;
-    s32 unk_C;
-    s32 unk_10;
-    u8 unk_14[0x1C];
-    s32 unk_30;
-    s32 unk_34;
-} Obj_0015B6A0;
-
 extern Slot D_003D5AD0[];
 
 extern s32 D_004FE1D0[];
 
 extern s32 D_004FE1D8[];
-
-extern Obj_0015B6A0 D_0051A420[];
 
 extern s32 D_0051A500[];
 
@@ -75,6 +63,7 @@ extern s32 D_0051A570[];
 extern s32 D_00522DB0[];
 
 #include "libc.h"
+#include "game_00/unit_0015B6A0.h"
 
 extern void func_0013C4E0();
 
@@ -187,7 +176,7 @@ void func_0015B6E0(void)
         switch (i) {
         case 0:
         case 3:
-            D_0051A420[i].unk_0 |= 1;
+            D_0051A420[i].flags |= 1;
             D_0051A420[i].unk_30 = func_0020F180(D_00522DB0, 0x231E4);
             D_0051A420[i].unk_4 = func_001432E0(2, D_0051A420[i].unk_30, 0x231E4);
             D_0051A420[i].unk_C = -1;
@@ -196,7 +185,7 @@ void func_0015B6E0(void)
             break;
         case 1:
         case 2:
-            D_0051A420[i].unk_0 |= 2;
+            D_0051A420[i].flags |= 2;
             D_0051A420[i].unk_30 = func_0020F180(D_00522DB0, 0x11924);
             D_0051A420[i].unk_4 = func_001432E0(1, D_0051A420[i].unk_30, 0x11924);
             D_0051A420[i].unk_C = -1;
@@ -211,7 +200,7 @@ void func_0015B6E0(void)
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0015B6A0", func_0015B9D0);
 
-Obj_0015B6A0 *func_0015BB20(s32 arg0)
+Rec0051A424 *func_0015BB20(s32 arg0)
 {
     if (arg0 < 0 || arg0 >= 4)
         return 0;

@@ -152,6 +152,7 @@ void func_00159A90(void)
     D_00523A28[0] = 0x3F800000;
 }
 
+// 0.8f, 1.0f, 1.25f and 1.5f, stored by their bit patterns
 void func_00159AA0(void)
 {
     switch (D_005239D0[0]) {

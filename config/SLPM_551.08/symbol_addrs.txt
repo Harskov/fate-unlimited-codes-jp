@@ -878,3 +878,6 @@ gFormat_502400 = 0x00502400;
 _gp = 0x00510470;
 gAddDmacHandlerResult = 0x00527930;
 gCreateThreadResult = 0x00527990;
+D_00527620 = 0x00527620; // size:0x10
+D_003DF5E0 = 0x003DF5E0; // size:0x10
+D_0051A420 = 0x0051A420; // size:0xE0

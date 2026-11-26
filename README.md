@@ -27,19 +27,19 @@ You need Linux x86-64 (WSL2 on Windows works), Python 3.9 or newer, git, and you
 
 ## Progress
 
-**1662 of 3745 game functions are matched** (32,244 of 366,070 instructions, 8.81 %). 8 of the matched and 9 of all game functions carry a name whose evidence a script checked; so do 4 of 691 types, 199 of 1881 members the matched code reaches, 20 of 1145 globals the matched code reaches; 3745 functions carry a subsystem label. Every name and its evidence: [docs/NAMES.md](docs/NAMES.md).
+**1664 of 3745 game functions are matched** (32,447 of 366,070 instructions, 8.86 %). 8 of the matched and 9 of all game functions carry a name whose evidence a script checked; so do 4 of 696 types, 199 of 1894 members the matched code reaches, 20 of 1146 globals the matched code reaches; 3745 functions carry a subsystem label. Every name and its evidence: [docs/NAMES.md](docs/NAMES.md).
 
 | Milestone | Status | Exit judged on |
 |---|---|---|
 | M1 Contributable | done | public-build.json ok=True; matched outside their unit: 0 |
-| M2 Identified | current | name pass closed: True; unlabelled game functions: 0; review pending: 333 |
-| M3 Platform boundary | later | 125/442 platform functions matched; PLATFORM.md present |
+| M2 Identified | done | name pass closed: True; unlabelled game functions: 0; review pending: 0 |
+| M3 Platform boundary | current | 127/442 platform functions matched; PLATFORM.md present |
 | M4 Core | later | 59/90 core functions matched; FORMATS.md missing |
 | M5 Gameplay | later | 1478/3213 gameplay functions matched |
-| M6 Complete | later | 1662/3745 game functions matched; check ok=True |
-| M7 Documented | later | docs.py check on the tree as it stands: 47 gap(s), first: 1662 matched function(s) without a purpose line: ['func_001598C8', '_dpfgt', '_dpflt', '_dpfne', 'func_001599B0']; last recorded ok=None (never run) |
+| M6 Complete | later | 1664/3745 game functions matched; check ok=True |
+| M7 Documented | later | docs.py check on the tree as it stands: 47 gap(s), first: 1664 matched function(s) without a purpose line: ['func_001598C8', '_dpfgt', '_dpflt', '_dpfne', 'func_001599B0']; last recorded ok=None (never run) |
 | M8 Behaviour-verified | not required | last behaviour compare ok=None at never |
-| M9 Reverse-engineered | done | names without checked evidence: 0; matches since the last name pass: 0; named types with two layouts: 0 |
+| M9 Reverse-engineered | later | names without checked evidence: 0; matches since the last name pass: 9; named types with two layouts: 0 |
 | M10 Designed | later | no design document yet |
 
 The milestones and why they come in this order: [ROADMAP.md](ROADMAP.md).

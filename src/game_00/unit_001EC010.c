@@ -34,24 +34,13 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001EC010", func_001EC010);
 
 void func_001EC070(Obj_001EC070 *arg0, s32 arg1, s32 arg2)
 {
-    s32 count;
     s32 i;
-    Elem_001EC070 *base;
-    Elem_001EC070 *p;
 
-    count = arg0->count;
-    i = 0;
-    if (i < count) {
-        base = arg0->unk_1C;
-        p = base;
-        do {
-            if (arg1 == p->unk_8) {
-                base[i].unk_4 |= arg2;
-                break;
-            }
-            i++;
-            p++;
-        } while (i < count);
+    for (i = 0; i < arg0->count; i++) {
+        if (arg1 == arg0->unk_1C[i].unk_8) {
+            arg0->unk_1C[i].unk_4 |= arg2;
+            break;
+        }
     }
 }
 

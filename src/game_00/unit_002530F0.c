@@ -1,5 +1,6 @@
 #include "common.h"
 #include "types.h"
+#include "game_00/unit_002530F0.h"
 
 int iWakeupThread(int thid);
 

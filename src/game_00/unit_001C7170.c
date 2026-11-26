@@ -108,12 +108,10 @@ s32 func_001C8750(void)
 {
     s32 i;
     Obj_00522E90 *p;
-    s32 clear;
 
     p = D_00522E90;
     for (i = 0; i < 2; i++) {
-        clear = !((p->flags & 0x800) != 0);
-        if (!clear) {
+        if (p->flags & 0x800) {
             return i;
         }
         p++;

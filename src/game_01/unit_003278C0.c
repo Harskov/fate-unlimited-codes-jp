@@ -71,6 +71,7 @@ void func_003279A0(s32 a0, s32 a1, s32 a2)
     func_003279B0(a0, a1, a2, 1);
 }
 
+// 880 (0x370) is the size of one entry, as func_00328330 allocates them
 void func_003279B0(s32 a0, s32 a1, s32 a2, s32 a3)
 {
     unsigned char *base = ((Obj_00327A00 *)a0)->unk_0;

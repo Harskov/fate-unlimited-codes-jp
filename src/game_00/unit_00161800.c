@@ -1,5 +1,6 @@
 #include "common.h"
 #include "libc.h"
+#include "game_00/unit_0015B6A0.h"
 
 /* 0x60 */ typedef struct Holder {
     unsigned char pad[0x60];
@@ -16,7 +17,6 @@ extern s32 D_00523DAC[];
 
 extern s32 D_005240B4[];
 
-void func_0015BD90();
 
 typedef struct Obj_00161E60 {
     /* 0x00 */ s32 unk_0;

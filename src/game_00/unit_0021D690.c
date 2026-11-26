@@ -148,6 +148,65 @@ s32 EnableDmac(s32);
 
 s32 func_0021D1C0(s32 *);
 
+typedef struct Obj_00527620 {
+    /* 0x00 */ u64 unk_0_0 : 15;
+    /* 0x00 */ u64 unk_0_15 : 1;
+    /* 0x00 */ u64 pad_0_16 : 44;
+    /* 0x00 */ u64 unk_0_60 : 4;
+    /* 0x08 */ u64 unk_8_0 : 4;
+    /* 0x08 */ u64 pad_8_4 : 60;
+} Obj_00527620;
+
+typedef union Sub_00527620 {
+    u128 q0;
+    Obj_00527620 w0;
+} Sub_00527620;
+
+typedef struct Obj_0021DC80 {
+    /* 0x00 */ u8 pad_0[4];
+    /* 0x04 */ void *unk_4;
+    /* 0x08 */ u8 pad_8[8];
+} Obj_0021DC80;
+
+typedef union Sub_0021DC80 {
+    u64 w0[2];
+    u128 q0;
+} Sub_0021DC80;
+
+extern Sub_00527620 D_00527620;
+
+extern u64 D_003DF5E0[2];
+
+extern s32 D_00527630[];
+
+extern u64 D_00527650[];
+
+void *func_00120950(s32, s32);
+
+void func_00120B78(void *);
+
+void *sceDmaGetChan(s32);
+
+void sceDmaSend(void *, void *);
+
+s32 sceGsSetDefDrawEnv(void *, s16, s16, s16, s16, s16);
+
+s32 sceGsPutDrawEnv(void *);
+
+void func_0011D388(Obj_0021DC80 *, void *);
+
+void func_0011D398(Obj_0021DC80 *);
+
+void func_0011D3A8(Obj_0021DC80 *);
+
+void func_0011D510(Obj_0021DC80 *, s32, s32, s32);
+
+void sceGifPkOpenGifTag(Obj_0021DC80 *, u128);
+
+void sceGifPkAddGsAD(Obj_0021DC80 *, s32, u64);
+
+void sceGifPkCloseGifTag(Obj_0021DC80 *);
+
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021D690);
 
 /* probably the uncached mirror of a main-memory address: the EE maps RAM uncached at 0x20000000 */
@@ -163,7 +222,49 @@ u64 func_0021DC70(u64 arg0)
     return (arg0 << 36) >> 36;
 }
 
-INCLUDE_ASM("asm/nonmatchings/game_00/unit_0021D690", func_0021DC80);
+void func_0021DC80(s32 r, s32 g, s32 b, s32 w, s32 h)
+{
+    Sub_0021DC80 tag;
+    Obj_0021DC80 pk;
+    void *buf;
+    void *chan;
+
+    // !FAKE: probably a local u64 giftag[2] initialised in place; the initialiser compiles to a constant of its own, not this one
+    tag.w0[0] = D_003DF5E0[0];
+    tag.w0[1] = D_003DF5E0[1];
+    buf = func_00120950(0x10, 0x60);
+    chan = sceDmaGetChan(2);
+
+    D_00527620.q0 = 0;
+    asm {
+        sync
+    }
+    D_00527620.w0.unk_0_0 = 8;
+    D_00527620.w0.unk_0_15 = 1;
+    D_00527620.w0.unk_0_60 = 1;
+    D_00527620.w0.unk_8_0 = 0xE;
+    sceGsSetDefDrawEnv(D_00527630, 0, w, ((h / 2 + 31) / 32 + (h + 31) / 32) * 64, 0, 0);
+    D_00527650[0] = 0;
+    FlushCache(0);
+    sceGsSyncPath(0, 0);
+    sceGsPutDrawEnv(&D_00527620);
+
+    func_0011D388(&pk, buf);
+    func_0011D398(&pk);
+    func_0011D510(&pk, 0, 0, 0);
+    sceGifPkOpenGifTag(&pk, tag.q0);
+    sceGifPkAddGsAD(&pk, 0, 6);
+    sceGifPkAddGsAD(&pk, 1, (u64)r | ((u64)g << 8) | ((u64)b << 16));
+    sceGifPkAddGsAD(&pk, 5, 0);
+    sceGifPkAddGsAD(&pk, 5, (u64)0x2800 | ((u64)0x8C00 << 16));
+    sceGifPkCloseGifTag(&pk);
+    func_0011D3A8(&pk);
+    FlushCache(0);
+    sceGsSyncPath(0, 0);
+    sceDmaSend(chan, pk.unk_4);
+    sceGsSyncPath(0, 0);
+    func_00120B78(buf);
+}
 
 int func_0021DF20(Obj38 *obj)
 {

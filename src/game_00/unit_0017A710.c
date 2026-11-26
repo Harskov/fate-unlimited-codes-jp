@@ -17,6 +17,17 @@ int func_0017A820(int *p, int v);
 
 void func_0020F230();
 
+typedef struct Node_0017B990 {
+    /* 0x00 */ int *unk_0;
+    /* 0x04 */ struct Node_0017B990 *unk_4;
+    /* 0x08 */ struct Node_0017B990 *unk_8;
+} Node_0017B990;
+
+typedef struct Obj_0017B990 {
+    /* 0x00 */ u8 pad_0[8];
+    /* 0x08 */ Node_0017B990 *unk_8;
+} Obj_0017B990;
+
 void func_0017A710(void)
 {
     func_0020F230(D_00522DB0, D_0051AC70[0]);
@@ -60,16 +71,16 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0017A710", func_0017AC30);
 
 int *func_0017B990(int a, int b)
 {
-    int *node;
+    Node_0017B990 *node;
     int *e;
 
-    node = (int *)((int *)func_00185560())[2];
-    e = (int *)node[0];
+    node = ((Obj_0017B990 *)func_00185560())->unk_8;
+    e = node->unk_0;
     while (e != (int *)1) {
         if (e[1] == a && e[2] == b)
             return e;
-        node = (int *)node[2];
-        e = (int *)node[0];
+        node = node->unk_8;
+        e = node->unk_0;
     }
     return 0;
 }

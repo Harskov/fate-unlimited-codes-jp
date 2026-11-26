@@ -135,6 +135,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020E430", func_0020E740);
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_0020E430", func_0020E7D0);
 
+// a linear congruential step with the multiplier and increment of Microsoft's C runtime rand() (214013, 2531011)
 s32 func_0020E850(s32 arg0, s32 arg1)
 {
     s32 seed;

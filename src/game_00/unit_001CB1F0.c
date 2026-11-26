@@ -49,6 +49,7 @@ INCLUDE_ASM("asm/nonmatchings/game_00/unit_001CB1F0", func_001CBF50);
 
 /* Looks like the sine (+0x0) and cosine (+0x8) of an angle in sixteenths of a turn
    (0x10000 a full turn), read from a table of literals; any other angle clears +0x8 only. */
+// unk_0 and unk_8 take the sine and cosine of the angle, in sixteenths of a turn (0x1000 each)
 void func_001CC010(Obj_001CC010 *arg0, s32 arg1)
 {
     switch (arg1) {

@@ -119,7 +119,9 @@ s32 *func_00208BF0(void)
     flags = *p;
     if (flags & 0x200)
         return 0;
-    return (flags & 0x100) ? p : 0;
+    if (flags & 0x100)
+        return p;
+    return 0;
 }
 
 INCLUDE_ASM("asm/nonmatchings/game_00/unit_00208780", func_00208C40);

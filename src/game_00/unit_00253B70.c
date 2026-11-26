@@ -1,5 +1,7 @@
 #include "common.h"
 #include "libc.h"
+#include "game_00/unit_0015AB90.h"
+#include "game_00/unit_002530F0.h"
 
 typedef struct Obj22 {
     u8 pad_0[2];
@@ -15,18 +17,12 @@ int func_00255590();
 
 void func_002530F0();
 
-void func_00253160();
 
 int func_00252A20();
 
-typedef struct Obj_0015BB20 {
-    u8 pad_0[12];
-    s32 unk_C;
-} Obj_0015BB20;
 
 int func_0015B030(s32 arg0);
 
-Obj_0015BB20 *func_0015BB20(s32 arg0);
 
 void func_00253B70(void)
 {

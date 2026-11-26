@@ -87,6 +87,7 @@ s32 func_00377740(Obj_00377740 *arg0, s32 arg1)
 
 INCLUDE_ASM("asm/nonmatchings/game_model/unit_00377740", func_00377770);
 
+// arg0 is tested twice; probably a validity macro around a second test of the same pointer
 void func_00377870(Obj_00377740 *arg0, s32 arg1, s8 arg2)
 {
     if (arg0 != 0 && arg0 != 0 && arg1 < 4) {
@@ -122,6 +123,7 @@ s32 func_00377910(Obj_00377740 *arg0, s32 arg1)
     return 0;
 }
 
+// arg0 is tested twice; probably a validity macro around a second test of the same pointer
 void func_00377960(Obj_00377740 *arg0, s32 arg1, s32 arg2)
 {
     if (arg0 != 0 && arg0 != 0 && arg1 < 4) {
@@ -157,6 +159,7 @@ void func_00377A70(Obj_00377740 *arg0, s32 arg1)
     }
 }
 
+// arg0 is tested twice; probably a validity macro around a second test of the same pointer
 void func_00377AC0(Obj_00377740 *arg0, s32 arg1, f32 arg2)
 {
     Sub_00377AC0 *p;

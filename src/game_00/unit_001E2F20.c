@@ -31,7 +31,11 @@ extern f32 D_0051F168[];
 
 void func_0015D130();
 
-extern u8 D_00501340[];
+typedef struct Elem_00501340 {
+    /* 0x00 */ u8 unk_0[12];
+} Elem_00501340;
+
+extern Elem_00501340 D_00501340[][2];
 
 extern s32 D_0051D8B0[];
 
@@ -119,7 +123,7 @@ s32 func_001E3800(s32 arg0)
     if (idx < 0 || idx >= 0xB) {
         idx = 1;
     }
-    return (s32)(arg0 * 12 + (D_00501340 + idx * 24));
+    return (s32)&D_00501340[idx][arg0];
 }
 
 void func_001E3880(s32 arg0, f32 *arg1)
